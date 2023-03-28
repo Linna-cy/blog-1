@@ -1,0 +1,1053 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Java 进阶 | Linner&#39;s Blog</title>
+
+<!-- 代码高亮： -->
+<!-- <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css"> -->
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script> -->
+
+<link rel="shortcut icon" href="https://linna-cy.github.io/favicon.ico?v=1679988829894">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://linna-cy.github.io/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://linna-cy.github.io/media/icons/iconfont.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.12.0/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.12.0/languages//dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!-- <script src="media/scripts/index.js"></script> -->
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+    
+    <script>
+      // 计算代码行数
+      let pxToNumber = function(px) {
+        // let num = Number(px.replace("px", ""));
+        let num = parseFloat(px);
+
+        return num;
+      };
+      let getRow = function(elem) {
+          let style = window.getComputedStyle(elem, null);
+          // let lineHeight = style.lineHeight === "normal" ? style.fontSize : style.lineHeight;
+          let lineHeight = style.lineHeight;
+
+          let height = style.height;
+          let padding = style.padding;
+          // let isiOS = /(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent);
+          let row = (pxToNumber(height)-pxToNumber(padding)) / pxToNumber(lineHeight);
+          // if (isiOS) {
+          //   row = pxToNumber(height) / pxToNumber(lineHeight);
+          //   alert('ios!');
+          // }
+          // else {
+          //   row = (pxToNumber(height)-pxToNumber(padding)) / pxToNumber(lineHeight);
+          // }
+          return parseInt(row);
+      };
+      
+      // 获取行号文字
+      let getRowNumString = function (row) {
+          let num_str = new String('');
+          for (let i = 1; i <= row; i++) {
+              let num = new String(i.toString() + '\n');
+              num_str = num_str + num;
+          }
+          return num_str;
+      }
+
+      // 指定代码块开启代码行号
+      let setCodeNum = function(codeElem) {
+          let pre = codeElem.parentElement;
+          let span = document.createElement('span');
+          span.innerText = getRowNumString(getRow(codeElem));
+          let codeElemStyle = window.getComputedStyle(codeElem, null);
+          span.style.display = 'inline-block';
+          span.style.backgroundColor = "rgba(255,255,255,0)";
+          span.style.color = 'rgba(255,255,255,0.4)';
+          span.style.margin = 0;
+          span.style.padding = 0;
+          // span.style.borderRight = '1px #fff solid';
+          span.style.paddingRight = 4;
+          span.style.userSelect = 'none';
+          span.style.textAlign = 'center';
+          span.className = 'code-num';
+
+          span.style.font = codeElemStyle.font;
+          // span.style.height = codeElemStyle.height;
+          span.style.paddingLeft = codeElemStyle.paddingRight;
+          span.style.borderTopLeftRadius = codeElemStyle.borderTopRightRadius;
+          span.style.borderBottomLeftRadius = codeElemStyle.borderBottomRightRadius;
+          span.style.paddingTop = codeElemStyle.paddingTop;
+
+          pre.style.display = 'flex';
+          pre.style.overflowX = 'hidden';
+
+          codeElem.style.borderTopLeftRadius = 0;
+          codeElem.style.borderBottomLeftRadius = 0;
+          codeElem.style.marginLeft = 0;
+          codeElem.style.paddingLeft = span.style.paddingRight;
+          codeElem.style.overflowX = 'auto';
+          codeElem.style.display = 'inline-block';
+          pre.insertBefore(span, codeElem);
+      }
+
+      // 设置代码块开启代码行号
+      let setCodeAllNum = function() {
+          let codeElems = document.querySelectorAll('pre > code');
+          for (let i = 0; i < codeElems.length; i++) {
+              codeElems[i].parentElement.className = 'code-pre';
+              setCodeNum(codeElems[i]);
+          }
+      }
+    </script>
+</head>
+<body>
+<div class="main gt-bg-theme-color-first post-main">
+    <!-- <div class="top">
+    <span id="go-top" class="iconfont icon-shangxiazuoyouTriangle17"></span>
+</div>
+<script>
+    let goTop = document.getElementById("go-top");
+    let goTopDisplay = function () {
+        let height = document.documentElement.scrollTop 
+                    || document.body.scrollTop
+        if (height >= (document.body.clientHeight || document.documentElement.clientHeight) * 0.8) {
+            goTop.style.display = "block"
+        } else {
+            goTop.style.display = "none"
+        }
+        goTop.focus();
+    }
+    window.onscroll = goTopDisplay;
+    window.onload = goTopDisplay;
+    window.onresize = goTopDisplay;
+    goTop.onclick = function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }
+</script> -->
+    <nav class="navbar navbar-expand-lg" id="navbar">
+    <a class="navbar-brand" href="/">
+        <!-- <img class="user-avatar" src="/images/avatar.png" alt="头像"> -->
+        <img class="site-icon" src="https://linna-cy.github.io/images/favicon.png" alt="icon">
+        <div class="site-name gt-c-content-color-first">
+            Linner&#39;s Blog
+        </div>
+    </a>
+
+    <div id="to-top" style="flex: 1; height: 100%;"></div>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="changeNavbar">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+            <div class="nav-item">
+                
+                <a href="/" class="menu gt-a-link">
+                    <span class="iconfont icon-zhuye"></span>
+                    首页
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/archives" class="menu gt-a-link">
+                    <span class="iconfont icon-guidang"></span>
+                    归档
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/tags" class="menu gt-a-link">
+                    <span class="iconfont icon-biaoqian"></span>
+                    标签
+                </a>
+                
+            </div>
+            
+            <!-- <div class="nav-item" id="toc">
+                <a class="menu gt-a-link">
+                    <span class="iconfont icon-mulu"></span>
+                    目录
+                </a>
+            </div> -->
+            <!-- <div class="nav-item" id="to-top">
+                <a href="#top" class="menu gt-a-link">
+                    <span class="iconfont icon-fanhuidingbu"></span>
+                    返回顶部
+                </a>
+            </div> -->
+        </div>
+        <!-- 搜索框 -->
+        <!-- <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1679988829894"
+                action="/search/">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 7px; left: 10px;"></i>
+            </form>
+        </div> -->
+        <div class="search-box">
+            <i class="fas fa-search gt-c-content-color-first"></i>
+            <form id="gridea-search-form" data-update="1679988829894"
+                action="/search/">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+            </form>
+        </div>
+    </div>
+</nav>
+<script>
+    /* 移动端导航栏展开/收起切换 */
+    document.getElementById('changeNavbar').onclick = () => {
+        var element = document.getElementById('navbarSupportedContent');
+        if (element.style.display === 'none' || element.style.display === '') {
+            element.style.display = 'flex';
+        } else {
+            element.style.display = 'none';
+        }
+    }
+
+    // 自动显示目录项
+    // let toc = document.getElementById('toc');
+    // let isPost = document.getElementById('isPost');
+    // if (isPost == null) {
+    //     toc.style.display = 'none';
+    // }
+    // else {
+    //     toc.style.display = 'block';
+    // }
+
+    // toc.onclick = () => {
+
+    // }
+
+    // 点击导航栏转到页面顶部
+    let toTop = document.getElementById("to-top");
+    toTop.onclick = function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }
+
+    // let goTopDisplay = function () {
+    //     let height = document.documentElement.scrollTop 
+    //                 || document.body.scrollTop
+    //     if (height >= (document.body.clientHeight || document.documentElement.clientHeight) * 0.8) {
+    //         navbar.style.position = "fixed !important"
+    //     } else {
+    //         navbar.style.position = "static !important"
+    //     }
+    // }
+    // window.onscroll = goTopDisplay;
+    // window.onload = goTopDisplay;
+    // window.onresize = goTopDisplay;
+</script>
+
+
+    <div id="background" class="background" style="background-image: url(https://gitcode.net/qq_22182345/myfiles/-/raw/master/img/4kcityscape.jpg);">
+        <div class="post-header">
+          <h2 class="post-title">
+            Java 进阶
+          </h2>
+          <div class="post-info">
+            <span class="meta-item pc-show">
+              <!-- icon -->
+              <span class="language" data-lan="publish">发布于</span>
+              <span class="publish-time">2023-02-14</span>
+              <span class="post-meta-divider pc-show">|</span>
+            </span>
+            
+            <span class="meta-item">
+              <!-- icon -->
+              <span class="pc-show language" data-lan="category-in">标签:</span>
+               
+              <a href="https://linna-cy.github.io/MrL8MvLdJ_/">
+                <span>#Java </span>
+              </a>
+               
+            </span>
+            <span class="post-meta-divider">|</span>
+            
+            <span class="meta-item">
+              <!-- icon -->
+              <span
+                >15<span class="language" data-lan="minute"
+                  >分钟</span
+                ></span
+              >
+            </span>
+            <span class="meta-item">
+              <span class="post-meta-divider">|</span>
+              <!-- icon -->
+              <span
+                >3416<span class="pc-show language" data-lan="words"
+                  >字数</span
+                ></span
+              >
+            </span>
+          </div>
+        </div>
+    </div>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <div class="post-content">
+                    <!-- <div id="toc-div">
+                        <h1>目录</h1>
+                        <ul class="markdownIt-TOC">
+<li><a href="#%E5%8F%8D%E5%B0%84">反射</a>
+<ul>
+<li><a href="#%E8%8E%B7%E5%8F%96%E5%AD%97%E8%8A%82%E7%A0%81%E6%96%87%E4%BB%B6%E5%AF%B9%E8%B1%A1">获取字节码文件对象</a></li>
+<li><a href="#%E8%8E%B7%E5%8F%96%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95">获取构造方法</a></li>
+<li><a href="#%E9%80%9A%E8%BF%87%E5%8F%8D%E5%B0%84%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1">通过反射创建对象</a></li>
+<li><a href="#%E8%8E%B7%E5%8F%96%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F">获取成员变量</a></li>
+<li><a href="#%E5%88%A9%E7%94%A8%E5%8F%8D%E5%B0%84%E8%8E%B7%E5%8F%96%E5%92%8C%E4%BF%AE%E6%94%B9%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E7%9A%84%E5%80%BC">利用反射获取和修改成员变量的值</a></li>
+<li><a href="#%E8%8E%B7%E5%8F%96%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95">获取成员方法</a></li>
+<li><a href="#%E9%80%9A%E8%BF%87%E5%8F%8D%E5%B0%84%E8%BF%90%E8%A1%8C%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95">通过反射运行成员方法</a></li>
+</ul>
+</li>
+<li><a href="#%E6%B3%A8%E8%A7%A3">注解</a>
+<ul>
+<li><a href="#%E5%85%83%E6%B3%A8%E8%A7%A3">元注解</a></li>
+<li><a href="#%E6%A0%87%E5%87%86%E6%B3%A8%E8%A7%A3">标准注解</a></li>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B3%A8%E8%A7%A3">自定义注解</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E6%B3%A8%E8%A7%A3%E6%A8%A1%E6%8B%9F-junit">使用注解模拟 Junit</a></li>
+</ul>
+</li>
+</ul>
+
+                        <hr>
+                    </div> -->
+                    
+                        <h1>目录</h1>
+                        <ul class="markdownIt-TOC">
+<li><a href="#%E5%8F%8D%E5%B0%84">反射</a>
+<ul>
+<li><a href="#%E8%8E%B7%E5%8F%96%E5%AD%97%E8%8A%82%E7%A0%81%E6%96%87%E4%BB%B6%E5%AF%B9%E8%B1%A1">获取字节码文件对象</a></li>
+<li><a href="#%E8%8E%B7%E5%8F%96%E6%9E%84%E9%80%A0%E6%96%B9%E6%B3%95">获取构造方法</a></li>
+<li><a href="#%E9%80%9A%E8%BF%87%E5%8F%8D%E5%B0%84%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1">通过反射创建对象</a></li>
+<li><a href="#%E8%8E%B7%E5%8F%96%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F">获取成员变量</a></li>
+<li><a href="#%E5%88%A9%E7%94%A8%E5%8F%8D%E5%B0%84%E8%8E%B7%E5%8F%96%E5%92%8C%E4%BF%AE%E6%94%B9%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E7%9A%84%E5%80%BC">利用反射获取和修改成员变量的值</a></li>
+<li><a href="#%E8%8E%B7%E5%8F%96%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95">获取成员方法</a></li>
+<li><a href="#%E9%80%9A%E8%BF%87%E5%8F%8D%E5%B0%84%E8%BF%90%E8%A1%8C%E6%88%90%E5%91%98%E6%96%B9%E6%B3%95">通过反射运行成员方法</a></li>
+</ul>
+</li>
+<li><a href="#%E6%B3%A8%E8%A7%A3">注解</a>
+<ul>
+<li><a href="#%E5%85%83%E6%B3%A8%E8%A7%A3">元注解</a></li>
+<li><a href="#%E6%A0%87%E5%87%86%E6%B3%A8%E8%A7%A3">标准注解</a></li>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E6%B3%A8%E8%A7%A3">自定义注解</a></li>
+<li><a href="#%E4%BD%BF%E7%94%A8%E6%B3%A8%E8%A7%A3%E6%A8%A1%E6%8B%9F-junit">使用注解模拟 Junit</a></li>
+</ul>
+</li>
+</ul>
+
+                        <hr>
+                    
+                    <h1 id="反射">反射</h1>
+<p>反射是Java中一种用于动态获取类或对象的信息以及动态调用对象方法的功能机制。在运行状态中，对于任意一个类，使用反射可以获取这个类的所有属性和方法；对于任意一个对象，使用反射能够调用它的任意属性和方法。利用反射可以无视对象的修饰符，调用类里面的内容。利用反射可以跟配置文件结合起来使用，把要创建的对象信息和方法写在配置文件中。</p>
+<p>使用反射包含以下步骤：</p>
+<ol>
+<li>获取class字节码文件对象。</li>
+<li>利用反射可以操作类或对象的信息有：
+<ul>
+<li>构造方法（获取、创建对象）</li>
+<li>成员变量（获取、赋值）</li>
+<li>成员方法（获取、运行）</li>
+</ul>
+</li>
+</ol>
+<h2 id="获取字节码文件对象">获取字节码文件对象</h2>
+<p>Java中的每个类都是一个<code>Class</code>对象（字节码文件对象）。获取字节码文件对象共有以下三种方式：</p>
+<ul>
+<li>
+<p>通过class字节码文件获取：<code>Class.forName(&quot;类的全类名&quot;)</code><br>
+类的全类名=类的包名.类名。<br>
+使用该方式，是通过<code>.java</code>源代码文件编译后生成的<code>.class</code>字节码文件获取。</p>
+<pre><code class="language-java">Class clazz = Class.forName(&quot;com.linner.repo.Student&quot;);
+</code></pre>
+</li>
+<li>
+<p>通过Class对象的class属性获取：<code>类名.class</code><br>
+该方式是对象已载入内存后使用的，需要使用<code>import</code>语句将对应的类导入（<code>.class</code>文件加载到内存后产生的<code>Class</code>对象也是唯一的）。</p>
+<pre><code class="language-java">Class clazz = Student.class;
+</code></pre>
+</li>
+<li>
+<p>通过对象获取：<code>对象.getClass()</code><br>
+通过创建对象后的<code>getClass()</code>方法来返回该对象的<code>Class</code>对象。该方法需要创建具体对象后才能使用。</p>
+<pre><code class="language-java">Student student = new Student();
+Class clazz = student.getClass();
+</code></pre>
+</li>
+</ul>
+<blockquote>
+<blockquote>
+<p>以上三种方法获取到的<code>Class</code>对象均为同一个对象。即，使用<code>==</code>分别判断以上三种方法获取到的对象均为<code>true</code>。</p>
+</blockquote>
+</blockquote>
+<p>获取了<code>Class</code>对象后就可以获取到该类的各种信息。</p>
+<h2 id="获取构造方法">获取构造方法</h2>
+<p>获取构造方法即为获取<code>Constructor</code>对象。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">方法名</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>Constructor&lt;?&gt;[] getConstructors()</code></td>
+<td style="text-align:left">获得所有的公共构造方法（<code>public</code>）</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Constructor&lt;?&gt;[] getDeclaredConstructors()</code></td>
+<td style="text-align:left">获得所有的构造方法（包括<code>private</code>）</td>
+</tr>
+<tr>
+<td style="text-align:center"><code> Constructor&lt;T&gt; getConstructor(Class&lt;?&gt;... parameterTypes)</code></td>
+<td style="text-align:left">获取指定的公共构造方法</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Constructor&lt;T&gt; getDeclaredConstructor(Class&lt;?&gt;... parameterTypes)</code></td>
+<td style="text-align:left">获取指定的构造方法（包括<code>private</code>）</td>
+</tr>
+</tbody>
+</table>
+<p>Example：</p>
+<pre><code class="language-java">public class Student {
+    public Student() {
+        System.out.println(&quot;创建了一个Student对象&quot;);
+    }
+
+    private Student(String name) {
+        System.out.println(&quot;创建了一个Student对象：&quot; + name);
+    }
+
+    public Student(String name, int age) {
+        System.out.println(&quot;创建了一个Student对象：name=&quot; + name + &quot;, age=&quot; + age);
+    }
+}
+</code></pre>
+<pre><code class="language-java">public class ReflectDemo {
+    public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException {
+        // 获取Class对象
+        Class clazz = Class.forName(&quot;com.linner.repo.Student&quot;);
+
+        // 获取所有公共构造方法对象
+        Constructor[] constructors1 = clazz.getConstructors();
+        for (Constructor constructor : constructors1) {
+            System.out.println(constructor);
+        }
+
+        System.out.println(&quot;=======================&quot;);
+
+        // 获取所有构造方法对象（包括private）
+        Constructor[] constructors2 = clazz.getDeclaredConstructors();
+        for (Constructor constructor : constructors2) {
+            System.out.println(constructor);
+        }
+
+        System.out.println(&quot;=======================&quot;);
+
+        // 获取指定的构造方法对象
+        // 空参构造方法
+        Constructor con1 = clazz.getConstructor();
+        System.out.println(con1);
+        // 包含参数的构造方法
+        Constructor con2 = clazz.getConstructor(String.class, int.class);
+        System.out.println(con2);
+        // 获取指定的构造方法对象（包括private）
+        Constructor con3 = clazz.getDeclaredConstructor(String.class);
+        System.out.println(con3);
+    }
+}
+</code></pre>
+<h2 id="通过反射创建对象">通过反射创建对象</h2>
+<p>使用<code>Constructor</code>对象的<code>newInstance()</code>方法可以为反射的类创建对象。</p>
+<p>Example：</p>
+<pre><code class="language-java">public class ReflectDemo {
+    public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+        // 获取Class对象
+        Class clazz = Class.forName(&quot;com.linner.reflect.Student&quot;);
+
+        // 获取无参的公共构造方法
+        Constructor con1 = clazz.getConstructor();
+        // 使用无参的构造方法创建对象
+        Student stu1 = (Student) con1.newInstance();
+        System.out.println(stu1);
+
+        // 获取带参数的构造方法（包括private）
+        Constructor con2 = clazz.getDeclaredConstructor(String.class, int.class);
+        // 暴力反射
+        // 如果是private修饰的构造方法，需要临时修改构造方法的访问权限（取消检查访问权限）
+        con2.setAccessible(true);
+        // 使用带参数的构造方法创建对象
+        Student stu2 = (Student) con2.newInstance(&quot;zhangsan&quot;, 23);
+        System.out.println(stu2);
+    }
+}
+</code></pre>
+<h2 id="获取成员变量">获取成员变量</h2>
+<p>获取成员变量即为获取<code>Field</code>对象。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">方法名</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>Field[] getFields()</code></td>
+<td style="text-align:left">返回所有公共成员变量对象（<code>public</code>）</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Field[] getDeclaredFields()</code></td>
+<td style="text-align:left">返回所有成员变量对象（包括<code>private</code>）</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Field getField(String name)</code></td>
+<td style="text-align:left">返回指定名称的公共成员变量对象（<code>public</code>）</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Field getDeclaredField(String name)</code></td>
+<td style="text-align:left">返回指定名称的成员变量对象（包括<code>private</code>）</td>
+</tr>
+</tbody>
+</table>
+<p>Example：</p>
+<pre><code class="language-java">public class Student {
+    public String name;
+    private int age;
+    public String gender;
+    private String address;
+}
+</code></pre>
+<pre><code class="language-java">public class ReflectDemo {
+    public static void main(String[] args) throws ClassNotFoundException, NoSuchFieldException {
+        // 获取Class对象
+        Class clazz = Class.forName(&quot;com.linner.reflect.Student&quot;);
+
+        // 获取所有公共成员变量对象
+        Field[] fields1 = clazz.getFields();
+        for (Field field : fields1) {
+            System.out.println(field);
+        }
+
+        System.out.println(&quot;====================&quot;);
+
+        // 获取所有成员变量（包括private）
+        Field[] fields2 = clazz.getDeclaredFields();
+        for (Field field : fields2) {
+            System.out.println(field);
+        }
+
+        System.out.println(&quot;====================&quot;);
+
+        // 获取指定名称的公共成员变量
+        Field nameField = clazz.getField(&quot;name&quot;);
+        System.out.println(nameField);
+
+        System.out.println(&quot;====================&quot;);
+
+        // 获取指定名称的成员变量（包括private）
+        Field ageField = clazz.getDeclaredField(&quot;age&quot;);
+        System.out.println(ageField);
+    }
+}
+</code></pre>
+<h2 id="利用反射获取和修改成员变量的值">利用反射获取和修改成员变量的值</h2>
+<p>可以使用以下<code>Field</code>对象方法对成员变量的值进行修改：</p>
+<ul>
+<li>
+<p>赋值：</p>
+<pre><code class="language-java">void set(Object obj, Object value)
+</code></pre>
+<p>参数：</p>
+<ul>
+<li><code>obj</code>：要修改属性值的具体对象；</li>
+<li><code>value</code>：具体要修改的值。</li>
+</ul>
+</li>
+<li>
+<p>获取值：</p>
+<pre><code class="language-java">Object get(Object obj)
+</code></pre>
+<p>参数：</p>
+<ul>
+<li><code>obj</code>：要修改属性值的具体对象。</li>
+</ul>
+</li>
+</ul>
+<p>Example：</p>
+<pre><code class="language-java">public class Student {
+    public String name;
+    private int age;
+    private String gender;
+    private String address;
+
+    public Student(String name, int age, String gender, String address) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.address = address;
+    }
+}
+</code></pre>
+<pre><code class="language-java">public class ReflectDemo {
+    public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, NoSuchFieldException {
+        Student student = new Student(&quot;张三&quot;, 23, &quot;大三&quot;, &quot;广州&quot;);
+
+        // 获取Class对象
+        Class&lt;?&gt; clazz = Class.forName(&quot;com.linner.reflect.Student&quot;);
+
+        // 获取并修改name的值
+        Field nameField = clazz.getField(&quot;name&quot;);
+        // 获取name的值
+        String name = (String) nameField.get(student);
+        System.out.println(name);
+        // 修改name的值
+        nameField.set(student, &quot;李四&quot;);
+        name = (String) nameField.get(student);
+        System.out.println(name);
+
+        System.out.println(&quot;===============&quot;);
+
+        // 获取并修改私有变量的值（暴力反射）
+        Field addressField = clazz.getDeclaredField(&quot;address&quot;);
+        // 临时取消访问权限（获取和修改私有变量的值都需要此操作）
+        addressField.setAccessible(true);
+        // 获取私有变量address的值
+        String address = (String) addressField.get(student);
+        System.out.println(address);
+        // 修改私有变量address的值
+        addressField.set(student, &quot;北京&quot;);
+        address = (String) addressField.get(student);
+        System.out.println(address);
+    }
+}
+</code></pre>
+<h2 id="获取成员方法">获取成员方法</h2>
+<p>获取成员方法即为获取<code>Method</code>对象。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">方法名</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>Method[] getMethods()</code></td>
+<td style="text-align:left">返回所有公共成员方法对象（<code>public</code>）</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Method[] getDeclaredMethods()</code></td>
+<td style="text-align:left">放回所有成员方法对象（包括<code>private</code>）</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Method getMethod(String name, Class&lt;?&gt;... parameterTypes)</code></td>
+<td style="text-align:left">返回指定名称和形参的公共成员方法对象（<code>public</code>）</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Method getDeclaredMethod(String name, Class&lt;?&gt;... parameterTypes</code></td>
+<td style="text-align:left">返回指定名称和形参的成员方法对象（包括<code>private</code>）</td>
+</tr>
+</tbody>
+</table>
+<p>Example：</p>
+<pre><code class="language-java">package com.linner.reflect;
+
+public class Student {
+    private String name;
+    private int age;
+    private String gender;
+    private String address;
+
+    public Student() {
+
+    }
+
+    public Student(String name) {
+        this.name = name;
+    }
+
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public Student(String name, int age, String gender, String address) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.address = address;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return &quot;Student{&quot; +
+                &quot;name='&quot; + name + '\'' +
+                &quot;, age=&quot; + age +
+                &quot;, gender='&quot; + gender + '\'' +
+                &quot;, address='&quot; + address + '\'' +
+                '}';
+    }
+
+    private void sleep() {
+        System.out.println(this.name + &quot;正在睡觉&quot;);
+    }
+
+    private void study() {
+        System.out.println(this.name + &quot;正在内卷&quot;);
+    }
+
+    private void study(int time) {
+        System.out.println(this.name + &quot;已经卷了&quot; + time + &quot;分钟还在卷&quot;);
+    }
+}
+</code></pre>
+<pre><code class="language-java">public class ReflectDemo1 {
+    public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException {
+        // 获取Class对象
+        Class&lt;?&gt; clazz = Class.forName(&quot;com.linner.reflect.Student&quot;);
+
+        // 获取所有公共成员方法
+        Method[] methods1 = clazz.getMethods();
+        for (Method method : methods1) {
+            System.out.println(method);
+        }
+
+        System.out.println(&quot;==============&quot;);
+
+        // 获取所有成员方法（包括private）
+        Method[] methods2 = clazz.getDeclaredMethods();
+        for (Method method : methods2) {
+            System.out.println(method);
+        }
+
+        System.out.println(&quot;==============&quot;);
+
+        // 获取指定的公共成员方法
+        // 空参的公共成员方法
+        Method toStringMethod = clazz.getMethod(&quot;toString&quot;);
+        System.out.println(toStringMethod);
+        // 带参数的公共成员方法
+        Method setNameMethod = clazz.getMethod(&quot;setName&quot;, String.class);
+        System.out.println(setNameMethod);
+
+        System.out.println(&quot;==============&quot;);
+
+        // 获取指定的成员方法（包括private）
+        // 空参的成员方法
+        Method studyMethod1 = clazz.getDeclaredMethod(&quot;study&quot;);
+        System.out.println(studyMethod1);
+        // 带参数的成员方法
+        Method studyMethod2 = clazz.getDeclaredMethod(&quot;study&quot;, int.class);
+        System.out.println(studyMethod2);
+    }
+}
+</code></pre>
+<h2 id="通过反射运行成员方法">通过反射运行成员方法</h2>
+<p>使用<code>Method</code>对象的<code>invoke()</code>方法可以运行成员方法。</p>
+<pre><code class="language-java">Object invoke(Object obj, Object... args)
+</code></pre>
+<ul>
+<li><code>obj</code>：具体调用成员方法的对象；</li>
+<li><code>args</code>：调用成员方法传递的参数；</li>
+<li>返回值：方法的返回值。</li>
+</ul>
+<p>Example：</p>
+<pre><code class="language-java">public class ReflectDemo1 {
+    public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        Student student = new Student(&quot;张三&quot;, 23, &quot;大三&quot;, &quot;广州&quot;);
+
+        // 获取Class对象
+        Class&lt;?&gt; clazz = Class.forName(&quot;com.linner.reflect.Student&quot;);
+
+        // 调用无参的成员方法
+        Method toStringMethod = clazz.getMethod(&quot;toString&quot;);
+        String studentToString = (String) toStringMethod.invoke(student);
+        System.out.println(studentToString);
+
+        // 调用带参的私有成员方法
+        Method studyMethod = clazz.getDeclaredMethod(&quot;study&quot;, int.class);
+        // 临时取消访问权限
+        studyMethod.setAccessible(true);
+        studyMethod.invoke(student, 180);
+    }
+}
+</code></pre>
+<hr>
+<h1 id="注解">注解</h1>
+<p>Java注解是附加在代码中的一些元信息，用于编译和运行时进行解析和使用，起到<strong>说明、配置</strong>的功能。</p>
+<p>注解不会影响代码的实际逻辑（并不直接影响代码的语义），仅仅起到辅助性的作用（但是注解可以被看做是程序的工具或者类库。会反过来对正在运行的程序语义有所影响）。包含在<code>java.lang.annotation</code>包中。注解使用<code>@interface</code>来定义（类似于接口的定义）。为注解定义一个方法即为注解类型定义了一个元素，方法的声明不允许有参数或<code>throw</code>语句，返回值类型被限定为原始数据类型、<code>String</code>、<code>Class</code>、<code>enums</code>、注解类型，或前面这些类型的数组，方法可以有默认值。注解可以从源文件、class文件或者在运行时通过反射机制多种方式被读取。</p>
+<p>注解的实现的原理很大的一部分是基于反射实现。</p>
+<p>一般来说，注解一般分为三种类型：</p>
+<ul>
+<li>元注解</li>
+<li>标准注解</li>
+<li>自定义注解</li>
+</ul>
+<h2 id="元注解">元注解</h2>
+<p>元注解是专职负责注解其他注解，主要是标明该注解的使用范围，生效范围。元注解并不能被修改，只能被用来定义自定义注解。</p>
+<p>元注解包括以下四种：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">注解</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>@Target</code></td>
+<td style="text-align:left">定义注解的作用目标。即用来定义自定义注解具体作用在类上，方法上，还是变量上。具体值和作用对象如下：<br><code>ElementType.TYPE</code>：接口、类、枚举、注解<br><code>ElementType.FIELD</code>：字段、枚举的常量<br><code>ElementType.METHOD</code>：方法<br><code>ElementType.PARAMETER</code>：方法参数<br><code>ElementType.CONSTRUCTOR</code>：构造函数<br><code>ElementType.LOCAL_VARIABLE</code>：局部变量<br><code>ElementType.ANNOTATION_TYPE</code>：注解<br><code>ElementType.PACKAGE</code>：包</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>Retention</code></td>
+<td style="text-align:left">定义注解的保留策略。该注解的值如下：<br><code>RetentionPolicy.SOURCE</code>：定义注解仅存在于源码中，在class字节码文件中不包含；<br><code>RetentionPolicy.CLASS</code>：该注解默认的保留策略，定义注解会在class字节码文件中存在，但运行时无法获得；<br><code>RetentionPolicy.RUNTIME</code>：定义注解会在class字节码文件中存在，在运行时可以通过反射获取到。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>@Document</code></td>
+<td style="text-align:left">说明该注解将被包含在javadoc中。</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>@Inherited</code></td>
+<td style="text-align:left">说明子类可以继承该注解。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="标准注解">标准注解</h2>
+<p>Java 提供了三个标准注解，定义在<code>java.lang</code>中（这三个注解的作用更多是一种注释）。</p>
+<ul>
+<li><code>@Override</code>：表示当前方法覆盖了父类中的对应方法（重写方法）。</li>
+<li><code>@Deprecated</code>：标记一个元素为已过期，避免或不推荐使用。<br>
+支持的元素类型为：<code>CONSTRUCTOR</code>, <code>FIELD</code>, <code>LOCAL_VARIABLE</code>, <code>METHOD</code>, <code>PACKAGE</code>, <code>PARAMETER</code>, <code>TYPE</code>。</li>
+<li><code>@SuppressWarnings</code>：不输出对应的编译警告。</li>
+</ul>
+<h2 id="自定义注解">自定义注解</h2>
+<p>注解的定义类似于接口的定义，使用<code>@interface</code>来定义。定义注解类中的一个方法即为注解类型定义了一个元素，方法的声明不允许有参数或<code>throw</code>语句，返回值类型被限定为原始数据类型、字符串String、Class、enums、注解类型，或前面这些类型的数组，方法可以有默认值。</p>
+<p>自定义注解一般分为以下三个步骤：</p>
+<ul>
+<li>
+<p>定义注解。<br>
+如：</p>
+<pre><code class="language-java">@Target(ElementType.Type)   // 表明该注解加载在类上
+@Retention(RetentionPolicy.RUNTIME) // 表明运行时读取该注解
+// 定义注解类
+public @interface MyAnnotationType {
+    // 定义注解方法（不能有参数或throw等）
+    String value();
+}
+</code></pre>
+<pre><code class="language-java">@Target(ElementType.FIELD)   // 表明该注解加载在字段上（接口、类、枚举）。
+@Retention(RetentionPolicy.RUNTIME)
+public @interface MyAnnotationField {
+    String name();
+    // 使用default定义默认值
+    int length() default 0;
+}
+</code></pre>
+</li>
+<li>
+<p>使用注解。<br>
+如（在其他类上）：</p>
+<pre><code class="language-java">@MyAnnotationType(&quot;Annotation&quot;)
+// 或（有多个元素时需要指定元素名）：@MyAnnotation1(value = &quot;Annotation&quot;)
+public class UsingAnnotations {
+    @MyAnnotationField(name = &quot;张三&quot;, length = 12)
+    public int a;
+    @MyAnnotationField(name = &quot;李四&quot;)   // length将使用默认值
+    public String b;
+}
+</code></pre>
+</li>
+<li>
+<p>读取注解。<br>
+如（定义一个类来读取）：</p>
+<pre><code class="language-java">public class AnnotationValues {
+    public static void readValues() throws ClassNotFoundException {
+        Class usingAnnotationsClass = Class.forName(&quot;UsingAnnotation&quot;);
+
+        // 读取作用于类上的注解
+        MyAnnotationType mat = (MyAnnotationType) usingAnnotationsClass.getAnnotation(MyAnnotationType.class);
+        System.out.println(mat.value());
+
+        // 读取作用于属性上的注解
+        Field a = usingAnnotationsClass.getDeclaredField(&quot;a&quot;);
+        MyAnnotationField maf = (MyAnnotationField) a.getAnnotation(MyAnnotationField.class);
+        System.out.println(maf.name());
+        System.out.println(maf.length());
+    }
+}
+</code></pre>
+</li>
+</ul>
+<h2 id="使用注解模拟-junit">使用注解模拟 Junit</h2>
+<pre><code class="language-java">public class AnnotationDemo {
+
+    // @MyTest
+    public void test1() {
+        System.out.println(&quot;test1...&quot;);
+    }
+
+    @MyTest
+    public void test2() {
+        System.out.println(&quot;test2...&quot;);
+    }
+
+    // @MyTest
+    public void test3() {
+        System.out.println(&quot;test3...&quot;);
+    }
+
+    @MyTest
+    public void test4() {
+        System.out.println(&quot;test4...&quot;);
+    }
+
+    @MyTest
+    public void test5() {
+        System.out.println(&quot;test5...&quot;);
+    }
+
+    public static void main(String[] args) throws Exception {
+        AnnotationDemo a = new AnnotationDemo();
+
+        // 获取Class对象
+        Class&lt;?&gt; clazz = Class.forName(&quot;com.linner.annotation.AnnotationDemo&quot;);
+
+        // 判断对象的所有方法上是否存在MyTest注解
+        Method[] methods = clazz.getDeclaredMethods();
+        for (Method method : methods) {
+            if (method.isAnnotationPresent(MyTest.class)) {
+                method.invoke(a);
+            }
+        }
+    }
+
+}
+</code></pre>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://linna-cy.github.io/Spring Framework/" class="post-title gt-a-link">
+                    Spring Framework
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        <!-- <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first"></div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        
+    </div>
+    <div>
+        Theme <a href="https://github.com/imhanjie/gridea-theme-pure" target="_blank">Pure</a>, Powered by <a
+                href="https://gridea.dev" target="_blank">Gridea</a> | <a href="https://linna-cy.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+</div>
+ -->
+    </div>
+</div>
+<script>
+  hljs.highlightAll();
+  // 开启代码高亮
+  // hljs.initHighlightingOnLoad();
+  // 行号显示
+  // hljs.initLineNumbersOnLoad({ singleLine:true });
+  // let tocDiv = document.getElementById('toc-div');
+  // let toc = document.querySelector('#toc-div .markdownIt-TOC');
+  // if (toc === null || toc === undefined) {
+  //   tocDiv.style.display = 'none';
+  // }
+
+  setCodeAllNum();
+</script>
+</body>
+</html>

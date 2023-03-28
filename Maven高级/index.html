@@ -1,0 +1,882 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Maven 高级 | Linner&#39;s Blog</title>
+
+<!-- 代码高亮： -->
+<!-- <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css"> -->
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script> -->
+
+<link rel="shortcut icon" href="https://linna-cy.github.io/favicon.ico?v=1679988829894">
+
+<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://linna-cy.github.io/styles/main.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://linna-cy.github.io/media/icons/iconfont.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@highlightjs/cdn-assets/highlight.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.12.0/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.12.0/languages//dart.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/moment@2.27.0/moment.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.0/dist/js/bootstrap.min.js"></script>
+<!-- DEMO JS -->
+<!-- <script src="media/scripts/index.js"></script> -->
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.css">
+    
+    <script>
+      // 计算代码行数
+      let pxToNumber = function(px) {
+        // let num = Number(px.replace("px", ""));
+        let num = parseFloat(px);
+
+        return num;
+      };
+      let getRow = function(elem) {
+          let style = window.getComputedStyle(elem, null);
+          // let lineHeight = style.lineHeight === "normal" ? style.fontSize : style.lineHeight;
+          let lineHeight = style.lineHeight;
+
+          let height = style.height;
+          let padding = style.padding;
+          // let isiOS = /(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent);
+          let row = (pxToNumber(height)-pxToNumber(padding)) / pxToNumber(lineHeight);
+          // if (isiOS) {
+          //   row = pxToNumber(height) / pxToNumber(lineHeight);
+          //   alert('ios!');
+          // }
+          // else {
+          //   row = (pxToNumber(height)-pxToNumber(padding)) / pxToNumber(lineHeight);
+          // }
+          return parseInt(row);
+      };
+      
+      // 获取行号文字
+      let getRowNumString = function (row) {
+          let num_str = new String('');
+          for (let i = 1; i <= row; i++) {
+              let num = new String(i.toString() + '\n');
+              num_str = num_str + num;
+          }
+          return num_str;
+      }
+
+      // 指定代码块开启代码行号
+      let setCodeNum = function(codeElem) {
+          let pre = codeElem.parentElement;
+          let span = document.createElement('span');
+          span.innerText = getRowNumString(getRow(codeElem));
+          let codeElemStyle = window.getComputedStyle(codeElem, null);
+          span.style.display = 'inline-block';
+          span.style.backgroundColor = "rgba(255,255,255,0)";
+          span.style.color = 'rgba(255,255,255,0.4)';
+          span.style.margin = 0;
+          span.style.padding = 0;
+          // span.style.borderRight = '1px #fff solid';
+          span.style.paddingRight = 4;
+          span.style.userSelect = 'none';
+          span.style.textAlign = 'center';
+          span.className = 'code-num';
+
+          span.style.font = codeElemStyle.font;
+          // span.style.height = codeElemStyle.height;
+          span.style.paddingLeft = codeElemStyle.paddingRight;
+          span.style.borderTopLeftRadius = codeElemStyle.borderTopRightRadius;
+          span.style.borderBottomLeftRadius = codeElemStyle.borderBottomRightRadius;
+          span.style.paddingTop = codeElemStyle.paddingTop;
+
+          pre.style.display = 'flex';
+          pre.style.overflowX = 'hidden';
+
+          codeElem.style.borderTopLeftRadius = 0;
+          codeElem.style.borderBottomLeftRadius = 0;
+          codeElem.style.marginLeft = 0;
+          codeElem.style.paddingLeft = span.style.paddingRight;
+          codeElem.style.overflowX = 'auto';
+          codeElem.style.display = 'inline-block';
+          pre.insertBefore(span, codeElem);
+      }
+
+      // 设置代码块开启代码行号
+      let setCodeAllNum = function() {
+          let codeElems = document.querySelectorAll('pre > code');
+          for (let i = 0; i < codeElems.length; i++) {
+              codeElems[i].parentElement.className = 'code-pre';
+              setCodeNum(codeElems[i]);
+          }
+      }
+    </script>
+</head>
+<body>
+<div class="main gt-bg-theme-color-first post-main">
+    <!-- <div class="top">
+    <span id="go-top" class="iconfont icon-shangxiazuoyouTriangle17"></span>
+</div>
+<script>
+    let goTop = document.getElementById("go-top");
+    let goTopDisplay = function () {
+        let height = document.documentElement.scrollTop 
+                    || document.body.scrollTop
+        if (height >= (document.body.clientHeight || document.documentElement.clientHeight) * 0.8) {
+            goTop.style.display = "block"
+        } else {
+            goTop.style.display = "none"
+        }
+        goTop.focus();
+    }
+    window.onscroll = goTopDisplay;
+    window.onload = goTopDisplay;
+    window.onresize = goTopDisplay;
+    goTop.onclick = function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }
+</script> -->
+    <nav class="navbar navbar-expand-lg" id="navbar">
+    <a class="navbar-brand" href="/">
+        <!-- <img class="user-avatar" src="/images/avatar.png" alt="头像"> -->
+        <img class="site-icon" src="https://linna-cy.github.io/images/favicon.png" alt="icon">
+        <div class="site-name gt-c-content-color-first">
+            Linner&#39;s Blog
+        </div>
+    </a>
+
+    <div id="to-top" style="flex: 1; height: 100%;"></div>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="changeNavbar">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+            <div class="nav-item">
+                
+                <a href="/" class="menu gt-a-link">
+                    <span class="iconfont icon-zhuye"></span>
+                    首页
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/archives" class="menu gt-a-link">
+                    <span class="iconfont icon-guidang"></span>
+                    归档
+                </a>
+                
+            </div>
+            
+            <div class="nav-item">
+                
+                <a href="/tags" class="menu gt-a-link">
+                    <span class="iconfont icon-biaoqian"></span>
+                    标签
+                </a>
+                
+            </div>
+            
+            <!-- <div class="nav-item" id="toc">
+                <a class="menu gt-a-link">
+                    <span class="iconfont icon-mulu"></span>
+                    目录
+                </a>
+            </div> -->
+            <!-- <div class="nav-item" id="to-top">
+                <a href="#top" class="menu gt-a-link">
+                    <span class="iconfont icon-fanhuidingbu"></span>
+                    返回顶部
+                </a>
+            </div> -->
+        </div>
+        <!-- 搜索框 -->
+        <!-- <div style="text-align: center">
+            <form id="gridea-search-form" style="position: relative" data-update="1679988829894"
+                action="/search/">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+                <i class="fas fa-search gt-c-content-color-first" style="position: absolute; top: 7px; left: 10px;"></i>
+            </form>
+        </div> -->
+        <div class="search-box">
+            <i class="fas fa-search gt-c-content-color-first"></i>
+            <form id="gridea-search-form" data-update="1679988829894"
+                action="/search/">
+                <input class="search-input" autocomplete="off" spellcheck="false" name="q" placeholder="搜索文章" />
+            </form>
+        </div>
+    </div>
+</nav>
+<script>
+    /* 移动端导航栏展开/收起切换 */
+    document.getElementById('changeNavbar').onclick = () => {
+        var element = document.getElementById('navbarSupportedContent');
+        if (element.style.display === 'none' || element.style.display === '') {
+            element.style.display = 'flex';
+        } else {
+            element.style.display = 'none';
+        }
+    }
+
+    // 自动显示目录项
+    // let toc = document.getElementById('toc');
+    // let isPost = document.getElementById('isPost');
+    // if (isPost == null) {
+    //     toc.style.display = 'none';
+    // }
+    // else {
+    //     toc.style.display = 'block';
+    // }
+
+    // toc.onclick = () => {
+
+    // }
+
+    // 点击导航栏转到页面顶部
+    let toTop = document.getElementById("to-top");
+    toTop.onclick = function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        })
+    }
+
+    // let goTopDisplay = function () {
+    //     let height = document.documentElement.scrollTop 
+    //                 || document.body.scrollTop
+    //     if (height >= (document.body.clientHeight || document.documentElement.clientHeight) * 0.8) {
+    //         navbar.style.position = "fixed !important"
+    //     } else {
+    //         navbar.style.position = "static !important"
+    //     }
+    // }
+    // window.onscroll = goTopDisplay;
+    // window.onload = goTopDisplay;
+    // window.onresize = goTopDisplay;
+</script>
+
+
+    <div id="background" class="background" style="background-image: url(https://gitcode.net/qq_22182345/myfiles/-/raw/master/img/4kcityscape.jpg);">
+        <div class="post-header">
+          <h2 class="post-title">
+            Maven 高级
+          </h2>
+          <div class="post-info">
+            <span class="meta-item pc-show">
+              <!-- icon -->
+              <span class="language" data-lan="publish">发布于</span>
+              <span class="publish-time">2023-02-27</span>
+              <span class="post-meta-divider pc-show">|</span>
+            </span>
+            
+            <span class="meta-item">
+              <!-- icon -->
+              <span class="pc-show language" data-lan="category-in">标签:</span>
+               
+              <a href="https://linna-cy.github.io/MrL8MvLdJ_/"> <span>#Java </span></a>  
+              <a href="https://linna-cy.github.io/ZhrhUf52Mi/"> <span>#项目管理 </span></a>  
+              <a href="https://linna-cy.github.io/18uPZhlPeC/">
+                <span>#Maven </span>
+              </a>
+               
+            </span>
+            <span class="post-meta-divider">|</span>
+            
+            <span class="meta-item">
+              <!-- icon -->
+              <span
+                >18<span class="language" data-lan="minute"
+                  >分钟</span
+                ></span
+              >
+            </span>
+            <span class="meta-item">
+              <span class="post-meta-divider">|</span>
+              <!-- icon -->
+              <span
+                >3795<span class="pc-show language" data-lan="words"
+                  >字数</span
+                ></span
+              >
+            </span>
+          </div>
+        </div>
+    </div>
+
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <div class="post-content">
+                    <!-- <div id="toc-div">
+                        <h1>目录</h1>
+                        <ul class="markdownIt-TOC">
+<li><a href="#%E5%A4%9A%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91">多模块开发</a></li>
+<li><a href="#%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86">依赖管理</a>
+<ul>
+<li><a href="#%E4%BE%9D%E8%B5%96%E4%BC%A0%E9%80%92">依赖传递</a></li>
+<li><a href="#%E5%8F%AF%E9%80%89%E4%BE%9D%E8%B5%96">可选依赖</a></li>
+<li><a href="#%E8%81%9A%E5%90%88%E5%B7%A5%E7%A8%8B">聚合工程</a></li>
+<li><a href="#%E7%BB%A7%E6%89%BF">继承</a>
+<ul>
+<li><a href="#%E5%AD%90%E9%A1%B9%E7%9B%AE%E4%BE%9D%E8%B5%96%E7%89%88%E6%9C%AC%E9%97%AE%E9%A2%98">子项目依赖版本问题</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E5%B1%9E%E6%80%A7">属性</a>
+<ul>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7">自定义属性</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD%E5%B1%9E%E6%80%A7">配置文件加载属性</a></li>
+</ul>
+</li>
+<li><a href="#%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86">版本管理</a></li>
+<li><a href="#%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%BC%80%E5%8F%91">多环境开发</a></li>
+<li><a href="#%E8%B7%B3%E8%BF%87%E6%B5%8B%E8%AF%95">跳过测试</a></li>
+</ul>
+
+                        <hr>
+                    </div> -->
+                    
+                        <h1>目录</h1>
+                        <ul class="markdownIt-TOC">
+<li><a href="#%E5%A4%9A%E6%A8%A1%E5%9D%97%E5%BC%80%E5%8F%91">多模块开发</a></li>
+<li><a href="#%E4%BE%9D%E8%B5%96%E7%AE%A1%E7%90%86">依赖管理</a>
+<ul>
+<li><a href="#%E4%BE%9D%E8%B5%96%E4%BC%A0%E9%80%92">依赖传递</a></li>
+<li><a href="#%E5%8F%AF%E9%80%89%E4%BE%9D%E8%B5%96">可选依赖</a></li>
+<li><a href="#%E8%81%9A%E5%90%88%E5%B7%A5%E7%A8%8B">聚合工程</a></li>
+<li><a href="#%E7%BB%A7%E6%89%BF">继承</a>
+<ul>
+<li><a href="#%E5%AD%90%E9%A1%B9%E7%9B%AE%E4%BE%9D%E8%B5%96%E7%89%88%E6%9C%AC%E9%97%AE%E9%A2%98">子项目依赖版本问题</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#%E5%B1%9E%E6%80%A7">属性</a>
+<ul>
+<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7">自定义属性</a></li>
+<li><a href="#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%8A%A0%E8%BD%BD%E5%B1%9E%E6%80%A7">配置文件加载属性</a></li>
+</ul>
+</li>
+<li><a href="#%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86">版本管理</a></li>
+<li><a href="#%E5%A4%9A%E7%8E%AF%E5%A2%83%E5%BC%80%E5%8F%91">多环境开发</a></li>
+<li><a href="#%E8%B7%B3%E8%BF%87%E6%B5%8B%E8%AF%95">跳过测试</a></li>
+</ul>
+
+                        <hr>
+                    
+                    <h1 id="多模块开发">多模块开发</h1>
+<p>多模块开发有以下两种：</p>
+<ul>
+<li>按照功能拆分。</li>
+<li>按照模块拆分。</li>
+</ul>
+<p>例如，将项目中的DAO类拆分出来作为一个独立的模块。然后使用Maven将该模块作为依赖导入项目中。</p>
+<p>假设现在已经将项目中的实体类拆分出来作为<code>maven-dao</code>模块。该模块也使用Maven构建，然后导入该项目所需依赖。经过测试后，将该项目的<code>&lt;groupId&gt;</code>、<code>&lt;artifactId&gt;</code>和<code>&lt;version&gt;</code>导入原本项目。</p>
+<p><code>maven-dao</code>模块的<code>pom.xml</code>中：</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+  xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+
+    &lt;!-- ... --&gt;
+
+    &lt;!-- 将下面内容作为依赖导入到原项目中 --&gt;
+    &lt;groupId&gt;com.linner&lt;/groupId&gt;
+    &lt;artifactId&gt;springmvc-demo&lt;/artifactId&gt;
+    &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+    &lt;!-- END --&gt;
+
+    &lt;!-- ... --&gt;
+
+&lt;/project&gt;
+</code></pre>
+<p>将上方<code>&lt;groupId&gt;</code>、<code>&lt;artifactId&gt;</code>和<code>&lt;version&gt;</code>导入原项目：</p>
+<pre><code class="language-xml">&lt;dependencies&gt;
+
+    &lt;!-- ... --&gt;
+
+    &lt;dependency&gt;
+        &lt;groupId&gt;com.linner&lt;/groupId&gt;
+        &lt;artifactId&gt;springmvc-demo&lt;/artifactId&gt;
+        &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+    &lt;/dependency&gt;
+
+    &lt;!-- ... --&gt;
+
+&lt;/dependencies&gt;
+</code></pre>
+<p>接着使用Maven的<code>install</code>命令将<code>maven-dao</code>模块安装到Maven本地仓库中，项目即可正常启动。</p>
+<hr>
+<h1 id="依赖管理">依赖管理</h1>
+<h2 id="依赖传递">依赖传递</h2>
+<p>Maven项目中的依赖是具有传递性的。即，依赖的依赖可以作为依赖使用。将依赖关系作为树状结构看待，那么依赖的子孙依赖，也可以作为项目的依赖。</p>
+<p>依赖传递有直接依赖和间接依赖。</p>
+<ul>
+<li>直接依赖：<br>
+在<code>pom.xml</code>中编写的依赖就是该项目的直接依赖。即，依赖树中，子依赖（子节点）即为当前项目（根节点）的直接依赖。</li>
+<li>间接依赖：<br>
+依赖树中，直接依赖下的所有依赖（孙子节点）即为当前项目的间接依赖。</li>
+</ul>
+<p>因为依赖传递的存在，会导致使用依赖的过程中出现冲突问题。例如有两个相同的依赖，它们的版本不同，就会导致依赖冲突。</p>
+<p>Maven指定了一系列规则来解决依赖冲突问题。</p>
+<ul>
+<li>特殊优先：同级下（依赖树中同个父节点的依赖为同级，即同个<code>pom.xml</code>下），配置了相同资源的不同版本，后配置的覆盖先配置。</li>
+<li>路径优先：依赖树中，层级越浅，优先级越高；层级越深，优先级越低。</li>
+<li>声明优先：资源在相同层级被依赖时，配置顺序靠前的覆盖配置顺序靠后的。即，谁先声明用谁。</li>
+</ul>
+<blockquote>
+<p>注意：依赖的优先级只对当前项目起作用。即，当前项目选择的依赖版本并不会影响到依赖中相同资源不同版本的依赖。<br>
+最终选择的依赖结果根据Idea中Mavem面板的依赖树视图。</p>
+</blockquote>
+<h2 id="可选依赖">可选依赖</h2>
+<p>可选依赖指对外隐藏当前所依赖的资源（不透明），隐藏后对应资源将不具有依赖传递。</p>
+<p>可选依赖的开关使用<code>&lt;optional&gt;</code>。如：</p>
+<p>``xml<br>
+<dependency><br>
+<groupId>xxx.xxxxxx</groupId><br>
+<artifactId>xxxxx-xxxxxx</artifactId><br>
+<version>x.x.x</version><br>
+<!-- 默认为false，设置为true为开启可选依赖 --><br>
+<optional>true</optional><br>
+</dependency></p>
+<pre><code>
+## 排除依赖
+
+排除依赖指主动断开依赖的资源，被排除的资源无需指定版本（不需要）。即，在当前项目中，排除依赖中不需要的间接依赖。
+
+排除依赖使用`&lt;exclusions&gt;`来指定一个排除的依赖列表。列表中使用`&lt;exclusion&gt;`来指定要排除的依赖。如：
+
+```xml
+&lt;dependency&gt;
+    &lt;groupId&gt;xxx.xxxxxx&lt;/groupId&gt;
+    &lt;artifactId&gt;xxxxx-xxxxxx&lt;/artifactId&gt;
+    &lt;version&gt;x.x.x&lt;/version&gt;
+    &lt;exclusions&gt;
+        &lt;exclusion&gt;
+            &lt;groupId&gt;yyy.yyyyyy&lt;/groupId&gt;
+            &lt;artifactId&gt;yyyyy-yyyyyyy&lt;/artifactId&gt;
+            &lt;!-- 排除依赖不需要指定版本 --&gt;
+        &lt;/exclusion&gt;
+    &lt;/exclusions&gt;
+&lt;/dependency&gt;
+</code></pre>
+<h2 id="聚合工程">聚合工程</h2>
+<p>聚合即为将多个模块组织成一个整体，同时进行项目构建的过程。聚合工程通常是一个不具有业务功能的&quot;空&quot;工程（有且仅有一个pom文件）。使用聚合工程可以将多个工程编组，通过对聚合工程进行构建，实现对所包含的模块进行同步构建。当工程中某个模块发生更新（变更）时，必须保障工程中与已更新模块关联的模块同步更新，此时可以使用聚合工程来解决批量模块同步构建的问题。</p>
+<p>Example：</p>
+<p>创建一个空的Maven项目，并将其打包方式设置为<code>pom</code>，然后添加所要管理的项目：</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;groupId&gt;com.linner&lt;/groupId&gt;
+    &lt;artifactId&gt;maven-parent&lt;/artifactId&gt;
+    &lt;version&gt;x.x.x&lt;/version&gt;
+    &lt;packaging&gt;pom&lt;/packaging&gt;
+    
+    &lt;!-- 设置管理的模块名称 --&gt;
+    &lt;modules&gt;
+        &lt;!-- module里面的值为管理模块的相对路径 --&gt;
+        &lt;module&gt;../xxxx&lt;/module&gt;
+        &lt;module&gt;../yyyy&lt;/module&gt;
+        &lt;module&gt;../zzzz&lt;/module&gt;
+    &lt;/modules&gt;
+    
+&lt;/project&gt;
+</code></pre>
+<p>当该<code>maven-parent</code>被<code>compile</code>后，所有被其管理的项目都会被执行编译操作。</p>
+<blockquote>
+<p>聚合工程管理的项目在进行运行的时候，会按照项目与项目之间的依赖关系来自动决定执行的顺序和配置的顺序无关。</p>
+</blockquote>
+<h2 id="继承">继承</h2>
+<p>继承是用来解决重复配置问题。继承描述的是两个工程间的关系子工程可以继承父工程中的配置信息，常见于依赖关系的继承。继承的作用：简化配置、减少版本冲突。</p>
+<blockquote>
+<p>一般继承和聚合都是使用同一个空项目来构建，但是这两个的功能是不一样的。</p>
+</blockquote>
+<p>在子工程中配置当前工程继承自parent工程：</p>
+<pre><code class="language-xml">&lt;!-- 在project下配置 --&gt;
+&lt;parent&gt;
+    &lt;groupId&gt;com.linner&lt;/groupId&gt;
+    &lt;artifactId&gt;maven-parent&lt;/artifactId&gt;
+    &lt;version&gt;x.x.x&lt;/version&gt;
+    &lt;!--设置父项目pom.xml位置路径--&gt;
+    &lt;relativePath&gt;../maven-parent/pom.xml&lt;/relativePath&gt;
+&lt;/parent&gt;
+</code></pre>
+<p>将子项目共同使用的依赖都抽取出来，维护在父项目的<code>pom.xml</code>中：</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;groupId&gt;com.linner&lt;/groupId&gt;
+    &lt;artifactId&gt;maven-parent&lt;/artifactId&gt;
+    &lt;version&gt;x.x.x&lt;/version&gt;
+    &lt;packaging&gt;pom&lt;/packaging&gt;
+    
+    &lt;modules&gt;
+        &lt;module&gt;../xxxx&lt;/module&gt;
+        &lt;module&gt;../yyyy&lt;/module&gt;
+        &lt;module&gt;../zzzz&lt;/module&gt;
+    &lt;/modules&gt;
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-core&lt;/artifactId&gt;
+            &lt;version&gt;5.2.10.RELEASE&lt;/version&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;
+            &lt;version&gt;5.2.10.RELEASE&lt;/version&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-jdbc&lt;/artifactId&gt;
+            &lt;version&gt;5.2.10.RELEASE&lt;/version&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+            &lt;artifactId&gt;spring-test&lt;/artifactId&gt;
+            &lt;version&gt;5.2.10.RELEASE&lt;/version&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.mybatis&lt;/groupId&gt;
+            &lt;artifactId&gt;mybatis&lt;/artifactId&gt;
+            &lt;version&gt;3.5.6&lt;/version&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.mybatis&lt;/groupId&gt;
+            &lt;artifactId&gt;mybatis-spring&lt;/artifactId&gt;
+            &lt;version&gt;1.3.0&lt;/version&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;mysql&lt;/groupId&gt;
+            &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;
+            &lt;version&gt;5.1.47&lt;/version&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.alibaba&lt;/groupId&gt;
+            &lt;artifactId&gt;druid&lt;/artifactId&gt;
+            &lt;version&gt;1.1.16&lt;/version&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;javax.servlet&lt;/groupId&gt;
+            &lt;artifactId&gt;javax.servlet-api&lt;/artifactId&gt;
+            &lt;version&gt;3.1.0&lt;/version&gt;
+            &lt;scope&gt;provided&lt;/scope&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.fasterxml.jackson.core&lt;/groupId&gt;
+            &lt;artifactId&gt;jackson-databind&lt;/artifactId&gt;
+            &lt;version&gt;2.9.0&lt;/version&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+&lt;/project&gt;
+</code></pre>
+<h3 id="子项目依赖版本问题">子项目依赖版本问题</h3>
+<p>如果把所有用到的依赖都管理在父项目的<code>pom.xml</code>，这样就会导致有很多项目引入了过多自己不需要的依赖，这样对于子项目来说也是种负担。</p>
+<p>可以在父工程中使用<code>&lt;dependencyManagement&gt;</code>来定义依赖管理：</p>
+<pre><code class="language-xml">&lt;!-- 在project下配置 --&gt;
+&lt;dependencyManagement&gt;
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;junit&lt;/groupId&gt;
+            &lt;artifactId&gt;junit&lt;/artifactId&gt;
+            &lt;version&gt;4.12&lt;/version&gt;
+            &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+&lt;/dependencyManagement&gt;
+</code></pre>
+<p><code>&lt;dependencyManagement&gt;</code>标签不真正引入jar包，而是配置可供子项目选择的jar包依赖。</p>
+<p>如果子项目要想使用它所提供的这些jar包，需要自己添加依赖，并且不需要指定<code>&lt;version&gt;</code>：</p>
+<pre><code class="language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;junit&lt;/groupId&gt;
+    &lt;artifactId&gt;junit&lt;/artifactId&gt;
+    &lt;scope&gt;test&lt;/scope&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p>子项目使用的jar包<code>version</code>由父项目决定。</p>
+<hr>
+<h1 id="属性">属性</h1>
+<p>Maven属性的概念和变量的概念很相似。在一个地方声明，其他地方使用，当属性的声明修改后，所有使用属性的地方都会跟着修改。</p>
+<p>在Maven中的属性分为:</p>
+<ul>
+<li>自定义属性。</li>
+<li>内置属性。<br>
+使用<code>mvn help:system</code>命令查看。</li>
+<li>Setting属性。</li>
+<li>Java系统属性。</li>
+<li>环境变量属性。</li>
+</ul>
+<h2 id="自定义属性">自定义属性</h2>
+<p>在父工程中使用<code>&lt;properties&gt;</code>定义属性：</p>
+<properties>
+    <spring.version>5.2.10.RELEASE</spring.version>
+    <junit.version>4.12</junit.version>
+    <mybatis-spring.version>1.3.0</mybatis-spring.version>
+</properties>
+<p>定义属性标签的名称可以自定义，如<code>&lt;spring.version&gt;</code>也可以修改为<code>&lt;spring-version&gt;</code>。</p>
+<p>接着修改依赖的<code>version</code>：</p>
+<pre><code class="language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-core&lt;/artifactId&gt;
+    &lt;version&gt;${spring.version}&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-webmvc&lt;/artifactId&gt;
+    &lt;version&gt;${spring.version}&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+    &lt;artifactId&gt;spring-jdbc&lt;/artifactId&gt;
+    &lt;version&gt;${spring.version}&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+<p>使用<code>${属性名}</code>来使用属性。</p>
+<h2 id="配置文件加载属性">配置文件加载属性</h2>
+<p>属性也可以作用于其他配置文件中（如<code>jdbc.properties</code>）。</p>
+<p>先在父工程中定义属性，并且设置Maven过滤文件范围：</p>
+<pre><code class="language-xml">&lt;properties&gt;
+   &lt;jdbc.url&gt;jdbc:mysql://127.1.1.1:3306/spring_db&lt;/jdbc.url&gt;
+&lt;/properties&gt;
+
+&lt;!-- ... --&gt;
+
+&lt;build&gt;
+    &lt;resources&gt;
+        &lt;resource&gt;
+            &lt;!-- 设置资源目录（相对路径） --&gt;
+            &lt;directory&gt;../xxxx/src/main/resources&lt;/directory&gt;
+            &lt;!-- 设置是否能够解析${}，默认是false --&gt;
+            &lt;filtering&gt;true&lt;/filtering&gt;
+        &lt;/resource&gt;
+    &lt;/resources&gt;
+&lt;/build&gt;
+</code></pre>
+<p>修改<code>jdbc.properties</code>（属性值的使用方式与<code>pom.xml</code>中相同）：</p>
+<pre><code class="language-properties">jdbc.driver=com.mysql.jdbc.Driver
+jdbc.url=${jdbc.url}
+jdbc.username=root
+jdbc.password=root
+</code></pre>
+<p>如果需要在多个项目中解析属性值，可以使用<code>${project.basedir}</code>（Maven的内置系统属性）来简化书写：</p>
+<pre><code class="language-xml">&lt;build&gt;
+    &lt;resources&gt;
+        &lt;!--
+			${project.basedir}: 表示当前项目所在目录
+			子项目继承了父项目，相当于所有的子项目都添加了资源目录的过滤
+		--&gt;
+        &lt;resource&gt;
+            &lt;directory&gt;${project.basedir}/src/main/resources&lt;/directory&gt;
+            &lt;filtering&gt;true&lt;/filtering&gt;
+        &lt;/resource&gt;
+    &lt;/resources&gt;
+
+    &lt;!-- 
+        忽略 web.xml 检查
+        或者在 src\main\webapp\WEB-INF\ 添加一个 web.xml 文件 
+    --&gt;
+    &lt;plugins&gt;
+        &lt;plugin&gt;
+            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+            &lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt;
+            &lt;version&gt;3.2.3&lt;/version&gt;
+            &lt;configuration&gt;
+                &lt;!-- 忽略 web.xml 检查 --&gt;
+                &lt;failOnMissingWebXml&gt;false&lt;/failOnMissingWebXml&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre>
+<blockquote>
+<p>使用<code>mvn help:system</code>命令可以查看更多的内置属性。</p>
+</blockquote>
+<hr>
+<h1 id="版本管理">版本管理</h1>
+<ul>
+<li><code>SNAPSHOT</code>（快照版本）：
+<ul>
+<li>项目开发过程中临时输出的版本，称为快照版本。</li>
+<li>快照版本会随着开发的进展不断更新。</li>
+</ul>
+</li>
+<li><code>RELEASE</code>（发布版本）：
+<ul>
+<li>项目开发到一定阶段里程碑后，向团队外部发布较为稳定的版本，这种版本所对应的构件文件是稳定的。</li>
+<li>即便进行功能的后续开发，也不会改变当前发布版本内容，这种版本称为发布版本。</li>
+</ul>
+</li>
+<li><code>alpha</code>（内测版）：Bug多、不稳定、内部版本不断添加新功能。</li>
+<li><code>beta</code>（公测版）：不稳定（相对比<code>alpha</code>稳定些），Bug相对较多不断添加新功能。</li>
+<li>纯数字版本。</li>
+</ul>
+<hr>
+<h1 id="多环境开发">多环境开发</h1>
+<p>Maven提供配置多种环境的设定，帮助开发者在使用过程中快速切换环境。</p>
+<p>在父工程中配置多个环境，并指定默认激活环境：</p>
+<pre><code class="language-xml">&lt;profiles&gt;
+    &lt;!--开发环境--&gt;
+    &lt;profile&gt;
+        &lt;id&gt;dev&lt;/id&gt;
+        &lt;properties&gt;
+            &lt;jdbc.url&gt;jdbc:mysql://127.1.1.1:3306/spring_db&lt;/jdbc.url&gt;
+        &lt;/properties&gt;
+        &lt;activation&gt;
+            &lt;!-- 设定是否为默认启动环境 --&gt;
+            &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;
+        &lt;/activation&gt;
+    &lt;/profile&gt;
+    &lt;!--生产环境--&gt;
+    &lt;profile&gt;
+        &lt;id&gt;pro&lt;/id&gt;
+        &lt;properties&gt;
+            &lt;jdbc.url&gt;jdbc:mysql://127.2.2.2:3306/spring_db&lt;/jdbc.url&gt;
+        &lt;/properties&gt;
+    &lt;/profile&gt;
+    &lt;!--测试环境--&gt;
+    &lt;profile&gt;
+        &lt;id&gt;test&lt;/id&gt;
+        &lt;properties&gt;
+            &lt;jdbc.url&gt;jdbc:mysql://127.3.3.3:3306/spring_db&lt;/jdbc.url&gt;
+        &lt;/properties&gt;
+    &lt;/profile&gt;
+&lt;/profiles&gt;
+</code></pre>
+<p>动态切换配置环境可以使用Maven的<code>-P</code>参数来指定，参数值为环境<code>id</code>：</p>
+<pre><code class="language-shell">mvn install -P test
+</code></pre>
+<hr>
+<h1 id="跳过测试">跳过测试</h1>
+<p>在执行<code>install</code>指令的时候，Maven都会按照顺序从上往下依次执行，每次都会执行<code>test</code>。<code>test</code>可以确保每次打包或者安装的时候，程序的正确性。</p>
+<p>但是，假如测试已经通过，在没有修改程序的前提下再次执行打包或安装命令，由于顺序执行，测试会被再次执行，就有点耗费时间了。或者，功能开发过程中有部分模块还没有开发完毕，测试无法通过，但是想要把其中某一部分进行快速打包，此时由于测试环境失败就会导致打包失败。此时就需要跳过测试：</p>
+<ol>
+<li>
+<p>Idea工具可以实现跳过测试（Maven面板中带闪电图标的按钮）。</p>
+</li>
+<li>
+<p>在父工程中的<code>pom.xml</code>中添加测试插件配置：</p>
+<pre><code class="language-xml">&lt;build&gt;
+    &lt;plugins&gt;
+        &lt;plugin&gt;
+            &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
+            &lt;version&gt;2.12.4&lt;/version&gt;
+            &lt;configuration&gt;
+                &lt;skipTests&gt;false&lt;/skipTests&gt;
+                &lt;!--排除掉不参与测试的内容--&gt;
+                &lt;excludes&gt;
+                    &lt;exclude&gt;**/BookServiceTest.java&lt;/exclude&gt;
+                &lt;/excludes&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre>
+<p><code>&lt;configuration&gt;</code>中有如下标签：</p>
+<ul>
+<li><code>skipTests</code>：如果为<code>true</code>，跳过所有测试；为<code>false</code>，不跳过测试。</li>
+<li><code>excludes</code>：不参与测试的测试类，针对<code>skipTests</code>为<code>false</code>来设置的。</li>
+<li><code>includes</code>：参与测试的测试类，针对<code>skipTests</code>为<code>true</code>来设置的。</li>
+</ul>
+</li>
+<li>
+<p>命令跳过测试：</p>
+<pre><code class="language-shell">mvn 指令 -D skipTests
+</code></pre>
+<blockquote>
+<ul>
+<li>执行的项目构建指令必须包含测试生命周期，否则无效果。</li>
+<li>命令需要在<code>pom.xml</code>所在目录下进行执行。</li>
+</ul>
+</blockquote>
+</li>
+</ol>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://linna-cy.github.io/SpringBoot基础/" class="post-title gt-a-link">
+                    SpringBoot 基础
+                </a>
+            </div>
+        
+
+        
+
+        
+
+        <!-- <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first"></div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    <div class="footer-info">
+        
+    </div>
+    <div>
+        Theme <a href="https://github.com/imhanjie/gridea-theme-pure" target="_blank">Pure</a>, Powered by <a
+                href="https://gridea.dev" target="_blank">Gridea</a> | <a href="https://linna-cy.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+</div>
+ -->
+    </div>
+</div>
+<script>
+  hljs.highlightAll();
+  // 开启代码高亮
+  // hljs.initHighlightingOnLoad();
+  // 行号显示
+  // hljs.initLineNumbersOnLoad({ singleLine:true });
+  // let tocDiv = document.getElementById('toc-div');
+  // let toc = document.querySelector('#toc-div .markdownIt-TOC');
+  // if (toc === null || toc === undefined) {
+  //   tocDiv.style.display = 'none';
+  // }
+
+  setCodeAllNum();
+</script>
+</body>
+</html>
