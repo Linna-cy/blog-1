@@ -1,1 +1,0 @@
-console.log("Hello Linner's Blog")
