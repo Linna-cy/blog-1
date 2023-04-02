@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Tomcat基本使用 Tomcat安装 访问Tomcat官网下载。Tomcat是绿色版，直接解压即可。
+启动Tomcat 以Windows系统为例，运行Tomcat目录下 bin\startup.bat 启动脚本即可完成启动。
+启动后，通过浏览器访问 http://localhost:8080能看到Apache Tomcat的内容就说明Tomcat已经启动成功。
+Windows系统下启动的过程中，如果控制台有中文乱码，需要修改conf/logging.prooperties。
+将
+java.util.logging.ConsoleHandler.encoding = UTF-8 修改为
+java.util.logging.ConsoleHandler.encoding = GBK 关闭Tomcat 关闭Tomcat不应该直接关闭运行窗口来强制关闭。应该运行bin\shutdown.bat或ctrl&#43;c来正常关闭。
+修改端口 Tomcat默认的端口是8080，通过修改 conf/server.xml 来修改端口号：
+&amp;lt;Connector port=&amp;#34;8080&amp;#34; protocol=&amp;#34;HTTP/1.1&amp;#34; connectionTimeout=&amp;#34;20000&amp;#34; redirectPort=&amp;#34;8443&amp;#34;&amp;gt; 部署 Tomcat部署项目： 将项目放置到webapps目录下，即部署完成。
+一般JavaWeb项目会被打包称war包，然后将war包放到webapps目录下，Tomcat会自动解压缩。
+ Maven 创建 Web 项目 使用Maven工具能更加简单快捷的创建Web项目。
+Maven Web 项目结构  📁project_name &amp;mdash; 项目主目录  📁src &amp;mdash; 源代码和测试代码文件目录  📁main &amp;mdash; 源代码文件目录  📁java &amp;mdash; 源代码Java文件目录 📁resourcs &amp;mdash; 源代码配置文件目录 ❗📁webapp 或 web &amp;mdash; Web项目核心目录 存放web配置文件和web项目代码 (html, css, javascript等)  ❗📁WEB-INF &amp;mdash; Web项目核心目录  📄web.'>
+
+
+<title>Tomcat</title>
+
+<link rel='canonical' href='https://www.linner.asia/p/tomcat/'>
+
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Tomcat'>
+<meta property='og:description' content='Tomcat基本使用 Tomcat安装 访问Tomcat官网下载。Tomcat是绿色版，直接解压即可。
+启动Tomcat 以Windows系统为例，运行Tomcat目录下 bin\startup.bat 启动脚本即可完成启动。
+启动后，通过浏览器访问 http://localhost:8080能看到Apache Tomcat的内容就说明Tomcat已经启动成功。
+Windows系统下启动的过程中，如果控制台有中文乱码，需要修改conf/logging.prooperties。
+将
+java.util.logging.ConsoleHandler.encoding = UTF-8 修改为
+java.util.logging.ConsoleHandler.encoding = GBK 关闭Tomcat 关闭Tomcat不应该直接关闭运行窗口来强制关闭。应该运行bin\shutdown.bat或ctrl&#43;c来正常关闭。
+修改端口 Tomcat默认的端口是8080，通过修改 conf/server.xml 来修改端口号：
+&amp;lt;Connector port=&amp;#34;8080&amp;#34; protocol=&amp;#34;HTTP/1.1&amp;#34; connectionTimeout=&amp;#34;20000&amp;#34; redirectPort=&amp;#34;8443&amp;#34;&amp;gt; 部署 Tomcat部署项目： 将项目放置到webapps目录下，即部署完成。
+一般JavaWeb项目会被打包称war包，然后将war包放到webapps目录下，Tomcat会自动解压缩。
+ Maven 创建 Web 项目 使用Maven工具能更加简单快捷的创建Web项目。
+Maven Web 项目结构  📁project_name &amp;mdash; 项目主目录  📁src &amp;mdash; 源代码和测试代码文件目录  📁main &amp;mdash; 源代码文件目录  📁java &amp;mdash; 源代码Java文件目录 📁resourcs &amp;mdash; 源代码配置文件目录 ❗📁webapp 或 web &amp;mdash; Web项目核心目录 存放web配置文件和web项目代码 (html, css, javascript等)  ❗📁WEB-INF &amp;mdash; Web项目核心目录  📄web.'>
+<meta property='og:url' content='https://www.linner.asia/p/tomcat/'>
+<meta property='og:site_name' content='Linner&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='JavaWeb' /><meta property='article:tag' content='HTTP' /><meta property='article:tag' content='服务器' /><meta property='article:tag' content='Tomcat' /><meta property='article:published_time' content='2022-09-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-09-10T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="Tomcat">
+<meta name="twitter:description" content="Tomcat基本使用 Tomcat安装 访问Tomcat官网下载。Tomcat是绿色版，直接解压即可。
+启动Tomcat 以Windows系统为例，运行Tomcat目录下 bin\startup.bat 启动脚本即可完成启动。
+启动后，通过浏览器访问 http://localhost:8080能看到Apache Tomcat的内容就说明Tomcat已经启动成功。
+Windows系统下启动的过程中，如果控制台有中文乱码，需要修改conf/logging.prooperties。
+将
+java.util.logging.ConsoleHandler.encoding = UTF-8 修改为
+java.util.logging.ConsoleHandler.encoding = GBK 关闭Tomcat 关闭Tomcat不应该直接关闭运行窗口来强制关闭。应该运行bin\shutdown.bat或ctrl&#43;c来正常关闭。
+修改端口 Tomcat默认的端口是8080，通过修改 conf/server.xml 来修改端口号：
+&amp;lt;Connector port=&amp;#34;8080&amp;#34; protocol=&amp;#34;HTTP/1.1&amp;#34; connectionTimeout=&amp;#34;20000&amp;#34; redirectPort=&amp;#34;8443&amp;#34;&amp;gt; 部署 Tomcat部署项目： 将项目放置到webapps目录下，即部署完成。
+一般JavaWeb项目会被打包称war包，然后将war包放到webapps目录下，Tomcat会自动解压缩。
+ Maven 创建 Web 项目 使用Maven工具能更加简单快捷的创建Web项目。
+Maven Web 项目结构  📁project_name &amp;mdash; 项目主目录  📁src &amp;mdash; 源代码和测试代码文件目录  📁main &amp;mdash; 源代码文件目录  📁java &amp;mdash; 源代码Java文件目录 📁resourcs &amp;mdash; 源代码配置文件目录 ❗📁webapp 或 web &amp;mdash; Web项目核心目录 存放web配置文件和web项目代码 (html, css, javascript等)  ❗📁WEB-INF &amp;mdash; Web项目核心目录  📄web.">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu0c2331fe09320137a3bd1d4b5cc68791_142496_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Linner&#39;s Blog</a></h1>
+            <h2 class="site-description">随便看看就行，副标题暂时还没想好</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Linna-cy'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives" id="toc-list">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents" class="js-toc"></nav>
+            
+        </div>
+    </section>
+
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/tomcat/">Tomcat</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Sep 10, 2022</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="tomcat基本使用">Tomcat基本使用</h1>
+<h2 id="tomcat安装">Tomcat安装</h2>
+<p>访问<a class="link" href="https://tomcat.apache.org/"  target="_blank" rel="noopener"
+    >Tomcat官网</a>下载。Tomcat是绿色版，直接解压即可。</p>
+<h2 id="启动tomcat">启动Tomcat</h2>
+<p>以Windows系统为例，运行Tomcat目录下 <code>bin\startup.bat</code> 启动脚本即可完成启动。</p>
+<p>启动后，通过浏览器访问 <code>http://localhost:8080</code>能看到Apache Tomcat的内容就说明Tomcat已经启动成功。</p>
+<p>Windows系统下启动的过程中，如果控制台有中文乱码，需要修改<code>conf/logging.prooperties</code>。</p>
+<p>将</p>
+<pre tabindex="0"><code>java.util.logging.ConsoleHandler.encoding = UTF-8
+</code></pre><p>修改为</p>
+<pre tabindex="0"><code>java.util.logging.ConsoleHandler.encoding = GBK
+</code></pre><h2 id="关闭tomcat">关闭Tomcat</h2>
+<p>关闭Tomcat不应该直接关闭运行窗口来强制关闭。应该运行<code>bin\shutdown.bat</code>或<code>ctrl+c</code>来正常关闭。</p>
+<h2 id="修改端口">修改端口</h2>
+<p>Tomcat默认的端口是8080，通过修改 <code>conf/server.xml</code> 来修改端口号：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;Connector</span> <span style="color:#a6e22e">port=</span><span style="color:#e6db74">&#34;8080&#34;</span> <span style="color:#a6e22e">protocol=</span><span style="color:#e6db74">&#34;HTTP/1.1&#34;</span> <span style="color:#a6e22e">connectionTimeout=</span><span style="color:#e6db74">&#34;20000&#34;</span> <span style="color:#a6e22e">redirectPort=</span><span style="color:#e6db74">&#34;8443&#34;</span><span style="color:#f92672">&gt;</span>
+</code></pre></div><h2 id="部署">部署</h2>
+<p>Tomcat部署项目： 将项目放置到<code>webapps</code>目录下，即部署完成。</p>
+<p>一般JavaWeb项目会被打包称<code>wa</code>r包，然后将<code>war</code>包放到<code>webapps</code>目录下，Tomcat会自动解压缩。</p>
+<hr>
+<h1 id="maven-创建-web-项目">Maven 创建 Web 项目</h1>
+<p>使用Maven工具能更加简单快捷的创建Web项目。</p>
+<h2 id="maven-web-项目结构">Maven Web 项目结构</h2>
+<ul>
+<li>📁<code>project_name</code> &mdash; 项目主目录
+<ul>
+<li>📁<code>src</code> &mdash; 源代码和测试代码文件目录
+<ul>
+<li>📁<code>main</code> &mdash; 源代码文件目录
+<ul>
+<li>📁<code>java</code> &mdash; 源代码Java文件目录</li>
+<li>📁<code>resourcs</code> &mdash; 源代码配置文件目录</li>
+<li>❗📁<code>webapp</code> 或 <code>web</code> &mdash; Web项目核心目录
+存放web配置文件和web项目代码 (<code>html</code>, <code>css</code>, <code>javascript</code>等)
+<ul>
+<li>❗📁<code>WEB-INF</code> &mdash; Web项目核心目录
+<ul>
+<li>📄<code>web.xml</code> &mdash; Web项目配置文件</li>
+</ul>
+</li>
+<li>其它目录或文件，如 <code>index.html</code>、<code>html</code>、<code>css</code>、<code>js</code>等</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>📁<code>test</code> &mdash; 测试代码文件目录
+<ul>
+<li>📁<code>java</code> &mdash; 测试代码Java文件目录</li>
+<li>📁<code>resource</code> &mdash; 测试代码配置</li>
+</ul>
+</li>
+<li>📄<code>pom.xml</code> &mdash; 项目核心配置文件</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>开发完成部署的 Maven Web 项目结构：</p>
+<ul>
+<li>📁<code>project_name</code> &mdash; 项目访问路径（虚拟目录）
+<ul>
+<li>❗📁<code>WEB-INF</code> &mdash; Web项目核心目录
+<ul>
+<li>📁<code>classes</code> &mdash; Java字节码文件
+编译后的Java字节码文件和<code>resources</code>的资源文件，会被放到该目录下
+包括<code>pom.xml</code>中依赖坐标对应的jar包</li>
+<li>📁<code>lib</code> &mdash; 项目所需jar包</li>
+<li>📄<code>web.xml</code> &mdash; Web项目配置文件</li>
+<li>其它目录或文件，如 <code>index.html</code>、<code>html</code>、<code>css</code>、<code>js</code>等</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="创建-maven-web-项目">创建 Maven Web 项目</h2>
+<p>创建方式有两种：使用骨架和不使用骨架</p>
+<p>使用骨架大致步骤如下：</p>
+<ol>
+<li>创建Maven项目</li>
+<li><mark>选择使用Web项目骨架</mark></li>
+</ol>
+<p><img src="/p/tomcat/1627227650406.png"
+	width="998"
+	height="789"
+	srcset="/p/tomcat/1627227650406_huf4f8cf0db624add1c763ab2bf77489a7_480515_480x0_resize_box_3.png 480w, /p/tomcat/1627227650406_huf4f8cf0db624add1c763ab2bf77489a7_480515_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="126"
+		data-flex-basis="303px"
+	
+></p>
+<ol start="3">
+<li>
+<p>输入Maven项目坐标创建项目</p>
+</li>
+<li>
+<p>确认Maven相关的配置信息后，完成项目创建</p>
+</li>
+<li>
+<p><mark>删除pom.xml中多余内容</mark>
+<img src="/p/tomcat/1627228584625.png"
+	width="1255"
+	height="550"
+	srcset="/p/tomcat/1627228584625_hua75347db8dd8a49e943e8d807bb75211_213215_480x0_resize_box_3.png 480w, /p/tomcat/1627228584625_hua75347db8dd8a49e943e8d807bb75211_213215_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="228"
+		data-flex-basis="547px"
+	
+></p>
+</li>
+<li>
+<p>补齐Maven Web项目缺失的目录结构</p>
+<p>最终目录结构如下：</p>
+<ul>
+<li>📁<code>project_name</code>
+<ul>
+<li>📁<code>src</code>
+<ul>
+<li>📁<code>main</code>
+<ul>
+<li>📁<code>java</code></li>
+<li>📁<code>resourcs</code></li>
+<li>📁<code>webapp</code>
+<ul>
+<li>📁<code>WEB-INF</code>
+<ul>
+<li>📄<code>web.xml</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>📄<code>pom.xml</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><img src="/p/tomcat/1627204022604.png"
+	width="1603"
+	height="556"
+	srcset="/p/tomcat/1627204022604_hu32242d5545b5e672b8f75a7e3f4bf225_334035_480x0_resize_box_3.png 480w, /p/tomcat/1627204022604_hu32242d5545b5e672b8f75a7e3f4bf225_334035_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="288"
+		data-flex-basis="691px"
+	
+></p>
+<p>不使用骨架大致步骤如下：</p>
+<ol>
+<li>创建Maven项目</li>
+<li>选择<mark>不使用Web项目骨架</mark></li>
+</ol>
+<p>按照正常的方式创建，不勾选<code>Create from archetype</code></p>
+<ol start="3">
+<li>
+<p>输入Maven项目坐标创建项目</p>
+</li>
+<li>
+<p><mark>在pom.xml设置打包方式为war</mark></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;project&gt;</span>
+  <span style="color:#75715e">&lt;!-- ...... --&gt;</span>
+  <span style="color:#f92672">&lt;groupId&gt;</span>......<span style="color:#f92672">&lt;/groupId&gt;</span>
+  <span style="color:#f92672">&lt;artifactId&gt;</span>.......<span style="color:#f92672">&lt;/artifactId&gt;</span>
+  <span style="color:#f92672">&lt;vesion&gt;</span>.......<span style="color:#f92672">&lt;/vesion&gt;</span>
+  <span style="color:#f92672">&lt;packaging&gt;</span>war<span style="color:#f92672">&lt;/packaging&gt;</span>
+  <span style="color:#75715e">&lt;!-- ...... --&gt;</span>
+<span style="color:#f92672">&lt;/project&gt;</span>
+</code></pre></div></li>
+<li>
+<p><mark>补齐Maven Web项目缺失webapp的目录结构</mark></p>
+</li>
+</ol>
+<p>文件&ndash;&gt;项目结构&ndash;&gt;Facet中按<code>+</code>然后选择<code>Web</code>，选择当前项目</p>
+<p>修改webapp目录，并补齐Maven Web项目缺失<code>WEB-INF/web.xml</code>的目录结构，即可完成构建</p>
+<p><img src="/p/tomcat/1627204076090.png"
+	width="1686"
+	height="533"
+	srcset="/p/tomcat/1627204076090_huc311bbecdc1eb62664bcca918cf611b5_364413_480x0_resize_box_3.png 480w, /p/tomcat/1627204076090_huc311bbecdc1eb62664bcca918cf611b5_364413_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="316"
+		data-flex-basis="759px"
+	
+></p>
+<hr>
+<h1 id="在idea中使用tomcat">在IDEA中使用Tomcat</h1>
+<p>在IDEA中集成使用Tomcat有两种方式，分别是集成本地Tomcat和Tomcat Maven插件。</p>
+<h2 id="集成本地tomcat">集成本地Tomcat</h2>
+<ol>
+<li>右上角 编辑运行/调试配置 对话框&ndash;&gt;编辑配置&ndash;&gt;<code>+</code>&ndash;&gt;Tomcat服务器&ndash;&gt;<code>本地</code></li>
+</ol>
+<p><img src="/p/tomcat/1627229992900.png"
+	width="1115"
+	height="686"
+	srcset="/p/tomcat/1627229992900_hu5f8cc3e47912345b768c91098cf41ba7_135158_480x0_resize_box_3.png 480w, /p/tomcat/1627229992900_hu5f8cc3e47912345b768c91098cf41ba7_135158_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="162"
+		data-flex-basis="390px"
+	
+></p>
+<ol start="2">
+<li>指定本地Tomcat的具体路径</li>
+</ol>
+<p><img src="/p/tomcat/1627230313062.png"
+	width="1347"
+	height="866"
+	srcset="/p/tomcat/1627230313062_hu6d16bb4ca6689d3aaef58c322ee2322a_325387_480x0_resize_box_3.png 480w, /p/tomcat/1627230313062_hu6d16bb4ca6689d3aaef58c322ee2322a_325387_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="155"
+		data-flex-basis="373px"
+	
+></p>
+<ol start="3">
+<li>将开发项目部署项目到Tomcat中</li>
+</ol>
+<p><img src="/p/tomcat/1627230913259.png"
+	width="877"
+	height="775"
+	srcset="/p/tomcat/1627230913259_hu1e86ffc5547b033aa40d7c2629e2f38b_147832_480x0_resize_box_3.png 480w, /p/tomcat/1627230913259_hu1e86ffc5547b033aa40d7c2629e2f38b_147832_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="113"
+		data-flex-basis="271px"
+	
+></p>
+<blockquote>
+<p><code>xxx.war</code> 和 <code>xxx.war exploded</code> 这两种部署项目模式的区别：</p>
+<ul>
+<li>war模式是将WEB工程打成war包，把war包发布到Tomcat服务器上</li>
+<li>war exploded模式是将WEB工程以当前文件夹的位置关系发布到Tomcat服务器上</li>
+</ul>
+<p>war模式部署成功后，Tomcat的webapps目录下会有部署的项目内容</p>
+<p>war exploded模式部署成功后，Tomcat的webapps目录下没有，而使用的是项目的target目录下的内容进行部署</p>
+<p>建议选war模式进行部署，更符合项目部署的实际情况</p>
+</blockquote>
+<p><img src="/p/tomcat/1627205657117.png"
+	width="1591"
+	height="625"
+	srcset="/p/tomcat/1627205657117_hufe7637abc0a2ee946e7d9e2394f50189_323790_480x0_resize_box_3.png 480w, /p/tomcat/1627205657117_hufe7637abc0a2ee946e7d9e2394f50189_323790_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="254"
+		data-flex-basis="610px"
+	
+></p>
+<h2 id="tomcat-maven插件">Tomcat Maven插件</h2>
+<ol>
+<li>
+<p>在<code>pom.xml</code>中添加Tomcat插件：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;build&gt;</span>
+    <span style="color:#f92672">&lt;plugins&gt;</span>
+    	<span style="color:#75715e">&lt;!--Tomcat插件 --&gt;</span>
+        <span style="color:#f92672">&lt;plugin&gt;</span>
+            <span style="color:#f92672">&lt;groupId&gt;</span>org.apache.tomcat.maven<span style="color:#f92672">&lt;/groupId&gt;</span>
+            <span style="color:#f92672">&lt;artifactId&gt;</span>tomcat7-maven-plugin<span style="color:#f92672">&lt;/artifactId&gt;</span>
+            <span style="color:#f92672">&lt;version&gt;</span>2.2<span style="color:#f92672">&lt;/version&gt;</span>
+        <span style="color:#f92672">&lt;/plugin&gt;</span>
+    <span style="color:#f92672">&lt;/plugins&gt;</span>
+<span style="color:#f92672">&lt;/build&gt;</span>
+</code></pre></div></li>
+<li>
+<p>使用Maven Helper插件快速启动项目，选中项目，右键 &ndash;&gt;Run Maven &ndash;&gt; tomcat7:run</p>
+</li>
+</ol>
+<blockquote>
+<p>安装Maven Helper插件：File &ndash;&gt; Settings &ndash;&gt; Plugins &ndash;&gt; Maven Helper &mdash;&gt; Install，重启IDEA</p>
+</blockquote>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/java/">Java</a>
+        
+            <a href="/tags/javaweb/">JavaWeb</a>
+        
+            <a href="/tags/http/">HTTP</a>
+        
+            <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a>
+        
+            <a href="/tags/tomcat/">Tomcat</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+       
+</article>
+
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/ajax-%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/">
+        
+        
+
+        Ajax 前后端交互</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/filter-%E8%BF%87%E6%BB%A4%E5%99%A8/">
+        
+        
+
+        Filter 过滤器</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF-cookie-%E5%92%8C-session/">
+        
+        
+
+        会话跟踪技术 —— Cookie 和 Session</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/httpservlet-%E4%B8%8E-tomcat/">
+        
+        
+
+        HttpServlet 与 Tomcat</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/servlet-%E4%B8%8E-tomcat/">
+        
+        
+
+        Servlet 与 Tomcat</a>
+</div>
+</section>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2022 - 
+        
+        2023 Linner&#39;s Blog
+
+        <span style="padding-left: 5px;padding-right: 5px;">|</span>
+
+        <a href="https://beian.miit.gov.cn/" target="_blank" >粤ICP备2022125602号-1</a>
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

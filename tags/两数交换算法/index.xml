@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>两数交换算法 on Linner&#39;s Blog</title>
+        <link>https://www.linner.asia/tags/%E4%B8%A4%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%AE%97%E6%B3%95/</link>
+        <description>Recent content in 两数交换算法 on Linner&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh</language>
+        <lastBuildDate>Sun, 16 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.linner.asia/tags/%E4%B8%A4%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>两数交换算法</title>
+        <link>https://www.linner.asia/p/%E4%B8%A4%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%AE%97%E6%B3%95/</link>
+        <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.linner.asia/p/%E4%B8%A4%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%AE%97%E6%B3%95/</guid>
+        <description>&lt;h1 id=&#34;临时变量&#34;&gt;临时变量&lt;/h1&gt;
+&lt;p&gt;通过建立一个临时变量来实现两数交换：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;swap&lt;/span&gt;(x, y):
+    print(x, y)
+    tmp &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; x
+    x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; y
+    y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; tmp
+    print(x, y)
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; x, y
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; __name__ &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;:
+    swap(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;缺点：&lt;/p&gt;
+&lt;p&gt;需要消耗额外的内存。&lt;/p&gt;
+&lt;p&gt;优点：&lt;/p&gt;
+&lt;p&gt;不限制类型，大多数类型都能使用该操作。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;加减交换&#34;&gt;加减交换&lt;/h1&gt;
+&lt;p&gt;通过加减法实现：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;swap&lt;/span&gt;(x, y):
+    print(x, y)
+    x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; y
+    y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; y
+    x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; y
+    print(x, y)
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; x, y
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; __name__ &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;:
+    swap(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;假设两个数保存在x和y中：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;先将y中的值加到x中。&lt;/p&gt;
+&lt;p&gt;即这两个数一同保存在同一内存空间x中。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;然后用x的值减去y的值，再将其保存到内存y中。&lt;/p&gt;
+&lt;p&gt;x-y即为x最初的值。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最后再用x的值减去y的值，赋给内存x。&lt;/p&gt;
+&lt;p&gt;x最初的值已经在y中，所以x-y的值为y最初的值。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;缺点：&lt;/p&gt;
+&lt;p&gt;该方法只适用于数值不大的数，如果数值过大，可能会越界（对于某些语言来说）。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;异或交换&#34;&gt;异或交换&lt;/h1&gt;
+&lt;p&gt;通过异或的操作实现：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;swap&lt;/span&gt;(x, y):
+    print(x, y)
+    x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;^&lt;/span&gt; y
+    y &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;^&lt;/span&gt; y
+    x &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; x &lt;span style=&#34;color:#f92672&#34;&gt;^&lt;/span&gt; y
+    print(x, y)
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; x, y
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; __name__ &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;__main__&amp;#39;&lt;/span&gt;:
+    swap(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;缺点：&lt;/p&gt;
+&lt;p&gt;只能对整数类型执行位操作，不能对实数类型进行位操作。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>数据库连接池 on Linner&#39;s Blog</title>
+        <link>https://www.linner.asia/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/</link>
+        <description>Recent content in 数据库连接池 on Linner&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh</language>
+        <lastBuildDate>Sun, 14 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.linner.asia/tags/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Druid 数据库连接池</title>
+        <link>https://www.linner.asia/p/druid-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/</link>
+        <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://www.linner.asia/p/druid-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/</guid>
+        <description>&lt;h1 id=&#34;数据库连接池&#34;&gt;数据库连接池&lt;/h1&gt;
+&lt;p&gt;数据库连接池是个容器, 负责分配, 管理数据库连接 (Connection).&lt;/p&gt;
+&lt;p&gt;数据库连接池允许应用程序重复使用一个现有的数据库连接, 而不是再重新建立一个. 从而减少资源浪费.&lt;/p&gt;
+&lt;p&gt;数据库连接池会自动释放超过最大空闲时间的数据库连接 (强制释放), 来避免因为没有释放数据库连接而引起的数据库连接遗漏.&lt;/p&gt;
+&lt;p&gt;使用数据库连接池的好处:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;资源可以重用&lt;/li&gt;
+&lt;li&gt;提升系统响应速度&lt;/li&gt;
+&lt;li&gt;避免数据库连接遗漏&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在通常情况下使用JDBC, 有可能会反复地创建和销毁 &lt;code&gt;Connection&lt;/code&gt;对象. 这样重复创建销毁的过程特别耗费计算机的性能和时间.&lt;/p&gt;
+&lt;p&gt;而数据库使用了数据库连接池后，就能达到Connection对象的复用.&lt;/p&gt;
+&lt;p&gt;连接池是在一开始就创建好了一些连接 (Connection) 对象存储起来. 用户需要连接数据库时, 不需要自己创建连接, 而只需要从连接池中获取一个连接进行使用, 使用完毕后再将连接对象归还给连接池; 这样就可以起到资源重用, 也节省了频繁创建连接销毁连接所花费的时间, 从而提升了系统响应的速度.&lt;/p&gt;
+&lt;p&gt;常见的数据库连接池有:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DBCP&lt;/li&gt;
+&lt;li&gt;C3P0&lt;/li&gt;
+&lt;li&gt;Druid&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;druid&#34;&gt;Druid&lt;/h1&gt;
+&lt;h2 id=&#34;配置-druid&#34;&gt;配置 Druid&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://repo1.maven.org/maven2/com/alibaba/druid/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;下载Druid jar包&lt;/a&gt;, 并导入:&lt;/p&gt;
+&lt;p&gt;在项目中, 将下载好的jar包放入项目的 &lt;code&gt;lib&lt;/code&gt;目录中.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;然后点击鼠标右键&amp;ndash;&amp;gt;Add as Library (添加为库).&lt;/li&gt;
+&lt;li&gt;在添加为库文件的时候，有如下三个选项:
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Global Library: 全局有效&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Project Library: 项目有效&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Module Library: 模块有效&lt;/p&gt;
+&lt;p&gt;选择Module Library.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在项目目录下定义Druid配置文件 &lt;code&gt;druid.properties&lt;/code&gt;:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;driverClassName=com.mysql.jdbc.Driver
+url=jdbc:mysql:///db1?useSSL=false&amp;amp;useServerPrepStmts=true
+username=root
+password=1234
+# 初始化连接数量
+initialSize=5
+# 最大连接数
+maxActive=10
+# 最大等待时间
+maxWait=3000
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;加载配置文件:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;Properties prop &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Properties&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+prop&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;load&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; FileInputStream&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;demo/src/druid.properties&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;));&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;使用-druid&#34;&gt;使用 Druid&lt;/h2&gt;
+&lt;p&gt;Java中从数据库连接池获取连接对象, 使用的是官方提供的数据库连接池标准接口, 由第三方组织实现此接口. 该接口提供了获取连接的功能:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;Connection &lt;span style=&#34;color:#a6e22e&#34;&gt;getConnection&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt;
+                  &lt;span style=&#34;color:#66d9ef&#34;&gt;throws&lt;/span&gt; SQLException
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;因此, 使用Druid获取数据库连接还需要以下两步:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;获取数据库连接池对象:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt; DataSource dataSource &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; DruidDataSourceFactory&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;createDataSource&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;prop&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;从数据库连接池中获取连接 (&lt;code&gt;Connection&lt;/code&gt;):&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;Connection connection &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; dataSource&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getConnection&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;操作实例&#34;&gt;操作实例&lt;/h1&gt;
+&lt;h2 id=&#34;需求分析&#34;&gt;需求分析&lt;/h2&gt;
+&lt;p&gt;完成商品品牌数据的增删改查操作&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;查询：查询所有数据&lt;/li&gt;
+&lt;li&gt;添加：添加品牌&lt;/li&gt;
+&lt;li&gt;修改：根据id修改&lt;/li&gt;
+&lt;li&gt;删除：根据id删除&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;环境准备&#34;&gt;环境准备&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;创建数据库表:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- 删除tb_brand表
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;DROP&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;IF&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;EXISTS&lt;/span&gt; tb_brand;
+&lt;span style=&#34;color:#75715e&#34;&gt;-- 创建tb_brand表
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; tb_brand (
+    id INT &lt;span style=&#34;color:#66d9ef&#34;&gt;PRIMARY&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;KEY&lt;/span&gt; AUTO_INCREMENT, &lt;span style=&#34;color:#75715e&#34;&gt;-- id 主键
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    brand_name VARCHAR(&lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;), &lt;span style=&#34;color:#75715e&#34;&gt;-- 品牌名称
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    company_name VARCHAR(&lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;), &lt;span style=&#34;color:#75715e&#34;&gt;-- 企业名称
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    ordered INT, &lt;span style=&#34;color:#75715e&#34;&gt;-- 排序字段
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    description VARCHAR(&lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;), &lt;span style=&#34;color:#75715e&#34;&gt;-- 描述信息
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    status INT &lt;span style=&#34;color:#75715e&#34;&gt;-- 状态：0：禁用  1：启用
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;);
+&lt;span style=&#34;color:#75715e&#34;&gt;-- 添加数据
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;INTO&lt;/span&gt; tb_brand (brand_name, company_name, ordered, description, status)
+&lt;span style=&#34;color:#66d9ef&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;三只松鼠&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;三只松鼠股份有限公司&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;好吃不上火&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;),
+    (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;华为&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;华为技术有限公司&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;华为致力于把数字世界带入每个人、每个家庭、每个组织，构建万物互联的智能世界&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;),
+    (&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;小米&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;小米科技有限公司&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;50&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;are you ok&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;创建 &lt;code&gt;pojo&lt;/code&gt;包, 并在包中添加 &lt;code&gt;Brand&lt;/code&gt;实体类:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; pojo&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;* 品牌
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;*/&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Brand&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; Integer id&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;// id 主键
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; String brandName&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;// 品牌名称
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; String companyName&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;// 企业名称
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; Integer ordered&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;// 排序字段
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; String description&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;// 描述信息
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; Integer status&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;// 状态：0：禁用  1：启用
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; Integer &lt;span style=&#34;color:#a6e22e&#34;&gt;getId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; id&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;setId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Integer id&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;id&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; id&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;getBrandName&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; brandName&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;setBrandName&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;String brandName&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;brandName&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; brandName&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;getCompanyName&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; companyName&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;setCompanyName&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;String companyName&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;companyName&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; companyName&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; Integer &lt;span style=&#34;color:#a6e22e&#34;&gt;getOrdered&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; ordered&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;setOrdered&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Integer ordered&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ordered&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; ordered&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;getDescription&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; description&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;setDescription&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;String description&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;description&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; description&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; Integer &lt;span style=&#34;color:#a6e22e&#34;&gt;getStatus&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; status&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;setStatus&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Integer status&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;status&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; status&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;@Override&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;toString&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Brand{&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id=&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; id &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;, brandName=&amp;#39;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; brandName &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;\&amp;#39;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;, companyName=&amp;#39;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; companyName &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;\&amp;#39;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;, ordered=&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; ordered &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;, description=&amp;#39;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; description &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;\&amp;#39;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;, status=&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; status &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;}&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;实现操作&#34;&gt;实现操作&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; dao&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; pojo.Brand&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; com.alibaba.druid.pool.DruidDataSourceFactory&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; javax.sql.DataSource&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.io.FileInputStream&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.sql.*&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.ArrayList&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.Properties&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * 品牌数据的增删改查操作
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; */&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;BrandDAO&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; DataSource dataSource&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+
+    &lt;span style=&#34;color:#75715e&#34;&gt;// 获取Connection:
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+            &lt;span style=&#34;color:#75715e&#34;&gt;// - 导入jar包 &amp;amp; 定义配置文件
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#75715e&#34;&gt;// - 加载配置文件
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            Properties prop &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Properties&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+            prop&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;load&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; FileInputStream&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;demo/src/druid.properties&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;));&lt;/span&gt;
+            &lt;span style=&#34;color:#75715e&#34;&gt;// - 获取连接池对象
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            dataSource &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; DruidDataSourceFactory&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;createDataSource&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;prop&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;catch&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Exception e&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+            e&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;printStackTrace&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 查询所有
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 1. SQL: SELECT * FROM tb_brand
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 2. 参数: 不需要
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 3. 结果: ArrayList&amp;lt;Brand&amp;gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     */&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; ArrayList&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Brand&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;selectAll&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;throws&lt;/span&gt; Exception&lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 1. 获取数据库连接Connection
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        Connection conn &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; dataSource&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getConnection&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// *2. 定义SQL
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        String sql &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;SELECT * FROM tb_brand&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 3. 获取pstmt对象
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        PreparedStatement pstmt &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; conn&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;prepareStatement&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;sql&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+      
+        &lt;span style=&#34;color:#75715e&#34;&gt;// *4. 设置参数
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;      
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 5. 执行SQL
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        ResultSet rs &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pstmt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;executeQuery&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// *6. 处理结果: ArrayList&amp;lt;Brand&amp;gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        Brand brand &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+        ArrayList&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;Brand&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; brands &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; ArrayList&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;gt;();&lt;/span&gt;
+        &lt;span style=&#34;color:#75715e&#34;&gt;// - 遍历结果集
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;rs&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;next&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;())&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+            &lt;span style=&#34;color:#75715e&#34;&gt;// 1. 获取数据
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; id &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; rs&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getInt&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+            String brandName &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; rs&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getString&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;brand_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+            String companyName &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; rs&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getString&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;company_name&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; ordered &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; rs&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getInt&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ordered&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+            String description &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; rs&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getString&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; status &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; rs&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getInt&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;status&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+
+            &lt;span style=&#34;color:#75715e&#34;&gt;// 2. 封装Brand对象
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            brand &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Brand&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+            brand&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;id&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+            brand&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setCompanyName&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;companyName&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+            brand&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setOrdered&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;ordered&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+            brand&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setDescription&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;description&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+            brand&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setStatus&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;status&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+
+            &lt;span style=&#34;color:#75715e&#34;&gt;// 3. 装载ArrayList集合
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            brands&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;brand&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 7. 释放资源
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        rs&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;close&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+        pstmt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;close&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+        conn&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;close&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 8. 返回结果
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; brands&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 添加
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 1. SQL:
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;         INSERT INTO tb_brand(
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;            brand_name,
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;            company_name,
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;            ordered,
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;            description,
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;            status)
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;         VALUES(?,?,?,?,?)
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 2. 参数: 除了id之外的所有参数信息
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 3. 结果: boolean
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     */&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Brand brand&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;throws&lt;/span&gt; Exception&lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 1. 获取数据库连接Connection
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        Connection conn &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; dataSource&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getConnection&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// *2. 定义SQL
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        String sql &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                INSERT INTO tb_brand(
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                    brand_name,
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                    company_name,
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                    ordered,
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                    description,
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                    status)
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                VALUES(?,?,?,?,?)&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 3. 获取pstmt对象
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        PreparedStatement pstmt &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; conn&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;prepareStatement&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;sql&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// *4. 设置参数
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        pstmt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setString&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;1&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; brand&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getBrandName&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;());&lt;/span&gt;
+        pstmt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setString&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;2&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; brand&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getCompanyName&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;());&lt;/span&gt;
+        pstmt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setInt&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;3&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; brand&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getOrdered&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;());&lt;/span&gt;
+        pstmt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setString&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;4&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; brand&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getDescription&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;());&lt;/span&gt;
+        pstmt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setInt&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;5&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; brand&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getStatus&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;());&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 5. 执行SQL
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pstmt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;executeUpdate&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;// 返回影响的行数
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 6. 释放资源
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        pstmt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;close&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+        conn&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;close&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 7. 返回结果
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; 0&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 修改
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 1. SQL:
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;         UPDATE tb_brand
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;         SET brand_name=?,
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;            company_name=?,
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;            ordered=?,
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;            description=?,
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;            status=?
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;         WHERE id=?
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 2. 参数: 所有
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 3. 结果: boolean
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     */&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;update&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Brand brand&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;throws&lt;/span&gt; Exception&lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 1. 获取数据库连接Connection
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        Connection conn &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; dataSource&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getConnection&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// *2. 定义SQL
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        String sql &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                UPDATE tb_brand
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                SET brand_name=?,
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                    company_name=?,
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                    ordered=?,
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                    description=?,
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                    status=?
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;                WHERE id=?&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 3. 获取pstmt对象
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        PreparedStatement pstmt &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; conn&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;prepareStatement&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;sql&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// *4. 设置参数
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        pstmt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setString&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;1&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; brand&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getBrandName&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;());&lt;/span&gt;
+        pstmt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setString&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;2&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; brand&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getCompanyName&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;());&lt;/span&gt;
+        pstmt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setInt&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;3&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; brand&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getOrdered&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;());&lt;/span&gt;
+        pstmt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setString&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;4&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; brand&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getDescription&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;());&lt;/span&gt;
+        pstmt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setInt&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;5&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; brand&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getStatus&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;());&lt;/span&gt;
+        pstmt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setInt&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;6&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; brand&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;());&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 5. 执行SQL
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pstmt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;executeUpdate&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;// 返回影响的行数
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 6. 释放资源
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        pstmt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;close&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+        conn&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;close&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 8. 返回结果
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; 0&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 删除
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 1. SQL:DELETE FROM tb_brand WHERE id=?
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 2. 参数: id
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 3. 结果: boolean
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     */&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;deleteById&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; id&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;throws&lt;/span&gt; Exception&lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 1. 获取数据库连接Connection
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        Connection conn &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; dataSource&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getConnection&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// *2. 定义SQL
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        String sql &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;DELETE FROM tb_brand WHERE id=?&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 3. 获取pstmt对象
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        PreparedStatement pstmt &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; conn&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;prepareStatement&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;sql&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// *4. 设置参数
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        pstmt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setInt&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;1&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; id&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 5. 执行SQL
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; pstmt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;executeUpdate&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;// 返回影响的行数
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 6. 释放资源
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        pstmt&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;close&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+        conn&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;close&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 7. 返回结果
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; count &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; 0&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        
+    </channel>
+</rss>

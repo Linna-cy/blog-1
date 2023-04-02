@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='SpringBoot 简介 SpringBoot 是由 Pivotal 团队提供的全新框架，其设计目的是用来简化 Spring 应用的初始搭建以及开发过程。
+SpringBoot开发分为如下几步：
+ 创建新模块，选择Spring初始化，并配置模块相关基础信息。 选择当前模块需要使用的技术集。 开发控制器类。 运行自动生成的Application类。  项目创建及配置 创建项目  注意：
+  在创建好的工程中不需要创建配置类。
+  创建好的项目会自动生成其他的一些文件（这些文件目前来说没有任何作用），可以将这些文件删除。
+可以删除的目录和文件如下：
+ .mvn .gitignore HELP.md mvnw mvnw.cmd     项目依赖 在项目中的pom.xml中有如下代码：
+&amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.0.3&amp;lt;/version&amp;gt; &amp;lt;relativePath/&amp;gt; &amp;lt;!-- lookup parent from repository --&amp;gt; &amp;lt;/parent&amp;gt; 该代码指定了一个父工程，父工程中的东西在该工程中可以继承过来使用。
+并且使用Spring Initializr创建的项目会自动在pom.xml中导入所需的起步依赖（包含starter的依赖）。
+引导类 创建的每个SpringBoot项目都包含一个引导类，如：
+@SpringBootApplication public class SpringbootDemoApplication { public static void main(String[] args) { SpringApplication.run(SpringbootDemoApplication.class, args); } } 引导类是项目的入口，运行main()就可以启动项目。'>
+
+
+<title>SpringBoot 基础</title>
+
+<link rel='canonical' href='https://www.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/'>
+
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='SpringBoot 基础'>
+<meta property='og:description' content='SpringBoot 简介 SpringBoot 是由 Pivotal 团队提供的全新框架，其设计目的是用来简化 Spring 应用的初始搭建以及开发过程。
+SpringBoot开发分为如下几步：
+ 创建新模块，选择Spring初始化，并配置模块相关基础信息。 选择当前模块需要使用的技术集。 开发控制器类。 运行自动生成的Application类。  项目创建及配置 创建项目  注意：
+  在创建好的工程中不需要创建配置类。
+  创建好的项目会自动生成其他的一些文件（这些文件目前来说没有任何作用），可以将这些文件删除。
+可以删除的目录和文件如下：
+ .mvn .gitignore HELP.md mvnw mvnw.cmd     项目依赖 在项目中的pom.xml中有如下代码：
+&amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.0.3&amp;lt;/version&amp;gt; &amp;lt;relativePath/&amp;gt; &amp;lt;!-- lookup parent from repository --&amp;gt; &amp;lt;/parent&amp;gt; 该代码指定了一个父工程，父工程中的东西在该工程中可以继承过来使用。
+并且使用Spring Initializr创建的项目会自动在pom.xml中导入所需的起步依赖（包含starter的依赖）。
+引导类 创建的每个SpringBoot项目都包含一个引导类，如：
+@SpringBootApplication public class SpringbootDemoApplication { public static void main(String[] args) { SpringApplication.run(SpringbootDemoApplication.class, args); } } 引导类是项目的入口，运行main()就可以启动项目。'>
+<meta property='og:url' content='https://www.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/'>
+<meta property='og:site_name' content='Linner&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='JavaWeb' /><meta property='article:tag' content='Spring' /><meta property='article:tag' content='Maven' /><meta property='article:published_time' content='2023-02-20T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-02-20T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="SpringBoot 基础">
+<meta name="twitter:description" content="SpringBoot 简介 SpringBoot 是由 Pivotal 团队提供的全新框架，其设计目的是用来简化 Spring 应用的初始搭建以及开发过程。
+SpringBoot开发分为如下几步：
+ 创建新模块，选择Spring初始化，并配置模块相关基础信息。 选择当前模块需要使用的技术集。 开发控制器类。 运行自动生成的Application类。  项目创建及配置 创建项目  注意：
+  在创建好的工程中不需要创建配置类。
+  创建好的项目会自动生成其他的一些文件（这些文件目前来说没有任何作用），可以将这些文件删除。
+可以删除的目录和文件如下：
+ .mvn .gitignore HELP.md mvnw mvnw.cmd     项目依赖 在项目中的pom.xml中有如下代码：
+&amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.0.3&amp;lt;/version&amp;gt; &amp;lt;relativePath/&amp;gt; &amp;lt;!-- lookup parent from repository --&amp;gt; &amp;lt;/parent&amp;gt; 该代码指定了一个父工程，父工程中的东西在该工程中可以继承过来使用。
+并且使用Spring Initializr创建的项目会自动在pom.xml中导入所需的起步依赖（包含starter的依赖）。
+引导类 创建的每个SpringBoot项目都包含一个引导类，如：
+@SpringBootApplication public class SpringbootDemoApplication { public static void main(String[] args) { SpringApplication.run(SpringbootDemoApplication.class, args); } } 引导类是项目的入口，运行main()就可以启动项目。">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu0c2331fe09320137a3bd1d4b5cc68791_142496_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Linner&#39;s Blog</a></h1>
+            <h2 class="site-description">随便看看就行，副标题暂时还没想好</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Linna-cy'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives" id="toc-list">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents" class="js-toc"></nav>
+            
+        </div>
+    </section>
+
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/spring/" >
+                Spring
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/springboot-%E5%9F%BA%E7%A1%80/">SpringBoot 基础</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Feb 20, 2023</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="springboot-简介">SpringBoot 简介</h1>
+<p><code>SpringBoot</code> 是由 <code>Pivotal</code> 团队提供的全新框架，其设计目的是用来简化 <code>Spring</code> 应用的初始搭建以及开发过程。</p>
+<p>SpringBoot开发分为如下几步：</p>
+<ul>
+<li>创建新模块，选择Spring初始化，并配置模块相关基础信息。</li>
+<li>选择当前模块需要使用的技术集。</li>
+<li>开发控制器类。</li>
+<li>运行自动生成的Application类。</li>
+</ul>
+<h1 id="项目创建及配置">项目创建及配置</h1>
+<h2 id="创建项目">创建项目</h2>
+<p><img src="/p/springboot-%E5%9F%BA%E7%A1%80/1677287557076.png"
+	width="1572"
+	height="1265"
+	srcset="/p/springboot-%E5%9F%BA%E7%A1%80/1677287557076_hucd4aac900581b1995c287cf4f4416d47_189645_480x0_resize_box_3.png 480w, /p/springboot-%E5%9F%BA%E7%A1%80/1677287557076_hucd4aac900581b1995c287cf4f4416d47_189645_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="124"
+		data-flex-basis="298px"
+	
+></p>
+<p><img src="/p/springboot-%E5%9F%BA%E7%A1%80/1677239012598.png"
+	width="1573"
+	height="1269"
+	srcset="/p/springboot-%E5%9F%BA%E7%A1%80/1677239012598_hu287bfba592488efe9276e55c8851be90_134021_480x0_resize_box_3.png 480w, /p/springboot-%E5%9F%BA%E7%A1%80/1677239012598_hu287bfba592488efe9276e55c8851be90_134021_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="123"
+		data-flex-basis="297px"
+	
+></p>
+<blockquote>
+<p>注意：</p>
+<ol>
+<li>
+<p>在创建好的工程中不需要创建配置类。</p>
+</li>
+<li>
+<p>创建好的项目会自动生成其他的一些文件（这些文件目前来说没有任何作用），可以将这些文件删除。</p>
+<p>可以删除的目录和文件如下：</p>
+<ul>
+<li><code>.mvn</code></li>
+<li><code>.gitignore</code></li>
+<li><code>HELP.md</code></li>
+<li><code>mvnw</code></li>
+<li><code>mvnw.cmd</code></li>
+</ul>
+</li>
+</ol>
+</blockquote>
+<h2 id="项目依赖">项目依赖</h2>
+<p>在项目中的<code>pom.xml</code>中有如下代码：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;parent&gt;</span>
+    <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-parent<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;version&gt;</span>3.0.3<span style="color:#f92672">&lt;/version&gt;</span>
+    <span style="color:#f92672">&lt;relativePath/&gt;</span> <span style="color:#75715e">&lt;!-- lookup parent from repository --&gt;</span>
+<span style="color:#f92672">&lt;/parent&gt;</span>
+</code></pre></div><p>该代码指定了一个父工程，父工程中的东西在该工程中可以继承过来使用。</p>
+<p>并且使用Spring Initializr创建的项目会自动在<code>pom.xml</code>中导入所需的起步依赖（包含<code>starter</code>的依赖）。</p>
+<h2 id="引导类">引导类</h2>
+<p>创建的每个SpringBoot项目都包含一个引导类，如：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@SpringBootApplication</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringbootDemoApplication</span> <span style="color:#f92672">{</span>
+
+	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+		SpringApplication<span style="color:#f92672">.</span><span style="color:#a6e22e">run</span><span style="color:#f92672">(</span>SpringbootDemoApplication<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">,</span> args<span style="color:#f92672">);</span>
+	<span style="color:#f92672">}</span>
+
+<span style="color:#f92672">}</span>
+</code></pre></div><p>引导类是项目的入口，运行<code>main()</code>就可以启动项目。</p>
+<blockquote>
+<p>引导类默认只会扫描当前包下同级的类和包（包下的的类）。</p>
+<p>如果Controller包与引导类的包同级（例如<code>com.linner.controller</code>与<code>com.linner.springbootdemo</code>），此时引导类可以正常启动，但是由于扫描不到Cotroller包，接口无法访问。有三种解决方法：</p>
+<ol>
+<li>
+<p>将Controller包移动到引导类的包下（此处为<code>springbootdemo</code>）。</p>
+</li>
+<li>
+<p>将引导类移动到项目组包下（此处为<code>com.linner</code>）。</p>
+</li>
+<li>
+<p>在创建工程时，修改软件包名。</p>
+<p>Spring Initializr默认软件包名为项目组名.项目名（此处为<code>com.linner.springbootdemo</code>）。此处创建的项目将其修改为项目组名（<code>com.linner</code>）。</p>
+</li>
+</ol>
+</blockquote>
+<h2 id="切换-web-服务器">切换 Web 服务器</h2>
+<p>如果要使用Jetty服务器，我们需要先在<code>pom.xml</code>中使用<code>&lt;exclusion&gt;</code>标签排除默认的Tomcat服务器，然后再导入使用Jetty服务器所需的坐标：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency&gt;</span>
+    <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-web<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;exclusions&gt;</span>
+        <span style="color:#f92672">&lt;exclusion&gt;</span>
+            <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+            <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-tomcat<span style="color:#f92672">&lt;/artifactId&gt;</span>
+        <span style="color:#f92672">&lt;/exclusion&gt;</span>
+    <span style="color:#f92672">&lt;/exclusions&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
+<span style="color:#f92672">&lt;dependency&gt;</span>
+    <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-jetty<span style="color:#f92672">&lt;/artifactId&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
+</code></pre></div><h2 id="配置文件">配置文件</h2>
+<p>SpringBoot有两种配置文件格式，它们都在<code>resources</code>目录下：</p>
+<ul>
+<li>
+<p><code>properties</code>格式：</p>
+<p>文件名为<code>application.properties</code>，格式如下：</p>
+<pre tabindex="0"><code class="language-properties" data-lang="properties"># 端口
+server.port=81
+# 访问路径
+server.servlet.context-path=/
+</code></pre></li>
+<li>
+<p><code>yaml</code>格式：</p>
+<p>文件名为<code>application.yml</code>或<code>application.yaml</code>，格式如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">server</span>:
+    <span style="color:#75715e"># 端口</span>
+    <span style="color:#f92672">port</span>: <span style="color:#ae81ff">80</span>
+    <span style="color:#f92672">servlet</span>:
+        <span style="color:#75715e"># 访问路径</span>
+        <span style="color:#f92672">context-path</span>: <span style="color:#ae81ff">/</span>
+</code></pre></div><blockquote>
+<p>yaml格式的键值对中，键后面的冒号后（值的前面）一定要加空格。</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p>SpringBoot程序的配置文件必须是<code>application</code>，只是后缀名不同。</p>
+</blockquote>
+<p>以上三个配置文件可以同时存在，它们的优先级从高到低为：</p>
+<ol>
+<li><code>application.properties</code></li>
+<li><code>application.yml</code></li>
+<li><code>application.yaml</code></li>
+</ol>
+<p>Idea可以快速地编辑配置文件：</p>
+<p><img src="/p/springboot-%E5%9F%BA%E7%A1%80/1677291010274.png"
+	width="481"
+	height="581"
+	srcset="/p/springboot-%E5%9F%BA%E7%A1%80/1677291010274_hu6c7a33389c12226ae70308dde30125e2_37781_480x0_resize_box_3.png 480w, /p/springboot-%E5%9F%BA%E7%A1%80/1677291010274_hu6c7a33389c12226ae70308dde30125e2_37781_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="82"
+		data-flex-basis="198px"
+	
+></p>
+<p><img src="/p/springboot-%E5%9F%BA%E7%A1%80/1677291147353.png"
+	width="1651"
+	height="389"
+	srcset="/p/springboot-%E5%9F%BA%E7%A1%80/1677291147353_hu621d83afb44f065ed2ec5279b956c7a2_60719_480x0_resize_box_3.png 480w, /p/springboot-%E5%9F%BA%E7%A1%80/1677291147353_hu621d83afb44f065ed2ec5279b956c7a2_60719_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="424"
+		data-flex-basis="1018px"
+	
+></p>
+<h3 id="yaml-语法">yaml 语法</h3>
+<ul>
+<li>
+<p>大小写敏感。</p>
+</li>
+<li>
+<p>属性层级关系使用多行描述，每行结尾使用冒号结束。</p>
+</li>
+<li>
+<p>使用缩进表示层级关系，同层级左侧对齐，只允许使用空格（不允许使用Tab键）。</p>
+<p>空格的个数并不重要，只要保证同层级的左侧对齐即可。</p>
+</li>
+<li>
+<p>属性值前面添加空格（属性名与属性值之间使用<code>:</code>+空格作为分隔）。</p>
+</li>
+<li>
+<p><code>#</code> 表示注释。</p>
+</li>
+<li>
+<p>数据前面要加空格与冒号隔开。</p>
+</li>
+</ul>
+<p>数组数据在数据书写位置的下方使用减号作为数据开始符号，每行书写一个数据，减号与数据间空格分隔。如：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">list</span>:
+    - <span style="color:#ae81ff">Java</span>
+    - <span style="color:#ae81ff">Spring</span>
+</code></pre></div><h3 id="读取配置数据">读取配置数据</h3>
+<p>使用<code>@Value(&quot;表达式&quot;)</code>可以从配置文件中读取数据，注解中用于读取属性名引用方式是：<code>${一级属性名.二级属性名……}</code>。如：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RestController</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyController</span> <span style="color:#f92672">{</span>
+    <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${server.port}&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">private</span> Integer port<span style="color:#f92672">;</span>
+    <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${list[0]}&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">private</span> String java<span style="color:#f92672">;</span>
+
+    <span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/config&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">gerConfig</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;port=&#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">port</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\n&#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">java</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>SpringBoot还可以使用 <code>@Autowired</code> 注解注入 <code>Environment</code> 对象的方式读取数据。这种方式 <code>SpringBoot</code> 会将配置文件中所有的数据封装到 <code>Environment</code> 对象中，如果需要使用哪个数据只需要通过调用 <code>Environment</code> 对象的 <code>getProperty(String name)</code> 方法获取。如：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RestController</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyController</span> <span style="color:#f92672">{</span>
+    
+    <span style="color:#a6e22e">@Autowired</span>
+    <span style="color:#66d9ef">private</span> Environment env<span style="color:#f92672">;</span>
+
+    <span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/config&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">gerConfig</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;port=&#34;</span> <span style="color:#f92672">+</span> env<span style="color:#f92672">.</span><span style="color:#a6e22e">getProperty</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;server.port&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="自定义对象">自定义对象</h3>
+<p>SpringBoot提供了将配置文件中的数据封装到我们自定义的实体类对象中的方式。具体操作如下：</p>
+<ol>
+<li>
+<p>在实体类上添加<code>@Component</code>注解。</p>
+<p>表示将实体类 <code>bean</code> 的创建交给 <code>Spring</code> 管理。</p>
+</li>
+<li>
+<p>使用 <code>@ConfigurationProperties</code> 注解表示加载配置文件。</p>
+<p>在该注解中也可以使用 <code>prefix</code> 属性指定只加载指定键的数据。</p>
+</li>
+<li>
+<p>在Controller中进行注入。</p>
+</li>
+</ol>
+<p>Example：</p>
+<p>添加依赖：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency&gt;</span>
+    <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-configuration-processor<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;optional&gt;</span>true<span style="color:#f92672">&lt;/optional&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
+</code></pre></div><p>在配置文件中添加：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">myconfig</span>:
+  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">SpringBoot</span>
+  <span style="color:#f92672">port</span>: <span style="color:#ae81ff">80</span>
+  <span style="color:#f92672">id</span>: <span style="color:#ae81ff">666</span>
+</code></pre></div><p>实体类：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Component</span>
+<span style="color:#a6e22e">@ConfigurationProperties</span><span style="color:#f92672">(</span>prefix <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;myconfig&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyConfig</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> String name<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> Integer id<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> Integer port<span style="color:#f92672">;</span>
+    <span style="color:#75715e">// getter and setter...
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</code></pre></div><p>Controller：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RestController</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyController</span> <span style="color:#f92672">{</span>
+    <span style="color:#a6e22e">@Autowired</span>
+    <span style="color:#66d9ef">private</span> MyConfig myConfig<span style="color:#f92672">;</span>
+
+    <span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/myconfig&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">public</span> MyConfig <span style="color:#a6e22e">getMyConfig</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">myConfig</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="多环境配置">多环境配置</h3>
+<p>由于开发环境、测试环境、生产环境的配置都不相同。所以SpringBoot给开发者提供了多环境的快捷配置，需要切换环境时只需要改一个配置即可。</p>
+<ul>
+<li>
+<p><code>yaml</code>格式：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e"># 开发</span>
+<span style="color:#f92672">spring</span>:
+  <span style="color:#f92672">config</span>:
+    <span style="color:#f92672">activate</span>:
+      <span style="color:#75715e"># 配置环境名</span>
+      <span style="color:#f92672">on-profile</span>: <span style="color:#ae81ff">dev</span>
+<span style="color:#75715e"># spring.profiles 配置已弃用</span>
+<span style="color:#f92672">server</span>:
+  <span style="color:#f92672">port</span>: <span style="color:#ae81ff">80</span>
+---
+<span style="color:#75715e"># 生产</span>
+<span style="color:#f92672">spring</span>:
+  <span style="color:#f92672">config</span>:
+    <span style="color:#f92672">activate</span>:
+      <span style="color:#f92672">on-profile</span>: <span style="color:#ae81ff">pro</span> <span style="color:#75715e">#给生产环境起的名字</span>
+<span style="color:#f92672">server</span>:
+  <span style="color:#f92672">port</span>: <span style="color:#ae81ff">81</span>
+---
+<span style="color:#75715e"># 测试</span>
+<span style="color:#f92672">spring</span>:
+  <span style="color:#f92672">config</span>:
+    <span style="color:#f92672">activate</span>:
+      <span style="color:#f92672">on-profile</span>: <span style="color:#ae81ff">test</span> <span style="color:#75715e">#给测试环境起的名字</span>
+<span style="color:#f92672">server</span>:
+  <span style="color:#f92672">port</span>: <span style="color:#ae81ff">82</span>
+---
+<span style="color:#75715e"># 设置启用的环境</span>
+<span style="color:#f92672">spring</span>:
+  <span style="color:#f92672">profiles</span>:
+    <span style="color:#f92672">active</span>: <span style="color:#ae81ff">test </span> <span style="color:#75715e">#表示使用的是开发环境的配置</span>
+</code></pre></div></li>
+<li>
+<p><code>properties</code>格式：</p>
+<p>使用多文件方式，文件名以<code>application-</code>开头。如：</p>
+<ul>
+<li>
+<p><code>application-dev.properties</code>：</p>
+<pre tabindex="0"><code class="language-properties" data-lang="properties">server.port=80
+</code></pre></li>
+<li>
+<p><code>application-pro.properties</code>：</p>
+<pre tabindex="0"><code class="language-properties" data-lang="properties">server.port=81
+</code></pre></li>
+<li>
+<p><code>application-test.properties</code>：</p>
+<pre tabindex="0"><code class="language-properties" data-lang="properties">server.port=82
+</code></pre></li>
+</ul>
+<p>SpringBoot只会默认加载名为 <code>application.properties</code> 的配置文件，所以需要在 <code>application.properties</code> 配置文件中设置启用哪个配置文件。如：</p>
+<pre tabindex="0"><code class="language-properties" data-lang="properties">spring.profiles.active=pro
+</code></pre></li>
+</ul>
+<p>SpringBoot提供了在运行<code>jar</code>时设置开启指定的环境的方式。如：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">java –jar springbootdemo.jar –-spring.profiles.active<span style="color:#f92672">=</span>test
+</code></pre></div><p>临时修改端口号：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">java –jar springbootdemo.jar –-server.port<span style="color:#f92672">=</span><span style="color:#ae81ff">88</span>
+</code></pre></div><blockquote>
+<p>命令行设置的端口号优先级高于配置文件。
+<a class="link" href="https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config"  target="_blank" rel="noopener"
+    >SpringBoot官网</a>已经对配置的优先级进行了说明：
+<img src="/p/springboot-%E5%9F%BA%E7%A1%80/image-20210917193910191.png"
+	width="1680"
+	height="792"
+	srcset="/p/springboot-%E5%9F%BA%E7%A1%80/image-20210917193910191_hub0a1d35a0358d95a9acb0998fc4d2a1d_228625_480x0_resize_box_3.png 480w, /p/springboot-%E5%9F%BA%E7%A1%80/image-20210917193910191_hub0a1d35a0358d95a9acb0998fc4d2a1d_228625_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="212"
+		data-flex-basis="509px"
+	
+></p>
+</blockquote>
+<h3 id="配置文件分类">配置文件分类</h3>
+<p>SpringBoot定义了配置文件不同的放置的位置。而放在不同位置的优先级是不同的。SpringBoot中4级配置文件放置位置：</p>
+<ol>
+<li>classpath：application.yml</li>
+<li>classpath：config/application.yml</li>
+<li>file：application.yml</li>
+<li>file：config/application.yml</li>
+</ol>
+<blockquote>
+<p>级别越高优先级越高。</p>
+</blockquote>
+<h1 id="第三方资源整合">第三方资源整合</h1>
+<h2 id="整合-junit">整合 Junit</h2>
+<p>SpringBoot整合Junit分为三步：</p>
+<ol>
+<li>在测试类上添加 <code>@SpringBootTest</code> 注解。</li>
+<li>使用 <code>@Autowired</code> 注入要测试的资源。</li>
+<li>定义测试方法进行测试。</li>
+</ol>
+<p>Example：</p>
+<p>编写Service：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Service</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BookService</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">save</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Book save ...&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>编写Test类：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@SpringBootTest</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringbootDemoApplicationTests</span> <span style="color:#f92672">{</span>
+    <span style="color:#a6e22e">@Autowired</span>
+    <span style="color:#66d9ef">private</span> BookService bookService<span style="color:#f92672">;</span>
+
+    <span style="color:#a6e22e">@Test</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testSave</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        bookService<span style="color:#f92672">.</span><span style="color:#a6e22e">save</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><blockquote>
+<p>由于引导类默认扫描当前包下的类和包，所以测试类（或者测试类的包）和引导类要在同个包下。</p>
+<p>否则，可以使用<code>@SpringBootTest</code>注解的<code>classes</code>属性指定引导类的字节码对象。如：<code>@SpringBootTest(classes = SpringbootDemoApplication.class)</code></p>
+</blockquote>
+<h2 id="整合-mybatis">整合 MyBatis</h2>
+<p>在整合MyBatis前先建一个用于测试的数据库：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SET</span> <span style="color:#66d9ef">NAMES</span> utf8mb4;
+<span style="color:#66d9ef">SET</span> FOREIGN_KEY_CHECKS <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+
+<span style="color:#75715e">-- Table structure for book_tb
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">EXISTS</span> <span style="color:#f92672">`</span>book_tb<span style="color:#f92672">`</span>;
+<span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#f92672">`</span>book_tb<span style="color:#f92672">`</span>  (
+  <span style="color:#f92672">`</span>id<span style="color:#f92672">`</span> int <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+  <span style="color:#f92672">`</span>name<span style="color:#f92672">`</span> varchar(<span style="color:#ae81ff">255</span>) CHARACTER <span style="color:#66d9ef">SET</span> utf8mb3 <span style="color:#66d9ef">COLLATE</span> utf8mb3_bin <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+  <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (<span style="color:#f92672">`</span>id<span style="color:#f92672">`</span>) <span style="color:#66d9ef">USING</span> BTREE
+) ENGINE <span style="color:#f92672">=</span> InnoDB CHARACTER <span style="color:#66d9ef">SET</span> <span style="color:#f92672">=</span> utf8mb3 <span style="color:#66d9ef">COLLATE</span> <span style="color:#f92672">=</span> utf8mb3_bin ROW_FORMAT <span style="color:#f92672">=</span> <span style="color:#66d9ef">Dynamic</span>;
+
+<span style="color:#75715e">-- Records of book_tb
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#f92672">`</span>book_tb<span style="color:#f92672">`</span> <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;郑嘉伦&#39;</span>);
+<span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#f92672">`</span>book_tb<span style="color:#f92672">`</span> <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;钱璐&#39;</span>);
+<span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#f92672">`</span>book_tb<span style="color:#f92672">`</span> <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;黄安琪&#39;</span>);
+<span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#f92672">`</span>book_tb<span style="color:#f92672">`</span> <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#39;龙宇宁&#39;</span>);
+<span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#f92672">`</span>book_tb<span style="color:#f92672">`</span> <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">5</span>, <span style="color:#e6db74">&#39;姜宇宁&#39;</span>);
+<span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#f92672">`</span>book_tb<span style="color:#f92672">`</span> <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">6</span>, <span style="color:#e6db74">&#39;赵嘉伦&#39;</span>);
+
+<span style="color:#66d9ef">SET</span> FOREIGN_KEY_CHECKS <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</code></pre></div><ul>
+<li>
+<p>导入依赖：</p>
+<ol>
+<li>在创建项目时，通过Spring Initializr导入依赖：
+<img src="/p/springboot-%E5%9F%BA%E7%A1%80/1677302021447.png"
+	width="1575"
+	height="1466"
+	srcset="/p/springboot-%E5%9F%BA%E7%A1%80/1677302021447_hub274beed4d034c3ddb809f27d46dc304_154471_480x0_resize_box_3.png 480w, /p/springboot-%E5%9F%BA%E7%A1%80/1677302021447_hub274beed4d034c3ddb809f27d46dc304_154471_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="107"
+		data-flex-basis="257px"
+	
+></li>
+<li>在<code>pom.xml</code>中导入坐标：</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency&gt;</span>
+    <span style="color:#f92672">&lt;groupId&gt;</span>org.mybatis.spring.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+    <span style="color:#f92672">&lt;artifactId&gt;</span>mybatis-spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;version&gt;</span>3.0.0<span style="color:#f92672">&lt;/version&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
+
+<span style="color:#f92672">&lt;dependency&gt;</span>
+    <span style="color:#f92672">&lt;groupId&gt;</span>com.mysql<span style="color:#f92672">&lt;/groupId&gt;</span>
+    <span style="color:#f92672">&lt;artifactId&gt;</span>mysql-connector-j<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;scope&gt;</span>runtime<span style="color:#f92672">&lt;/scope&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
+</code></pre></div></li>
+<li>
+<p>编写数据库配置：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">spring</span>:
+  <span style="color:#f92672">datasource</span>:
+    <span style="color:#f92672">driver-class-name</span>: <span style="color:#ae81ff">com.mysql.jdbc.Driver</span>
+    <span style="color:#f92672">url</span>: <span style="color:#ae81ff">jdbc:mysql://localhost:3306/spring_db</span>
+    <span style="color:#f92672">username</span>: <span style="color:#ae81ff">root</span>
+    <span style="color:#f92672">password</span>: <span style="color:#ae81ff">123456</span>
+</code></pre></div><blockquote>
+<p>SpringBoot版本低于2.4.3（不含），Mysql驱动版本大于8.0时，需要在url连接串中配置时区 <code>jdbc:mysql://localhost:3306/spring_db?serverTimezone=UTC</code>，或在MySQL数据库端配置时区解决此问题。</p>
+</blockquote>
+</li>
+<li>
+<p>定义实体类：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Book</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> Integer id<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> String name<span style="color:#f92672">;</span>
+    <span style="color:#75715e">// getter、setter and toString
+</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</code></pre></div></li>
+<li>
+<p>定义DAO接口：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Mapper</span> <span style="color:#75715e">// SpringBoot定义DAO接口类
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">BookDao</span> <span style="color:#f92672">{</span>
+    <span style="color:#a6e22e">@Select</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;SELECT * FROM book_tb WHERE id = #{id}&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">public</span> Book <span style="color:#a6e22e">getById</span><span style="color:#f92672">(</span>Integer id<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div></li>
+<li>
+<p>定义Test类：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@SpringBootTest</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringbootMybatisApplicationTests</span> <span style="color:#f92672">{</span>
+    <span style="color:#a6e22e">@Autowired</span>
+    <span style="color:#66d9ef">private</span> BookDao bookDao<span style="color:#f92672">;</span>
+
+    <span style="color:#a6e22e">@Test</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testGetById</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        Book book <span style="color:#f92672">=</span> bookDao<span style="color:#f92672">.</span><span style="color:#a6e22e">getById</span><span style="color:#f92672">(</span>1<span style="color:#f92672">);</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>book<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div></li>
+</ul>
+<h3 id="使用-druid-数据源">使用 Druid 数据源</h3>
+<p>SpringBoot有默认的数据源，但是也可以指定使用Druid数据源。</p>
+<ul>
+<li>
+<p>导入Druid依赖：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency&gt;</span>
+    <span style="color:#f92672">&lt;groupId&gt;</span>com.alibaba<span style="color:#f92672">&lt;/groupId&gt;</span>
+    <span style="color:#f92672">&lt;artifactId&gt;</span>druid<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;version&gt;</span>1.1.16<span style="color:#f92672">&lt;/version&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
+</code></pre></div></li>
+<li>
+<p>在<code>application.yml</code>配置文件配置：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">spring</span>:
+  <span style="color:#f92672">datasource</span>:
+    <span style="color:#f92672">driver-class-name</span>: <span style="color:#ae81ff">com.mysql.cj.jdbc.Driver</span>
+    <span style="color:#f92672">url</span>: <span style="color:#ae81ff">jdbc:mysql://localhost:3306/spring_db?serverTimezone=UTC</span>
+    <span style="color:#f92672">username</span>: <span style="color:#ae81ff">root</span>
+    <span style="color:#f92672">password</span>: <span style="color:#ae81ff">123456</span>
+    <span style="color:#f92672">type</span>: <span style="color:#ae81ff">com.alibaba.druid.pool.DruidDataSource</span>
+</code></pre></div></li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/java/">Java</a>
+        
+            <a href="/tags/javaweb/">JavaWeb</a>
+        
+            <a href="/tags/spring/">Spring</a>
+        
+            <a href="/tags/maven/">Maven</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+       
+</article>
+
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/%E7%91%9E%E5%90%89%E5%A4%96%E5%8D%96%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">
+        
+        
+
+        瑞吉外卖项目实战</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/springmvc-%E5%9F%BA%E7%A1%80/">
+        
+        
+
+        SpringMVC 基础</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/spring-framework/">
+        
+        
+
+        Spring Framework</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/maven/">
+        
+        
+
+        Maven</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/maven-%E9%AB%98%E7%BA%A7/">
+        
+        
+
+        Maven 高级</a>
+</div>
+</section>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2022 - 
+        
+        2023 Linner&#39;s Blog
+
+        <span style="padding-left: 5px;padding-right: 5px;">|</span>
+
+        <a href="https://beian.miit.gov.cn/" target="_blank" >粤ICP备2022125602号-1</a>
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

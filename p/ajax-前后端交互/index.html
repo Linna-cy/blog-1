@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Ajax AJAX (Asynchronous JavaScript And XML)，其含义为异步的 JavaScript 和 XML。其中 JavaScript 表明该技术和前端相关；XML 是指以此进行数据交换。
+AJAX 作用有以下两方面：
+ 与服务器进行数据交换：通过AJAX可以给服务器发送请求，服务器将数据直接响应回给浏览器。 异步交互：可以在不重新加载整个页面的情况下，与服务器交换数据并更新部分网页的技术，如：搜索联想、用户名是否可用校验等等。  同步：浏览器页面在发送请求给服务器，在服务器处理请求的过程中，浏览器页面不能做其他的操作。只能等到服务器响应结束后，浏览器页面才能继续做其他的操作。 异步：浏览器页面发送请求给服务器，在服务器处理请求的过程中，浏览器页面还可以做其他的操作。    Ajax 简单使用 服务端：
+package web.servlet; import javax.servlet.ServletException; import javax.servlet.annotation.WebServlet; import javax.servlet.http.HttpServlet; import javax.servlet.http.HttpServletRequest; import javax.servlet.http.HttpServletResponse; import java.io.IOException; @WebServlet(&amp;#34;/ajaxServlet&amp;#34;) public class AjaxServlet extends HttpServlet { @Override protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException { // 返回给客户端响应数据  resp.getWriter().write(&amp;#34;Hello Ajax!&amp;#34;); } @Override protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException { this.'>
+
+
+<title>Ajax 前后端交互</title>
+
+<link rel='canonical' href='https://www.linner.asia/p/ajax-%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/'>
+
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Ajax 前后端交互'>
+<meta property='og:description' content='Ajax AJAX (Asynchronous JavaScript And XML)，其含义为异步的 JavaScript 和 XML。其中 JavaScript 表明该技术和前端相关；XML 是指以此进行数据交换。
+AJAX 作用有以下两方面：
+ 与服务器进行数据交换：通过AJAX可以给服务器发送请求，服务器将数据直接响应回给浏览器。 异步交互：可以在不重新加载整个页面的情况下，与服务器交换数据并更新部分网页的技术，如：搜索联想、用户名是否可用校验等等。  同步：浏览器页面在发送请求给服务器，在服务器处理请求的过程中，浏览器页面不能做其他的操作。只能等到服务器响应结束后，浏览器页面才能继续做其他的操作。 异步：浏览器页面发送请求给服务器，在服务器处理请求的过程中，浏览器页面还可以做其他的操作。    Ajax 简单使用 服务端：
+package web.servlet; import javax.servlet.ServletException; import javax.servlet.annotation.WebServlet; import javax.servlet.http.HttpServlet; import javax.servlet.http.HttpServletRequest; import javax.servlet.http.HttpServletResponse; import java.io.IOException; @WebServlet(&amp;#34;/ajaxServlet&amp;#34;) public class AjaxServlet extends HttpServlet { @Override protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException { // 返回给客户端响应数据  resp.getWriter().write(&amp;#34;Hello Ajax!&amp;#34;); } @Override protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException { this.'>
+<meta property='og:url' content='https://www.linner.asia/p/ajax-%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/'>
+<meta property='og:site_name' content='Linner&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='JavaWeb' /><meta property='article:tag' content='Tomcat' /><meta property='article:published_time' content='2022-09-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-09-25T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="Ajax 前后端交互">
+<meta name="twitter:description" content="Ajax AJAX (Asynchronous JavaScript And XML)，其含义为异步的 JavaScript 和 XML。其中 JavaScript 表明该技术和前端相关；XML 是指以此进行数据交换。
+AJAX 作用有以下两方面：
+ 与服务器进行数据交换：通过AJAX可以给服务器发送请求，服务器将数据直接响应回给浏览器。 异步交互：可以在不重新加载整个页面的情况下，与服务器交换数据并更新部分网页的技术，如：搜索联想、用户名是否可用校验等等。  同步：浏览器页面在发送请求给服务器，在服务器处理请求的过程中，浏览器页面不能做其他的操作。只能等到服务器响应结束后，浏览器页面才能继续做其他的操作。 异步：浏览器页面发送请求给服务器，在服务器处理请求的过程中，浏览器页面还可以做其他的操作。    Ajax 简单使用 服务端：
+package web.servlet; import javax.servlet.ServletException; import javax.servlet.annotation.WebServlet; import javax.servlet.http.HttpServlet; import javax.servlet.http.HttpServletRequest; import javax.servlet.http.HttpServletResponse; import java.io.IOException; @WebServlet(&amp;#34;/ajaxServlet&amp;#34;) public class AjaxServlet extends HttpServlet { @Override protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException { // 返回给客户端响应数据  resp.getWriter().write(&amp;#34;Hello Ajax!&amp;#34;); } @Override protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException { this.">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu0c2331fe09320137a3bd1d4b5cc68791_142496_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Linner&#39;s Blog</a></h1>
+            <h2 class="site-description">随便看看就行，副标题暂时还没想好</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Linna-cy'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives" id="toc-list">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents" class="js-toc"></nav>
+            
+        </div>
+    </section>
+
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/ajax-%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/">Ajax 前后端交互</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Sep 25, 2022</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="ajax">Ajax</h1>
+<p><code>AJAX</code> (Asynchronous JavaScript And XML)，其含义为异步的 JavaScript 和 XML。其中 <code>JavaScript</code> 表明该技术和前端相关；<code>XML</code> 是指以此进行数据交换。</p>
+<p>AJAX 作用有以下两方面：</p>
+<ol>
+<li><strong>与服务器进行数据交换</strong>：通过AJAX可以给服务器发送请求，服务器将数据直接响应回给浏览器。</li>
+<li><strong>异步交互</strong>：可以在不重新加载整个页面的情况下，与服务器交换数据并更新部分网页的技术，如：搜索联想、用户名是否可用校验等等。
+<ul>
+<li>同步：浏览器页面在发送请求给服务器，在服务器处理请求的过程中，浏览器页面不能做其他的操作。只能等到服务器响应结束后，浏览器页面才能继续做其他的操作。</li>
+<li>异步：浏览器页面发送请求给服务器，在服务器处理请求的过程中，浏览器页面还可以做其他的操作。</li>
+</ul>
+</li>
+</ol>
+<h2 id="ajax-简单使用">Ajax 简单使用</h2>
+<p>服务端：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> web.servlet<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> javax.servlet.ServletException<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> javax.servlet.annotation.WebServlet<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> javax.servlet.http.HttpServlet<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> javax.servlet.http.HttpServletRequest<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> javax.servlet.http.HttpServletResponse<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
+
+<span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/ajaxServlet&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AjaxServlet</span> <span style="color:#66d9ef">extends</span> HttpServlet <span style="color:#f92672">{</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doGet</span><span style="color:#f92672">(</span>HttpServletRequest req<span style="color:#f92672">,</span> HttpServletResponse resp<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 返回给客户端响应数据
+</span><span style="color:#75715e"></span>        resp<span style="color:#f92672">.</span><span style="color:#a6e22e">getWriter</span><span style="color:#f92672">().</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello Ajax!&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doPost</span><span style="color:#f92672">(</span>HttpServletRequest req<span style="color:#f92672">,</span> HttpServletResponse resp<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">doGet</span><span style="color:#f92672">(</span>req<span style="color:#f92672">,</span> resp<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>客户端：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//1. 创建核心对象
+</span><span style="color:#75715e"></span>let xhttp<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>window<span style="color:#f92672">.</span><span style="color:#a6e22e">XMLHttpRequest</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    xhttp <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> XMLHttpRequest<span style="color:#f92672">();</span>
+<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// code for IE6, IE5
+</span><span style="color:#75715e"></span>    xhttp <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ActiveXObject<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Microsoft.XMLHTTP&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+
+<span style="color:#75715e">//2. 发送请求
+</span><span style="color:#75715e"></span>xhttp<span style="color:#f92672">.</span><span style="color:#a6e22e">open</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;GET&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;http://localhost:8080/ajax-demo/ajaxServlet&#34;</span><span style="color:#f92672">);</span>
+xhttp<span style="color:#f92672">.</span><span style="color:#a6e22e">send</span><span style="color:#f92672">();</span>
+
+<span style="color:#75715e">//3. 获取响应
+</span><span style="color:#75715e"></span>xhttp<span style="color:#f92672">.</span><span style="color:#a6e22e">onreadystatechange</span> <span style="color:#f92672">=</span> function<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">readyState</span> <span style="color:#f92672">==</span> 4 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">status</span> <span style="color:#f92672">==</span> 200<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 处理从服务端发送过来的响应数据
+</span><span style="color:#75715e"></span>        alert<span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">responseText</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">};</span>
+</code></pre></div><hr>
+<h1 id="axios">Axios</h1>
+<p>Axios 是一个对原生的AJAX进行封装，简化书写的前端框架。</p>
+<h2 id="使用-axios-进行交互">使用 Axios 进行交互</h2>
+<p>Axios 的使用分为以下两步：</p>
+<ul>
+<li>
+<p>引入 Axios 的 js 文件</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/axios.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</code></pre></div></li>
+<li>
+<p>使用 Axios 发送请求，并获取响应结果：</p>
+<ul>
+<li>
+<p>发送 GET 请求的基本形式：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">axios</span>({
+    <span style="color:#a6e22e">method</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;get&#34;</span>,
+    <span style="color:#75715e">// 请求参数会传递给服务器，此处请求参数可以转义也可以不转义
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;http://localhost:8080/axios-demo/demo?message=Hello%20World&#34;</span>
+}).<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">resp</span>){
+    <span style="color:#75715e">// 对响应数据进行处理
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">data</span>);
+})
+</code></pre></div></li>
+<li>
+<p>发送 POST 请求的基本形式：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">axios</span>({
+    <span style="color:#a6e22e">method</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;post&#34;</span>,
+    <span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;http://localhost:8080/axios-demo/demo&#34;</span>,
+    <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;message=Hello World&#34;</span>
+}).<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">resp</span>){
+    <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">data</span>);
+});
+</code></pre></div></li>
+</ul>
+</li>
+</ul>
+<p>其中：</p>
+<ul>
+<li>
+<p><code>axios()</code> 是用来发送异步请求的，小括号中使用 js 对象传递请求相关的参数：</p>
+<ul>
+<li>
+<p><code>method</code> 属性：用来设置请求方式的。</p>
+<p>取值为 <code>get</code> 或者 <code>post</code>。</p>
+</li>
+<li>
+<p><code>url</code> 属性：用来书写请求的资源路径。</p>
+<p>如果是 <code>get</code> 请求，需要将请求参数拼接到路径的后面，格式为： <code>url?参数名=参数值&amp;参数名2=参数值2</code>。</p>
+</li>
+<li>
+<p><code>data</code> 属性：作为请求体被发送的数据。</p>
+<p>即，如果是 <code>post</code> 请求的话，数据需要作为 <code>data</code> 属性的值。</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>then()</code> 需要传递一个匿名函数。</p>
+<p><code>then()</code> 中传递的匿名函数称为回调函数，意思是该匿名函数在发送请求时不会被调用，而是在成功响应后调用的函数。</p>
+<p>而该回调函数中的 <code>resp</code> 参数是对响应的数据进行封装的对象，通过 <code>resp.data</code> 可以获取到响应的数据。</p>
+</li>
+</ul>
+<h2 id="请求方法别名">请求方法别名</h2>
+<p>为了方便起见， Axios 已经为所有支持的请求方法提供了别名。如下：</p>
+<ul>
+<li>
+<p><code>get</code> 请求：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">url</span>[,<span style="color:#a6e22e">config</span>])
+</code></pre></div></li>
+<li>
+<p><code>delete</code> 请求：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">axios</span>.<span style="color:#66d9ef">delete</span>(<span style="color:#a6e22e">url</span>[,<span style="color:#a6e22e">config</span>])
+</code></pre></div></li>
+<li>
+<p><code>head</code> 请求：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">head</span>(<span style="color:#a6e22e">url</span>[,<span style="color:#a6e22e">config</span>])
+</code></pre></div></li>
+<li>
+<p><code>options</code> 请求：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">option</span>(<span style="color:#a6e22e">url</span>[,<span style="color:#a6e22e">config</span>])
+</code></pre></div></li>
+<li>
+<p><code>post</code> 请求：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">post</span>(<span style="color:#a6e22e">url</span>[,<span style="color:#a6e22e">data</span>[,<span style="color:#a6e22e">config</span>])
+</code></pre></div></li>
+<li>
+<p><code>put</code> 请求：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">put</span>(<span style="color:#a6e22e">url</span>[,<span style="color:#a6e22e">data</span>[,<span style="color:#a6e22e">config</span>])
+</code></pre></div></li>
+<li>
+<p><code>patch</code> 请求：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">patch</span>(<span style="color:#a6e22e">url</span>[,<span style="color:#a6e22e">data</span>[,<span style="color:#a6e22e">config</span>])
+</code></pre></div></li>
+</ul>
+<h3 id="this-作用域问题">this 作用域问题</h3>
+<p>使用请求方法别名和箭头函数可以解决this作用域问题，防止this指向错误：</p>
+<ul>
+<li>
+<p>GET请求：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">get</span>(
+    <span style="color:#e6db74">&#34;http://localhost:8080/axios-demo/demo?message=Hello World&#34;</span>
+).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">resp</span> =&gt; {
+    <span style="color:#75715e">// 对响应数据进行处理
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">data</span>);
+})
+</code></pre></div></li>
+<li>
+<p>POST请求：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">axios<span style="color:#f92672">.</span><span style="color:#a6e22e">post</span><span style="color:#f92672">(</span>
+    <span style="color:#e6db74">&#34;http://localhost:8080/axios-demo/demo&#34;</span><span style="color:#f92672">,</span>
+    <span style="color:#e6db74">&#34;message=Hello World&#34;</span>
+<span style="color:#f92672">).</span><span style="color:#a6e22e">then</span><span style="color:#f92672">(</span>resp <span style="color:#f92672">=&gt;</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// 对响应数据进行处理
+</span><span style="color:#75715e"></span>    alert<span style="color:#f92672">(</span>resp<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">})</span>
+</code></pre></div></li>
+</ul>
+<h1 id="json">JSON</h1>
+<p>JSON（JavaScript Object Notation）是指 JavaScript 对象表示法。</p>
+<p>JSON的优点：数据格式简单，所占的字节数少等。</p>
+<h2 id="json-的格式">JSON 的格式</h2>
+<p><code>JSON</code> 本质就是一个字符串，但是该字符串内容是有一定的格式要求的：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+	<span style="color:#f92672">&#34;key_1&#34;</span>: <span style="color:#960050;background-color:#1e0010">value_</span><span style="color:#ae81ff">1</span>,
+	<span style="color:#f92672">&#34;key_2&#34;</span>: <span style="color:#960050;background-color:#1e0010">value_</span><span style="color:#ae81ff">2</span>,
+	<span style="color:#f92672">&#34;key_3&#34;</span>: <span style="color:#960050;background-color:#1e0010">value_</span><span style="color:#ae81ff">3</span>,
+    <span style="color:#960050;background-color:#1e0010">...,</span>
+    <span style="color:#f92672">&#34;key_n&#34;</span>: <span style="color:#960050;background-color:#1e0010">value_n</span>
+}
+</code></pre></div><ul>
+<li><code>JSON</code> 格式中的键要求必须使用双引号括起来。</li>
+<li>Value 的数据类型分为如下：
+<ul>
+<li>数字（整数或浮点数）</li>
+<li>字符串（使用双引号括起来）</li>
+<li>逻辑值（<code>true</code>或者<code>false</code>）</li>
+<li>数组（在方括号<code>{}</code>中）</li>
+<li>对象（在花括号<code>[]</code>中）</li>
+<li>null</li>
+</ul>
+</li>
+</ul>
+<p>在 js 中定义 json：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">变量名</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`{
+</span><span style="color:#e6db74">        &#34;key1&#34;:value1,
+</span><span style="color:#e6db74">        &#34;key2&#34;:value2,
+</span><span style="color:#e6db74">        ...
+</span><span style="color:#e6db74">    }`</span>;
+</code></pre></div><h2 id="在-js-中使用-josn">在 JS 中使用 JOSN</h2>
+<p>JS 提供了一个对象 <code>JSON</code> ，该对象有如下两个方法：</p>
+<ul>
+<li>
+<p><code>parse(str)</code>：将 JSON串转换为 js 对象。</p>
+<p>使用方式：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">jsObject</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">jsonStr</span>);
+</code></pre></div></li>
+<li>
+<p><code>stringify(obj)</code>：将 js 对象转换为 JSON 串。</p>
+<p>使用方式：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">jsonStr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">jsObject</span>)
+</code></pre></div></li>
+</ul>
+<h3 id="携带json发送异步请求">携带JSON发送异步请求</h3>
+<p>可以使用 <code>JSON.stringify()</code> 将js对象转换为 <code>JSON</code> 串，再将该 <code>JSON</code> 串作为 <code>axios</code> 的 <code>data</code> 属性值进行请求参数的提交。</p>
+<p>但其实只需要将需要提交的参数封装成 js 对象，并将该 js 对象作为 <code>axios</code> 的 <code>data</code> 属性值。<code>axios</code> 会自动将 js 对象转换为 <code>JSON</code> 串进行提交。</p>
+<blockquote>
+<p>发送异步请求时，如果请求参数是 <code>JSON</code> 格式，那请求方式必须是 <code>POST</code>。因为 <code>JSON</code> 串需要放在请求体中。</p>
+</blockquote>
+<h2 id="fastjson">Fastjson</h2>
+<p><code>Fastjson</code> 是阿里巴巴提供的一个Java语言编写的高性能功能完善的 <code>JSON</code> 库，是目前Java语言中最快的 <code>JSON</code> 库，可以实现 <code>Java</code> 对象和 <code>JSON</code> 字符串的相互转换。</p>
+<p>依赖坐标：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency&gt;</span>
+    <span style="color:#f92672">&lt;groupId&gt;</span>com.alibaba<span style="color:#f92672">&lt;/groupId&gt;</span>
+    <span style="color:#f92672">&lt;artifactId&gt;</span>fastjson<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;version&gt;</span>1.2.62<span style="color:#f92672">&lt;/version&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
+</code></pre></div><p>JOSN 和 Java对象的相互转换包含：</p>
+<ul>
+<li>
+<p>请求数据（反序列化）：</p>
+<p>JSON字符串转为Java对象。</p>
+<p>将 json 转换为 Java 对象，只需要使用 <code>Fastjson</code> 提供的 <code>JSON</code> 类中的 <code>parseObject()</code> 静态方法即可。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String <span style="color:#a6e22e">toJSONString</span><span style="color:#f92672">(</span>Object object<span style="color:#f92672">)</span>
+</code></pre></div></li>
+<li>
+<p>响应数据（序列化）：</p>
+<p>Java对象转为JSON字符串。</p>
+<p>将 Java 对象转换为 JSON 串，只需要使用 <code>Fastjson</code> 提供的 <code>JSON</code> 类中的 <code>toJSONString()</code> 静态方法即可。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> T <span style="color:#a6e22e">parseObject</span><span style="color:#f92672">(</span>String jsonStr<span style="color:#f92672">,</span> Class<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> clazz<span style="color:#f92672">)</span>
+</code></pre></div></li>
+</ul>
+<p>Example：</p>
+<ul>
+<li>
+<p>导入坐标。</p>
+</li>
+<li>
+<p>编写<code>pojo</code>类：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> pojo<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> Integer id<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> String username<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> String password<span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">public</span> Integer <span style="color:#a6e22e">getId</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> id<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setId</span><span style="color:#f92672">(</span>Integer id<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> id<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getUsername</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> username<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setUsername</span><span style="color:#f92672">(</span>String username<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">username</span> <span style="color:#f92672">=</span> username<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getPassword</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> password<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setPassword</span><span style="color:#f92672">(</span>String password<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">password</span> <span style="color:#f92672">=</span> password<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;User{&#34;</span> <span style="color:#f92672">+</span>
+                <span style="color:#e6db74">&#34;id=&#34;</span> <span style="color:#f92672">+</span> id <span style="color:#f92672">+</span>
+                <span style="color:#e6db74">&#34;, username=&#39;&#34;</span> <span style="color:#f92672">+</span> username <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;&#39;</span> <span style="color:#f92672">+</span>
+                <span style="color:#e6db74">&#34;, password=&#39;&#34;</span> <span style="color:#f92672">+</span> password <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;&#39;</span> <span style="color:#f92672">+</span>
+                <span style="color:#e6db74">&#39;}&#39;</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div></li>
+<li>
+<p>编写<code>FastJsonDemo</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> web.servlet<span style="color:#f92672">;</span>
+
+<span style="color:#f92672">import</span> com.alibaba.fastjson.JSON<span style="color:#f92672">;</span>
+<span style="color:#f92672">import</span> pojo.User<span style="color:#f92672">;</span>
+
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FastJsonDemo</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 1. Java对象转JSON字符串
+</span><span style="color:#75715e"></span>        User user <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> User<span style="color:#f92672">();</span>
+        user<span style="color:#f92672">.</span><span style="color:#a6e22e">setId</span><span style="color:#f92672">(</span>1<span style="color:#f92672">);</span>
+        user<span style="color:#f92672">.</span><span style="color:#a6e22e">setUsername</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;zhangsan&#34;</span><span style="color:#f92672">);</span>
+        user<span style="color:#f92672">.</span><span style="color:#a6e22e">setPassword</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;123&#34;</span><span style="color:#f92672">);</span>
+
+        String jsonString <span style="color:#f92672">=</span> JSON<span style="color:#f92672">.</span><span style="color:#a6e22e">toJSONString</span><span style="color:#f92672">(</span>user<span style="color:#f92672">);</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>jsonString<span style="color:#f92672">);</span>
+        <span style="color:#75715e">// 输出：{&#34;id&#34;:1,&#34;password&#34;:&#34;123&#34;,&#34;username&#34;:&#34;zhangsan&#34;}
+</span><span style="color:#75715e"></span>
+        <span style="color:#75715e">// 2. 将JSON字符串转为Java对象
+</span><span style="color:#75715e"></span>        User u <span style="color:#f92672">=</span> JSON<span style="color:#f92672">.</span><span style="color:#a6e22e">parseObject</span><span style="color:#f92672">(</span>
+                <span style="color:#e6db74">&#34;{\&#34;id\&#34;:1,\&#34;password\&#34;:\&#34;123\&#34;,\&#34;username\&#34;:\&#34;zhangsan\&#34;}&#34;</span><span style="color:#f92672">,</span>
+                User<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>u<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div></li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/java/">Java</a>
+        
+            <a href="/tags/javaweb/">JavaWeb</a>
+        
+            <a href="/tags/tomcat/">Tomcat</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+       
+</article>
+
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/filter-%E8%BF%87%E6%BB%A4%E5%99%A8/">
+        
+        
+
+        Filter 过滤器</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF-cookie-%E5%92%8C-session/">
+        
+        
+
+        会话跟踪技术 —— Cookie 和 Session</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/httpservlet-%E4%B8%8E-tomcat/">
+        
+        
+
+        HttpServlet 与 Tomcat</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/servlet-%E4%B8%8E-tomcat/">
+        
+        
+
+        Servlet 与 Tomcat</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/tomcat/">
+        
+        
+
+        Tomcat</a>
+</div>
+</section>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2022 - 
+        
+        2023 Linner&#39;s Blog
+
+        <span style="padding-left: 5px;padding-right: 5px;">|</span>
+
+        <a href="https://beian.miit.gov.cn/" target="_blank" >粤ICP备2022125602号-1</a>
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
