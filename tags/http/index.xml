@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>HTTP on Linner&#39;s Blog</title>
-        <link>https://www.linner.asia/tags/http/</link>
+        <link>https://blog.linner.asia/tags/http/</link>
         <description>Recent content in HTTP on Linner&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
-        <lastBuildDate>Sat, 10 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.linner.asia/tags/http/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 10 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.linner.asia/tags/http/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Tomcat</title>
-        <link>https://www.linner.asia/p/tomcat/</link>
+        <link>https://blog.linner.asia/p/tomcat/</link>
         <pubDate>Sat, 10 Sep 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/tomcat/</guid>
+        <guid>https://blog.linner.asia/p/tomcat/</guid>
         <description>&lt;h1 id=&#34;tomcat基本使用&#34;&gt;Tomcat基本使用&lt;/h1&gt;
 &lt;h2 id=&#34;tomcat安装&#34;&gt;Tomcat安装&lt;/h2&gt;
 &lt;p&gt;访问&lt;a class=&#34;link&#34; href=&#34;https://tomcat.apache.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -94,10 +94,10 @@
 &lt;li&gt;创建Maven项目&lt;/li&gt;
 &lt;li&gt;&lt;mark&gt;选择使用Web项目骨架&lt;/mark&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/tomcat/1627227650406.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/tomcat/1627227650406.png&#34;
 	width=&#34;998&#34;
 	height=&#34;789&#34;
-	srcset=&#34;https://www.linner.asia/p/tomcat/1627227650406_huf4f8cf0db624add1c763ab2bf77489a7_480515_480x0_resize_box_3.png 480w, https://www.linner.asia/p/tomcat/1627227650406_huf4f8cf0db624add1c763ab2bf77489a7_480515_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/tomcat/1627227650406_huf4f8cf0db624add1c763ab2bf77489a7_480515_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/tomcat/1627227650406_huf4f8cf0db624add1c763ab2bf77489a7_480515_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -115,10 +115,10 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;mark&gt;删除pom.xml中多余内容&lt;/mark&gt;
-&lt;img src=&#34;https://www.linner.asia/p/tomcat/1627228584625.png&#34;
+&lt;img src=&#34;https://blog.linner.asia/p/tomcat/1627228584625.png&#34;
 	width=&#34;1255&#34;
 	height=&#34;550&#34;
-	srcset=&#34;https://www.linner.asia/p/tomcat/1627228584625_hua75347db8dd8a49e943e8d807bb75211_213215_480x0_resize_box_3.png 480w, https://www.linner.asia/p/tomcat/1627228584625_hua75347db8dd8a49e943e8d807bb75211_213215_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/tomcat/1627228584625_hua75347db8dd8a49e943e8d807bb75211_213215_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/tomcat/1627228584625_hua75347db8dd8a49e943e8d807bb75211_213215_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -159,10 +159,10 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/tomcat/1627204022604.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/tomcat/1627204022604.png&#34;
 	width=&#34;1603&#34;
 	height=&#34;556&#34;
-	srcset=&#34;https://www.linner.asia/p/tomcat/1627204022604_hu32242d5545b5e672b8f75a7e3f4bf225_334035_480x0_resize_box_3.png 480w, https://www.linner.asia/p/tomcat/1627204022604_hu32242d5545b5e672b8f75a7e3f4bf225_334035_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/tomcat/1627204022604_hu32242d5545b5e672b8f75a7e3f4bf225_334035_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/tomcat/1627204022604_hu32242d5545b5e672b8f75a7e3f4bf225_334035_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -198,10 +198,10 @@
 &lt;/ol&gt;
 &lt;p&gt;文件&amp;ndash;&amp;gt;项目结构&amp;ndash;&amp;gt;Facet中按&lt;code&gt;+&lt;/code&gt;然后选择&lt;code&gt;Web&lt;/code&gt;，选择当前项目&lt;/p&gt;
 &lt;p&gt;修改webapp目录，并补齐Maven Web项目缺失&lt;code&gt;WEB-INF/web.xml&lt;/code&gt;的目录结构，即可完成构建&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/tomcat/1627204076090.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/tomcat/1627204076090.png&#34;
 	width=&#34;1686&#34;
 	height=&#34;533&#34;
-	srcset=&#34;https://www.linner.asia/p/tomcat/1627204076090_huc311bbecdc1eb62664bcca918cf611b5_364413_480x0_resize_box_3.png 480w, https://www.linner.asia/p/tomcat/1627204076090_huc311bbecdc1eb62664bcca918cf611b5_364413_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/tomcat/1627204076090_huc311bbecdc1eb62664bcca918cf611b5_364413_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/tomcat/1627204076090_huc311bbecdc1eb62664bcca918cf611b5_364413_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -217,10 +217,10 @@
 &lt;ol&gt;
 &lt;li&gt;右上角 编辑运行/调试配置 对话框&amp;ndash;&amp;gt;编辑配置&amp;ndash;&amp;gt;&lt;code&gt;+&lt;/code&gt;&amp;ndash;&amp;gt;Tomcat服务器&amp;ndash;&amp;gt;&lt;code&gt;本地&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/tomcat/1627229992900.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/tomcat/1627229992900.png&#34;
 	width=&#34;1115&#34;
 	height=&#34;686&#34;
-	srcset=&#34;https://www.linner.asia/p/tomcat/1627229992900_hu5f8cc3e47912345b768c91098cf41ba7_135158_480x0_resize_box_3.png 480w, https://www.linner.asia/p/tomcat/1627229992900_hu5f8cc3e47912345b768c91098cf41ba7_135158_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/tomcat/1627229992900_hu5f8cc3e47912345b768c91098cf41ba7_135158_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/tomcat/1627229992900_hu5f8cc3e47912345b768c91098cf41ba7_135158_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -232,10 +232,10 @@
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;指定本地Tomcat的具体路径&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/tomcat/1627230313062.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/tomcat/1627230313062.png&#34;
 	width=&#34;1347&#34;
 	height=&#34;866&#34;
-	srcset=&#34;https://www.linner.asia/p/tomcat/1627230313062_hu6d16bb4ca6689d3aaef58c322ee2322a_325387_480x0_resize_box_3.png 480w, https://www.linner.asia/p/tomcat/1627230313062_hu6d16bb4ca6689d3aaef58c322ee2322a_325387_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/tomcat/1627230313062_hu6d16bb4ca6689d3aaef58c322ee2322a_325387_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/tomcat/1627230313062_hu6d16bb4ca6689d3aaef58c322ee2322a_325387_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -247,10 +247,10 @@
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;将开发项目部署项目到Tomcat中&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/tomcat/1627230913259.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/tomcat/1627230913259.png&#34;
 	width=&#34;877&#34;
 	height=&#34;775&#34;
-	srcset=&#34;https://www.linner.asia/p/tomcat/1627230913259_hu1e86ffc5547b033aa40d7c2629e2f38b_147832_480x0_resize_box_3.png 480w, https://www.linner.asia/p/tomcat/1627230913259_hu1e86ffc5547b033aa40d7c2629e2f38b_147832_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/tomcat/1627230913259_hu1e86ffc5547b033aa40d7c2629e2f38b_147832_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/tomcat/1627230913259_hu1e86ffc5547b033aa40d7c2629e2f38b_147832_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -269,10 +269,10 @@
 &lt;p&gt;war exploded模式部署成功后，Tomcat的webapps目录下没有，而使用的是项目的target目录下的内容进行部署&lt;/p&gt;
 &lt;p&gt;建议选war模式进行部署，更符合项目部署的实际情况&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/tomcat/1627205657117.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/tomcat/1627205657117.png&#34;
 	width=&#34;1591&#34;
 	height=&#34;625&#34;
-	srcset=&#34;https://www.linner.asia/p/tomcat/1627205657117_hufe7637abc0a2ee946e7d9e2394f50189_323790_480x0_resize_box_3.png 480w, https://www.linner.asia/p/tomcat/1627205657117_hufe7637abc0a2ee946e7d9e2394f50189_323790_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/tomcat/1627205657117_hufe7637abc0a2ee946e7d9e2394f50189_323790_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/tomcat/1627205657117_hufe7637abc0a2ee946e7d9e2394f50189_323790_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	

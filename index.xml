@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Linner&#39;s Blog</title>
-        <link>https://www.linner.asia/</link>
+        <link>https://blog.linner.asia/</link>
         <description>Recent content on Linner&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
-        <lastBuildDate>Thu, 30 Mar 2023 19:58:41 +0800</lastBuildDate><atom:link href="https://www.linner.asia/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 30 Mar 2023 19:58:41 +0800</lastBuildDate><atom:link href="https://blog.linner.asia/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>软件设计师——程序设计语言</title>
-        <link>https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/</link>
+        <link>https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/</link>
         <pubDate>Thu, 30 Mar 2023 19:58:41 +0800</pubDate>
         
-        <guid>https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/</guid>
+        <guid>https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/</guid>
         <description>&lt;h1 id=&#34;低级和高级语言&#34;&gt;低级和高级语言&lt;/h1&gt;
 &lt;p&gt;程序设计语言根据硬件是否能识别区分为两类：&lt;/p&gt;
 &lt;ul&gt;
@@ -38,10 +38,10 @@
 &lt;p&gt;编译程序的功能是把某高级语言书写的&lt;u&gt;源程序翻译成与之等价的目标程序&lt;/u&gt;（汇编语言或机
 器语言)。&lt;/p&gt;
 &lt;p&gt;编译程序的工作过程如下图所示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680232196718.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680232196718.png&#34;
 	width=&#34;549&#34;
 	height=&#34;466&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680232196718_hu22cb7da26b44a72475eca6b4da41107c_39469_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680232196718_hu22cb7da26b44a72475eca6b4da41107c_39469_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680232196718_hu22cb7da26b44a72475eca6b4da41107c_39469_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680232196718_hu22cb7da26b44a72475eca6b4da41107c_39469_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -116,10 +116,10 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Example：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/1680248469003.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/1680248469003.png&#34;
 	width=&#34;990&#34;
 	height=&#34;277&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/1680248469003_huaaba3cb8f1b33a18fcb91ebc2f451286_91806_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/1680248469003_huaaba3cb8f1b33a18fcb91ebc2f451286_91806_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/1680248469003_huaaba3cb8f1b33a18fcb91ebc2f451286_91806_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/1680248469003_huaaba3cb8f1b33a18fcb91ebc2f451286_91806_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -129,10 +129,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;设$U$、$V$和$W$均为正规式：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680249034196.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680249034196.png&#34;
 	width=&#34;974&#34;
 	height=&#34;185&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680249034196_hu7097887f00dc6fb602c5be85b92d295e_40054_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680249034196_hu7097887f00dc6fb602c5be85b92d295e_40054_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680249034196_hu7097887f00dc6fb602c5be85b92d295e_40054_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680249034196_hu7097887f00dc6fb602c5be85b92d295e_40054_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -198,10 +198,10 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680251834262.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680251834262.png&#34;
 	width=&#34;983&#34;
 	height=&#34;160&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680251834262_hudda18d0f6413fec2c6bfff005f78095a_126189_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680251834262_hudda18d0f6413fec2c6bfff005f78095a_126189_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680251834262_hudda18d0f6413fec2c6bfff005f78095a_126189_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680251834262_hudda18d0f6413fec2c6bfff005f78095a_126189_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -210,10 +210,10 @@ $$&lt;/p&gt;
 		data-flex-basis=&#34;1474px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680251962756.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680251962756.png&#34;
 	width=&#34;982&#34;
 	height=&#34;585&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680251962756_hub668c80da120ede04799d85ae8f0770b_237616_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680251962756_hub668c80da120ede04799d85ae8f0770b_237616_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680251962756_hub668c80da120ede04799d85ae8f0770b_237616_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680251962756_hub668c80da120ede04799d85ae8f0770b_237616_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -238,10 +238,10 @@ $$&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;DFA是NFA的特例。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680252743732.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680252743732.png&#34;
 	width=&#34;918&#34;
 	height=&#34;407&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680252743732_hu52e92fdc66cb95fd2f0c67685207a651_114412_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680252743732_hu52e92fdc66cb95fd2f0c67685207a651_114412_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680252743732_hu52e92fdc66cb95fd2f0c67685207a651_114412_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680252743732_hu52e92fdc66cb95fd2f0c67685207a651_114412_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -260,10 +260,10 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;语法分析&lt;/strong&gt;的任务是在词法分析的基础上，&lt;u&gt;根据语言的语法规则将单词符号序列分解成各类语法单位&lt;/u&gt;，如“表达式”“语句”和“程序”等。&lt;/p&gt;
 &lt;p&gt;如果源程序中没有语法错误，语法分析后就能正确地&lt;u&gt;构造出其语法树&lt;/u&gt;；否则&lt;u&gt;指出语法错误&lt;/u&gt;，并&lt;u&gt;给出相应的诊断信息&lt;/u&gt;。&lt;/p&gt;
 &lt;p&gt;例如对&lt;code&gt;id1 := id2 + id3 * 60&lt;/code&gt;进行语法分析后形成的语法树：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680233200526.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680233200526.png&#34;
 	width=&#34;888&#34;
 	height=&#34;266&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680233200526_hub39a12f42925ee3f44c562351b5287d6_25864_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680233200526_hub39a12f42925ee3f44c562351b5287d6_25864_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680233200526_hub39a12f42925ee3f44c562351b5287d6_25864_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680233200526_hub39a12f42925ee3f44c562351b5287d6_25864_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -287,10 +287,10 @@ $$&lt;/p&gt;
 &lt;li&gt;$P$：产生式集合，&lt;/li&gt;
 &lt;li&gt;$S$：开始符号。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680255073014.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680255073014.png&#34;
 	width=&#34;990&#34;
 	height=&#34;393&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680255073014_hub03b05e46f3a2c7483ad3eeddb5269a8_262819_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680255073014_hub03b05e46f3a2c7483ad3eeddb5269a8_262819_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680255073014_hub03b05e46f3a2c7483ad3eeddb5269a8_262819_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680255073014_hub03b05e46f3a2c7483ad3eeddb5269a8_262819_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -300,10 +300,10 @@ $$&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;上下文无关文法的推导过程可用树型结构描述：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680255429332.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680255429332.png&#34;
 	width=&#34;210&#34;
 	height=&#34;346&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680255429332_hu3ef184a27e7b53ced5b1ffcd5bd7d8dd_10720_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680255429332_hu3ef184a27e7b53ced5b1ffcd5bd7d8dd_10720_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680255429332_hu3ef184a27e7b53ced5b1ffcd5bd7d8dd_10720_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680255429332_hu3ef184a27e7b53ced5b1ffcd5bd7d8dd_10720_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -468,10 +468,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>软件设计师——计算机系统</title>
-        <link>https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/</link>
+        <link>https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/</link>
         <pubDate>Fri, 24 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/</guid>
+        <guid>https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/</guid>
         <description>&lt;h1 id=&#34;计算机的基本单位&#34;&gt;计算机的基本单位&lt;/h1&gt;
 &lt;table&gt;
 &lt;tr&gt;
@@ -661,10 +661,10 @@ $$&lt;/p&gt;
 &lt;p&gt;其实（个人认为）根据补码和移码的定义，可以将补码当作特殊的移码。其bias为$2^n$。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;各种码制带符号数的范围&#34;&gt;各种码制带符号数的范围&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B8%A6%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E8%8C%83%E5%9B%B4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B8%A6%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E8%8C%83%E5%9B%B4.png&#34;
 	width=&#34;1174&#34;
 	height=&#34;273&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B8%A6%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E8%8C%83%E5%9B%B4_huf86084d3b2fa3b4510a57d1d605f45ba_75716_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B8%A6%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E8%8C%83%E5%9B%B4_huf86084d3b2fa3b4510a57d1d605f45ba_75716_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B8%A6%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E8%8C%83%E5%9B%B4_huf86084d3b2fa3b4510a57d1d605f45ba_75716_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B8%A6%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E8%8C%83%E5%9B%B4_huf86084d3b2fa3b4510a57d1d605f45ba_75716_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -746,10 +746,10 @@ $$&lt;/p&gt;
 &lt;li&gt;校验位由自身校验。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Example：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679983905932.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679983905932.png&#34;
 	width=&#34;1023&#34;
 	height=&#34;1049&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679983905932_hu8233f94300cd2978c7262586b5e1abdc_350868_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679983905932_hu8233f94300cd2978c7262586b5e1abdc_350868_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679983905932_hu8233f94300cd2978c7262586b5e1abdc_350868_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679983905932_hu8233f94300cd2978c7262586b5e1abdc_350868_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -769,10 +769,10 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;循环冗余码&#34;&gt;循环冗余码&lt;/h2&gt;
 &lt;p&gt;循环冗余校验码（Cyclic Redundancy Check，CRC）广泛应用于数据通信领域和磁介质存储系统中。它利用生成多项式为k个数据位产生个校验位来进行编码，其编码长度为k+r。CRC的代码格式为：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679825785079.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679825785079.png&#34;
 	width=&#34;613&#34;
 	height=&#34;92&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679825785079_hue59488e391052e21a77b5920f121b7a3_12188_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679825785079_hue59488e391052e21a77b5920f121b7a3_12188_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679825785079_hue59488e391052e21a77b5920f121b7a3_12188_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679825785079_hue59488e391052e21a77b5920f121b7a3_12188_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -936,10 +936,10 @@ $$&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;直接映像：主存的块与Cache块的对应关系是固定的。冲突多、关系固定。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884025087.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884025087.png&#34;
 	width=&#34;825&#34;
 	height=&#34;526&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884025087_hu5b011bac95c34a4b59523b3fc3e9bdf5_66159_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884025087_hu5b011bac95c34a4b59523b3fc3e9bdf5_66159_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884025087_hu5b011bac95c34a4b59523b3fc3e9bdf5_66159_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884025087_hu5b011bac95c34a4b59523b3fc3e9bdf5_66159_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -951,10 +951,10 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;全相联映像：允许主存的任一块调入Cache存储器的任一块。冲突少、关系不固定。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884252415.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884252415.png&#34;
 	width=&#34;730&#34;
 	height=&#34;538&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884252415_hu0e33dbcf5fa3fed2f738b321711ef11e_91734_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884252415_hu0e33dbcf5fa3fed2f738b321711ef11e_91734_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884252415_hu0e33dbcf5fa3fed2f738b321711ef11e_91734_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884252415_hu0e33dbcf5fa3fed2f738b321711ef11e_91734_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -978,10 +978,10 @@ $$&lt;/p&gt;
 &lt;p&gt;中断是一种非常重要的技术，&lt;u&gt;输入输出&lt;/u&gt;设备和&lt;u&gt;主机交换数据&lt;/u&gt;、&lt;u&gt;分时操作&lt;/u&gt;、&lt;u&gt;实时系统&lt;/u&gt;、&lt;u&gt;计算机网络&lt;/u&gt;和&lt;u&gt;分布式计算机系统&lt;/u&gt;中都要用到这种技术。为了提高响应中断的速度，通常把所有中断服务程序的入口地址（或称为中断向量）汇集为中断向量表。&lt;/p&gt;
 &lt;h2 id=&#34;输入输出控制方式&#34;&gt;输入输出控制方式&lt;/h2&gt;
 &lt;p&gt;程序查询方式（程序直接控制方式）：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888001780.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888001780.png&#34;
 	width=&#34;754&#34;
 	height=&#34;1174&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888001780_hud6ebe6012cde16108d1ee611e4248e31_240258_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888001780_hud6ebe6012cde16108d1ee611e4248e31_240258_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888001780_hud6ebe6012cde16108d1ee611e4248e31_240258_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888001780_hud6ebe6012cde16108d1ee611e4248e31_240258_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -996,10 +996,10 @@ $$&lt;/p&gt;
 &lt;li&gt;由CPU将数放入内存。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;中断驱动方式：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888578058.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888578058.png&#34;
 	width=&#34;787&#34;
 	height=&#34;1134&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888578058_huafad4d8f462045fe6ed8d3f6574e2433_264777_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888578058_huafad4d8f462045fe6ed8d3f6574e2433_264777_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888578058_huafad4d8f462045fe6ed8d3f6574e2433_264777_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888578058_huafad4d8f462045fe6ed8d3f6574e2433_264777_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1016,10 +1016,10 @@ $$&lt;/p&gt;
 &lt;li&gt;由CPU将数据放入内存。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;DMA方式（直接存储器存储方式）：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888972074.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888972074.png&#34;
 	width=&#34;816&#34;
 	height=&#34;723&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888972074_hu524534b10c6d25022b5676913927ee92_146843_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888972074_hu524534b10c6d25022b5676913927ee92_146843_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888972074_hu524534b10c6d25022b5676913927ee92_146843_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888972074_hu524534b10c6d25022b5676913927ee92_146843_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1139,10 +1139,10 @@ $$&lt;/p&gt;
 &lt;p&gt;加密可以阻止被动攻击，认证可以阻止主动攻击（不可以处理被动攻击）。&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;系统可靠度&#34;&gt;系统可靠度&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E4%B8%B2%E8%81%94%E7%B3%BB%E7%BB%9F.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E4%B8%B2%E8%81%94%E7%B3%BB%E7%BB%9F.png&#34;
 	width=&#34;1157&#34;
 	height=&#34;400&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E4%B8%B2%E8%81%94%E7%B3%BB%E7%BB%9F_huc533c9ebe7073a641e0c4f0ca26fe76d_129377_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E4%B8%B2%E8%81%94%E7%B3%BB%E7%BB%9F_huc533c9ebe7073a641e0c4f0ca26fe76d_129377_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E4%B8%B2%E8%81%94%E7%B3%BB%E7%BB%9F_huc533c9ebe7073a641e0c4f0ca26fe76d_129377_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E4%B8%B2%E8%81%94%E7%B3%BB%E7%BB%9F_huc533c9ebe7073a641e0c4f0ca26fe76d_129377_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1151,10 +1151,10 @@ $$&lt;/p&gt;
 		data-flex-basis=&#34;694px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B9%B6%E8%81%94%E7%B3%BB%E7%BB%9F.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B9%B6%E8%81%94%E7%B3%BB%E7%BB%9F.png&#34;
 	width=&#34;1133&#34;
 	height=&#34;376&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B9%B6%E8%81%94%E7%B3%BB%E7%BB%9F_hu0151f1bd7a524d241456bee3273c718e_125234_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B9%B6%E8%81%94%E7%B3%BB%E7%BB%9F_hu0151f1bd7a524d241456bee3273c718e_125234_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B9%B6%E8%81%94%E7%B3%BB%E7%BB%9F_hu0151f1bd7a524d241456bee3273c718e_125234_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B9%B6%E8%81%94%E7%B3%BB%E7%BB%9F_hu0151f1bd7a524d241456bee3273c718e_125234_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1167,10 +1167,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>瑞吉外卖项目实战</title>
-        <link>https://www.linner.asia/p/%E7%91%9E%E5%90%89%E5%A4%96%E5%8D%96%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/</link>
+        <link>https://blog.linner.asia/p/%E7%91%9E%E5%90%89%E5%A4%96%E5%8D%96%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/</link>
         <pubDate>Tue, 21 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/%E7%91%9E%E5%90%89%E5%A4%96%E5%8D%96%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/</guid>
+        <guid>https://blog.linner.asia/p/%E7%91%9E%E5%90%89%E5%A4%96%E5%8D%96%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/</guid>
         <description>&lt;p&gt;项目笔记仓库：&lt;a class=&#34;link&#34; href=&#34;https://gitee.com/linner_cheng/reggie_note&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://gitee.com/linner_cheng/reggie_note&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;B站视频：&lt;a class=&#34;link&#34; href=&#34;https://www.bilibili.com/video/BV13a411q753/?p=190&amp;amp;spm_id_from=333.1007.top_right_bar_window_history.content.click&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1179,10 +1179,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>Redis基础</title>
-        <link>https://www.linner.asia/p/redis%E5%9F%BA%E7%A1%80/</link>
+        <link>https://blog.linner.asia/p/redis%E5%9F%BA%E7%A1%80/</link>
         <pubDate>Sat, 11 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/redis%E5%9F%BA%E7%A1%80/</guid>
+        <guid>https://blog.linner.asia/p/redis%E5%9F%BA%E7%A1%80/</guid>
         <description>&lt;h1 id=&#34;数据类型&#34;&gt;数据类型&lt;/h1&gt;
 &lt;p&gt;Redis存储的是key-value结构的数据，其中key是字符串类型，value有5种常用的数据类型：&lt;/p&gt;
 &lt;ul&gt;
@@ -1607,10 +1607,10 @@ OK
         </item>
         <item>
         <title>MyBatisPlus</title>
-        <link>https://www.linner.asia/p/mybatisplus/</link>
+        <link>https://blog.linner.asia/p/mybatisplus/</link>
         <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/mybatisplus/</guid>
+        <guid>https://blog.linner.asia/p/mybatisplus/</guid>
         <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;MybatisPlus（简称MP）是基于MyBatis框架基础上开发的增强型工具（依然可以使用MyBatis里的工具），旨在简化开发、提供效率。更多详情请访问&lt;a class=&#34;link&#34; href=&#34;https://mp.baomidou.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;MyBatisPlus官网&lt;/a&gt;（官网有两个地址，&lt;a class=&#34;link&#34; href=&#34;https://mp.baomidou.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -1659,10 +1659,10 @@ OK
         </item>
         <item>
         <title>Maven 高级</title>
-        <link>https://www.linner.asia/p/maven-%E9%AB%98%E7%BA%A7/</link>
+        <link>https://blog.linner.asia/p/maven-%E9%AB%98%E7%BA%A7/</link>
         <pubDate>Mon, 27 Feb 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/maven-%E9%AB%98%E7%BA%A7/</guid>
+        <guid>https://blog.linner.asia/p/maven-%E9%AB%98%E7%BA%A7/</guid>
         <description>&lt;h1 id=&#34;多模块开发&#34;&gt;多模块开发&lt;/h1&gt;
 &lt;p&gt;多模块开发有以下两种：&lt;/p&gt;
 &lt;ul&gt;
@@ -2099,10 +2099,10 @@ jdbc.password=root
         </item>
         <item>
         <title>SpringBoot 基础</title>
-        <link>https://www.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/</link>
+        <link>https://blog.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/</link>
         <pubDate>Mon, 20 Feb 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/</guid>
+        <guid>https://blog.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/</guid>
         <description>&lt;h1 id=&#34;springboot-简介&#34;&gt;SpringBoot 简介&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;SpringBoot&lt;/code&gt; 是由 &lt;code&gt;Pivotal&lt;/code&gt; 团队提供的全新框架，其设计目的是用来简化 &lt;code&gt;Spring&lt;/code&gt; 应用的初始搭建以及开发过程。&lt;/p&gt;
 &lt;p&gt;SpringBoot开发分为如下几步：&lt;/p&gt;
@@ -2114,10 +2114,10 @@ jdbc.password=root
 &lt;/ul&gt;
 &lt;h1 id=&#34;项目创建及配置&#34;&gt;项目创建及配置&lt;/h1&gt;
 &lt;h2 id=&#34;创建项目&#34;&gt;创建项目&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677287557076.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677287557076.png&#34;
 	width=&#34;1572&#34;
 	height=&#34;1265&#34;
-	srcset=&#34;https://www.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677287557076_hucd4aac900581b1995c287cf4f4416d47_189645_480x0_resize_box_3.png 480w, https://www.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677287557076_hucd4aac900581b1995c287cf4f4416d47_189645_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677287557076_hucd4aac900581b1995c287cf4f4416d47_189645_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677287557076_hucd4aac900581b1995c287cf4f4416d47_189645_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2126,10 +2126,10 @@ jdbc.password=root
 		data-flex-basis=&#34;298px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677239012598.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677239012598.png&#34;
 	width=&#34;1573&#34;
 	height=&#34;1269&#34;
-	srcset=&#34;https://www.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677239012598_hu287bfba592488efe9276e55c8851be90_134021_480x0_resize_box_3.png 480w, https://www.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677239012598_hu287bfba592488efe9276e55c8851be90_134021_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677239012598_hu287bfba592488efe9276e55c8851be90_134021_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677239012598_hu287bfba592488efe9276e55c8851be90_134021_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2245,10 +2245,10 @@ server.servlet.context-path=/
 &lt;li&gt;&lt;code&gt;application.yaml&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Idea可以快速地编辑配置文件：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677291010274.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677291010274.png&#34;
 	width=&#34;481&#34;
 	height=&#34;581&#34;
-	srcset=&#34;https://www.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677291010274_hu6c7a33389c12226ae70308dde30125e2_37781_480x0_resize_box_3.png 480w, https://www.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677291010274_hu6c7a33389c12226ae70308dde30125e2_37781_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677291010274_hu6c7a33389c12226ae70308dde30125e2_37781_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677291010274_hu6c7a33389c12226ae70308dde30125e2_37781_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2257,10 +2257,10 @@ server.servlet.context-path=/
 		data-flex-basis=&#34;198px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677291147353.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677291147353.png&#34;
 	width=&#34;1651&#34;
 	height=&#34;389&#34;
-	srcset=&#34;https://www.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677291147353_hu621d83afb44f065ed2ec5279b956c7a2_60719_480x0_resize_box_3.png 480w, https://www.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677291147353_hu621d83afb44f065ed2ec5279b956c7a2_60719_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677291147353_hu621d83afb44f065ed2ec5279b956c7a2_60719_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677291147353_hu621d83afb44f065ed2ec5279b956c7a2_60719_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2434,10 +2434,10 @@ server.servlet.context-path=/
 &lt;p&gt;命令行设置的端口号优先级高于配置文件。
 &lt;a class=&#34;link&#34; href=&#34;https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;SpringBoot官网&lt;/a&gt;已经对配置的优先级进行了说明：
-&lt;img src=&#34;https://www.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/image-20210917193910191.png&#34;
+&lt;img src=&#34;https://blog.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/image-20210917193910191.png&#34;
 	width=&#34;1680&#34;
 	height=&#34;792&#34;
-	srcset=&#34;https://www.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/image-20210917193910191_hub0a1d35a0358d95a9acb0998fc4d2a1d_228625_480x0_resize_box_3.png 480w, https://www.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/image-20210917193910191_hub0a1d35a0358d95a9acb0998fc4d2a1d_228625_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/image-20210917193910191_hub0a1d35a0358d95a9acb0998fc4d2a1d_228625_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/image-20210917193910191_hub0a1d35a0358d95a9acb0998fc4d2a1d_228625_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2516,10 +2516,10 @@ server.servlet.context-path=/
 &lt;p&gt;导入依赖：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;在创建项目时，通过Spring Initializr导入依赖：
-&lt;img src=&#34;https://www.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677302021447.png&#34;
+&lt;img src=&#34;https://blog.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677302021447.png&#34;
 	width=&#34;1575&#34;
 	height=&#34;1466&#34;
-	srcset=&#34;https://www.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677302021447_hub274beed4d034c3ddb809f27d46dc304_154471_480x0_resize_box_3.png 480w, https://www.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677302021447_hub274beed4d034c3ddb809f27d46dc304_154471_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677302021447_hub274beed4d034c3ddb809f27d46dc304_154471_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677302021447_hub274beed4d034c3ddb809f27d46dc304_154471_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2611,10 +2611,10 @@ server.servlet.context-path=/
         </item>
         <item>
         <title>SpringMVC 基础</title>
-        <link>https://www.linner.asia/p/springmvc-%E5%9F%BA%E7%A1%80/</link>
+        <link>https://blog.linner.asia/p/springmvc-%E5%9F%BA%E7%A1%80/</link>
         <pubDate>Mon, 20 Feb 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/springmvc-%E5%9F%BA%E7%A1%80/</guid>
+        <guid>https://blog.linner.asia/p/springmvc-%E5%9F%BA%E7%A1%80/</guid>
         <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
 &lt;p&gt;SpringMVC是Spring下的一个用于Web表现层开发的技术。相比Servlet，SpringMVC更加高效快捷。&lt;/p&gt;
 &lt;p&gt;SpringMVC流程如下：&lt;/p&gt;
@@ -2694,10 +2694,10 @@ URL。&lt;/li&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;创建基础的Maven-Archetype-Webapp项目。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/springmvc-%E5%9F%BA%E7%A1%80/1676947539616.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/springmvc-%E5%9F%BA%E7%A1%80/1676947539616.png&#34;
 	width=&#34;1599&#34;
 	height=&#34;589&#34;
-	srcset=&#34;https://www.linner.asia/p/springmvc-%E5%9F%BA%E7%A1%80/1676947539616_hub90bb126a144b86d4350b3a4bbfccae0_111454_480x0_resize_box_3.png 480w, https://www.linner.asia/p/springmvc-%E5%9F%BA%E7%A1%80/1676947539616_hub90bb126a144b86d4350b3a4bbfccae0_111454_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/springmvc-%E5%9F%BA%E7%A1%80/1676947539616_hub90bb126a144b86d4350b3a4bbfccae0_111454_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/springmvc-%E5%9F%BA%E7%A1%80/1676947539616_hub90bb126a144b86d4350b3a4bbfccae0_111454_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3374,10 +3374,10 @@ jdbc.password=root
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h1 id=&#34;拦截器&#34;&gt;拦截器&lt;/h1&gt;
 &lt;p&gt;拦截器（Interceptor）是一种动态拦截方法调用的机制，在SpringMVC中动态拦截控制器方法的执行。拦截器可以在指定的发那个发调用前后执行预先设定的代码，可以阻止原始方法的执行。拦截器和过滤器在作用和执行顺序上很相似。它们的关系如下图所示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/springmvc-%E5%9F%BA%E7%A1%80/1630676903190.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/springmvc-%E5%9F%BA%E7%A1%80/1630676903190.png&#34;
 	width=&#34;1221&#34;
 	height=&#34;390&#34;
-	srcset=&#34;https://www.linner.asia/p/springmvc-%E5%9F%BA%E7%A1%80/1630676903190_hu919979d0f5abd4d5e98bfc64e1b718cb_118908_480x0_resize_box_3.png 480w, https://www.linner.asia/p/springmvc-%E5%9F%BA%E7%A1%80/1630676903190_hu919979d0f5abd4d5e98bfc64e1b718cb_118908_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/springmvc-%E5%9F%BA%E7%A1%80/1630676903190_hu919979d0f5abd4d5e98bfc64e1b718cb_118908_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/springmvc-%E5%9F%BA%E7%A1%80/1630676903190_hu919979d0f5abd4d5e98bfc64e1b718cb_118908_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3482,10 +3482,10 @@ afterCompletion...
         </item>
         <item>
         <title>Java 进阶</title>
-        <link>https://www.linner.asia/p/java-%E8%BF%9B%E9%98%B6/</link>
+        <link>https://blog.linner.asia/p/java-%E8%BF%9B%E9%98%B6/</link>
         <pubDate>Tue, 14 Feb 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/java-%E8%BF%9B%E9%98%B6/</guid>
+        <guid>https://blog.linner.asia/p/java-%E8%BF%9B%E9%98%B6/</guid>
         <description>&lt;h1 id=&#34;反射&#34;&gt;反射&lt;/h1&gt;
 &lt;p&gt;反射是Java中一种用于动态获取类或对象的信息以及动态调用对象方法的功能机制。在运行状态中，对于任意一个类，使用反射可以获取这个类的所有属性和方法；对于任意一个对象，使用反射能够调用它的任意属性和方法。利用反射可以无视对象的修饰符，调用类里面的内容。利用反射可以跟配置文件结合起来使用，把要创建的对象信息和方法写在配置文件中。&lt;/p&gt;
 &lt;p&gt;使用反射包含以下步骤：&lt;/p&gt;
@@ -4094,10 +4094,10 @@ Class clazz &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; student&lt;
         </item>
         <item>
         <title>Spring Framework</title>
-        <link>https://www.linner.asia/p/spring-framework/</link>
+        <link>https://blog.linner.asia/p/spring-framework/</link>
         <pubDate>Sun, 16 Oct 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/spring-framework/</guid>
+        <guid>https://blog.linner.asia/p/spring-framework/</guid>
         <description>&lt;h1 id=&#34;spring-framewor-简介&#34;&gt;Spring Framewor 简介&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Spring5.0已经全面支持JDK8，建议JDK使用1.8版本。&lt;/p&gt;
@@ -6344,10 +6344,10 @@ jdbc.password=root
         </item>
         <item>
         <title>Ajax 前后端交互</title>
-        <link>https://www.linner.asia/p/ajax-%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/</link>
+        <link>https://blog.linner.asia/p/ajax-%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/</link>
         <pubDate>Sun, 25 Sep 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/ajax-%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/</guid>
+        <guid>https://blog.linner.asia/p/ajax-%E5%89%8D%E5%90%8E%E7%AB%AF%E4%BA%A4%E4%BA%92/</guid>
         <description>&lt;h1 id=&#34;ajax&#34;&gt;Ajax&lt;/h1&gt;
 &lt;p&gt;&lt;code&gt;AJAX&lt;/code&gt; (Asynchronous JavaScript And XML)，其含义为异步的 JavaScript 和 XML。其中 &lt;code&gt;JavaScript&lt;/code&gt; 表明该技术和前端相关；&lt;code&gt;XML&lt;/code&gt; 是指以此进行数据交换。&lt;/p&gt;
 &lt;p&gt;AJAX 作用有以下两方面：&lt;/p&gt;
@@ -6676,10 +6676,10 @@ xhttp&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34
         </item>
         <item>
         <title>Filter 过滤器</title>
-        <link>https://www.linner.asia/p/filter-%E8%BF%87%E6%BB%A4%E5%99%A8/</link>
+        <link>https://blog.linner.asia/p/filter-%E8%BF%87%E6%BB%A4%E5%99%A8/</link>
         <pubDate>Sun, 25 Sep 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/filter-%E8%BF%87%E6%BB%A4%E5%99%A8/</guid>
+        <guid>https://blog.linner.asia/p/filter-%E8%BF%87%E6%BB%A4%E5%99%A8/</guid>
         <description>&lt;h1 id=&#34;filter-概述&#34;&gt;Filter 概述&lt;/h1&gt;
 &lt;p&gt;Filter 表示过滤器，是 JavaWeb 三大组件(Servlet、Filter、Listener)之一。&lt;/p&gt;
 &lt;p&gt;过滤器可以把对资源的请求拦截下来，从而实现一些特殊的功能。设置 Filter 会在访问资源之前会先经过 Filter，将资源拦截，从而实现权限控制、统一编码处理、敏感字符处理等功能。&lt;/p&gt;
@@ -6853,10 +6853,10 @@ xhttp&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34
         </item>
         <item>
         <title>会话跟踪技术 —— Cookie 和 Session</title>
-        <link>https://www.linner.asia/p/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF-cookie-%E5%92%8C-session/</link>
+        <link>https://blog.linner.asia/p/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF-cookie-%E5%92%8C-session/</link>
         <pubDate>Fri, 23 Sep 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF-cookie-%E5%92%8C-session/</guid>
+        <guid>https://blog.linner.asia/p/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF-cookie-%E5%92%8C-session/</guid>
         <description>&lt;h1 id=&#34;会话跟踪技术&#34;&gt;会话跟踪技术&lt;/h1&gt;
 &lt;p&gt;会话是指一个终端用户与交互系统进行通讯的过程，例如从浏览器发出请求到服务端响应数据给前端这个过程即为一个会话。&lt;/p&gt;
 &lt;p&gt;会话跟踪指的是一种维护浏览器状态的方法。服务器会收到多个请求，这多个请求可能来自多个浏览器。服务器需要识别多次请求是否来自于同一浏览器，以便在同一次会话的多次请求间共享数据。&lt;/p&gt;
@@ -7226,10 +7226,10 @@ Session是存储在服务器端。&lt;/li&gt;
         </item>
         <item>
         <title>Ubuntu zsh 中文支持</title>
-        <link>https://www.linner.asia/p/ubuntu-zsh-%E4%B8%AD%E6%96%87%E6%94%AF%E6%8C%81/</link>
+        <link>https://blog.linner.asia/p/ubuntu-zsh-%E4%B8%AD%E6%96%87%E6%94%AF%E6%8C%81/</link>
         <pubDate>Tue, 13 Sep 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/ubuntu-zsh-%E4%B8%AD%E6%96%87%E6%94%AF%E6%8C%81/</guid>
+        <guid>https://blog.linner.asia/p/ubuntu-zsh-%E4%B8%AD%E6%96%87%E6%94%AF%E6%8C%81/</guid>
         <description>&lt;p&gt;安装中文支持：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;apt-get install language-pack-zh-hans -y
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;查看系统语言包：&lt;/p&gt;
@@ -7243,17 +7243,17 @@ export LANG&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;zh_CN.UTF-8
         </item>
         <item>
         <title>HttpServlet 与 Tomcat</title>
-        <link>https://www.linner.asia/p/httpservlet-%E4%B8%8E-tomcat/</link>
+        <link>https://blog.linner.asia/p/httpservlet-%E4%B8%8E-tomcat/</link>
         <pubDate>Mon, 12 Sep 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/httpservlet-%E4%B8%8E-tomcat/</guid>
+        <guid>https://blog.linner.asia/p/httpservlet-%E4%B8%8E-tomcat/</guid>
         <description>&lt;h1 id=&#34;httpservlet-简介&#34;&gt;HttpServlet 简介&lt;/h1&gt;
 &lt;p&gt;HttpServlet是对HTTP协议封装的Servlet实现类。&lt;/p&gt;
 &lt;p&gt;Servlet的体系结构：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/httpservlet-%E4%B8%8E-tomcat/1627240593506.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/httpservlet-%E4%B8%8E-tomcat/1627240593506.png&#34;
 	width=&#34;970&#34;
 	height=&#34;294&#34;
-	srcset=&#34;https://www.linner.asia/p/httpservlet-%E4%B8%8E-tomcat/1627240593506_huae8b169d4b81df926962616ecca12a18_76392_480x0_resize_box_3.png 480w, https://www.linner.asia/p/httpservlet-%E4%B8%8E-tomcat/1627240593506_huae8b169d4b81df926962616ecca12a18_76392_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/httpservlet-%E4%B8%8E-tomcat/1627240593506_huae8b169d4b81df926962616ecca12a18_76392_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/httpservlet-%E4%B8%8E-tomcat/1627240593506_huae8b169d4b81df926962616ecca12a18_76392_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -7434,10 +7434,10 @@ export LANG&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;zh_CN.UTF-8
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;request-和-response-继承体系&#34;&gt;Request 和 Response 继承体系&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;HttpServletRequest&lt;/code&gt;和&lt;code&gt;ServletRequest&lt;/code&gt;之间是继承关系，&lt;code&gt;HttpServletResponse&lt;/code&gt;和&lt;code&gt;ServletResponse&lt;/code&gt;是继承关系。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Request&lt;/code&gt;之间的继承关系如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/httpservlet-%E4%B8%8E-tomcat/1628740441008.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/httpservlet-%E4%B8%8E-tomcat/1628740441008.png&#34;
 	width=&#34;1183&#34;
 	height=&#34;398&#34;
-	srcset=&#34;https://www.linner.asia/p/httpservlet-%E4%B8%8E-tomcat/1628740441008_hu61c87b102641e7760d7644dcb2a503fb_106457_480x0_resize_box_3.png 480w, https://www.linner.asia/p/httpservlet-%E4%B8%8E-tomcat/1628740441008_hu61c87b102641e7760d7644dcb2a503fb_106457_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/httpservlet-%E4%B8%8E-tomcat/1628740441008_hu61c87b102641e7760d7644dcb2a503fb_106457_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/httpservlet-%E4%B8%8E-tomcat/1628740441008_hu61c87b102641e7760d7644dcb2a503fb_106457_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -7447,10 +7447,10 @@ export LANG&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;zh_CN.UTF-8
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;Response&lt;/code&gt;之间的继承关系如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/httpservlet-%E4%B8%8E-tomcat/1628857761317.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/httpservlet-%E4%B8%8E-tomcat/1628857761317.png&#34;
 	width=&#34;831&#34;
 	height=&#34;263&#34;
-	srcset=&#34;https://www.linner.asia/p/httpservlet-%E4%B8%8E-tomcat/1628857761317_hu2fae8b067313d9317800a59fe5cea4a1_88068_480x0_resize_box_3.png 480w, https://www.linner.asia/p/httpservlet-%E4%B8%8E-tomcat/1628857761317_hu2fae8b067313d9317800a59fe5cea4a1_88068_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/httpservlet-%E4%B8%8E-tomcat/1628857761317_hu2fae8b067313d9317800a59fe5cea4a1_88068_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/httpservlet-%E4%B8%8E-tomcat/1628857761317_hu2fae8b067313d9317800a59fe5cea4a1_88068_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8501,10 +8501,10 @@ URL编码：&lt;/p&gt;
         </item>
         <item>
         <title>Servlet 与 Tomcat</title>
-        <link>https://www.linner.asia/p/servlet-%E4%B8%8E-tomcat/</link>
+        <link>https://blog.linner.asia/p/servlet-%E4%B8%8E-tomcat/</link>
         <pubDate>Mon, 12 Sep 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/servlet-%E4%B8%8E-tomcat/</guid>
+        <guid>https://blog.linner.asia/p/servlet-%E4%B8%8E-tomcat/</guid>
         <description>&lt;h1 id=&#34;servlet-简介&#34;&gt;Servlet 简介&lt;/h1&gt;
 &lt;p&gt;Java Servlet 是运行在 Web 服务器或应用服务器上的程序，它是作为来自 Web 浏览器或其他 HTTP 客户端的请求和 HTTP 服务器上的数据库或应用程序之间的中间层。&lt;/p&gt;
 &lt;hr&gt;
@@ -8835,10 +8835,10 @@ URL编码：&lt;/p&gt;
         </item>
         <item>
         <title>Tomcat</title>
-        <link>https://www.linner.asia/p/tomcat/</link>
+        <link>https://blog.linner.asia/p/tomcat/</link>
         <pubDate>Sat, 10 Sep 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/tomcat/</guid>
+        <guid>https://blog.linner.asia/p/tomcat/</guid>
         <description>&lt;h1 id=&#34;tomcat基本使用&#34;&gt;Tomcat基本使用&lt;/h1&gt;
 &lt;h2 id=&#34;tomcat安装&#34;&gt;Tomcat安装&lt;/h2&gt;
 &lt;p&gt;访问&lt;a class=&#34;link&#34; href=&#34;https://tomcat.apache.org/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -8921,10 +8921,10 @@ URL编码：&lt;/p&gt;
 &lt;li&gt;创建Maven项目&lt;/li&gt;
 &lt;li&gt;&lt;mark&gt;选择使用Web项目骨架&lt;/mark&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/tomcat/1627227650406.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/tomcat/1627227650406.png&#34;
 	width=&#34;998&#34;
 	height=&#34;789&#34;
-	srcset=&#34;https://www.linner.asia/p/tomcat/1627227650406_huf4f8cf0db624add1c763ab2bf77489a7_480515_480x0_resize_box_3.png 480w, https://www.linner.asia/p/tomcat/1627227650406_huf4f8cf0db624add1c763ab2bf77489a7_480515_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/tomcat/1627227650406_huf4f8cf0db624add1c763ab2bf77489a7_480515_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/tomcat/1627227650406_huf4f8cf0db624add1c763ab2bf77489a7_480515_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8942,10 +8942,10 @@ URL编码：&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;mark&gt;删除pom.xml中多余内容&lt;/mark&gt;
-&lt;img src=&#34;https://www.linner.asia/p/tomcat/1627228584625.png&#34;
+&lt;img src=&#34;https://blog.linner.asia/p/tomcat/1627228584625.png&#34;
 	width=&#34;1255&#34;
 	height=&#34;550&#34;
-	srcset=&#34;https://www.linner.asia/p/tomcat/1627228584625_hua75347db8dd8a49e943e8d807bb75211_213215_480x0_resize_box_3.png 480w, https://www.linner.asia/p/tomcat/1627228584625_hua75347db8dd8a49e943e8d807bb75211_213215_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/tomcat/1627228584625_hua75347db8dd8a49e943e8d807bb75211_213215_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/tomcat/1627228584625_hua75347db8dd8a49e943e8d807bb75211_213215_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -8986,10 +8986,10 @@ URL编码：&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/tomcat/1627204022604.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/tomcat/1627204022604.png&#34;
 	width=&#34;1603&#34;
 	height=&#34;556&#34;
-	srcset=&#34;https://www.linner.asia/p/tomcat/1627204022604_hu32242d5545b5e672b8f75a7e3f4bf225_334035_480x0_resize_box_3.png 480w, https://www.linner.asia/p/tomcat/1627204022604_hu32242d5545b5e672b8f75a7e3f4bf225_334035_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/tomcat/1627204022604_hu32242d5545b5e672b8f75a7e3f4bf225_334035_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/tomcat/1627204022604_hu32242d5545b5e672b8f75a7e3f4bf225_334035_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -9025,10 +9025,10 @@ URL编码：&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;文件&amp;ndash;&amp;gt;项目结构&amp;ndash;&amp;gt;Facet中按&lt;code&gt;+&lt;/code&gt;然后选择&lt;code&gt;Web&lt;/code&gt;，选择当前项目&lt;/p&gt;
 &lt;p&gt;修改webapp目录，并补齐Maven Web项目缺失&lt;code&gt;WEB-INF/web.xml&lt;/code&gt;的目录结构，即可完成构建&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/tomcat/1627204076090.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/tomcat/1627204076090.png&#34;
 	width=&#34;1686&#34;
 	height=&#34;533&#34;
-	srcset=&#34;https://www.linner.asia/p/tomcat/1627204076090_huc311bbecdc1eb62664bcca918cf611b5_364413_480x0_resize_box_3.png 480w, https://www.linner.asia/p/tomcat/1627204076090_huc311bbecdc1eb62664bcca918cf611b5_364413_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/tomcat/1627204076090_huc311bbecdc1eb62664bcca918cf611b5_364413_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/tomcat/1627204076090_huc311bbecdc1eb62664bcca918cf611b5_364413_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -9044,10 +9044,10 @@ URL编码：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;右上角 编辑运行/调试配置 对话框&amp;ndash;&amp;gt;编辑配置&amp;ndash;&amp;gt;&lt;code&gt;+&lt;/code&gt;&amp;ndash;&amp;gt;Tomcat服务器&amp;ndash;&amp;gt;&lt;code&gt;本地&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/tomcat/1627229992900.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/tomcat/1627229992900.png&#34;
 	width=&#34;1115&#34;
 	height=&#34;686&#34;
-	srcset=&#34;https://www.linner.asia/p/tomcat/1627229992900_hu5f8cc3e47912345b768c91098cf41ba7_135158_480x0_resize_box_3.png 480w, https://www.linner.asia/p/tomcat/1627229992900_hu5f8cc3e47912345b768c91098cf41ba7_135158_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/tomcat/1627229992900_hu5f8cc3e47912345b768c91098cf41ba7_135158_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/tomcat/1627229992900_hu5f8cc3e47912345b768c91098cf41ba7_135158_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -9059,10 +9059,10 @@ URL编码：&lt;/p&gt;
 &lt;ol start=&#34;2&#34;&gt;
 &lt;li&gt;指定本地Tomcat的具体路径&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/tomcat/1627230313062.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/tomcat/1627230313062.png&#34;
 	width=&#34;1347&#34;
 	height=&#34;866&#34;
-	srcset=&#34;https://www.linner.asia/p/tomcat/1627230313062_hu6d16bb4ca6689d3aaef58c322ee2322a_325387_480x0_resize_box_3.png 480w, https://www.linner.asia/p/tomcat/1627230313062_hu6d16bb4ca6689d3aaef58c322ee2322a_325387_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/tomcat/1627230313062_hu6d16bb4ca6689d3aaef58c322ee2322a_325387_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/tomcat/1627230313062_hu6d16bb4ca6689d3aaef58c322ee2322a_325387_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -9074,10 +9074,10 @@ URL编码：&lt;/p&gt;
 &lt;ol start=&#34;3&#34;&gt;
 &lt;li&gt;将开发项目部署项目到Tomcat中&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/tomcat/1627230913259.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/tomcat/1627230913259.png&#34;
 	width=&#34;877&#34;
 	height=&#34;775&#34;
-	srcset=&#34;https://www.linner.asia/p/tomcat/1627230913259_hu1e86ffc5547b033aa40d7c2629e2f38b_147832_480x0_resize_box_3.png 480w, https://www.linner.asia/p/tomcat/1627230913259_hu1e86ffc5547b033aa40d7c2629e2f38b_147832_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/tomcat/1627230913259_hu1e86ffc5547b033aa40d7c2629e2f38b_147832_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/tomcat/1627230913259_hu1e86ffc5547b033aa40d7c2629e2f38b_147832_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -9096,10 +9096,10 @@ URL编码：&lt;/p&gt;
 &lt;p&gt;war exploded模式部署成功后，Tomcat的webapps目录下没有，而使用的是项目的target目录下的内容进行部署&lt;/p&gt;
 &lt;p&gt;建议选war模式进行部署，更符合项目部署的实际情况&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/tomcat/1627205657117.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/tomcat/1627205657117.png&#34;
 	width=&#34;1591&#34;
 	height=&#34;625&#34;
-	srcset=&#34;https://www.linner.asia/p/tomcat/1627205657117_hufe7637abc0a2ee946e7d9e2394f50189_323790_480x0_resize_box_3.png 480w, https://www.linner.asia/p/tomcat/1627205657117_hufe7637abc0a2ee946e7d9e2394f50189_323790_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/tomcat/1627205657117_hufe7637abc0a2ee946e7d9e2394f50189_323790_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/tomcat/1627205657117_hufe7637abc0a2ee946e7d9e2394f50189_323790_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -9134,10 +9134,10 @@ URL编码：&lt;/p&gt;
         </item>
         <item>
         <title>MyBatis</title>
-        <link>https://www.linner.asia/p/mybatis/</link>
+        <link>https://blog.linner.asia/p/mybatis/</link>
         <pubDate>Tue, 06 Sep 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/mybatis/</guid>
+        <guid>https://blog.linner.asia/p/mybatis/</guid>
         <description>&lt;h1 id=&#34;mybatis-介绍&#34;&gt;MyBatis 介绍&lt;/h1&gt;
 &lt;p&gt;MyBatis 是一款优秀的持久层框架，用于简化 JDBC 开发。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -9944,10 +9944,10 @@ User &lt;span style=&#34;color:#a6e22e&#34;&gt;selectById&lt;/span&gt;&lt;span s
         </item>
         <item>
         <title>关于</title>
-        <link>https://www.linner.asia/%E5%85%B3%E4%BA%8E/</link>
+        <link>https://blog.linner.asia/%E5%85%B3%E4%BA%8E/</link>
         <pubDate>Fri, 02 Sep 2022 16:04:59 +0000</pubDate>
         
-        <guid>https://www.linner.asia/%E5%85%B3%E4%BA%8E/</guid>
+        <guid>https://blog.linner.asia/%E5%85%B3%E4%BA%8E/</guid>
         <description>&lt;!-- &lt;div style=&#34;display:flex;margin-bottmp:20px;justify-content: space-between;align-items: flex-end;&#34;&gt;&lt;span id=&#34;profilePhoto&#34; style=&#34;border-radius: 50%;margin-left:3%;background-image:url(&#39;https://avatars.githubusercontent.com/u/77706232?v=4&#39;);width:120px;height:120px;background-size:cover;&#34;&gt;&lt;/span&gt;&lt;span style=&#34;margin-right:20px;&#34;&gt;坐标：广东&lt;/span&gt;&lt;/div&gt;
 
 --- --&gt;
@@ -9961,10 +9961,10 @@ User &lt;span style=&#34;color:#a6e22e&#34;&gt;selectById&lt;/span&gt;&lt;span s
         </item>
         <item>
         <title>Druid 数据库连接池</title>
-        <link>https://www.linner.asia/p/druid-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/</link>
+        <link>https://blog.linner.asia/p/druid-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/</link>
         <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/druid-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/</guid>
+        <guid>https://blog.linner.asia/p/druid-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/</guid>
         <description>&lt;h1 id=&#34;数据库连接池&#34;&gt;数据库连接池&lt;/h1&gt;
 &lt;p&gt;数据库连接池是个容器, 负责分配, 管理数据库连接 (Connection).&lt;/p&gt;
 &lt;p&gt;数据库连接池允许应用程序重复使用一个现有的数据库连接, 而不是再重新建立一个. 从而减少资源浪费.&lt;/p&gt;
@@ -10375,10 +10375,10 @@ prop&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;
         </item>
         <item>
         <title>Maven</title>
-        <link>https://www.linner.asia/p/maven/</link>
+        <link>https://blog.linner.asia/p/maven/</link>
         <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/maven/</guid>
+        <guid>https://blog.linner.asia/p/maven/</guid>
         <description>&lt;h1 id=&#34;maven-简介&#34;&gt;Maven 简介&lt;/h1&gt;
 &lt;p&gt;Apache Maven是专门用于管理和构建Java项目的工具, 它基于项目对象模型 (POM) 的概念, 通过一小段描述信息来管理项目的构建, 报告和文档.&lt;/p&gt;
 &lt;p&gt;Maven的主要功能有:&lt;/p&gt;
@@ -10395,10 +10395,10 @@ prop&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;
 &lt;li&gt;插件 (Plugin)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Maven模型图示:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/maven/1662167147568.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/maven/1662167147568.png&#34;
 	width=&#34;740&#34;
 	height=&#34;333&#34;
-	srcset=&#34;https://www.linner.asia/p/maven/1662167147568_hudb97d87f0c51e1500c2fed7e9d91a2e7_33648_480x0_resize_box_3.png 480w, https://www.linner.asia/p/maven/1662167147568_hudb97d87f0c51e1500c2fed7e9d91a2e7_33648_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/maven/1662167147568_hudb97d87f0c51e1500c2fed7e9d91a2e7_33648_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/maven/1662167147568_hudb97d87f0c51e1500c2fed7e9d91a2e7_33648_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -10662,10 +10662,10 @@ Maven仓库能帮助我们管理构件 (主要是JAR), 它就是放置所有JAR�
 &lt;/ul&gt;
 &lt;p&gt;同一套生命周期内, 执行后边的命令, 前面的所有命令会自动执行.&lt;/p&gt;
 &lt;p&gt;default 生命周期如下:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/maven/1662167229604.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/maven/1662167229604.png&#34;
 	width=&#34;388&#34;
 	height=&#34;83&#34;
-	srcset=&#34;https://www.linner.asia/p/maven/1662167229604_huf1075af6040bbd06595099ee92fe29dd_4792_480x0_resize_box_3.png 480w, https://www.linner.asia/p/maven/1662167229604_huf1075af6040bbd06595099ee92fe29dd_4792_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/maven/1662167229604_huf1075af6040bbd06595099ee92fe29dd_4792_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/maven/1662167229604_huf1075af6040bbd06595099ee92fe29dd_4792_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -10682,10 +10682,10 @@ Maven仓库能帮助我们管理构件 (主要是JAR), 它就是放置所有JAR�
         </item>
         <item>
         <title>SSH 公钥配置</title>
-        <link>https://www.linner.asia/p/ssh-%E5%85%AC%E9%92%A5%E9%85%8D%E7%BD%AE/</link>
+        <link>https://blog.linner.asia/p/ssh-%E5%85%AC%E9%92%A5%E9%85%8D%E7%BD%AE/</link>
         <pubDate>Sat, 13 Aug 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/ssh-%E5%85%AC%E9%92%A5%E9%85%8D%E7%BD%AE/</guid>
+        <guid>https://blog.linner.asia/p/ssh-%E5%85%AC%E9%92%A5%E9%85%8D%E7%BD%AE/</guid>
         <description>&lt;p&gt;创建&lt;code&gt;.ssh&lt;/code&gt;目录并生成公钥:&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;ssh-keygen -t rsa
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;所有选项全部回车, 使用默认选项即可.&lt;/p&gt;
@@ -10705,18 +10705,18 @@ Maven仓库能帮助我们管理构件 (主要是JAR), 它就是放置所有JAR�
         </item>
         <item>
         <title>JDBC</title>
-        <link>https://www.linner.asia/p/jdbc/</link>
+        <link>https://blog.linner.asia/p/jdbc/</link>
         <pubDate>Fri, 12 Aug 2022 14:46:53 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/jdbc/</guid>
+        <guid>https://blog.linner.asia/p/jdbc/</guid>
         <description>&lt;h1 id=&#34;jdbc-简介&#34;&gt;JDBC 简介&lt;/h1&gt;
 &lt;p&gt;JDBC (Java DataBase Connectivity, Java 数据库连接) 是使用Java语言操作关系型数据库的一套 API.&lt;/p&gt;
 &lt;p&gt;JDBC其实是SUN公司制订的一套操作数据库的标准接口. JDBC中定义了所有操作关系型数据库的规则. 由各自的数据库厂商给出实现类 (驱动jar包).&lt;/p&gt;
 &lt;p&gt;Java, JDBC和各种数据库的关系如下图:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/jdbc/1662106467207.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/jdbc/1662106467207.png&#34;
 	width=&#34;756&#34;
 	height=&#34;421&#34;
-	srcset=&#34;https://www.linner.asia/p/jdbc/1662106467207_hube4a86de29a56017127210466ce8a313_43094_480x0_resize_box_3.png 480w, https://www.linner.asia/p/jdbc/1662106467207_hube4a86de29a56017127210466ce8a313_43094_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/jdbc/1662106467207_hube4a86de29a56017127210466ce8a313_43094_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/jdbc/1662106467207_hube4a86de29a56017127210466ce8a313_43094_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -11251,10 +11251,10 @@ Statement stmt &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; conn&lt;
         </item>
         <item>
         <title>搭建 code-server</title>
-        <link>https://www.linner.asia/p/%E6%90%AD%E5%BB%BA-code-server/</link>
+        <link>https://blog.linner.asia/p/%E6%90%AD%E5%BB%BA-code-server/</link>
         <pubDate>Sat, 23 Jul 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/%E6%90%AD%E5%BB%BA-code-server/</guid>
+        <guid>https://blog.linner.asia/p/%E6%90%AD%E5%BB%BA-code-server/</guid>
         <description>&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;下载code-server：&lt;/p&gt;
@@ -11305,10 +11305,10 @@ WantedBy&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;multi-user.targe
         </item>
         <item>
         <title>搭建 frp 服务</title>
-        <link>https://www.linner.asia/p/%E6%90%AD%E5%BB%BA-frp-%E6%9C%8D%E5%8A%A1/</link>
+        <link>https://blog.linner.asia/p/%E6%90%AD%E5%BB%BA-frp-%E6%9C%8D%E5%8A%A1/</link>
         <pubDate>Sat, 23 Jul 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/%E6%90%AD%E5%BB%BA-frp-%E6%9C%8D%E5%8A%A1/</guid>
+        <guid>https://blog.linner.asia/p/%E6%90%AD%E5%BB%BA-frp-%E6%9C%8D%E5%8A%A1/</guid>
         <description>&lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;下载frp：&lt;/p&gt;
@@ -11436,10 +11436,10 @@ WantedBy&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;multi-user.targe
         </item>
         <item>
         <title>MySQL 环境配置</title>
-        <link>https://www.linner.asia/p/mysql-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
+        <link>https://blog.linner.asia/p/mysql-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
         <pubDate>Sun, 20 Feb 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/mysql-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</guid>
+        <guid>https://blog.linner.asia/p/mysql-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</guid>
         <description>&lt;h1 id=&#34;ubuntu&#34;&gt;Ubuntu&lt;/h1&gt;
 &lt;p&gt;MySQL 8 安装：&lt;/p&gt;
 &lt;ol&gt;
@@ -11500,10 +11500,10 @@ QUIT
         </item>
         <item>
         <title>Ubuntu 安装 Oh my zsh</title>
-        <link>https://www.linner.asia/p/ubuntu-%E5%AE%89%E8%A3%85-oh-my-zsh/</link>
+        <link>https://blog.linner.asia/p/ubuntu-%E5%AE%89%E8%A3%85-oh-my-zsh/</link>
         <pubDate>Wed, 26 Jan 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/ubuntu-%E5%AE%89%E8%A3%85-oh-my-zsh/</guid>
+        <guid>https://blog.linner.asia/p/ubuntu-%E5%AE%89%E8%A3%85-oh-my-zsh/</guid>
         <description>&lt;p&gt;oh-my-zsh主页： &lt;a class=&#34;link&#34; href=&#34;https://ohmyz.sh/&#34;  title=&#34;https://ohmyz.sh/&#34;
      target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://ohmyz.sh/&lt;/a&gt;&lt;/p&gt;
@@ -11577,10 +11577,10 @@ REMOTE=${REMOTE:-https://gitee.com/${REPO}.git}
         </item>
         <item>
         <title>两数交换算法</title>
-        <link>https://www.linner.asia/p/%E4%B8%A4%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%AE%97%E6%B3%95/</link>
+        <link>https://blog.linner.asia/p/%E4%B8%A4%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%AE%97%E6%B3%95/</link>
         <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/%E4%B8%A4%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%AE%97%E6%B3%95/</guid>
+        <guid>https://blog.linner.asia/p/%E4%B8%A4%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%AE%97%E6%B3%95/</guid>
         <description>&lt;h1 id=&#34;临时变量&#34;&gt;临时变量&lt;/h1&gt;
 &lt;p&gt;通过建立一个临时变量来实现两数交换：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;swap&lt;/span&gt;(x, y):
@@ -11646,10 +11646,10 @@ REMOTE=${REMOTE:-https://gitee.com/${REPO}.git}
         </item>
         <item>
         <title>Python 基础</title>
-        <link>https://www.linner.asia/p/python-%E5%9F%BA%E7%A1%80/</link>
+        <link>https://blog.linner.asia/p/python-%E5%9F%BA%E7%A1%80/</link>
         <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/python-%E5%9F%BA%E7%A1%80/</guid>
+        <guid>https://blog.linner.asia/p/python-%E5%9F%BA%E7%A1%80/</guid>
         <description>&lt;h1 id=&#34;python-语法&#34;&gt;Python 语法&lt;/h1&gt;
 &lt;h2 id=&#34;注释&#34;&gt;注释&lt;/h2&gt;
 &lt;p&gt;Python 的注释风格：&lt;/p&gt;
@@ -14027,7 +14027,7 @@ print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;三角形面积为：&a
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;下图总结了这几种模式：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/python%20%e5%9f%ba%e7%a1%80.assets/2112205-861c05b2bdbc9c28.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/python%20%e5%9f%ba%e7%a1%80.assets/2112205-861c05b2bdbc9c28.png&#34;
 	
 	
 	
@@ -15307,10 +15307,10 @@ test()
         </item>
         <item>
         <title>Python 进阶 — 正则表达式篇</title>
-        <link>https://www.linner.asia/p/python-%E8%BF%9B%E9%98%B6-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%AF%87/</link>
+        <link>https://blog.linner.asia/p/python-%E8%BF%9B%E9%98%B6-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%AF%87/</link>
         <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/python-%E8%BF%9B%E9%98%B6-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%AF%87/</guid>
+        <guid>https://blog.linner.asia/p/python-%E8%BF%9B%E9%98%B6-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%AF%87/</guid>
         <description>&lt;h1 id=&#34;正则表达式语法--python&#34;&gt;正则表达式语法 —— Python&lt;/h1&gt;
 &lt;p&gt;正则表达式是一个特殊的字符序列，能方便地检查一个字符串是否与某种模式匹配。&lt;/p&gt;
 &lt;ul&gt;
@@ -16231,10 +16231,10 @@ MAX_REPEAT &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; MAXREPEAT
         </item>
         <item>
         <title>vbs 后台运行 bat</title>
-        <link>https://www.linner.asia/p/vbs-%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C-bat/</link>
+        <link>https://blog.linner.asia/p/vbs-%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C-bat/</link>
         <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/vbs-%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C-bat/</guid>
+        <guid>https://blog.linner.asia/p/vbs-%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C-bat/</guid>
         <description>&lt;p&gt;假设有三个 bat 程序需要后台运行（称为 &lt;code&gt;A.bat&lt;/code&gt;、&lt;code&gt;B.bat&lt;/code&gt;、&lt;code&gt;C.bat&lt;/code&gt;）：&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-vbs&#34; data-lang=&#34;vbs&#34;&gt;Set ws = CreateObject(&amp;quot;Wscript.Shell&amp;quot;)
 ws.run &amp;quot;cmd /c A.bat&amp;quot;,0
@@ -16244,10 +16244,10 @@ ws.run &amp;quot;cmd /c C.bat&amp;quot;,0
         </item>
         <item>
         <title>经典排序算法</title>
-        <link>https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</link>
+        <link>https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</link>
         <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</guid>
+        <guid>https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</guid>
         <description>&lt;h1 id=&#34;冒泡排序&#34;&gt;冒泡排序&lt;/h1&gt;
 &lt;p&gt;冒泡排序（Bubble Sort）是一种简单直观的排序算法。&lt;/p&gt;
 &lt;p&gt;这个算法的名字由来是因为越小的元素会经由交换慢慢“浮”到数列的顶端。&lt;/p&gt;
@@ -16267,10 +16267,10 @@ ws.run &amp;quot;cmd /c C.bat&amp;quot;,0
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;动画演示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172310783.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172310783.gif&#34;
 	width=&#34;826&#34;
 	height=&#34;257&#34;
-	srcset=&#34;https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172310783_hu44ec8ae7602585df8c248482d5b77337_351100_480x0_resize_box.gif 480w, https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172310783_hu44ec8ae7602585df8c248482d5b77337_351100_1024x0_resize_box.gif 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172310783_hu44ec8ae7602585df8c248482d5b77337_351100_480x0_resize_box.gif 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172310783_hu44ec8ae7602585df8c248482d5b77337_351100_1024x0_resize_box.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -16466,10 +16466,10 @@ ws.run &amp;quot;cmd /c C.bat&amp;quot;,0
 &lt;li&gt;重复步骤2，直到所有元素均排序完毕。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;动画演示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172350447.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172350447.gif&#34;
 	width=&#34;811&#34;
 	height=&#34;248&#34;
-	srcset=&#34;https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172350447_hud86cc9d642d4a6a495c0fb82e65a7d88_470474_480x0_resize_box.gif 480w, https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172350447_hud86cc9d642d4a6a495c0fb82e65a7d88_470474_1024x0_resize_box.gif 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172350447_hud86cc9d642d4a6a495c0fb82e65a7d88_470474_480x0_resize_box.gif 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172350447_hud86cc9d642d4a6a495c0fb82e65a7d88_470474_1024x0_resize_box.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -16547,10 +16547,10 @@ ws.run &amp;quot;cmd /c C.bat&amp;quot;,0
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;动画演示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172376035.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172376035.gif&#34;
 	width=&#34;811&#34;
 	height=&#34;505&#34;
-	srcset=&#34;https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172376035_hu7ece5801fac6a7f4d7b837219cc8a329_368273_480x0_resize_box.gif 480w, https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172376035_hu7ece5801fac6a7f4d7b837219cc8a329_368273_1024x0_resize_box.gif 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172376035_hu7ece5801fac6a7f4d7b837219cc8a329_368273_480x0_resize_box.gif 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172376035_hu7ece5801fac6a7f4d7b837219cc8a329_368273_1024x0_resize_box.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -16626,10 +16626,10 @@ ws.run &amp;quot;cmd /c C.bat&amp;quot;,0
 &lt;li&gt;每趟排序，根据对应的增量$t_i$，将待排序列分割成若干长度为$m$的子序列，分别对各子表进行直接插入排序。仅增量因子为$1$时，整个序列作为一个表来处理，表长度即为整个序列的长度。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;动画演示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172408969.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172408969.gif&#34;
 	width=&#34;277&#34;
 	height=&#34;344&#34;
-	srcset=&#34;https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172408969_hu06d187633126cb9819b3828c28e78988_276994_480x0_resize_box.gif 480w, https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172408969_hu06d187633126cb9819b3828c28e78988_276994_1024x0_resize_box.gif 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172408969_hu06d187633126cb9819b3828c28e78988_276994_480x0_resize_box.gif 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172408969_hu06d187633126cb9819b3828c28e78988_276994_1024x0_resize_box.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -16641,10 +16641,10 @@ ws.run &amp;quot;cmd /c C.bat&amp;quot;,0
 &lt;p&gt;详细过程（引用自博客：&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/weixin_43715360/article/details/120140579&#34;  title=&#34;一个很懒的人&#34;
      target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;一个很懒的人&lt;/a&gt;）：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/ff8014a4eddb45289d60ec4552cf2ea8.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/ff8014a4eddb45289d60ec4552cf2ea8.png&#34;
 	width=&#34;1328&#34;
 	height=&#34;869&#34;
-	srcset=&#34;https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/ff8014a4eddb45289d60ec4552cf2ea8_huaaceded86fe94f580955ae11e60d3da4_100268_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/ff8014a4eddb45289d60ec4552cf2ea8_huaaceded86fe94f580955ae11e60d3da4_100268_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/ff8014a4eddb45289d60ec4552cf2ea8_huaaceded86fe94f580955ae11e60d3da4_100268_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/ff8014a4eddb45289d60ec4552cf2ea8_huaaceded86fe94f580955ae11e60d3da4_100268_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -16653,10 +16653,10 @@ ws.run &amp;quot;cmd /c C.bat&amp;quot;,0
 		data-flex-basis=&#34;366px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/9ad210308fdd44f9931f5717561db7aa.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/9ad210308fdd44f9931f5717561db7aa.png&#34;
 	width=&#34;1117&#34;
 	height=&#34;419&#34;
-	srcset=&#34;https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/9ad210308fdd44f9931f5717561db7aa_huad78d54fd1f25f05c40dcb3a362ce3cf_61189_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/9ad210308fdd44f9931f5717561db7aa_huad78d54fd1f25f05c40dcb3a362ce3cf_61189_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/9ad210308fdd44f9931f5717561db7aa_huad78d54fd1f25f05c40dcb3a362ce3cf_61189_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/9ad210308fdd44f9931f5717561db7aa_huad78d54fd1f25f05c40dcb3a362ce3cf_61189_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -16665,10 +16665,10 @@ ws.run &amp;quot;cmd /c C.bat&amp;quot;,0
 		data-flex-basis=&#34;639px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/82e279c4fccb459ca4119d6385657eb6.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/82e279c4fccb459ca4119d6385657eb6.png&#34;
 	width=&#34;1206&#34;
 	height=&#34;200&#34;
-	srcset=&#34;https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/82e279c4fccb459ca4119d6385657eb6_huea9a25380f1dee0a7d3a4c2182c6b5de_45863_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/82e279c4fccb459ca4119d6385657eb6_huea9a25380f1dee0a7d3a4c2182c6b5de_45863_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/82e279c4fccb459ca4119d6385657eb6_huea9a25380f1dee0a7d3a4c2182c6b5de_45863_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/82e279c4fccb459ca4119d6385657eb6_huea9a25380f1dee0a7d3a4c2182c6b5de_45863_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -16749,10 +16749,10 @@ ws.run &amp;quot;cmd /c C.bat&amp;quot;,0
 &lt;li&gt;重复步骤 3 直到某一指针达到序列尾；将另一序列剩下的所有元素直接复制到合并序列尾。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;动画演示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172440073.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172440073.gif&#34;
 	width=&#34;811&#34;
 	height=&#34;505&#34;
-	srcset=&#34;https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172440073_hu860e1349d65544f9713b4c4e871ecffe_333368_480x0_resize_box.gif 480w, https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172440073_hu860e1349d65544f9713b4c4e871ecffe_333368_1024x0_resize_box.gif 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172440073_hu860e1349d65544f9713b4c4e871ecffe_333368_480x0_resize_box.gif 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172440073_hu860e1349d65544f9713b4c4e871ecffe_333368_1024x0_resize_box.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -16953,10 +16953,10 @@ ws.run &amp;quot;cmd /c C.bat&amp;quot;,0
 &lt;li&gt;分别递归地把小于基准数的子序列（左边）和大于基准数的子序列（右边）执行1~3操作。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;动画演示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172485719.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172485719.gif&#34;
 	width=&#34;811&#34;
 	height=&#34;252&#34;
-	srcset=&#34;https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172485719_hu4d44be5cb710bf76364ae9284e6f595c_276065_480x0_resize_box.gif 480w, https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172485719_hu4d44be5cb710bf76364ae9284e6f595c_276065_1024x0_resize_box.gif 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172485719_hu4d44be5cb710bf76364ae9284e6f595c_276065_480x0_resize_box.gif 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172485719_hu4d44be5cb710bf76364ae9284e6f595c_276065_1024x0_resize_box.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -17157,10 +17157,10 @@ ws.run &amp;quot;cmd /c C.bat&amp;quot;,0
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;动画演示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172508258.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172508258.gif&#34;
 	width=&#34;547&#34;
 	height=&#34;364&#34;
-	srcset=&#34;https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172508258_hu745ac12798b8f0b47921ba6fbe682968_1548510_480x0_resize_box.gif 480w, https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172508258_hu745ac12798b8f0b47921ba6fbe682968_1548510_1024x0_resize_box.gif 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172508258_hu745ac12798b8f0b47921ba6fbe682968_1548510_480x0_resize_box.gif 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172508258_hu745ac12798b8f0b47921ba6fbe682968_1548510_1024x0_resize_box.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -17401,10 +17401,10 @@ ws.run &amp;quot;cmd /c C.bat&amp;quot;,0
 &lt;/ol&gt;
 &lt;p&gt;图片演示：&lt;/p&gt;
 &lt;p&gt;将元素分布在桶中：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172566530.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172566530.png&#34;
 	width=&#34;311&#34;
 	height=&#34;131&#34;
-	srcset=&#34;https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172566530_hu3b8f072780468ebb2ae1c6af2a3c055e_11151_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172566530_hu3b8f072780468ebb2ae1c6af2a3c055e_11151_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172566530_hu3b8f072780468ebb2ae1c6af2a3c055e_11151_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172566530_hu3b8f072780468ebb2ae1c6af2a3c055e_11151_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -17414,10 +17414,10 @@ ws.run &amp;quot;cmd /c C.bat&amp;quot;,0
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;元素在每个桶中排序：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172573696.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172573696.png&#34;
 	width=&#34;311&#34;
 	height=&#34;131&#34;
-	srcset=&#34;https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172573696_hu95d151ab9ff7369bc50331df2ac5bf22_12936_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172573696_hu95d151ab9ff7369bc50331df2ac5bf22_12936_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172573696_hu95d151ab9ff7369bc50331df2ac5bf22_12936_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172573696_hu95d151ab9ff7369bc50331df2ac5bf22_12936_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -17745,10 +17745,10 @@ ws.run &amp;quot;cmd /c C.bat&amp;quot;,0
         </item>
         <item>
         <title>SQL语句</title>
-        <link>https://www.linner.asia/p/sql%E8%AF%AD%E5%8F%A5/</link>
+        <link>https://blog.linner.asia/p/sql%E8%AF%AD%E5%8F%A5/</link>
         <pubDate>Tue, 11 Jan 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/sql%E8%AF%AD%E5%8F%A5/</guid>
+        <guid>https://blog.linner.asia/p/sql%E8%AF%AD%E5%8F%A5/</guid>
         <description>&lt;h1 id=&#34;基本概念&#34;&gt;基本概念&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;SQL&lt;/strong&gt;（&lt;strong&gt;Structured Query Language&lt;/strong&gt;，发音为 sequal）是一种专门用来与数据库沟通的语言。通过 SQL，用户可以对数据库进行各种操作。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -19810,26 +19810,26 @@ SQL 本身不限制每个联结约束中表的数目，但实际上许多 DBMS �
         </item>
         <item>
         <title>归档</title>
-        <link>https://www.linner.asia/archives/</link>
+        <link>https://blog.linner.asia/archives/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/archives/</guid>
+        <guid>https://blog.linner.asia/archives/</guid>
         <description></description>
         </item>
         <item>
         <title>搜索</title>
-        <link>https://www.linner.asia/search/</link>
+        <link>https://blog.linner.asia/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/search/</guid>
+        <guid>https://blog.linner.asia/search/</guid>
         <description></description>
         </item>
         <item>
         <title>链接</title>
-        <link>https://www.linner.asia/%E9%93%BE%E6%8E%A5/</link>
+        <link>https://blog.linner.asia/%E9%93%BE%E6%8E%A5/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/%E9%93%BE%E6%8E%A5/</guid>
+        <guid>https://blog.linner.asia/%E9%93%BE%E6%8E%A5/</guid>
         <description></description>
         </item>
         

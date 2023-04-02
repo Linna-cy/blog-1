@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>两数交换算法 on Linner&#39;s Blog</title>
-        <link>https://www.linner.asia/tags/%E4%B8%A4%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%AE%97%E6%B3%95/</link>
+        <link>https://blog.linner.asia/tags/%E4%B8%A4%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%AE%97%E6%B3%95/</link>
         <description>Recent content in 两数交换算法 on Linner&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
-        <lastBuildDate>Sun, 16 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.linner.asia/tags/%E4%B8%A4%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 16 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.linner.asia/tags/%E4%B8%A4%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>两数交换算法</title>
-        <link>https://www.linner.asia/p/%E4%B8%A4%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%AE%97%E6%B3%95/</link>
+        <link>https://blog.linner.asia/p/%E4%B8%A4%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%AE%97%E6%B3%95/</link>
         <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/%E4%B8%A4%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%AE%97%E6%B3%95/</guid>
+        <guid>https://blog.linner.asia/p/%E4%B8%A4%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%AE%97%E6%B3%95/</guid>
         <description>&lt;h1 id=&#34;临时变量&#34;&gt;临时变量&lt;/h1&gt;
 &lt;p&gt;通过建立一个临时变量来实现两数交换：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;swap&lt;/span&gt;(x, y):

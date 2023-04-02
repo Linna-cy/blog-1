@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>项目管理 on Linner&#39;s Blog</title>
-        <link>https://www.linner.asia/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</link>
+        <link>https://blog.linner.asia/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</link>
         <description>Recent content in 项目管理 on Linner&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
-        <lastBuildDate>Mon, 27 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.linner.asia/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 27 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.linner.asia/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Maven 高级</title>
-        <link>https://www.linner.asia/p/maven-%E9%AB%98%E7%BA%A7/</link>
+        <link>https://blog.linner.asia/p/maven-%E9%AB%98%E7%BA%A7/</link>
         <pubDate>Mon, 27 Feb 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/maven-%E9%AB%98%E7%BA%A7/</guid>
+        <guid>https://blog.linner.asia/p/maven-%E9%AB%98%E7%BA%A7/</guid>
         <description>&lt;h1 id=&#34;多模块开发&#34;&gt;多模块开发&lt;/h1&gt;
 &lt;p&gt;多模块开发有以下两种：&lt;/p&gt;
 &lt;ul&gt;
@@ -448,10 +448,10 @@ jdbc.password=root
         </item>
         <item>
         <title>Maven</title>
-        <link>https://www.linner.asia/p/maven/</link>
+        <link>https://blog.linner.asia/p/maven/</link>
         <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/maven/</guid>
+        <guid>https://blog.linner.asia/p/maven/</guid>
         <description>&lt;h1 id=&#34;maven-简介&#34;&gt;Maven 简介&lt;/h1&gt;
 &lt;p&gt;Apache Maven是专门用于管理和构建Java项目的工具, 它基于项目对象模型 (POM) 的概念, 通过一小段描述信息来管理项目的构建, 报告和文档.&lt;/p&gt;
 &lt;p&gt;Maven的主要功能有:&lt;/p&gt;
@@ -468,10 +468,10 @@ jdbc.password=root
 &lt;li&gt;插件 (Plugin)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Maven模型图示:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/maven/1662167147568.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/maven/1662167147568.png&#34;
 	width=&#34;740&#34;
 	height=&#34;333&#34;
-	srcset=&#34;https://www.linner.asia/p/maven/1662167147568_hudb97d87f0c51e1500c2fed7e9d91a2e7_33648_480x0_resize_box_3.png 480w, https://www.linner.asia/p/maven/1662167147568_hudb97d87f0c51e1500c2fed7e9d91a2e7_33648_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/maven/1662167147568_hudb97d87f0c51e1500c2fed7e9d91a2e7_33648_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/maven/1662167147568_hudb97d87f0c51e1500c2fed7e9d91a2e7_33648_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -735,10 +735,10 @@ Maven仓库能帮助我们管理构件 (主要是JAR), 它就是放置所有JAR�
 &lt;/ul&gt;
 &lt;p&gt;同一套生命周期内, 执行后边的命令, 前面的所有命令会自动执行.&lt;/p&gt;
 &lt;p&gt;default 生命周期如下:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/maven/1662167229604.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/maven/1662167229604.png&#34;
 	width=&#34;388&#34;
 	height=&#34;83&#34;
-	srcset=&#34;https://www.linner.asia/p/maven/1662167229604_huf1075af6040bbd06595099ee92fe29dd_4792_480x0_resize_box_3.png 480w, https://www.linner.asia/p/maven/1662167229604_huf1075af6040bbd06595099ee92fe29dd_4792_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/maven/1662167229604_huf1075af6040bbd06595099ee92fe29dd_4792_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/maven/1662167229604_huf1075af6040bbd06595099ee92fe29dd_4792_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	

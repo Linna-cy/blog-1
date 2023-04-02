@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>软考 on Linner&#39;s Blog</title>
-        <link>https://www.linner.asia/tags/%E8%BD%AF%E8%80%83/</link>
+        <link>https://blog.linner.asia/tags/%E8%BD%AF%E8%80%83/</link>
         <description>Recent content in 软考 on Linner&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
-        <lastBuildDate>Thu, 30 Mar 2023 19:58:41 +0800</lastBuildDate><atom:link href="https://www.linner.asia/tags/%E8%BD%AF%E8%80%83/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 30 Mar 2023 19:58:41 +0800</lastBuildDate><atom:link href="https://blog.linner.asia/tags/%E8%BD%AF%E8%80%83/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>软件设计师——程序设计语言</title>
-        <link>https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/</link>
+        <link>https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/</link>
         <pubDate>Thu, 30 Mar 2023 19:58:41 +0800</pubDate>
         
-        <guid>https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/</guid>
+        <guid>https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/</guid>
         <description>&lt;h1 id=&#34;低级和高级语言&#34;&gt;低级和高级语言&lt;/h1&gt;
 &lt;p&gt;程序设计语言根据硬件是否能识别区分为两类：&lt;/p&gt;
 &lt;ul&gt;
@@ -38,10 +38,10 @@
 &lt;p&gt;编译程序的功能是把某高级语言书写的&lt;u&gt;源程序翻译成与之等价的目标程序&lt;/u&gt;（汇编语言或机
 器语言)。&lt;/p&gt;
 &lt;p&gt;编译程序的工作过程如下图所示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680232196718.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680232196718.png&#34;
 	width=&#34;549&#34;
 	height=&#34;466&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680232196718_hu22cb7da26b44a72475eca6b4da41107c_39469_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680232196718_hu22cb7da26b44a72475eca6b4da41107c_39469_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680232196718_hu22cb7da26b44a72475eca6b4da41107c_39469_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680232196718_hu22cb7da26b44a72475eca6b4da41107c_39469_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -116,10 +116,10 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Example：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/1680248469003.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/1680248469003.png&#34;
 	width=&#34;990&#34;
 	height=&#34;277&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/1680248469003_huaaba3cb8f1b33a18fcb91ebc2f451286_91806_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/1680248469003_huaaba3cb8f1b33a18fcb91ebc2f451286_91806_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/1680248469003_huaaba3cb8f1b33a18fcb91ebc2f451286_91806_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/1680248469003_huaaba3cb8f1b33a18fcb91ebc2f451286_91806_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -129,10 +129,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;设$U$、$V$和$W$均为正规式：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680249034196.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680249034196.png&#34;
 	width=&#34;974&#34;
 	height=&#34;185&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680249034196_hu7097887f00dc6fb602c5be85b92d295e_40054_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680249034196_hu7097887f00dc6fb602c5be85b92d295e_40054_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680249034196_hu7097887f00dc6fb602c5be85b92d295e_40054_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680249034196_hu7097887f00dc6fb602c5be85b92d295e_40054_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -198,10 +198,10 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680251834262.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680251834262.png&#34;
 	width=&#34;983&#34;
 	height=&#34;160&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680251834262_hudda18d0f6413fec2c6bfff005f78095a_126189_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680251834262_hudda18d0f6413fec2c6bfff005f78095a_126189_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680251834262_hudda18d0f6413fec2c6bfff005f78095a_126189_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680251834262_hudda18d0f6413fec2c6bfff005f78095a_126189_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -210,10 +210,10 @@ $$&lt;/p&gt;
 		data-flex-basis=&#34;1474px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680251962756.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680251962756.png&#34;
 	width=&#34;982&#34;
 	height=&#34;585&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680251962756_hub668c80da120ede04799d85ae8f0770b_237616_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680251962756_hub668c80da120ede04799d85ae8f0770b_237616_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680251962756_hub668c80da120ede04799d85ae8f0770b_237616_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680251962756_hub668c80da120ede04799d85ae8f0770b_237616_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -238,10 +238,10 @@ $$&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;DFA是NFA的特例。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680252743732.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680252743732.png&#34;
 	width=&#34;918&#34;
 	height=&#34;407&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680252743732_hu52e92fdc66cb95fd2f0c67685207a651_114412_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680252743732_hu52e92fdc66cb95fd2f0c67685207a651_114412_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680252743732_hu52e92fdc66cb95fd2f0c67685207a651_114412_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680252743732_hu52e92fdc66cb95fd2f0c67685207a651_114412_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -260,10 +260,10 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;语法分析&lt;/strong&gt;的任务是在词法分析的基础上，&lt;u&gt;根据语言的语法规则将单词符号序列分解成各类语法单位&lt;/u&gt;，如“表达式”“语句”和“程序”等。&lt;/p&gt;
 &lt;p&gt;如果源程序中没有语法错误，语法分析后就能正确地&lt;u&gt;构造出其语法树&lt;/u&gt;；否则&lt;u&gt;指出语法错误&lt;/u&gt;，并&lt;u&gt;给出相应的诊断信息&lt;/u&gt;。&lt;/p&gt;
 &lt;p&gt;例如对&lt;code&gt;id1 := id2 + id3 * 60&lt;/code&gt;进行语法分析后形成的语法树：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680233200526.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680233200526.png&#34;
 	width=&#34;888&#34;
 	height=&#34;266&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680233200526_hub39a12f42925ee3f44c562351b5287d6_25864_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680233200526_hub39a12f42925ee3f44c562351b5287d6_25864_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680233200526_hub39a12f42925ee3f44c562351b5287d6_25864_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680233200526_hub39a12f42925ee3f44c562351b5287d6_25864_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -287,10 +287,10 @@ $$&lt;/p&gt;
 &lt;li&gt;$P$：产生式集合，&lt;/li&gt;
 &lt;li&gt;$S$：开始符号。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680255073014.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680255073014.png&#34;
 	width=&#34;990&#34;
 	height=&#34;393&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680255073014_hub03b05e46f3a2c7483ad3eeddb5269a8_262819_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680255073014_hub03b05e46f3a2c7483ad3eeddb5269a8_262819_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680255073014_hub03b05e46f3a2c7483ad3eeddb5269a8_262819_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680255073014_hub03b05e46f3a2c7483ad3eeddb5269a8_262819_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -300,10 +300,10 @@ $$&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;上下文无关文法的推导过程可用树型结构描述：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680255429332.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680255429332.png&#34;
 	width=&#34;210&#34;
 	height=&#34;346&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680255429332_hu3ef184a27e7b53ced5b1ffcd5bd7d8dd_10720_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680255429332_hu3ef184a27e7b53ced5b1ffcd5bd7d8dd_10720_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680255429332_hu3ef184a27e7b53ced5b1ffcd5bd7d8dd_10720_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/uTools_1680255429332_hu3ef184a27e7b53ced5b1ffcd5bd7d8dd_10720_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -468,10 +468,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>软件设计师——计算机系统</title>
-        <link>https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/</link>
+        <link>https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/</link>
         <pubDate>Fri, 24 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/</guid>
+        <guid>https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/</guid>
         <description>&lt;h1 id=&#34;计算机的基本单位&#34;&gt;计算机的基本单位&lt;/h1&gt;
 &lt;table&gt;
 &lt;tr&gt;
@@ -661,10 +661,10 @@ $$&lt;/p&gt;
 &lt;p&gt;其实（个人认为）根据补码和移码的定义，可以将补码当作特殊的移码。其bias为$2^n$。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;各种码制带符号数的范围&#34;&gt;各种码制带符号数的范围&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B8%A6%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E8%8C%83%E5%9B%B4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B8%A6%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E8%8C%83%E5%9B%B4.png&#34;
 	width=&#34;1174&#34;
 	height=&#34;273&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B8%A6%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E8%8C%83%E5%9B%B4_huf86084d3b2fa3b4510a57d1d605f45ba_75716_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B8%A6%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E8%8C%83%E5%9B%B4_huf86084d3b2fa3b4510a57d1d605f45ba_75716_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B8%A6%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E8%8C%83%E5%9B%B4_huf86084d3b2fa3b4510a57d1d605f45ba_75716_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B8%A6%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E8%8C%83%E5%9B%B4_huf86084d3b2fa3b4510a57d1d605f45ba_75716_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -746,10 +746,10 @@ $$&lt;/p&gt;
 &lt;li&gt;校验位由自身校验。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Example：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679983905932.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679983905932.png&#34;
 	width=&#34;1023&#34;
 	height=&#34;1049&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679983905932_hu8233f94300cd2978c7262586b5e1abdc_350868_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679983905932_hu8233f94300cd2978c7262586b5e1abdc_350868_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679983905932_hu8233f94300cd2978c7262586b5e1abdc_350868_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679983905932_hu8233f94300cd2978c7262586b5e1abdc_350868_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -769,10 +769,10 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;循环冗余码&#34;&gt;循环冗余码&lt;/h2&gt;
 &lt;p&gt;循环冗余校验码（Cyclic Redundancy Check，CRC）广泛应用于数据通信领域和磁介质存储系统中。它利用生成多项式为k个数据位产生个校验位来进行编码，其编码长度为k+r。CRC的代码格式为：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679825785079.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679825785079.png&#34;
 	width=&#34;613&#34;
 	height=&#34;92&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679825785079_hue59488e391052e21a77b5920f121b7a3_12188_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679825785079_hue59488e391052e21a77b5920f121b7a3_12188_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679825785079_hue59488e391052e21a77b5920f121b7a3_12188_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679825785079_hue59488e391052e21a77b5920f121b7a3_12188_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -936,10 +936,10 @@ $$&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;直接映像：主存的块与Cache块的对应关系是固定的。冲突多、关系固定。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884025087.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884025087.png&#34;
 	width=&#34;825&#34;
 	height=&#34;526&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884025087_hu5b011bac95c34a4b59523b3fc3e9bdf5_66159_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884025087_hu5b011bac95c34a4b59523b3fc3e9bdf5_66159_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884025087_hu5b011bac95c34a4b59523b3fc3e9bdf5_66159_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884025087_hu5b011bac95c34a4b59523b3fc3e9bdf5_66159_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -951,10 +951,10 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;全相联映像：允许主存的任一块调入Cache存储器的任一块。冲突少、关系不固定。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884252415.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884252415.png&#34;
 	width=&#34;730&#34;
 	height=&#34;538&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884252415_hu0e33dbcf5fa3fed2f738b321711ef11e_91734_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884252415_hu0e33dbcf5fa3fed2f738b321711ef11e_91734_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884252415_hu0e33dbcf5fa3fed2f738b321711ef11e_91734_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884252415_hu0e33dbcf5fa3fed2f738b321711ef11e_91734_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -978,10 +978,10 @@ $$&lt;/p&gt;
 &lt;p&gt;中断是一种非常重要的技术，&lt;u&gt;输入输出&lt;/u&gt;设备和&lt;u&gt;主机交换数据&lt;/u&gt;、&lt;u&gt;分时操作&lt;/u&gt;、&lt;u&gt;实时系统&lt;/u&gt;、&lt;u&gt;计算机网络&lt;/u&gt;和&lt;u&gt;分布式计算机系统&lt;/u&gt;中都要用到这种技术。为了提高响应中断的速度，通常把所有中断服务程序的入口地址（或称为中断向量）汇集为中断向量表。&lt;/p&gt;
 &lt;h2 id=&#34;输入输出控制方式&#34;&gt;输入输出控制方式&lt;/h2&gt;
 &lt;p&gt;程序查询方式（程序直接控制方式）：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888001780.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888001780.png&#34;
 	width=&#34;754&#34;
 	height=&#34;1174&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888001780_hud6ebe6012cde16108d1ee611e4248e31_240258_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888001780_hud6ebe6012cde16108d1ee611e4248e31_240258_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888001780_hud6ebe6012cde16108d1ee611e4248e31_240258_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888001780_hud6ebe6012cde16108d1ee611e4248e31_240258_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -996,10 +996,10 @@ $$&lt;/p&gt;
 &lt;li&gt;由CPU将数放入内存。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;中断驱动方式：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888578058.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888578058.png&#34;
 	width=&#34;787&#34;
 	height=&#34;1134&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888578058_huafad4d8f462045fe6ed8d3f6574e2433_264777_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888578058_huafad4d8f462045fe6ed8d3f6574e2433_264777_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888578058_huafad4d8f462045fe6ed8d3f6574e2433_264777_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888578058_huafad4d8f462045fe6ed8d3f6574e2433_264777_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1016,10 +1016,10 @@ $$&lt;/p&gt;
 &lt;li&gt;由CPU将数据放入内存。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;DMA方式（直接存储器存储方式）：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888972074.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888972074.png&#34;
 	width=&#34;816&#34;
 	height=&#34;723&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888972074_hu524534b10c6d25022b5676913927ee92_146843_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888972074_hu524534b10c6d25022b5676913927ee92_146843_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888972074_hu524534b10c6d25022b5676913927ee92_146843_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888972074_hu524534b10c6d25022b5676913927ee92_146843_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1139,10 +1139,10 @@ $$&lt;/p&gt;
 &lt;p&gt;加密可以阻止被动攻击，认证可以阻止主动攻击（不可以处理被动攻击）。&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;系统可靠度&#34;&gt;系统可靠度&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E4%B8%B2%E8%81%94%E7%B3%BB%E7%BB%9F.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E4%B8%B2%E8%81%94%E7%B3%BB%E7%BB%9F.png&#34;
 	width=&#34;1157&#34;
 	height=&#34;400&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E4%B8%B2%E8%81%94%E7%B3%BB%E7%BB%9F_huc533c9ebe7073a641e0c4f0ca26fe76d_129377_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E4%B8%B2%E8%81%94%E7%B3%BB%E7%BB%9F_huc533c9ebe7073a641e0c4f0ca26fe76d_129377_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E4%B8%B2%E8%81%94%E7%B3%BB%E7%BB%9F_huc533c9ebe7073a641e0c4f0ca26fe76d_129377_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E4%B8%B2%E8%81%94%E7%B3%BB%E7%BB%9F_huc533c9ebe7073a641e0c4f0ca26fe76d_129377_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1151,10 +1151,10 @@ $$&lt;/p&gt;
 		data-flex-basis=&#34;694px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B9%B6%E8%81%94%E7%B3%BB%E7%BB%9F.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B9%B6%E8%81%94%E7%B3%BB%E7%BB%9F.png&#34;
 	width=&#34;1133&#34;
 	height=&#34;376&#34;
-	srcset=&#34;https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B9%B6%E8%81%94%E7%B3%BB%E7%BB%9F_hu0151f1bd7a524d241456bee3273c718e_125234_480x0_resize_box_3.png 480w, https://www.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B9%B6%E8%81%94%E7%B3%BB%E7%BB%9F_hu0151f1bd7a524d241456bee3273c718e_125234_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B9%B6%E8%81%94%E7%B3%BB%E7%BB%9F_hu0151f1bd7a524d241456bee3273c718e_125234_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B9%B6%E8%81%94%E7%B3%BB%E7%BB%9F_hu0151f1bd7a524d241456bee3273c718e_125234_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	

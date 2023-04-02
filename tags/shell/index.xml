@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Shell on Linner&#39;s Blog</title>
-        <link>https://www.linner.asia/tags/shell/</link>
+        <link>https://blog.linner.asia/tags/shell/</link>
         <description>Recent content in Shell on Linner&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
-        <lastBuildDate>Wed, 26 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.linner.asia/tags/shell/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 26 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.linner.asia/tags/shell/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Ubuntu 安装 Oh my zsh</title>
-        <link>https://www.linner.asia/p/ubuntu-%E5%AE%89%E8%A3%85-oh-my-zsh/</link>
+        <link>https://blog.linner.asia/p/ubuntu-%E5%AE%89%E8%A3%85-oh-my-zsh/</link>
         <pubDate>Wed, 26 Jan 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/ubuntu-%E5%AE%89%E8%A3%85-oh-my-zsh/</guid>
+        <guid>https://blog.linner.asia/p/ubuntu-%E5%AE%89%E8%A3%85-oh-my-zsh/</guid>
         <description>&lt;p&gt;oh-my-zsh主页： &lt;a class=&#34;link&#34; href=&#34;https://ohmyz.sh/&#34;  title=&#34;https://ohmyz.sh/&#34;
      target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;https://ohmyz.sh/&lt;/a&gt;&lt;/p&gt;

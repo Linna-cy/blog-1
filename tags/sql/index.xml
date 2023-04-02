@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>SQL on Linner&#39;s Blog</title>
-        <link>https://www.linner.asia/tags/sql/</link>
+        <link>https://blog.linner.asia/tags/sql/</link>
         <description>Recent content in SQL on Linner&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
-        <lastBuildDate>Sun, 14 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.linner.asia/tags/sql/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 14 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.linner.asia/tags/sql/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Druid 数据库连接池</title>
-        <link>https://www.linner.asia/p/druid-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/</link>
+        <link>https://blog.linner.asia/p/druid-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/</link>
         <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/druid-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/</guid>
+        <guid>https://blog.linner.asia/p/druid-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/</guid>
         <description>&lt;h1 id=&#34;数据库连接池&#34;&gt;数据库连接池&lt;/h1&gt;
 &lt;p&gt;数据库连接池是个容器, 负责分配, 管理数据库连接 (Connection).&lt;/p&gt;
 &lt;p&gt;数据库连接池允许应用程序重复使用一个现有的数据库连接, 而不是再重新建立一个. 从而减少资源浪费.&lt;/p&gt;
@@ -422,10 +422,10 @@ prop&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;
         </item>
         <item>
         <title>MySQL 环境配置</title>
-        <link>https://www.linner.asia/p/mysql-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
+        <link>https://blog.linner.asia/p/mysql-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
         <pubDate>Sun, 20 Feb 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/mysql-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</guid>
+        <guid>https://blog.linner.asia/p/mysql-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</guid>
         <description>&lt;h1 id=&#34;ubuntu&#34;&gt;Ubuntu&lt;/h1&gt;
 &lt;p&gt;MySQL 8 安装：&lt;/p&gt;
 &lt;ol&gt;
@@ -486,10 +486,10 @@ QUIT
         </item>
         <item>
         <title>SQL语句</title>
-        <link>https://www.linner.asia/p/sql%E8%AF%AD%E5%8F%A5/</link>
+        <link>https://blog.linner.asia/p/sql%E8%AF%AD%E5%8F%A5/</link>
         <pubDate>Tue, 11 Jan 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://www.linner.asia/p/sql%E8%AF%AD%E5%8F%A5/</guid>
+        <guid>https://blog.linner.asia/p/sql%E8%AF%AD%E5%8F%A5/</guid>
         <description>&lt;h1 id=&#34;基本概念&#34;&gt;基本概念&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;SQL&lt;/strong&gt;（&lt;strong&gt;Structured Query Language&lt;/strong&gt;，发音为 sequal）是一种专门用来与数据库沟通的语言。通过 SQL，用户可以对数据库进行各种操作。&lt;/p&gt;
 &lt;blockquote&gt;

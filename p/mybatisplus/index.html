@@ -12,9 +12,10 @@ spring: datasource: type: com.alibaba.druid.pool.DruidDataSource driver-class-na
 
 <title>MyBatisPlus</title>
 
-<link rel='canonical' href='https://www.linner.asia/p/mybatisplus/'>
+<link rel='canonical' href='https://blog.linner.asia/p/mybatisplus/'>
 
-<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='MyBatisPlus'>
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+<meta property='og:title' content='MyBatisPlus'>
 <meta property='og:description' content='简介 MybatisPlus（简称MP）是基于MyBatis框架基础上开发的增强型工具（依然可以使用MyBatis里的工具），旨在简化开发、提供效率。更多详情请访问MyBatisPlus官网（官网有两个地址，https://mp.baomidou.com/或https://mybatis.plus）。
 基于Spring使用MybatisPlus，在构建Spring工程时需要勾选MySQL和MyBatis相关技术。由于Spring并未收录MP，所以需要手动导入坐标：
 &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.baomidou&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mybatis-plus-boot-starter&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.4.1&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;!-- 可选： --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.alibaba&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;druid&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.1.16&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; 在application.yml（配置文件）中配置数据库信息：
@@ -22,7 +23,7 @@ spring: datasource: type: com.alibaba.druid.pool.DruidDataSource driver-class-na
 @Mapper public interface UserDao extends BaseMapper&amp;lt;User&amp;gt;{ } 编写引导类：
 @SpringBootApplication public class MybatisplusApplication { public static void main(String[] args) { SpringApplication.run(MybatisplusApplication.class, args); } } DAO接口要想被容器扫描到，有两种方案：
  在DAO接口上添加@Mapper注解，并且确保DAO处在引导类所在包或其子包中。 在引导类上添加@MapperScan注解，其属性为所要扫描的DAO所在包：@MapperScan(&amp;quot;com.linner.dao&amp;quot;)（可以不写@Mapper）。  '>
-<meta property='og:url' content='https://www.linner.asia/p/mybatisplus/'>
+<meta property='og:url' content='https://blog.linner.asia/p/mybatisplus/'>
 <meta property='og:site_name' content='Linner&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='数据库' /><meta property='article:published_time' content='2023-02-28T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-02-28T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="MyBatisPlus">
@@ -34,8 +35,6 @@ spring: datasource: type: com.alibaba.druid.pool.DruidDataSource driver-class-na
 @SpringBootApplication public class MybatisplusApplication { public static void main(String[] args) { SpringApplication.run(MybatisplusApplication.class, args); } } DAO接口要想被容器扫描到，有两种方案：
  在DAO接口上添加@Mapper注解，并且确保DAO处在引导类所在包或其子包中。 在引导类上添加@MapperScan注解，其属性为所要扫描的DAO所在包：@MapperScan(&amp;quot;com.linner.dao&amp;quot;)（可以不写@Mapper）。  ">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
     </head>
     <body class="
     article-page

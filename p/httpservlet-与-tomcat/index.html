@@ -13,9 +13,10 @@ package com.linner.web; import javax.servlet.ServletException; import javax.serv
 
 <title>HttpServlet 与 Tomcat</title>
 
-<link rel='canonical' href='https://www.linner.asia/p/httpservlet-%E4%B8%8E-tomcat/'>
+<link rel='canonical' href='https://blog.linner.asia/p/httpservlet-%E4%B8%8E-tomcat/'>
 
-<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='HttpServlet 与 Tomcat'>
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+<meta property='og:title' content='HttpServlet 与 Tomcat'>
 <meta property='og:description' content='HttpServlet 简介 HttpServlet是对HTTP协议封装的Servlet实现类。
 Servlet的体系结构：
 在开发中，关注更多的是Servlet.service()方法。而每实现一个Servlet就必须实现Servlet接口，重写接口中的5个方法。
@@ -24,7 +25,7 @@ Servlet的体系结构：
 package com.linner.web; import javax.servlet.ServletException; import javax.servlet.annotation.WebServlet; import javax.servlet.http.*; import java.io.IOException; @WebServlet(&amp;#34;/demo&amp;#34;) public class ServletDemo extends HttpServlet { // 需要复写以下两个方法:  @Override protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException { System.out.println(&amp;#34;Get...&amp;#34;); } @Override protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException { System.out.println(&amp;#34;Post...&amp;#34;); } }   启动Tomcat，使用浏览器访问http://localhost:8080/web-demo/demo可以在控制台看到doGet()方法被执行。
   在项目的webapp目录下新建index.html，写入：
 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;zh&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;title&amp;gt;TestPost&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;form action=&amp;#34;/web-demo/demo&amp;#34; method=&amp;#34;post&amp;#34;&amp;gt; &amp;lt;input name=&amp;#34;username&amp;#34;/&amp;gt;&amp;lt;input type=&amp;#34;submit&amp;#34;/&amp;gt; &amp;lt;/form&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 启动Tomcat，访问http://localhost:8080/web-demo/，在表单输入内容后提交。即可在控制台看到doPost()被执行。'>
-<meta property='og:url' content='https://www.linner.asia/p/httpservlet-%E4%B8%8E-tomcat/'>
+<meta property='og:url' content='https://blog.linner.asia/p/httpservlet-%E4%B8%8E-tomcat/'>
 <meta property='og:site_name' content='Linner&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='JavaWeb' /><meta property='article:tag' content='Tomcat' /><meta property='article:published_time' content='2022-09-12T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-09-12T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="HttpServlet 与 Tomcat">
@@ -37,8 +38,6 @@ package com.linner.web; import javax.servlet.ServletException; import javax.serv
   在项目的webapp目录下新建index.html，写入：
 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;zh&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;title&amp;gt;TestPost&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;form action=&amp;#34;/web-demo/demo&amp;#34; method=&amp;#34;post&amp;#34;&amp;gt; &amp;lt;input name=&amp;#34;username&amp;#34;/&amp;gt;&amp;lt;input type=&amp;#34;submit&amp;#34;/&amp;gt; &amp;lt;/form&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 启动Tomcat，访问http://localhost:8080/web-demo/，在表单输入内容后提交。即可在控制台看到doPost()被执行。">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
     </head>
     <body class="
     article-page

@@ -19,9 +19,10 @@ Maven指定了一系列规则来解决依赖冲突问题。
 
 <title>Maven 高级</title>
 
-<link rel='canonical' href='https://www.linner.asia/p/maven-%E9%AB%98%E7%BA%A7/'>
+<link rel='canonical' href='https://blog.linner.asia/p/maven-%E9%AB%98%E7%BA%A7/'>
 
-<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Maven 高级'>
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+<meta property='og:title' content='Maven 高级'>
 <meta property='og:description' content='多模块开发 多模块开发有以下两种：
  按照功能拆分。 按照模块拆分。  例如，将项目中的DAO类拆分出来作为一个独立的模块。然后使用Maven将该模块作为依赖导入项目中。
 假设现在已经将项目中的实体类拆分出来作为maven-dao模块。该模块也使用Maven构建，然后导入该项目所需依赖。经过测试后，将该项目的&amp;lt;groupId&amp;gt;、&amp;lt;artifactId&amp;gt;和&amp;lt;version&amp;gt;导入原本项目。
@@ -36,7 +37,7 @@ maven-dao模块的pom.xml中：
   因为依赖传递的存在，会导致使用依赖的过程中出现冲突问题。例如有两个相同的依赖，它们的版本不同，就会导致依赖冲突。
 Maven指定了一系列规则来解决依赖冲突问题。
  特殊优先：同级下（依赖树中同个父节点的依赖为同级，即同个pom.xml下），配置了相同资源的不同版本，后配置的覆盖先配置。 路径优先：依赖树中，层级越浅，优先级越高；层级越深，优先级越低。 声明优先：资源在相同层级被依赖时，配置顺序靠前的覆盖配置顺序靠后的。即，谁先声明用谁。   注意：依赖的优先级只对当前项目起作用。即，当前项目选择的依赖版本并不会影响到依赖中相同资源不同版本的依赖。 最终选择的依赖结果根据Idea中Mavem面板的依赖树视图。'>
-<meta property='og:url' content='https://www.linner.asia/p/maven-%E9%AB%98%E7%BA%A7/'>
+<meta property='og:url' content='https://blog.linner.asia/p/maven-%E9%AB%98%E7%BA%A7/'>
 <meta property='og:site_name' content='Linner&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='项目管理' /><meta property='article:tag' content='Maven' /><meta property='article:published_time' content='2023-02-27T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-02-27T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Maven 高级">
@@ -55,8 +56,6 @@ maven-dao模块的pom.xml中：
 Maven指定了一系列规则来解决依赖冲突问题。
  特殊优先：同级下（依赖树中同个父节点的依赖为同级，即同个pom.xml下），配置了相同资源的不同版本，后配置的覆盖先配置。 路径优先：依赖树中，层级越浅，优先级越高；层级越深，优先级越低。 声明优先：资源在相同层级被依赖时，配置顺序靠前的覆盖配置顺序靠后的。即，谁先声明用谁。   注意：依赖的优先级只对当前项目起作用。即，当前项目选择的依赖版本并不会影响到依赖中相同资源不同版本的依赖。 最终选择的依赖结果根据Idea中Mavem面板的依赖树视图。">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
     </head>
     <body class="
     article-page

@@ -18,9 +18,10 @@ request.getCookies()   创建Maven web项目。
 
 <title>会话跟踪技术 —— Cookie 和 Session</title>
 
-<link rel='canonical' href='https://www.linner.asia/p/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF-cookie-%E5%92%8C-session/'>
+<link rel='canonical' href='https://blog.linner.asia/p/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF-cookie-%E5%92%8C-session/'>
 
-<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='会话跟踪技术 —— Cookie 和 Session'>
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+<meta property='og:title' content='会话跟踪技术 —— Cookie 和 Session'>
 <meta property='og:description' content='会话跟踪技术 会话是指一个终端用户与交互系统进行通讯的过程，例如从浏览器发出请求到服务端响应数据给前端这个过程即为一个会话。
 会话跟踪指的是一种维护浏览器状态的方法。服务器会收到多个请求，这多个请求可能来自多个浏览器。服务器需要识别多次请求是否来自于同一浏览器，以便在同一次会话的多次请求间共享数据。
 浏览器和服务器不支持数据共享的原因：
@@ -34,7 +35,7 @@ response.addCookie(cookie)   从客户端获取Cookie（使用Request对象）�
 request.getCookies()   创建Maven web项目。
 项目依赖：
 &amp;lt;packaging&amp;gt;war&amp;lt;/packaging&amp;gt; &amp;lt;dependencies&amp;gt; &amp;lt;!--servlet--&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;javax.servlet&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;javax.servlet-api&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.1.0&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;provided&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; &amp;lt;build&amp;gt; &amp;lt;pluginManagement&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.tomcat.maven&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;tomcat7-maven-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.2&amp;lt;/version&amp;gt; &amp;lt;/plugin&amp;gt; &amp;lt;/plugins&amp;gt; &amp;lt;/pluginManagement&amp;gt; &amp;lt;/build&amp;gt; 发送 Cookie 发送Cookie使用的是HttpServletResponse对象提供的addCookie()：'>
-<meta property='og:url' content='https://www.linner.asia/p/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF-cookie-%E5%92%8C-session/'>
+<meta property='og:url' content='https://blog.linner.asia/p/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF-cookie-%E5%92%8C-session/'>
 <meta property='og:site_name' content='Linner&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='JavaWeb' /><meta property='article:tag' content='Tomcat' /><meta property='article:published_time' content='2022-09-23T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-09-23T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="会话跟踪技术 —— Cookie 和 Session">
@@ -52,8 +53,6 @@ request.getCookies()   创建Maven web项目。
 项目依赖：
 &amp;lt;packaging&amp;gt;war&amp;lt;/packaging&amp;gt; &amp;lt;dependencies&amp;gt; &amp;lt;!--servlet--&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;javax.servlet&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;javax.servlet-api&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.1.0&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;provided&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; &amp;lt;build&amp;gt; &amp;lt;pluginManagement&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.tomcat.maven&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;tomcat7-maven-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.2&amp;lt;/version&amp;gt; &amp;lt;/plugin&amp;gt; &amp;lt;/plugins&amp;gt; &amp;lt;/pluginManagement&amp;gt; &amp;lt;/build&amp;gt; 发送 Cookie 发送Cookie使用的是HttpServletResponse对象提供的addCookie()：">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
     </head>
     <body class="
     article-page

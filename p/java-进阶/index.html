@@ -19,9 +19,10 @@ Student student = new Student(); Class clazz = student.getClass();     以上三
 
 <title>Java 进阶</title>
 
-<link rel='canonical' href='https://www.linner.asia/p/java-%E8%BF%9B%E9%98%B6/'>
+<link rel='canonical' href='https://blog.linner.asia/p/java-%E8%BF%9B%E9%98%B6/'>
 
-<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Java 进阶'>
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+<meta property='og:title' content='Java 进阶'>
 <meta property='og:description' content='反射 反射是Java中一种用于动态获取类或对象的信息以及动态调用对象方法的功能机制。在运行状态中，对于任意一个类，使用反射可以获取这个类的所有属性和方法；对于任意一个对象，使用反射能够调用它的任意属性和方法。利用反射可以无视对象的修饰符，调用类里面的内容。利用反射可以跟配置文件结合起来使用，把要创建的对象信息和方法写在配置文件中。
 使用反射包含以下步骤：
  获取class字节码文件对象。 利用反射可以操作类或对象的信息有：  构造方法（获取、创建对象） 成员变量（获取、赋值） 成员方法（获取、运行）    获取字节码文件对象 Java中的每个类都是一个Class对象（字节码文件对象）。获取字节码文件对象共有以下三种方式：
@@ -36,7 +37,7 @@ Student student = new Student(); Class clazz = student.getClass();     以上三
   获取了Class对象后就可以获取到该类的各种信息。
 获取构造方法 获取构造方法即为获取Constructor对象。
    方法名 说明     Constructor&amp;lt;?&amp;gt;[] getConstructors() 获得所有的公共构造方法（public）   Constructor&amp;lt;?&amp;gt;[] getDeclaredConstructors() 获得所有的构造方法（包括private）    Constructor&amp;lt;T&amp;gt; getConstructor(Class&amp;lt;?'>
-<meta property='og:url' content='https://www.linner.asia/p/java-%E8%BF%9B%E9%98%B6/'>
+<meta property='og:url' content='https://blog.linner.asia/p/java-%E8%BF%9B%E9%98%B6/'>
 <meta property='og:site_name' content='Linner&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:published_time' content='2023-02-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-02-14T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Java 进阶">
@@ -55,8 +56,6 @@ Student student = new Student(); Class clazz = student.getClass();     以上三
 获取构造方法 获取构造方法即为获取Constructor对象。
    方法名 说明     Constructor&amp;lt;?&amp;gt;[] getConstructors() 获得所有的公共构造方法（public）   Constructor&amp;lt;?&amp;gt;[] getDeclaredConstructors() 获得所有的构造方法（包括private）    Constructor&amp;lt;T&amp;gt; getConstructor(Class&amp;lt;?">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
     </head>
     <body class="
     article-page

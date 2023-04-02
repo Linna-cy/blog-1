@@ -11,16 +11,17 @@ package filter; import javax.servlet.*; import javax.servlet.annotation.WebFilte
 
 <title>Filter 过滤器</title>
 
-<link rel='canonical' href='https://www.linner.asia/p/filter-%E8%BF%87%E6%BB%A4%E5%99%A8/'>
+<link rel='canonical' href='https://blog.linner.asia/p/filter-%E8%BF%87%E6%BB%A4%E5%99%A8/'>
 
-<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><meta property='og:title' content='Filter 过滤器'>
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+<meta property='og:title' content='Filter 过滤器'>
 <meta property='og:description' content='Filter 概述 Filter 表示过滤器，是 JavaWeb 三大组件(Servlet、Filter、Listener)之一。
 过滤器可以把对资源的请求拦截下来，从而实现一些特殊的功能。设置 Filter 会在访问资源之前会先经过 Filter，将资源拦截，从而实现权限控制、统一编码处理、敏感字符处理等功能。
 过滤器Filter是在请求进入容器后，但在进入Servlet之前进行预处理。
 进行 Filter 开发分成以下三步实现：
   定义类，实现 Filter接口，并重写其所有方法：
 package filter; import javax.servlet.*; import javax.servlet.annotation.WebFilter; import java.io.IOException; // 拦截的路径，这里 &amp;#34;/*&amp;#34; 拦截了项目中所有资源请求 @WebFilter(&amp;#34;/*&amp;#34;) public class FilterDemo implements Filter { // Filter的初始化方法  @Override public void init(FilterConfig filterConfig) throws ServletException { // ...  } // Filter的操作方法，在init后执行  @Override public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException { // ...  } // 销毁Filter执行的方法  @Override public void destroy() { // .'>
-<meta property='og:url' content='https://www.linner.asia/p/filter-%E8%BF%87%E6%BB%A4%E5%99%A8/'>
+<meta property='og:url' content='https://blog.linner.asia/p/filter-%E8%BF%87%E6%BB%A4%E5%99%A8/'>
 <meta property='og:site_name' content='Linner&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='JavaWeb' /><meta property='article:tag' content='Tomcat' /><meta property='article:published_time' content='2022-09-25T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-09-25T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Filter 过滤器">
@@ -31,8 +32,6 @@ package filter; import javax.servlet.*; import javax.servlet.annotation.WebFilte
   定义类，实现 Filter接口，并重写其所有方法：
 package filter; import javax.servlet.*; import javax.servlet.annotation.WebFilter; import java.io.IOException; // 拦截的路径，这里 &amp;#34;/*&amp;#34; 拦截了项目中所有资源请求 @WebFilter(&amp;#34;/*&amp;#34;) public class FilterDemo implements Filter { // Filter的初始化方法  @Override public void init(FilterConfig filterConfig) throws ServletException { // ...  } // Filter的操作方法，在init后执行  @Override public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException { // ...  } // 销毁Filter执行的方法  @Override public void destroy() { // .">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
     </head>
     <body class="
     article-page
