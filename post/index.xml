@@ -11526,28 +11526,6 @@ QUIT
 &lt;p&gt;安装git：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo apt install git
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;
-&lt;!-- 如果安装速度慢，可以换成`gitee`：
-
-```bash
-vim install.sh
-```
-
-```text
-# Default settings
-ZSH=${ZSH:-~/.oh-my-zsh}
-REPO=${REPO:-ohmyzsh/ohmyzsh}
-REMOTE=${REMOTE:-https://github.com/${REPO}.git}
-BRANCH=${BRANCH:-master}
-```
-
-将2，3行改为：
-
-```text
-REPO=${REPO:-mirrors/oh-my-zsh}
-REMOTE=${REMOTE:-https://gitee.com/${REPO}.git}
-```
-
-然后`:wq`保存退出。重新执行install.sh。 --&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;配置zsh&#34;&gt;配置zsh&lt;/h1&gt;
 &lt;p&gt;zsh的配置文件为：&lt;code&gt;~/.zshrc&lt;/code&gt;。&lt;/p&gt;
@@ -11556,7 +11534,6 @@ REMOTE=${REMOTE:-https://gitee.com/${REPO}.git}
 &lt;p&gt;主题配置项为：&lt;code&gt;ZSH_THEME&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;默认主题配置为：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;ZSH_THEME=&amp;#34;robbyrussell&amp;#34;
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;可以修改为其中之一：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;ZSH_THEME=&amp;#34;ys&amp;#34;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;ZSH_THEME=&amp;#34;geoffgarside&amp;#34;
