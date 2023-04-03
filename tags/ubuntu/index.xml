@@ -276,20 +276,28 @@ WantedBy&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;multi-user.targe
 &lt;p&gt;安装git：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;sudo apt install git
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/blockquote&gt;
-&lt;p&gt;如果安装速度慢，可以换成&lt;code&gt;gitee&lt;/code&gt;：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;vim install.sh
+&lt;!-- 如果安装速度慢，可以换成`gitee`：
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;# Default settings
+```bash
+vim install.sh
+```
+
+```text
+# Default settings
 ZSH=${ZSH:-~/.oh-my-zsh}
 REPO=${REPO:-ohmyzsh/ohmyzsh}
 REMOTE=${REMOTE:-https://github.com/${REPO}.git}
 BRANCH=${BRANCH:-master}
+```
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;将2，3行改为：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;REPO=${REPO:-mirrors/oh-my-zsh}
+将2，3行改为：
+
+```text
+REPO=${REPO:-mirrors/oh-my-zsh}
 REMOTE=${REMOTE:-https://gitee.com/${REPO}.git}
+```
 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;然后&lt;code&gt;:wq&lt;/code&gt;保存退出。重新执行install.sh。&lt;/p&gt;
+然后`:wq`保存退出。重新执行install.sh。 --&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;配置zsh&#34;&gt;配置zsh&lt;/h1&gt;
 &lt;p&gt;zsh的配置文件为：&lt;code&gt;~/.zshrc&lt;/code&gt;。&lt;/p&gt;
@@ -301,7 +309,6 @@ REMOTE=${REMOTE:-https://gitee.com/${REPO}.git}
 
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;可以修改为其中之一：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;ZSH_THEME=&amp;#34;ys&amp;#34;
-
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;ZSH_THEME=&amp;#34;geoffgarside&amp;#34;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;还可以访问&lt;a class=&#34;link&#34; href=&#34;https://github.com/ohmyzsh/ohmyzsh/wiki/Themes&#34;  title=&#34;https://github.com/ohmyzsh/ohmyzsh/wiki/Themes&#34;
      target=&#34;_blank&#34; rel=&#34;noopener&#34;
