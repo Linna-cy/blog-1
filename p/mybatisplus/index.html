@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='简介 MybatisPlus（简称MP）是基于MyBatis框架基础上开发的增强型工具（依然可以使用MyBatis里的工具），旨在简化开发、提供效率。更多详情请访问MyBatisPlus官网（官网有两个地址，https://mp.baomidou.com/或https://mybatis.plus）。
+基于Spring使用MybatisPlus，在构建Spring工程时需要勾选MySQL和MyBatis相关技术。由于Spring并未收录MP，所以需要手动导入坐标：
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.baomidou&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mybatis-plus-boot-starter&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.4.1&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;!-- 可选： --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.alibaba&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;druid&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.1.16&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; 在application.yml（配置文件）中配置数据库信息：
+spring: datasource: type: com.alibaba.druid.pool.DruidDataSource driver-class-name: com.mysql.cj.jdbc.Driver url: jdbc:mysql://localhost:3306/mybatisplus_db?serverTimezone=Asia/Shanghai  username: root password: root  DAO接口 使用MP编写DAO接口，可以直接继承BaseMapper&amp;lt;&amp;gt;（该接口内置了许多DAO方法）：
+@Mapper public interface UserDao extends BaseMapper&amp;lt;User&amp;gt;{ } 编写引导类：
+@SpringBootApplication public class MybatisplusApplication { public static void main(String[] args) { SpringApplication.run(MybatisplusApplication.class, args); } } DAO接口要想被容器扫描到，有两种方案：
+ 在DAO接口上添加@Mapper注解，并且确保DAO处在引导类所在包或其子包中。 在引导类上添加@MapperScan注解，其属性为所要扫描的DAO所在包：@MapperScan(&amp;quot;com.linner.dao&amp;quot;)（可以不写@Mapper）。  '>
+
+
+<title>MyBatisPlus</title>
+
+<link rel='canonical' href='https://blog.linner.asia/p/mybatisplus/'>
+
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+<meta property='og:title' content='MyBatisPlus'>
+<meta property='og:description' content='简介 MybatisPlus（简称MP）是基于MyBatis框架基础上开发的增强型工具（依然可以使用MyBatis里的工具），旨在简化开发、提供效率。更多详情请访问MyBatisPlus官网（官网有两个地址，https://mp.baomidou.com/或https://mybatis.plus）。
+基于Spring使用MybatisPlus，在构建Spring工程时需要勾选MySQL和MyBatis相关技术。由于Spring并未收录MP，所以需要手动导入坐标：
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.baomidou&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mybatis-plus-boot-starter&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.4.1&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;!-- 可选： --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.alibaba&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;druid&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.1.16&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; 在application.yml（配置文件）中配置数据库信息：
+spring: datasource: type: com.alibaba.druid.pool.DruidDataSource driver-class-name: com.mysql.cj.jdbc.Driver url: jdbc:mysql://localhost:3306/mybatisplus_db?serverTimezone=Asia/Shanghai  username: root password: root  DAO接口 使用MP编写DAO接口，可以直接继承BaseMapper&amp;lt;&amp;gt;（该接口内置了许多DAO方法）：
+@Mapper public interface UserDao extends BaseMapper&amp;lt;User&amp;gt;{ } 编写引导类：
+@SpringBootApplication public class MybatisplusApplication { public static void main(String[] args) { SpringApplication.run(MybatisplusApplication.class, args); } } DAO接口要想被容器扫描到，有两种方案：
+ 在DAO接口上添加@Mapper注解，并且确保DAO处在引导类所在包或其子包中。 在引导类上添加@MapperScan注解，其属性为所要扫描的DAO所在包：@MapperScan(&amp;quot;com.linner.dao&amp;quot;)（可以不写@Mapper）。  '>
+<meta property='og:url' content='https://blog.linner.asia/p/mybatisplus/'>
+<meta property='og:site_name' content='Linner&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='数据库' /><meta property='article:published_time' content='2023-02-28T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-02-28T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="MyBatisPlus">
+<meta name="twitter:description" content="简介 MybatisPlus（简称MP）是基于MyBatis框架基础上开发的增强型工具（依然可以使用MyBatis里的工具），旨在简化开发、提供效率。更多详情请访问MyBatisPlus官网（官网有两个地址，https://mp.baomidou.com/或https://mybatis.plus）。
+基于Spring使用MybatisPlus，在构建Spring工程时需要勾选MySQL和MyBatis相关技术。由于Spring并未收录MP，所以需要手动导入坐标：
+&amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.baomidou&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;mybatis-plus-boot-starter&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.4.1&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;!-- 可选： --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.alibaba&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;druid&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.1.16&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; 在application.yml（配置文件）中配置数据库信息：
+spring: datasource: type: com.alibaba.druid.pool.DruidDataSource driver-class-name: com.mysql.cj.jdbc.Driver url: jdbc:mysql://localhost:3306/mybatisplus_db?serverTimezone=Asia/Shanghai  username: root password: root  DAO接口 使用MP编写DAO接口，可以直接继承BaseMapper&amp;lt;&amp;gt;（该接口内置了许多DAO方法）：
+@Mapper public interface UserDao extends BaseMapper&amp;lt;User&amp;gt;{ } 编写引导类：
+@SpringBootApplication public class MybatisplusApplication { public static void main(String[] args) { SpringApplication.run(MybatisplusApplication.class, args); } } DAO接口要想被容器扫描到，有两种方案：
+ 在DAO接口上添加@Mapper注解，并且确保DAO处在引导类所在包或其子包中。 在引导类上添加@MapperScan注解，其属性为所要扫描的DAO所在包：@MapperScan(&amp;quot;com.linner.dao&amp;quot;)（可以不写@Mapper）。  ">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu0c2331fe09320137a3bd1d4b5cc68791_142496_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Linner&#39;s Blog</a></h1>
+            <h2 class="site-description">随便看看就行，副标题暂时还没想好</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Linna-cy'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/mybatisplus/">MyBatisPlus</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Feb 28, 2023</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="简介">简介</h1>
+<p>MybatisPlus（简称MP）是基于MyBatis框架基础上开发的增强型工具（依然可以使用MyBatis里的工具），旨在简化开发、提供效率。更多详情请访问<a class="link" href="https://mp.baomidou.com/"  target="_blank" rel="noopener"
+    >MyBatisPlus官网</a>（官网有两个地址，<a class="link" href="https://mp.baomidou.com/"  target="_blank" rel="noopener"
+    >https://mp.baomidou.com/</a>或<a class="link" href="https://mybatis.plus"  target="_blank" rel="noopener"
+    >https://mybatis.plus</a>）。</p>
+<p>基于Spring使用MybatisPlus，在构建Spring工程时需要勾选MySQL和MyBatis相关技术。由于Spring并未收录MP，所以需要手动导入坐标：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency&gt;</span>
+    <span style="color:#f92672">&lt;groupId&gt;</span>com.baomidou<span style="color:#f92672">&lt;/groupId&gt;</span>
+    <span style="color:#f92672">&lt;artifactId&gt;</span>mybatis-plus-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;version&gt;</span>3.4.1<span style="color:#f92672">&lt;/version&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
+<span style="color:#75715e">&lt;!-- 可选： --&gt;</span>
+<span style="color:#f92672">&lt;dependency&gt;</span>
+    <span style="color:#f92672">&lt;groupId&gt;</span>com.alibaba<span style="color:#f92672">&lt;/groupId&gt;</span>
+    <span style="color:#f92672">&lt;artifactId&gt;</span>druid<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;version&gt;</span>1.1.16<span style="color:#f92672">&lt;/version&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
+</code></pre></div><p>在<code>application.yml</code>（配置文件）中配置数据库信息：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">spring</span>:
+  <span style="color:#f92672">datasource</span>:
+    <span style="color:#f92672">type</span>: <span style="color:#ae81ff">com.alibaba.druid.pool.DruidDataSource</span>
+    <span style="color:#f92672">driver-class-name</span>: <span style="color:#ae81ff">com.mysql.cj.jdbc.Driver</span>
+    <span style="color:#f92672">url</span>: <span style="color:#ae81ff">jdbc:mysql://localhost:3306/mybatisplus_db?serverTimezone=Asia/Shanghai </span>
+    <span style="color:#f92672">username</span>: <span style="color:#ae81ff">root</span>
+    <span style="color:#f92672">password</span>: <span style="color:#ae81ff">root</span>
+</code></pre></div><hr>
+<h1 id="dao接口">DAO接口</h1>
+<p>使用MP编写DAO接口，可以直接继承<code>BaseMapper&lt;&gt;</code>（该接口内置了许多DAO方法）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Mapper</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">UserDao</span> <span style="color:#66d9ef">extends</span> BaseMapper<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;{</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>编写引导类：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@SpringBootApplication</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MybatisplusApplication</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        SpringApplication<span style="color:#f92672">.</span><span style="color:#a6e22e">run</span><span style="color:#f92672">(</span>MybatisplusApplication<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">,</span> args<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+<span style="color:#f92672">}</span>
+</code></pre></div><p>DAO接口要想被容器扫描到，有两种方案：</p>
+<ol>
+<li>在DAO接口上添加<code>@Mapper</code>注解，并且确保DAO处在引导类所在包或其子包中。</li>
+<li>在引导类上添加<code>@MapperScan</code>注解，其属性为所要扫描的DAO所在包：<code>@MapperScan(&quot;com.linner.dao&quot;)</code>（可以不写<code>@Mapper</code>）。</li>
+</ol>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/java/">Java</a>
+        
+            <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+       
+</article>
+
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/mybatis/">
+        
+        
+
+        MyBatis</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/druid-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/">
+        
+        
+
+        Druid 数据库连接池</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/jdbc/">
+        
+        
+
+        JDBC</a>
+</div>
+</section>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2022 - 
+        
+        2023 Linner&#39;s Blog
+
+        <span style="padding-left: 5px;padding-right: 5px;">|</span>
+
+        <a href="https://beian.miit.gov.cn/" target="_blank" >粤ICP备2022125602号-1</a>
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

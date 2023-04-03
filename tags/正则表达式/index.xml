@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>正则表达式 on Linner&#39;s Blog</title>
+        <link>https://blog.linner.asia/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+        <description>Recent content in 正则表达式 on Linner&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh</language>
+        <lastBuildDate>Wed, 12 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.linner.asia/tags/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Python 进阶 — 正则表达式篇</title>
+        <link>https://blog.linner.asia/p/python-%E8%BF%9B%E9%98%B6-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%AF%87/</link>
+        <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.linner.asia/p/python-%E8%BF%9B%E9%98%B6-%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%AF%87/</guid>
+        <description>&lt;h1 id=&#34;正则表达式语法--python&#34;&gt;正则表达式语法 —— Python&lt;/h1&gt;
+&lt;p&gt;正则表达式是一个特殊的字符序列，能方便地检查一个字符串是否与某种模式匹配。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;正则表达式可以拼接。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;正则表达式可以包含普通或者特殊字符。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;绝大部分普通字符，是最简单的正则表达式。它们就匹配自身。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;特殊字符既可以表示它的普通含义， 也可以影响它旁边的正则表达式的解释。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重复修饰符（&lt;code&gt;*&lt;/code&gt;、&lt;code&gt;+&lt;/code&gt;、&lt;code&gt;?&lt;/code&gt;、&lt;code&gt;{m,n}&lt;/code&gt;, 等）不能直接嵌套。避免了非贪婪后缀 &lt;code&gt;?&lt;/code&gt; 修饰符，和其他实现中的修饰符产生的多义性。要应用一个内层重复嵌套，可以使用括号。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;特殊字符&#34;&gt;特殊字符&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;序列&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;.&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;（点）在默认模式，匹配除了换行的任意字符。                                                                                                                                                                                                                                &lt;br&gt;如果指定了标签 &lt;code&gt;DOTALL&lt;/code&gt;，它将匹配包括换行符的任意字符。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;转义特殊字符（允许你匹配 &lt;code&gt;&#39;*&#39;&lt;/code&gt;、&lt;code&gt;&#39;?&#39;&lt;/code&gt;，或者其他正则表达式中使用的特殊字符），或者表示一个特殊序列。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;[…]&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;用于表示一个字符集合。&lt;br&gt; 字符可以单独列出：&lt;code&gt;[abc]&lt;/code&gt;，匹配 &lt;code&gt;&#39;a&#39;&lt;/code&gt;、&lt;code&gt;&#39;b&#39;&lt;/code&gt;、&lt;code&gt;&#39;c&#39;&lt;/code&gt;。&lt;br&gt;可以表示字符范围，通过用 &lt;code&gt;&#39;-&#39;&lt;/code&gt; 将两个字符连起来：&lt;code&gt;[a-z]&lt;/code&gt; 将匹配任何小写 ASCII 字符； 可以指定多个范围：&lt;code&gt;[a-zA-Z]&lt;/code&gt; 将匹配所有英文字符。 如果 &lt;code&gt;-&lt;/code&gt; 进行了转义 （比如 &lt;code&gt;[a-z]&lt;/code&gt;）或者它的位置在首位或者末尾（如 &lt;code&gt;[-a]&lt;/code&gt; 或 &lt;code&gt;[a-]&lt;/code&gt;），它就只表示普通字符 &lt;code&gt;&#39;-&#39;&lt;/code&gt;。  &lt;br&gt;特殊字符在集合中，失去它的特殊含义：&lt;code&gt;[(+*)]&lt;/code&gt; 只会匹配这几个文法字符 &lt;code&gt;&#39;(&#39;&lt;/code&gt;、&lt;code&gt;&#39;+&#39;&lt;/code&gt;、&lt;code&gt;&#39;*&#39;&lt;/code&gt; 或 &lt;code&gt;&#39;)&#39;&lt;/code&gt;。 &lt;br&gt;字符类如 &lt;code&gt;\w&lt;/code&gt; 或者 &lt;code&gt;\S&lt;/code&gt; 在集合内可以接受，它们可以匹配的字符由 &lt;code&gt;ASCII&lt;/code&gt; 或者 &lt;code&gt;LOCALE&lt;/code&gt; 模式决定。&lt;br&gt; 不在集合范围内的字符可以通过取反（&lt;code&gt;&#39;^&#39;&lt;/code&gt; 作为首字符）来进行匹配：&lt;code&gt;[^a]&lt;/code&gt; 将匹配除了 &lt;code&gt;&#39;a&#39;&lt;/code&gt; 之外的所有字符。 &lt;code&gt;&#39;^&#39;&lt;/code&gt; 如果不在集合首位，就没有特殊含义。&lt;br&gt;在集合内要匹配一个字符 &lt;code&gt;&#39;]&#39;&lt;/code&gt;，有两种方法，要么将它进行转义，要么就把它放到集合首位（如 &lt;code&gt;[()[]{}]&lt;/code&gt; 和 &lt;code&gt;[]()[{}]&lt;/code&gt;）。                                                                                      &lt;br&gt;嵌套集合和集合操作支持可能在未来添加。如果有多以的情况发生，将会抛出 &lt;code&gt;FutureWarning&lt;/code&gt;。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;|&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;A|B&lt;/code&gt;， &lt;code&gt;A&lt;/code&gt; 和 &lt;code&gt;B&lt;/code&gt; 可以是任意正则表达式，创建一个正则表达式，匹配 &lt;code&gt;A&lt;/code&gt; 或者 &lt;code&gt;B&lt;/code&gt;。任意个正则表达式可以用 &lt;code&gt;&#39;|&#39;&lt;/code&gt; 连接。它可以在集合或组合内使用。 &lt;code&gt;&#39;|&#39;&lt;/code&gt; 操作符绝不贪婪：扫描目标字符串时，由 &lt;code&gt;&#39;|&#39;&lt;/code&gt; 分隔开的正则样式从左到右进行匹配。当一个样式完全匹配时，这个分支就被接受。即，一旦 &lt;code&gt;A&lt;/code&gt; 匹配成功， &lt;code&gt;B&lt;/code&gt; 就不再进行匹配，即便它能产生一个更好的匹配。 如果要匹配 &lt;code&gt;&#39;|&#39;&lt;/code&gt; 字符，使用 &lt;code&gt;|&lt;/code&gt;， 或者把它包含在字符集里 &lt;code&gt;[|]&lt;/code&gt;。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;(…)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;（组合），匹配括号内的任意正则表达式，并标识出组合的开始和结尾。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;定位符&#34;&gt;定位符&lt;/h3&gt;
+&lt;p&gt;定位符用来描述字符串或单词的边界。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;序列&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;^&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;（插入符号）匹配字符串的开头， 并且在 &lt;code&gt;MULTILINE&lt;/code&gt; 模式也匹配换行后的首个符号。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;$&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配字符串尾或者在字符串尾的换行符的前一个字符，在 &lt;code&gt;MULTILINE&lt;/code&gt; 模式下也会匹配换行符之前的文本。&lt;br&gt;在 &lt;code&gt;&#39;foo1\nfoo2\n&#39;&lt;/code&gt; 中搜索 &lt;code&gt;foo.$&lt;/code&gt;，通常匹配 &lt;code&gt;&#39;foo2&#39;&lt;/code&gt;，但在 &lt;code&gt;MULTILINE&lt;/code&gt; 模式下可以匹配到 &lt;code&gt;&#39;foo1&#39;&lt;/code&gt;。&lt;br&gt; 在 &lt;code&gt;&#39;foo\n&#39;&lt;/code&gt; 中搜索 &lt;code&gt;$&lt;/code&gt; 会找到两个（空的）匹配：一个在换行符之前，一个在字符串的末尾。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\A&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;只匹配字符串的开始。相当于默认模式下的 &lt;code&gt;^&lt;/code&gt;。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\b&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配一个单词边界。即，匹配空字符串，但只在单词开始或结尾的位置。&lt;br&gt;通常 &lt;code&gt;\b&lt;/code&gt; 定义为 &lt;code&gt;\w&lt;/code&gt; 和 &lt;code&gt;\W&lt;/code&gt; 字符之间，或者 &lt;code&gt;\w&lt;/code&gt; 和字符串开始/结尾的边界。&lt;br&gt;如果使用了 &lt;code&gt;LOCALE&lt;/code&gt; 标志，则词的边界由当前语言区域设置。&lt;br&gt; 在字符集合内表示退格（如 &lt;code&gt;[\b]&lt;/code&gt;）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\B&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;非单词边界匹配。即，匹配除了单词边界外的任何其他位置。&lt;code&gt;\B&lt;/code&gt; 是 &lt;code&gt;\b&lt;/code&gt; 的取非。&lt;br&gt;如果使用了 &lt;code&gt;LOCALE&lt;/code&gt; 标志，则词的边界由当前语言区域设置。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\Z&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;只匹配字符串尾。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;重复修饰符限定符&#34;&gt;重复修饰符（限定符）&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;{m}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;对其之前的正则式指定匹配 m 个重复；少于 m 的话就会导致匹配失败。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;贪婪修饰符：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;*&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;对它前面的正则式匹配 0 到任意次重复， 尽量多地匹配字符串。
+等价于：&lt;code&gt;{0,}&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;+&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;对它前面的子表达式匹配 1 到任意次重复， 尽量多地匹配字符串。
+等价于：&lt;code&gt;{1,}&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;?&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;对它前面的子表达式匹配 0 到 1 次重复， 尽量多地匹配字符串。
+等价于：&lt;code&gt;{0,1}&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;{m,}&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;对它前面的子表达式进行 m 到任意次重复， 尽量多地匹配字符串。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;{m,n}&lt;/code&gt;（中间不要有空白字符）&lt;/p&gt;
+&lt;p&gt;对它前面的子表达式进行 m 到 n 次匹配，在 m 和 n 之间取尽量多。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;非贪婪修饰符：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;*?&lt;/code&gt;、&lt;code&gt;+?&lt;/code&gt;、&lt;code&gt;??&lt;/code&gt;、&lt;code&gt;{m,}?&lt;/code&gt;、&lt;code&gt;{m,n}?&lt;/code&gt;：&lt;/p&gt;
+&lt;p&gt;在修饰符之后添加 &lt;code&gt;?&lt;/code&gt; 将使样式以非贪婪方式，或者 :dfn: 最小方式进行匹配； 尽量少的字符将会被匹配。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;扩展标记法&#34;&gt;扩展标记法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;(?…)``&#39;?&#39;&lt;/code&gt; 仅跟随 &lt;code&gt;&#39;(&#39;&lt;/code&gt; 并无含义。&lt;code&gt;&#39;?&#39;&lt;/code&gt; 后面的第一个字符决定了这个构建采用什么样的语法。这种扩展通常并不创建新的组合； &lt;code&gt;(?P&amp;lt;name&amp;gt;...)&lt;/code&gt; 是唯一的例外。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;(?aiLmsux)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;在 &lt;code&gt;(?&lt;/code&gt; 后带 &lt;code&gt;&#39;a&#39;&lt;/code&gt;、 &lt;code&gt;&#39;i&#39;&lt;/code&gt;、&lt;code&gt;&#39;L&#39;&lt;/code&gt;、&lt;code&gt;&#39;m&#39;&lt;/code&gt;、&lt;code&gt;&#39;s&#39;&lt;/code&gt;、&lt;code&gt;&#39;u&#39;&lt;/code&gt;、&lt;code&gt;&#39;x&#39;&lt;/code&gt; 中的一个或多个。&lt;code&gt;(?aimsx)&lt;/code&gt; 将会匹配空字符串。&lt;/p&gt;
+&lt;p&gt;这些字符代表内联标记（与 &lt;code&gt;re&lt;/code&gt; 模块中的 RegexFlag 标志常量对应）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&#39;a&#39;&lt;/code&gt; —— &lt;code&gt;re.A&lt;/code&gt; 模式；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&#39;i&#39;&lt;/code&gt; —— &lt;code&gt;re.I&lt;/code&gt; 模式；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&#39;L&#39;&lt;/code&gt; —— &lt;code&gt;re.L&lt;/code&gt; 模式；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&#39;m&#39;&lt;/code&gt; —— &lt;code&gt;re.M&lt;/code&gt; 模式；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&#39;s&#39;&lt;/code&gt; —— &lt;code&gt;re.S&lt;/code&gt; 模式；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&#39;u&#39;&lt;/code&gt; —— &lt;code&gt;re.U&lt;/code&gt; 模式；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&#39;x&#39;&lt;/code&gt; —— &lt;code&gt;re.X&lt;/code&gt; 模式。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;(?:…)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;正则括号的非捕获版本。 匹配在括号内的任何正则表达式，但该分组所匹配的子字符串不能在执行匹配后被获取或是之后在模式中被引用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;(?aiLmsux-imsx:…)``&#39;?&#39;&lt;/code&gt; 后面 &lt;code&gt;&#39;-&#39;&lt;/code&gt; 前面带 &lt;code&gt;&#39;a&#39;&lt;/code&gt;、 &lt;code&gt;&#39;i&#39;&lt;/code&gt;、&lt;code&gt;&#39;L&#39;&lt;/code&gt;、&lt;code&gt;&#39;m&#39;&lt;/code&gt;、&lt;code&gt;&#39;s&#39;&lt;/code&gt;、&lt;code&gt;&#39;u&#39;&lt;/code&gt;、&lt;code&gt;&#39;x&#39;&lt;/code&gt; 中的 0 个或多个。&lt;code&gt;&#39;-&#39;&lt;/code&gt; 后面 &lt;code&gt;&#39;:&#39;&lt;/code&gt; 前面带 &lt;code&gt;&#39;i&#39;&lt;/code&gt;、&lt;code&gt;&#39;m&#39;&lt;/code&gt;、&lt;code&gt;&#39;s&#39;&lt;/code&gt;、&lt;code&gt;&#39;x&#39;&lt;/code&gt; 中的一到多个。表示设置或者去除（&lt;code&gt;&#39;-&#39;&lt;/code&gt; 后指定去除的标记）相应标记。&lt;/p&gt;
+&lt;p&gt;与 &lt;code&gt;(?aiLmsux)&lt;/code&gt; 一样，这些字符分别代表了不同的内联标记。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&#39;a&#39;&lt;/code&gt;、&lt;code&gt;&#39;L&#39;&lt;/code&gt; 和 &lt;code&gt;&#39;u&#39;&lt;/code&gt; 作为内联标记是相互排斥的， 所以它们不能结合在一起，或者跟随 &lt;code&gt;&#39;-&#39;&lt;/code&gt; 。 当他们中的某个出现在内联组中，它就覆盖了括号组内的匹配模式。Python3.7 接受 &lt;code&gt;&#39;a&#39;&lt;/code&gt;、&lt;code&gt;&#39;L&#39;&lt;/code&gt; 和 &lt;code&gt;&#39;u&#39;&lt;/code&gt; 存在于一个组合。
+这种方式只覆盖组合内匹配，括号外的匹配模式不受影响。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;(?P&amp;lt;name&amp;gt;…)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;（命名组合）类似正则组合，但是匹配到的子串组在外部可以通过定义的 &lt;code&gt;name&lt;/code&gt; 来获取的（也可以通过数字获取）。组合名必须是有效的 Python 标识符，并且每个组合名只能用一个正则表达式定义，只能定义一次。
+命名组合可以在三种上下文中引用：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;引用组合 &amp;ldquo;quote&amp;rdquo; 的上下文&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;引用方法&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;在正则式自身内&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;(?P=quote)&lt;/code&gt; 或 &lt;code&gt;\1&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;处理匹配对象 &lt;code&gt;m&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;m.group(&#39;quote&#39;)&lt;/code&gt; 或 &lt;code&gt;m.end(&#39;quote&#39;)&lt;/code&gt;（等）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;传递到 &lt;code&gt;re.sub()&lt;/code&gt; 里的 &lt;code&gt;repl&lt;/code&gt; 参数中&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;\g&amp;lt;quote&amp;gt;&lt;/code&gt; 或 &lt;code&gt;\g&amp;lt;1&amp;gt;&lt;/code&gt; 或 &lt;code&gt;\1&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;(?P=name)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;反向引用一个命名组合；它匹配前面名为 &lt;code&gt;name&lt;/code&gt; 的命名组中匹配到的串同样的字串（如上所示）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;(?#…)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;注释，里面的内容会被忽略。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;(?=…)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;lookahead assertion，匹配 &lt;code&gt;…&lt;/code&gt; 的内容，但是并不消费样式的内容。如，&lt;code&gt;abc(?=def)&lt;/code&gt; 当 &lt;code&gt;&#39;abc&#39;&lt;/code&gt; 后面是 &lt;code&gt;&#39;def&#39;&lt;/code&gt; 的时候，才匹配 &lt;code&gt;&#39;abc&#39;&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;(?!…)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;negative lookahead assertion（前视取反），匹配 &lt;code&gt;…&lt;/code&gt; 不符合的情况。如，&lt;code&gt;abc(?!def)&lt;/code&gt; 当 &lt;code&gt;&#39;abc&#39;&lt;/code&gt; 后面不是 &lt;code&gt;&#39;def&#39;&lt;/code&gt; 的时候，才匹配 &lt;code&gt;&#39;abc&#39;&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;(?&amp;lt;=…)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;:dfn:positive lookbehind assertion（正向后视断定），匹配字符串的当前位置，它的前面匹配 &lt;code&gt;…&lt;/code&gt; 的内容到当前位置。如，&lt;code&gt;(?&amp;lt;=abc)def&lt;/code&gt; 当 &lt;code&gt;&#39;def&#39;&lt;/code&gt; 前面是 &lt;code&gt;&#39;abc&#39;&lt;/code&gt; 时匹配 &lt;code&gt;&#39;def&#39;&lt;/code&gt;，该样式是从 &lt;code&gt;&#39;d&#39;&lt;/code&gt; 开始往回搜索的。
+包含的匹配样式必须是定长的（ &lt;code&gt;abc&lt;/code&gt; 或 &lt;code&gt;a|b&lt;/code&gt; 是允许的，但是 &lt;code&gt;a*&lt;/code&gt; 和 &lt;code&gt;a{3,4}&lt;/code&gt; 不可以）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;(?&amp;lt;!…)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;negative lookbehind assertion （后视断定取非），匹配当前位置之前不是 &lt;code&gt;…&lt;/code&gt; 的样式。&lt;/p&gt;
+&lt;p&gt;包含的样式匹配必须是定长的。&lt;/p&gt;
+&lt;p&gt;由 negative lookbehind assertion 开始的样式可以从字符串搜索开始的位置进行匹配。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;(?(id/name)yes-pattern|no-pattern)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;如果给定的 &lt;code&gt;id&lt;/code&gt; 或 &lt;code&gt;name&lt;/code&gt; 存在，将会尝试匹配 &lt;code&gt;yes-pattern&lt;/code&gt; ，否则就尝试匹配 &lt;code&gt;no-pattern&lt;/code&gt;（&lt;code&gt;no-pattern&lt;/code&gt; 可选，可以被忽略）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;普通字符&#34;&gt;\+普通字符&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;\&lt;/code&gt; + （ASCII 数字或字母）：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;序列&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\number&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配数字代表的组合。每个正则表达式中的括号是一个组合，组合从 &lt;code&gt;1&lt;/code&gt; 开始编号。&lt;br&gt; 如：&lt;code&gt;(.+) \1&lt;/code&gt; 匹配 &lt;code&gt;&#39;the the&#39;&lt;/code&gt; 或者 &lt;code&gt;&#39;55 55&#39;&lt;/code&gt;。&lt;br&gt; 这个特殊序列只能用于匹配前面 99 个组合。&lt;br&gt; 如果 &lt;code&gt;number&lt;/code&gt; 的第一个数位是 0， 或者 &lt;code&gt;number&lt;/code&gt; 是三个八进制数，它将不会被看作是一个组合，而是八进制的数字值。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\A&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;只匹配字符串开始。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\b&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;（单词边界定位符）匹配空字符串，但只在单词开始或结尾的位置。&lt;br&gt; 在字符集合内表示退格（如 &lt;code&gt;[\b]&lt;/code&gt;）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\B&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;（非单词边界定位符）匹配空字符串，但不能在词的开头或者结尾。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\d&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;对于 Unicode（str）样式：&lt;br&gt; 匹配任何 Unicode 十进制数（就是在 Unicode 字符目录 [Nd] 里的字符，包括了 &lt;code&gt;[0-9]&lt;/code&gt; ，和很多其他的数字字符）。如果设置了 &lt;code&gt;ASCII&lt;/code&gt; 标志，就只匹配 &lt;code&gt;[0-9]&lt;/code&gt; 。&lt;br&gt; 对于8位（bytes）样式：&lt;br&gt; 匹配任何十进制数（&lt;code&gt;[0-9]&lt;/code&gt;）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\D&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配任何非十进制数字的字符（&lt;code&gt;\d&lt;/code&gt; 取非）。&lt;br&gt; 如果设置了 &lt;code&gt;ASCII&lt;/code&gt; 标志，就相当于 &lt;code&gt;[^0-9]&lt;/code&gt; 。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\s&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;对于 Unicode（str）样式：&lt;br&gt; 匹配任何 Unicode 空白字符（包括 &lt;code&gt;[ \t\n\r\f\v]&lt;/code&gt; ，还有很多其他字符，比如不同语言排版规则约定的不换行空格）。如果 &lt;code&gt;ASCII&lt;/code&gt; 被设置，就只匹配 &lt;code&gt;[ \t\n\r\f\v]&lt;/code&gt; 。&lt;br&gt;对于8位（bytes）样式：&lt;br&gt; 匹配ASCII中的空白字符（&lt;code&gt;[ \t\n\r\f\v]&lt;/code&gt;） 。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\S&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配任何非空白字符（&lt;code&gt;\s&lt;/code&gt; 取非）。&lt;br&gt; 如果设置了 &lt;code&gt;ASCII&lt;/code&gt; 标志，就相当于 &lt;code&gt;[^ \t\n\r\f\v]&lt;/code&gt; 。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\w&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;对于 Unicode（str）样式：&lt;br&gt; 匹配 Unicode 词语的字符，包含了可以构成词语的绝大部分字符，也包括数字和下划线。如果设置了 &lt;code&gt;ASCII&lt;/code&gt; 标志，就只匹配 &lt;code&gt;[a-zA-Z0-9_]&lt;/code&gt; 。&lt;br&gt;对于8位（bytes）样式：&lt;br&gt; 匹配 ASCII 字符中的数字和字母和下划线，就是 &lt;code&gt;[a-zA-Z0-9_]&lt;/code&gt; 。如果设置了 &lt;code&gt;LOCALE&lt;/code&gt; 标记，就匹配当前语言区域的数字和字母和下划线。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\W&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配非单词字符的字符（与 &lt;code&gt;\w&lt;/code&gt; 正相反）。&lt;br&gt; 如果使用了 &lt;code&gt;ASCII&lt;/code&gt; 标志，就等价于 &lt;code&gt;[^a-zA-Z0-9_]&lt;/code&gt;。&lt;br&gt;如果使用了 &lt;code&gt;LOCALE&lt;/code&gt; 标志，则会匹配当前区域中既非字母数字也非下划线的字符。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;\Z&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;只匹配字符串尾。&lt;br&gt;如果普通字符不是 ASCII 数位或者 ASCII 字母，那么正则样式将匹配第二个字符（如，&lt;code&gt;\$&lt;/code&gt; 匹配字符 &lt;code&gt;&#39;$&#39;&lt;/code&gt;）。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;绝大部分 Python 的标准转义字符也被正则表达式分析器支持：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-纯文本&#34; data-lang=&#34;纯文本&#34;&gt;\a      \b      \f      \n
+\N      \r      \t      \u
+\U      \v      \x      \\
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;code&gt;&#39;\u&#39;&lt;/code&gt;、&lt;code&gt;&#39;\U&#39;&lt;/code&gt; 和 &lt;code&gt;&#39;\N&#39;&lt;/code&gt; 转义序列只在 Unicode 模式中可被识别。 在 bytes 模式中它们会导致错误。未知的 ASCII 字母转义序列保留在未来使用，会被当作错误来处理。&lt;/p&gt;
+&lt;p&gt;八进制转义包含为一个有限形式。如果首位数字是 0， 或者有三个八进制数位，那么就认为它是八进制转义。其他的情况，就看作是组引用。对于字符串文本，八进制转义最多有三个数位长。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;re-模块&#34;&gt;re 模块&lt;/h1&gt;
+&lt;p&gt;Python 的 &lt;code&gt;re&lt;/code&gt; 模块提供了与 Perl 语言类似的正则表达式匹配操作。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;函数&#34;&gt;函数&lt;/h2&gt;
+&lt;h3 id=&#34;匹配一项&#34;&gt;匹配一项&lt;/h3&gt;
+&lt;p&gt;在 &lt;code&gt;re&lt;/code&gt; 模块中，有三个函数用于查找并返回一个匹配对象：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;re.match()&lt;/code&gt; —— 返回一个从字符串的起始位置匹配的对象。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;re.search()&lt;/code&gt; —— 返回整个字符串中任意位置第一个成功的匹配。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;re.fullmatch()&lt;/code&gt; —— 整个字符串与正则表达式完全匹配。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;match-函数&#34;&gt;match() 函数&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;re.match()&lt;/code&gt; 尝试从字符串的起始位置匹配一个模式，其语法如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;match(pattern, string, flags&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;参数：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;参数&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;pattern&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配的正则表达式。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;要匹配的字符串。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;flags&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;标志位，用于控制正则表达式的匹配方式。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;返回值：&lt;/p&gt;
+&lt;p&gt;匹配成功，&lt;code&gt;re.match()&lt;/code&gt; 函数返回一个匹配对象（&lt;code&gt;Match&lt;/code&gt;）；否则返回 &lt;code&gt;None&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;Example：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; re
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;match(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;abc&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;abcdefg&amp;#39;&lt;/span&gt;)  &lt;span style=&#34;color:#75715e&#34;&gt;# 在起始位置匹配&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;_sre&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;SRE_Match object; span&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;), match&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;abc&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;match(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;efg&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;abcdefg&amp;#39;&lt;/span&gt;)  &lt;span style=&#34;color:#75715e&#34;&gt;# 不在起始位置匹配&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;search-函数&#34;&gt;search() 函数&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;re.search()&lt;/code&gt; 扫描整个字符串并返回第一个成功的匹配，其语法如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;search(pattern, string, flags&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;参数用法与 &lt;code&gt;re.match()&lt;/code&gt; 类似。匹配成功，&lt;code&gt;re.search()&lt;/code&gt; 方法返回一个匹配对象（&lt;code&gt;Match&lt;/code&gt;）；否则返回 &lt;code&gt;None&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;Example：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; re
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;search(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;abc&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;abcdefg&amp;#39;&lt;/span&gt;)  &lt;span style=&#34;color:#75715e&#34;&gt;# 在起始位置匹配&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;_sre&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;SRE_Match object; span&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;), match&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;abc&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;search(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;efg&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;abcdefg&amp;#39;&lt;/span&gt;)  &lt;span style=&#34;color:#75715e&#34;&gt;# 不在起始位置匹配&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;_sre&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;SRE_Match object; span&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;7&lt;/span&gt;), match&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;efg&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h4 id=&#34;fullmatch-函数&#34;&gt;fullmatch() 函数&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;fullmatch()&lt;/code&gt; 将整个字符串与正则表达式匹配，其语法如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;fullmatch(pattern, string, flags&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;参数用法与 &lt;code&gt;re.match()&lt;/code&gt; 类似。如果 &lt;code&gt;string&lt;/code&gt; 与 &lt;code&gt;pattern&lt;/code&gt; 完全匹配，那么返回一个匹配对象（&lt;code&gt;Match&lt;/code&gt;）；否则返回 &lt;code&gt;None&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;Example：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; re
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;fullmatch(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;abc&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;abcdefg&amp;#39;&lt;/span&gt;)    &lt;span style=&#34;color:#75715e&#34;&gt;# 在起始位置匹配&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;fullmatch(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;abcdefg&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;abcdefg&amp;#39;&lt;/span&gt;)  &lt;span style=&#34;color:#75715e&#34;&gt;# 匹配整个字符串&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;_sre&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;SRE_Match object; span&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;7&lt;/span&gt;), match&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;abcdefg&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id=&#34;匹配多项&#34;&gt;匹配多项&lt;/h3&gt;
+&lt;p&gt;有两个函数用于查找并返回匹配的多个匹配对象：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;re.findall&lt;/code&gt; —— 在字符串的任意位置匹配，并返回一个包含了所有匹配对象的列表。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;re.finditer&lt;/code&gt; —— 在字符串的任意位置匹配，并返回一个包含了所有匹配对象的迭代器。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;finall&#34;&gt;finall()&lt;/h4&gt;
+&lt;p&gt;&lt;code&gt;finall()&lt;/code&gt; 在字符串中找到正则表达式所匹配的所有子串，其语法如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;findall(pattern, string, flags&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;参数：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;参数&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;pattern&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配的正则表达式。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;要匹配的字符串。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;flags&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;标志位，用于控制正则表达式的匹配方式。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;返回值：&lt;/p&gt;
+&lt;p&gt;返回一个列表，包含了所有匹配对象；如果没有任何匹配项，则返回空列表。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h4 id=&#34;finditer&#34;&gt;finditer()&lt;/h4&gt;
+&lt;p&gt;与 &lt;code&gt;finall()&lt;/code&gt; 类似，其语法如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;finditer(pattern, string, flags&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;该函数返回的是迭代器。&lt;/p&gt;
+&lt;p&gt;如果可能存在大量的匹配项的话，建议使用 &lt;code&gt;finditer()&lt;/code&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;split-正则分割&#34;&gt;split() 正则分割&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;re.split()&lt;/code&gt; 按照能够匹配的子串对字符串进行分割，其语法如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;split(pattern, string[, maxsplit&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, flags&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;])
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;参数：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;参数&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;pattern&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配的正则表达式。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;要匹配的字符串。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;maxsplit&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;最大分割次数，&lt;code&gt;maxsplit=1&lt;/code&gt; 分割一次，默认为 &lt;code&gt;0&lt;/code&gt;，不限制次数。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;flags&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;标志位，用于控制正则表达式的匹配方式。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;返回值：&lt;/p&gt;
+&lt;p&gt;返回一个用 &lt;code&gt;patterm&lt;/code&gt; 模式匹配的字符分割的字符串列表。如果查找不到任何匹配，则返回一个仅包含 &lt;code&gt;string&lt;/code&gt; 的列表。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;str&lt;/code&gt; 模块下也有一个 &lt;code&gt;split()&lt;/code&gt; 函数，但它并不支持正则分割。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;替换&#34;&gt;替换&lt;/h3&gt;
+&lt;p&gt;有两个替换函数：&lt;code&gt;re.sub()&lt;/code&gt; 和 &lt;code&gt;re.subn()&lt;/code&gt;。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sub(pattern, repl, string, count&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, flags&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
+re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;subn(pattern, repl, string, count&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, flags&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;参数：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;参数&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;pattern&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配的正则表达式。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;repl&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;替换内容，可以是字符串，也可以是函数。如果 &lt;code&gt;repl&lt;/code&gt; 为函数，只能有一个匹配对象作为参数。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;string&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;要匹配的字符串。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;count&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;最大替换次数。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;flags&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;标志位，用于控制正则表达式的匹配方式。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;code&gt;repl&lt;/code&gt; 替换掉 &lt;code&gt;string&lt;/code&gt; 中被 &lt;code&gt;pattern&lt;/code&gt; 匹配的字符。&lt;/p&gt;
+&lt;p&gt;返回值：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;re.sub()&lt;/code&gt; 返回一个替换后的字符串。如果 &lt;code&gt;string&lt;/code&gt; 中没有任何匹配项，则返回 &lt;code&gt;string&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;re.subn()&lt;/code&gt; 返回一个元组，包含了替换后的字符串和替换次数：&lt;code&gt;(str, n)&lt;/code&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;excape-转义函数&#34;&gt;excape() 转义函数&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;re.exvape()&lt;/code&gt; 函数可以转义参数 &lt;code&gt;pattern&lt;/code&gt; 中的特殊字符。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;exvape(pattern)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Example：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; print(re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;escape(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;http://www.python.org&amp;#39;&lt;/span&gt;))
+http:&lt;span style=&#34;color:#f92672&#34;&gt;//&lt;/span&gt;www\&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;python\&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;org
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Python3.3：&lt;code&gt;_&lt;/code&gt; 不再被转义。&lt;/p&gt;
+&lt;p&gt;Python3.7：只有在正则表达式中具有特殊含义的字符才会被转义。 因此， &lt;code&gt;!&lt;/code&gt;、&lt;code&gt;&amp;quot;&lt;/code&gt;、&lt;code&gt;%&lt;/code&gt;、&lt;code&gt;&#39;&lt;/code&gt;、&lt;code&gt;,&lt;/code&gt;、&lt;code&gt;/&lt;/code&gt;、&lt;code&gt;:&lt;/code&gt;、&lt;code&gt;;&lt;/code&gt;&amp;lt;&#39;、&lt;code&gt;=&lt;/code&gt;&amp;gt;&#39;、&lt;code&gt;@&lt;/code&gt; 和 ` 将不再会被转义。&lt;/p&gt;
+&lt;p&gt;使用 &lt;code&gt;re.exvape()&lt;/code&gt; 函数很容易出现转义错误的问题，所以并不建议使用它转义。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;purge-清除正则表达式缓存&#34;&gt;purge() 清除正则表达式缓存&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;re.purge()&lt;/code&gt; 用于清除正则表达式的缓存。它没有参数，没有返回值。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;regexflag-标志常量&#34;&gt;RegexFlag 标志常量&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;re.ASCII：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;简写：&lt;code&gt;re.A&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;让 &lt;code&gt;\w&lt;/code&gt;, &lt;code&gt;\W&lt;/code&gt;, &lt;code&gt;\b&lt;/code&gt;, &lt;code&gt;\B&lt;/code&gt;, &lt;code&gt;\d&lt;/code&gt;, &lt;code&gt;\D&lt;/code&gt;, &lt;code&gt;\s&lt;/code&gt; 和 &lt;code&gt;\S&lt;/code&gt; 只匹配 ASCII 编码支持的字符，而不是 Unicode。这只对 Unicode 样式（Python3 默认）有效，会被 byte 样式忽略。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Example：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;search(&lt;span style=&#34;color:#e6db74&#34;&gt;r&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;\w+&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;中文字符和ASCII&amp;#39;&lt;/span&gt;, re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;A)
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;_sre&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;SRE_Match object; span&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;), match&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;ASCII&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对应内联标记：&lt;code&gt;(?a)&lt;/code&gt; 。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;re.DEBUG：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;显示编译时的 debug 信息，没有内联标记。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Example：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;search(&lt;span style=&#34;color:#e6db74&#34;&gt;r&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;.*&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;显示debug信息&amp;#39;&lt;/span&gt;, re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;DEBUG)
+MAX_REPEAT &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; MAXREPEAT
+  ANY &lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;_sre&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;SRE_Match object; span&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;9&lt;/span&gt;), match&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;显示debug信息&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对应内联标记：&lt;code&gt;(?i)&lt;/code&gt; 。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;re.IGNORECASE：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;简写：&lt;code&gt;re.I&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进行忽略大小写匹配。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Example：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;findall(&lt;span style=&#34;color:#e6db74&#34;&gt;r&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;[a-z]&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;大写字母：ABCDE 小写字母：abcde&amp;#39;&lt;/span&gt;, re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;I)
+[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;A&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;B&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;C&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;D&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;E&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;b&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;c&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;d&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;e&amp;#39;&lt;/span&gt;]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;re.LOCALE：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;简写：&lt;code&gt;re.L&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;语言依赖，由当前语言区域决定 &lt;code&gt;\w&lt;/code&gt;, &lt;code&gt;\W&lt;/code&gt;, &lt;code&gt;\b&lt;/code&gt;, &lt;code&gt;\B&lt;/code&gt; 和大小写敏感匹配。这个标记只能对 byte 样式有效。这个标记官方并不推荐使用，因为语言区域机制很不可靠，它一次只能处理一个 “习惯”，而且只对 8 位字节有效。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对应内联标记：&lt;code&gt;(?L)&lt;/code&gt; 。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;re.MULTILINE：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;简写：&lt;code&gt;re.M&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多行模式，样式字符 &lt;code&gt;&#39;^&#39;&lt;/code&gt; 匹配每一个行开始（字符串的开始和换行符后紧跟的符号）；样式字符 &lt;code&gt;&#39;$&#39;&lt;/code&gt; 匹配每一个行结尾（字符串结尾和换行符前面的符号）。&lt;/p&gt;
+&lt;p&gt;默认情况下不支持换行符特性，&lt;code&gt;&#39;^&#39;&lt;/code&gt; 匹配字符串开始，&lt;code&gt;&#39;$&#39;&lt;/code&gt; 匹配字符串结尾。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Example：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;findall(&lt;span style=&#34;color:#e6db74&#34;&gt;r&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;^.*$&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;第1行&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;第2行&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;第3行&amp;#39;&lt;/span&gt;, re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;M)
+[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;第1行&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;第2行&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;第3行&amp;#39;&lt;/span&gt;]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对应内联标记：&lt;code&gt;(?m)&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;re.DOTALL：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;简写：&lt;code&gt;re.S&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;让 &lt;code&gt;&#39;.&#39;&lt;/code&gt; 特殊字符匹配全部字符，包括换行符。&lt;/p&gt;
+&lt;p&gt;默认情况下，&lt;code&gt;&#39;.&#39;&lt;/code&gt; 仅匹配除了换行符的其他任意字符。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对应内联标记：&lt;code&gt;(?s)&lt;/code&gt; 。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;re.VERBOSE：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;简写：&lt;code&gt;re.X&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;冗长模式，允许在正则表达式中换行和添加注释。
+该模式下空白符号会被忽略，除非在一个字符集合中或者由反斜杠转义，或者在 &lt;code&gt;*?&lt;/code&gt;、&lt;code&gt;(?:&lt;/code&gt;、&lt;code&gt;(?P&amp;lt;…&amp;gt;&lt;/code&gt; 分组之内。
+当一个行内有 &lt;code&gt;#&lt;/code&gt; 不在字符集和转义序列，那么它之后的所有字符都是注释。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Example：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;search(&lt;span style=&#34;color:#e6db74&#34;&gt;r&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;&amp;#39;&amp;#39;\d +  # the integral part
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;...               \.    # the decimal point
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;...               \d *  # some fractional digits&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;,
+&lt;span style=&#34;color:#f92672&#34;&gt;...&lt;/span&gt;           &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;圆周率：3.14&amp;#39;&lt;/span&gt;, re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;X)
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;_sre&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;SRE_Match object; span&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt;), match&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;3.14&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对应内联标记：&lt;code&gt;(?x)&lt;/code&gt; 。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;re.UNICODE：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;简写：&lt;code&gt;re.U&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;匹配 Unicode 编码支持的字符，是 Python3 默认的字符串模式。虽然保留着，但对 Python3 来说是个冗余的常量。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;re.TEMPLATE：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;简写：&lt;code&gt;re.T&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;re&lt;/code&gt; 模块的源码是这样描述该常量的（官方文档中并没有具体的描述）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;TEMPLATE &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; T &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sre_compile&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;SRE_FLAG_TEMPLATE &lt;span style=&#34;color:#75715e&#34;&gt;# disable backtracking&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;正则对象-pattern&#34;&gt;正则对象 Pattern&lt;/h2&gt;
+&lt;p&gt;使用 &lt;code&gt;compile()&lt;/code&gt; 和 &lt;code&gt;template()&lt;/code&gt; 可以将正则表达式编译为正则表达式对象（Pattern，正则对象）。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;re.compile()&lt;/code&gt; 的语法如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;compile(pattern, flags&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;参数&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;描述&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;pattern&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;要转化为正则对象的正则表达式。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;flags&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;标志位，用于控制正则表达式的匹配方式。 可以通过位的 OR（&lt;code&gt;&#39;|&#39;&lt;/code&gt;）操作来结合多个模式。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Example：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; pattern_obj &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;compile(&lt;span style=&#34;color:#e6db74&#34;&gt;r&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;abc&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; pattern_obj&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;search(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;abcdefg&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;_sre&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;SRE_Match object; span&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;), match&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;abc&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;使用正则对象和函数：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;正则对象和函数是一致的。&lt;/p&gt;
+&lt;p&gt;模块的底层实现中，&lt;code&gt;re.compile()&lt;/code&gt; 与其他 &lt;code&gt;re&lt;/code&gt; 函数内部调用的是同一个函数 &lt;code&gt;re._compile()&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果需要多次使用某个正则表达式的话，使用 &lt;code&gt;re.compile()&lt;/code&gt; 和保存这个正则对象以便复用，可以让程序更加高效。通过 &lt;code&gt;re.compile()&lt;/code&gt; 编译后的样式，和模块级的函数会被缓存。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;正则对象方法&#34;&gt;正则对象方法&lt;/h3&gt;
+&lt;p&gt;正则对象支持以下方法：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;方法&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Pattern.search(string[, pos[, endpos]])&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;扫描整个 &lt;code&gt;string&lt;/code&gt; 寻找第一个匹配的位置， 并返回一个相应的匹配对象（&lt;code&gt;Match&lt;/code&gt;）。如果没有匹配，就返回 &lt;code&gt;None&lt;/code&gt;。&lt;br&gt;&lt;code&gt;pos&lt;/code&gt; —— 字符串中开始搜索的位置索引，默认为 &lt;code&gt;0&lt;/code&gt;，它不完全等价于字符串切片。&lt;code&gt;^&lt;/code&gt; 样式字符匹配行开头，但不会匹配索引规定开始的位置。&lt;br&gt;&lt;code&gt;endpos&lt;/code&gt; —— 字符串搜索的结束。只有从 &lt;code&gt;pos&lt;/code&gt; 到 &lt;code&gt;endpos - 1&lt;/code&gt; 的字符会被匹配。&lt;br&gt;如果 &lt;code&gt;endpos&lt;/code&gt; 小于 &lt;code&gt;pos&lt;/code&gt;，就不会有匹配产生。&lt;br&gt;pattern_obj.search(string, 0, 50)&lt;code&gt;等价于&lt;/code&gt;pattern_obj.search(string[:50], 0)`。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Pattern.match(string[, pos[, endpos]])&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;如果 &lt;code&gt;string&lt;/code&gt; 的开始位置能够找到这个正则样式 &lt;code&gt;Pattern&lt;/code&gt; 的任意个匹配，就返回一个相应的匹配对象（&lt;code&gt;Match&lt;/code&gt;）。如果不匹配，就返回 &lt;code&gt;None&lt;/code&gt;。&lt;br&gt;可选参数 &lt;code&gt;pos&lt;/code&gt; 和 &lt;code&gt;endpos&lt;/code&gt; 指定 &lt;code&gt;string&lt;/code&gt; 的查找范围，与 &lt;code&gt;Pattern.search()&lt;/code&gt; 含义相同。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Pattern.fullmatch(string[, pos[, endpos]])&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;如果整个 &lt;code&gt;string&lt;/code&gt; 匹配这个正则表达式，就返回一个相应的匹配对象（&lt;code&gt;Match&lt;/code&gt;）。如果不匹配，就返回 &lt;code&gt;None&lt;/code&gt;。&lt;br&gt;可选参数 &lt;code&gt;pos&lt;/code&gt; 和 &lt;code&gt;endpos&lt;/code&gt; 指定 &lt;code&gt;string&lt;/code&gt; 的查找范围。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Pattern.findall(string[, pos[, endpos]])&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;类似 &lt;code&gt;re.findall()&lt;/code&gt;，使用了编译后样式，在 &lt;code&gt;string&lt;/code&gt; 中找到 &lt;code&gt;Pattern&lt;/code&gt; 所匹配的所有子串，以列表形式返回所有匹配项。&lt;br&gt;可选参数 &lt;code&gt;pos&lt;/code&gt; 和 &lt;code&gt;endpos&lt;/code&gt; 指定 &lt;code&gt;string&lt;/code&gt; 的查找范围。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Pattern.finditer(string[, pos[, endpos]])&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;类似函数 &lt;code&gt;finiter()&lt;/code&gt; ， 使用了编译后样式，在 &lt;code&gt;string&lt;/code&gt; 中找到 &lt;code&gt;Pattern&lt;/code&gt; 所匹配的所有子串，以迭代器形式返回所有匹配项。&lt;br&gt;可选参数 &lt;code&gt;pos&lt;/code&gt; 和 &lt;code&gt;endpos&lt;/code&gt; 指定 &lt;code&gt;string&lt;/code&gt; 的查找范围。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Pattern.split(string, maxsplit=0)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;等价于 &lt;code&gt;split()&lt;/code&gt; 函数，使用了编译后的样式，按照能够匹配的子串对字符串进行分割。&lt;br&gt; &lt;code&gt;maxsplit&lt;/code&gt; —— 最大分割次数。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Pattern.sub(repl, string, count=0)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;等价于 &lt;code&gt;sub()&lt;/code&gt; 函数，使用了编译后的样式，使用 &lt;code&gt;repl&lt;/code&gt; 替换掉 &lt;code&gt;string&lt;/code&gt; 中被 &lt;code&gt;Pattern&lt;/code&gt; 匹配的字符。&lt;br&gt;&lt;code&gt;count&lt;/code&gt; —— 最大替换次数。&lt;br&gt;返回一个替换后的字符串。如果 &lt;code&gt;string&lt;/code&gt; 中没有任何匹配项，则返回 &lt;code&gt;string&lt;/code&gt;。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Pattern.subn(repl, string, count=0)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;等价于 &lt;code&gt;subn()&lt;/code&gt; 函数，使用了编译后的样式，使用 &lt;code&gt;repl&lt;/code&gt; 替换掉 &lt;code&gt;string&lt;/code&gt; 中被 &lt;code&gt;Pattern&lt;/code&gt; 匹配的字符。&lt;br&gt;&lt;code&gt;count&lt;/code&gt; —— 最大替换次数。&lt;br&gt;返回一个元组，包含了替换后的字符串和替换次数。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;正则对象属性&#34;&gt;正则对象属性&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;属性&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Pattern.flags&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;正则匹配标记。&lt;br&gt;可以传递给 &lt;code&gt;compile()&lt;/code&gt; 的参数。任何 &lt;code&gt;(?…)&lt;/code&gt; 内联标记，隐性标记（&lt;code&gt;re.U&lt;/code&gt;）的结合。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Pattern.groups&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;捕获到的模式串中组的数量。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Pattern.groupindex&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;映射由 &lt;code&gt;(?P&amp;lt;id&amp;gt;)&lt;/code&gt; 定义的命名符号组合和数字组合的字典。如果没有符号组，那字典就是空的。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;Pattern.pattern&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;编译对象的原始样式字符串。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;匹配对象&#34;&gt;匹配对象&lt;/h2&gt;
+&lt;p&gt;匹配对象（Match）是调用 &lt;code&gt;re&lt;/code&gt; 模块中的函数或方法匹配后返回的对象。&lt;/p&gt;
+&lt;p&gt;匹配对象总是有一个布尔值 &lt;code&gt;True&lt;/code&gt;。如果没有匹配的话 &lt;code&gt;re.match()&lt;/code&gt; 和 &lt;code&gt;re.search()&lt;/code&gt; 返回 &lt;code&gt;None&lt;/code&gt;。可以简单的用 &lt;code&gt;if&lt;/code&gt; 语句来判断是否匹配：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;search(&lt;span style=&#34;color:#e6db74&#34;&gt;r&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;a&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;abc&amp;#39;&lt;/span&gt;):
+&lt;span style=&#34;color:#f92672&#34;&gt;...&lt;/span&gt;     print(&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;)
+&lt;span style=&#34;color:#f92672&#34;&gt;...&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;search(&lt;span style=&#34;color:#e6db74&#34;&gt;r&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;d&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;abc&amp;#39;&lt;/span&gt;):
+&lt;span style=&#34;color:#f92672&#34;&gt;...&lt;/span&gt;     print(&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;)
+&lt;span style=&#34;color:#f92672&#34;&gt;...&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+&lt;span style=&#34;color:#f92672&#34;&gt;...&lt;/span&gt;     print(&lt;span style=&#34;color:#66d9ef&#34;&gt;False&lt;/span&gt;)
+&lt;span style=&#34;color:#f92672&#34;&gt;...&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;False&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id=&#34;匹配对象方法&#34;&gt;匹配对象方法&lt;/h3&gt;
+&lt;p&gt;匹配对象支持以下方法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Match.expand(template)&lt;/code&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对 &lt;code&gt;template&lt;/code&gt; 进行反斜杠（&lt;code&gt;&#39;\&#39;&lt;/code&gt;）转义替换并且返回。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Match.group([group1, ...])&lt;/code&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;返回一个或者多个匹配的子组。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果只有一个参数，结果就是一个字符串；
+如果有多个参数，结果就是一个元组（每个参数对应一个项）；
+如果没有参数，&lt;code&gt;group1&lt;/code&gt; 默认为 &lt;code&gt;0&lt;/code&gt;（整个匹配都被返回）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果一个 &lt;code&gt;groupN&lt;/code&gt; 参数值为 &lt;code&gt;0&lt;/code&gt;，相应的返回值就是整个匹配字符串；
+如果它是一个范围 [1..99]，结果就是相应的括号组字符串。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果一个组号是负数，或者大于样式中定义的组数，会抛出一个 &lt;code&gt;IndexError&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Example：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; m &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;match(&lt;span style=&#34;color:#e6db74&#34;&gt;r&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;(\w+) (\w+)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Python PHP Java C++&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; m&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;group()    &lt;span style=&#34;color:#75715e&#34;&gt;# 返回整个匹配&lt;/span&gt;
+&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Python PHP&amp;#39;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; m&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;group(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)    &lt;span style=&#34;color:#75715e&#34;&gt;# 返回第一个括号组&lt;/span&gt;
+&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Python&amp;#39;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; m&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;group(&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)    &lt;span style=&#34;color:#75715e&#34;&gt;# 返回第二个括号组&lt;/span&gt;
+&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;PHP&amp;#39;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; m&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;group(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)  &lt;span style=&#34;color:#75715e&#34;&gt;# 多个参数返回一个元组&lt;/span&gt;
+(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Python&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;PHP&amp;#39;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果正则表达式使用了 &lt;code&gt;(?P&amp;lt;name&amp;gt;…)&lt;/code&gt; 语法， &lt;code&gt;groupN&lt;/code&gt; 参数可以是索引值，也可以是组名。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; m &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;match(&lt;span style=&#34;color:#e6db74&#34;&gt;r&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;(?P&amp;lt;name_1&amp;gt;\w+) (?P&amp;lt;name_2&amp;gt;\w+)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Python PHP&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; m&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;group(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;name_1&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;name_2&amp;#39;&lt;/span&gt;)
+(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Python&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;PHP&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; m&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;group(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Python&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;PHP&amp;#39;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果一个组包含在样式的一部分，并被匹配多次，就返回最后一个匹配。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; m &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;match(&lt;span style=&#34;color:#e6db74&#34;&gt;r&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;(..)+&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;a1b2c3&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; m&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;group(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
+&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;c3&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Match.getitem(g)&lt;/code&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Python3.6 新增功能。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;等价于 &lt;code&gt;m.group(g)&lt;/code&gt;，允许更方便地引用一个匹配。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; m &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;match(&lt;span style=&#34;color:#e6db74&#34;&gt;r&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;(?P&amp;lt;name_1&amp;gt;\w+) (?P&amp;lt;name_2&amp;gt;\w+)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Python PHP&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; m[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;]
+&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Python PHP&amp;#39;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; m[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;]
+&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Python&amp;#39;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; m[&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;]
+&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;PHP&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Match.groups(default=None)&lt;/code&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;返回一个元组，包含所有匹配的子组，在样式中出现的从 1 到任意多的组合。&lt;code&gt;default&lt;/code&gt; 参数用于不参与匹配的情况，默认为 &lt;code&gt;None&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Example：
+使小数部分可选，那么不是所有的组都会参与到匹配当中。这些组合默认会返回一个 &lt;code&gt;None&lt;/code&gt; ，除非指定了 &lt;code&gt;default&lt;/code&gt; 参数。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; m &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;match(&lt;span style=&#34;color:#e6db74&#34;&gt;r&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;(\d+)\.(\d+)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;3.14&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; m&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;groups()
+(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;3&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;14&amp;#39;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; m &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;match(&lt;span style=&#34;color:#e6db74&#34;&gt;r&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;(\d+)\.?(\d+)?&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;3&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; m&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;groups()    &lt;span style=&#34;color:#75715e&#34;&gt;# 第二个子组默认为 None&lt;/span&gt;
+(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;3&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;)
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; m&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;groups(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;0&amp;#39;&lt;/span&gt;)  &lt;span style=&#34;color:#75715e&#34;&gt;# 第二个子组被设置为指定的默认值 &amp;#39;0&amp;#39;&lt;/span&gt;
+(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;3&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;0&amp;#39;&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Match.groupdict(default=None)&lt;/code&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;返回一个字典，包含了所有的命名子组。key 就是组名。 &lt;code&gt;default&lt;/code&gt; 参数用于不参与匹配的组合；默认为 &lt;code&gt;None&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Example：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; m &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;match(&lt;span style=&#34;color:#e6db74&#34;&gt;r&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;(?P&amp;lt;name_1&amp;gt;\w+) (?P&amp;lt;name_2&amp;gt;\w+)&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Python PHP&amp;#39;&lt;/span&gt;)
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; m&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;groupdict()
+{&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;name_1&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;Python&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;name_2&amp;#39;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;PHP&amp;#39;&lt;/span&gt;}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Match.start([group])&lt;/code&gt; 和 &lt;code&gt;Match.end([group])&lt;/code&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;返回 &lt;code&gt;group&lt;/code&gt; 匹配到的字串在原字符串的开始和结束索引。&lt;code&gt;group&lt;/code&gt; 默认为 &lt;code&gt;0&lt;/code&gt;（意思是整个匹配的子串）。如果 &lt;code&gt;group&lt;/code&gt; 存在，但未产生匹配，就返回 &lt;code&gt;-1&lt;/code&gt; 。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;从 email 地址中移除掉 &lt;code&gt;remove_this&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; email &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;tony@tiremove_thisger.net&amp;#34;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; m &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; re&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;search(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;remove_this&amp;#34;&lt;/span&gt;, email)
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; email[:m&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;start()] &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; email[m&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;end():]
+&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;tony@tiger.net&amp;#39;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Match.span([group])&lt;/code&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对于一个匹配 &lt;code&gt;m&lt;/code&gt; ， 返回一个二元组 &lt;code&gt;(m.start(group), m.end(group))&lt;/code&gt; 。
+如果 &lt;code&gt;group&lt;/code&gt; 没有在这个匹配中，就返回 &lt;code&gt;(-1, -1)&lt;/code&gt; 。
+&lt;code&gt;group&lt;/code&gt; 默认为 &lt;code&gt;0&lt;/code&gt;，就是整个匹配。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

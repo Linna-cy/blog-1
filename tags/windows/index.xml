@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Windows on Linner&#39;s Blog</title>
+        <link>https://blog.linner.asia/tags/windows/</link>
+        <description>Recent content in Windows on Linner&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh</language>
+        <lastBuildDate>Wed, 12 Jan 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.linner.asia/tags/windows/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>vbs 后台运行 bat</title>
+        <link>https://blog.linner.asia/p/vbs-%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C-bat/</link>
+        <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.linner.asia/p/vbs-%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C-bat/</guid>
+        <description>&lt;p&gt;假设有三个 bat 程序需要后台运行（称为 &lt;code&gt;A.bat&lt;/code&gt;、&lt;code&gt;B.bat&lt;/code&gt;、&lt;code&gt;C.bat&lt;/code&gt;）：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-vbs&#34; data-lang=&#34;vbs&#34;&gt;Set ws = CreateObject(&amp;quot;Wscript.Shell&amp;quot;)
+ws.run &amp;quot;cmd /c A.bat&amp;quot;,0
+ws.run &amp;quot;cmd /c B.bat&amp;quot;,0
+ws.run &amp;quot;cmd /c C.bat&amp;quot;,0
+&lt;/code&gt;&lt;/pre&gt;</description>
+        </item>
+        
+    </channel>
+</rss>
