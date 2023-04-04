@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='集合的概念   A set is a group of objects. (simplest way) By a set we mean any collection M into a whole of definite disinct objects m (which we called elements of M) of our perception or thought. (Cantor&amp;rsquo;s way)   集合（set）是由 &amp;lt;u&amp;gt;指定范围 &amp;lt;/u&amp;gt;内的 &amp;lt;u&amp;gt;满足给定条件的所有对象 &amp;lt;/u&amp;gt;聚集在一起构成的，指定范围内的每一个对象称为这个集合的元素（element）。
+ 集合中的元素是无序的。 集合中的元素是不同的（即，同个集合中相同或重复的元素被认为是一个元素）。  通常情况下，
+ 用带（或不带）下标的 &amp;lt;u&amp;gt;大写 &amp;lt;/u&amp;gt;英文字母表示 &amp;lt;u&amp;gt;集合 &amp;lt;/u&amp;gt;：$A,B,C,\dots,A_1,B_1,C_1,\dots$ 用带（或不带）下标的 &amp;lt;u&amp;gt;小写 &amp;lt;/u&amp;gt;英文字母表示 &amp;lt;u&amp;gt;元素 &amp;lt;/u&amp;gt;：$a,b,c,\dots,a_1,b_1,c_1,\dots$  ZFC 公理化集合论：
+ 外延公理， 空集存在公理， 无序对公理， 并集公理， 幂集公理， 无穷公理， 替换公理， 正则公理， 选择公理。   常见的集合  空集 $\emptyset$； 正整数集 $\mathbf{N^&#43;}$ or $\mathbf{W}$：$1,2,3,\cdots$ 自然数集 $\mathbf{N}$：$0,1,2,3,\cdots$ 整数集 $\mathbf{Z}$：$\cdots,-2,-1,0,1,2,\cdots$ 质数/素数集 $\mathbf{P}$：$2,3,5,7,\cdots$ 有理数集 $\mathbf{Q}$； 无理数集 $\mathbf{I}$； 实数集 $\mathbf{R}$； 复数集 $\mathbf{C}$； $\cdots\cdots$  关系：'>
+
+
+<title>集合论</title>
+
+<link rel='canonical' href='https://blog.linner.asia/p/%E9%9B%86%E5%90%88%E8%AE%BA/'>
+
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+<meta property='og:title' content='集合论'>
+<meta property='og:description' content='集合的概念   A set is a group of objects. (simplest way) By a set we mean any collection M into a whole of definite disinct objects m (which we called elements of M) of our perception or thought. (Cantor&amp;rsquo;s way)   集合（set）是由 &amp;lt;u&amp;gt;指定范围 &amp;lt;/u&amp;gt;内的 &amp;lt;u&amp;gt;满足给定条件的所有对象 &amp;lt;/u&amp;gt;聚集在一起构成的，指定范围内的每一个对象称为这个集合的元素（element）。
+ 集合中的元素是无序的。 集合中的元素是不同的（即，同个集合中相同或重复的元素被认为是一个元素）。  通常情况下，
+ 用带（或不带）下标的 &amp;lt;u&amp;gt;大写 &amp;lt;/u&amp;gt;英文字母表示 &amp;lt;u&amp;gt;集合 &amp;lt;/u&amp;gt;：$A,B,C,\dots,A_1,B_1,C_1,\dots$ 用带（或不带）下标的 &amp;lt;u&amp;gt;小写 &amp;lt;/u&amp;gt;英文字母表示 &amp;lt;u&amp;gt;元素 &amp;lt;/u&amp;gt;：$a,b,c,\dots,a_1,b_1,c_1,\dots$  ZFC 公理化集合论：
+ 外延公理， 空集存在公理， 无序对公理， 并集公理， 幂集公理， 无穷公理， 替换公理， 正则公理， 选择公理。   常见的集合  空集 $\emptyset$； 正整数集 $\mathbf{N^&#43;}$ or $\mathbf{W}$：$1,2,3,\cdots$ 自然数集 $\mathbf{N}$：$0,1,2,3,\cdots$ 整数集 $\mathbf{Z}$：$\cdots,-2,-1,0,1,2,\cdots$ 质数/素数集 $\mathbf{P}$：$2,3,5,7,\cdots$ 有理数集 $\mathbf{Q}$； 无理数集 $\mathbf{I}$； 实数集 $\mathbf{R}$； 复数集 $\mathbf{C}$； $\cdots\cdots$  关系：'>
+<meta property='og:url' content='https://blog.linner.asia/p/%E9%9B%86%E5%90%88%E8%AE%BA/'>
+<meta property='og:site_name' content='Linner&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='数学' /><meta property='article:published_time' content='2022-09-02T12:43:41&#43;08:00'/><meta property='article:modified_time' content='2022-09-02T12:43:41&#43;08:00'/>
+<meta name="twitter:title" content="集合论">
+<meta name="twitter:description" content="集合的概念   A set is a group of objects. (simplest way) By a set we mean any collection M into a whole of definite disinct objects m (which we called elements of M) of our perception or thought. (Cantor&amp;rsquo;s way)   集合（set）是由 &amp;lt;u&amp;gt;指定范围 &amp;lt;/u&amp;gt;内的 &amp;lt;u&amp;gt;满足给定条件的所有对象 &amp;lt;/u&amp;gt;聚集在一起构成的，指定范围内的每一个对象称为这个集合的元素（element）。
+ 集合中的元素是无序的。 集合中的元素是不同的（即，同个集合中相同或重复的元素被认为是一个元素）。  通常情况下，
+ 用带（或不带）下标的 &amp;lt;u&amp;gt;大写 &amp;lt;/u&amp;gt;英文字母表示 &amp;lt;u&amp;gt;集合 &amp;lt;/u&amp;gt;：$A,B,C,\dots,A_1,B_1,C_1,\dots$ 用带（或不带）下标的 &amp;lt;u&amp;gt;小写 &amp;lt;/u&amp;gt;英文字母表示 &amp;lt;u&amp;gt;元素 &amp;lt;/u&amp;gt;：$a,b,c,\dots,a_1,b_1,c_1,\dots$  ZFC 公理化集合论：
+ 外延公理， 空集存在公理， 无序对公理， 并集公理， 幂集公理， 无穷公理， 替换公理， 正则公理， 选择公理。   常见的集合  空集 $\emptyset$； 正整数集 $\mathbf{N^&#43;}$ or $\mathbf{W}$：$1,2,3,\cdots$ 自然数集 $\mathbf{N}$：$0,1,2,3,\cdots$ 整数集 $\mathbf{Z}$：$\cdots,-2,-1,0,1,2,\cdots$ 质数/素数集 $\mathbf{P}$：$2,3,5,7,\cdots$ 有理数集 $\mathbf{Q}$； 无理数集 $\mathbf{I}$； 实数集 $\mathbf{R}$； 复数集 $\mathbf{C}$； $\cdots\cdots$  关系：">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu0c2331fe09320137a3bd1d4b5cc68791_142496_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Linner&#39;s Blog</a></h1>
+            <h2 class="site-description">随便看看就行，副标题暂时还没想好</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Linna-cy'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives" id="toc-list">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents" class="js-toc"></nav>
+            
+        </div>
+    </section>
+
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E9%9B%86%E5%90%88%E8%AE%BA/">集合论</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Sep 02, 2022</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="集合的概念">集合的概念</h1>
+<blockquote>
+<ul>
+<li>A <strong>set</strong> is a group of objects. (simplest way)</li>
+<li>By a <strong>set</strong> we mean any collection M into a whole of definite disinct objects m (which we called <strong>elements</strong> of M) of our perception or thought. (Cantor&rsquo;s way)</li>
+</ul>
+</blockquote>
+<p><strong>集合</strong>（set）是由 <code>&lt;u&gt;</code>指定范围 <code>&lt;/u&gt;</code>内的 <code>&lt;u&gt;</code>满足给定条件的所有对象 <code>&lt;/u&gt;</code>聚集在一起构成的，指定范围内的每一个对象称为这个集合的<strong>元素</strong>（element）。</p>
+<ul>
+<li>集合中的元素是<strong>无序</strong>的。</li>
+<li>集合中的元素是<strong>不同</strong>的（即，同个集合中相同或重复的元素被认为是一个元素）。</li>
+</ul>
+<p>通常情况下，</p>
+<ul>
+<li>用带（或不带）下标的 <code>&lt;u&gt;</code>大写 <code>&lt;/u&gt;</code>英文字母表示 <code>&lt;u&gt;</code>集合 <code>&lt;/u&gt;</code>：$A,B,C,\dots,A_1,B_1,C_1,\dots$</li>
+<li>用带（或不带）下标的 <code>&lt;u&gt;</code>小写 <code>&lt;/u&gt;</code>英文字母表示 <code>&lt;u&gt;</code>元素 <code>&lt;/u&gt;</code>：$a,b,c,\dots,a_1,b_1,c_1,\dots$</li>
+</ul>
+<p>ZFC 公理化集合论：</p>
+<ul>
+<li>外延公理，</li>
+<li>空集存在公理，</li>
+<li>无序对公理，</li>
+<li>并集公理，</li>
+<li>幂集公理，</li>
+<li>无穷公理，</li>
+<li>替换公理，</li>
+<li>正则公理，</li>
+<li>选择公理。</li>
+</ul>
+<hr>
+<h2 id="常见的集合">常见的集合</h2>
+<ul>
+<li>空集 $\emptyset$；</li>
+<li>正整数集 $\mathbf{N^+}$ or $\mathbf{W}$：$1,2,3,\cdots$</li>
+<li>自然数集 $\mathbf{N}$：$0,1,2,3,\cdots$</li>
+<li>整数集 $\mathbf{Z}$：$\cdots,-2,-1,0,1,2,\cdots$</li>
+<li>质数/素数集 $\mathbf{P}$：$2,3,5,7,\cdots$</li>
+<li>有理数集 $\mathbf{Q}$；</li>
+<li>无理数集 $\mathbf{I}$；</li>
+<li>实数集 $\mathbf{R}$；</li>
+<li>复数集 $\mathbf{C}$；</li>
+<li>$\cdots\cdots$</li>
+</ul>
+<p>关系：</p>
+<p>$$
+\mathbf{W} \subseteq \mathbf{N} \subseteq \mathbf{Z} \subseteq \mathbf{Q} \subseteq \mathbf{R} \subseteq \mathbf{C}
+$$</p>
+<hr>
+<h1 id="集合的表示方法">集合的表示方法</h1>
+<h2 id="枚举法">枚举法</h2>
+<p><strong>枚举法</strong>又称<strong>列举法</strong>或<strong>显示法</strong>，是枚举出集合中的所有或部分元素（要能看出其他元素之间的规律）。</p>
+<p>Example：</p>
+<ul>
+<li>枚举出集合中的所有元素：$A = {a,b,c,d}$；</li>
+<li>枚举出集合中的部分元素：$B = {1,3,5,\cdots,2n+1,\cdots}$。</li>
+</ul>
+<hr>
+<h2 id="叙述法">叙述法</h2>
+<p><strong>叙述法</strong>又称<strong>隐式法</strong>，是通过刻画（或用自然语言描述）集合中元素所具备的某种特性来表示集合的方法，通常用符号 $P(x)$ 来表示不同对象 $x$ 所具有的性质 $P$ ，由 $P(x)$ 所定义的集合常记为</p>
+<p>$$
+{x|P(x)}。
+$$</p>
+<hr>
+<h2 id="文氏图">文氏图</h2>
+<p><strong>文氏图</strong>（<strong>Venn diagram</strong>）又叫<strong>维恩图</strong>，用于展示集合或类之间的大致关系。</p>
+<p><img src="/%E7%BB%B4%E6%81%A9%E5%9B%BE.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="维恩图"
+	
+	
+></p>
+<p>一般用方向表示全集，用圆形表示某一特定集合。</p>
+<hr>
+<h2 id="递归指定集合法">递归指定集合法</h2>
+<p>递归指定集合法是指通过计算规则定义集合中的元素的方法。</p>
+<p>Example：</p>
+<p>设 $a_0 = 1$，$a_{i+1}=2a_i(i \ge 0)$，定义 $S={a_0,a_1,\cdots,a_n,\cdots}={a_k|k\ge0}$，可以得出集合 $S$ 为</p>
+<p>$$
+S={1,2,2^2,\cdots,2^n,\cdots}。
+$$</p>
+<hr>
+<h2 id="归纳法">归纳法</h2>
+<ol>
+<li>
+<p>指出集合至少要包含的元素</p>
+<ul>
+<li>第一部分：基础，指出某些最 <code>&lt;u&gt;</code>基本元素 <code>&lt;/u&gt;</code>属于某集合；</li>
+<li>第二部分：归纳，指出 <code>&lt;u&gt;</code>由基本元素构造新元素的方法 <code>&lt;/u&gt;</code>；</li>
+</ul>
+</li>
+<li>
+<p>指出集合至多要包含的元素</p>
+<ul>
+<li>第三部分：极小性，指出该 <code>&lt;u&gt;</code>集合的界限 <code>&lt;/u&gt;</code>。</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h1 id="基数">基数</h1>
+<p>Definition：</p>
+<p>集合 $A$ 中的元素个数称为集合的<strong>基数</strong>（base number），记为 $|A|$。</p>
+<p>对于任意集合 $A$ 来说，</p>
+<ul>
+<li>若 $|A|$ 是 <code>&lt;u&gt;</code>有限的 <code>&lt;/u&gt;</code>，称该集合为<strong>有限集</strong>（finite set）；</li>
+<li>若 $|A|$ 是 <code>&lt;u&gt;</code>无限的 <code>&lt;/u&gt;</code>，称该集合为<strong>无限集</strong>（infinite set）。</li>
+</ul>
+<hr>
+<h1 id="集合与元素的关系">集合与元素的关系</h1>
+<p>元素与集合之间有两种关系：</p>
+<ul>
+<li>
+<p>属于：如 “$a$ 是集合 $A$ 中的元素” 或 “$a$ 属于 $A$ ” 记为</p>
+<p>$$
+a \in A。
+$$</p>
+</li>
+<li>
+<p>不属于：如 “$a$ 不是是集合 $A$ 中的元素” 或 “$a$ 不属于 $A$” 记为</p>
+<p>$$
+a \notin A。
+$$</p>
+</li>
+</ul>
+<hr>
+<h1 id="集合与集合的关系">集合与集合的关系</h1>
+<h2 id="外延性原理">外延性原理</h2>
+<p>Theorem：</p>
+<p>两个集合 $A$ 和 $B$ <strong>相等</strong>，当且仅当它们的<strong>元素完全相同</strong>，记为 $A\ =\ B$，否则 $A$ 和 $B$ <strong>不相等</strong>，记为 $A\ \neq\ B$。</p>
+<hr>
+<h2 id="包含关系">包含关系</h2>
+<p>Definitions：</p>
+<p>设 $A$，$B$ 是任意两个集合，</p>
+<ul>
+<li>
+<p><strong>包含与不包含</strong>：如果 $B$ 的每个元素都是 $A$ 中的元素，则称 $B$ 是 $A$ 的<strong>子集</strong>（subset），也称 ${B}$ <strong>被</strong> ${A}$ <strong>包含</strong>或 ${A}$ <strong>包含</strong> ${B}$，记作 ${B \subseteq A}$ 或 $A \supseteq B$，称 $\subseteq$ 或 $\supseteq$ 为<strong>被包含关系</strong>（included relation）或<strong>包含关系</strong>（inclusion relation）；否则记作 ${B \nsubseteq A}$。</p>
+<p>“$\subseteq$” 定义的数学语言描述为：</p>
+<p>$$
+B \subseteq A<br>
+\Longleftrightarrow\ \forall x，
+如果 x \subseteq B，
+则 x \subseteq A。
+$$</p>
+<p>由子集的定义可推出 $A \subseteq A$。</p>
+</li>
+<li>
+<p><strong>真包含</strong>：如果 $B \subseteq A$ 并且 $A \neq B$，则称 $B$ 是 $A$ 的<strong>真子集</strong>（proper subset），也称做 ${B}$ <strong>被</strong> ${A}$ <strong>真包含</strong>或 ${A}$ <strong>真包含</strong> ${B}$，记作 ${B \subset A}$，称 $\subset$ 为<strong>真包含关系</strong>（properly inclusion relation）。</p>
+<p>“$\subset$” 定义的数学语言描述为：</p>
+<p>$$
+B \subset A \Longleftrightarrow 对 \forall x，若 x \in B，则 x \in A，并且 \exists y \in A，但 y \notin B。
+$$</p>
+</li>
+</ul>
+<hr>
+<h2 id="相等关系">相等关系</h2>
+<p>Theorem：</p>
+<p>设 $A$，$B$ 为任意两个集合，则 ${A\ =\ B}\ \Longleftrightarrow\ {A \subseteq B}$ 并且 ${B \subseteq A}$。</p>
+<hr>
+<h1 id="常见特殊的集合">常见特殊的集合</h1>
+<h2 id="空集">空集</h2>
+<p>Definition：</p>
+<p>不含任何元素的集合叫做<strong>空集</strong>（empty set），记作 $\emptyset$。</p>
+<p>$$
+\emptyset = {x|x \neq x}
+$$</p>
+<ul>
+<li>空集是一切集合的子集。</li>
+<li>空集是<strong>绝对唯一</strong>的。</li>
+</ul>
+<p>Example：</p>
+<ul>
+<li>$|\emptyset| = 0$，</li>
+<li>$|{\emptyset}| = 1$。</li>
+</ul>
+<hr>
+<h3 id="证明空集是绝对唯一的">证明空集是绝对唯一的</h3>
+<blockquote>
+<p>对 “唯一性” 的证明通常采用反证法（先假设 “不唯一”，得出矛盾，从而证明 “唯一性” 是正确的）。</p>
+</blockquote>
+<p>证明：</p>
+<p>假设有两个不同的空集 $\emptyset_1$ 和 $\emptyset_2$ ，由空集是一切集合的子集得</p>
+<p>$$
+\empty_1 \subseteq \emptyset_2\ 和\ \emptyset_2 \subseteq \emptyset_1
+$$</p>
+<p>根据集合的相等关系，得 $\emptyset_1 = \emptyset_2$，与假设矛盾。因此空集是绝对唯一的。</p>
+<hr>
+<h2 id="全集">全集</h2>
+<p>Definition：</p>
+<p>在一个相对固定的范围内，包含此范围内所有元素的集合，称为<strong>全集</strong>或<strong>论集</strong>（universal set），用 $U$ 或 $E$ 表示。</p>
+<p>在维恩图中一般用方形表示全集。</p>
+<p><img src="/%E5%85%A8%E9%9B%86.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="全集"
+	
+	
+></p>
+<p>全集是<strong>相对唯一</strong>的。</p>
+<hr>
+<h2 id="m-元子集">m 元子集</h2>
+<p>Definition：</p>
+<p>如果一个集合含有 $n$ 个元素，则称集合 $A$ 为 $n$ 元子集，称含有 $A$ 中 $m(0 \le m \le n)$个元素的子集为它的 $m$ 元子集。</p>
+<p>对于任意 $n$ 元集合 $A$，它的 $m$ 元（$0 \le m \le n$）子集（包含空集）个数为 $C_n^m$ 个，所以不同的子集个数为：</p>
+<p>$$
+C_n^0 + C_n^1 + \cdots + C_n^n = (1 + 1)^n = 2^n。
+\tag{1}
+$$</p>
+<hr>
+<h2 id="幂集">幂集</h2>
+<p>Definition：</p>
+<p>设 $A$ 为任意集合，把 $A$ 的所有不同子集构成的集合叫做 $A$ 的<strong>幂集</strong>（power set），记作 $P(A)$，即</p>
+<p>$$
+P(A)\ =\ {x|x \subseteq A}。
+$$</p>
+<p>由公式 $(1)$ 可得 $|A| = 2^n(n=|A|)$。</p>
+<p>幂集也叫做<strong>集族</strong>（family of set）或<strong>集合的集合</strong>。</p>
+<blockquote>
+<p>对集族的研究在数学方面、知识库和表处理语言以及人工智能等方面都有十分重要的意义。</p>
+</blockquote>
+<hr>
+<h1 id="集合的运算">集合的运算</h1>
+<h2 id="集合运算的定义">集合运算的定义</h2>
+<p>Definition：</p>
+<p>设 $U$ 是全集，$A$、$B$ 是 $U$ 的两个子集，则</p>
+<ol>
+<li>
+<p>“$\cup$” <strong>并运算</strong>（union operation）：$A \cup B = {x|x \in A\ or\ x \in B}$ 是 $A$ 与 $B$ 的<strong>并集</strong>（union）。</p>
+<p><img src="/%E5%B9%B6%E9%9B%86.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="并集"
+	
+	
+></p>
+<p>并集可代表两个集合 “相加”。</p>
+</li>
+<li>
+<p>“$\cap$” <strong>交运算</strong>（intersection operation）：$A \cap B = {x|x \in A\ and\ B}$ 是 $A$ 与 $B$ 的<strong>交集</strong>（intersection）。</p>
+<p><img src="/%E4%BA%A4%E9%9B%86.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="交集"
+	
+	
+></p>
+</li>
+<li>
+<p>“$\overline{A}$” <strong>补运算</strong>（complement operation）：$\overline{A} = U - A$ 是集合 $A$ 的<strong>补集</strong>（complement）（也可记为 $A'$、$~A$、$A^c$ 等）。$A$ 对于全集 $U$ 的补集是<strong>绝对补集</strong>。</p>
+<p><img src="/%E8%A1%A5%E9%9B%86.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="补集"
+	
+	
+></p>
+</li>
+<li>
+<p>“$-$” <strong>差运算</strong>（subtraction operation）：$A-B={x|x \in A\ and\ x \notin B} = A \cap \overline{B}$ 是 $A$ 与 $B$ 的<strong>差集</strong>（subtraction)，又称 $B$ 在 $A$ 中的<strong>相对补集</strong>。</p>
+<p><img src="/%E5%B7%AE%E9%9B%86.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="差集"
+	
+	
+></p>
+<p>当 $A=U$ 时，$A-B=\overline{B}$。</p>
+</li>
+<li>
+<p>“$\oplus$” <strong>对称差运算</strong>（symmetric difference operation）：$A \oplus B = {x|(x \in A\ and\ x \notin B)\ or\ (x\in B\ and\ x \notin A} = (A-B) \cup (B-A)$ 是 $A$ 与 $B$ 的<strong>对称差集</strong>（symmetric difference of set）。</p>
+<p><img src="/%E7%9B%B8%E5%AF%B9%E8%A1%A5%E9%9B%86.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="相对补集"
+	
+	
+></p>
+</li>
+</ol>
+<p>扩展：</p>
+<p>设 $A_1,A_2,\cdots,A_n$ 是任意 $n$ 个集合，则</p>
+<ul>
+<li>
+<p>这 $\mathbf n$ <strong>个集合的并集</strong>是包含那些<strong>至少是这组集合中一个集合成员的元素</strong>的集合，即</p>
+<p>$$
+\displaystyle \bigcup_{i=1}^{n}{A_i}
+= A_1 \cup A_2 \cup \cdots \cup A_n
+= {x|x \in A_1\ or\ x \in A_2 \cdots or\ x \in A_n}
+$$</p>
+</li>
+<li>
+<p>这 $\mathbf n$ <strong>个集合的交集</strong>是那些属于<strong>这组集合中所有集合成员的元素</strong>的集合，即</p>
+<p>$$
+\displaystyle \bigcap_{i=1}^{n}{A_i}
+= A_1 \cap A_2 \cap \cdots \cap A_n
+= {x|x \in A_1\ and\ x \in A_2 \cdots and\ x \in A_n}
+$$</p>
+</li>
+</ul>
+<p>当 $n$ 无限增大时，可记为</p>
+<ul>
+<li>$\displaystyle \bigcup^{\infin}_{i=1}A_i = A_1 \cup A_2 \cup \cdots$</li>
+<li>$\displaystyle \bigcap^{\infin}_{i=1}A_i = A_1 \cap A_2 \cap \cdots$</li>
+</ul>
+<hr>
+<h2 id="集合运算的基本等式">集合运算的基本等式</h2>
+<p>设 $U$ 为全集，$A$，$B$，$C$ 为任意集合，</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:left">等式</th>
+<th style="text-align:center">性质</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">$A \cup A = A$<br>$A \cap A = A$</td>
+<td style="text-align:center">幂等率</td>
+</tr>
+<tr>
+<td style="text-align:left">$A \cup B = B \cup A$<br>$A \cap B = B \cap A$</td>
+<td style="text-align:center">交换律</td>
+</tr>
+<tr>
+<td style="text-align:left">$A \cup (B \cup C) = (A \cup B) \cup C$<br>$A \cap (B \cap C) = (A \cap B) \cap C$</td>
+<td style="text-align:center">结合律</td>
+</tr>
+<tr>
+<td style="text-align:left">$A \cup \emptyset = A$<br>$A \cap U = A$</td>
+<td style="text-align:center">同一律</td>
+</tr>
+<tr>
+<td style="text-align:left">$A \cup U = U$<br>$A \cap \emptyset = \emptyset$</td>
+<td style="text-align:center">零律</td>
+</tr>
+<tr>
+<td style="text-align:left">$A \cup (B \cap C) = (A \cup B) \cap (A \cup C)$<br>$A \cap (B \cup C) = (A \cap B) \cup (A \cap C)$</td>
+<td style="text-align:center">分配律</td>
+</tr>
+<tr>
+<td style="text-align:left">$A \cup (A \cap B) = A$<br>$A \cap (A \cup B)$</td>
+<td style="text-align:center">吸收律</td>
+</tr>
+<tr>
+<td style="text-align:left">$\overline{A} \cap A = \emptyset$</td>
+<td style="text-align:center">矛盾律</td>
+</tr>
+<tr>
+<td style="text-align:left">$\overline{A} \cup A = U$</td>
+<td style="text-align:center">排中律</td>
+</tr>
+<tr>
+<td style="text-align:left">$\overline{\overline{A}}=A$</td>
+<td style="text-align:center">双重否定律</td>
+</tr>
+<tr>
+<td style="text-align:left">$\overline{A \cup B} = \overline{A} \cap \overline{B}$<br>$\overline{A \cap B} = \overline{A}$</td>
+<td style="text-align:center">德摩根律</td>
+</tr>
+</tbody>
+</table></div>
+<p>Example：</p>
+<p><img src="/%E5%88%86%E9%85%8D%E5%BE%8B-16308401576391.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="分配律"
+	
+	
+></p>
+<p>证明德摩根律的等式之一：$\overline{A \cup B} = \overline{A} \cap \overline{B}$</p>
+<p>证明：</p>
+<ol>
+<li>
+<p>证明 $\overline{A \cup B} \subseteq \overline{A} \cap \overline{B}$</p>
+<p>$\begin{aligned} \forall x \in \overline{A \cup B} \quad &amp; \Rightarrow\ x \notin A \cup B\ \Rightarrow\ x \notin A\ and\ x \notin B\ &amp; \Rightarrow x \in \overline{A}\ and\ x \in \overline{B}\ \Rightarrow\ x \in \overline{A} \cap \overline{B}， \end{aligned}$</p>
+<p>即 $\overline{A \cup B} \subseteq \overline{A} \cap \overline{B}$；</p>
+</li>
+<li>
+<p>证明 $\overline{A} \cap \overline{B} \subseteq \overline{A \cup B}$</p>
+<p>$\begin{aligned} \forall x \in \overline{A} \cap \overline{B} \quad &amp; \Rightarrow\ x \in \overline{A}\ and\ x \in \overline{B}\ \Rightarrow\ x \notin A\ and\ x \notin B\ &amp; \Rightarrow\ x \notin A \cup B\ \Rightarrow\ x \in \overline{A} \cap \overline{B}， \end{aligned}$</p>
+<p>即 $\overline{A} \cap \overline{B} \subseteq \overline{A \cup B}$。</p>
+</li>
+</ol>
+<p>综上可得 $\overline{A \cup B} = \overline{A} \cap \overline{B}$。</p>
+<hr>
+<h1 id="无限集合">无限集合</h1>
+<p>有限集合与无限集合的根本区别是：对于无限集合，表面上个数完全不相等的两个集合之间仍可能存在等势关系，如集合与真子集之间。</p>
+<h2 id="等势">等势</h2>
+<p><strong>冯·诺依曼的自然数定义</strong>：</p>
+<p>基于基数，利用一个集合的序列来定义自然数。</p>
+<ol>
+<li>$\emptyset \in \mathbf{N}$；</li>
+<li>若 $n \in \mathbf{N}$，则 $n' \equiv n \cup {n} \in \mathbf{N}$。</li>
+</ol>
+<p>从而，这个 <code>&lt;u&gt;</code>集合序列的基数 <code>&lt;/u&gt;</code>可以来定义自然数：</p>
+<ul>
+<li>$0 \equiv \emptyset$；</li>
+<li>$1 \equiv \emptyset \cup {\emptyset} = {\emptyset} = {0}$；</li>
+<li>$2 \equiv {\emptyset} \cup {{\emptyset}} = {\emptyset, {\emptyset}} = {0,1}$；</li>
+<li>$\cdots$</li>
+<li>$n \equiv {0,1,2,3,\cdots,n-1}$；</li>
+<li>$\cdots$</li>
+<li>$\mathbf{N} \equiv {0,1,2,\cdots,n,\cdots}$。</li>
+</ul>
+<blockquote>
+<p>实际上，任意含有 $n$ 个元素的集合都可以用 $n$ 表示。即，任意两个基数相同的集合之间都可以建立一一对应关系。</p>
+</blockquote>
+<hr>
+<p>Definition：</p>
+<p>设 $A$，$B$ 为两个集合，若在 $A$，$B$ 之间存在一种一一对应的关系：</p>
+<p>$$
+\Psi:\ A \rightarrow B
+$$</p>
+<p>则称 $A$ 与 $B$ 是<strong>等势的</strong>（equipotential），记作：</p>
+<p>$$
+A \sim B
+$$</p>
+<p>也称集合 $A$、$B$ <strong>等势</strong>（equipotent）。</p>
+<p>由等势定义可得，如果 $A = B$，那么 $A \sim B$，反之则不一定成立。</p>
+<p>Theorem：</p>
+<ol>
+<li>两个有限集合等式当且仅当它们有相同的元素个数。</li>
+<li>有限集合不和其任何真子集等势。</li>
+<li><code>&lt;u&gt;</code>可数集合可以与其可数的真子集等势 <code>&lt;/u&gt;</code>。</li>
+</ol>
+<hr>
+<h2 id="可数集合">可数集合</h2>
+<p>Definition：</p>
+<p>凡与自然数集合 $\mathbf{N}$ 等势的集合，称之为<strong>可数集合</strong>（countable set），该类集合的基数记为 $\aleph_0$（aleph，阿列夫）。</p>
+<p>Example：</p>
+<p>证明以下集合是可数集合，</p>
+<ol>
+<li>
+<p>$O^+ = {x|x \in \mathbf{N}，x是正奇数}$</p>
+<p>在 $O^+$ 与 $\mathbf{N}$ 之间建立一个一一对应关系 $\varphi_1 : \mathbf{N} \rightarrow O^+$：</p>
+<p>$$
+\begin{matrix}
+0&amp; 1&amp; 2&amp; \cdots&amp; n&amp; \cdots\
+\downarrow&amp; \downarrow&amp; \downarrow&amp; \downarrow&amp; \downarrow&amp; \downarrow\
+1&amp; 3&amp; 5&amp; \cdots&amp; 2n+1&amp; \cdots&amp;\
+\end{matrix}
+$$</p>
+<p>所以 $O^+$ 是可数集合。</p>
+</li>
+<li>
+<p>$P = {x|x \in \mathbf{N}，x是素数}$</p>
+<p>在 $P$ 与 $\mathbf{N}$ 之间建立一个一一对应关系 $\varphi_2 : \mathbf{N} \rightarrow P$：</p>
+<p>$$
+\begin{matrix}
+0&amp; 1&amp; 2&amp; 3&amp; 4&amp; \cdots\
+\downarrow&amp; \downarrow&amp; \downarrow&amp; \downarrow&amp; \downarrow&amp; \downarrow\
+2&amp; 3&amp; 5&amp; 7&amp; 11&amp; \cdots&amp;\
+\end{matrix}
+$$</p>
+<p>所以 $P$ 是可数集合。</p>
+</li>
+<li>
+<p>有理数集合 $\mathbf{Q}$</p>
+<p>将 $\mathbf{Q}$ 中的所有元素都写成 $p/q$（$p$、$q$ 是整数，且 $q \neq 0$）的形式，从 $0/1^{[0]}$ 开始，将所有有理数与自然数一一配对（其中 $p/q^{[n]}$ 的上标 $[n]$ 代表对应于该有理数的自然数）：</p>
+<p><img src="/%E8%AF%81%E6%98%8EQ%E6%98%AF%E5%8F%AF%E6%95%B0%E9%9B%86%E5%90%88-16308441770882.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="证明Q是可数集合"
+	
+	
+></p>
+<p>所以 $\mathbf{Q}$ 是可数集合。</p>
+</li>
+</ol>
+<hr>
+<h2 id="不可数集合">不可数集合</h2>
+<p>Definition：</p>
+<p>开区间 $(0,1)$ 称为不可数集合，凡<strong>与开区间 $(0,1)$ 等势</strong>的集合，都称为<strong>不可数集合</strong>，该类集合的基数记为 $\aleph$（或 $\aleph_1$）。</p>
+<p>Example：</p>
+<ol>
+<li>
+<p>闭区间 $[0,1]$ 是不可数集合。</p>
+<p>证明：在 $[0,1]$ 和 $(0,1)$ 之间建立如下对应关系：</p>
+<p>$$
+R:
+\begin{cases}
+\begin{matrix}
+0&amp; \rightarrow&amp; 1/4 \
+1&amp; \rightarrow&amp; 1/2 \
+\cfrac{1}{2^n}&amp; \rightarrow&amp; \cfrac{1}{2^{n+2}},&amp; n=1,2,3,\cdots \
+n&amp; \rightarrow&amp; n,&amp; 其他 n \in (0,1)\
+\end{matrix}
+\end{cases}
+$$</p>
+<p>显然 $[0,1]$ 与 $(0,1)$ 是等势的，所以 $[0,1]$ 是不可数集合。</p>
+</li>
+<li>
+<p>实数集 $\mathbf R$ 是不可数集合。</p>
+<p>证明：在实数集 $\mathbf R$ 和开区间 $(0,1)$ 之间建立如下对应关系：</p>
+<p>$$
+n \rightarrow \tan{\pi\bigg(\cfrac{2n-1}{2}\bigg)}
+$$</p>
+<p>显然 $(0,1)$ 与 $\mathbf{R}$ 之间是等势的，所以 $\mathbf{R}$ 是一个不可数集合。</p>
+</li>
+</ol>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E6%95%B0%E5%AD%A6/">数学</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+       
+</article>
+
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2022 - 
+        
+        2023 Linner&#39;s Blog
+
+        <span style="padding-left: 5px;padding-right: 5px;">|</span>
+
+        <a href="https://beian.miit.gov.cn/" target="_blank" >粤ICP备2022125602号-1</a>
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
