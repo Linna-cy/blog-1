@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='逻辑结构分类  线性结构  线性表（一般线性表） 特殊线性表  栈 队列 字符串   线性表的推广  数组 广义表     非线性结构  树结构  二叉树 多叉树   图结构  有向图 无向图   集合结构     线性表 由 $n(n\geq 0)$ 个数据特性相同的元素构成的有限序列称为线性表。$n=0$ 时，称为空表。非空表的特点如下：
+ 存在唯一一个“第一个”元素。 存在唯一一个“最后一个”元素。 相邻元素之间存在序偶关系：  除第一个之外，结构中的每个数据元素均只有一个前驱； 除最后一个之外，结构中的每个数据元素均只有一个后继。    线性表的存储结构分为：
+ 顺序存储； 链式存储  顺序存储结构 线性表的顺序存储是指用一组地址连续的存储单元依次存储线性表中的数据元素，从而使得逻辑上相邻的两个元素在物理位置上也相邻。在这种存储方式下，元素间的逻辑关系无须占用额外的空间来存储。
+其存储结构如图所示：
+假设线性表的每个元素占用的存储空间为$L$，$LOC(a_i)$为第$i$个元素的存储位置（$0 \le i \le n-1$，$n$为线性表的长度）：
+  第$i&#43;1$个元素和第$i$个元素的存储位置满足：'>
+
+
+<title>软件设计师——数据结构</title>
+
+<link rel='canonical' href='https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/'>
+
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+<meta property='og:title' content='软件设计师——数据结构'>
+<meta property='og:description' content='逻辑结构分类  线性结构  线性表（一般线性表） 特殊线性表  栈 队列 字符串   线性表的推广  数组 广义表     非线性结构  树结构  二叉树 多叉树   图结构  有向图 无向图   集合结构     线性表 由 $n(n\geq 0)$ 个数据特性相同的元素构成的有限序列称为线性表。$n=0$ 时，称为空表。非空表的特点如下：
+ 存在唯一一个“第一个”元素。 存在唯一一个“最后一个”元素。 相邻元素之间存在序偶关系：  除第一个之外，结构中的每个数据元素均只有一个前驱； 除最后一个之外，结构中的每个数据元素均只有一个后继。    线性表的存储结构分为：
+ 顺序存储； 链式存储  顺序存储结构 线性表的顺序存储是指用一组地址连续的存储单元依次存储线性表中的数据元素，从而使得逻辑上相邻的两个元素在物理位置上也相邻。在这种存储方式下，元素间的逻辑关系无须占用额外的空间来存储。
+其存储结构如图所示：
+假设线性表的每个元素占用的存储空间为$L$，$LOC(a_i)$为第$i$个元素的存储位置（$0 \le i \le n-1$，$n$为线性表的长度）：
+  第$i&#43;1$个元素和第$i$个元素的存储位置满足：'>
+<meta property='og:url' content='https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/'>
+<meta property='og:site_name' content='Linner&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='软考' /><meta property='article:tag' content='软件设计师' /><meta property='article:tag' content='计算机系统' /><meta property='article:published_time' content='2023-04-04T17:17:20&#43;08:00'/><meta property='article:modified_time' content='2023-04-04T17:17:20&#43;08:00'/>
+<meta name="twitter:title" content="软件设计师——数据结构">
+<meta name="twitter:description" content="逻辑结构分类  线性结构  线性表（一般线性表） 特殊线性表  栈 队列 字符串   线性表的推广  数组 广义表     非线性结构  树结构  二叉树 多叉树   图结构  有向图 无向图   集合结构     线性表 由 $n(n\geq 0)$ 个数据特性相同的元素构成的有限序列称为线性表。$n=0$ 时，称为空表。非空表的特点如下：
+ 存在唯一一个“第一个”元素。 存在唯一一个“最后一个”元素。 相邻元素之间存在序偶关系：  除第一个之外，结构中的每个数据元素均只有一个前驱； 除最后一个之外，结构中的每个数据元素均只有一个后继。    线性表的存储结构分为：
+ 顺序存储； 链式存储  顺序存储结构 线性表的顺序存储是指用一组地址连续的存储单元依次存储线性表中的数据元素，从而使得逻辑上相邻的两个元素在物理位置上也相邻。在这种存储方式下，元素间的逻辑关系无须占用额外的空间来存储。
+其存储结构如图所示：
+假设线性表的每个元素占用的存储空间为$L$，$LOC(a_i)$为第$i$个元素的存储位置（$0 \le i \le n-1$，$n$为线性表的长度）：
+  第$i&#43;1$个元素和第$i$个元素的存储位置满足：">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu0c2331fe09320137a3bd1d4b5cc68791_142496_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Linner&#39;s Blog</a></h1>
+            <h2 class="site-description">随便看看就行，副标题暂时还没想好</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Linna-cy'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives" id="toc-list">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents" class="js-toc"></nav>
+            
+        </div>
+    </section>
+
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/" >
+                软件设计师
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">软件设计师——数据结构</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 04, 2023</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="逻辑结构分类">逻辑结构分类</h1>
+<ul>
+<li>线性结构
+<ul>
+<li>线性表（一般线性表）</li>
+<li>特殊线性表
+<ul>
+<li>栈</li>
+<li>队列</li>
+<li>字符串</li>
+</ul>
+</li>
+<li>线性表的推广
+<ul>
+<li>数组</li>
+<li>广义表</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>非线性结构
+<ul>
+<li>树结构
+<ul>
+<li>二叉树</li>
+<li>多叉树</li>
+</ul>
+</li>
+<li>图结构
+<ul>
+<li>有向图</li>
+<li>无向图</li>
+</ul>
+</li>
+<li>集合结构</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h1 id="线性表">线性表</h1>
+<p><u>由 $n(n\geq 0)$ 个<strong>数据特性相同</strong>的元素构成的<strong>有限序列</strong>称为<strong>线性表</strong></u>。$n=0$ 时，称为空表。非空表的特点如下：</p>
+<ul>
+<li>存在唯一一个“第一个”元素。</li>
+<li>存在唯一一个“最后一个”元素。</li>
+<li>相邻元素之间存在序偶关系：
+<ul>
+<li>除第一个之外，结构中的每个数据元素均只有一个<strong>前驱</strong>；</li>
+<li>除最后一个之外，结构中的每个数据元素均只有一个<strong>后继</strong>。</li>
+</ul>
+</li>
+</ul>
+<p>线性表的存储结构分为：</p>
+<ul>
+<li>顺序存储；</li>
+<li>链式存储</li>
+</ul>
+<h2 id="顺序存储结构">顺序存储结构</h2>
+<p>线性表的<strong>顺序存储</strong>是指用一组<strong>地址连续的存储单元</strong>依次存储线性表中的数据元素，从而使得逻辑上相邻的两个元素在物理位置上也相邻。在这种存储方式下，元素间的逻辑关系无须占用额外的空间来存储。</p>
+<p>其存储结构如图所示：</p>
+<p><img src="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680610120418.png"
+	width="130"
+	height="266"
+	srcset="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680610120418_hu2b33a584fc5a2d635ec65d6abeb2f0a4_3927_480x0_resize_box_3.png 480w, /p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680610120418_hu2b33a584fc5a2d635ec65d6abeb2f0a4_3927_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="顺序表存储结构"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="48"
+		data-flex-basis="117px"
+	
+></p>
+<p>假设线性表的每个元素占用的存储空间为$L$，$LOC(a_i)$为第$i$个元素的存储位置（$0 \le i \le n-1$，$n$为线性表的长度）：</p>
+<ul>
+<li>
+<p>第$i+1$个元素和第$i$个元素的存储位置满足：</p>
+<p>$$
+LOC(a_{i+1})=LOC(a_i)+L
+$$</p>
+</li>
+<li>
+<p>第$i$个元素的存储位置：</p>
+<p>$$
+LOC(a_i)=LOC(a_0) + i \times L
+$$</p>
+<p>如果下标从1开始：</p>
+<p>$$
+LOC(a_i)=LOC(a_1) + (i-1) \times L
+$$</p>
+</li>
+</ul>
+<p>顺序存储结构的线性表的特点：</p>
+<ul>
+<li>优点：<strong>可以随机存取表中的元素</strong>，不需要额外的存储空间来表达元素之间的逻辑关系；</li>
+<li>缺点：<strong>插入和删除操作不方便、效率低、比较耗时</strong>（<strong>插入和删除操作需要移动元素</strong>），顺序表的长度是固定的。</li>
+</ul>
+<p>在表厂为$n$的线性表中，有$n+1$个插入位置（不考虑插入是否会导致溢出）：</p>
+<ul>
+<li>
+<p>在第$i$个插入位置插入，需要移动$n+1-i$个元素。</p>
+<ul>
+<li>在第1个位置插入（$a_1$）需要移动$n$个元素；</li>
+<li>在第$n+1$个位置插入（$a_n$后面）不需要移动元素。</li>
+</ul>
+</li>
+<li>
+<p>设在第$i$个插入位置插入的概率为$P_i$，<u>等概率下</u>（假如这$n+1$个插入位置插入的概率相同）<u>插入</u>一个新元素需要移动的元素个数的<u>期望值$E_{insert}$</u>为：</p>
+<p>$$
+E_{insert} = \sum_{i=1}^{n+1}{ \Big( P_i \times (n-i+1) \Big) } = \cfrac{1}{n+1} \sum_{i=1}^{n+1}{(n+i+1)} = \cfrac{\colorbox{yellow}n}{\colorbox{yellow}2}
+$$</p>
+<p>即，$E_{insert} = \cfrac{插入位置数}{2} = \frac{n+1}{2}$</p>
+</li>
+</ul>
+<p>在表长为$n$的线性表中删除元素时，共有$n$个可删除的元素：</p>
+<ul>
+<li>
+<p>删除第$i$个元素$a_i$需要移动$n-i$个元素。</p>
+<ul>
+<li>删除元素$a_1$需要移动$n-1$个元素；</li>
+<li>删除元素$a_n$不需要移动元素。</li>
+</ul>
+</li>
+<li>
+<p>设$a_i$被删除的概率为$q_i$，<u>等概率下删除元素</u>时需要移动的元素个数的<u>期望值$E_{delete}$</u>为：</p>
+<p>$$
+E_{delete} = \sum_{i=1}{n}{\Big( q_i \times (n-i) \Big)} = \cfrac{1}{n} \sum_{i=1}{n}{(n-i)} = \cfrac{\colorbox{yellow}{n-1}}{\colorbox{yellow}{2}}
+$$</p>
+<p>即，$E_{delete} = \cfrac{删除位置数}{2} = \cfrac{n}{2}$</p>
+</li>
+</ul>
+<p><strong>插入操作时间复杂度</strong>：</p>
+<ul>
+<li>最好情况（在第$n+1$个位置插入）：$O(1)$；</li>
+<li>最坏情况（在第1个位置插入）：$O(n)$；</li>
+<li>平均复杂度：$O(n)$。</li>
+</ul>
+<p><strong>查找元素时间复杂度</strong>（根据下标查找）：$O(1)$。</p>
+<h2 id="链式存储结构">链式存储结构</h2>
+<p>线性表的<strong>链式存储</strong>是指<strong>通过指针链接起来</strong>的结点来存储数据元素。</p>
+<p>其存储结构如下所示：</p>
+<p><img src="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680610469403.png"
+	width="403"
+	height="49"
+	srcset="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680610469403_hueeee19018a01756f2e48de06f8910c88_6757_480x0_resize_box_3.png 480w, /p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680610469403_hueeee19018a01756f2e48de06f8910c88_6757_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="链式表存储结构"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="822"
+		data-flex-basis="1973px"
+	
+></p>
+<ul>
+<li>
+<p><strong>数据域</strong>：用于存储数据元素的<strong>值</strong>；</p>
+</li>
+<li>
+<p><strong>指针域</strong>：用于存储当前元素的直接前驱或直接后继的<strong>位置信息</strong>（直接前或后驱的<strong>指针</strong>，称其为指针或链）。</p>
+<p>存储各数据元素的结点的<u>地址并不要求是连续的</u>，因此存储数据元素的同时必须存储元素之间的逻辑关系。</p>
+</li>
+</ul>
+<p>链式表的特点：</p>
+<ul>
+<li><u>结点空间只有在需要的时候才申请</u>，无须事先分配；</li>
+<li>长度不固定。</li>
+</ul>
+<p>链式表结点之间通过指针域构成一个链表，<u>若结点中只有一个指针域，则称为线性链表</u>。</p>
+<p><img src="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680610514354.png"
+	width="685"
+	height="64"
+	srcset="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680610514354_hu9c9f9d7fee45544c6864faab3f820061_7122_480x0_resize_box_3.png 480w, /p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680610514354_hu9c9f9d7fee45544c6864faab3f820061_7122_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="链式表存储结构"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1070"
+		data-flex-basis="2568px"
+	
+></p>
+<p>上图中的Head：一个指向链表第一个结点的针，称为头指针。使用它就可以顺序地访问到表中的任意一个元素。</p>
+<p>插入和删除操作时间复杂度（带不带头节点的复杂度都一样）：</p>
+<ul>
+<li>最好情况（在$i=1$位置）：$O(1)$；</li>
+<li>最坏情况（在$n+1$位置插入/删除$n$位置）：$O(n)$</li>
+<li>平均复杂度：$O(n)$</li>
+</ul>
+<p>链表操作的时间复杂度取决于指针遍历。</p>
+<hr>
+<h1 id="栈">栈</h1>
+<p>栈是一种<strong>后入先出</strong>（Last In First Out，LIFO）的线性表。<u>栈只能通过访问它的一端来实现数据存储和检索。</u></p>
+<p>栈的基本操作有：</p>
+<ul>
+<li><strong>入栈</strong>：将元素置入栈顶；</li>
+<li><strong>出栈</strong>：将元素从栈顶中取出。</li>
+<li>读取栈顶元素</li>
+</ul>
+<p>栈的出栈顺序一定和入栈顺序<strong>相反</strong>。</p>
+<h2 id="顺序存储结构-1">顺序存储结构</h2>
+<p>栈的顺序存储结构也称为<strong>顺序栈</strong>。</p>
+<p>顺序栈使用一个栈顶指针标记栈顶元素的索引位置。每次出栈时都需要重置栈顶指针，将栈顶指针向下移动，标记到新的栈顶元素。</p>
+<p>顺序栈的空间容量有限，所以每次入栈时都需要判断栈是否为满。</p>
+<h2 id="链式存储结构-1">链式存储结构</h2>
+<p>栈的链式存储结构称为<strong>链栈</strong>。链栈的头指针就是栈顶指针。</p>
+<p><img src="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680676944766.png"
+	width="238"
+	height="265"
+	srcset="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680676944766_hu1bea4090283c9929deed80a707d4d0a3_11895_480x0_resize_box_3.png 480w, /p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680676944766_hu1bea4090283c9929deed80a707d4d0a3_11895_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="链栈的存储结构"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="89"
+		data-flex-basis="215px"
+	
+></p>
+<h2 id="栈的应用">栈的应用</h2>
+<p>栈的典型应用包括<strong>表达式求值、括号匹配</strong>等，在计算机语言的实现以及将递归过程转变为非递归过程的处理中，栈有重要的作用。</p>
+<hr>
+<h1 id="队列">队列</h1>
+<p>队列是一种<strong>先入先出</strong>（First In First Out，FIFO）的线性表。</p>
+<p><u>队列只允许在表的一端插入元素，在表的另一端删除元素。</u></p>
+<ul>
+<li><strong>队头</strong>（Front）：允许<strong>删除</strong>元素的一端；</li>
+<li><strong>队尾</strong>（Rear）：允许<strong>插入</strong>元素的一端。</li>
+</ul>
+<p>队列的基本操作有：</p>
+<ul>
+<li><strong>入队</strong>：将元素加入到队尾；</li>
+<li><strong>出队</strong>：将元素加入到对头。</li>
+</ul>
+<p>队列的入队顺序一定<strong>等于</strong>出队顺序。</p>
+<blockquote>
+<p>使用两个栈可以来模拟一个队列（从一个栈出栈后的元素入另一个栈后再出栈）。</p>
+</blockquote>
+<h2 id="顺序存储结构-2">顺序存储结构</h2>
+<p>队列的顺序存储结构称为<strong>顺序队列</strong>。</p>
+<p>顺序队列设置两个指针：</p>
+<ul>
+<li>队头指针：指向对头元素的下标；</li>
+<li>队尾指针：指向队尾元素的下标。</li>
+</ul>
+<p>如果顺序队列只按照数组下标大小顺序来设置指针（对头指针的值永不大于队尾指针），那么在经过一段时间的操作后，对头指针有可能指向的并不是数组的第一个元素，此时队列的长度永远都到达不了数组的长度（空间无法被充分利用，实际使用的长度和逻辑长度不符）。</p>
+<p><img src="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680677900098.png"
+	width="959"
+	height="323"
+	srcset="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680677900098_hua0e0c24049b10a1b1a22eff29a314663_53364_480x0_resize_box_3.png 480w, /p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680677900098_hua0e0c24049b10a1b1a22eff29a314663_53364_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="队列操作"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="296"
+		data-flex-basis="712px"
+	
+></p>
+<p>为了解决这个问题，我们可以把数组想象为一个环型的结构（将最后一个元素和第一个元素连接起来，队头指针可以比队尾指针大）。如果此时队列的状态是上图中步骤$(e)$的状态，此时再插入元素，可以将元素放在数组索引0的位置，再让队尾指针始终保持在队列最后一个元素的索引之后即可。将这种队列称为<strong>循环队列</strong>，如：</p>
+<p><img src="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680678225885.png"
+	width="907"
+	height="202"
+	srcset="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680678225885_hu78897751e6ca29164f26d83cde2f776e_48040_480x0_resize_box_3.png 480w, /p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680678225885_hu78897751e6ca29164f26d83cde2f776e_48040_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="循环队列"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="449"
+		data-flex-basis="1077px"
+	
+></p>
+<h2 id="链式存储结构-2">链式存储结构</h2>
+<p>队列的链式存储也称为<strong>链队列</strong>（<strong>链队</strong>）。这里为了便于操作，可以给链队列添加一个头结点，并令头指针指向头结点。因此，队列为空的判定条件是头指针和尾指针的值相同，且
+均指向头结点。</p>
+<p><img src="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680678441791.png"
+	width="278"
+	height="340"
+	srcset="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680678441791_hud106655f2d3cb3393c4501ce0717f1de_16473_480x0_resize_box_3.png 480w, /p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680678441791_hud106655f2d3cb3393c4501ce0717f1de_16473_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="81"
+		data-flex-basis="196px"
+	
+></p>
+<h2 id="队列的应用">队列的应用</h2>
+<p>队列结构常用于处理需要排队的场合，例如操作系统中处理打印任务的打印队列、离散事件的计算机模拟等。</p>
+<hr>
+<h1 id="串">串</h1>
+<p><strong>串</strong>（<strong>字符串</strong>）是一种<strong>特殊的线性表</strong>，其<strong>数据元素为字符</strong>。</p>
+<p>串具有自身的特性，运算时常常把一个串作为一个整体来处理。</p>
+<p>串的基本概念和操作：</p>
+<ul>
+<li>
+<p><strong>空串</strong>：长度为0的串；</p>
+</li>
+<li>
+<p><strong>子串</strong>：由串中任意长度的连续字符构成的序列称为子串。含有子串的串称为主串。子串在主串中的位置是指子串首次出现时，该子串的第一个字符在主串中的位置。空串是任意串的子串。</p>
+</li>
+<li>
+<p><strong>串相等</strong>：指两个串长度相等且对应序号的字符也相同。</p>
+</li>
+<li>
+<p><strong>串比较</strong>：两个串比较大小时以字符的ASCⅡ码值（或其他字符编码集合）作为依据。</p>
+<p>实质上，比较操作从两个串的第一个字符开始进行，字符的码值大者所在的串为大；若其中一个串先结束，则以串长较大者为大。</p>
+</li>
+<li>
+<p>赋值：</p>
+<ul>
+<li>拷贝赋值：将一个串的值赋给另一个串；</li>
+<li>引用（地址）赋值：将一个串的引用（地址）赋给另一个串。那么这个串可以使用另一个串中的值，但是对这个串所做的操作，也会作用到另一个串。</li>
+</ul>
+</li>
+<li>
+<p><strong>连接串</strong>：将一个串插入到另一个串尾。</p>
+</li>
+<li>
+<p><strong>插入串</strong>：将一个串插入到另一个串的任意位置中。</p>
+</li>
+</ul>
+<h2 id="顺序存储结构-3">顺序存储结构</h2>
+<p>串的顺序存储结构是一种定长的串（类似顺序表）。</p>
+<h2 id="链式存储结构-3">链式存储结构</h2>
+<p>串的链式存储结构可以方便地对串进行插入删除操作（类似链表）。</p>
+<h2 id="串的模式匹配">串的模式匹配</h2>
+<p>子串的定位操作通常称为串的模式匹配。子串也称为模式串。</p>
+<p>有关串模式匹配算法的详细讲解可以查看：<a class="link" href="../%e7%bb%8f%e5%85%b8%e5%ad%97%e7%ac%a6%e4%b8%b2%e5%8c%b9%e9%85%8d" >经典字符串匹配</a></p>
+<h3 id="朴素的模式匹配算法">朴素的模式匹配算法</h3>
+<p>朴素的模式匹配算法也称为布鲁特一福斯算法（即暴力匹配算法），其基本思想是从主串的第一个字符起与模式串的第一个字符比较，若相等，则继续逐一对字符进行后续的比较，否则从主串第二个字符起与模式串的第一个字符重新比较，直到模式串中每个字符依次和主串中一个连续的字符序列相等时为止，此时称为匹配成功。如果不能在主串中找到与模式串相同的子串，则匹配失败。</p>
+<p>设主串和模式串的长度分别为$n$和$m$，算法时间复杂度和比较次数：</p>
+<ul>
+<li>
+<p>最好情况：$O(m)$，次数为$m$；</p>
+</li>
+<li>
+<p>最坏情况：$O(n \times m)$，次数为：</p>
+<p>$$
+\sum_{i=0}^{n-m}{p_i\big( (i+1) \times m \big)} = \cfrac{m}{n-m+1} \sum_{i=0}^{n-m}{(i+1)} = \cfrac{1}{2}m(n-m+2)
+$$</p>
+</li>
+<li>
+<p>平均：$O(n+m)$，次数为：</p>
+<p>$$
+\sum_{i=0}^{n-m}{p_i(i+m)} = \cfrac{1}{n-m+1} \sum_{i=0}^{n-m}{i+m} = \cfrac{1}{2} (n+m)
+$$</p>
+</li>
+</ul>
+<h2 id="kmp-算法">KMP 算法</h2>
+<p>KMP算法又称为改进的模式匹配算法。</p>
+<ul>
+<li>串的<strong>前缀</strong>：包含第一个字符，且不包含最后一个字符的子串；</li>
+<li>串的<strong>后缀</strong>：包含最后一个字符，且不包含第一个字符的子串。</li>
+<li>前缀集合：包含串的所有前缀的集合；</li>
+<li>后缀集合：包含串的所有后缀的集合。</li>
+</ul>
+<p>KMP的重点是求模式串字符的next值（失配指针$Next[i]$），假设$a_{i-1}$为当前要求next值的模式串字符：</p>
+<ul>
+<li>
+<p>前缀集合：$P_1={a_0,a_0a_1,\cdots,a_0&hellip;a_{i-1}}$；</p>
+</li>
+<li>
+<p>后缀集合：$P_2={a_{i-1},a_{i-2}a_{i-1},\cdots,a_1&hellip;a_{i-1}}$；</p>
+</li>
+<li>
+<p>$Next[\ i\ ]=maxLength(P_1 \cap P_2) + 1$</p>
+<blockquote>
+<p>对于失配指针表$Next[\ m\ ]（假设模式串的长度为$m$，其下标范围为$1 \le i \le m$</p>
+</blockquote>
+</li>
+</ul>
+<p>即：</p>
+<p>$$
+Next[\ i\ ] = a_0&hellip;a_{i-1}的最长相同前后缀的长度 + 1
+$$</p>
+<p>特殊情况：</p>
+<ul>
+<li>$Next[\ 1\ ] = 0$：因为其前缀集合和后缀集合都为空；</li>
+<li>$Next[\ 2\ ] = 1$：因为其前缀集合和后缀集合中有且仅有一个共同的元素$a_1$。</li>
+</ul>
+<hr>
+<h1 id="多维数组">多维数组</h1>
+<p>多维数组是定长线性表在维数上的扩展，即线性表中的元素又是一个线性表。多维数组是一种“同构”的数据结构，其每个数据元素类型相同、结构一致。</p>
+<ul>
+<li>
+<p>一维数组：即线性表。</p>
+</li>
+<li>
+<p>二维数组（仅讨论顺序存储结构）：</p>
+<p>二维数组的存储结构（如下图），可以分为以行为主序（下图左边）和以列为主序（下图右边）两种。</p>
+<p><img src="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680693946560.png"
+	width="451"
+	height="448"
+	srcset="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680693946560_hu1932cb3790ae3468aeeee7cc636c93c8_34859_480x0_resize_box_3.png 480w, /p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680693946560_hu1932cb3790ae3468aeeee7cc636c93c8_34859_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="100"
+		data-flex-basis="241px"
+	
+></p>
+<p>设：</p>
+<ul>
+<li>二维数组为$A[n,m]$，$n$为行数，$m$为列数；</li>
+<li>数组元素$a_{i,j},\ 0 \le i \le n-1,\ 0 \le j \le m-1$；</li>
+<li>$LOC(a_{i,j})$为元素$a_{i,j}$的地址；</li>
+<li>$L$为单个元素的存储空间大小。</li>
+</ul>
+<p>则有：</p>
+<ul>
+<li>
+<p>以行为主序优先存储：</p>
+<p>$$
+LOC(a_{i,j}) = LOC(a_{0,0}) + (i \times n + j) \times L
+$$</p>
+<p>如果下标从1开始（1 \le i \le n,\ 1 \le j \le m）：</p>
+<p>$$
+LOC(a_{i,j}) = LOC(a_{1,1}) + \big( (i-1) \times n + (j-1) \big) \times L
+$$</p>
+</li>
+<li>
+<p>以列为主序优先存储：</p>
+<p>$$
+LOC(a_{i,j}) = LOC(a_{0,0}) + (i + j \times m) \times L
+$$</p>
+<p>如果下标从1开始（1 \le i \le n,\ 1 \le j \le m）：</p>
+<p>$$
+LOC(a_{i,j}) = LOC(a_{1,1}) + \big( (i-1) + (j-1) \times m \big) \times L
+$$</p>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>优先存储说法问题：</p>
+<p>以行为主序优先存储的意思应该是在内存中按行存储。以列为主序优先存储的意思应该是在内存中按列存储。</p>
+<p>假设一个二维数组为：</p>
+<p>$$
+\begin{vmatrix}
+a_{11} &amp; a_{12} &amp; a_{13} &amp; a_{14} \
+a_{21} &amp; a_{22} &amp; a_{23} &amp; a_{24} \
+a_{31} &amp; a_{32} &amp; a_{33} &amp; a_{34} \
+a_{41} &amp; a_{42} &amp; a_{43} &amp; a_{44} \
+a_{51} &amp; a_{52} &amp; a_{53} &amp; a_{54}
+\end{vmatrix}
+$$</p>
+<p>按照以行为主序优先存储的公式，它在内存中应该是分为了5个地址连续的数组来存储。即内存中，$[a_{11},a_{12},a_{13},a_{14}]$为一个数组，其后再接一个数组$[a_{12},a_{22},a_{23},a_{24}]$，以此类推，在内存中按照列的元素作为一个连续的一维数组单位，再按照第1行后接第2行作为整个连续的二维数组。它们在内存中的地址顺序是：$a_{11},a_{12},&hellip;,a_{14},a_{21},&hellip;,a_{24},a_{31},&hellip;,a_{34},a_{41},&hellip;,a_{44},a_{51},&hellip;,a_{54}$。</p>
+<p>那么以列为主序优先存储的地址顺序就为：$a_{11},a_{21},&hellip;,a_{51},a_{12},a_{22},&hellip;,a_{52},a_{13},a_{23},&hellip;,a_{53},a_{14},a_{24},&hellip;,a_{54}$。</p>
+</blockquote>
+<p>一般矩阵都用二维数组来表示，但是对于一些特殊矩阵，如对称矩阵、三角矩阵和对角矩阵。它们的非0元素的分布存在一定规律，所以可以将其压缩存储在一维数组中，并且它们的多个值相同的元素（按照对应特殊矩阵定义上的值相同，并非简单的值相同）只分配一个存储单位。</p>
+<h2 id="对称矩阵">对称矩阵</h2>
+<p>若矩阵$A_{n \times n}$中的元素特点为$a_{ij}=a_{ji}\ (1 \le i,j \le n)$，则称之为$n$阶对称矩阵。</p>
+<p>对称矩阵$A_{n \times n}$：</p>
+<p>$$
+\begin{vmatrix}
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \
+a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn}
+\end{vmatrix}
+$$</p>
+<p>其中以对角线划分为三个区域：</p>
+<ul>
+<li>
+<p><strong>主对角线</strong>：$a{11},a_{22},\cdots,a_{nn}$，共有$n$个元素；</p>
+</li>
+<li>
+<p><strong>上三角区</strong>：对角线以上的所有元素，即：</p>
+<p>$$
+\begin{vmatrix}
+0 &amp; a_{12} &amp; a_{13} &amp; \cdots &amp; a_{1n} \
+0 &amp; 0 &amp; a_{23} &amp; \cdots &amp; a_{2n} \
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \
+0 &amp; 0 &amp; 0 &amp; \cdots &amp; a_{(n-1)n} \
+0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0
+\end{vmatrix}
+$$</p>
+</li>
+<li>
+<p><strong>下三角区</strong>：对角线以下的所有元素，和上三角区的个数相等并且重复。</p>
+</li>
+</ul>
+<p>可以将对称矩阵中，$n^2$个元素压缩存储到$\cfrac{n(n+1)}{2}$个元素的存储空间中。一般是存储下三角区和对角线。</p>
+<p>假设将$n$阶对称矩阵$A_{n \times n}$压缩存储到一维数组$B\left[ \cfrac{n(n+1)}{2} \right]$，则$B[k]\ (1 \le k \le \cfrac{n(n+1)}{2})$与矩阵元素$a_{ij}(a_{ji})\ (1 \le i,j \le n)$之间存在一一对应关系（以行为主序）：</p>
+<p>$$
+k =
+\begin{cases}
+\cfrac{i(i-1)}{2} + j, &amp; 当\ i \ge j \
+\cfrac{j(j-1)}{2} + i, &amp; 当\ i &lt; j
+\end{cases}
+$$</p>
+<p>如果下标从0开始（第一个元素为$a_{00}$，$0 \le k \le \cfrac{n(n+1)}{2} - 1$，并且$0 \le i,j \le n-1$）：</p>
+<p>$$
+k =
+\begin{cases}
+\cfrac{i(i+1)}{2} + j + 1, &amp; 当\ i \ge j \
+\cfrac{j(j+1)}{2} + i + 1, &amp; 当\ i &lt; j
+\end{cases}
+$$</p>
+<blockquote>
+<p>为什么$length(B) = \cfrac{n(n+1)}{2}$（压缩存储的一维数组大小）：</p>
+<p>主对角线的元素的大小为$n$，下三角区的对角线大小分别为$n-1,n-2,&hellip;,1$。即：
+$$
+length(B) = \sum_{i=1}^{n}{i} = \cfrac{n(n+1)}{2}
+$$</p>
+</blockquote>
+<blockquote>
+<p>PS：《软件设计师教程（第五版）》中一维数组的下标$k$的取值范围错了：</p>
+<p><img src="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/1680698007514.png"
+	width="999"
+	height="344"
+	srcset="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/1680698007514_hud68653e5fe46341035cf0f04b58f1fb8_157083_480x0_resize_box_3.png 480w, /p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/1680698007514_hud68653e5fe46341035cf0f04b58f1fb8_157083_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="对称矩阵"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="290"
+		data-flex-basis="696px"
+	
+>
+很明显不是$\left[ 1, \cfrac{n(n+1)}{2} \right)$，而应该是$\left[ 1, \cfrac{n(n+1)}{2} \right]$。</p>
+</blockquote>
+<h2 id="三对角矩阵">三对角矩阵</h2>
+<p>对角矩阵是指矩阵中的<u>非0元素都集中在以主对角线为中心的带状区域中</u>，即除了主对角线上和直接在对角线上、下方若干条对角线上的元素外，其余的矩阵元素都为0。三对角矩阵是对角矩阵中的一种，包括主对角线和在主对角线上、下方的各一条对角为非0元素：</p>
+<p>$$
+\begin{vmatrix}
+a_{11} &amp; a_{12} &amp; 0      &amp; \cdots &amp; 0              &amp; 0          \
+a_{21} &amp; a_{22} &amp; a_{23} &amp; \cdots &amp; 0              &amp; 0          \
+0      &amp; a_{32} &amp; a_{33} &amp; \cdots &amp; 0              &amp; 0          \
+0      &amp; 0      &amp; a_{43} &amp; \cdots &amp; 0              &amp; 0          \
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots         &amp; \vdots     \
+0      &amp; 0      &amp; 0      &amp; \cdots &amp; a_{(n-1)(n-1)} &amp; a_{(n-1)n} \
+0      &amp; 0      &amp; 0      &amp; \cdots &amp; a_{n(n-1)}     &amp; a_{nn}
+\end{vmatrix}
+$$</p>
+<p>设有$n$阶三对角矩阵$A_{n \times n}$，将其非0元素$a_{ij}(a_{ji})\ (1 \le i,j \le n)$存储在一维数组$B[k](1 \le k \le 3 \times n - 2)$中，则元素位置之间的对应关系为：</p>
+<p>$$
+k = 3 \times (i-1) - 1 + j - i + 1 + 1 = 2i + j -2
+$$</p>
+<p>如果下标从0开始（$0 \le k \le 3(n-1)$，并且$0 \le i,j \le n-1$）：</p>
+<p>$$
+k = 3 \times i - 1 + j - i + 1 + 1 = 2i + j + 1
+$$</p>
+<h2 id="稀疏矩阵">稀疏矩阵</h2>
+<p>在一个矩阵中，若<u>非0元素的个数远远少于0元素的个数，且非0元素的分布<strong>没有规律</strong></u>，则称之为稀疏矩阵。</p>
+<p>对于稀疏矩阵，存储非0元素时<strong>必须同时存储其位置</strong>（即行号和列号），用<u>三元组$(i,j,a_{ij})$可唯一确定矩阵$A$中的一个元素</u>。</p>
+<p>可以用三元组表来存储这些三元组。稀疏矩阵的三元组表的顺序存储结构称为<strong>三元组顺序表</strong>，常用的三元组表的链式存储结构是<strong>十字链表</strong>。</p>
+<hr>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E8%BD%AF%E8%80%83/">软考</a>
+        
+            <a href="/tags/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/">软件设计师</a>
+        
+            <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/">计算机系统</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+       
+</article>
+
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/">
+        
+        
+
+        软件设计师——程序设计语言</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/">
+        
+        
+
+        软件设计师——计算机系统</a>
+</div>
+</section>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2022 - 
+        
+        2023 Linner&#39;s Blog
+
+        <span style="padding-left: 5px;padding-right: 5px;">|</span>
+
+        <a href="https://beian.miit.gov.cn/" target="_blank" >粤ICP备2022125602号-1</a>
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

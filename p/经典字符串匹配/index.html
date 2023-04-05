@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='经典字符串匹配 BF暴力匹配算法 暴力匹配，即Brute Force，简称BF算法。BF算法是一种简单朴素的模式匹配算法，常用于在一个主串S内查找一个子串T的出现位置。
+算法步骤 假设有主串S与子串P，主串S的长度为N，子串T的长度为M。
+ 将S和T左对齐，并比较其第一个元素。 若匹配，则继续比较下一个元素，一直到第M个元素。 若不匹配则T向右移动一个位置。 接着根据步骤3和4进行比较，直到匹配到或者T移动了N-M且仍未匹配到。  代码实现 Python实现 实现1：
+def BFMatch(s, p): if len(s) &amp;lt; len(p): return -1 i, j = 0, 0 # 匹配阶段 while i &amp;lt; len(s) and j &amp;lt; len(p): # 匹配，s和p的指针均向前一步 if s[i] == p[j]: i &#43;= 1 j &#43;= 1 # 不匹配，i后退到下一个要匹配的位置，j后头到p开头 else: i = i - j &#43; 1 j = 0 if j == len(p): return i - j return -1 if __name__ == &amp;#34;__main__&amp;#34;: s = &amp;#34;abcdefghijkl&amp;#34; p = &amp;#34;ijk&amp;#34; result = BFMatch(s, p) if result == -1: print(&amp;#34;False&amp;#34;) else: print(result) 实现2：'>
+
+
+<title>经典字符串匹配</title>
+
+<link rel='canonical' href='https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D/'>
+
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+<meta property='og:title' content='经典字符串匹配'>
+<meta property='og:description' content='经典字符串匹配 BF暴力匹配算法 暴力匹配，即Brute Force，简称BF算法。BF算法是一种简单朴素的模式匹配算法，常用于在一个主串S内查找一个子串T的出现位置。
+算法步骤 假设有主串S与子串P，主串S的长度为N，子串T的长度为M。
+ 将S和T左对齐，并比较其第一个元素。 若匹配，则继续比较下一个元素，一直到第M个元素。 若不匹配则T向右移动一个位置。 接着根据步骤3和4进行比较，直到匹配到或者T移动了N-M且仍未匹配到。  代码实现 Python实现 实现1：
+def BFMatch(s, p): if len(s) &amp;lt; len(p): return -1 i, j = 0, 0 # 匹配阶段 while i &amp;lt; len(s) and j &amp;lt; len(p): # 匹配，s和p的指针均向前一步 if s[i] == p[j]: i &#43;= 1 j &#43;= 1 # 不匹配，i后退到下一个要匹配的位置，j后头到p开头 else: i = i - j &#43; 1 j = 0 if j == len(p): return i - j return -1 if __name__ == &amp;#34;__main__&amp;#34;: s = &amp;#34;abcdefghijkl&amp;#34; p = &amp;#34;ijk&amp;#34; result = BFMatch(s, p) if result == -1: print(&amp;#34;False&amp;#34;) else: print(result) 实现2：'>
+<meta property='og:url' content='https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D/'>
+<meta property='og:site_name' content='Linner&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C' /><meta property='article:tag' content='Python' /><meta property='article:tag' content='算法' /><meta property='article:published_time' content='2022-01-21T00:15:00&#43;00:00'/><meta property='article:modified_time' content='2022-01-21T00:15:00&#43;00:00'/>
+<meta name="twitter:title" content="经典字符串匹配">
+<meta name="twitter:description" content="经典字符串匹配 BF暴力匹配算法 暴力匹配，即Brute Force，简称BF算法。BF算法是一种简单朴素的模式匹配算法，常用于在一个主串S内查找一个子串T的出现位置。
+算法步骤 假设有主串S与子串P，主串S的长度为N，子串T的长度为M。
+ 将S和T左对齐，并比较其第一个元素。 若匹配，则继续比较下一个元素，一直到第M个元素。 若不匹配则T向右移动一个位置。 接着根据步骤3和4进行比较，直到匹配到或者T移动了N-M且仍未匹配到。  代码实现 Python实现 实现1：
+def BFMatch(s, p): if len(s) &amp;lt; len(p): return -1 i, j = 0, 0 # 匹配阶段 while i &amp;lt; len(s) and j &amp;lt; len(p): # 匹配，s和p的指针均向前一步 if s[i] == p[j]: i &#43;= 1 j &#43;= 1 # 不匹配，i后退到下一个要匹配的位置，j后头到p开头 else: i = i - j &#43; 1 j = 0 if j == len(p): return i - j return -1 if __name__ == &amp;#34;__main__&amp;#34;: s = &amp;#34;abcdefghijkl&amp;#34; p = &amp;#34;ijk&amp;#34; result = BFMatch(s, p) if result == -1: print(&amp;#34;False&amp;#34;) else: print(result) 实现2：">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu0c2331fe09320137a3bd1d4b5cc68791_142496_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Linner&#39;s Blog</a></h1>
+            <h2 class="site-description">随便看看就行，副标题暂时还没想好</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Linna-cy'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives" id="toc-list">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents" class="js-toc"></nav>
+            
+        </div>
+    </section>
+
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E7%BB%8F%E5%85%B8%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D/">经典字符串匹配</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jan 21, 2022</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="经典字符串匹配">经典字符串匹配</h1>
+<h1 id="bf暴力匹配算法">BF暴力匹配算法</h1>
+<p>暴力匹配，即Brute Force，简称BF算法。BF算法是一种简单朴素的模式匹配算法，常用于在一个主串S内查找一个子串T的出现位置。</p>
+<h2 id="算法步骤">算法步骤</h2>
+<p>假设有主串S与子串P，主串S的长度为N，子串T的长度为M。</p>
+<ol>
+<li>将S和T左对齐，并比较其第一个元素。</li>
+<li>若匹配，则继续比较下一个元素，一直到第M个元素。</li>
+<li>若不匹配则T向右移动一个位置。</li>
+<li>接着根据步骤3和4进行比较，直到匹配到或者T移动了N-M且仍未匹配到。</li>
+</ol>
+<h2 id="代码实现">代码实现</h2>
+<h3 id="python实现">Python实现</h3>
+<p>实现1：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">BFMatch</span>(s, p):
+    <span style="color:#66d9ef">if</span> len(s) <span style="color:#f92672">&lt;</span> len(p):
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+    i, j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>
+    <span style="color:#75715e"># 匹配阶段</span>
+    <span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> len(s) <span style="color:#f92672">and</span> j <span style="color:#f92672">&lt;</span> len(p):
+        <span style="color:#75715e"># 匹配，s和p的指针均向前一步</span>
+        <span style="color:#66d9ef">if</span> s[i] <span style="color:#f92672">==</span> p[j]:
+            i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            j <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#75715e"># 不匹配，i后退到下一个要匹配的位置，j后头到p开头</span>
+        <span style="color:#66d9ef">else</span>:
+            i <span style="color:#f92672">=</span> i <span style="color:#f92672">-</span> j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+            j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">if</span> j <span style="color:#f92672">==</span> len(p):
+        <span style="color:#66d9ef">return</span> i <span style="color:#f92672">-</span> j
+    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+    s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abcdefghijkl&#34;</span>
+    p <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ijk&#34;</span>
+    result <span style="color:#f92672">=</span> BFMatch(s, p)
+    <span style="color:#66d9ef">if</span> result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+        print(<span style="color:#e6db74">&#34;False&#34;</span>)
+    <span style="color:#66d9ef">else</span>:
+        print(result)
+
+
+</code></pre></div><p>实现2：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">BFMatch</span>(s, p):
+    <span style="color:#66d9ef">if</span> len(s) <span style="color:#f92672">&lt;</span> len(p):
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+    <span style="color:#75715e"># 最多移动len(s)-len(p)+1次</span>
+    <span style="color:#75715e"># 如果s的前len(s)-len(p)+1个与p均没有匹配</span>
+    <span style="color:#75715e"># 那么直接判断为不匹配，无需比较后len(p)-1个</span>
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(s)<span style="color:#f92672">-</span>len(p)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+        index <span style="color:#f92672">=</span> i           <span style="color:#75715e"># 当前比较的字符</span>
+        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(len(p)):
+            <span style="color:#75715e"># 相等继续比较下一个</span>
+            <span style="color:#66d9ef">if</span> s[index] <span style="color:#f92672">==</span> p[j]:
+                index <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            <span style="color:#75715e"># 不相等停止比较</span>
+            <span style="color:#66d9ef">else</span>:
+                <span style="color:#66d9ef">break</span>
+        <span style="color:#75715e"># 如果完全相等，返回当前位置</span>
+        <span style="color:#66d9ef">if</span> index <span style="color:#f92672">-</span> i <span style="color:#f92672">==</span> len(p):
+            <span style="color:#66d9ef">return</span> i
+    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+    s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abcdefghijkl&#34;</span>
+    p <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ijk&#34;</span>
+    result <span style="color:#f92672">=</span> BFMatch(s, p)
+    <span style="color:#66d9ef">if</span> result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+        print(<span style="color:#e6db74">&#34;False&#34;</span>)
+    <span style="color:#66d9ef">else</span>:
+        print(result)
+
+</code></pre></div><h3 id="c实现">C实现</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">BFMatch</span>(<span style="color:#66d9ef">char</span> s[], <span style="color:#66d9ef">int</span> len_s, <span style="color:#66d9ef">char</span> p[], <span style="color:#66d9ef">int</span> len_p) {
+    <span style="color:#66d9ef">if</span> (len_s <span style="color:#f92672">&lt;</span> len_p)
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+    <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    <span style="color:#75715e">// 之匹配s的前len_s-len_p+1个
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 如果s[len(s)-len(p)] != p[0]
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 那么就不用继续匹配
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// i-j代表s与p对齐的位置
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">while</span> (i<span style="color:#f92672">-</span>j <span style="color:#f92672">&lt;=</span> len_s<span style="color:#f92672">-</span>len_p) {
+        <span style="color:#66d9ef">if</span> (s[i] <span style="color:#f92672">==</span> p[j]) {
+            i<span style="color:#f92672">++</span>;
+            j<span style="color:#f92672">++</span>;
+            <span style="color:#66d9ef">if</span> (j <span style="color:#f92672">==</span> len_p)
+                <span style="color:#66d9ef">return</span> i <span style="color:#f92672">-</span> j;
+            <span style="color:#66d9ef">continue</span>;
+        }
+        i <span style="color:#f92672">=</span> i <span style="color:#f92672">-</span> j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+        j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+    }
+    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+}
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>) {
+<span style="color:#75715e">#define S &#34;abcdefghijkl&#34;
+</span><span style="color:#75715e">#define P &#34;ijk&#34;
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">char</span> s[<span style="color:#66d9ef">sizeof</span>(S)] <span style="color:#f92672">=</span> S;
+    <span style="color:#66d9ef">char</span> p[<span style="color:#66d9ef">sizeof</span>(P)] <span style="color:#f92672">=</span> P;
+    <span style="color:#66d9ef">int</span> result <span style="color:#f92672">=</span> BFMatch(s, <span style="color:#66d9ef">sizeof</span>(S)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, 
+            p, <span style="color:#66d9ef">sizeof</span>(P)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);
+    <span style="color:#66d9ef">if</span> (result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+        printf(<span style="color:#e6db74">&#34;False</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    <span style="color:#66d9ef">else</span>
+        printf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, result);
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div><hr>
+<h1 id="kmp快速匹配算法">KMP快速匹配算法</h1>
+<p>快速模式匹配算法，即Knuth Morris Pratt（简称KMP）算法，是解决字符串匹配问题的经典算法。</p>
+<p>KMP算法是在 BF 算法基础上改进得到的算法。BF算法的实现过程是用子串与主串中的字符一一配对，算法执行效率不高。对于主串S和子串P，BF算法如果遇到了不匹配的情况，主串S和子串P的指针都会回退，而且子串会回退到子串首部。KMP算法的实现过程接近人为进行模式匹配的过程。它只需回退子串，并且是根据情况回退，并不一定要回退到子串首部。</p>
+<h2 id="算法步骤-1">算法步骤</h2>
+<p>假设有主串S与子串P，主串S的长度为N，子串T的长度为M。</p>
+<ol>
+<li>求字串P的部分匹配表。</li>
+<li>将S和T左对齐，并比较其第一个元素。</li>
+<li>若匹配，则继续比较下一个元素，一直到第M个元素。</li>
+<li>若不匹配，根据部分匹配表回退P的指针。</li>
+<li>接着根据步骤3和4进行比较，直到匹配到或者T移动了N-M且仍未匹配到。</li>
+</ol>
+<h3 id="失配指针求解">失配指针求解</h3>
+<p>让KMP尽量减少回移的关键在于，用一个部分匹配表（也称失配移动表）记录每次需要回退的位置。部分匹配表是一个与原字符串长度相等的整数数组。表中的元素是字符串中相对于元素的前缀集合和后缀集合的交集中的长度最大的字符串的</p>
+<p>假设一个长度为n的模式串为$P=a_0a_1&hellip;a_{n-1}$，其中$a_i(0\le i&lt;n)$是单个字符， $Next[\ n\ ]$为其部分匹配表。</p>
+<p>那么对于$a_{i-1}$：</p>
+<ul>
+<li>前缀集合：$P_1={a_0,a_0a_1,\cdots,a_0&hellip;a_{i-1}}$</li>
+<li>后缀集合：$P_2={a_{i-1},a_{i-2}a_{i-1},\cdots,a_1&hellip;a_{i-1}}$</li>
+<li>$Next[\ i\ ]=maxLength(P_1 \cap P_2) + 1$</li>
+</ul>
+<p>过程代码演示：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_next_process</span>(p, i, j, next_val):
+    print(<span style="color:#e6db74">&#34;第&#34;</span>, i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#34;趟：&#34;</span>)
+    print(p)
+    <span style="color:#66d9ef">if</span> j <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+        <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> range(i <span style="color:#f92672">-</span> j):
+            print(<span style="color:#e6db74">&#34; &#34;</span>, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
+        print(p)
+        <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> range(i):
+            print(<span style="color:#e6db74">&#34; &#34;</span>, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
+        print(<span style="color:#e6db74">&#34;^&#34;</span>)
+    <span style="color:#66d9ef">if</span> i <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+        print(<span style="color:#e6db74">&#34;初始化&#34;</span>)
+    print(next_val)
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_next</span>(p):
+    <span style="color:#e6db74">&#34;&#34;&#34;求部分匹配表（失配指针）&#34;&#34;&#34;</span>
+    i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>    <span style="color:#75715e"># 指向主串的指针</span>
+    j <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>   <span style="color:#75715e"># 指向模式串的指针，一开始</span>
+    next_val <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">*</span> len(p)    <span style="color:#75715e"># 要返回的next数组</span>
+    get_next_process(p, i, j, next_val)
+    <span style="color:#75715e"># next[0]==-1，只需要求后面的len(p)-1个值即可</span>
+    <span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> len(p)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+        <span style="color:#75715e"># 匹配成功，相同前缀长度增加1</span>
+        <span style="color:#66d9ef">if</span> j <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">or</span> p[i] <span style="color:#f92672">==</span> p[j]:    
+            i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            j <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            next_val[i] <span style="color:#f92672">=</span> j
+            get_next_process(p, i, j, next_val)
+        <span style="color:#75715e"># 匹配不成功则在前面的子串中继续搜索，直至找不到</span>
+        <span style="color:#66d9ef">else</span>:
+            j <span style="color:#f92672">=</span> next_val[j]
+    <span style="color:#66d9ef">return</span> next_val
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+    p <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abababc&#34;</span>
+    get_next(p)
+
+</code></pre></div><p>输出：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">第 1 趟：
+abababc
+初始化
+[-1, -1, -1, -1, -1, -1, -1]
+第 2 趟：
+abababc
+ abababc
+ ^
+[-1, 0, -1, -1, -1, -1, -1]
+第 3 趟：
+abababc
+  abababc
+  ^
+[-1, 0, 0, -1, -1, -1, -1]
+第 4 趟：
+abababc
+  abababc
+   ^
+[-1, 0, 0, 1, -1, -1, -1]
+第 5 趟：
+abababc
+  abababc
+    ^
+[-1, 0, 0, 1, 2, -1, -1]
+第 6 趟：
+abababc
+  abababc
+     ^
+[-1, 0, 0, 1, 2, 3, -1]
+第 7 趟：
+abababc
+  abababc
+      ^
+[-1, 0, 0, 1, 2, 3, 4]
+</code></pre></div><h2 id="代码实现-1">代码实现</h2>
+<h3 id="python实现-1">Python实现</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_next</span>(p):
+    <span style="color:#e6db74">&#34;&#34;&#34;求部分匹配表（失配指针）&#34;&#34;&#34;</span>
+    i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>    <span style="color:#75715e"># 指向主串的指针</span>
+    j <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>   <span style="color:#75715e"># 指向模式串的指针</span>
+    next_val <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">*</span> len(p)    <span style="color:#75715e"># 要返回的next数组</span>
+    <span style="color:#75715e"># next[0]==-1，只需要求后面的len(p)-1个值即可</span>
+    <span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> len(p)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">and</span> j <span style="color:#f92672">&lt;</span> len(p)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+        <span style="color:#75715e"># 匹配成功，相同前缀长度增加1</span>
+        <span style="color:#66d9ef">if</span> j <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">or</span> p[i] <span style="color:#f92672">==</span> p[j]:    
+            i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            j <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            next_val[i] <span style="color:#f92672">=</span> j
+        <span style="color:#75715e"># 匹配不成功则在前面的子串中继续搜索，直至找不到</span>
+        <span style="color:#66d9ef">else</span>:
+            j <span style="color:#f92672">=</span> next_val[j]
+    <span style="color:#66d9ef">return</span> next_val
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">KMP</span>(s, p):
+    <span style="color:#66d9ef">if</span> len(s) <span style="color:#f92672">&lt;</span> len(p):
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+    i, j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>
+    <span style="color:#75715e"># 求next数组</span>
+    next <span style="color:#f92672">=</span> get_next(p)
+    <span style="color:#75715e"># 匹配阶段</span>
+    <span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> len(s) <span style="color:#f92672">and</span> j <span style="color:#f92672">&lt;</span> len(p):
+        <span style="color:#66d9ef">if</span> j <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">or</span> s[i] <span style="color:#f92672">==</span> p[j]:
+            i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            j <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">else</span>:
+            j <span style="color:#f92672">=</span> next[j]
+    <span style="color:#66d9ef">if</span> j <span style="color:#f92672">==</span> len(p):
+        <span style="color:#66d9ef">return</span> i <span style="color:#f92672">-</span> j
+    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+    s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ababababca&#34;</span>
+    p <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abababc&#34;</span>
+    result <span style="color:#f92672">=</span> KMP(s, p)
+    <span style="color:#66d9ef">if</span> result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+        print(<span style="color:#e6db74">&#34;False&#34;</span>)
+    <span style="color:#66d9ef">else</span>:
+        print(result)
+
+
+</code></pre></div><p>优化代码：去除<code>get_next()</code>，边匹配边计算部分匹配表</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">KMP</span>(s, p):
+    <span style="color:#66d9ef">if</span> len(s) <span style="color:#f92672">&lt;</span> len(p):
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+    i, j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>
+    p_i, p_j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+    next <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">*</span> len(p)
+    <span style="color:#75715e"># 边计算部分匹配表，边匹配</span>
+    <span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> len(s) <span style="color:#f92672">and</span> j <span style="color:#f92672">&lt;</span> len(p):
+        <span style="color:#75715e"># 求部分匹配表</span>
+        <span style="color:#66d9ef">if</span> p_i <span style="color:#f92672">&lt;</span> len(p)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+            <span style="color:#66d9ef">if</span> p_j <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">or</span> p[p_i] <span style="color:#f92672">==</span> p[p_j]:
+                p_i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+                p_j <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+                next[p_i] <span style="color:#f92672">=</span> p_j
+            <span style="color:#66d9ef">else</span>:
+                p_j <span style="color:#f92672">=</span> next[p_j]
+        <span style="color:#75715e"># 匹配阶段</span>
+        <span style="color:#66d9ef">if</span> j <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">or</span> s[i] <span style="color:#f92672">==</span> p[j]:
+            i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+            j <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">else</span>:
+            j <span style="color:#f92672">=</span> next[j]
+    <span style="color:#66d9ef">if</span> j <span style="color:#f92672">==</span> len(p):
+        <span style="color:#66d9ef">return</span> i <span style="color:#f92672">-</span> j
+    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+    s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ababababca&#34;</span>
+    p <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abababc&#34;</span>
+    result <span style="color:#f92672">=</span> KMP(s, p)
+    <span style="color:#66d9ef">if</span> result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+        print(<span style="color:#e6db74">&#34;False&#34;</span>)
+    <span style="color:#66d9ef">else</span>:
+        print(result)
+
+</code></pre></div><h3 id="c语言">C语言</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">KMP</span>(<span style="color:#66d9ef">char</span> s[], <span style="color:#66d9ef">int</span> len_s, <span style="color:#66d9ef">char</span> p[], <span style="color:#66d9ef">int</span> len_p) {
+    <span style="color:#66d9ef">if</span> (len_s <span style="color:#f92672">&lt;</span> len_p)
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+    <span style="color:#75715e">// 创建和初始化部分匹配表
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> next <span style="color:#f92672">=</span> (<span style="color:#66d9ef">int</span><span style="color:#f92672">*</span>)malloc(len_p<span style="color:#f92672">*</span><span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">int</span>));
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> len_p; i<span style="color:#f92672">++</span>)
+        next[i] <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+    <span style="color:#75715e">// 边计算部分匹配表，边匹配
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, p_i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, p_j <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+    <span style="color:#66d9ef">while</span> (i <span style="color:#f92672">&lt;</span> len_s <span style="color:#f92672">&amp;&amp;</span> j <span style="color:#f92672">&lt;</span> len_p) {
+        <span style="color:#75715e">// 求部分匹配表
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (p_i <span style="color:#f92672">&lt;</span> len_p<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) {
+            <span style="color:#66d9ef">if</span> (p_j <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">||</span> p[p_i] <span style="color:#f92672">==</span> p[p_j]) {
+                p_i<span style="color:#f92672">++</span>;
+                p_j<span style="color:#f92672">++</span>;
+                next[p_i] <span style="color:#f92672">=</span> p_j;
+            }
+            <span style="color:#66d9ef">else</span>
+                p_j <span style="color:#f92672">=</span> next[p_j];
+        }
+        <span style="color:#75715e">// 匹配阶段
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (j <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">||</span> s[i] <span style="color:#f92672">==</span> p[j]) {
+            i<span style="color:#f92672">++</span>;
+            j<span style="color:#f92672">++</span>;
+        }
+        <span style="color:#66d9ef">else</span>
+            j <span style="color:#f92672">=</span> next[j];
+    }
+    free(next);
+    <span style="color:#66d9ef">if</span> (j <span style="color:#f92672">==</span> len_p)
+        <span style="color:#66d9ef">return</span> i <span style="color:#f92672">-</span> j;
+    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+}
+
+<span style="color:#75715e">#define LEN(S) sizeof(S)-1
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>)
+{
+<span style="color:#75715e">#define S &#34;ababababca&#34;
+</span><span style="color:#75715e">#define P &#34;abababc&#34;
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">char</span> s[<span style="color:#66d9ef">sizeof</span>(S)] <span style="color:#f92672">=</span> S;
+    <span style="color:#66d9ef">char</span> p[<span style="color:#66d9ef">sizeof</span>(P)] <span style="color:#f92672">=</span> P;
+    <span style="color:#66d9ef">int</span> result <span style="color:#f92672">=</span> KMP(s, LEN(s), p, LEN(p));
+    <span style="color:#66d9ef">if</span> (result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+        printf(<span style="color:#e6db74">&#34;False</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    <span style="color:#66d9ef">else</span>
+        printf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, result);
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/c/">C</a>
+        
+            <a href="/tags/python/">Python</a>
+        
+            <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+       
+</article>
+
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/%E4%B8%A4%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%AE%97%E6%B3%95/">
+        
+        
+
+        两数交换算法</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+        
+        
+
+        经典排序算法</a>
+</div>
+</section>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2022 - 
+        
+        2023 Linner&#39;s Blog
+
+        <span style="padding-left: 5px;padding-right: 5px;">|</span>
+
+        <a href="https://beian.miit.gov.cn/" target="_blank" >粤ICP备2022125602号-1</a>
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
