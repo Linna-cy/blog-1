@@ -436,12 +436,31 @@ def BFMatch(s, p): if len(s) &amp;lt; len(p): return -1 i, j = 0, 0 # 匹配阶�
 </ol>
 <h3 id="失配指针求解">失配指针求解</h3>
 <p>让KMP尽量减少回移的关键在于，用一个部分匹配表（也称失配移动表）记录每次需要回退的位置。部分匹配表是一个与原字符串长度相等的整数数组。表中的元素是字符串中相对于元素的前缀集合和后缀集合的交集中的长度最大的字符串的</p>
-<p>假设一个长度为n的模式串为$P=a_0a_1&hellip;a_{n-1}$，其中$a_i(0\le i&lt;n)$是单个字符， $Next[\ n\ ]$为其部分匹配表。</p>
+<p>假设一个长度为n的模式串为$P=a_0a_1&hellip;a_{n-1}$，其中$a_i(0\le i&lt;n)$是单个字符， $Next[\ n+1\ ]$为其部分匹配表。</p>
 <p>那么对于$a_{i-1}$：</p>
 <ul>
-<li>前缀集合：$P_1={a_0,a_0a_1,\cdots,a_0&hellip;a_{i-1}}$</li>
-<li>后缀集合：$P_2={a_{i-1},a_{i-2}a_{i-1},\cdots,a_1&hellip;a_{i-1}}$</li>
-<li>$Next[\ i\ ]=maxLength(P_1 \cap P_2) + 1$</li>
+<li>
+<p>前缀集合：$P_1={a_0,a_0a_1,\cdots,a_0&hellip;a_{i-1}}$</p>
+</li>
+<li>
+<p>后缀集合：$P_2={a_{i-1},a_{i-2}a_{i-1},\cdots,a_1&hellip;a_{i-1}}$</p>
+</li>
+<li>
+<p>失配指针：</p>
+<p>$$
+Next[i] =
+\begin{cases}
+-1 &amp; 当\ i=0 时 \
+max &amp; { k|0&lt;k&lt;j 且 &ldquo;p_0\cdots p_{k-1}&rdquo; = &ldquo;p_{j-k}\cdots p_{j-1}&rdquo; } \
+0 &amp; 其他情况
+\end{cases}
+$$</p>
+<p>即：</p>
+<ul>
+<li>$Next[0] = -1$；</li>
+<li>$Next[i] = maxLength(P_1 \cap P_2),\ i \neq 0$。</li>
+</ul>
+</li>
 </ul>
 <p>过程代码演示：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_next_process</span>(p, i, j, next_val):

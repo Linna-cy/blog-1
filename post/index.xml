@@ -13536,12 +13536,31 @@ $$&lt;/p&gt;
 &lt;/ol&gt;
 &lt;h3 id=&#34;失配指针求解&#34;&gt;失配指针求解&lt;/h3&gt;
 &lt;p&gt;让KMP尽量减少回移的关键在于，用一个部分匹配表（也称失配移动表）记录每次需要回退的位置。部分匹配表是一个与原字符串长度相等的整数数组。表中的元素是字符串中相对于元素的前缀集合和后缀集合的交集中的长度最大的字符串的&lt;/p&gt;
-&lt;p&gt;假设一个长度为n的模式串为$P=a_0a_1&amp;hellip;a_{n-1}$，其中$a_i(0\le i&amp;lt;n)$是单个字符， $Next[\ n\ ]$为其部分匹配表。&lt;/p&gt;
+&lt;p&gt;假设一个长度为n的模式串为$P=a_0a_1&amp;hellip;a_{n-1}$，其中$a_i(0\le i&amp;lt;n)$是单个字符， $Next[\ n+1\ ]$为其部分匹配表。&lt;/p&gt;
 &lt;p&gt;那么对于$a_{i-1}$：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;前缀集合：$P_1={a_0,a_0a_1,\cdots,a_0&amp;hellip;a_{i-1}}$&lt;/li&gt;
-&lt;li&gt;后缀集合：$P_2={a_{i-1},a_{i-2}a_{i-1},\cdots,a_1&amp;hellip;a_{i-1}}$&lt;/li&gt;
-&lt;li&gt;$Next[\ i\ ]=maxLength(P_1 \cap P_2) + 1$&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;前缀集合：$P_1={a_0,a_0a_1,\cdots,a_0&amp;hellip;a_{i-1}}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;后缀集合：$P_2={a_{i-1},a_{i-2}a_{i-1},\cdots,a_1&amp;hellip;a_{i-1}}$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;失配指针：&lt;/p&gt;
+&lt;p&gt;$$
+Next[i] =
+\begin{cases}
+-1 &amp;amp; 当\ i=0 时 \
+max &amp;amp; { k|0&amp;lt;k&amp;lt;j 且 &amp;ldquo;p_0\cdots p_{k-1}&amp;rdquo; = &amp;ldquo;p_{j-k}\cdots p_{j-1}&amp;rdquo; } \
+0 &amp;amp; 其他情况
+\end{cases}
+$$&lt;/p&gt;
+&lt;p&gt;即：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$Next[0] = -1$；&lt;/li&gt;
+&lt;li&gt;$Next[i] = maxLength(P_1 \cap P_2),\ i \neq 0$。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;过程代码演示：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;get_next_process&lt;/span&gt;(p, i, j, next_val):
