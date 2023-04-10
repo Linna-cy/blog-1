@@ -11,8 +11,9 @@ def BFMatch(s, p): if len(s) &amp;lt; len(p): return -1 i, j = 0, 0 # 匹配阶�
 
 <link rel='canonical' href='https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D/'>
 
-<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
-<meta property='og:title' content='经典字符串匹配'>
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css">
+<link rel="stylesheet" href="/css/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+<script src="/js/katex.min.js"></script><meta property='og:title' content='经典字符串匹配'>
 <meta property='og:description' content='经典字符串匹配 BF暴力匹配算法 暴力匹配，即Brute Force，简称BF算法。BF算法是一种简单朴素的模式匹配算法，常用于在一个主串S内查找一个子串T的出现位置。
 算法步骤 假设有主串S与子串P，主串S的长度为N，子串T的长度为M。
  将S和T左对齐，并比较其第一个元素。 若匹配，则继续比较下一个元素，一直到第M个元素。 若不匹配则T向右移动一个位置。 接着根据步骤3和4进行比较，直到匹配到或者T移动了N-M且仍未匹配到。  代码实现 Python实现 实现1：
