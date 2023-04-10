@@ -1338,12 +1338,19 @@ $$&lt;/p&gt;
 &lt;p&gt;$C_i$为查找成功时，已经进行过比较的关键字个数。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;静态查找表的查找方法&#34;&gt;静态查找表的查找方法&lt;/h2&gt;
+&lt;h2 id=&#34;查找算法&#34;&gt;查找算法&lt;/h2&gt;
 &lt;p&gt;静态查找表有以下查找方法：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;顺序查找；&lt;/li&gt;
 &lt;li&gt;折半查找；&lt;/li&gt;
 &lt;li&gt;分块查找。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;动态查找表有以下查找方法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;二叉排序树；&lt;/li&gt;
+&lt;li&gt;平衡排序树；&lt;/li&gt;
+&lt;li&gt;B-树；&lt;/li&gt;
+&lt;li&gt;哈希表。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;顺序查找&#34;&gt;顺序查找&lt;/h3&gt;
 &lt;p&gt;顺序查找是从表的一端开始，按照顺序（从左往右或从右往左）逐一进行查找。顺序查找的方法&lt;u&gt;对于&lt;strong&gt;顺序存储方式&lt;/strong&gt;和&lt;strong&gt;链式存储方式&lt;/strong&gt;的查找表都适用&lt;/u&gt;。&lt;/p&gt;
@@ -1359,7 +1366,12 @@ $$&lt;/p&gt;
 &lt;li&gt;如果$x$比中间元素小，递归地对中间元素左边的数列（比$x$小的元素）进行二分查找；&lt;/li&gt;
 &lt;li&gt;如果$x$比中间元素大，递归地对中间元素右边的数列（比$x$大的元素）进行二分查找。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;折半查找在查找成功时和给定值进行比较的关键字个数最多为$\lfloor log_2{n} \rfloor + 1$&lt;/p&gt;
+&lt;p&gt;折半查找的过程可用二叉树描述。$n$个结点的二叉树深度为$\lfloor log_2{n} \rfloor + 1$，折半查找进行比较的关键字个数最多不超过树的深度。所以，折半查找在查找成功时和给定值&lt;u&gt;进行比较的关键字个数最多为$\lfloor log_2{n} \rfloor + 1$&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;折半查找的平均查找长度（假设结点总数为$n=2^h-1$，即折半查找树为深度$h=log_2(n+1)$的满二叉树）：&lt;/p&gt;
+&lt;p&gt;$$
+ASL_{bs} = \cfrac{1}{n} \sum_{i=1}^{n}{i \times 2^{i-1}} = \cfrac{n+1}{n} log_2{(n+1)} - 1
+$$&lt;/p&gt;
+&lt;p&gt;当$n$值较大时，$ASL_{bs} \approx log_2{(n+1)} - 1$。&lt;/p&gt;
 </description>
         </item>
         <item>
