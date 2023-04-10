@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='逻辑结构分类  线性结构  线性表（一般线性表） 特殊线性表  栈 队列 字符串   线性表的推广  数组 广义表     非线性结构  树结构  二叉树 多叉树   图结构  有向图 无向图   集合结构     线性表 由 $n(n\geq 0)$ 个数据特性相同的元素构成的有限序列称为线性表。$n=0$ 时，称为空表。非空表的特点如下：
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='复杂度 算法时间复杂度以算法中基本操附重复执行的次数（简称为频度）作为算法的时间度量。一般不必要精确计算出算法的时间复杂度，只要大致计算出相应的数量级即可，使用大$O$表示法表示（空间复杂度也是）。
+ 加法规则：多项相加，保留最高阶项，并将系数化为1； 乘法规则：多项相乘都保留，并将系数化为1。  逻辑结构分类  线性结构  线性表（一般线性表） 特殊线性表  栈 队列 字符串   线性表的推广  数组 广义表     非线性结构  树结构  二叉树 多叉树   图结构  有向图 无向图   集合结构     线性表 由 $n(n\geq 0)$ 个数据特性相同的元素构成的有限序列称为线性表。$n=0$ 时，称为空表。非空表的特点如下：
  存在唯一一个“第一个”元素。 存在唯一一个“最后一个”元素。 相邻元素之间存在序偶关系：  除第一个之外，结构中的每个数据元素均只有一个前驱； 除最后一个之外，结构中的每个数据元素均只有一个后继。    线性表的存储结构分为：
  顺序存储； 链式存储  顺序存储结构 线性表的顺序存储是指用一组地址连续的存储单元依次存储线性表中的数据元素，从而使得逻辑上相邻的两个元素在物理位置上也相邻。在这种存储方式下，元素间的逻辑关系无须占用额外的空间来存储。
 其存储结构如图所示：
-假设线性表的每个元素占用的存储空间为$L$，$LOC(a_i)$为第$i$个元素的存储位置（$0 \le i \le n-1$，$n$为线性表的长度）：
-  第$i&#43;1$个元素和第$i$个元素的存储位置满足：'>
+假设线性表的每个元素占用的存储空间为$L$，$LOC(a_i)$为第$i$个元素的存储位置（$0 \le i \le n-1$，$n$为线性表的长度）：'>
 
 
 <title>软件设计师——数据结构</title>
@@ -16,22 +16,22 @@
 <link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css">
 <link rel="stylesheet" href="/css/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
 <script src="/js/katex.min.js"></script><meta property='og:title' content='软件设计师——数据结构'>
-<meta property='og:description' content='逻辑结构分类  线性结构  线性表（一般线性表） 特殊线性表  栈 队列 字符串   线性表的推广  数组 广义表     非线性结构  树结构  二叉树 多叉树   图结构  有向图 无向图   集合结构     线性表 由 $n(n\geq 0)$ 个数据特性相同的元素构成的有限序列称为线性表。$n=0$ 时，称为空表。非空表的特点如下：
+<meta property='og:description' content='复杂度 算法时间复杂度以算法中基本操附重复执行的次数（简称为频度）作为算法的时间度量。一般不必要精确计算出算法的时间复杂度，只要大致计算出相应的数量级即可，使用大$O$表示法表示（空间复杂度也是）。
+ 加法规则：多项相加，保留最高阶项，并将系数化为1； 乘法规则：多项相乘都保留，并将系数化为1。  逻辑结构分类  线性结构  线性表（一般线性表） 特殊线性表  栈 队列 字符串   线性表的推广  数组 广义表     非线性结构  树结构  二叉树 多叉树   图结构  有向图 无向图   集合结构     线性表 由 $n(n\geq 0)$ 个数据特性相同的元素构成的有限序列称为线性表。$n=0$ 时，称为空表。非空表的特点如下：
  存在唯一一个“第一个”元素。 存在唯一一个“最后一个”元素。 相邻元素之间存在序偶关系：  除第一个之外，结构中的每个数据元素均只有一个前驱； 除最后一个之外，结构中的每个数据元素均只有一个后继。    线性表的存储结构分为：
  顺序存储； 链式存储  顺序存储结构 线性表的顺序存储是指用一组地址连续的存储单元依次存储线性表中的数据元素，从而使得逻辑上相邻的两个元素在物理位置上也相邻。在这种存储方式下，元素间的逻辑关系无须占用额外的空间来存储。
 其存储结构如图所示：
-假设线性表的每个元素占用的存储空间为$L$，$LOC(a_i)$为第$i$个元素的存储位置（$0 \le i \le n-1$，$n$为线性表的长度）：
-  第$i&#43;1$个元素和第$i$个元素的存储位置满足：'>
+假设线性表的每个元素占用的存储空间为$L$，$LOC(a_i)$为第$i$个元素的存储位置（$0 \le i \le n-1$，$n$为线性表的长度）：'>
 <meta property='og:url' content='https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/'>
 <meta property='og:site_name' content='Linner&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='软考' /><meta property='article:tag' content='软件设计师' /><meta property='article:tag' content='计算机系统' /><meta property='article:published_time' content='2023-04-04T17:17:20&#43;08:00'/><meta property='article:modified_time' content='2023-04-04T17:17:20&#43;08:00'/>
 <meta name="twitter:title" content="软件设计师——数据结构">
-<meta name="twitter:description" content="逻辑结构分类  线性结构  线性表（一般线性表） 特殊线性表  栈 队列 字符串   线性表的推广  数组 广义表     非线性结构  树结构  二叉树 多叉树   图结构  有向图 无向图   集合结构     线性表 由 $n(n\geq 0)$ 个数据特性相同的元素构成的有限序列称为线性表。$n=0$ 时，称为空表。非空表的特点如下：
+<meta name="twitter:description" content="复杂度 算法时间复杂度以算法中基本操附重复执行的次数（简称为频度）作为算法的时间度量。一般不必要精确计算出算法的时间复杂度，只要大致计算出相应的数量级即可，使用大$O$表示法表示（空间复杂度也是）。
+ 加法规则：多项相加，保留最高阶项，并将系数化为1； 乘法规则：多项相乘都保留，并将系数化为1。  逻辑结构分类  线性结构  线性表（一般线性表） 特殊线性表  栈 队列 字符串   线性表的推广  数组 广义表     非线性结构  树结构  二叉树 多叉树   图结构  有向图 无向图   集合结构     线性表 由 $n(n\geq 0)$ 个数据特性相同的元素构成的有限序列称为线性表。$n=0$ 时，称为空表。非空表的特点如下：
  存在唯一一个“第一个”元素。 存在唯一一个“最后一个”元素。 相邻元素之间存在序偶关系：  除第一个之外，结构中的每个数据元素均只有一个前驱； 除最后一个之外，结构中的每个数据元素均只有一个后继。    线性表的存储结构分为：
  顺序存储； 链式存储  顺序存储结构 线性表的顺序存储是指用一组地址连续的存储单元依次存储线性表中的数据元素，从而使得逻辑上相邻的两个元素在物理位置上也相邻。在这种存储方式下，元素间的逻辑关系无须占用额外的空间来存储。
 其存储结构如图所示：
-假设线性表的每个元素占用的存储空间为$L$，$LOC(a_i)$为第$i$个元素的存储位置（$0 \le i \le n-1$，$n$为线性表的长度）：
-  第$i&#43;1$个元素和第$i$个元素的存储位置满足：">
+假设线性表的每个元素占用的存储空间为$L$，$LOC(a_i)$为第$i$个元素的存储位置（$0 \le i \le n-1$，$n$为线性表的长度）：">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     </head>
     <body class="
@@ -326,7 +326,25 @@
     <section class="article-content">
     
     
-    <h1 id="逻辑结构分类">逻辑结构分类</h1>
+    <h1 id="复杂度">复杂度</h1>
+<p>算法时间复杂度以算法中基本操附重复执行的次数（简称为频度）作为算法的时间度量。一般不必要精确计算出算法的时间复杂度，只要大致计算出相应的数量级即可，使用大$O$表示法表示（空间复杂度也是）。</p>
+<p><img src="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/1681099842666.png"
+	width="1014"
+	height="100"
+	srcset="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/1681099842666_hu8fb0d0a3c83abecf36c375990db2efe0_51379_480x0_resize_box_3.png 480w, /p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/1681099842666_hu8fb0d0a3c83abecf36c375990db2efe0_51379_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1014"
+		data-flex-basis="2433px"
+	
+></p>
+<ul>
+<li>加法规则：多项相加，保留最高阶项，并将系数化为1；</li>
+<li>乘法规则：多项相乘都保留，并将系数化为1。</li>
+</ul>
+<h1 id="逻辑结构分类">逻辑结构分类</h1>
 <ul>
 <li>线性结构
 <ul>
@@ -437,7 +455,7 @@ $$</p>
 <p>$$
 E_{insert} = \sum_{i=1}^{n+1}{ \Big( P_i \times (n-i+1) \Big) } = \cfrac{1}{n+1} \sum_{i=1}^{n+1}{(n+i+1)} = \cfrac{\colorbox{yellow}n}{\colorbox{yellow}2}
 $$</p>
-<p>即，$E_{insert} = \cfrac{插入位置数}{2} = \frac{n+1}{2}$</p>
+<p>即，$E_{insert} = \cfrac{插入位置数}{2} = \cfrac{n+1}{2}$</p>
 </li>
 </ul>
 <p>在表长为$n$的线性表中删除元素时，共有$n$个可删除的元素：</p>
@@ -452,7 +470,7 @@ $$</p>
 <li>
 <p>设$a_i$被删除的概率为$q_i$，<u>等概率下删除元素</u>时需要移动的元素个数的<u>期望值$E_{delete}$</u>为：</p>
 <p>$$
-E_{delete} = \sum_{i=1}{n}{\Big( q_i \times (n-i) \Big)} = \cfrac{1}{n} \sum_{i=1}{n}{(n-i)} = \cfrac{\colorbox{yellow}{n-1}}{\colorbox{yellow}{2}}
+E_{delete} = \sum_{i=1}^{n}{\Big( q_i \times (n-i) \Big)} = \cfrac{1}{n} \sum_{i=1}^{n}{(n-i)} = \cfrac{n-1}{yellow}{2}
 $$</p>
 <p>即，$E_{delete} = \cfrac{删除位置数}{2} = \cfrac{n}{2}$</p>
 </li>
@@ -669,13 +687,13 @@ $$</p>
 <p>最好情况：$O(m)$，次数为$m$；</p>
 </li>
 <li>
-<p>最坏情况：$O(n \times m)$，次数为：</p>
+<p>最坏情况：$O(n \times m)$，次数为$\cfrac{1}{2} m(n-m+2)$：</p>
 <p>$$
-\sum_{i=0}^{n-m}{p_i\big( (i+1) \times m \big)} = \cfrac{m}{n-m+1} \sum_{i=0}^{n-m}{(i+1)} = \cfrac{1}{2}m(n-m+2)
+\sum_{i=0}^{n-m}{p_i\big( (i+1) \times m \big)} = \cfrac{m}{n-m+1} \sum_{i=0}^{n-m}{(i+1)} = \cfrac{1}{2} m(n-m+2)
 $$</p>
 </li>
 <li>
-<p>平均：$O(n+m)$，次数为：</p>
+<p>平均：$O(n+m)$，次数为$\cfrac{1}{2} (n+m)$：</p>
 <p>$$
 \sum_{i=0}^{n-m}{p_i(i+m)} = \cfrac{1}{n-m+1} \sum_{i=0}^{n-m}{i+m} = \cfrac{1}{2} (n+m)
 $$</p>
@@ -692,10 +710,10 @@ $$</p>
 <p>KMP的重点是求模式串字符的next值（失配指针$Next[\ i\ ]$），假设$a_{i-1}$为当前要求next值的模式串字符：</p>
 <ul>
 <li>
-<p>前缀集合：$P_1={a_0,a_0a_1,\cdots,a_0&hellip;a_{i-1}}$；</p>
+<p>前缀集合：$Prefix=\{p_0,p_0p_1,\cdots,p_0&hellip;p_{i-1}\}$；</p>
 </li>
 <li>
-<p>后缀集合：$P_2={a_{i-1},a_{i-2}a_{i-1},\cdots,a_1&hellip;a_{i-1}}$；</p>
+<p>后缀集合：$Postfix=\{p_{i-1},p_{i-2}p_{i-1},\cdots,p_1&hellip;p_{i-1}\}$；</p>
 </li>
 <li>
 <p>失配指针：</p>
@@ -703,14 +721,14 @@ $$</p>
 Next[i] =
 \begin{cases}
 -1 &amp; 当\ i=0 时 \
-max &amp; { k|0&lt;k&lt;i 且 &ldquo;p_0\cdots p_{k-1}&rdquo; = &ldquo;p_{i-k}\cdots p_{i-1}&rdquo; } \
+max &amp; \{ k|0&lt;k&lt;i 且 &ldquo;p_0\cdots p_{k-1}&rdquo; = &ldquo;p_{i-k}\cdots p_{i-1}&rdquo; \} \
 0 &amp; 其他情况
 \end{cases}
 $$</p>
 <p>即：</p>
 <ul>
 <li>$Next[0] = -1$；</li>
-<li>$Next[i] = maxLen</li>
+<li>$Next[i] = maxLen(Prefix \cap Postfix)$</li>
 </ul>
 <p>可以解释为：</p>
 <p>$$
@@ -759,7 +777,7 @@ $$</p>
 <p>$$
 LOC(a_{i,j}) = LOC(a_{0,0}) + (i \times n + j) \times L
 $$</p>
-<p>如果下标从1开始（1 \le i \le n,\ 1 \le j \le m）：</p>
+<p>如果下标从1开始（$1 \le i \le n,\ 1 \le j \le m$）：</p>
 <p>$$
 LOC(a_{i,j}) = LOC(a_{1,1}) + \big( (i-1) \times n + (j-1) \big) \times L
 $$</p>
@@ -769,7 +787,7 @@ $$</p>
 <p>$$
 LOC(a_{i,j}) = LOC(a_{0,0}) + (i + j \times m) \times L
 $$</p>
-<p>如果下标从1开始（1 \le i \le n,\ 1 \le j \le m）：</p>
+<p>如果下标从1开始（$1 \le i \le n,\ 1 \le j \le m$）：</p>
 <p>$$
 LOC(a_{i,j}) = LOC(a_{1,1}) + \big( (i-1) + (j-1) \times m \big) \times L
 $$</p>
@@ -783,15 +801,28 @@ $$</p>
 <p>假设一个二维数组为：</p>
 <p>$$
 \begin{vmatrix}
-a_{11} &amp; a_{12} &amp; a_{13} &amp; a_{14} \
-a_{21} &amp; a_{22} &amp; a_{23} &amp; a_{24} \
-a_{31} &amp; a_{32} &amp; a_{33} &amp; a_{34} \
-a_{41} &amp; a_{42} &amp; a_{43} &amp; a_{44} \
+a_{11} &amp; a_{12} &amp; a_{13} &amp; a_{14} \\
+a_{21} &amp; a_{22} &amp; a_{23} &amp; a_{24} \\
+a_{31} &amp; a_{32} &amp; a_{33} &amp; a_{34} \\
+a_{41} &amp; a_{42} &amp; a_{43} &amp; a_{44} \\
 a_{51} &amp; a_{52} &amp; a_{53} &amp; a_{54}
 \end{vmatrix}
 $$</p>
-<p>按照以行为主序优先存储的公式，它在内存中应该是分为了5个地址连续的数组来存储。即内存中，$[a_{11},a_{12},a_{13},a_{14}]$为一个数组，其后再接一个数组$[a_{12},a_{22},a_{23},a_{24}]$，以此类推，在内存中按照列的元素作为一个连续的一维数组单位，再按照第1行后接第2行作为整个连续的二维数组。它们在内存中的地址顺序是：$a_{11},a_{12},&hellip;,a_{14},a_{21},&hellip;,a_{24},a_{31},&hellip;,a_{34},a_{41},&hellip;,a_{44},a_{51},&hellip;,a_{54}$。</p>
-<p>那么以列为主序优先存储的地址顺序就为：$a_{11},a_{21},&hellip;,a_{51},a_{12},a_{22},&hellip;,a_{52},a_{13},a_{23},&hellip;,a_{53},a_{14},a_{24},&hellip;,a_{54}$。</p>
+<p>按照以行为主序优先存储的公式，它在内存中应该是分为了5个地址连续的数组来存储。即内存中，$[a_{11},a_{12},a_{13},a_{14}]$为一个数组，其后再接一个数组$[a_{12},a_{22},a_{23},a_{24}]$，以此类推，在内存中按照列的元素作为一个连续的一维数组单位，再按照第1行后接第2行作为整个连续的二维数组。它们在内存中的地址顺序是：</p>
+<p>$$
+a_{11},a_{12},&hellip;,a_{14},\\
+a_{21},&hellip;,a_{24},\\
+a_{31},&hellip;,a_{34},\\
+a_{41},&hellip;,a_{44},\\
+a_{51},&hellip;,a_{54}
+$$</p>
+<p>那么以列为主序优先存储的地址顺序就为：</p>
+<p>$$
+a_{11},a_{21},&hellip;,a_{51},\\
+a_{12},&hellip;,a_{52},\\
+a_{13},&hellip;,a_{53},\\
+a_{14},&hellip;,a_{54}
+$$</p>
 </blockquote>
 <p>一般矩阵都用二维数组来表示，但是对于一些特殊矩阵，如对称矩阵、三角矩阵和对角矩阵。它们的非0元素的分布存在一定规律，所以可以将其压缩存储在一维数组中，并且它们的多个值相同的元素（按照对应特殊矩阵定义上的值相同，并非简单的值相同）只分配一个存储单位。</p>
 <h2 id="对称矩阵">对称矩阵</h2>
@@ -799,9 +830,9 @@ $$</p>
 <p>对称矩阵$A_{n \times n}$：</p>
 <p>$$
 \begin{vmatrix}
-a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \
-a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \
-\vdots &amp; \vdots &amp; \ddots &amp; \vdots \
+a_{11} &amp; a_{12} &amp; \cdots &amp; a_{1n} \\
+a_{21} &amp; a_{22} &amp; \cdots &amp; a_{2n} \\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
 a_{n1} &amp; a_{n2} &amp; \cdots &amp; a_{nn}
 \end{vmatrix}
 $$</p>
@@ -814,10 +845,10 @@ $$</p>
 <p><strong>上三角区</strong>：对角线以上的所有元素，即：</p>
 <p>$$
 \begin{vmatrix}
-0 &amp; a_{12} &amp; a_{13} &amp; \cdots &amp; a_{1n} \
-0 &amp; 0 &amp; a_{23} &amp; \cdots &amp; a_{2n} \
-\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \
-0 &amp; 0 &amp; 0 &amp; \cdots &amp; a_{(n-1)n} \
+0 &amp; a_{12} &amp; a_{13} &amp; \cdots &amp; a_{1n} \\
+0 &amp; 0 &amp; a_{23} &amp; \cdots &amp; a_{2n} \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\
+0 &amp; 0 &amp; 0 &amp; \cdots &amp; a_{(n-1)n} \\
 0 &amp; 0 &amp; 0 &amp; \cdots &amp; 0
 \end{vmatrix}
 $$</p>
@@ -831,7 +862,7 @@ $$</p>
 <p>$$
 k =
 \begin{cases}
-\cfrac{i(i-1)}{2} + j, &amp; 当\ i \ge j \
+\cfrac{i(i-1)}{2} + j, &amp; 当\ i \ge j \\
 \cfrac{j(j-1)}{2} + i, &amp; 当\ i &lt; j
 \end{cases}
 $$</p>
@@ -839,7 +870,7 @@ $$</p>
 <p>$$
 k =
 \begin{cases}
-\cfrac{i(i+1)}{2} + j + 1, &amp; 当\ i \ge j \
+\cfrac{i(i+1)}{2} + j + 1, &amp; 当\ i \ge j \\
 \cfrac{j(j+1)}{2} + i + 1, &amp; 当\ i &lt; j
 \end{cases}
 $$</p>
@@ -872,12 +903,12 @@ $$</p>
 <p>对角矩阵是指矩阵中的<u>非0元素都集中在以主对角线为中心的带状区域中</u>，即除了主对角线上和直接在对角线上、下方若干条对角线上的元素外，其余的矩阵元素都为0。三对角矩阵是对角矩阵中的一种，包括主对角线和在主对角线上、下方的各一条对角为非0元素：</p>
 <p>$$
 \begin{vmatrix}
-a_{11} &amp; a_{12} &amp; 0      &amp; \cdots &amp; 0              &amp; 0          \
-a_{21} &amp; a_{22} &amp; a_{23} &amp; \cdots &amp; 0              &amp; 0          \
-0      &amp; a_{32} &amp; a_{33} &amp; \cdots &amp; 0              &amp; 0          \
-0      &amp; 0      &amp; a_{43} &amp; \cdots &amp; 0              &amp; 0          \
-\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots         &amp; \vdots     \
-0      &amp; 0      &amp; 0      &amp; \cdots &amp; a_{(n-1)(n-1)} &amp; a_{(n-1)n} \
+a_{11} &amp; a_{12} &amp; 0      &amp; \cdots &amp; 0              &amp; 0          \\
+a_{21} &amp; a_{22} &amp; a_{23} &amp; \cdots &amp; 0              &amp; 0          \\
+0      &amp; a_{32} &amp; a_{33} &amp; \cdots &amp; 0              &amp; 0          \\
+0      &amp; 0      &amp; a_{43} &amp; \cdots &amp; 0              &amp; 0          \\
+\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots         &amp; \vdots     \\
+0      &amp; 0      &amp; 0      &amp; \cdots &amp; a_{(n-1)(n-1)} &amp; a_{(n-1)n} \\
 0      &amp; 0      &amp; 0      &amp; \cdots &amp; a_{n(n-1)}     &amp; a_{nn}
 \end{vmatrix}
 $$</p>
@@ -943,7 +974,7 @@ $$</p>
 <p>树可以用二元组 $Tree=(root,F)$ 表示。其中 $root$ 是根结点，$F$ 是 $m(m\ge0)$ 棵子树的森林，即 $F=(T_1,T_2,\cdots,T_m)$，其中 $T_i=(r_i,F_i)$ 为根 $root$ 的第 $i$ 棵子树。</p>
 <p>树根与其子树森林之间的关系：
 $$
-RF={&lt;root,r_i&gt;|i=1,2,4,m,\quad m&gt;0}.
+RF = \{ &lt;root,r_i&gt;|i=1,2,4,m,\quad m&gt;0 \}
 $$</p>
 <hr>
 <h1 id="二叉树">二叉树</h1>
@@ -1162,14 +1193,14 @@ $$</p>
 <p>$$
 leftTag =
 \begin{cases}
-True  &amp; leftChild指向结点左孩子 \
+True  &amp; leftChild指向结点左孩子 \\
 False &amp; leftChild指向结点的直接前驱
 \end{cases}
 $$</p>
 <p>$$
 rightTag =
 \begin{cases}
-True  &amp; rightChild指向结点右孩子 \
+True  &amp; rightChild指向结点右孩子 \\
 False &amp; rightChild指向结点的直接后继
 \end{cases}
 $$</p>
@@ -1207,7 +1238,7 @@ $$</p>
 <p>哈夫曼树是指权值为$w_1,w_2,\cdots,w_n$的$n$个叶子结点的二叉树中，带权路径长度最小的二叉树。</p>
 <p>构造最优二叉树的哈夫曼算法：</p>
 <ol>
-<li>根据给定的$n$个权值${ w_1,w_2,\cdots,w_n }$，构成$n$棵二叉树集合$F={T_1,T_2,\cdots,T_n}$，每棵树$T_i$有且仅有一个带权为$w_i$的根结点。</li>
+<li>根据给定的$n$个权值$\{ w_1,w_2,\cdots,w_n \}$，构成$n$棵二叉树集合$F=\{T_1,T_2,\cdots,T_n\}$，每棵树$T_i$有且仅有一个带权为$w_i$的根结点。</li>
 <li>在$F$中选取2棵权值最小的树作为左、右子树，构造一棵新二叉树。新二叉树的根结点权值为其左右子树根结点权值之和。</li>
 <li>从$F$中删除这2棵树，并将新树加入到$F$中。</li>
 <li>重复步骤2、3直到$F$中仅含一棵树为止，这棵树便是哈夫曼树。</li>
@@ -1220,7 +1251,7 @@ $$</p>
 <p>所以可用一维数组存储哈夫曼树。</p>
 <h3 id="哈夫曼编码">哈夫曼编码</h3>
 <p>哈夫曼编码是一种不等长的编码，它用哈夫曼算法来构造出最优前缀码：</p>
-<p>给定<strong>字符集</strong>$D={ d_1,d_2,\cdots,d_n }$及<strong>字符的使用频率</strong>$W={w_1,w_2,\cdots,w_n}$。</p>
+<p>给定<strong>字符集</strong>$D=\{ d_1,d_2,\cdots,d_n \}$及<strong>字符的使用频率</strong>$W=\{w_1,w_2,\cdots,w_n\}$。</p>
 <p>构造<strong>最优前缀码</strong>的方法为：</p>
 <ol>
 <li>以$d_1,d_2,\cdots,d_n$作为叶子结点，$w_1,w_2,\cdots,w_n$作为叶子结点的权值，构造出一棵最优二叉树。</li>
@@ -1386,7 +1417,7 @@ $$</p>
 <p>$$
 A[i][j] =
 \begin{cases}
-1 &amp; 若(v_i,v_j)或&lt;v_i,v_j&gt;是E中的边 \
+1 &amp; 若(v_i,v_j)或&lt;v_i,v_j&gt;是E中的边 \\
 0 &amp; 若(v_i,v_j)或&lt;v_i,v_j&gt;不是E中的边
 \end{cases}
 $$</p>
@@ -1402,7 +1433,7 @@ $$</p>
 <p>$$
 A[i][j] =
 \begin{cases}
-W_{ij} &amp; 若(v_i,v_j)或&lt;v_i,v_j&gt; \in E \
+W_{ij} &amp; 若(v_i,v_j)或&lt;v_i,v_j&gt; \in E \\
 \infin &amp; 若(v_i,v_j)或&lt;v_i,v_j&gt; \notin E
 \end{cases}
 $$</p>

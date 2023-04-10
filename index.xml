@@ -12,7 +12,25 @@
         <pubDate>Tue, 04 Apr 2023 17:17:20 +0800</pubDate>
         
         <guid>https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
-        <description>&lt;h1 id=&#34;逻辑结构分类&#34;&gt;逻辑结构分类&lt;/h1&gt;
+        <description>&lt;h1 id=&#34;复杂度&#34;&gt;复杂度&lt;/h1&gt;
+&lt;p&gt;算法时间复杂度以算法中基本操附重复执行的次数（简称为频度）作为算法的时间度量。一般不必要精确计算出算法的时间复杂度，只要大致计算出相应的数量级即可，使用大$O$表示法表示（空间复杂度也是）。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/1681099842666.png&#34;
+	width=&#34;1014&#34;
+	height=&#34;100&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/1681099842666_hu8fb0d0a3c83abecf36c375990db2efe0_51379_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/1681099842666_hu8fb0d0a3c83abecf36c375990db2efe0_51379_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1014&#34;
+		data-flex-basis=&#34;2433px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;加法规则：多项相加，保留最高阶项，并将系数化为1；&lt;/li&gt;
+&lt;li&gt;乘法规则：多项相乘都保留，并将系数化为1。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;逻辑结构分类&#34;&gt;逻辑结构分类&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;线性结构
 &lt;ul&gt;
@@ -123,7 +141,7 @@ $$&lt;/p&gt;
 &lt;p&gt;$$
 E_{insert} = \sum_{i=1}^{n+1}{ \Big( P_i \times (n-i+1) \Big) } = \cfrac{1}{n+1} \sum_{i=1}^{n+1}{(n+i+1)} = \cfrac{\colorbox{yellow}n}{\colorbox{yellow}2}
 $$&lt;/p&gt;
-&lt;p&gt;即，$E_{insert} = \cfrac{插入位置数}{2} = \frac{n+1}{2}$&lt;/p&gt;
+&lt;p&gt;即，$E_{insert} = \cfrac{插入位置数}{2} = \cfrac{n+1}{2}$&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;在表长为$n$的线性表中删除元素时，共有$n$个可删除的元素：&lt;/p&gt;
@@ -138,7 +156,7 @@ $$&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;设$a_i$被删除的概率为$q_i$，&lt;u&gt;等概率下删除元素&lt;/u&gt;时需要移动的元素个数的&lt;u&gt;期望值$E_{delete}$&lt;/u&gt;为：&lt;/p&gt;
 &lt;p&gt;$$
-E_{delete} = \sum_{i=1}{n}{\Big( q_i \times (n-i) \Big)} = \cfrac{1}{n} \sum_{i=1}{n}{(n-i)} = \cfrac{\colorbox{yellow}{n-1}}{\colorbox{yellow}{2}}
+E_{delete} = \sum_{i=1}^{n}{\Big( q_i \times (n-i) \Big)} = \cfrac{1}{n} \sum_{i=1}^{n}{(n-i)} = \cfrac{n-1}{yellow}{2}
 $$&lt;/p&gt;
 &lt;p&gt;即，$E_{delete} = \cfrac{删除位置数}{2} = \cfrac{n}{2}$&lt;/p&gt;
 &lt;/li&gt;
@@ -355,13 +373,13 @@ $$&lt;/p&gt;
 &lt;p&gt;最好情况：$O(m)$，次数为$m$；&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;最坏情况：$O(n \times m)$，次数为：&lt;/p&gt;
+&lt;p&gt;最坏情况：$O(n \times m)$，次数为$\cfrac{1}{2} m(n-m+2)$：&lt;/p&gt;
 &lt;p&gt;$$
-\sum_{i=0}^{n-m}{p_i\big( (i+1) \times m \big)} = \cfrac{m}{n-m+1} \sum_{i=0}^{n-m}{(i+1)} = \cfrac{1}{2}m(n-m+2)
+\sum_{i=0}^{n-m}{p_i\big( (i+1) \times m \big)} = \cfrac{m}{n-m+1} \sum_{i=0}^{n-m}{(i+1)} = \cfrac{1}{2} m(n-m+2)
 $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;平均：$O(n+m)$，次数为：&lt;/p&gt;
+&lt;p&gt;平均：$O(n+m)$，次数为$\cfrac{1}{2} (n+m)$：&lt;/p&gt;
 &lt;p&gt;$$
 \sum_{i=0}^{n-m}{p_i(i+m)} = \cfrac{1}{n-m+1} \sum_{i=0}^{n-m}{i+m} = \cfrac{1}{2} (n+m)
 $$&lt;/p&gt;
@@ -378,10 +396,10 @@ $$&lt;/p&gt;
 &lt;p&gt;KMP的重点是求模式串字符的next值（失配指针$Next[\ i\ ]$），假设$a_{i-1}$为当前要求next值的模式串字符：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;前缀集合：$P_1={a_0,a_0a_1,\cdots,a_0&amp;hellip;a_{i-1}}$；&lt;/p&gt;
+&lt;p&gt;前缀集合：$Prefix=\{p_0,p_0p_1,\cdots,p_0&amp;hellip;p_{i-1}\}$；&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;后缀集合：$P_2={a_{i-1},a_{i-2}a_{i-1},\cdots,a_1&amp;hellip;a_{i-1}}$；&lt;/p&gt;
+&lt;p&gt;后缀集合：$Postfix=\{p_{i-1},p_{i-2}p_{i-1},\cdots,p_1&amp;hellip;p_{i-1}\}$；&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;失配指针：&lt;/p&gt;
@@ -389,14 +407,14 @@ $$&lt;/p&gt;
 Next[i] =
 \begin{cases}
 -1 &amp;amp; 当\ i=0 时 \
-max &amp;amp; { k|0&amp;lt;k&amp;lt;i 且 &amp;ldquo;p_0\cdots p_{k-1}&amp;rdquo; = &amp;ldquo;p_{i-k}\cdots p_{i-1}&amp;rdquo; } \
+max &amp;amp; \{ k|0&amp;lt;k&amp;lt;i 且 &amp;ldquo;p_0\cdots p_{k-1}&amp;rdquo; = &amp;ldquo;p_{i-k}\cdots p_{i-1}&amp;rdquo; \} \
 0 &amp;amp; 其他情况
 \end{cases}
 $$&lt;/p&gt;
 &lt;p&gt;即：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;$Next[0] = -1$；&lt;/li&gt;
-&lt;li&gt;$Next[i] = maxLen&lt;/li&gt;
+&lt;li&gt;$Next[i] = maxLen(Prefix \cap Postfix)$&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;可以解释为：&lt;/p&gt;
 &lt;p&gt;$$
@@ -445,7 +463,7 @@ $$&lt;/p&gt;
 &lt;p&gt;$$
 LOC(a_{i,j}) = LOC(a_{0,0}) + (i \times n + j) \times L
 $$&lt;/p&gt;
-&lt;p&gt;如果下标从1开始（1 \le i \le n,\ 1 \le j \le m）：&lt;/p&gt;
+&lt;p&gt;如果下标从1开始（$1 \le i \le n,\ 1 \le j \le m$）：&lt;/p&gt;
 &lt;p&gt;$$
 LOC(a_{i,j}) = LOC(a_{1,1}) + \big( (i-1) \times n + (j-1) \big) \times L
 $$&lt;/p&gt;
@@ -455,7 +473,7 @@ $$&lt;/p&gt;
 &lt;p&gt;$$
 LOC(a_{i,j}) = LOC(a_{0,0}) + (i + j \times m) \times L
 $$&lt;/p&gt;
-&lt;p&gt;如果下标从1开始（1 \le i \le n,\ 1 \le j \le m）：&lt;/p&gt;
+&lt;p&gt;如果下标从1开始（$1 \le i \le n,\ 1 \le j \le m$）：&lt;/p&gt;
 &lt;p&gt;$$
 LOC(a_{i,j}) = LOC(a_{1,1}) + \big( (i-1) + (j-1) \times m \big) \times L
 $$&lt;/p&gt;
@@ -469,15 +487,28 @@ $$&lt;/p&gt;
 &lt;p&gt;假设一个二维数组为：&lt;/p&gt;
 &lt;p&gt;$$
 \begin{vmatrix}
-a_{11} &amp;amp; a_{12} &amp;amp; a_{13} &amp;amp; a_{14} \
-a_{21} &amp;amp; a_{22} &amp;amp; a_{23} &amp;amp; a_{24} \
-a_{31} &amp;amp; a_{32} &amp;amp; a_{33} &amp;amp; a_{34} \
-a_{41} &amp;amp; a_{42} &amp;amp; a_{43} &amp;amp; a_{44} \
+a_{11} &amp;amp; a_{12} &amp;amp; a_{13} &amp;amp; a_{14} \\
+a_{21} &amp;amp; a_{22} &amp;amp; a_{23} &amp;amp; a_{24} \\
+a_{31} &amp;amp; a_{32} &amp;amp; a_{33} &amp;amp; a_{34} \\
+a_{41} &amp;amp; a_{42} &amp;amp; a_{43} &amp;amp; a_{44} \\
 a_{51} &amp;amp; a_{52} &amp;amp; a_{53} &amp;amp; a_{54}
 \end{vmatrix}
 $$&lt;/p&gt;
-&lt;p&gt;按照以行为主序优先存储的公式，它在内存中应该是分为了5个地址连续的数组来存储。即内存中，$[a_{11},a_{12},a_{13},a_{14}]$为一个数组，其后再接一个数组$[a_{12},a_{22},a_{23},a_{24}]$，以此类推，在内存中按照列的元素作为一个连续的一维数组单位，再按照第1行后接第2行作为整个连续的二维数组。它们在内存中的地址顺序是：$a_{11},a_{12},&amp;hellip;,a_{14},a_{21},&amp;hellip;,a_{24},a_{31},&amp;hellip;,a_{34},a_{41},&amp;hellip;,a_{44},a_{51},&amp;hellip;,a_{54}$。&lt;/p&gt;
-&lt;p&gt;那么以列为主序优先存储的地址顺序就为：$a_{11},a_{21},&amp;hellip;,a_{51},a_{12},a_{22},&amp;hellip;,a_{52},a_{13},a_{23},&amp;hellip;,a_{53},a_{14},a_{24},&amp;hellip;,a_{54}$。&lt;/p&gt;
+&lt;p&gt;按照以行为主序优先存储的公式，它在内存中应该是分为了5个地址连续的数组来存储。即内存中，$[a_{11},a_{12},a_{13},a_{14}]$为一个数组，其后再接一个数组$[a_{12},a_{22},a_{23},a_{24}]$，以此类推，在内存中按照列的元素作为一个连续的一维数组单位，再按照第1行后接第2行作为整个连续的二维数组。它们在内存中的地址顺序是：&lt;/p&gt;
+&lt;p&gt;$$
+a_{11},a_{12},&amp;hellip;,a_{14},\\
+a_{21},&amp;hellip;,a_{24},\\
+a_{31},&amp;hellip;,a_{34},\\
+a_{41},&amp;hellip;,a_{44},\\
+a_{51},&amp;hellip;,a_{54}
+$$&lt;/p&gt;
+&lt;p&gt;那么以列为主序优先存储的地址顺序就为：&lt;/p&gt;
+&lt;p&gt;$$
+a_{11},a_{21},&amp;hellip;,a_{51},\\
+a_{12},&amp;hellip;,a_{52},\\
+a_{13},&amp;hellip;,a_{53},\\
+a_{14},&amp;hellip;,a_{54}
+$$&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;一般矩阵都用二维数组来表示，但是对于一些特殊矩阵，如对称矩阵、三角矩阵和对角矩阵。它们的非0元素的分布存在一定规律，所以可以将其压缩存储在一维数组中，并且它们的多个值相同的元素（按照对应特殊矩阵定义上的值相同，并非简单的值相同）只分配一个存储单位。&lt;/p&gt;
 &lt;h2 id=&#34;对称矩阵&#34;&gt;对称矩阵&lt;/h2&gt;
@@ -485,9 +516,9 @@ $$&lt;/p&gt;
 &lt;p&gt;对称矩阵$A_{n \times n}$：&lt;/p&gt;
 &lt;p&gt;$$
 \begin{vmatrix}
-a_{11} &amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1n} \
-a_{21} &amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2n} \
-\vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \
+a_{11} &amp;amp; a_{12} &amp;amp; \cdots &amp;amp; a_{1n} \\
+a_{21} &amp;amp; a_{22} &amp;amp; \cdots &amp;amp; a_{2n} \\
+\vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \\
 a_{n1} &amp;amp; a_{n2} &amp;amp; \cdots &amp;amp; a_{nn}
 \end{vmatrix}
 $$&lt;/p&gt;
@@ -500,10 +531,10 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;上三角区&lt;/strong&gt;：对角线以上的所有元素，即：&lt;/p&gt;
 &lt;p&gt;$$
 \begin{vmatrix}
-0 &amp;amp; a_{12} &amp;amp; a_{13} &amp;amp; \cdots &amp;amp; a_{1n} \
-0 &amp;amp; 0 &amp;amp; a_{23} &amp;amp; \cdots &amp;amp; a_{2n} \
-\vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \
-0 &amp;amp; 0 &amp;amp; 0 &amp;amp; \cdots &amp;amp; a_{(n-1)n} \
+0 &amp;amp; a_{12} &amp;amp; a_{13} &amp;amp; \cdots &amp;amp; a_{1n} \\
+0 &amp;amp; 0 &amp;amp; a_{23} &amp;amp; \cdots &amp;amp; a_{2n} \\
+\vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots \\
+0 &amp;amp; 0 &amp;amp; 0 &amp;amp; \cdots &amp;amp; a_{(n-1)n} \\
 0 &amp;amp; 0 &amp;amp; 0 &amp;amp; \cdots &amp;amp; 0
 \end{vmatrix}
 $$&lt;/p&gt;
@@ -517,7 +548,7 @@ $$&lt;/p&gt;
 &lt;p&gt;$$
 k =
 \begin{cases}
-\cfrac{i(i-1)}{2} + j, &amp;amp; 当\ i \ge j \
+\cfrac{i(i-1)}{2} + j, &amp;amp; 当\ i \ge j \\
 \cfrac{j(j-1)}{2} + i, &amp;amp; 当\ i &amp;lt; j
 \end{cases}
 $$&lt;/p&gt;
@@ -525,7 +556,7 @@ $$&lt;/p&gt;
 &lt;p&gt;$$
 k =
 \begin{cases}
-\cfrac{i(i+1)}{2} + j + 1, &amp;amp; 当\ i \ge j \
+\cfrac{i(i+1)}{2} + j + 1, &amp;amp; 当\ i \ge j \\
 \cfrac{j(j+1)}{2} + i + 1, &amp;amp; 当\ i &amp;lt; j
 \end{cases}
 $$&lt;/p&gt;
@@ -558,12 +589,12 @@ $$&lt;/p&gt;
 &lt;p&gt;对角矩阵是指矩阵中的&lt;u&gt;非0元素都集中在以主对角线为中心的带状区域中&lt;/u&gt;，即除了主对角线上和直接在对角线上、下方若干条对角线上的元素外，其余的矩阵元素都为0。三对角矩阵是对角矩阵中的一种，包括主对角线和在主对角线上、下方的各一条对角为非0元素：&lt;/p&gt;
 &lt;p&gt;$$
 \begin{vmatrix}
-a_{11} &amp;amp; a_{12} &amp;amp; 0      &amp;amp; \cdots &amp;amp; 0              &amp;amp; 0          \
-a_{21} &amp;amp; a_{22} &amp;amp; a_{23} &amp;amp; \cdots &amp;amp; 0              &amp;amp; 0          \
-0      &amp;amp; a_{32} &amp;amp; a_{33} &amp;amp; \cdots &amp;amp; 0              &amp;amp; 0          \
-0      &amp;amp; 0      &amp;amp; a_{43} &amp;amp; \cdots &amp;amp; 0              &amp;amp; 0          \
-\vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots         &amp;amp; \vdots     \
-0      &amp;amp; 0      &amp;amp; 0      &amp;amp; \cdots &amp;amp; a_{(n-1)(n-1)} &amp;amp; a_{(n-1)n} \
+a_{11} &amp;amp; a_{12} &amp;amp; 0      &amp;amp; \cdots &amp;amp; 0              &amp;amp; 0          \\
+a_{21} &amp;amp; a_{22} &amp;amp; a_{23} &amp;amp; \cdots &amp;amp; 0              &amp;amp; 0          \\
+0      &amp;amp; a_{32} &amp;amp; a_{33} &amp;amp; \cdots &amp;amp; 0              &amp;amp; 0          \\
+0      &amp;amp; 0      &amp;amp; a_{43} &amp;amp; \cdots &amp;amp; 0              &amp;amp; 0          \\
+\vdots &amp;amp; \vdots &amp;amp; \vdots &amp;amp; \ddots &amp;amp; \vdots         &amp;amp; \vdots     \\
+0      &amp;amp; 0      &amp;amp; 0      &amp;amp; \cdots &amp;amp; a_{(n-1)(n-1)} &amp;amp; a_{(n-1)n} \\
 0      &amp;amp; 0      &amp;amp; 0      &amp;amp; \cdots &amp;amp; a_{n(n-1)}     &amp;amp; a_{nn}
 \end{vmatrix}
 $$&lt;/p&gt;
@@ -629,7 +660,7 @@ $$&lt;/p&gt;
 &lt;p&gt;树可以用二元组 $Tree=(root,F)$ 表示。其中 $root$ 是根结点，$F$ 是 $m(m\ge0)$ 棵子树的森林，即 $F=(T_1,T_2,\cdots,T_m)$，其中 $T_i=(r_i,F_i)$ 为根 $root$ 的第 $i$ 棵子树。&lt;/p&gt;
 &lt;p&gt;树根与其子树森林之间的关系：
 $$
-RF={&amp;lt;root,r_i&amp;gt;|i=1,2,4,m,\quad m&amp;gt;0}.
+RF = \{ &amp;lt;root,r_i&amp;gt;|i=1,2,4,m,\quad m&amp;gt;0 \}
 $$&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;二叉树&#34;&gt;二叉树&lt;/h1&gt;
@@ -848,14 +879,14 @@ $$&lt;/p&gt;
 &lt;p&gt;$$
 leftTag =
 \begin{cases}
-True  &amp;amp; leftChild指向结点左孩子 \
+True  &amp;amp; leftChild指向结点左孩子 \\
 False &amp;amp; leftChild指向结点的直接前驱
 \end{cases}
 $$&lt;/p&gt;
 &lt;p&gt;$$
 rightTag =
 \begin{cases}
-True  &amp;amp; rightChild指向结点右孩子 \
+True  &amp;amp; rightChild指向结点右孩子 \\
 False &amp;amp; rightChild指向结点的直接后继
 \end{cases}
 $$&lt;/p&gt;
@@ -893,7 +924,7 @@ $$&lt;/p&gt;
 &lt;p&gt;哈夫曼树是指权值为$w_1,w_2,\cdots,w_n$的$n$个叶子结点的二叉树中，带权路径长度最小的二叉树。&lt;/p&gt;
 &lt;p&gt;构造最优二叉树的哈夫曼算法：&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;根据给定的$n$个权值${ w_1,w_2,\cdots,w_n }$，构成$n$棵二叉树集合$F={T_1,T_2,\cdots,T_n}$，每棵树$T_i$有且仅有一个带权为$w_i$的根结点。&lt;/li&gt;
+&lt;li&gt;根据给定的$n$个权值$\{ w_1,w_2,\cdots,w_n \}$，构成$n$棵二叉树集合$F=\{T_1,T_2,\cdots,T_n\}$，每棵树$T_i$有且仅有一个带权为$w_i$的根结点。&lt;/li&gt;
 &lt;li&gt;在$F$中选取2棵权值最小的树作为左、右子树，构造一棵新二叉树。新二叉树的根结点权值为其左右子树根结点权值之和。&lt;/li&gt;
 &lt;li&gt;从$F$中删除这2棵树，并将新树加入到$F$中。&lt;/li&gt;
 &lt;li&gt;重复步骤2、3直到$F$中仅含一棵树为止，这棵树便是哈夫曼树。&lt;/li&gt;
@@ -906,7 +937,7 @@ $$&lt;/p&gt;
 &lt;p&gt;所以可用一维数组存储哈夫曼树。&lt;/p&gt;
 &lt;h3 id=&#34;哈夫曼编码&#34;&gt;哈夫曼编码&lt;/h3&gt;
 &lt;p&gt;哈夫曼编码是一种不等长的编码，它用哈夫曼算法来构造出最优前缀码：&lt;/p&gt;
-&lt;p&gt;给定&lt;strong&gt;字符集&lt;/strong&gt;$D={ d_1,d_2,\cdots,d_n }$及&lt;strong&gt;字符的使用频率&lt;/strong&gt;$W={w_1,w_2,\cdots,w_n}$。&lt;/p&gt;
+&lt;p&gt;给定&lt;strong&gt;字符集&lt;/strong&gt;$D=\{ d_1,d_2,\cdots,d_n \}$及&lt;strong&gt;字符的使用频率&lt;/strong&gt;$W=\{w_1,w_2,\cdots,w_n\}$。&lt;/p&gt;
 &lt;p&gt;构造&lt;strong&gt;最优前缀码&lt;/strong&gt;的方法为：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;以$d_1,d_2,\cdots,d_n$作为叶子结点，$w_1,w_2,\cdots,w_n$作为叶子结点的权值，构造出一棵最优二叉树。&lt;/li&gt;
@@ -1072,7 +1103,7 @@ $$&lt;/p&gt;
 &lt;p&gt;$$
 A[i][j] =
 \begin{cases}
-1 &amp;amp; 若(v_i,v_j)或&amp;lt;v_i,v_j&amp;gt;是E中的边 \
+1 &amp;amp; 若(v_i,v_j)或&amp;lt;v_i,v_j&amp;gt;是E中的边 \\
 0 &amp;amp; 若(v_i,v_j)或&amp;lt;v_i,v_j&amp;gt;不是E中的边
 \end{cases}
 $$&lt;/p&gt;
@@ -1088,7 +1119,7 @@ $$&lt;/p&gt;
 &lt;p&gt;$$
 A[i][j] =
 \begin{cases}
-W_{ij} &amp;amp; 若(v_i,v_j)或&amp;lt;v_i,v_j&amp;gt; \in E \
+W_{ij} &amp;amp; 若(v_i,v_j)或&amp;lt;v_i,v_j&amp;gt; \in E \\
 \infin &amp;amp; 若(v_i,v_j)或&amp;lt;v_i,v_j&amp;gt; \notin E
 \end{cases}
 $$&lt;/p&gt;
