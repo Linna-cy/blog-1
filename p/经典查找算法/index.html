@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='二分查找 二分查找又叫折半查找，是在有序列表的基础上进行查找，每次查找可以筛掉一半的元素。
+算法步骤 以升序数列$L[0&amp;hellip;n-1]$为例，假设要查找的数为$x$：
+让$x$与数列中间位置的元素$L[\lfloor \frac n2 \rfloor]$进行比较，如果相等则返回该元素下标，否则：
+ 如果$x$比中间元素小，递归地对中间元素左边的数列（比二分查找小的元素）进行二分查找； 如果$x$比中间元素大，递归地对中间元素右边的数列（比二分查找大的元素）进行二分查找。  代码实现 Python实现  递归实现： def BinarySearch(arr, target, left = 0, right = 0): &amp;#34;&amp;#34;&amp;#34;二分排序（递归实现） left=0,right=len(arr)-1&amp;#34;&amp;#34;&amp;#34; if left == 0 and right == 0: right = len(arr)-1 if left &amp;gt; right or len(arr) == 0: return -1 mid = int((left &#43; right) / 2) if target == arr[mid]: return mid elif target &amp;lt; arr[mid]: return BinarySearch(arr, target, left, mid-1) else: return BinarySearch(arr, target, mid&#43;1, right) if __name__ == &amp;#34;__main__&amp;#34;: arr = list(range(100)) target = 66 result = BinarySearch(arr, target) if result == -1: print(False) else: print(result)  非递归实现： def BinarySearch(arr, target): &amp;#34;&amp;#34;&amp;#34;二分排序（非递归实现）&amp;#34;&amp;#34;&amp;#34; if len(arr) == 0: return -1 left = 0 right = len(arr)-1 while left &amp;lt;= right: mid = int((left &#43; right) / 2) if target == arr[mid]: return mid elif target &amp;lt; arr[mid]: right = mid - 1 else: left = mid &#43; 1 return -1 if __name__ == &amp;#34;__main__&amp;#34;: arr = list(range(100)) target = 66 result = BinarySearch(arr, target) if result == -1: print(False) else: print(result)   C实现  递归实现： #include &amp;lt;stdio.'>
+
+
+<title>经典查找算法</title>
+
+<link rel='canonical' href='https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/'>
+
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css">
+<link rel="stylesheet" href="/css/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+<script src="/js/katex.min.js"></script><meta property='og:title' content='经典查找算法'>
+<meta property='og:description' content='二分查找 二分查找又叫折半查找，是在有序列表的基础上进行查找，每次查找可以筛掉一半的元素。
+算法步骤 以升序数列$L[0&amp;hellip;n-1]$为例，假设要查找的数为$x$：
+让$x$与数列中间位置的元素$L[\lfloor \frac n2 \rfloor]$进行比较，如果相等则返回该元素下标，否则：
+ 如果$x$比中间元素小，递归地对中间元素左边的数列（比二分查找小的元素）进行二分查找； 如果$x$比中间元素大，递归地对中间元素右边的数列（比二分查找大的元素）进行二分查找。  代码实现 Python实现  递归实现： def BinarySearch(arr, target, left = 0, right = 0): &amp;#34;&amp;#34;&amp;#34;二分排序（递归实现） left=0,right=len(arr)-1&amp;#34;&amp;#34;&amp;#34; if left == 0 and right == 0: right = len(arr)-1 if left &amp;gt; right or len(arr) == 0: return -1 mid = int((left &#43; right) / 2) if target == arr[mid]: return mid elif target &amp;lt; arr[mid]: return BinarySearch(arr, target, left, mid-1) else: return BinarySearch(arr, target, mid&#43;1, right) if __name__ == &amp;#34;__main__&amp;#34;: arr = list(range(100)) target = 66 result = BinarySearch(arr, target) if result == -1: print(False) else: print(result)  非递归实现： def BinarySearch(arr, target): &amp;#34;&amp;#34;&amp;#34;二分排序（非递归实现）&amp;#34;&amp;#34;&amp;#34; if len(arr) == 0: return -1 left = 0 right = len(arr)-1 while left &amp;lt;= right: mid = int((left &#43; right) / 2) if target == arr[mid]: return mid elif target &amp;lt; arr[mid]: right = mid - 1 else: left = mid &#43; 1 return -1 if __name__ == &amp;#34;__main__&amp;#34;: arr = list(range(100)) target = 66 result = BinarySearch(arr, target) if result == -1: print(False) else: print(result)   C实现  递归实现： #include &amp;lt;stdio.'>
+<meta property='og:url' content='https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/'>
+<meta property='og:site_name' content='Linner&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='C' /><meta property='article:tag' content='Python' /><meta property='article:tag' content='算法' /><meta property='article:tag' content='查找算法' /><meta property='article:published_time' content='2022-02-27T14:44:00&#43;00:00'/><meta property='article:modified_time' content='2022-02-27T14:44:00&#43;00:00'/>
+<meta name="twitter:title" content="经典查找算法">
+<meta name="twitter:description" content="二分查找 二分查找又叫折半查找，是在有序列表的基础上进行查找，每次查找可以筛掉一半的元素。
+算法步骤 以升序数列$L[0&amp;hellip;n-1]$为例，假设要查找的数为$x$：
+让$x$与数列中间位置的元素$L[\lfloor \frac n2 \rfloor]$进行比较，如果相等则返回该元素下标，否则：
+ 如果$x$比中间元素小，递归地对中间元素左边的数列（比二分查找小的元素）进行二分查找； 如果$x$比中间元素大，递归地对中间元素右边的数列（比二分查找大的元素）进行二分查找。  代码实现 Python实现  递归实现： def BinarySearch(arr, target, left = 0, right = 0): &amp;#34;&amp;#34;&amp;#34;二分排序（递归实现） left=0,right=len(arr)-1&amp;#34;&amp;#34;&amp;#34; if left == 0 and right == 0: right = len(arr)-1 if left &amp;gt; right or len(arr) == 0: return -1 mid = int((left &#43; right) / 2) if target == arr[mid]: return mid elif target &amp;lt; arr[mid]: return BinarySearch(arr, target, left, mid-1) else: return BinarySearch(arr, target, mid&#43;1, right) if __name__ == &amp;#34;__main__&amp;#34;: arr = list(range(100)) target = 66 result = BinarySearch(arr, target) if result == -1: print(False) else: print(result)  非递归实现： def BinarySearch(arr, target): &amp;#34;&amp;#34;&amp;#34;二分排序（非递归实现）&amp;#34;&amp;#34;&amp;#34; if len(arr) == 0: return -1 left = 0 right = len(arr)-1 while left &amp;lt;= right: mid = int((left &#43; right) / 2) if target == arr[mid]: return mid elif target &amp;lt; arr[mid]: right = mid - 1 else: left = mid &#43; 1 return -1 if __name__ == &amp;#34;__main__&amp;#34;: arr = list(range(100)) target = 66 result = BinarySearch(arr, target) if result == -1: print(False) else: print(result)   C实现  递归实现： #include &amp;lt;stdio.">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu0c2331fe09320137a3bd1d4b5cc68791_142496_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Linner&#39;s Blog</a></h1>
+            <h2 class="site-description">随便看看就行，副标题暂时还没想好</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Linna-cy'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives" id="toc-list">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents" class="js-toc"></nav>
+            
+        </div>
+    </section>
+
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/">经典查找算法</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Feb 27, 2022</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="二分查找">二分查找</h1>
+<p>二分查找又叫折半查找，是在有序列表的基础上进行查找，每次查找可以筛掉一半的元素。</p>
+<h2 id="算法步骤">算法步骤</h2>
+<p>以升序数列$L[0&hellip;n-1]$为例，假设要查找的数为$x$：</p>
+<p>让$x$与数列中间位置的元素$L[\lfloor \frac n2 \rfloor]$进行比较，如果相等则返回该元素下标，否则：</p>
+<ul>
+<li>如果$x$比中间元素小，递归地对中间元素左边的数列（比二分查找小的元素）进行二分查找；</li>
+<li>如果$x$比中间元素大，递归地对中间元素右边的数列（比二分查找大的元素）进行二分查找。</li>
+</ul>
+<h2 id="代码实现">代码实现</h2>
+<h3 id="python实现">Python实现</h3>
+<ol>
+<li>递归实现：
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">BinarySearch</span>(arr, target, left <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, right <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>):
+    <span style="color:#e6db74">&#34;&#34;&#34;二分排序（递归实现）
+</span><span style="color:#e6db74">    left=0,right=len(arr)-1&#34;&#34;&#34;</span>
+    <span style="color:#66d9ef">if</span> left <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> right <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+        right <span style="color:#f92672">=</span> len(arr)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">if</span> left <span style="color:#f92672">&gt;</span> right <span style="color:#f92672">or</span> len(arr) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+
+    mid <span style="color:#f92672">=</span> int((left <span style="color:#f92672">+</span> right) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>)
+    <span style="color:#66d9ef">if</span> target <span style="color:#f92672">==</span> arr[mid]:
+        <span style="color:#66d9ef">return</span> mid
+    <span style="color:#66d9ef">elif</span> target <span style="color:#f92672">&lt;</span> arr[mid]:
+        <span style="color:#66d9ef">return</span> BinarySearch(arr, target, left, mid<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+    <span style="color:#66d9ef">else</span>:
+        <span style="color:#66d9ef">return</span> BinarySearch(arr, target, mid<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, right)
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+    arr <span style="color:#f92672">=</span> list(range(<span style="color:#ae81ff">100</span>))
+    target <span style="color:#f92672">=</span> <span style="color:#ae81ff">66</span>
+    result <span style="color:#f92672">=</span> BinarySearch(arr, target)
+    <span style="color:#66d9ef">if</span> result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+        print(<span style="color:#66d9ef">False</span>)
+    <span style="color:#66d9ef">else</span>:
+        print(result)
+
+</code></pre></div></li>
+<li>非递归实现：
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">BinarySearch</span>(arr, target):
+    <span style="color:#e6db74">&#34;&#34;&#34;二分排序（非递归实现）&#34;&#34;&#34;</span>
+    <span style="color:#66d9ef">if</span> len(arr) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+
+    left <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    right <span style="color:#f92672">=</span> len(arr)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">while</span> left <span style="color:#f92672">&lt;=</span> right:
+        mid <span style="color:#f92672">=</span> int((left <span style="color:#f92672">+</span> right) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>)
+        <span style="color:#66d9ef">if</span> target <span style="color:#f92672">==</span> arr[mid]:
+            <span style="color:#66d9ef">return</span> mid
+        <span style="color:#66d9ef">elif</span> target <span style="color:#f92672">&lt;</span> arr[mid]:
+            right <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">else</span>:
+            left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+
+    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+    arr <span style="color:#f92672">=</span> list(range(<span style="color:#ae81ff">100</span>))
+    target <span style="color:#f92672">=</span> <span style="color:#ae81ff">66</span>
+    result <span style="color:#f92672">=</span> BinarySearch(arr, target)
+    <span style="color:#66d9ef">if</span> result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+        print(<span style="color:#66d9ef">False</span>)
+    <span style="color:#66d9ef">else</span>:
+        print(result)
+
+</code></pre></div></li>
+</ol>
+<h3 id="c实现">C实现</h3>
+<ol>
+<li>递归实现：
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#define LEN 100
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">BinarySearch</span>(<span style="color:#66d9ef">int</span> arr[], <span style="color:#66d9ef">int</span> left, <span style="color:#66d9ef">int</span> right, <span style="color:#66d9ef">int</span> target)
+{
+    <span style="color:#66d9ef">if</span> (left <span style="color:#f92672">&gt;</span> right <span style="color:#f92672">||</span> arr <span style="color:#f92672">==</span> NULL)
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+
+    <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> (left <span style="color:#f92672">+</span> right) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+    <span style="color:#66d9ef">if</span> (target <span style="color:#f92672">==</span> arr[mid])
+        <span style="color:#66d9ef">return</span> mid;
+    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (target <span style="color:#f92672">&lt;</span> arr[mid])
+        <span style="color:#66d9ef">return</span> BinarySearch(arr, left, mid<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, target);
+    <span style="color:#66d9ef">else</span>
+        <span style="color:#66d9ef">return</span> BinarySearch(arr, mid<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, right, target);
+}
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>)
+{
+    <span style="color:#66d9ef">int</span> arr[LEN];
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> LEN; i<span style="color:#f92672">++</span>)
+        arr[i] <span style="color:#f92672">=</span> i;
+    <span style="color:#66d9ef">int</span> target <span style="color:#f92672">=</span> <span style="color:#ae81ff">66</span>;
+    <span style="color:#66d9ef">int</span> result <span style="color:#f92672">=</span> BinarySearch(arr, <span style="color:#ae81ff">0</span>, LEN<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, target);
+    <span style="color:#66d9ef">if</span> (result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+        printf(<span style="color:#e6db74">&#34;False</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    <span style="color:#66d9ef">else</span>
+        printf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, result);
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div></li>
+<li>非递归实现：
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span><span style="color:#75715e">#define LEN 100
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">BinarySearch</span>(<span style="color:#66d9ef">int</span> arr[], <span style="color:#66d9ef">int</span> left, <span style="color:#66d9ef">int</span> right, <span style="color:#66d9ef">int</span> target)
+{
+    <span style="color:#66d9ef">if</span> (left <span style="color:#f92672">&gt;</span> right <span style="color:#f92672">||</span> arr <span style="color:#f92672">==</span> NULL)
+        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+
+    <span style="color:#66d9ef">while</span> (left <span style="color:#f92672">&lt;=</span> right)
+    {
+        <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> (left <span style="color:#f92672">+</span> right) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+        <span style="color:#66d9ef">if</span> (target <span style="color:#f92672">==</span> arr[mid])
+            <span style="color:#66d9ef">return</span> mid;
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (target <span style="color:#f92672">&lt;</span> arr[mid])
+            right <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
+        <span style="color:#66d9ef">else</span>
+            left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+    }
+
+    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+}
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>)
+{
+    <span style="color:#66d9ef">int</span> arr[LEN];
+    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> LEN; i<span style="color:#f92672">++</span>)
+        arr[i] <span style="color:#f92672">=</span> i;
+    <span style="color:#66d9ef">int</span> target <span style="color:#f92672">=</span> <span style="color:#ae81ff">66</span>;
+    <span style="color:#66d9ef">int</span> result <span style="color:#f92672">=</span> BinarySearch(arr, <span style="color:#ae81ff">0</span>, LEN<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, target);
+    <span style="color:#66d9ef">if</span> (result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+        printf(<span style="color:#e6db74">&#34;False</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+    <span style="color:#66d9ef">else</span>
+        printf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, result);
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+}
+</code></pre></div></li>
+</ol>
+<hr>
+<h1 id="散列表查找">散列表查找</h1>
+<p>散列表查找又叫哈希表查找，是通过记录存储位置和关键字构建一个确定的关系$f$，使得每个关键字$key$对应一个存储位置$f(key)$，称这个为散列技术。其中，$f$称为散列函数或者哈希函数。</p>
+<p>通过散列技术将记录存储在一块连续的存储空间中，这块连续的空间称为散列表或者哈希表。</p>
+<p>散列表最适合查找与给定的值相等的记录。</p>
+<p>散列函数的冲突：</p>
+<p>在使用散列表的过程中，可能会有两个关键字通过散列函数得到的存储地址是一样的，这个现象被称为冲突。此时就需要通过冲突解决办法来解决冲突。在解决冲突的同时也要保证查找和插入效率问题。同时为了避免冲突，散列函数的构造也是很重要的。</p>
+<h2 id="算法步骤-1">算法步骤</h2>
+<h3 id="散列函数的构造方法">散列函数的构造方法</h3>
+<p>选取散列函数的参考：</p>
+<ol>
+<li>计算散列地址所需的时间；</li>
+<li>关键字长度； </li>
+<li> 散列表大小； </li>
+<li>关键字的分布情况； </li>
+<li>查找记录的频率。</li>
+</ol>
+<h4 id="直接定址法">直接定址法</h4>
+<p>直接定址法就是直接通过取关键字的某个线性值作为散列地址：</p>
+<p>$$
+f(key)=a \cdot key+b\quad(a,b为常数)
+$$</p>
+<p>例如，要存储0-100岁的人口统计表，就可以采用散列函数为：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">f(key) = key
+</code></pre></div><h4 id="数字分析法">数字分析法</h4>
+<p>数字分析法通常适合处理关键字位数比较大的情况，如果事先知道关键字的分布且关键字的若干位分布比较  均匀，就可以考虑这个方法。</p>
+<p>Example：</p>
+<p>假设某公司的员工登记表以员工的手机号作为关键字。手机号一共11位。前3位是接入号，对应不同运营商的子品牌；中间4位表示归属地；最后4位是用户号。不同手机号前7位相同的可能性很大，所以可以选择后4位作为散列地址，或者对后4位反转（1234 -&gt; 4321）、循环右移（1234 -&gt; 4123）、循环左移等等之后作为散列地址。</p>
+<h4 id="平方取中法">平方取中法</h4>
+<p>假设关键字是1234，平方之后是1522756，再抽取中间3位227，用作散列地址。平方取中法比较适合于不知道关键字的分布，而位数又不是很大的情况。</p>
+<h4 id="折叠法">折叠法</h4>
+<p>将关键字从左到右分割成位数相等的几部分，最后一部分位数不够时可以短些，然后将这几部分叠加求和，  并按散列表表长，取后几位作为散列地址。</p>
+<p>比如关键字是9876543210，散列表表长是3位，将其分为四组，然后叠加求和：987 + 654 + 321 + 0 =  1962，取后3位962作为散列地址。</p>
+<p>折叠法事先不需要知道关键字的分布，适合关键字位数较多的情况。</p>
+<h4 id="x20除留取余数法"> 除留取余数法</h4>
+<p>此方法为最常用的构造散列函数方法。</p>
+<p>除留取余数法：</p>
+<p>$$
+f(key)=key\enspace mod\enspace p\quad (p\le m),\ m为散列表长
+$$</p>
+<p>这种方法不仅可以对关键字直接取模，也可在折叠、平方取中后再取模。根据经验，若散列表表长为$m$，通常$p$为小于或等于表长（最好接近$m$）的最小质数，可以更好的减小冲突。</p>
+<h4 id="随机数法">随机数法</h4>
+<p>$$
+f(key)=random(key),\quad random是随机函数
+$$</p>
+<p>当关键字的长度不等时，采用这个方法构造散列函数是比较合适的。</p>
+<h3 id="处理散列表冲突问题的方法">处理散列表冲突问题的方法</h3>
+<h4 id="开放地址法">开放地址法</h4>
+<p>开放地址就是一旦发生冲突，就去寻找下一个空的散列地址，只要散列表足够大，空的散列地址总能找到，并且记录它。有三种寻找空散列地址的方法：</p>
+<ol>
+<li>
+<p>线性探测法</p>
+<p>$$
+f'(key)=(f(key)+d)% n,\quad 其中d取(0,1,2,&hellip;,n-1),\ n为散列表的长度
+$$</p>
+<p>$d$初始为0，如果有冲突，那么$d$就通过递增来寻找空的散列地址。</p>
+<p>Example：</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th><strong>下标</strong></th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>关键字</strong></td>
+<td>12</td>
+<td>25</td>
+<td></td>
+<td></td>
+<td>16</td>
+<td></td>
+<td></td>
+<td>67</td>
+<td>56</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>在如上所示的散列表中插入37。首先使用散列函数计算37的散列地址：$f'(37)=f(37)%12=1$（这里假设$f(key)=key$）。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>而下标为1的位置已经存放了25，那就只能继续寻找下一个空散列地址：$f'(37)=(f(37)+1)%12=2$。</p>
+<p>2这个位置没有内容，所以得到：</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th><strong>下标</strong></th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>关键字</strong></td>
+<td>12</td>
+<td>25</td>
+<td>37</td>
+<td></td>
+<td>16</td>
+<td></td>
+<td></td>
+<td>67</td>
+<td>56</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>使用线性探测来解决冲突问题，会造成冲突堆积。所谓的冲突堆积就是上例的37，它本来是属于下标1的元素，现在却占用了下标为2的空间。如果现在需要存放原本存放在下标为2的元素，就会再次发生冲突，这个冲突会一直传播下去，大大减低查找和插入效率。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li>
+<p>二次探测法</p>
+<p>$$
+f'(key)=(f(key)+q^2)%n,\quad 其中q取(0,1,-1,2,-2,&hellip;,\frac n2,-\frac n2),\ n为散列表的长度
+$$</p>
+<p>二次探测法其实是对线性探测的一个优化，增加了平方可以不让关键字聚集在某一块区域。</p>
+<p>Example：</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th><strong>下标</strong></th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>关键字</strong></td>
+<td>12</td>
+<td>25</td>
+<td>37</td>
+<td></td>
+<td>16</td>
+<td></td>
+<td></td>
+<td>67</td>
+<td>56</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>插入元素7，通过二次探测的散列函数计算得到：$f'(7)=f(7)%12=7$。</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>但下标为7的位置已经存放了67，所以需要寻找下一个存储地址：$f'(7)=(f(7)+1^2)%12=8$。</p>
+<p>下标为8的位置已经存放了56，继续寻找： $f'(7)=(f(7)+(-1^2))%12=6$。</p>
+<p>6这个位置为空，得到：</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th><strong>下标</strong></th>
+<th>0</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+<th>11</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>关键字</strong></td>
+<td>12</td>
+<td>25</td>
+<td>37</td>
+<td></td>
+<td>16</td>
+<td></td>
+<td>7</td>
+<td>67</td>
+<td>56</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+</li>
+<li>
+<p>随机探测法</p>
+<p>$$
+f'(key)=(f(key)+d)%m,\quad d为随机数,m为表长
+$$</p>
+<p>在实现中应预先用随机数发生器产生一个随机序列，将此序列作为依次探测的步长。这样就能使不同的关键字具有不同的探测次序，从而可以避免或减少堆积。</p>
+</li>
+</ol>
+<h4 id="多重散列法">多重散列法</h4>
+<p>多重散列法又叫再散列函数法。其公式如下：</p>
+<p>$$
+f'(key)=RH(key)
+$$</p>
+<p>其中$RH$就是不同的散列函数，这些散列函数可以是任何散列函数。只要其中一个发生了冲突，就马上换一个散列函数，直到冲突解决。缺点就是增加了很多计算时间。</p>
+<h4 id="链地址法">链地址法</h4>
+<p>链地址法就是当冲突发生时，用链表来存放同义词（即存放在当前位置，每个位置使用链表存放同义词）。这个思路和图的邻接表存储方式很相似。</p>
+<p><img src="/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/20170329114036533_Gh2zPBSsES.jpg"
+	width="314"
+	height="294"
+	srcset="/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/20170329114036533_Gh2zPBSsES_hu1a250fcdd0b1e0254be091a55c8b922f_27872_480x0_resize_q75_box.jpg 480w, /p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/20170329114036533_Gh2zPBSsES_hu1a250fcdd0b1e0254be091a55c8b922f_27872_1024x0_resize_q75_box.jpg 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="106"
+		data-flex-basis="256px"
+	
+></p>
+<h4 id="公共溢出区法">公共溢出区法</h4>
+<p>公共溢出区法就是把那些冲突的元素直接追加到另外一个溢出表中，如下图所示：</p>
+<p><img src="/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/20170329114409113__GJU2mNyy2.png"
+	width="743"
+	height="721"
+	srcset="/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/20170329114409113__GJU2mNyy2_hu9299358ca7e231ad79444e6a1566af94_190904_480x0_resize_box_3.png 480w, /p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/20170329114409113__GJU2mNyy2_hu9299358ca7e231ad79444e6a1566af94_190904_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="103"
+		data-flex-basis="247px"
+	
+></p>
+<p>在查找的时候，如果在基本表没有找到，那么就只能去溢出表中进行顺序查找。这个方法比较适合冲突元素少的情况。</p>
+<h2 id="代码实现-1">代码实现</h2>
+<h3 id="python实现-1">Python实现</h3>
+<ul>
+<li>除留取余数法构造散列函数，开放地址法-线性探测处理散列表冲突：
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HashTable</span>:
+    <span style="color:#66d9ef">def</span> __init__(self, size):
+        self<span style="color:#f92672">.</span>elem <span style="color:#f92672">=</span> [<span style="color:#66d9ef">None</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(size)]
+        self<span style="color:#f92672">.</span>size <span style="color:#f92672">=</span> size
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">hash</span>(self, key):
+        <span style="color:#e6db74">&#34;&#34;&#34;除留取余数法构造哈希函数&#34;&#34;&#34;</span>
+        <span style="color:#66d9ef">return</span> key <span style="color:#f92672">%</span> self<span style="color:#f92672">.</span>size
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">insert_hash</span>(self, key):
+        address <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>hash(key)
+        <span style="color:#75715e"># 开放地址法-线性探测</span>
+        <span style="color:#66d9ef">while</span> self<span style="color:#f92672">.</span>elem[address]:
+            address <span style="color:#f92672">=</span> (address<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> self<span style="color:#f92672">.</span>size
+        self<span style="color:#f92672">.</span>elem[address] <span style="color:#f92672">=</span> key
+
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">search_hash</span>(self, key):
+        star <span style="color:#f92672">=</span> address <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>hash(key)
+        <span style="color:#66d9ef">while</span> self<span style="color:#f92672">.</span>elem[address] <span style="color:#f92672">!=</span> key:
+            address <span style="color:#f92672">=</span> (address <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> self<span style="color:#f92672">.</span>size
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> self<span style="color:#f92672">.</span>elem[address] <span style="color:#f92672">or</span> address <span style="color:#f92672">==</span> star:
+                <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+        <span style="color:#66d9ef">return</span> address
+
+
+<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+    list_a <span style="color:#f92672">=</span> [<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">67</span>, <span style="color:#ae81ff">56</span>, <span style="color:#ae81ff">16</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">37</span>, <span style="color:#ae81ff">22</span>, <span style="color:#ae81ff">29</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">47</span>, <span style="color:#ae81ff">48</span>, <span style="color:#ae81ff">34</span>]
+    hash_table <span style="color:#f92672">=</span> HashTable(<span style="color:#ae81ff">12</span>)
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> list_a:
+        hash_table<span style="color:#f92672">.</span>insert_hash(i)
+
+    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> hash_table<span style="color:#f92672">.</span>elem:
+        <span style="color:#66d9ef">if</span> i:
+            print((hash_table<span style="color:#f92672">.</span>elem<span style="color:#f92672">.</span>index(i), i), end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34; &#34;</span>)
+    print(<span style="color:#e6db74">&#34;&#34;</span>)
+
+    print(hash_table<span style="color:#f92672">.</span>search_hash(<span style="color:#ae81ff">15</span>))
+    print(hash_table<span style="color:#f92672">.</span>search_hash(<span style="color:#ae81ff">33</span>))
+
+</code></pre></div></li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/c/">C</a>
+        
+            <a href="/tags/python/">Python</a>
+        
+            <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+        
+            <a href="/tags/%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/">查找算法</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+       
+</article>
+
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/%E7%BB%8F%E5%85%B8%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D/">
+        
+        
+
+        经典字符串匹配</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/%E4%B8%A4%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%AE%97%E6%B3%95/">
+        
+        
+
+        两数交换算法</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/">
+        
+        
+
+        经典排序算法</a>
+</div>
+</section>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2022 - 
+        
+        2023 Linner&#39;s Blog
+
+        <span style="padding-left: 5px;padding-right: 5px;">|</span>
+
+        <a href="https://beian.miit.gov.cn/" target="_blank" >粤ICP备2022125602号-1</a>
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

@@ -1372,6 +1372,386 @@ $$&lt;/p&gt;
 ASL_{bs} = \cfrac{1}{n} \sum_{i=1}^{n}{i \times 2^{i-1}} = \cfrac{n+1}{n} log_2{(n+1)} - 1
 $$&lt;/p&gt;
 &lt;p&gt;当$n$值较大时，$ASL_{bs} \approx log_2{(n+1)} - 1$。&lt;/p&gt;
+&lt;h1 id=&#34;哈希表&#34;&gt;哈希表&lt;/h1&gt;
+&lt;p&gt;哈希表查找（又叫散列表查找）是通过散列技术，将存储位置和关键字构建一个确定的关系$H$，使得每个关键字$key$对应一个存储位置$H(key)$。其中，$H$称为哈希函数或者散列函数。&lt;/p&gt;
+&lt;p&gt;根据设定的&lt;strong&gt;哈希函数&lt;/strong&gt;$H(key)$和&lt;strong&gt;处理冲突的方法&lt;/strong&gt;，将一组关键字映射到一个有限的连续的地址集（区间）上，并以关键字在地址集中的“像”作为记录在表中的存储位置，这块连续的空间称为哈希表或散列表，这一映射过程称为&lt;strong&gt;哈希造表&lt;/strong&gt;或&lt;strong&gt;散列表&lt;/strong&gt;，所得的存储位置称为&lt;strong&gt;哈希地址&lt;/strong&gt;或&lt;strong&gt;散列地址&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;对于哈希表，主要考虑两个问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如何构造哈希函数；&lt;/li&gt;
+&lt;li&gt;如何解决冲突。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;冲突&#34;&gt;冲突&lt;/h2&gt;
+&lt;p&gt;对于某个哈希函数$H$和两个关键字$key_1$和$key_2$,如果$key_1 \neq key_2$，而$H(key_1)=H(key_2)$，则称为冲突。&lt;/p&gt;
+&lt;p&gt;具有相同哈希函数值的关键字对该哈希函数来说称为同义词。&lt;/p&gt;
+&lt;p&gt;一般情况下，冲突只能尽可能减少而不能完全避免。&lt;/p&gt;
+&lt;h2 id=&#34;哈希函数的构造方法&#34;&gt;哈希函数的构造方法&lt;/h2&gt;
+&lt;p&gt;常用的哈希函数构造方法有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;直接定址法；&lt;/li&gt;
+&lt;li&gt;数字分析法；&lt;/li&gt;
+&lt;li&gt;平方取中法；&lt;/li&gt;
+&lt;li&gt;折叠法；&lt;/li&gt;
+&lt;li&gt;随机数法；&lt;/li&gt;
+&lt;li&gt;除留余数法……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;哈希函数的构造要考虑到：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;压缩性：节省存储空间；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;散列性：尽量减少冲突。&lt;/p&gt;
+&lt;p&gt;要减少冲突，就要设法使哈希函数尽可能均匀地把关键字映射到存储区的各个存储单元。在构造哈希函数时，一般都要对关键字进行计算，且尽可能使关键字的所有组成部分都能起作用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;除留取余数法&#34;&gt;除留取余数法&lt;/h3&gt;
+&lt;p&gt;除留取余数法是最常用的构造散列函数方法。&lt;/p&gt;
+&lt;p&gt;除留取余数法：&lt;/p&gt;
+&lt;p&gt;$$
+f(key)=key \enspace mod \enspace p\quad (p\le m),\ m为散列表长
+$$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$mod$ 是取模运算。&lt;/p&gt;
+&lt;p&gt;根据经验，若散列表表长为$m$，通常$p$为小于或等于表长（最好接近$m$）的最小质数，可以更好的减小冲突。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;冲突处理方法&#34;&gt;冲突处理方法&lt;/h2&gt;
+&lt;p&gt;解决冲突就是为出现冲突的关键字找到另一个“空”的哈希地址。在处理冲突的过程中可能得到一个地址序列$H_i,(i=1,2,\dots,k)$。常见的处理冲突的方法有以下几种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;开放地址法；&lt;/li&gt;
+&lt;li&gt;多重散列法（再哈希法）；&lt;/li&gt;
+&lt;li&gt;链地址法；&lt;/li&gt;
+&lt;li&gt;公共溢出区法……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;开放地址法&#34;&gt;开放地址法&lt;/h3&gt;
+&lt;p&gt;开放地址就是一旦发生冲突，就去寻找下一个空的散列地址，只要散列表足够大，空的散列地址总能找到，并且记录它。&lt;/p&gt;
+&lt;p&gt;有三种寻找空散列地址的方法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;线性探测法（线性探测再散列）：&lt;/p&gt;
+&lt;p&gt;$$
+H_i=(H(key)+d) mod m
+$$&lt;/p&gt;
+&lt;p&gt;其中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$d$取$0,1,2,&amp;hellip;,m-1$；&lt;/li&gt;
+&lt;li&gt;$m$为散列表的长度。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$d$初始为0，如果有冲突，那么$d$就通过递增来寻找空的散列地址。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;二次探测法（二次探测再散列）：&lt;/p&gt;
+&lt;p&gt;$$
+H_i=(H(key)+q^2) mod m
+$$&lt;/p&gt;
+&lt;p&gt;其中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$q$取$0,1,-1,2,-2,&amp;hellip;,\pm k$，$k \le \cfrac{m}{2}$&lt;/li&gt;
+&lt;li&gt;$m$为散列表的长度&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;二次探测法其实是对线性探测的一个优化，增加了平方可以不让关键字聚集在某一块区域。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;线性探测法市能使第$i$个哈希地址的同义词存入第$i+1$个哈希地址，这样本应存入第$i+1$个哈希地址的元素变成了第$i+2$个哈希地址元素的同义词，……，因此，可能出现很多元素在相邻的哈希地址上“聚集”起来的现象，大大降低了查找效率。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;排序&#34;&gt;排序&lt;/h1&gt;
+&lt;p&gt;排序算法有稳定排序和不稳定排序两种。假设待排序序列中，$R_i$和$R_j$关键字相同，即$k_i=k_j$，且$R_i$领先与$R_j$排序后&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;稳定排序&lt;/strong&gt;：排序后$R_i$和$R_j$相对次序不变，$R_i$任领先于$R_j$；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不稳定排序&lt;/strong&gt;：排序后可能出现$R_j$领先于$R_i$的情况。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;根据记录存储的位置可分为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;内部排序&lt;/strong&gt;：待排序记录存储在内存中进行排序的过程。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;外部排序&lt;/strong&gt;：排序记录的数量很大，内存无法容纳全部记录，在排序过程需要对外存进行访问的排序过程。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;排序过程需要进行的两种基本操作：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;比较两个关键字的大小。&lt;/p&gt;
+&lt;p&gt;这种操作对于大多数排序方法来说是必需的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将记录从一个位置移动到另一个位置。&lt;/p&gt;
+&lt;p&gt;这种操作可以通过改变记录的存储方式来避免。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;排序算法及其时间、空间复杂度：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;排序算法&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;平均时间复杂度&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;最坏时间复杂度&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;最好时间复杂度&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;空间复杂度&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;稳定性&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;是否归位&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;直接插入排序&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(n^2)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(n^2)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(n)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(1)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;稳定&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;希尔排序&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(n^{1.3})$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(n^2)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(n)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(1)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;不稳定&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;简单选择排序&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(n^2)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(n^2)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(n^2)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(1)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;不稳定&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;堆排序&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(nlog_2{n})$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(nlog_2{n})$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(nlog_2{n})$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(1)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;不稳定&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;冒泡排序&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(n^2)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(n^2)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(n)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(1)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;稳定&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;快速排序&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(nlog_2{n})$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(n^2)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(nlog_2{n})$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(log_2{n})$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;不稳定&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;归并排序&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(nlog_2{n})$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(nlog_2{n})$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(nlog_2{n})$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(n)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;稳定&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;blockquote&gt;
+&lt;p&gt;是否归位：在排序过程中，能否确定某些元素的最终排序位置。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;选择排序&#34;&gt;选择排序&lt;/h2&gt;
+&lt;p&gt;选择排序（Selection Sort）是一种简单直观的排序算法，无论什么数据进去都是 $O(n²)$ 的时间复杂度。&lt;/p&gt;
+&lt;p&gt;算法步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在未排序序列中找到最小（大）元素，存放到排序序列的起始位置。&lt;/li&gt;
+&lt;li&gt;再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。&lt;/li&gt;
+&lt;li&gt;重复步骤2，直到所有元素均排序完毕。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;归位：在排序过程中，能确定某些元素的最终排序位置。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;selectionSort&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; arr[], &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; len)
+{
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; ; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; len &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; ; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;)
+    {
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; min &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; i;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;; j &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; len; j&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;)     &lt;span style=&#34;color:#75715e&#34;&gt;// 走访未排序的元素
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#75715e&#34;&gt;// 找到最小值
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (arr[j] &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; arr[min])
+                min &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; j;
+        &lt;span style=&#34;color:#75715e&#34;&gt;// i 不是最小数时，将 i 和最小数进行交换
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (i &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; min)
+        {
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; tmp &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; arr[i];
+            arr[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; arr[min];
+            arr[min] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; tmp; 
+        }
+    }
+}
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt;)
+{
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; arr[] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; { 
+        &lt;span style=&#34;color:#ae81ff&#34;&gt;22&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;34&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;32&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;82&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;55&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;89&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;50&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;37&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;64&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;35&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;9&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;70&lt;/span&gt; };
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; len &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;)&lt;span style=&#34;color:#66d9ef&#34;&gt;sizeof&lt;/span&gt;(arr) &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;sizeof&lt;/span&gt;(&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;arr);
+    selectionSort(arr, len);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; len; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;)
+        printf(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%d &amp;#34;&lt;/span&gt;, arr[i]);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+}
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;冒泡排序&#34;&gt;冒泡排序&lt;/h2&gt;
+&lt;p&gt;冒泡排序（Bubble Sort）是一种简单直观的排序算法。&lt;/p&gt;
+&lt;p&gt;这个算法的名字由来是因为越小的元素会经由交换慢慢“浮”到数列的顶端。&lt;/p&gt;
+&lt;p&gt;算法步骤：&lt;/p&gt;
+&lt;p&gt;假设一个序列长度为n，m（m≤n）是已排序完成的在末尾的数。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;比较相邻的元素。如果第一个比第二个大，就交换他们两个。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。对比结束后，最后的元素会是最大的数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对接下来n-m个未排序的数重复步骤1和2，直到没有任何一对数字需要比较。&lt;/p&gt;
+&lt;p&gt;第一趟对序列中所有n个数进行比对，第二趟对序列中n-1个未排序完成的数进行比对，以此类推。每次比对的数为n-m。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;归位：在排序过程中，能确定某些元素的最终排序位置。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;bubbleSort&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; arr[], &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; len)
+{
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; len &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; j &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; len &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; i; j&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;)
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (arr[j] &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; arr[j &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;])
+            {
+                &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; tmp &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; arr[j];
+                arr[j] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; arr[j &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;];
+                arr[j &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; tmp;
+            }
+}
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt;)
+{
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; arr[] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; { 
+        &lt;span style=&#34;color:#ae81ff&#34;&gt;22&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;34&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;32&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;82&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;55&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;89&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;50&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;37&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;64&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;35&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;9&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;70&lt;/span&gt; };
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; len &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;)&lt;span style=&#34;color:#66d9ef&#34;&gt;sizeof&lt;/span&gt;(arr) &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;sizeof&lt;/span&gt;(&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;arr);
+    bubbleSort(arr, len);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; len; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;)
+        printf(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%d &amp;#34;&lt;/span&gt;, arr[i]);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;直接插入排序&#34;&gt;直接插入排序&lt;/h2&gt;
+&lt;p&gt;直接插入排序的做法是：在插入第$i$个记录（$R_i$）时，序列中的前$i-1$个记录$R_1,R_2,\cdots,R_{i-1}$已排好序。将$R_i$与前面的有序序列做比较，找到应该插入的位置将$R_i$插入，并将插入位置后的记录依序向后移动。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果待插入的元素与有序序列中的某个元素相等，则将待插入元素插入到相等元素的后面。&lt;/p&gt;
+&lt;p&gt;对于基本有序的序列用直接插入排序效率是最高的。&lt;/p&gt;
+&lt;p&gt;不归位：在排序过程中，不能确定某些元素的最终排序位置。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;希尔排序&#34;&gt;希尔排序&lt;/h2&gt;
+&lt;p&gt;希尔排序又称为“缩小增量排序”，它是对直接插入排序方法的改进。&lt;/p&gt;
+&lt;p&gt;希尔排序的基本思想是：先将整个待排记录序列分割成若干子序列，然后分别进行直接插入排序，待整个序列中的记录基本有序时，再对全体记录进行一次直接插入排序。&lt;/p&gt;
+&lt;p&gt;步骤如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;选择一个增量序列$t_1,t_2,&amp;hellip;,t_k$，其中$t_i &amp;lt; t_{i-1}(1 \le i \le k),t_k = 1$；&lt;/p&gt;
+&lt;p&gt;一般来说，$t_1 \le \cfrac{n}{2}$。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;按增量序列个数$k$，对序列进行$k$趟排序；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;每趟排序，根据对应的增量$t_i$，将待排序列分割成若干长度为$t_i$的子序列，分别对各子表进行直接插入排序。仅增量因子为$1$时，整个序列作为一个表来处理，表长度即为整个序列的长度。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1681209778321.png&#34;
+	width=&#34;649&#34;
+	height=&#34;460&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1681209778321_hu3445f2349c32f6de565415fce2b1b7c8_87538_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1681209778321_hu3445f2349c32f6de565415fce2b1b7c8_87538_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;141&#34;
+		data-flex-basis=&#34;338px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;归位：在排序过程中，能确定某些元素的最终排序位置。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;计数排序&#34;&gt;计数排序&lt;/h2&gt;
+&lt;p&gt;计数排序的核心在于将输入的数据值转化为键存储在额外开辟的数组空间中。作为一种线性时间复杂度的排序，计数排序要求输入的数据必须是有确定范围的整数。&lt;/p&gt;
+&lt;p&gt;当输入的元素是 n 个 0 到 k 之间的整数时，它的运行时间是$Θ(n + k)$。计数排序不是比较排序，排序的速度快于任何比较排序算法。&lt;/p&gt;
+&lt;p&gt;由于用来计数的数组C的长度取决于待排序数组中数据的范围（等于待排序数组的最大值与最小值的差加上1），这使得计数排序对于数据范围很大的数组，需要大量时间和内存。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;计数排序是用来排序0到100之间的数字的最好的算法。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;算法步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;找出待排序的数组中最大和最小的元素。&lt;/li&gt;
+&lt;li&gt;统计数组中每个值为 &lt;code&gt;i&lt;/code&gt;的元素出现的次数，存入数组 &lt;code&gt;C&lt;/code&gt;的第 &lt;code&gt;i&lt;/code&gt;项。&lt;/li&gt;
+&lt;li&gt;对所有的计数累加（从 &lt;code&gt;C&lt;/code&gt;中的第一个元素开始，每一项和前一项相加）。&lt;/li&gt;
+&lt;li&gt;反向填充目标数组：将每个元素 &lt;code&gt;i&lt;/code&gt;放在新数组的第 &lt;code&gt;C(i)&lt;/code&gt; 项，每放一个元素就将 &lt;code&gt;C(i)&lt;/code&gt; 减去 &lt;code&gt;1&lt;/code&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;堆排序&#34;&gt;堆排序&lt;/h2&gt;
+&lt;p&gt;堆排序（Heapsort）是指利用堆这种数据结构所设计的一种排序算法。&lt;/p&gt;
+&lt;p&gt;堆积是一种近似完全二叉树的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点。&lt;/p&gt;
+&lt;p&gt;堆排序可以说是一种利用堆的概念来排序的选择排序。分为两种方法：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;大顶堆：每个节点的值都大于或等于其子节点的值，在堆排序算法中用于升序排列；&lt;/li&gt;
+&lt;li&gt;小顶堆：每个节点的值都小于或等于其子节点的值，在堆排序算法中用于降序排列；&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;算法步骤&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;将待排序的数组构造出一个堆 &lt;code&gt;H[0……n-1]&lt;/code&gt;；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;把堆首（堆顶结点，即最大值）和堆尾（堆的最下层最右边的结点）互换；&lt;/p&gt;
+&lt;p&gt;此时不再对原堆顶（最大值）进行操作，即原堆顶已经被“移出”，堆的长度缩小1。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;把新的数组顶端数据调整到相应位置；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重复步骤 2 到 3，直到堆的尺寸为 1。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;归位：在排序过程中，能确定某些元素的最终排序位置。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;快速排序&#34;&gt;快速排序&lt;/h2&gt;
+&lt;p&gt;快速排序使用分治法（Divide and conquer）策略来把一个序列（list）分为两个子序列（sub-lists）。&lt;/p&gt;
+&lt;p&gt;算法步骤&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;从序列中选择一个元素作为“基准”（pivot）。&lt;/li&gt;
+&lt;li&gt;将所有比基准数小的放在基准左边，所有比基准数大的放在基准右边（相同的数可以在任一边）。这个称为分区（partition）操作。&lt;/li&gt;
+&lt;li&gt;分区完成后，该基准就会归到序列中的相应位置，该位置是排序完成后的位置。&lt;/li&gt;
+&lt;li&gt;分别递归地把小于基准数的子序列（左边）和大于基准数的子序列（右边）重复执行1到3操作。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;归位：在排序过程中，能确定某些元素的最终排序位置。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;归并排序&#34;&gt;归并排序&lt;/h2&gt;
+&lt;p&gt;归并排序（Merge sort）是建立在归并操作上的一种有效的排序算法。该算法是采用分治法（Divide and Conquer）的一个非常典型的应用。&lt;/p&gt;
+&lt;p&gt;作为一种典型的分而治之思想的算法应用，归并排序的实现由两种方法：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;自上而下的递归；&lt;/li&gt;
+&lt;li&gt;自下而上的迭代。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;算法步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;申请空间，使其大小为两个已经排序序列之和，该空间用来存放合并后的序列；&lt;/li&gt;
+&lt;li&gt;设定两个指针，最初位置分别为两个已经排序序列的起始位置；&lt;/li&gt;
+&lt;li&gt;比较两个指针所指向的元素，选择相对小的元素放入到合并空间，并移动指针到下一位置；&lt;/li&gt;
+&lt;li&gt;重复步骤 3 直到某一指针达到序列尾；将另一序列剩下的所有元素直接复制到合并序列尾。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;不归位：在排序过程中，不能确定某些元素的最终排序位置。&lt;/p&gt;
+&lt;/blockquote&gt;
 </description>
         </item>
         <item>
@@ -13393,6 +13773,503 @@ WantedBy&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;multi-user.targe
 </description>
         </item>
         <item>
+        <title>经典查找算法</title>
+        <link>https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/</link>
+        <pubDate>Sun, 27 Feb 2022 14:44:00 +0000</pubDate>
+        
+        <guid>https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/</guid>
+        <description>&lt;h1 id=&#34;二分查找&#34;&gt;二分查找&lt;/h1&gt;
+&lt;p&gt;二分查找又叫折半查找，是在有序列表的基础上进行查找，每次查找可以筛掉一半的元素。&lt;/p&gt;
+&lt;h2 id=&#34;算法步骤&#34;&gt;算法步骤&lt;/h2&gt;
+&lt;p&gt;以升序数列$L[0&amp;hellip;n-1]$为例，假设要查找的数为$x$：&lt;/p&gt;
+&lt;p&gt;让$x$与数列中间位置的元素$L[\lfloor \frac n2 \rfloor]$进行比较，如果相等则返回该元素下标，否则：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果$x$比中间元素小，递归地对中间元素左边的数列（比二分查找小的元素）进行二分查找；&lt;/li&gt;
+&lt;li&gt;如果$x$比中间元素大，递归地对中间元素右边的数列（比二分查找大的元素）进行二分查找。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;代码实现&#34;&gt;代码实现&lt;/h2&gt;
+&lt;h3 id=&#34;python实现&#34;&gt;Python实现&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;递归实现：
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;BinarySearch&lt;/span&gt;(arr, target, left &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, right &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;):
+    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;二分排序（递归实现）
+&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;    left=0,right=len(arr)-1&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; left &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;and&lt;/span&gt; right &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;:
+        right &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; len(arr)&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; left &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; right &lt;span style=&#34;color:#f92672&#34;&gt;or&lt;/span&gt; len(arr) &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;:
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+
+    mid &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; int((left &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; right) &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; target &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; arr[mid]:
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; mid
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;elif&lt;/span&gt; target &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; arr[mid]:
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; BinarySearch(arr, target, left, mid&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; BinarySearch(arr, target, mid&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, right)
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; __name__ &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;__main__&amp;#34;&lt;/span&gt;:
+    arr &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list(range(&lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;))
+    target &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;66&lt;/span&gt;
+    result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; BinarySearch(arr, target)
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:
+        print(&lt;span style=&#34;color:#66d9ef&#34;&gt;False&lt;/span&gt;)
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+        print(result)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;非递归实现：
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;BinarySearch&lt;/span&gt;(arr, target):
+    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;二分排序（非递归实现）&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; len(arr) &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;:
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+
+    left &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+    right &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; len(arr)&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; left &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; right:
+        mid &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; int((left &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; right) &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; target &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; arr[mid]:
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; mid
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;elif&lt;/span&gt; target &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; arr[mid]:
+            right &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; mid &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+            left &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; mid &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; __name__ &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;__main__&amp;#34;&lt;/span&gt;:
+    arr &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; list(range(&lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;))
+    target &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;66&lt;/span&gt;
+    result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; BinarySearch(arr, target)
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;:
+        print(&lt;span style=&#34;color:#66d9ef&#34;&gt;False&lt;/span&gt;)
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+        print(result)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;c实现&#34;&gt;C实现&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;递归实现：
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#define LEN 100
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;BinarySearch&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; arr[], &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; left, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; right, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; target)
+{
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (left &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; right &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; arr &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; NULL)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; mid &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (left &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; right) &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (target &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; arr[mid])
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; mid;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (target &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; arr[mid])
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; BinarySearch(arr, left, mid&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, target);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; BinarySearch(arr, mid&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, right, target);
+}
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt;)
+{
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; arr[LEN];
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; LEN; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;)
+        arr[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; i;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; target &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;66&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; BinarySearch(arr, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, LEN&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, target);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (result &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
+        printf(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;False&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;
+        printf(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%d&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, result);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;非递归实现：
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-c&#34; data-lang=&#34;c&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#define LEN 100
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;BinarySearch&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; arr[], &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; left, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; right, &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; target)
+{
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (left &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; right &lt;span style=&#34;color:#f92672&#34;&gt;||&lt;/span&gt; arr &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; NULL)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; (left &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;=&lt;/span&gt; right)
+    {
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; mid &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (left &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; right) &lt;span style=&#34;color:#f92672&#34;&gt;/&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (target &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; arr[mid])
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; mid;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (target &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; arr[mid])
+            right &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; mid &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;
+            left &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; mid &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+    }
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+}
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt;)
+{
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; arr[LEN];
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;; i &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; LEN; i&lt;span style=&#34;color:#f92672&#34;&gt;++&lt;/span&gt;)
+        arr[i] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; i;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; target &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;66&lt;/span&gt;;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; BinarySearch(arr, &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;, LEN&lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, target);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; (result &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
+        printf(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;False&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;
+        printf(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%d&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;, result);
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;散列表查找&#34;&gt;散列表查找&lt;/h1&gt;
+&lt;p&gt;散列表查找又叫哈希表查找，是通过记录存储位置和关键字构建一个确定的关系$f$，使得每个关键字$key$对应一个存储位置$f(key)$，称这个为散列技术。其中，$f$称为散列函数或者哈希函数。&lt;/p&gt;
+&lt;p&gt;通过散列技术将记录存储在一块连续的存储空间中，这块连续的空间称为散列表或者哈希表。&lt;/p&gt;
+&lt;p&gt;散列表最适合查找与给定的值相等的记录。&lt;/p&gt;
+&lt;p&gt;散列函数的冲突：&lt;/p&gt;
+&lt;p&gt;在使用散列表的过程中，可能会有两个关键字通过散列函数得到的存储地址是一样的，这个现象被称为冲突。此时就需要通过冲突解决办法来解决冲突。在解决冲突的同时也要保证查找和插入效率问题。同时为了避免冲突，散列函数的构造也是很重要的。&lt;/p&gt;
+&lt;h2 id=&#34;算法步骤-1&#34;&gt;算法步骤&lt;/h2&gt;
+&lt;h3 id=&#34;散列函数的构造方法&#34;&gt;散列函数的构造方法&lt;/h3&gt;
+&lt;p&gt;选取散列函数的参考：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;计算散列地址所需的时间；&lt;/li&gt;
+&lt;li&gt;关键字长度； &lt;/li&gt;
+&lt;li&gt; 散列表大小； &lt;/li&gt;
+&lt;li&gt;关键字的分布情况； &lt;/li&gt;
+&lt;li&gt;查找记录的频率。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;直接定址法&#34;&gt;直接定址法&lt;/h4&gt;
+&lt;p&gt;直接定址法就是直接通过取关键字的某个线性值作为散列地址：&lt;/p&gt;
+&lt;p&gt;$$
+f(key)=a \cdot key+b\quad(a,b为常数)
+$$&lt;/p&gt;
+&lt;p&gt;例如，要存储0-100岁的人口统计表，就可以采用散列函数为：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-text&#34; data-lang=&#34;text&#34;&gt;f(key) = key
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;数字分析法&#34;&gt;数字分析法&lt;/h4&gt;
+&lt;p&gt;数字分析法通常适合处理关键字位数比较大的情况，如果事先知道关键字的分布且关键字的若干位分布比较  均匀，就可以考虑这个方法。&lt;/p&gt;
+&lt;p&gt;Example：&lt;/p&gt;
+&lt;p&gt;假设某公司的员工登记表以员工的手机号作为关键字。手机号一共11位。前3位是接入号，对应不同运营商的子品牌；中间4位表示归属地；最后4位是用户号。不同手机号前7位相同的可能性很大，所以可以选择后4位作为散列地址，或者对后4位反转（1234 -&amp;gt; 4321）、循环右移（1234 -&amp;gt; 4123）、循环左移等等之后作为散列地址。&lt;/p&gt;
+&lt;h4 id=&#34;平方取中法&#34;&gt;平方取中法&lt;/h4&gt;
+&lt;p&gt;假设关键字是1234，平方之后是1522756，再抽取中间3位227，用作散列地址。平方取中法比较适合于不知道关键字的分布，而位数又不是很大的情况。&lt;/p&gt;
+&lt;h4 id=&#34;折叠法&#34;&gt;折叠法&lt;/h4&gt;
+&lt;p&gt;将关键字从左到右分割成位数相等的几部分，最后一部分位数不够时可以短些，然后将这几部分叠加求和，  并按散列表表长，取后几位作为散列地址。&lt;/p&gt;
+&lt;p&gt;比如关键字是9876543210，散列表表长是3位，将其分为四组，然后叠加求和：987 + 654 + 321 + 0 =  1962，取后3位962作为散列地址。&lt;/p&gt;
+&lt;p&gt;折叠法事先不需要知道关键字的分布，适合关键字位数较多的情况。&lt;/p&gt;
+&lt;h4 id=&#34;x20除留取余数法&#34;&gt; 除留取余数法&lt;/h4&gt;
+&lt;p&gt;此方法为最常用的构造散列函数方法。&lt;/p&gt;
+&lt;p&gt;除留取余数法：&lt;/p&gt;
+&lt;p&gt;$$
+f(key)=key\enspace mod\enspace p\quad (p\le m),\ m为散列表长
+$$&lt;/p&gt;
+&lt;p&gt;这种方法不仅可以对关键字直接取模，也可在折叠、平方取中后再取模。根据经验，若散列表表长为$m$，通常$p$为小于或等于表长（最好接近$m$）的最小质数，可以更好的减小冲突。&lt;/p&gt;
+&lt;h4 id=&#34;随机数法&#34;&gt;随机数法&lt;/h4&gt;
+&lt;p&gt;$$
+f(key)=random(key),\quad random是随机函数
+$$&lt;/p&gt;
+&lt;p&gt;当关键字的长度不等时，采用这个方法构造散列函数是比较合适的。&lt;/p&gt;
+&lt;h3 id=&#34;处理散列表冲突问题的方法&#34;&gt;处理散列表冲突问题的方法&lt;/h3&gt;
+&lt;h4 id=&#34;开放地址法&#34;&gt;开放地址法&lt;/h4&gt;
+&lt;p&gt;开放地址就是一旦发生冲突，就去寻找下一个空的散列地址，只要散列表足够大，空的散列地址总能找到，并且记录它。有三种寻找空散列地址的方法：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;线性探测法&lt;/p&gt;
+&lt;p&gt;$$
+f&#39;(key)=(f(key)+d)% n,\quad 其中d取(0,1,2,&amp;hellip;,n-1),\ n为散列表的长度
+$$&lt;/p&gt;
+&lt;p&gt;$d$初始为0，如果有冲突，那么$d$就通过递增来寻找空的散列地址。&lt;/p&gt;
+&lt;p&gt;Example：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;下标&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;th&gt;3&lt;/th&gt;
+&lt;th&gt;4&lt;/th&gt;
+&lt;th&gt;5&lt;/th&gt;
+&lt;th&gt;6&lt;/th&gt;
+&lt;th&gt;7&lt;/th&gt;
+&lt;th&gt;8&lt;/th&gt;
+&lt;th&gt;9&lt;/th&gt;
+&lt;th&gt;10&lt;/th&gt;
+&lt;th&gt;11&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;关键字&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;67&lt;/td&gt;
+&lt;td&gt;56&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;在如上所示的散列表中插入37。首先使用散列函数计算37的散列地址：$f&#39;(37)=f(37)%12=1$（这里假设$f(key)=key$）。&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;而下标为1的位置已经存放了25，那就只能继续寻找下一个空散列地址：$f&#39;(37)=(f(37)+1)%12=2$。&lt;/p&gt;
+&lt;p&gt;2这个位置没有内容，所以得到：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;下标&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;th&gt;3&lt;/th&gt;
+&lt;th&gt;4&lt;/th&gt;
+&lt;th&gt;5&lt;/th&gt;
+&lt;th&gt;6&lt;/th&gt;
+&lt;th&gt;7&lt;/th&gt;
+&lt;th&gt;8&lt;/th&gt;
+&lt;th&gt;9&lt;/th&gt;
+&lt;th&gt;10&lt;/th&gt;
+&lt;th&gt;11&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;关键字&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;37&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;67&lt;/td&gt;
+&lt;td&gt;56&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;使用线性探测来解决冲突问题，会造成冲突堆积。所谓的冲突堆积就是上例的37，它本来是属于下标1的元素，现在却占用了下标为2的空间。如果现在需要存放原本存放在下标为2的元素，就会再次发生冲突，这个冲突会一直传播下去，大大减低查找和插入效率。&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;二次探测法&lt;/p&gt;
+&lt;p&gt;$$
+f&#39;(key)=(f(key)+q^2)%n,\quad 其中q取(0,1,-1,2,-2,&amp;hellip;,\frac n2,-\frac n2),\ n为散列表的长度
+$$&lt;/p&gt;
+&lt;p&gt;二次探测法其实是对线性探测的一个优化，增加了平方可以不让关键字聚集在某一块区域。&lt;/p&gt;
+&lt;p&gt;Example：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;下标&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;th&gt;3&lt;/th&gt;
+&lt;th&gt;4&lt;/th&gt;
+&lt;th&gt;5&lt;/th&gt;
+&lt;th&gt;6&lt;/th&gt;
+&lt;th&gt;7&lt;/th&gt;
+&lt;th&gt;8&lt;/th&gt;
+&lt;th&gt;9&lt;/th&gt;
+&lt;th&gt;10&lt;/th&gt;
+&lt;th&gt;11&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;关键字&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;37&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;67&lt;/td&gt;
+&lt;td&gt;56&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;插入元素7，通过二次探测的散列函数计算得到：$f&#39;(7)=f(7)%12=7$。&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;但下标为7的位置已经存放了67，所以需要寻找下一个存储地址：$f&#39;(7)=(f(7)+1^2)%12=8$。&lt;/p&gt;
+&lt;p&gt;下标为8的位置已经存放了56，继续寻找： $f&#39;(7)=(f(7)+(-1^2))%12=6$。&lt;/p&gt;
+&lt;p&gt;6这个位置为空，得到：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;下标&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;0&lt;/th&gt;
+&lt;th&gt;1&lt;/th&gt;
+&lt;th&gt;2&lt;/th&gt;
+&lt;th&gt;3&lt;/th&gt;
+&lt;th&gt;4&lt;/th&gt;
+&lt;th&gt;5&lt;/th&gt;
+&lt;th&gt;6&lt;/th&gt;
+&lt;th&gt;7&lt;/th&gt;
+&lt;th&gt;8&lt;/th&gt;
+&lt;th&gt;9&lt;/th&gt;
+&lt;th&gt;10&lt;/th&gt;
+&lt;th&gt;11&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;关键字&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;25&lt;/td&gt;
+&lt;td&gt;37&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;7&lt;/td&gt;
+&lt;td&gt;67&lt;/td&gt;
+&lt;td&gt;56&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;随机探测法&lt;/p&gt;
+&lt;p&gt;$$
+f&#39;(key)=(f(key)+d)%m,\quad d为随机数,m为表长
+$$&lt;/p&gt;
+&lt;p&gt;在实现中应预先用随机数发生器产生一个随机序列，将此序列作为依次探测的步长。这样就能使不同的关键字具有不同的探测次序，从而可以避免或减少堆积。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h4 id=&#34;多重散列法&#34;&gt;多重散列法&lt;/h4&gt;
+&lt;p&gt;多重散列法又叫再散列函数法。其公式如下：&lt;/p&gt;
+&lt;p&gt;$$
+f&#39;(key)=RH(key)
+$$&lt;/p&gt;
+&lt;p&gt;其中$RH$就是不同的散列函数，这些散列函数可以是任何散列函数。只要其中一个发生了冲突，就马上换一个散列函数，直到冲突解决。缺点就是增加了很多计算时间。&lt;/p&gt;
+&lt;h4 id=&#34;链地址法&#34;&gt;链地址法&lt;/h4&gt;
+&lt;p&gt;链地址法就是当冲突发生时，用链表来存放同义词（即存放在当前位置，每个位置使用链表存放同义词）。这个思路和图的邻接表存储方式很相似。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/20170329114036533_Gh2zPBSsES.jpg&#34;
+	width=&#34;314&#34;
+	height=&#34;294&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/20170329114036533_Gh2zPBSsES_hu1a250fcdd0b1e0254be091a55c8b922f_27872_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/20170329114036533_Gh2zPBSsES_hu1a250fcdd0b1e0254be091a55c8b922f_27872_1024x0_resize_q75_box.jpg 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;106&#34;
+		data-flex-basis=&#34;256px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h4 id=&#34;公共溢出区法&#34;&gt;公共溢出区法&lt;/h4&gt;
+&lt;p&gt;公共溢出区法就是把那些冲突的元素直接追加到另外一个溢出表中，如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/20170329114409113__GJU2mNyy2.png&#34;
+	width=&#34;743&#34;
+	height=&#34;721&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/20170329114409113__GJU2mNyy2_hu9299358ca7e231ad79444e6a1566af94_190904_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/20170329114409113__GJU2mNyy2_hu9299358ca7e231ad79444e6a1566af94_190904_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;103&#34;
+		data-flex-basis=&#34;247px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;在查找的时候，如果在基本表没有找到，那么就只能去溢出表中进行顺序查找。这个方法比较适合冲突元素少的情况。&lt;/p&gt;
+&lt;h2 id=&#34;代码实现-1&#34;&gt;代码实现&lt;/h2&gt;
+&lt;h3 id=&#34;python实现-1&#34;&gt;Python实现&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;除留取余数法构造散列函数，开放地址法-线性探测处理散列表冲突：
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;HashTable&lt;/span&gt;:
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; __init__(self, size):
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;elem &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(size)]
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;size &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; size
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;hash&lt;/span&gt;(self, key):
+        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&amp;#34;除留取余数法构造哈希函数&amp;#34;&amp;#34;&amp;#34;&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; key &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;size
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;insert_hash&lt;/span&gt;(self, key):
+        address &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;hash(key)
+        &lt;span style=&#34;color:#75715e&#34;&gt;# 开放地址法-线性探测&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;elem[address]:
+            address &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (address&lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;size
+        self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;elem[address] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; key
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;search_hash&lt;/span&gt;(self, key):
+        star &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; address &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;hash(key)
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;elem[address] &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; key:
+            address &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (address &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;%&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;size
+            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;not&lt;/span&gt; self&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;elem[address] &lt;span style=&#34;color:#f92672&#34;&gt;or&lt;/span&gt; address &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; star:
+                &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; address
+
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; __name__ &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;__main__&amp;#34;&lt;/span&gt;:
+    list_a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#ae81ff&#34;&gt;12&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;67&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;56&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;16&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;25&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;37&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;22&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;29&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;15&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;47&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;48&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;34&lt;/span&gt;]
+    hash_table &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; HashTable(&lt;span style=&#34;color:#ae81ff&#34;&gt;12&lt;/span&gt;)
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; list_a:
+        hash_table&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;insert_hash(i)
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; hash_table&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;elem:
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; i:
+            print((hash_table&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;elem&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;index(i), i), end&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; &amp;#34;&lt;/span&gt;)
+    print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;)
+
+    print(hash_table&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;search_hash(&lt;span style=&#34;color:#ae81ff&#34;&gt;15&lt;/span&gt;))
+    print(hash_table&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;search_hash(&lt;span style=&#34;color:#ae81ff&#34;&gt;33&lt;/span&gt;))
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        <item>
         <title>MySQL 环境配置</title>
         <link>https://blog.linner.asia/p/mysql-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
         <pubDate>Sun, 20 Feb 2022 00:00:00 +0000</pubDate>
@@ -20118,10 +20995,10 @@ ws.run &amp;quot;cmd /c C.bat&amp;quot;,0
 &lt;p&gt;插入排序（Insertion Sort）是一种最简单直观的排序算法，它的工作原理是通过构建有序序列，对于未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入。&lt;/p&gt;
 &lt;p&gt;插入排序的有一种优化算法，叫做拆半插入。&lt;/p&gt;
 &lt;h2 id=&#34;算法步骤-2&#34;&gt;算法步骤&lt;/h2&gt;
-&lt;p&gt;假设序列的长度为n，其待排序序列第一个元素的位置为m（1≤m≤n，元素位置从0开始）。&lt;/p&gt;
+&lt;p&gt;假设序列的长度为$n$，其待排序序列第一个元素的位置为$m$（$1 \le m \le n$，元素位置从0开始）。&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
-&lt;p&gt;将元素m与已排序序列中的每个元素进行比较。如果已排序元素比元素m大（小），将其往后移，直到前面没有比元素m大（小）的元素（或前面已经没有元素）。将元素m插入。&lt;/p&gt;
+&lt;p&gt;将元素$m$与已排序序列中的每个元素进行比较。如果已排序元素比元素$m$大，将元素$m$中比已排序序列大的元素往后移，直到前面没有比元素$m$大的元素（或前面已经没有元素）。将元素m插入。&lt;/p&gt;
 &lt;p&gt;如果待插入的元素与有序序列中的某个元素相等，则将待插入元素插入到相等元素的后面。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -20203,9 +21080,9 @@ ws.run &amp;quot;cmd /c C.bat&amp;quot;,0
 &lt;p&gt;希尔排序的基本思想是：先将整个待排序的增量序列根据增量分割成为若干子序列分别进行直接插入排序，待整个序列中的记录“基本有序”时，再对全体记录进行依次直接插入排序。&lt;/p&gt;
 &lt;h2 id=&#34;算法步骤-4&#34;&gt;算法步骤&lt;/h2&gt;
 &lt;ol&gt;
-&lt;li&gt;选择一个增量序列$t_1,t_2,&amp;hellip;,t_k$，其中$t_i &amp;gt; t_j,t_k = 1$；&lt;/li&gt;
+&lt;li&gt;选择一个增量序列$t_1,t_2,&amp;hellip;,t_k$，其中$t_i &amp;lt; t_{i-1}(1 \le i \le k),t_k = 1$；&lt;/li&gt;
 &lt;li&gt;按增量序列个数$k$，对序列进行$k$趟排序；&lt;/li&gt;
-&lt;li&gt;每趟排序，根据对应的增量$t_i$，将待排序列分割成若干长度为$m$的子序列，分别对各子表进行直接插入排序。仅增量因子为$1$时，整个序列作为一个表来处理，表长度即为整个序列的长度。&lt;/li&gt;
+&lt;li&gt;每趟排序，根据对应的增量$t_i$，将待排序列分割成若干长度为$t_i$的子序列，分别对各子表进行直接插入排序。仅增量因子为$1$时，整个序列作为一个表来处理，表长度即为整个序列的长度。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;动画演示：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172408969.gif&#34;
