@@ -468,7 +468,7 @@ $$&lt;/p&gt;
 &lt;p&gt;$$
 p_i = \cfrac{1}{n+1}
 $$&lt;/p&gt;
-&lt;p&gt;即，$E_{insert} = \cfrac{插入位置数}{2} = \cfrac{n+1}{2}$&lt;/p&gt;
+&lt;p&gt;即，$E_{insert} = \cfrac{插入位置数-1}{2} = \cfrac{n+1}{2}$&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;在表长为$n$的线性表中删除元素时，共有$n$个可删除的元素：&lt;/p&gt;
@@ -488,7 +488,7 @@ $$&lt;/p&gt;
 &lt;p&gt;$$
 q_i = \cfrac{1}{n}
 $$&lt;/p&gt;
-&lt;p&gt;即，$E_{delete} = \cfrac{删除位置数}{2} = \cfrac{n}{2}$&lt;/p&gt;
+&lt;p&gt;即，$E_{delete} = \cfrac{删除位置数}{2} = \cfrac{n-1}{2}$&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;插入操作时间复杂度&lt;/strong&gt;：&lt;/p&gt;
