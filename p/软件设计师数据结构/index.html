@@ -505,9 +505,12 @@ $$</p>
 </ul>
 </li>
 <li>
-<p>设在第$i$个插入位置插入的概率为$P_i$，<u>等概率下</u>（假如这$n+1$个插入位置插入的概率相同）<u>插入</u>一个新元素需要移动的元素个数的<u>期望值$E_{insert}$</u>为：</p>
+<p>设在第$i$个插入位置插入的概率为$p_i$，<u>等概率下</u>（假如这$n+1$个插入位置插入的概率相同）<u>插入</u>一个新元素需要移动的元素个数的<u>期望值$E_{insert}$</u>为：</p>
 <p>$$
-E_{insert} = \sum_{i=1}^{n+1}{ \Big( P_i \times (n-i+1) \Big) } = \cfrac{1}{n+1} \sum_{i=1}^{n+1}{(n+i+1)} = \cfrac{\colorbox{yellow}n}{\colorbox{yellow}2}
+E_{insert} = \sum_{i=1}^{n+1}{ \Big( p_i \times (n-i+1) \Big) } = \cfrac{1}{n+1} \sum_{i=1}^{n+1}{(n+i+1)} = \cfrac{n+1}{2}
+$$</p>
+<p>$$
+p_i = \cfrac{1}{n+1}
 $$</p>
 <p>即，$E_{insert} = \cfrac{插入位置数}{2} = \cfrac{n+1}{2}$</p>
 </li>
@@ -525,6 +528,9 @@ $$</p>
 <p>设$a_i$被删除的概率为$q_i$，<u>等概率下删除元素</u>时需要移动的元素个数的<u>期望值$E_{delete}$</u>为：</p>
 <p>$$
 E_{delete} = \sum_{i=1}^{n}{\Big( q_i \times (n-i) \Big)} = \cfrac{1}{n} \sum_{i=1}^{n}{(n-i)} = \cfrac{n-1}{yellow}{2}
+$$</p>
+<p>$$
+q_i = \cfrac{1}{n}
 $$</p>
 <p>即，$E_{delete} = \cfrac{删除位置数}{2} = \cfrac{n}{2}$</p>
 </li>

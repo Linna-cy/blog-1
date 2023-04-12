@@ -461,9 +461,12 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;设在第$i$个插入位置插入的概率为$P_i$，&lt;u&gt;等概率下&lt;/u&gt;（假如这$n+1$个插入位置插入的概率相同）&lt;u&gt;插入&lt;/u&gt;一个新元素需要移动的元素个数的&lt;u&gt;期望值$E_{insert}$&lt;/u&gt;为：&lt;/p&gt;
+&lt;p&gt;设在第$i$个插入位置插入的概率为$p_i$，&lt;u&gt;等概率下&lt;/u&gt;（假如这$n+1$个插入位置插入的概率相同）&lt;u&gt;插入&lt;/u&gt;一个新元素需要移动的元素个数的&lt;u&gt;期望值$E_{insert}$&lt;/u&gt;为：&lt;/p&gt;
 &lt;p&gt;$$
-E_{insert} = \sum_{i=1}^{n+1}{ \Big( P_i \times (n-i+1) \Big) } = \cfrac{1}{n+1} \sum_{i=1}^{n+1}{(n+i+1)} = \cfrac{\colorbox{yellow}n}{\colorbox{yellow}2}
+E_{insert} = \sum_{i=1}^{n+1}{ \Big( p_i \times (n-i+1) \Big) } = \cfrac{1}{n+1} \sum_{i=1}^{n+1}{(n+i+1)} = \cfrac{n+1}{2}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+p_i = \cfrac{1}{n+1}
 $$&lt;/p&gt;
 &lt;p&gt;即，$E_{insert} = \cfrac{插入位置数}{2} = \cfrac{n+1}{2}$&lt;/p&gt;
 &lt;/li&gt;
@@ -481,6 +484,9 @@ $$&lt;/p&gt;
 &lt;p&gt;设$a_i$被删除的概率为$q_i$，&lt;u&gt;等概率下删除元素&lt;/u&gt;时需要移动的元素个数的&lt;u&gt;期望值$E_{delete}$&lt;/u&gt;为：&lt;/p&gt;
 &lt;p&gt;$$
 E_{delete} = \sum_{i=1}^{n}{\Big( q_i \times (n-i) \Big)} = \cfrac{1}{n} \sum_{i=1}^{n}{(n-i)} = \cfrac{n-1}{yellow}{2}
+$$&lt;/p&gt;
+&lt;p&gt;$$
+q_i = \cfrac{1}{n}
 $$&lt;/p&gt;
 &lt;p&gt;即，$E_{delete} = \cfrac{删除位置数}{2} = \cfrac{n}{2}$&lt;/p&gt;
 &lt;/li&gt;
