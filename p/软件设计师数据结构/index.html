@@ -770,10 +770,16 @@ $$</p>
 <p>KMP的重点是求模式串字符的next值（失配指针$Next[\ i\ ]$），假设$a_{i-1}$为当前要求next值的模式串字符：</p>
 <ul>
 <li>
-<p>前缀集合：$Prefix=\{p_0,p_0p_1,\cdots,p_0&hellip;p_{i-1}\}$；</p>
+<p>前缀集合：</p>
+<p>$$
+Prefix=\{p_0,p_0p_1,\cdots,p_0&hellip;p_{i-1}\}
+$$</p>
 </li>
 <li>
-<p>后缀集合：$Postfix=\{p_{i-1},p_{i-2}p_{i-1},\cdots,p_1&hellip;p_{i-1}\}$；</p>
+<p>后缀集合：</p>
+<p>$$
+Postfix=\{p_{i-1},p_{i-2}p_{i-1},\cdots,p_1&hellip;p_{i-1}\}
+$$</p>
 </li>
 <li>
 <p>失配指针：</p>

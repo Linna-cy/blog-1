@@ -726,10 +726,16 @@ $$&lt;/p&gt;
 &lt;p&gt;KMP的重点是求模式串字符的next值（失配指针$Next[\ i\ ]$），假设$a_{i-1}$为当前要求next值的模式串字符：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;前缀集合：$Prefix=\{p_0,p_0p_1,\cdots,p_0&amp;hellip;p_{i-1}\}$；&lt;/p&gt;
+&lt;p&gt;前缀集合：&lt;/p&gt;
+&lt;p&gt;$$
+Prefix=\{p_0,p_0p_1,\cdots,p_0&amp;hellip;p_{i-1}\}
+$$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;后缀集合：$Postfix=\{p_{i-1},p_{i-2}p_{i-1},\cdots,p_1&amp;hellip;p_{i-1}\}$；&lt;/p&gt;
+&lt;p&gt;后缀集合：&lt;/p&gt;
+&lt;p&gt;$$
+Postfix=\{p_{i-1},p_{i-2}p_{i-1},\cdots,p_1&amp;hellip;p_{i-1}\}
+$$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;失配指针：&lt;/p&gt;
@@ -16076,10 +16082,16 @@ $$&lt;/p&gt;
 &lt;p&gt;那么对于$a_{i-1}$：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;前缀集合：$P_1={a_0,a_0a_1,\cdots,a_0&amp;hellip;a_{i-1}}$&lt;/p&gt;
+&lt;p&gt;前缀集合：&lt;/p&gt;
+&lt;p&gt;$$
+P_1={a_0,a_0a_1,\cdots,a_0&amp;hellip;a_{i-1}}
+$$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;后缀集合：$P_2={a_{i-1},a_{i-2}a_{i-1},\cdots,a_1&amp;hellip;a_{i-1}}$&lt;/p&gt;
+&lt;p&gt;后缀集合：&lt;/p&gt;
+&lt;p&gt;$$
+P_2={a_{i-1},a_{i-2}a_{i-1},\cdots,a_1&amp;hellip;a_{i-1}}
+$$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;失配指针：&lt;/p&gt;
