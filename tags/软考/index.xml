@@ -988,9 +988,18 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;树的性质&#34;&gt;树的性质&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;$$树中的结点总数=sum(树中所有结点的度数)+1$$。&lt;/li&gt;
-&lt;li&gt;度为$m$的树中第$i$层上至多有$m^{i-1}$个结点（$i \ge 1$）。&lt;/li&gt;
-&lt;li&gt;高度为$h$的$m$度树至多有$\cfrac{m^h-1}{m-1}个结点。&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设$n$个结点的树，$d_i \ (1 \le i \le n)$为该树中结点的度：&lt;/p&gt;
+&lt;p&gt;$$
+n = (\sum_{i=1}^{n}{d_i})+1
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;度为$m$的树中第$i$层上至多有$m^{i-1}$个结点（$i \ge 1$）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;高度为$h$的$m$度树至多有$\cfrac{m^h-1}{m-1}个结点。&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;树的逻辑结构&#34;&gt;树的逻辑结构&lt;/h2&gt;
 &lt;p&gt;树可以用二元组 $Tree=(root,F)$ 表示。其中 $root$ 是根结点，$F$ 是 $m(m\ge0)$ 棵子树的森林，即 $F=(T_1,T_2,\cdots,T_m)$，其中 $T_i=(r_i,F_i)$ 为根 $root$ 的第 $i$ 棵子树。&lt;/p&gt;
