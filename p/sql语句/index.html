@@ -1871,6 +1871,14 @@ SQL 本身不限制每个联结约束中表的数目，但实际上许多 DBMS �
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> tab_name
 <span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">COLUMN</span> filed;
 </code></pre></div></li>
+<li>
+<p>修改列定义：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> tab_name 
+<span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">COLUMN</span> <span style="color:#66d9ef">column_name</span> NewDataType;
+</code></pre></div><p>在MySQL中使用：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> tab_name 
+<span style="color:#66d9ef">MODIFY</span> <span style="color:#66d9ef">column_name</span> NewDataType;
+</code></pre></div></li>
 </ol>
 <hr>
 <p>复杂的表结构更改一般需要执行以下步骤：</p>

@@ -736,8 +736,8 @@ $$&lt;/p&gt;
 &lt;p&gt;$$
 Next[i] =
 \begin{cases}
--1 &amp;amp; 当\ i=0 时 \
-max &amp;amp; \{ k|0&amp;lt;k&amp;lt;i 且 &amp;ldquo;p_0\cdots p_{k-1}&amp;rdquo; = &amp;ldquo;p_{i-k}\cdots p_{i-1}&amp;rdquo; \} \
+-1 &amp;amp; 当\ i=0 时 \\
+max &amp;amp; \{ k|0&amp;lt;k&amp;lt;i 且 &amp;ldquo;p_0\cdots p_{k-1}&amp;rdquo; = &amp;ldquo;p_{i-k}\cdots p_{i-1}&amp;rdquo; \} \\
 0 &amp;amp; 其他情况
 \end{cases}
 $$&lt;/p&gt;

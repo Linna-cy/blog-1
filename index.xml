@@ -736,8 +736,8 @@ $$&lt;/p&gt;
 &lt;p&gt;$$
 Next[i] =
 \begin{cases}
--1 &amp;amp; 当\ i=0 时 \
-max &amp;amp; \{ k|0&amp;lt;k&amp;lt;i 且 &amp;ldquo;p_0\cdots p_{k-1}&amp;rdquo; = &amp;ldquo;p_{i-k}\cdots p_{i-1}&amp;rdquo; \} \
+-1 &amp;amp; 当\ i=0 时 \\
+max &amp;amp; \{ k|0&amp;lt;k&amp;lt;i 且 &amp;ldquo;p_0\cdots p_{k-1}&amp;rdquo; = &amp;ldquo;p_{i-k}\cdots p_{i-1}&amp;rdquo; \} \\
 0 &amp;amp; 其他情况
 \end{cases}
 $$&lt;/p&gt;
@@ -23997,6 +23997,14 @@ SQL 本身不限制每个联结约束中表的数目，但实际上许多 DBMS �
 &lt;p&gt;删除列：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; tab_name
 &lt;span style=&#34;color:#66d9ef&#34;&gt;DROP&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;COLUMN&lt;/span&gt; filed;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;修改列定义：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; tab_name 
+&lt;span style=&#34;color:#66d9ef&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;COLUMN&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;column_name&lt;/span&gt; NewDataType;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在MySQL中使用：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; tab_name 
+&lt;span style=&#34;color:#66d9ef&#34;&gt;MODIFY&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;column_name&lt;/span&gt; NewDataType;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr&gt;
