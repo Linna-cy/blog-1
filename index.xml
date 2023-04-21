@@ -998,7 +998,7 @@ $$&lt;/p&gt;
 &lt;p&gt;度为$m$的树中第$i$层上至多有$m^{i-1}$个结点（$i \ge 1$）。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;高度为$h$的$m$度树至多有$\cfrac{m^h-1}{m-1}个结点。&lt;/p&gt;
+&lt;p&gt;高度为$h$的$m$度树至多有$\cfrac{m^h-1}{m-1}$个结点。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;树的逻辑结构&#34;&gt;树的逻辑结构&lt;/h2&gt;
@@ -1053,7 +1053,7 @@ $$&lt;/p&gt;
 $$&lt;/p&gt;
 &lt;p&gt;或：&lt;/p&gt;
 &lt;p&gt;$$
-\lceil \log_2{n+1} \rceil
+\lceil \log_2{(n+1)} \rceil
 $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1079,7 +1079,7 @@ $$&lt;/p&gt;
 &lt;li&gt;$i=1$：根结点，没有双亲（父结点）；&lt;/li&gt;
 &lt;li&gt;$i&amp;gt;1$：双亲为$\left\lfloor \cfrac{i}{2} \right\rfloor$；&lt;/li&gt;
 &lt;li&gt;$i \le \cfrac{n}{2}$：左孩子编号为$2i$；&lt;/li&gt;
-&lt;li&gt;$i \le \cfrac{n-1}{2}：右孩子编号为$2i+1$。&lt;/li&gt;
+&lt;li&gt;$i \le \cfrac{n-1}{2}$：右孩子编号为$2i+1$。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;完全二叉树适合采用顺序存储结构，而一般二叉树则不适合。&lt;/p&gt;
 &lt;h2 id=&#34;链式存储结构-4&#34;&gt;链式存储结构&lt;/h2&gt;
@@ -22515,11 +22515,11 @@ ws.run &amp;quot;cmd /c C.bat&amp;quot;,0
 </description>
         </item>
         <item>
-        <title>SQL语句</title>
-        <link>https://blog.linner.asia/p/sql%E8%AF%AD%E5%8F%A5/</link>
+        <title>SQL 语句</title>
+        <link>https://blog.linner.asia/p/sql-%E8%AF%AD%E5%8F%A5/</link>
         <pubDate>Tue, 11 Jan 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.linner.asia/p/sql%E8%AF%AD%E5%8F%A5/</guid>
+        <guid>https://blog.linner.asia/p/sql-%E8%AF%AD%E5%8F%A5/</guid>
         <description>&lt;h1 id=&#34;基本概念&#34;&gt;基本概念&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;SQL&lt;/strong&gt;（&lt;strong&gt;Structured Query Language&lt;/strong&gt;，发音为 sequal）是一种专门用来与数据库沟通的语言。通过 SQL，用户可以对数据库进行各种操作。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -23001,6 +23001,9 @@ WHRER condition1 &lt;span style=&#34;color:#66d9ef&#34;&gt;LIKE&lt;/span&gt; &lt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;使用 &lt;code&gt;^&lt;/code&gt; 可以来否定 &lt;code&gt;[]&lt;/code&gt; 定义的字符集：&lt;code&gt;&#39;[^AB]&#39;&lt;/code&gt; —— 该模式会匹配除了 &lt;code&gt;A&lt;/code&gt; 和 &lt;code&gt;B&lt;/code&gt; 之外的任何一个字符。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;h3 id=&#34;子查询&#34;&gt;子查询&lt;/h3&gt;
+&lt;p&gt;子查询通过嵌套的&lt;code&gt;SELECT&lt;/code&gt;语句，将查询结果作为值返回。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;SELECT&lt;/code&gt;可以嵌套地使用。&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;拼接&#34;&gt;拼接&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;拼接&lt;/strong&gt;（&lt;strong&gt;concatenate&lt;/strong&gt;）是指将值联结到一起（将一个值附加到另一个值）构成单个值。&lt;/p&gt;
@@ -23247,7 +23250,7 @@ PostgreSQL 不支持。SQLite 要开启 SQLITE_SOUNDEX 编译选项。
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;code&gt;AGE(filed)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;AVG(filed)&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;返回某字段的平均数，类型必须是数值类型，&lt;code&gt;AVG()&lt;/code&gt; 会忽略值为 &lt;code&gt;NULL&lt;/code&gt; 的行。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -23350,7 +23353,7 @@ PostgreSQL 不支持。SQLite 要开启 SQLITE_SOUNDEX 编译选项。
 &lt;/table&gt;
 &lt;p&gt;&lt;code&gt;GROUP BY&lt;/code&gt; 分组不一定是按照分组顺序输出的，所以应该提供明确的 &lt;code&gt;ORDER BY&lt;/code&gt; 子句指定排序方式，以确保在任何情况下输出都能正确地排序。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;子查询&#34;&gt;子查询&lt;/h1&gt;
+&lt;h1 id=&#34;子查询-1&#34;&gt;子查询&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;子查询&lt;/strong&gt;（&lt;strong&gt;subquery&lt;/strong&gt;）是指嵌套在其他查询中的查询。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- 每个子查询中的 SELECT 语句有且仅有一个字段
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- 在子查询中企图检索多个列将返回错误

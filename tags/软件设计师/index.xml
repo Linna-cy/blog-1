@@ -998,7 +998,7 @@ $$&lt;/p&gt;
 &lt;p&gt;度为$m$的树中第$i$层上至多有$m^{i-1}$个结点（$i \ge 1$）。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;高度为$h$的$m$度树至多有$\cfrac{m^h-1}{m-1}个结点。&lt;/p&gt;
+&lt;p&gt;高度为$h$的$m$度树至多有$\cfrac{m^h-1}{m-1}$个结点。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;树的逻辑结构&#34;&gt;树的逻辑结构&lt;/h2&gt;
@@ -1053,7 +1053,7 @@ $$&lt;/p&gt;
 $$&lt;/p&gt;
 &lt;p&gt;或：&lt;/p&gt;
 &lt;p&gt;$$
-\lceil \log_2{n+1} \rceil
+\lceil \log_2{(n+1)} \rceil
 $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -1079,7 +1079,7 @@ $$&lt;/p&gt;
 &lt;li&gt;$i=1$：根结点，没有双亲（父结点）；&lt;/li&gt;
 &lt;li&gt;$i&amp;gt;1$：双亲为$\left\lfloor \cfrac{i}{2} \right\rfloor$；&lt;/li&gt;
 &lt;li&gt;$i \le \cfrac{n}{2}$：左孩子编号为$2i$；&lt;/li&gt;
-&lt;li&gt;$i \le \cfrac{n-1}{2}：右孩子编号为$2i+1$。&lt;/li&gt;
+&lt;li&gt;$i \le \cfrac{n-1}{2}$：右孩子编号为$2i+1$。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;完全二叉树适合采用顺序存储结构，而一般二叉树则不适合。&lt;/p&gt;
 &lt;h2 id=&#34;链式存储结构-4&#34;&gt;链式存储结构&lt;/h2&gt;

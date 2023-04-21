@@ -6,7 +6,869 @@
         <description>Recent content in SQL on Linner&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
-        <lastBuildDate>Sun, 14 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.linner.asia/tags/sql/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 28 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.linner.asia/tags/sql/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>MyBatisPlus</title>
+        <link>https://blog.linner.asia/p/mybatisplus/</link>
+        <pubDate>Tue, 28 Feb 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.linner.asia/p/mybatisplus/</guid>
+        <description>&lt;h1 id=&#34;简介&#34;&gt;简介&lt;/h1&gt;
+&lt;p&gt;MybatisPlus（简称MP）是基于MyBatis框架基础上开发的增强型工具（依然可以使用MyBatis里的工具），旨在简化开发、提供效率。更多详情请访问&lt;a class=&#34;link&#34; href=&#34;https://mp.baomidou.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MyBatisPlus官网&lt;/a&gt;（官网有两个地址，&lt;a class=&#34;link&#34; href=&#34;https://mp.baomidou.com/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://mp.baomidou.com/&lt;/a&gt;或&lt;a class=&#34;link&#34; href=&#34;https://mybatis.plus&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;https://mybatis.plus&lt;/a&gt;）。&lt;/p&gt;
+&lt;p&gt;基于Spring使用MybatisPlus，在构建Spring工程时需要勾选MySQL和MyBatis相关技术。由于Spring并未收录MP，所以需要手动导入坐标：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;com.baomidou&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;mybatis-plus-boot-starter&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;3.4.1&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 可选： --&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;com.alibaba&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;druid&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;1.1.16&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在&lt;code&gt;application.yml&lt;/code&gt;（配置文件）中配置数据库信息：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;spring&lt;/span&gt;:
+  &lt;span style=&#34;color:#f92672&#34;&gt;datasource&lt;/span&gt;:
+    &lt;span style=&#34;color:#f92672&#34;&gt;type&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;com.alibaba.druid.pool.DruidDataSource&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;driver-class-name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;com.mysql.cj.jdbc.Driver&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;url&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;jdbc:mysql://localhost:3306/mybatisplus_db?serverTimezone=Asia/Shanghai &lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;username&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;root&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;password&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;root&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h1 id=&#34;dao接口&#34;&gt;DAO接口&lt;/h1&gt;
+&lt;p&gt;使用MP编写DAO接口，可以直接继承&lt;code&gt;BaseMapper&amp;lt;&amp;gt;&lt;/code&gt;（该接口内置了许多DAO方法）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@Mapper&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;UserDao&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;extends&lt;/span&gt; BaseMapper&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;User&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;{&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;编写引导类：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@SpringBootApplication&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;MybatisplusApplication&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; args&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        SpringApplication&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;run&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;MybatisplusApplication&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; args&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;DAO接口要想被容器扫描到，有两种方案：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在DAO接口上添加&lt;code&gt;@Mapper&lt;/code&gt;注解，并且确保DAO处在引导类所在包或其子包中。&lt;/li&gt;
+&lt;li&gt;在引导类上添加&lt;code&gt;@MapperScan&lt;/code&gt;注解，其属性为所要扫描的DAO所在包：&lt;code&gt;@MapperScan(&amp;quot;com.linner.dao&amp;quot;)&lt;/code&gt;（可以不写&lt;code&gt;@Mapper&lt;/code&gt;）。&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
+        <title>MyBatis</title>
+        <link>https://blog.linner.asia/p/mybatis/</link>
+        <pubDate>Tue, 06 Sep 2022 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.linner.asia/p/mybatis/</guid>
+        <description>&lt;h1 id=&#34;mybatis-介绍&#34;&gt;MyBatis 介绍&lt;/h1&gt;
+&lt;p&gt;MyBatis 是一款优秀的持久层框架，用于简化 JDBC 开发。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;持久层：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;是负责将数据到保存到数据库的那一层代码。即，操作数据库的Java代码为持久层。&lt;/p&gt;
+&lt;p&gt;而Mybatis就是对JDBC代码进行了封装。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;持久层是JavaEE三层架构中的一层。&lt;/p&gt;
+&lt;p&gt;JavaEE三层架构：表现层、业务层、持久层。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;框架：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;框架就是一个半成品软件，是一套可重用的、通用的、软件基础代码模型。&lt;/li&gt;
+&lt;li&gt;使用框架的好处：在框架的基础之上构建软件编写更加高效、规范、通用、可扩展。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用JDBC存在以下问题:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;硬编码&lt;/p&gt;
+&lt;p&gt;手动注册驱动、获取连接、SQL语句等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;操作繁琐&lt;/p&gt;
+&lt;p&gt;手动设置参数、封装结果集等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;使用Mybatis：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;硬编码可以配置到配置文件。&lt;/li&gt;
+&lt;li&gt;操作繁琐的地方Mybatis都自动完成。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;配置-mybatis&#34;&gt;配置 Mybatis&lt;/h1&gt;
+&lt;p&gt;使用Maven导入Mybatis。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;在 &lt;code&gt;pom.xml&lt;/code&gt; 配置文件中导入坐标：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependencies&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--mybatis 依赖--&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.mybatis&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;mybatis&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;3.5.5&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+
+    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--mysql 驱动--&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;mysql&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;mysql-connector-java&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;5.1.46&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependencies&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;编写 &lt;code&gt;mybatis-config.xml&lt;/code&gt; 文件：&lt;/p&gt;
+&lt;p&gt;在模块下的 &lt;code&gt;resources&lt;/code&gt; 目录下创建Mybatis的配置文件 &lt;code&gt;mybatis-config.xml&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34; ?&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!DOCTYPE configuration
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;        PUBLIC &amp;#34;-//mybatis.org//DTD Config 3.0//EN&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;        &amp;#34;http://mybatis.org/dtd/mybatis-3-config.dtd&amp;#34;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;configuration&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 需要注意配置标签的前后顺序(按照MyBatis官方文档目录中的顺序去定义) --&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 别名或包扫描 --&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;typeAliases&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- name属性的值是实体类所在包 --&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 包扫描后,别名默认为类名(不区分大小写) --&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 使用别名可以简化映射配置文件中 resultType 属性值的编写 --&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;package&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;package.name.pojo&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/typeAliases&amp;gt;&lt;/span&gt;
+
+  &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;    environments:配置数据库的连接环境信息,
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;      可以配置多个environment信息,
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;      通过对应的default属性切换不同的environment
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;  --&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;environments&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;default=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;development&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 可以配置多个&amp;lt;environment&amp;gt; --&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 使用 id 给每段环境起名 --&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 在 &amp;lt;environments&amp;gt; 中使用 default=&amp;#39;environment-id&amp;#39; 来指定使用哪儿段配置 --&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;environment&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;development&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;transactionManager&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;type=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;JDBC&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dataSource&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;type=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;POOLED&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;          数据库连接信息
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;          注意url、username和password
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;        --&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;property&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;driver&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;com.mysql.jdbc.Driver&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;property&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;url&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;jdbc:mysql:///mybatis1?useSSL=false&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;property&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;username&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;root&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;property&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;password&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1234&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dataSource&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/environment&amp;gt;&lt;/span&gt;
+
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;environment&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;test&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;transactionManager&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;type=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;JDBC&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dataSource&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;type=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;POOLED&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 数据库连接信息 --&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;property&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;driver&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;com.mysql.jdbc.Driver&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;property&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;url&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;jdbc:mysql:///mybatis2?useSSL=false&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;property&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;username&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;root&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;property&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;password&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1234&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dataSource&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/environment&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/environments&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;mappers&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 加载映射文件 --&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- ...... --&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 在下节中讲解 --&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/mappers&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/configuration&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;更多MyBatis配置请查看官方文档：&lt;a class=&#34;link&#34; href=&#34;https://mybatis.net.cn/configuration.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MyBatis文档——配置&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;使用-mybatis&#34;&gt;使用 Mybatis&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;编写 &lt;code&gt;Mapper&lt;/code&gt;类&lt;/p&gt;
+&lt;p&gt;在 &lt;code&gt;java&lt;/code&gt; 目录下创建与 &lt;code&gt;pojo&lt;/code&gt; 对应的 &lt;code&gt;Mapper&lt;/code&gt;接口 &lt;code&gt;ClassNameMapper.java&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ClassNameMapper&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;// 方法
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;编写 SQL 映射文件&lt;/p&gt;
+&lt;p&gt;在模块的 &lt;code&gt;resources&lt;/code&gt; 目录下创建与 &lt;code&gt;pojo&lt;/code&gt; 对应的映射配置文件 &lt;code&gt;ClassNameMapper.xml&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34; ?&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!DOCTYPE mapper PUBLIC &amp;#34;-//mybatis.org//DTD Mapper 3.0//EN&amp;#34; &amp;#34;http://mybatis.org/dtd/mybatis-3-mapper.dtd&amp;#34;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- namespace:名称空间 --&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;mapper&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;namespace=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;package.name.mapper&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 相应的SQL语句（XML映射） --&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/mapper&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在Myb
+atis的配置文件 &lt;code&gt;mybatis-config.xml&lt;/code&gt; 中加载映射文件：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;直接加载映射文件：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;mappers&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;mapper&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;resource=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;com/abc/mapper/ClassNameMapper.xml&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/mappers&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;使用这种方式加载映射文件，多个映射文件需要定义多个 &lt;code&gt;&amp;lt;mapper&amp;gt;&lt;/code&gt;，过于繁琐。&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Mapper代理方式（推荐）：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;如果 &lt;code&gt;Mapper&lt;/code&gt;接口名称和SQL映射文件名称相同，并在同一目录下，则可以使用包扫描的方式简化SQL映射文件的加载。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;mappers&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;package&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;com.abc.mapper&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/mappers&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意：使用Mapper代理方式加载映射文件，&lt;code&gt;Mapper&lt;/code&gt;接口与其对应的配置文件，它们的路径（包名）要相同。&lt;/p&gt;
+&lt;p&gt;即，在java目录下的 &lt;code&gt;Mapper&lt;/code&gt;接口的包名，要和映射配置文件在 &lt;code&gt;resources&lt;/code&gt;下的路径要一致。&lt;/p&gt;
+&lt;p&gt;如 &lt;code&gt;Mapper&lt;/code&gt;接口的包名为 &lt;code&gt;com.abc.mapper&lt;/code&gt;，那么其映射配置文件的路径则为 &lt;code&gt;com/abc/mapper&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;了解 &lt;code&gt;Maven&lt;/code&gt;项目结构，请查看：&lt;a class=&#34;link&#34; href=&#34;https://linna-cy.github.io/Maven/#maven%E6%A0%87%E5%87%86%E5%8C%96%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Maven标准化项目结构&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;实例&#34;&gt;实例&lt;/h2&gt;
+&lt;p&gt;在 Mapper 接口中定义方法，方法名就是SQL映射文件中SQL语句的id，并保持参数类型和返回值类型一致。&lt;/p&gt;
+&lt;p&gt;例如，为 &lt;code&gt;User&lt;/code&gt;对象定义 &lt;code&gt;selectAll()&lt;/code&gt;和 &lt;code&gt;selectById()&lt;/code&gt;方法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;创建 &lt;code&gt;User&lt;/code&gt;表:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DATABASE&lt;/span&gt; mybatis;
+USE mybatis;
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;DROP&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;table&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;IF&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;EXISTS&lt;/span&gt; tb_user;
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;table&lt;/span&gt; tb_user (
+    id INT &lt;span style=&#34;color:#66d9ef&#34;&gt;PRIMARY&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;KEY&lt;/span&gt; AUTO_INCREMENT,
+    username VARCHAR(&lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;),
+    password VARCHAR(&lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;),
+    gender CHAR(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;),
+    addr VARCHAR(&lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt;)
+);
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;INTO&lt;/span&gt; tb_user &lt;span style=&#34;color:#66d9ef&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;NULL&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;zhangsan&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;123&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;男&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;北京&amp;#39;&lt;/span&gt;);
+&lt;span style=&#34;color:#66d9ef&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;INTO&lt;/span&gt; tb_user &lt;span style=&#34;color:#66d9ef&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;NULL&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;李四&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;234&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;女&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;天津&amp;#39;&lt;/span&gt;);
+&lt;span style=&#34;color:#66d9ef&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;INTO&lt;/span&gt; tb_user &lt;span style=&#34;color:#66d9ef&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#66d9ef&#34;&gt;NULL&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;王五&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;11&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;男&amp;#39;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;西安&amp;#39;&lt;/span&gt;);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;pojo&lt;/code&gt;包下定义 &lt;code&gt;User&lt;/code&gt;实体类:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; com.linner.pojo&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;User&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; Integer id&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; String username&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; String password&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; String gender&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; String addr&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; Integer &lt;span style=&#34;color:#a6e22e&#34;&gt;getId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; id&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;setId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Integer id&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;id&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; id&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;getUsername&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; username&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;setUsername&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;String username&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;username&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; username&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;getPassword&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; password&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;setPassword&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;String password&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;password&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; password&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;getGender&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; gender&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;setGender&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;String gender&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;gender&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; gender&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;getAddr&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; addr&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;setAddr&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;String addr&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;addr&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; addr&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;@Override&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;toString&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;User{&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id=&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; id &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;, username=&amp;#39;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; username &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;\&amp;#39;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;, password=&amp;#39;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; password &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;\&amp;#39;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;, gender=&amp;#39;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; gender &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;\&amp;#39;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;, addr=&amp;#39;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; addr &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;\&amp;#39;&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;}&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;mapper&lt;/code&gt;包下定义 &lt;code&gt;UserMapper&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; com.linner.pojo&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; com.linner.pojo.User&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; org.apache.ibatis.annotations.Select&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.List&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;UserMapper&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;User&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;selectAll&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+    User &lt;span style=&#34;color:#a6e22e&#34;&gt;selectById&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; id&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;// 更多操作接口
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在 &lt;code&gt;resources&lt;/code&gt;目录下创建与 &lt;code&gt;UserMapper&lt;/code&gt;包名对应的路径，并添加 &lt;code&gt;UserMapper.xml&lt;/code&gt;映射配置文件:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34; ?&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!DOCTYPE mapper
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;        PUBLIC &amp;#34;-//mybatis.org//DTD Mapper 3.0//EN&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;        &amp;#34;http://mybatis.org/dtd/mybatis-3-mapper.dtd&amp;#34;&amp;gt;&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;mapper&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;namespace=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;com.linner.mapper.UserMapper&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;      select语句使用&amp;lt;select&amp;gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;        id          为对应Mapper类中的方法名
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;        resultType  为对应的实体类, 使用了&amp;lt;typeAliases&amp;gt;包扫描, 省略了包名
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     --&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;select&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;selectAll&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;resultType=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;user&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+        SELECT *
+        FROM tb_user;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/select&amp;gt;&lt;/span&gt;
+
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;select&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;selectById&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;resultType=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;user&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+        SELECT *
+        FROM tb_user
+        WHERE id = #{id};
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/select&amp;gt;&lt;/span&gt;
+
+    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 更多XML映射 --&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/mapper&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;resources&lt;/code&gt;目录下，配置 &lt;code&gt;mybatis-config.xml&lt;/code&gt;文件:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34; ?&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!DOCTYPE configuration
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;        PUBLIC &amp;#34;-//mybatis.org//DTD Config 3.0//EN&amp;#34;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;        &amp;#34;http://mybatis.org/dtd/mybatis-3-config.dtd&amp;#34;&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;configuration&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 别名或包扫描 --&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 使用别名可以简化映射配置文件中 resultType 属性值的编写 --&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;typeAliases&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;package&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;com.linner.pojo&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/typeAliases&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;environments&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;default=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;development&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;environment&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;development&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;transactionManager&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;type=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;JDBC&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dataSource&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;type=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;POOLED&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+                &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 数据库连接信息 --&amp;gt;&lt;/span&gt;
+                &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;property&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;driver&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;com.mysql.jdbc.Driver&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+                &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;property&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;url&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;jdbc:mysql:///mybatis?useSSL=false&amp;amp;useServerPerpStmts=true&amp;amp;characterEncoding=UTF-8&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+                &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;property&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;username&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;root&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+                &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;property&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;password&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1234&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dataSource&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/environment&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/environments&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;mappers&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- Mapper代理方式--&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;package&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;com.linner.mapper&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/mappers&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/configuration&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;编写测试类:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;package&lt;/span&gt; com.linner.test&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; com.linner.mapper.UserMapper&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; com.linner.pojo.User&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; org.apache.ibatis.io.Resources&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; org.apache.ibatis.session.SqlSession&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; org.apache.ibatis.session.SqlSessionFactory&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; org.apache.ibatis.session.SqlSessionFactoryBuilder&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; org.junit.Test&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.io.IOException&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.io.InputStream&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; java.util.List&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+
+&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;UserMapperTest&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;@Test&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;testSelectAll&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;throws&lt;/span&gt; IOException &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 1. 加载mybatis的核心配置文件,获取SqlSessionFactory
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        String resource &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;./mybatis-config.xml&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+        InputStream inputStream &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Resources&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getResourceAsStream&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;resource&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+        SqlSessionFactory sqlSessionFactory &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; SqlSessionFactoryBuilder&lt;span style=&#34;color:#f92672&#34;&gt;().&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;build&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;inputStream&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 2. 获取SqlSession对象,用它来执行SQL
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        SqlSession sqlSession &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sqlSessionFactory&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;openSession&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 3. 执行sql语句
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;// 3.1 方式一:
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;// List&amp;lt;User&amp;gt; users = sqlSession.selectList(&amp;#34;com.linner.mapper.UserMapper.selectAll&amp;#34;);
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;// 3.2 方式二:
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;// 3.2.1 获取UserMapper接口的代理对象
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        UserMapper userMapper &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sqlSession&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getMapper&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;UserMapper&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 3.2.2 执行对应Mapper对象的方法
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;User&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; users &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; userMapper&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;selectAll&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 4. 处理数据(模拟)
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;users&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 5. 释放资源(仅需释放SqlSession对象)
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        sqlSession&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;close&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;@Test&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;testSelectById&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;throws&lt;/span&gt; IOException &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 模拟接收参数
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; id &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 1&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 1. 获取sqlSessionFactory
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        String resource &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;./mybatis-config.xml&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+        InputStream inputStream &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Resources&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getResourceAsStream&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;resource&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+        SqlSessionFactory sqlSessionFactory &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; SqlSessionFactoryBuilder&lt;span style=&#34;color:#f92672&#34;&gt;().&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;build&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;inputStream&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 2. 获取SqlSession对象
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        SqlSession sqlSession &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sqlSessionFactory&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;openSession&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 3. 获取Mapper接口的代理对象
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        UserMapper userMapper &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; sqlSession&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getMapper&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;UserMapper&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;class&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 4. 执行方法
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        User user &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; userMapper&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;selectById&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;id&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 5. 处理数据(模拟)
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;user&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 6. 释放资源
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        sqlSession&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;close&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;xml-映射器&#34;&gt;XML 映射器&lt;/h1&gt;
+&lt;p&gt;通过在 &lt;code&gt;XxxMapper.xml&lt;/code&gt; 中使用元素来定义各种CRUD操作。&lt;/p&gt;
+&lt;p&gt;常用的元素如下（按照定义的顺序给出）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;sql&amp;gt;&lt;/code&gt; – 可被其它语句引用的可重用语句块。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;insert&amp;gt;&lt;/code&gt; – 映射插入语句。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;update&amp;gt;&lt;/code&gt; – 映射更新语句。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;delete&amp;gt;&lt;/code&gt; – 映射删除语句。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;select&amp;gt;&lt;/code&gt; – 映射查询语句。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;select&#34;&gt;Select&lt;/h2&gt;
+&lt;h3 id=&#34;查询所有数据&#34;&gt;查询所有数据&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;xml&lt;/code&gt; 配置文件：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;select&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;selectAll&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;resultType=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;user&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+    SELECT *
+    FROM tb_user
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/select&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;Mapper&lt;/code&gt; 接口方法：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;User&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;selectAll&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;id&lt;/code&gt;：相应 &lt;code&gt;Mapper&lt;/code&gt; 接口中的方法名。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;resultType&lt;/code&gt;：相应 &lt;code&gt;Mapper&lt;/code&gt; 接口中的返回值类型（可自动封装为对象，不区分大小写）。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Mapper&lt;/code&gt; 接口返回值：返回一个&lt;code&gt;List&amp;lt;User&amp;gt;&lt;/code&gt;。这个返回值可以是&lt;code&gt;User&lt;/code&gt;、&lt;code&gt;List&amp;lt;User&amp;gt;&lt;/code&gt;或&lt;code&gt;ArrayList&amp;lt;User&amp;gt;&lt;/code&gt;等，MyBatis会根据返回值自动封装。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;根据id字段查询&#34;&gt;根据id字段查询&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;xml&lt;/code&gt; 配置文件：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;select&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;selectById&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;resultType=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;user&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+    SELECT * FROM tb_user WHERE id = #{id};
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/select&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;Mapper&lt;/code&gt; 接口方法：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;User &lt;span style=&#34;color:#a6e22e&#34;&gt;selectById&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; id&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;&amp;lt;select&amp;gt;&lt;/code&gt;中，&lt;code&gt;#{id}&lt;/code&gt;为相应 &lt;code&gt;Mapper&lt;/code&gt; 接口中的参数 &lt;code&gt;id&lt;/code&gt;。&lt;code&gt;#{id}&lt;/code&gt;被称为参数占位符，相当于JDBC中的&lt;code&gt;?&lt;/code&gt;占位符。&lt;/p&gt;
+&lt;h3 id=&#34;多条件动态查询&#34;&gt;多条件动态查询&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;xml&lt;/code&gt; 配置文件：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;select&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;selectByCondition&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;resultType=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;user&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+    SELECT *
+    FROM tb_user
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;where&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;if&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;username != null and username != &amp;#39;&amp;#39; &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+            username = #{username}
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/if&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;if&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;password != null and password != &amp;#39;&amp;#39; &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+            AND password = #{password}
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/if&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;if&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;gender != null and gender != &amp;#39;&amp;#39; &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+            AND gender = #{gender}
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/if&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;if&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;addr != null and addr != &amp;#39;&amp;#39; &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+            AND addr = #{addr}
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/if&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/where&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/select&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;多条件查询使用了动态SQL&lt;code&gt;&amp;lt;where&amp;gt;&lt;/code&gt;和&lt;code&gt;&amp;lt;if&amp;gt;&lt;/code&gt;。如果仅需查询某部分字段，仅仅使用SQL语句在实现上有难度。而Mybatis就提供了&lt;u&gt;动态SQL&lt;/u&gt;方便了我们的实现。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;if&amp;gt;&lt;/code&gt;：能根据&lt;code&gt;User&lt;/code&gt;对象的值来决定是否在SQL语句中加入其包含的语句。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;where&amp;gt;&lt;/code&gt;：只会在子元素返回任何内容的情况下才插入&lt;code&gt;WHERE&lt;/code&gt;子句。&lt;/p&gt;
+&lt;p&gt;而且，若子句的开头为&lt;code&gt;AND&lt;/code&gt;或&lt;code&gt;OR&lt;/code&gt;，&lt;code&gt;&amp;lt;where&amp;gt;&lt;/code&gt;元素也会将它们去除。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;单条件动态查询&#34;&gt;单条件动态查询&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;xml&lt;/code&gt; 配置文件：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;select&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;selectByConditionSingle&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;resultMap=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;brandResultMap&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+    SELECT *
+    FROM tb_brand
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;where&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--使用where标签确保不会出错--&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;choose&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--相当于switch--&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;when&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;status != null&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--相当于case--&amp;gt;&lt;/span&gt;
+                status = #{status}
+            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/when&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;when&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;companyName != null and companyName != &amp;#39;&amp;#39; &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--相当于case--&amp;gt;&lt;/span&gt;
+                company_name like #{companyName}
+            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/when&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;when&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;brandName != null and brandName != &amp;#39;&amp;#39; &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--相当于case--&amp;gt;&lt;/span&gt;
+                brand_name like #{brandName}
+            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/when&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--没有条件输入很可能会报错,使用&amp;lt;otherwise&amp;gt;保底--&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--如果没有使用&amp;lt;where&amp;gt;，则必须使用&amp;lt;otherwise&amp;gt;--&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--&amp;lt;otherwise&amp;gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;                1 = 1
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;            &amp;lt;/otherwise&amp;gt;--&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/choose&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/where&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/select&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;单条件动态查询使用了&lt;code&gt;&amp;lt;where&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;lt;choose&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;lt;when&amp;gt;&lt;/code&gt;和&lt;code&gt;&amp;lt;otherwise&amp;gt;&lt;/code&gt;，它们都是MyBatis提供的动态SQL元素。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;choose&amp;gt;&lt;/code&gt;与&lt;code&gt;&amp;lt;when&amp;gt;&lt;/code&gt;（必须）和&lt;code&gt;&amp;lt;otherwise&amp;gt;&lt;/code&gt;元素配合使用。它会根据子元素&lt;code&gt;&amp;lt;when&amp;gt;&lt;/code&gt;的&lt;code&gt;test&lt;/code&gt;属性来判断要选择哪个&lt;code&gt;&amp;lt;when&amp;gt;&lt;/code&gt;或&lt;code&gt;&amp;lt;otherwise&amp;gt;&lt;/code&gt;元素。&lt;/p&gt;
+&lt;p&gt;如果&lt;code&gt;&amp;lt;choose&amp;gt;&lt;/code&gt;外没有被&lt;code&gt;&amp;lt;where&amp;gt;&lt;/code&gt;包裹则必须使用&lt;code&gt;&amp;lt;otherwise&amp;gt;&lt;/code&gt;来包裹一个永真的条件SQL语句，以确保SQL语句不会出错。如果被&lt;code&gt;&amp;lt;where&amp;gt;&lt;/code&gt;包裹了，&lt;code&gt;&amp;lt;where&amp;gt;&lt;/code&gt;会根据需要判断是否要添加&lt;code&gt;WHERE&lt;/code&gt;子句。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;choose&amp;gt;&lt;/code&gt;、&lt;code&gt;&amp;lt;when&amp;gt;&lt;/code&gt;和&lt;code&gt;&amp;lt;otherwise&amp;gt;&lt;/code&gt;与&lt;code&gt;switch&lt;/code&gt;语句的作用十分相似。&lt;/p&gt;
+&lt;h2 id=&#34;insert&#34;&gt;Insert&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;xml&lt;/code&gt; 配置文件：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;insert&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;add&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;useGeneratedKeys=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;keyProperty=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+    INSERT INTO tb_user (username, password, ordered, gender,
+                          addr)
+    VALUES (#{username}, #{password}, #{ordered}, #{gender},
+            #{addr});
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/insert&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;Mapper&lt;/code&gt; 接口方法：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;User user&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;接口方法直接传入对象即可，对象成员要与 &lt;code&gt;VALUES&lt;/code&gt; 子句中的参数一一对应（参数符号中的名称要与对象的成员名称相同）。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果XML映射中只有一个参数，那么这个参数的名称不必与接口的参数名称相同。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;id&lt;/code&gt;：含义与 &lt;code&gt;&amp;lt;insert&amp;gt;&lt;/code&gt; 的含义相同，为相应 &lt;code&gt;Mapper&lt;/code&gt; 接口中的方法名（以下 &lt;code&gt;id&lt;/code&gt;均为此含义，省略）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;useGeneratedKeys&lt;/code&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;值为 &lt;code&gt;true&lt;/code&gt; 时，Mybatis 会使用 JDBC 的 &lt;code&gt;getGeneratedKeys&lt;/code&gt; 方法来取出由数据库内部生成的主键（如自增的主键）。&lt;/li&gt;
+&lt;li&gt;默认为 &lt;code&gt;false&lt;/code&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;keyProperty&lt;/code&gt;：&lt;code&gt;getGeneratedKeys&lt;/code&gt; 获取到的主键值所要赋予的对象成员名。MyBatis 会使用 &lt;code&gt;getGeneratedKeys&lt;/code&gt; 的返回值来设置它的值。&lt;/p&gt;
+&lt;p&gt;如，&lt;code&gt;keyProperty=&amp;quot;id&amp;quot;&lt;/code&gt;——直接将获取到的主键值赋值给 &lt;code&gt;user.id&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;如果生成列不止一个，可以用逗号分隔多个属性名称。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Mapper&lt;/code&gt; 接口返回值：&lt;code&gt;boolean&lt;/code&gt;，插入成功返回 &lt;code&gt;true&lt;/code&gt;，插入失败返回 &lt;code&gt;false&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;返回值也可以选择忽略，将&lt;code&gt;add()&lt;/code&gt;接口的返回值设置为&lt;code&gt;void&lt;/code&gt;即可。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;update&#34;&gt;Update&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;xml&lt;/code&gt; 配置文件：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;update&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;update&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+    UPDATE tb_user
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;set&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;if&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;username != null and username != &amp;#39;&amp;#39; &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+            username = #{username},
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/if&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;if&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;password != null and password != &amp;#39;&amp;#39; &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+            password = #{password},
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/if&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;if&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ordered != null&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+            ordered = #{ordered},
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/if&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;if&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;gender != null and (gender == &amp;#39;男&amp;#39; or gender == &amp;#39;女&amp;#39;)&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+            gender = #{gender},
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/if&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;if&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;test=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;addr != null and addr != &amp;#39;&amp;#39;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+            addr = #{addr}
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/if&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/set&amp;gt;&lt;/span&gt;
+    WHERE id = #{id};
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/update&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;Mapper&lt;/code&gt; 接口方法：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;update&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;User user&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在 &lt;code&gt;&amp;lt;update&amp;gt;&lt;/code&gt; 中有一些用 &lt;code&gt;&amp;lt;set&amp;gt;&lt;/code&gt; 包裹起来的 &lt;code&gt;&amp;lt;if&amp;gt;&lt;/code&gt;。这是因为需要使用 &lt;code&gt;&amp;lt;set&amp;gt;&lt;/code&gt; 动态包含需要更新的列，忽略其它不更新的列。从而能根据&lt;code&gt;User&lt;/code&gt;对象的值来决定要更新哪些数据，并且动态地改变SQL语句。&lt;/p&gt;
+&lt;p&gt;Update的Mapper接口返回值是&lt;code&gt;int&lt;/code&gt;类型，返回更新的行数。同样可以将接口的返回值设置为&lt;code&gt;void&lt;/code&gt;来忽略它。&lt;/p&gt;
+&lt;h2 id=&#34;delete&#34;&gt;Delete&lt;/h2&gt;
+&lt;h3 id=&#34;删除单行数据&#34;&gt;删除单行数据&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;xml&lt;/code&gt; 配置文件：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;delete&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;deleteById&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+    DELETE
+    FROM tb_user
+    WHERE id = #{id};
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/delete&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;Mapper&lt;/code&gt; 接口方法：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;deleteById&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; id&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;删除多行数据&#34;&gt;删除多行数据&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;xml&lt;/code&gt; 配置文件：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;delete&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;deleteByIds&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+    DELETE
+    FROM tb_brand
+    WHERE id
+    IN
+    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;        &amp;lt;foreach&amp;gt;参数:
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;            - item: 代表数组参数中的每个元素
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;            - separator: 分隔符
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;            - open: 插入开始符
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;            - close: 插入结束符
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;    --&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;foreach&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;collection=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ids&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;item=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;separator=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;,&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;open=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;(&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;close=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;)&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+        #{id}
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/foreach&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/delete&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;Mapper&lt;/code&gt; 接口方法：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;deleteByIds&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@Param&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ids&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; ids&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Mybatis提供了 &lt;code&gt;&amp;lt;foreach&amp;gt;&lt;/code&gt; 标签遍历数组，拼接SQL语句。&lt;code&gt;&amp;lt;foreach&amp;gt;&lt;/code&gt; 同样也是&lt;u&gt;动态SQL&lt;/u&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;更多XML映射器请查看官方文档：&lt;a class=&#34;link&#34; href=&#34;https://mybatis.net.cn/sqlmap-xml.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MyBatis文档——XML映射器&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;结果映射&#34;&gt;结果映射&lt;/h2&gt;
+&lt;h3 id=&#34;resultmap&#34;&gt;resultMap&lt;/h3&gt;
+&lt;p&gt;假设SQL表中的字段与实体类的成员变量名无法一一对应，会导致SQL语句的传参出现问题。例如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;table&lt;/span&gt; tb_user (
+    user_id INT &lt;span style=&#34;color:#66d9ef&#34;&gt;PRIMARY&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;KEY&lt;/span&gt; AUTO_INCREMENT,
+    user_name VARCHAR(&lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;),
+    user_password VARCHAR(&lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;),
+    user_gender CHAR(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;),
+    user_addr VARCHAR(&lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt;)
+);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;User&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; Integer id&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; String username&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; String password&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; String gender&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; String addr&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+
+    &lt;span style=&#34;color:#75715e&#34;&gt;// setter 和 getter
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// ...
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;那么可以使用&lt;code&gt;&amp;lt;resultMap&amp;gt;&lt;/code&gt;元素来对表字段和成员名做一个映射（结果映射）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;    &amp;lt;resultMap&amp;gt;:
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;        - id: 唯一标识
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;        - type: 映射的类型,支持别名
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;--&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;resultMap&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;userResultMap&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;type=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;user&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!--
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;        两种标签:
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;            - &amp;lt;id&amp;gt;: 完成主键字段的映射
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;                - column: 表的列名
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;                - property: 实体类的属性名
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;            - &amp;lt;result&amp;gt;: 完成一般字段的映射
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;                - column: 表的列名
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;                - property: 实体类的属性名
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;    --&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;id&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;column=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;user_id&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;property=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;result&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;column=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;user_name&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;property=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;userame&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;result&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;column=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;user_password&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;property=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;password&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;result&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;column=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;user_gender&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;property=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;gender&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;result&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;column=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;user_addr&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;property=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;addr&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/resultMap&amp;gt;&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;select&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;selectAll&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;resultMap=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;userResultMap&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+    SELECT *
+    FROM tb_user
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/select&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;要使用结果映射，需要把&lt;code&gt;&amp;lt;select&amp;gt;&lt;/code&gt;中的&lt;code&gt;resultType&lt;/code&gt;属性替换为&lt;code&gt;resultMap&lt;/code&gt;，并且其属性值为&lt;code&gt;&amp;lt;resultMap&amp;gt;&lt;/code&gt;的&lt;code&gt;id&lt;/code&gt;值。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;自动映射&#34;&gt;自动映射&lt;/h3&gt;
+&lt;p&gt;当自动映射查询结果时，MyBatis 会获取结果中返回的列名并在 Java 类中查找相同名字的属性（忽略大小写）。&lt;/p&gt;
+&lt;p&gt;接上节例子，使用SQL语句的 &lt;code&gt;AS&lt;/code&gt; 来实现：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;select&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;selectAll&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;resultType=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;user&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+    SELECT 
+        user_id AS &amp;#34;id&amp;#34;,
+        user_name AS &amp;#34;username&amp;#34;,
+        user_password AS &amp;#34;password&amp;#34;,
+        user_gender AS gender,
+        user_addr AS &amp;#34;addr&amp;#34;
+    FROM tb_user
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/select&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;通常数据库列使用大写字母组成的单词命名，单词间用下划线分隔；而 Java 属性一般遵循驼峰命名法约定。为了在这两种命名方式之间启用自动映射，需要将 &lt;code&gt;mapUnderscoreToCamelCase&lt;/code&gt; 设置为 &lt;code&gt;true&lt;/code&gt;。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 配置mybatis自动转换为驼峰式命名 --&amp;gt;&lt;/span&gt;
+  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;settings&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;setting&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;mapUnderscoreToCamelCase&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;true&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/settings&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;resultMap&amp;gt;&lt;/code&gt;和自动映射可以混用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;参数&#34;&gt;参数&lt;/h2&gt;
+&lt;p&gt;MyBatis有两种参数：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#{p}&lt;/code&gt; —— 会自动转义。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;${p}&lt;/code&gt; —— 不会自动转义。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;官方文档：&lt;a class=&#34;link&#34; href=&#34;https://mybatis.net.cn/sqlmap-xml.html#Parameters&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MyBatis——XML映射器参数&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;MyBatis 参数封装&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;单个参数:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;POJO类型: 直接使用,保证 &lt;strong&gt;属性名&lt;/strong&gt; 和 &lt;strong&gt;参数占位符名称&lt;/strong&gt; 一致&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Map类型: 直接使用,保证 &lt;strong&gt;键名&lt;/strong&gt; 和 &lt;strong&gt;参数占位符名称&lt;/strong&gt; 一致&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Collection: 封装为Map集合&lt;/p&gt;
+&lt;p&gt;相当于：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;map&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;put&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;arg0&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; collection集合&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+map&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;put&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;collection&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; collection集合&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;使用&lt;code&gt;@Param&lt;/code&gt;注解，替换Map集合中默认的arg键名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;List: 封装为Map集合&lt;/p&gt;
+&lt;p&gt;相当于：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;map&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;put&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;arg0&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; list集合&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+map&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;put&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;collection&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; list集合&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+map&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;put&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;list&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; list集合&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;使用&lt;code&gt;@Param&lt;/code&gt;注解,替换Map集合中默认的arg键名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Array: 封装为Map集合&lt;/p&gt;
+&lt;p&gt;相当于：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;map&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;put&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;arg0&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; 数组&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+map&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;put&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;array&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; 数组&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;使用&lt;code&gt;@Param&lt;/code&gt;注解,替换Map集合中默认的arg键名&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;其他类型: 直接使用,且占位符名称和参数名称可以不相同&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多个参数: 封装为Map集合&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;每个参数有两个键:&lt;/p&gt;
+&lt;p&gt;相当于：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;map&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;put&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;arg0&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; 参数值1&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+map&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;put&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;param1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; 参数值1&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+map&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;put&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;arg1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; 参数值2&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+map&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;put&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;param2&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; 参数值2&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用&lt;code&gt;@Param&lt;/code&gt;注解,替换Map集合中默认的arg键名:&lt;/p&gt;
+&lt;p&gt;相当于：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@Param&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;username&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; 参数类型 参数名
+map&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;put&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;username&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; 参数值1&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+map&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;put&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;param1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; 参数值1&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;示例：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;UserMapper&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    User &lt;span style=&#34;color:#a6e22e&#34;&gt;selectById&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; id&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+    List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;User&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;selectByCondition&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;
+            &lt;span style=&#34;color:#a6e22e&#34;&gt;@Param&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;username&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; String username&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt;
+            &lt;span style=&#34;color:#a6e22e&#34;&gt;@Param&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;password&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; String password&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;注解实现crud&#34;&gt;注解实现CRUD&lt;/h2&gt;
+&lt;p&gt;对于简单的SQL语句来说，使用注解开发会比配置文件开发更加方便。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@Select&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;value &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;SELECT * FROM tb_user WHERE id = #{id}&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+User &lt;span style=&#34;color:#a6e22e&#34;&gt;selectById&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; id&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;注意：注解是用来替换映射配置文件方式配置的，所以使用了注解，就不需要再映射配置文件中书写对应的 &lt;code&gt;statement&lt;/code&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Mybatis 针对 CURD 操作都提供了对应的注解：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;查询 ：&lt;code&gt;@Select&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;添加 ：&lt;code&gt;@Insert&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;修改 ：&lt;code&gt;@Update&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;删除 ：&lt;code&gt;@Delete&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;注解适合用于完成简单功能，而使用配置文件来完成复杂功能。如果使用注解来完成动态SQL之类的复杂功能，就需要使用到MyBatis提供的SQL构建器来完成。详情请阅读官方SQL构建器文档：&lt;a class=&#34;link&#34; href=&#34;https://mybatis.net.cn/statement-builders.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MyBatis文档——SQL语句构建器&lt;/a&gt;。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;动态sql&#34;&gt;动态SQL&lt;/h1&gt;
+&lt;p&gt;动态 SQL 是 MyBatis 的强大特性之一。&lt;/p&gt;
+&lt;p&gt;MyBatis提供的动态SQL元素有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;if&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;choose&amp;gt;&lt;/code&gt; (&lt;code&gt;&amp;lt;when&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;otherwise&amp;gt;&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;trim&amp;gt;&lt;/code&gt; (&lt;code&gt;&amp;lt;where&amp;gt;&lt;/code&gt;, &lt;code&gt;&amp;lt;set&amp;gt;&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;lt;foreach&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;更多与动态SQL请查看官方文档：&lt;a class=&#34;link&#34; href=&#34;https://mybatis.net.cn/dynamic-sql.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;MyBatis文档——动态SQL&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;sqlsessionfactory工具类抽取&#34;&gt;SqlSessionFactory工具类抽取&lt;/h1&gt;
+&lt;p&gt;MyBatis重复代码会造成一些问题:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不利于后期的维护。&lt;/li&gt;
+&lt;li&gt;SqlSessionFactory工厂类进行重复创建。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;对于Mybatis的基础操作出现的重复代码，可以使用一个静态代码块来自动加载：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;SqlSessionFactoryUtils&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; SqlSessionFactory sqlSessionFactory&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 静态代码块会随着类的加载而自动执行，且只执行一次
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+            String resource &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;mybatis-config.xml&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+            InputStream inputStream &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Resources&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getResourceAsStream&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;resource&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+            sqlSessionFactory &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; SqlSessionFactoryBuilder&lt;span style=&#34;color:#f92672&#34;&gt;().&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;build&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;inputStream&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;catch&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;IOException e&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+            e&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;printStackTrace&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; SqlSessionFactory &lt;span style=&#34;color:#a6e22e&#34;&gt;getSqlSessionFactory&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(){&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; sqlSessionFactory&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;工具类抽取以后，以后在对Mybatis的SqlSession进行操作的时候，就可以直接使用：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;SqlSessionFactory sf &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; SqlSessionFactoryUtils&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getSqlSessionFactory&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        </item>
+        <item>
         <title>Druid 数据库连接池</title>
         <link>https://blog.linner.asia/p/druid-%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0/</link>
         <pubDate>Sun, 14 Aug 2022 00:00:00 +0000</pubDate>
@@ -485,11 +1347,11 @@ QUIT
 </description>
         </item>
         <item>
-        <title>SQL语句</title>
-        <link>https://blog.linner.asia/p/sql%E8%AF%AD%E5%8F%A5/</link>
+        <title>SQL 语句</title>
+        <link>https://blog.linner.asia/p/sql-%E8%AF%AD%E5%8F%A5/</link>
         <pubDate>Tue, 11 Jan 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.linner.asia/p/sql%E8%AF%AD%E5%8F%A5/</guid>
+        <guid>https://blog.linner.asia/p/sql-%E8%AF%AD%E5%8F%A5/</guid>
         <description>&lt;h1 id=&#34;基本概念&#34;&gt;基本概念&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;SQL&lt;/strong&gt;（&lt;strong&gt;Structured Query Language&lt;/strong&gt;，发音为 sequal）是一种专门用来与数据库沟通的语言。通过 SQL，用户可以对数据库进行各种操作。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -971,6 +1833,9 @@ WHRER condition1 &lt;span style=&#34;color:#66d9ef&#34;&gt;LIKE&lt;/span&gt; &lt
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;使用 &lt;code&gt;^&lt;/code&gt; 可以来否定 &lt;code&gt;[]&lt;/code&gt; 定义的字符集：&lt;code&gt;&#39;[^AB]&#39;&lt;/code&gt; —— 该模式会匹配除了 &lt;code&gt;A&lt;/code&gt; 和 &lt;code&gt;B&lt;/code&gt; 之外的任何一个字符。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;h3 id=&#34;子查询&#34;&gt;子查询&lt;/h3&gt;
+&lt;p&gt;子查询通过嵌套的&lt;code&gt;SELECT&lt;/code&gt;语句，将查询结果作为值返回。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;SELECT&lt;/code&gt;可以嵌套地使用。&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;拼接&#34;&gt;拼接&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;拼接&lt;/strong&gt;（&lt;strong&gt;concatenate&lt;/strong&gt;）是指将值联结到一起（将一个值附加到另一个值）构成单个值。&lt;/p&gt;
@@ -1217,7 +2082,7 @@ PostgreSQL 不支持。SQLite 要开启 SQLITE_SOUNDEX 编译选项。
 &lt;/thead&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
-&lt;td&gt;&lt;code&gt;AGE(filed)&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;AVG(filed)&lt;/code&gt;&lt;/td&gt;
 &lt;td&gt;返回某字段的平均数，类型必须是数值类型，&lt;code&gt;AVG()&lt;/code&gt; 会忽略值为 &lt;code&gt;NULL&lt;/code&gt; 的行。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -1320,7 +2185,7 @@ PostgreSQL 不支持。SQLite 要开启 SQLITE_SOUNDEX 编译选项。
 &lt;/table&gt;
 &lt;p&gt;&lt;code&gt;GROUP BY&lt;/code&gt; 分组不一定是按照分组顺序输出的，所以应该提供明确的 &lt;code&gt;ORDER BY&lt;/code&gt; 子句指定排序方式，以确保在任何情况下输出都能正确地排序。&lt;/p&gt;
 &lt;hr&gt;
-&lt;h1 id=&#34;子查询&#34;&gt;子查询&lt;/h1&gt;
+&lt;h1 id=&#34;子查询-1&#34;&gt;子查询&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;子查询&lt;/strong&gt;（&lt;strong&gt;subquery&lt;/strong&gt;）是指嵌套在其他查询中的查询。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- 每个子查询中的 SELECT 语句有且仅有一个字段
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;-- 在子查询中企图检索多个列将返回错误
