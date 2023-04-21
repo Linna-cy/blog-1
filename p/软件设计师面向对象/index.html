@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='基本概念 面向对象（Object-Oriented，00） = 对象（Object）&#43; 分类（Classification）&#43; 继承（Inheritance）&#43; 通过消息的通信（Communication with Messages）
+对象 在面向对象的系统中，对象是基本的运行时的实体，它包括：
+ 属性：数据； 行为（方法）：作用于数据的操作。  一个对象把属性和行为封装为一个整体。
+ 封装是一种信息隐蔽技术，它的目的是使对象的使用者和生产者分离，使对象的定义和实现分开。
+对象可以看作是一个程序模块。
+ 一个对象通常由以下成分组成：
+ 对象名； 属性； 方法。  消息 对象之间进行通信的一种构造叫件消息。
+类 类可以分为三种：
+  实体类：实体类的对象表示现实世界中真实的实体；
+  接口类：接口类的对象为用户提供一种与系统合作交互的方式，分 为人和系统两大类（边界类）；
+ 人的接口可以是显示屏、窗口、Wb窗体、对话框、菜单、列表框、其他显示控制、条形码、二维码或者用户与系统交互的其他方法。 系统接口涉及到把数据发送到其他系统，或者从其他系统接收数据。    控制类：控制类的对象用来控制活动流，充当协调者。
+  继承 继承是父类和子类之间共享数据和方法的机制。这是类之间的一种关系，在定义和实现一个类的时候，可以在一个已经存在的类的基础上进行，把这个已经存在的类所定义的内容作为自己的内容，并加入若干新的内容。
+一个父类可以有多个子类。所以继承又分为：
+  单重继承：只从一个父类得到继承；
+  多重继承：一个子类有两个或更多个父类。
+多重继承中可能导致子类存在二义性的成员。
+  多态 多态（Polymorphism）：不同的对象收到同一消息可以产生完全不同的结果。
+同一消息就可以调用不同的方法。多态的实现受到继承的支持，利用类的继承的层次关系，把具有通用功能的消息存放在高层次，而不同的实现这一功能的行为放在较低层次，在这些低层次上生成的对象能够给通用消息以不同的响应。
+多态有不同的形式：
+ 通用的多态：  参数多态：应用比较广泛，被称为最纯的多态； 包含多态：在许多语言中都存在，最常见的例子就是子类型化。即一个类型是另一个类型的子类型。   特定的多态：  过载（Overloading）多态：同一个名字在不同的上下文中所代表的含义不同； 强制多态。    绑定 绑定是一个把过程调用和响应调用所需要执行的代码加以结合的过程。'>
+
+
+<title>软件设计师——面向对象</title>
+
+<link rel='canonical' href='https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/'>
+
+<link rel="stylesheet" href="/scss/style.min.8191399262444ab68b72a18c97392f5349be20a1615d77445be51e974c144cff.css">
+<link rel="stylesheet" href="/css/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+<script src="/js/katex.min.js"></script><meta property='og:title' content='软件设计师——面向对象'>
+<meta property='og:description' content='基本概念 面向对象（Object-Oriented，00） = 对象（Object）&#43; 分类（Classification）&#43; 继承（Inheritance）&#43; 通过消息的通信（Communication with Messages）
+对象 在面向对象的系统中，对象是基本的运行时的实体，它包括：
+ 属性：数据； 行为（方法）：作用于数据的操作。  一个对象把属性和行为封装为一个整体。
+ 封装是一种信息隐蔽技术，它的目的是使对象的使用者和生产者分离，使对象的定义和实现分开。
+对象可以看作是一个程序模块。
+ 一个对象通常由以下成分组成：
+ 对象名； 属性； 方法。  消息 对象之间进行通信的一种构造叫件消息。
+类 类可以分为三种：
+  实体类：实体类的对象表示现实世界中真实的实体；
+  接口类：接口类的对象为用户提供一种与系统合作交互的方式，分 为人和系统两大类（边界类）；
+ 人的接口可以是显示屏、窗口、Wb窗体、对话框、菜单、列表框、其他显示控制、条形码、二维码或者用户与系统交互的其他方法。 系统接口涉及到把数据发送到其他系统，或者从其他系统接收数据。    控制类：控制类的对象用来控制活动流，充当协调者。
+  继承 继承是父类和子类之间共享数据和方法的机制。这是类之间的一种关系，在定义和实现一个类的时候，可以在一个已经存在的类的基础上进行，把这个已经存在的类所定义的内容作为自己的内容，并加入若干新的内容。
+一个父类可以有多个子类。所以继承又分为：
+  单重继承：只从一个父类得到继承；
+  多重继承：一个子类有两个或更多个父类。
+多重继承中可能导致子类存在二义性的成员。
+  多态 多态（Polymorphism）：不同的对象收到同一消息可以产生完全不同的结果。
+同一消息就可以调用不同的方法。多态的实现受到继承的支持，利用类的继承的层次关系，把具有通用功能的消息存放在高层次，而不同的实现这一功能的行为放在较低层次，在这些低层次上生成的对象能够给通用消息以不同的响应。
+多态有不同的形式：
+ 通用的多态：  参数多态：应用比较广泛，被称为最纯的多态； 包含多态：在许多语言中都存在，最常见的例子就是子类型化。即一个类型是另一个类型的子类型。   特定的多态：  过载（Overloading）多态：同一个名字在不同的上下文中所代表的含义不同； 强制多态。    绑定 绑定是一个把过程调用和响应调用所需要执行的代码加以结合的过程。'>
+<meta property='og:url' content='https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/'>
+<meta property='og:site_name' content='Linner&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='软考' /><meta property='article:tag' content='软件设计师' /><meta property='article:published_time' content='2023-04-12T16:28:00&#43;08:00'/><meta property='article:modified_time' content='2023-04-12T16:28:00&#43;08:00'/>
+<meta name="twitter:title" content="软件设计师——面向对象">
+<meta name="twitter:description" content="基本概念 面向对象（Object-Oriented，00） = 对象（Object）&#43; 分类（Classification）&#43; 继承（Inheritance）&#43; 通过消息的通信（Communication with Messages）
+对象 在面向对象的系统中，对象是基本的运行时的实体，它包括：
+ 属性：数据； 行为（方法）：作用于数据的操作。  一个对象把属性和行为封装为一个整体。
+ 封装是一种信息隐蔽技术，它的目的是使对象的使用者和生产者分离，使对象的定义和实现分开。
+对象可以看作是一个程序模块。
+ 一个对象通常由以下成分组成：
+ 对象名； 属性； 方法。  消息 对象之间进行通信的一种构造叫件消息。
+类 类可以分为三种：
+  实体类：实体类的对象表示现实世界中真实的实体；
+  接口类：接口类的对象为用户提供一种与系统合作交互的方式，分 为人和系统两大类（边界类）；
+ 人的接口可以是显示屏、窗口、Wb窗体、对话框、菜单、列表框、其他显示控制、条形码、二维码或者用户与系统交互的其他方法。 系统接口涉及到把数据发送到其他系统，或者从其他系统接收数据。    控制类：控制类的对象用来控制活动流，充当协调者。
+  继承 继承是父类和子类之间共享数据和方法的机制。这是类之间的一种关系，在定义和实现一个类的时候，可以在一个已经存在的类的基础上进行，把这个已经存在的类所定义的内容作为自己的内容，并加入若干新的内容。
+一个父类可以有多个子类。所以继承又分为：
+  单重继承：只从一个父类得到继承；
+  多重继承：一个子类有两个或更多个父类。
+多重继承中可能导致子类存在二义性的成员。
+  多态 多态（Polymorphism）：不同的对象收到同一消息可以产生完全不同的结果。
+同一消息就可以调用不同的方法。多态的实现受到继承的支持，利用类的继承的层次关系，把具有通用功能的消息存放在高层次，而不同的实现这一功能的行为放在较低层次，在这些低层次上生成的对象能够给通用消息以不同的响应。
+多态有不同的形式：
+ 通用的多态：  参数多态：应用比较广泛，被称为最纯的多态； 包含多态：在许多语言中都存在，最常见的例子就是子类型化。即一个类型是另一个类型的子类型。   特定的多态：  过载（Overloading）多态：同一个名字在不同的上下文中所代表的含义不同； 强制多态。    绑定 绑定是一个把过程调用和响应调用所需要执行的代码加以结合的过程。">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu0c2331fe09320137a3bd1d4b5cc68791_142496_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Linner&#39;s Blog</a></h1>
+            <h2 class="site-description">随便看看就行，副标题暂时还没想好</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Linna-cy'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives" id="toc-list">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents" class="js-toc"></nav>
+            
+        </div>
+    </section>
+
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/" >
+                软件设计师
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">软件设计师——面向对象</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Apr 12, 2023</time>
+            </div>
+        
+
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="基本概念">基本概念</h1>
+<p><strong>面向对象</strong>（Object-Oriented，00） = <strong>对象</strong>（Object）+ <strong>分类</strong>（Classification）+ <strong>继承</strong>（Inheritance）+ <strong>通过消息的通信</strong>（Communication with Messages）</p>
+<h2 id="对象">对象</h2>
+<p>在面向对象的系统中，对象是基本的运行时的实体，它包括：</p>
+<ul>
+<li><strong>属性</strong>：数据；</li>
+<li><strong>行为</strong>（方法）：作用于数据的操作。</li>
+</ul>
+<p>一个对象把属性和行为封装为一个整体。</p>
+<blockquote>
+<p>封装是一种信息隐蔽技术，它的目的是使对象的使用者和生产者分离，使对象的定义和实现分开。</p>
+<p>对象可以看作是一个程序模块。</p>
+</blockquote>
+<p>一个对象通常由以下成分组成：</p>
+<ul>
+<li>对象名；</li>
+<li>属性；</li>
+<li>方法。</li>
+</ul>
+<h2 id="消息">消息</h2>
+<p>对象之间进行通信的一种构造叫件消息。</p>
+<h2 id="类">类</h2>
+<p>类可以分为三种：</p>
+<ul>
+<li>
+<p><strong>实体类</strong>：实体类的对象表示现实世界中真实的实体；</p>
+</li>
+<li>
+<p><strong>接口类</strong>：接口类的对象为用户提供一种与系统合作交互的方式，分
+为人和系统两大类（边界类）；</p>
+<ul>
+<li>人的接口可以是显示屏、窗口、Wb窗体、对话框、菜单、列表框、其他显示控制、条形码、二维码或者用户与系统交互的其他方法。</li>
+<li>系统接口涉及到把数据发送到其他系统，或者从其他系统接收数据。</li>
+</ul>
+</li>
+<li>
+<p><strong>控制类</strong>：控制类的对象用来控制活动流，充当协调者。</p>
+</li>
+</ul>
+<h2 id="继承">继承</h2>
+<p>继承是<u>父类</u>和<u>子类</u>之间<u>共享数据</u>和<u>方法</u>的机制。这是<u>类之间的一种关系</u>，在定义和实现一个类的时候，可以在一个已经存在的类的基础上进行，把这个已经存在的类所定义的内容作为自己的内容，并加入若干新的内容。</p>
+<p>一个父类可以有多个子类。所以继承又分为：</p>
+<ul>
+<li>
+<p>单重继承：只从一个父类得到继承；</p>
+</li>
+<li>
+<p>多重继承：一个子类有两个或更多个父类。</p>
+<p>多重继承中可能导致子类存在二义性的成员。</p>
+</li>
+</ul>
+<h2 id="多态">多态</h2>
+<p>多态（Polymorphism）：不同的对象收到同一消息可以产生完全不同的结果。</p>
+<p>同一消息就可以调用不同的方法。多态的实现受到继承的支持，利用类的继承的层次关系，把具有通用功能的消息存放在高层次，而不同的实现这一功能的行为放在较低层次，在这些低层次上生成的对象能够给通用消息以不同的响应。</p>
+<p>多态有不同的形式：</p>
+<ul>
+<li><strong>通用</strong>的多态：
+<ul>
+<li><strong>参数</strong>多态：应用比较广泛，被称为最纯的多态；</li>
+<li><strong>包含</strong>多态：在许多语言中都存在，最常见的例子就是子类型化。即一个类型是另一个类型的子类型。</li>
+</ul>
+</li>
+<li><strong>特定</strong>的多态：
+<ul>
+<li><strong>过载</strong>（Overloading）多态：同一个名字在不同的上下文中所代表的含义不同；</li>
+<li><strong>强制</strong>多态。</li>
+</ul>
+</li>
+</ul>
+<h2 id="绑定">绑定</h2>
+<p>绑定是一个把过程调用和响应调用所需要执行的代码加以结合的过程。</p>
+<p>绑定分为：</p>
+<ul>
+<li>
+<p><strong>静态绑定</strong>：在编译时进行的；</p>
+</li>
+<li>
+<p><strong>动态绑定</strong>：在运行时进行的。</p>
+<p>一个给定的过程调用和代码的结合直到调用发生时才进行。</p>
+<p>动态绑定是和类的继承以及多态相联系的。在继承关系中，子类是父类的一个特例，所以父类对象可以出现的地方，子类对象也可以出现。</p>
+<p>在运行过程中，当一个对象发送消息请求服务时，要根据匿收对象的其体情况将请求的操作与实现的方法进行连接，即动态绑定。</p>
+</li>
+</ul>
+<hr>
+<h1 id="面向对象分析">面向对象分析</h1>
+<p>同其他分析方法一样，面向对象分析（Object-Oriented Analysis，OOA）的目的是为了获得对应用问题的理解。</p>
+<p>面向对象分析包含5个活动：</p>
+<ul>
+<li>认定对象；</li>
+<li>组织对象；</li>
+<li>描述对象间的相互作用；</li>
+<li>确定对象的操作</li>
+<li>定义对象的内部信息。</li>
+</ul>
+<h2 id="认定对象">认定对象</h2>
+<p>在应用领域中，按自然存在的实体确立对象。</p>
+<p>在定义域中，首先将自然存在的“名词”作为一个对象，这通常是研究问题、定义域实体的良好开始。</p>
+<h2 id="组织对象">组织对象</h2>
+<p>分析对象间的关系，将相关对象抽象成类，其目的是为了简化关联对象，利用类的继承性建立具有继承性层次的类结构。</p>
+<p>抽象类时可从以下方面考虑：</p>
+<ul>
+<li>对象间的操作；</li>
+<li>一个对象是另一个对象的一部分，如房子是由门和窗构成的。</li>
+</ul>
+<hr>
+<h1 id="面向对象设计">面向对象设计</h1>
+<p><strong>程序设计范型</strong>（Programming Paradigm）是人们在<u>程序设计时所采用的基本方式模型</u>，决定了程序设计时采用的<u>思维方式</u>、<u>使用的工具</u>，同时又<u>有一定的应用范畴</u>。</p>
+<p>程序设计范型的发展经历了：</p>
+<ul>
+<li>过程程序设计；</li>
+<li>模块化程序设计；</li>
+<li>函数程序设计；</li>
+<li>逻辑程序设计；</li>
+<li>面向对象程序设计范型。</li>
+</ul>
+<p><strong>面向对象程序设计</strong>（Object-Oriented Programming，<strong>OOP</strong>）的<u>实质是选用一种<strong>面向对象程序设计语言</strong>（Object-Oriented Programming Language，<strong>OOPL</strong>）</u>：</p>
+<ul>
+<li>采用对象、类及其相关概念所进行的程序设计；</li>
+<li>关键在于加入了类和继承性，从而进一步提高了抽象程度。</li>
+</ul>
+<p>特定的OOP概念一般是通过OOPL中特定的语言机制来体现的。</p>
+<p>OOP现在已经扩展到系统分析和软件设计的范畴，出现了面向对象分析和面向对象设计的概念。</p>
+<h2 id="设计原则">设计原则</h2>
+<p>面向对象方法中的五大原则：</p>
+<ul>
+<li>
+<p><strong>责任原则</strong>（Single Responsibility Principle，SRP）：当需要修改某个类的时候原因有且只有一个，让一个类只做一种类型责任。</p>
+</li>
+<li>
+<p><strong>开放封闭原则</strong>（Open &amp; Close Principle，OCP）：软件实体（类、模块、函数等）应
+该可以扩展的，即<strong>开放的</strong>；但是不可修改的，即<strong>封闭的</strong>。</p>
+</li>
+<li>
+<p><strong>里氏替换原则</strong>（Liskov Substitution Principle，LSP）：子类型必须能够替换掉他们的基
+类型。</p>
+<p>即，在任何父类可以出现的地方，都可以用子类的实例来赋值给父类型的引用。</p>
+<p>当一个子类的实例应该能够替换任何其超类的实例时，它们之间才具有是一个（is-a）关系。</p>
+</li>
+<li>
+<p><strong>依赖倒置原则</strong>（Dependence Inversion Principle，DP）：抽象不应该依赖于细节，细
+节应该依赖于抽象。即，<u>高层模块不应该依赖于低层模块，二者都应该依赖于抽象</u>。</p>
+</li>
+<li>
+<p><strong>接口分离原则</strong>（Interface Segregation Principle，ISP）：不应该强迫客户依赖于它们不
+用的方法。接口属于客户，不属于它所在的类层次结构。</p>
+<p>即：<u>依赖于抽象，不要依赖于具体，同时在抽象级别不应该有对于细节的依赖。</u></p>
+<p>这样做的好处就在于可以最大限度地应对可能的变化。</p>
+</li>
+</ul>
+<p>Robert C. Martin提出的面向对象设计原则还包括以下几个：</p>
+<ul>
+<li>重用发布等价原则（Release Reuse Equivalency Principle，REP）：重用的粒度就是发布的粒度。</li>
+<li><strong>共同封闭原则</strong>（Common Closure Principle，CCP）：包中的所有类对于同一类性质的变化应该是共同到闭的。一个变化若对一个包产生影响，则将对该包中的所有类产生影响，而对于其他的包不造成任何影响。</li>
+<li><strong>共同重用原则</strong>（Common Reuse Principle，CRP）：一个包中的所有类应该是共同重用
+的。如果重用了包中的一个类那么就要重用包中的所有类。</li>
+<li>无环依赖原则（Acyclic Dependencies Principle，ADP）：在包的依赖关系图中不允许存
+在环，即包之间的结构必须是一个直接的五环图形。</li>
+<li>稳定依赖原则（Stable Dependencies Principle,SDP）：朝着稳定的方向进行依赖。</li>
+<li>稳定抽象原则（Stable Abstractions Principle，SAP）：包的抽象程度应该和其稳定程
+度一致。</li>
+</ul>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E8%BD%AF%E8%80%83/">软考</a>
+        
+            <a href="/tags/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/">软件设计师</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+       
+</article>
+
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83/">
+        
+        
+
+        软件设计师——知识产权</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+        
+        
+
+        软件设计师——数据结构</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80/">
+        
+        
+
+        软件设计师——程序设计语言</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/">
+        
+        
+
+        软件设计师——计算机系统</a>
+</div>
+</section>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2022 - 
+        
+        2023 Linner&#39;s Blog
+
+        <span style="padding-left: 5px;padding-right: 5px;">|</span>
+
+        <a href="https://beian.miit.gov.cn/" target="_blank" >粤ICP备2022125602号-1</a>
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
