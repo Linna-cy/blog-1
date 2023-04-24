@@ -7,11 +7,11 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
         <lastBuildDate>Wed, 12 Apr 2023 16:28:00 +0800</lastBuildDate><atom:link href="https://blog.linner.asia/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>软件设计师——面向对象</title>
-        <link>https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</link>
+        <title>面向对象（软件设计师）</title>
+        <link>https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/</link>
         <pubDate>Wed, 12 Apr 2023 16:28:00 +0800</pubDate>
         
-        <guid>https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</guid>
+        <guid>https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/</guid>
         <description>&lt;h1 id=&#34;面向对象基本概念&#34;&gt;面向对象基本概念&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;面向对象&lt;/strong&gt;（Object-Oriented，00） = &lt;strong&gt;对象&lt;/strong&gt;（Object）+ &lt;strong&gt;分类&lt;/strong&gt;（Classification）+ &lt;strong&gt;继承&lt;/strong&gt;（Inheritance）+ &lt;strong&gt;通过消息的通信&lt;/strong&gt;（Communication with Messages）&lt;/p&gt;
 &lt;h2 id=&#34;对象&#34;&gt;对象&lt;/h2&gt;
@@ -199,10 +199,10 @@
 &lt;li&gt;制品（Artifact）；&lt;/li&gt;
 &lt;li&gt;结点（Node）。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682055522161.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682055522161.png&#34;
 	width=&#34;708&#34;
 	height=&#34;294&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682055522161_hu872254ba18803fa50bd84092332d0d27_39442_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682055522161_hu872254ba18803fa50bd84092332d0d27_39442_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682055522161_hu872254ba18803fa50bd84092332d0d27_39442_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682055522161_hu872254ba18803fa50bd84092332d0d27_39442_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;结构事物多图形表示&#34;
@@ -222,10 +222,10 @@
 &lt;li&gt;状态机（State Machine）；&lt;/li&gt;
 &lt;li&gt;活动（Activity）。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682055712246.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682055712246.png&#34;
 	width=&#34;621&#34;
 	height=&#34;133&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682055712246_hu926c842303194b37bd3d84d241da7490_18166_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682055712246_hu926c842303194b37bd3d84d241da7490_18166_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682055712246_hu926c842303194b37bd3d84d241da7490_18166_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682055712246_hu926c842303194b37bd3d84d241da7490_18166_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;行为事物的图形表示&#34;
@@ -241,10 +241,10 @@
 &lt;p&gt;&lt;strong&gt;分组事物&lt;/strong&gt;（Grouping Thing）：分组事物是UML模型的&lt;strong&gt;组织部分&lt;/strong&gt;，是一些由模型分解成的“盒子”。&lt;/p&gt;
 &lt;p&gt;&lt;u&gt;在所有的分组事物中，最主要的分组事物是包（Package）&lt;/u&gt;。包是把元素组织成组的机制，这种机制具有多种用途。结构事物、行为事物甚至其他分组事物都可以放进包内。&lt;/p&gt;
 &lt;p&gt;包与构件（仅在运行时存在）不同，它纯粹是概念上的（即它仅在开发时存在）。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682055987585.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682055987585.png&#34;
 	width=&#34;224&#34;
 	height=&#34;157&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682055987585_hude1f550d1c91183afc794d1e3aa09c46_4122_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682055987585_hude1f550d1c91183afc794d1e3aa09c46_4122_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682055987585_hude1f550d1c91183afc794d1e3aa09c46_4122_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682055987585_hude1f550d1c91183afc794d1e3aa09c46_4122_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;包的图形化表示&#34;
@@ -268,10 +268,10 @@
 &lt;p&gt;依赖（Dependency）：是&lt;u&gt;两个事物间的语义关系，其中一个事物（&lt;strong&gt;独立事物&lt;/strong&gt;）发
 生变化会影响另一个事物（&lt;strong&gt;依赖事物&lt;/strong&gt;）的语义&lt;/u&gt;。&lt;/p&gt;
 &lt;p&gt;在图形上，把一个依赖画成一条可能有方向的虚线，如图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682057108089.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682057108089.png&#34;
 	width=&#34;200&#34;
 	height=&#34;48&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682057108089_hufef657bed6e876bd373e5f4bb9f34af6_1059_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682057108089_hufef657bed6e876bd373e5f4bb9f34af6_1059_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682057108089_hufef657bed6e876bd373e5f4bb9f34af6_1059_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682057108089_hufef657bed6e876bd373e5f4bb9f34af6_1059_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;依赖的图形表示&#34;
@@ -294,10 +294,10 @@
 &lt;p&gt;关联（Association）：是一种&lt;u&gt;结构关系&lt;/u&gt;，它描述了一组链，&lt;u&gt;链是对象之间的连接&lt;/u&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;聚集&lt;/strong&gt;（Aggregation）是一种&lt;u&gt;特殊类型的关联&lt;/u&gt;，它&lt;u&gt;描述了整体和部分间的结构关系&lt;/u&gt;。&lt;/p&gt;
 &lt;p&gt;关联和聚集的图形化表示如图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1682057458153.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1682057458153.png&#34;
 	width=&#34;408&#34;
 	height=&#34;101&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1682057458153_hu37f2bf65b423a501f386d9709f6e6bc4_8075_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1682057458153_hu37f2bf65b423a501f386d9709f6e6bc4_8075_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1682057458153_hu37f2bf65b423a501f386d9709f6e6bc4_8075_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1682057458153_hu37f2bf65b423a501f386d9709f6e6bc4_8075_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;关联和聚集的图形化表示&#34;
@@ -316,10 +316,10 @@
 &lt;li&gt;
 &lt;p&gt;泛化（Generalization）：是一种特殊/一般关系，&lt;u&gt;特殊元素（子元素）的对象可替代一般元素（父元素）的对象&lt;/u&gt;。用这种方法，&lt;u&gt;子元素共享了父元素的结构和行为&lt;/u&gt;。&lt;/p&gt;
 &lt;p&gt;在图形上，把一个泛化关系画成一条带有空心箭头的实线，它指向父元素：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682057764410.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682057764410.png&#34;
 	width=&#34;162&#34;
 	height=&#34;53&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682057764410_huaf9267ff556daac18150e46c6cbbde24_1023_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682057764410_huaf9267ff556daac18150e46c6cbbde24_1023_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682057764410_huaf9267ff556daac18150e46c6cbbde24_1023_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682057764410_huaf9267ff556daac18150e46c6cbbde24_1023_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;泛化的图形表示&#34;
@@ -339,10 +339,10 @@
 &lt;li&gt;在用例和实现它们的协作之间。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;在图形上，把一个实现关系画成一条带有空心箭头的虚线，如图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682058026631.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682058026631.png&#34;
 	width=&#34;167&#34;
 	height=&#34;61&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682058026631_hu09469114d42fa29e39948f21a9a04633_1340_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682058026631_hu09469114d42fa29e39948f21a9a04633_1340_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682058026631_hu09469114d42fa29e39948f21a9a04633_1340_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682058026631_hu09469114d42fa29e39948f21a9a04633_1340_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;实现的图形化表示&#34;
@@ -386,10 +386,10 @@
 &lt;li&gt;协作；&lt;/li&gt;
 &lt;li&gt;依赖、泛化和关联关系。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682061210921.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682061210921.png&#34;
 	width=&#34;619&#34;
 	height=&#34;467&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682061210921_hub4b131b7f109e06635ca875a61e12a0b_45450_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682061210921_hub4b131b7f109e06635ca875a61e12a0b_45450_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682061210921_hub4b131b7f109e06635ca875a61e12a0b_45450_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682061210921_hub4b131b7f109e06635ca875a61e12a0b_45450_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;类图示例&#34;
@@ -426,10 +426,10 @@
 &lt;h2 id=&#34;对象图&#34;&gt;对象图&lt;/h2&gt;
 &lt;p&gt;对象图（Object Diagram）展现了某一时刻一组对象以及它们之间的关系，描述了在类图中所建立的事物的实例的静态快照。&lt;/p&gt;
 &lt;p&gt;对象图一般包括对象和链，如图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682061786263.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682061786263.png&#34;
 	width=&#34;713&#34;
 	height=&#34;312&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682061786263_hua46f494b700cf1a0ac17d6d1520c7d36_50579_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682061786263_hua46f494b700cf1a0ac17d6d1520c7d36_50579_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682061786263_hua46f494b700cf1a0ac17d6d1520c7d36_50579_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682061786263_hua46f494b700cf1a0ac17d6d1520c7d36_50579_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;对象图示例&#34;
@@ -461,10 +461,10 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682062071630.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682062071630.png&#34;
 	width=&#34;756&#34;
 	height=&#34;382&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682062071630_hue8ceb70c383d5b84d539f99bc1fa6287_66549_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682062071630_hue8ceb70c383d5b84d539f99bc1fa6287_66549_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682062071630_hue8ceb70c383d5b84d539f99bc1fa6287_66549_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682062071630_hue8ceb70c383d5b84d539f99bc1fa6287_66549_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;用例图示例&#34;
@@ -501,10 +501,10 @@
 &lt;h3 id=&#34;序列图&#34;&gt;序列图&lt;/h3&gt;
 &lt;p&gt;序列图（Sequence Diagram，又称顺序图）是场景（Scenario）的图形化表示，&lt;u&gt;描述了以时间顺序组织的对象之间的交互活动&lt;/u&gt;&lt;/p&gt;
 &lt;p&gt;形成序列图时，首先把参加交互的对象放在图的上方，沿水平方向排列。通常把发起交互的对象放在左边，下级对象依次放在右边。然后，把这些对象发送和接收的消息沿垂直方向按时间顺序从上到下放置。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682064874751.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682064874751.png&#34;
 	width=&#34;691&#34;
 	height=&#34;471&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682064874751_hu9f8f021651236d17904ea27f843ab916_52872_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682064874751_hu9f8f021651236d17904ea27f843ab916_52872_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682064874751_hu9f8f021651236d17904ea27f843ab916_52872_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682064874751_hu9f8f021651236d17904ea27f843ab916_52872_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;序列图示例&#34;
@@ -523,10 +523,10 @@
 &lt;h3 id=&#34;通信图&#34;&gt;通信图&lt;/h3&gt;
 &lt;p&gt;&lt;u&gt;通信图&lt;/u&gt;（Communication Diagram，又称协作图）&lt;u&gt;强调收发消息的对象的结构组织&lt;/u&gt;。通信图强调参加交互的对象的组织。&lt;/p&gt;
 &lt;p&gt;产生一张通信图，首先要将参加交互的对象作为图的顶点，然后把连接这些对象的链表示为图的弧，最后用对象发送和接收的消息来修饰这些链。这就提供了在协作对象的结构组织的语境中观察控制流的一个清晰的可视化轨迹。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682065157645.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682065157645.png&#34;
 	width=&#34;719&#34;
 	height=&#34;314&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682065157645_hu479fbd97a58f555006937d3c577e3006_30791_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682065157645_hu479fbd97a58f555006937d3c577e3006_30791_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682065157645_hu479fbd97a58f555006937d3c577e3006_30791_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682065157645_hu479fbd97a58f555006937d3c577e3006_30791_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;通信图&#34;
@@ -567,10 +567,10 @@
 &lt;p&gt;&lt;strong&gt;活动&lt;/strong&gt;。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682066287326.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682066287326.png&#34;
 	width=&#34;831&#34;
 	height=&#34;431&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682066287326_hu94ea09022f5bcd63fe669c1e18a4beb2_47522_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682066287326_hu94ea09022f5bcd63fe669c1e18a4beb2_47522_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682066287326_hu94ea09022f5bcd63fe669c1e18a4beb2_47522_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682066287326_hu94ea09022f5bcd63fe669c1e18a4beb2_47522_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;状态图示例&#34;
@@ -591,10 +591,10 @@
 &lt;p&gt;当对系统、类或用例的动态方面建模时，通常是对反应型对象建模。&lt;/p&gt;
 &lt;h2 id=&#34;活动图&#34;&gt;活动图&lt;/h2&gt;
 &lt;p&gt;活动图（Activity Diagram）是一种特殊的状态图，它&lt;u&gt;展现了在系统内从一个活动到另一个活动的流程&lt;/u&gt;。活动图专注于系统的动态视图，它对于系统的功能建模特别重要，并&lt;u&gt;强调对象间的控制流程&lt;/u&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1682067363114.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1682067363114.png&#34;
 	width=&#34;654&#34;
 	height=&#34;744&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1682067363114_hua57a5009862c06a77af06a14b99cf391_95291_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/1682067363114_hua57a5009862c06a77af06a14b99cf391_95291_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1682067363114_hua57a5009862c06a77af06a14b99cf391_95291_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1682067363114_hua57a5009862c06a77af06a14b99cf391_95291_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;活动图示例&#34;
@@ -626,10 +626,10 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;构建图&#34;&gt;构建图&lt;/h2&gt;
 &lt;p&gt;构件图（Component Diagram，又称组件图）展现了&lt;u&gt;一组构件之间的组织和依赖&lt;/u&gt;。构件图专注于系统的静态实现视图。它&lt;u&gt;与类图相关，通常把构件映射为一个或多个类、接口或协作&lt;/u&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682068370459.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682068370459.png&#34;
 	width=&#34;638&#34;
 	height=&#34;332&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682068370459_hub55b12b010797b943f2ecf558036ffb6_42642_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682068370459_hub55b12b010797b943f2ecf558036ffb6_42642_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682068370459_hub55b12b010797b943f2ecf558036ffb6_42642_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682068370459_hub55b12b010797b943f2ecf558036ffb6_42642_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;构建图示例&#34;
@@ -642,10 +642,10 @@
 &gt;&lt;/p&gt;
 &lt;h2 id=&#34;部署图&#34;&gt;部署图&lt;/h2&gt;
 &lt;p&gt;部署图（Deployment Diagram）是用来对面向对象系统的物理方面建模的方法，&lt;u&gt;展现了运行时处理结点以及其中构件（制品）的配置&lt;/u&gt;。部署图对系统的静态部署视图进行建模，它与构件图相关。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682073176388.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682073176388.png&#34;
 	width=&#34;491&#34;
 	height=&#34;327&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682073176388_hu28a5a922204a8226fa8f8a21e50bdfbf_36398_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/uTools_1682073176388_hu28a5a922204a8226fa8f8a21e50bdfbf_36398_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682073176388_hu28a5a922204a8226fa8f8a21e50bdfbf_36398_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682073176388_hu28a5a922204a8226fa8f8a21e50bdfbf_36398_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;部署图示例&#34;
@@ -690,6 +690,1080 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;设计模式&#34;&gt;设计模式&lt;/h1&gt;
+&lt;p&gt;设计模式的核心在于提供了相关问题的解决方案，使得人们可以更加简单方便地复用成功的设计和体系结构。&lt;/p&gt;
+&lt;p&gt;设计模式分类：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;br&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;创建型&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;结构型&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;行为型&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;类&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Factory Method（工厂方法模式）&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Adapter（适配器模式，类）&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Interpreter（解释器模式）&lt;br&gt;Template Method（模板方法模式）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;对象&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Abstract Factory（抽象工厂模式）&lt;br&gt;Builder（生成器模式）&lt;br&gt;Prototype（原型模式）&lt;br&gt;Singleton（单例模式）&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Adapter（适配器模式，对象）&lt;br&gt;Bridge（桥接模式）&lt;br&gt;Composite（组合模式）&lt;br&gt;Decorator（装饰器模式）&lt;br&gt;Facade（外观模式）&lt;br&gt;Flyweight（享元模式）&lt;br&gt;Proxy（代理模式）&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Chain of Responsibility（责任链模式）&lt;br&gt;Command（命令模式）&lt;br&gt;Iterator（迭代器模式）&lt;br&gt;Mediator（中介者模式）&lt;br&gt;Memento（备忘录模式）&lt;br&gt;Observer（观察者模式）&lt;br&gt;State（状态模式）&lt;br&gt;Strategy（策略模式）&lt;br&gt;Visitor（访问者模式）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;创新型设计模式&#34;&gt;创新型设计模式&lt;/h2&gt;
+&lt;p&gt;创建型模式&lt;u&gt;抽象了实例化过程&lt;/u&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;类创建型模式：使用继承改变被实例化的类；&lt;/li&gt;
+&lt;li&gt;对象创建型模式：将实例化委托给另一个对象。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;工厂模式&#34;&gt;工厂模式&lt;/h3&gt;
+&lt;p&gt;工厂模式（Factory Method）定义一个用于&lt;u&gt;创建对象的接口&lt;/u&gt;，让&lt;u&gt;子类决定实例化哪一个类&lt;/u&gt;。工厂模式使一个类的实例化延迟到其子类。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;即接口不创建具体的对象，交由子类来决定实例化哪个类。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;工厂模式结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682232330534.png&#34;
+	width=&#34;725&#34;
+	height=&#34;268&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682232330534_huc77d54806485b83d5b01369d9c023787_25091_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682232330534_huc77d54806485b83d5b01369d9c023787_25091_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;工厂模式结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;270&#34;
+		data-flex-basis=&#34;649px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Product&lt;/code&gt;：定义工厂方法所创建的对象的接口。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ConcreteProduct&lt;/code&gt;：实现&lt;code&gt;Product&lt;/code&gt;接口。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Creator&lt;/code&gt;：声明工厂方法，该方法返回一个&lt;code&gt;Product&lt;/code&gt;类型的对象。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Creator&lt;/code&gt;也可以定义一个工厂方法的默认实现，它返回一个默认的&lt;code&gt;ConcreteProduct&lt;/code&gt;对象，可以调用工厂方法以创建一个&lt;code&gt;Product&lt;/code&gt;对象。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ConcreteCreator&lt;/code&gt;：重定义工厂方法以返回一个&lt;code&gt;ConcreteProduct&lt;/code&gt;实例。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Factory Method模式适用于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当一个类&lt;u&gt;不知道它所必须创建的对象的类&lt;/u&gt;的时候。&lt;/li&gt;
+&lt;li&gt;当一个类&lt;u&gt;希望由它的子类来指定它所创建的对象&lt;/u&gt;的时候。&lt;/li&gt;
+&lt;li&gt;当类&lt;u&gt;将创建对象的职责委托给多个帮助子类中的某一个&lt;/u&gt;，并且你希望将哪一个&lt;u&gt;帮助子类是代理者&lt;/u&gt;这一信息局部化的时候。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;关键词：&lt;u&gt;子类指定创建对象&lt;/u&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;抽象工厂模式&#34;&gt;抽象工厂模式&lt;/h3&gt;
+&lt;p&gt;抽象工厂（Abstract Factory）提供一个&lt;u&gt;创建一系列相关或相互依赖对象的接口&lt;/u&gt;，而&lt;u&gt;无须指定它们具体的类&lt;/u&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;即提供对象的接口，用户无需考虑实现类。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;抽象工厂模式的结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682230457950.png&#34;
+	width=&#34;704&#34;
+	height=&#34;330&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682230457950_hu9c89e6a2ba3c7411a12e6de71f8df7cf_36899_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682230457950_hu9c89e6a2ba3c7411a12e6de71f8df7cf_36899_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;抽象工厂模式的结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;213&#34;
+		data-flex-basis=&#34;512px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;AbstractFactory&lt;/code&gt;：声明一个创建抽象产品对象的操作接口。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ConcreteFactory&lt;/code&gt;：实现创建具体产品对象的操作。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;AbstractProduct&lt;/code&gt;：为一类产品对象声明一个接口。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ConcreteProduct&lt;/code&gt;：定义一个将被相应的具体工厂创建的产品对象，实现&lt;code&gt;AbstractProduct&lt;/code&gt;接口。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Client&lt;/code&gt;：仅使用由&lt;code&gt;AbstractFactory&lt;/code&gt;和&lt;code&gt;AbstractProduct&lt;/code&gt;类声明的接口。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Abstract Factory模式适用于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个系统要&lt;strong&gt;独立&lt;/strong&gt;于它的&lt;strong&gt;产品的创建&lt;/strong&gt;、&lt;strong&gt;组合&lt;/strong&gt;和&lt;strong&gt;表示&lt;/strong&gt;时。&lt;/li&gt;
+&lt;li&gt;一个系统要由&lt;u&gt;多个产品系列中的一个来配置&lt;/u&gt;时。&lt;/li&gt;
+&lt;li&gt;当要强调&lt;u&gt;一系列相关的产品&lt;/u&gt;对象的设计以便进行&lt;u&gt;联合使用&lt;/u&gt;时。&lt;/li&gt;
+&lt;li&gt;当提供一个&lt;u&gt;产品类库&lt;/u&gt;，只想&lt;u&gt;显示它们的接口而不是实现&lt;/u&gt;时。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;题目选项描述：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;提供创建一系列相关或相互依赖的对象的接口，而无需指定这些对象所属的具体类。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当一个系统应该独立于它的产品创建、构成和表示时。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当要强调一系列相关的产品对象的设计以便进行联合使用时。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一个系统要由多个产品系列中的一个来配置时。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;为图形用户界面（GUI）组件定义不同平台的并行类层次结构。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;不同平台的GUI组件，使用同样的接口，根据平台使用不同的实现。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;关键词：&lt;u&gt;系列&lt;/u&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;生成器模式&#34;&gt;生成器模式&lt;/h3&gt;
+&lt;p&gt;生成器（Builder，建造者）模式将一个&lt;u&gt;复杂对象的&lt;strong&gt;构建&lt;/strong&gt;与它的&lt;strong&gt;表示&lt;/strong&gt;分离&lt;/u&gt;，使得&lt;u&gt;同样的构建过程可以创建不同的表示&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;生成器模式结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682231345251.png&#34;
+	width=&#34;729&#34;
+	height=&#34;261&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682231345251_hu690497866a39e8a8fdd5b4c1f3b39af4_22986_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682231345251_hu690497866a39e8a8fdd5b4c1f3b39af4_22986_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;生成器模式结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;279&#34;
+		data-flex-basis=&#34;670px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Product&lt;/code&gt;：表示被构造的复杂对象。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Builder&lt;/code&gt;：为创建一个&lt;code&gt;Product&lt;/code&gt;对象的各个部件指定抽象接口。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ConcreteBuilder&lt;/code&gt;：实现&lt;code&gt;Builder&lt;/code&gt;的接口以构造和装配该产品的各个部件，定义并明确它所创建的表示，提供一个检索产品的接口。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ConcreteBuilder&lt;/code&gt;创建&lt;code&gt;Product&lt;/code&gt;对象产品的内部表示并定义它的装配过程。包含定义组成组件的类，包括将这些组件装配成最终产品的接口。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Director&lt;/code&gt;：构造一个使用&lt;code&gt;Builder&lt;/code&gt;接口的对象。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Builder模式适用于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当&lt;u&gt;创建复杂对象的算法&lt;/u&gt;应该&lt;u&gt;独立于该对象的组成部分以及它们的装配方式时&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;当&lt;u&gt;构造过程必须允许被构造的对象有不同的表示时&lt;/u&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;题目选项描述&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当创建复杂对象的算法应该独立于该对象的组成部分及其装配方式时。&lt;/li&gt;
+&lt;li&gt;当构造过程必须允许被构造的对象有不同的表示时。&lt;/li&gt;
+&lt;li&gt;将一个复杂对象的构建与其表示分离，使得同样的构建过程可以创建不同的表示。&lt;/li&gt;
+&lt;li&gt;适用于抽象复杂对象的构建步骤和基于构建过程的具体实现构建复杂对象的不同表示。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;关键词：&lt;u&gt;复杂对象、不同表示&lt;/u&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;原型模式&#34;&gt;原型模式&lt;/h3&gt;
+&lt;p&gt;原型（Prototype）模式用&lt;u&gt;原型实例指定创建对象的种类&lt;/u&gt;，并且&lt;u&gt;通过复制这些原型创建新的对象&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;原型模式结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682233376386.png&#34;
+	width=&#34;638&#34;
+	height=&#34;298&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682233376386_hu1813704620029f1adb77611772cb6330_23912_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682233376386_hu1813704620029f1adb77611772cb6330_23912_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;原型模式结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;214&#34;
+		data-flex-basis=&#34;513px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Prototype&lt;/code&gt;：声明一个复制自身的接口。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ConcretePrototype&lt;/code&gt;：实现一个复制自身的操作。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Client&lt;/code&gt;：让一个原型复制自身从而创建一个新的对象。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Prototype模式适用于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当一个系统应该独立于它的产品创建、构成和表示时。&lt;/li&gt;
+&lt;li&gt;当要实例化的类是在运行时刻指定时，例如，通过动态装载。&lt;/li&gt;
+&lt;li&gt;为了避免创建一个与产品类层次平行的工厂类层次时。&lt;/li&gt;
+&lt;li&gt;当一个类的实例只能有几个不同状态组合中的一种时。建立相应数目的原型并克隆它们，可能比每次用合适的状态手工实例化该类更方便一些。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;单例模式&#34;&gt;单例模式&lt;/h3&gt;
+&lt;p&gt;单例（Singleton）模式保证&lt;u&gt;一个类仅有一个实例&lt;/u&gt;，并&lt;u&gt;提供一个访问它的全局访问点&lt;/u&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;就好像Spring中的Bean，每个Bean有且仅有一个实例，通过&lt;code&gt;@Autowired&lt;/code&gt;自动装配（来访问）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;单例模式结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682233866165.png&#34;
+	width=&#34;464&#34;
+	height=&#34;169&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682233866165_huef95807dda454cba71e939a884d0b18a_14126_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682233866165_huef95807dda454cba71e939a884d0b18a_14126_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;单例模式结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;274&#34;
+		data-flex-basis=&#34;658px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Singleton&lt;/code&gt;：指定一个&lt;code&gt;Instance&lt;/code&gt;操作，允许客户访问它的唯一实例。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Instance&lt;/code&gt;：是一个类操作；可能负责创建它自己的唯一实例。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Singleton模式适用于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当类&lt;u&gt;只能有一个实例&lt;/u&gt;而且客户可以从一个众所周知的访问点访问它时。&lt;/li&gt;
+&lt;li&gt;当这个&lt;u&gt;唯一实例&lt;/u&gt;应该是通过子类化可扩展的，并且&lt;u&gt;客户无须更改代码就能使用一个扩展的实例&lt;/u&gt;时。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;关键词：&lt;u&gt;唯一实例、一个实例&lt;/u&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;结构型设计模式&#34;&gt;结构型设计模式&lt;/h2&gt;
+&lt;p&gt;结构型设计模式涉及&lt;u&gt;如何组合类和对象以获得更大的结构&lt;/u&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;结构型类模式：&lt;u&gt;采用继承机制来组合接口或实现&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;一个简单的例子是&lt;u&gt;采用多重继承方法将两个以上的类组合成一个类&lt;/u&gt;，结果这个类包含了所有父类的性质。&lt;/p&gt;
+&lt;p&gt;这一模式尤其有助于多个独立开发的类库协同工作。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;结构型对象模式：描述了&lt;u&gt;如何对一些对象进行组合，从而实现新功能的一些方法&lt;/u&gt;（不是对接口和实现进行组合）。&lt;/p&gt;
+&lt;p&gt;因为可以在运行时刻改变对象组合关系，所以对象组合方式具有更大的灵活性，而这种机制用静态类组合是不可能实现的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;适配器模式&#34;&gt;适配器模式&lt;/h3&gt;
+&lt;p&gt;适配器（Adapter）模式&lt;u&gt;将一个类的接口转换成客户希望的另外一个接口&lt;/u&gt;。使得原本由于接口不兼容而不能一起工作的那些类可以一起工作。&lt;/p&gt;
+&lt;p&gt;类适配器使用多重继承对一个接口与另一个接口进行匹配：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682299306295.png&#34;
+	width=&#34;885&#34;
+	height=&#34;674&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682299306295_hu274e97e19deac790c686089605963483_65147_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682299306295_hu274e97e19deac790c686089605963483_65147_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;适配器模式结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;131&#34;
+		data-flex-basis=&#34;315px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;Adapter模式适用于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;想使用一个已经存在的类，而它的&lt;u&gt;接口不符合要求&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;想创建一个可以服用的类，该类可以&lt;u&gt;与其他不相关的类或不可预见的类（即那些接口可能不一定兼容的类）协同工作&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;（仅适用于对象Adapter）想使用一个已经存在的子类，但是不可能对每一个都进行子类化以匹配它们的接口。&lt;u&gt;对象适配器可以适配它的父类接口。&lt;/u&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;题目选项描述：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将一个对象加以包装以给客户提供其希望的另外一个接口。&lt;/li&gt;
+&lt;li&gt;想使用一个已经存在的类，而其接口不符合要求。&lt;/li&gt;
+&lt;li&gt;使所有接口不兼容类可以一起工作。&lt;/li&gt;
+&lt;li&gt;将一个类的接口转换成客户希望的另一个接口。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;关键词：&lt;u&gt;另一个接口、接口不符合要求、接口兼容、接口转换&lt;/u&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;桥接模式&#34;&gt;桥接模式&lt;/h3&gt;
+&lt;p&gt;桥接（Bridge）模式将&lt;strong&gt;抽象&lt;/strong&gt;部分与其&lt;strong&gt;实现&lt;/strong&gt;部分&lt;strong&gt;分离&lt;/strong&gt;，使它们都可以&lt;strong&gt;独立地变化&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;桥接模式结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682299992836.png&#34;
+	width=&#34;932&#34;
+	height=&#34;387&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682299992836_hudb1c01aa99ecdd687550b15293eda98a_45309_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682299992836_hudb1c01aa99ecdd687550b15293eda98a_45309_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;桥接模式结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;240&#34;
+		data-flex-basis=&#34;577px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Abstraction&lt;/code&gt;：定义&lt;u&gt;抽象类的接口&lt;/u&gt;，维护一个指向&lt;code&gt;Implementor&lt;/code&gt;类型对象的指针。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;RefinedAbstraction&lt;/code&gt;：扩充由&lt;code&gt;Abstraction&lt;/code&gt;定义的接口。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Implementor&lt;/code&gt;：定义&lt;u&gt;实现类的接口&lt;/u&gt;，该接口不一定要与&lt;code&gt;Abstraction&lt;/code&gt;的接口完全一致；事实上这两个接口可以完全不同。&lt;/p&gt;
+&lt;p&gt;一般来说，&lt;code&gt;Implementor&lt;/code&gt;接口仅提供基本操作，而&lt;code&gt;Abstraction&lt;/code&gt;：定义了基于这些基本操作的较高层次的操作。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ConcreteImplementor&lt;/code&gt;：实现&lt;code&gt;Implementor&lt;/code&gt;接口并定义它的具体实现。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Bridge模式适用于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;u&gt;不希望在抽象和它的实现部分之间有一个固定的绑定关系。&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;例如，这种情况可能是因为，在程序运行时刻实现部分应可以被选择或者切换。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;类的&lt;u&gt;抽象&lt;/u&gt;以及它的&lt;u&gt;实现都&lt;/u&gt;应该&lt;u&gt;可以通过生成子类的方法加以扩充&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;这是Bridge模式使得开发者&lt;u&gt;可以对不同的抽象接口和实现部分进行组合，并分别对它们进行扩充&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对一个&lt;u&gt;抽象的实现部分的修改&lt;/u&gt;应对客户不产生影响，即&lt;u&gt;客户代码不必重新编译&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;（C++）想对客户完全&lt;u&gt;隐藏抽象的实现部分&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;有许多类要生成的类层次结构。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;想在&lt;u&gt;多个对象间共享实现&lt;/u&gt;（可能使用引用计数），但同时要求&lt;u&gt;客户并不知道这一点&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;题目选项描述：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;类的抽象和其实现之间不希望有一个固定的绑定关系。&lt;/li&gt;
+&lt;li&gt;不希望在抽象和它的实现部分之间有一个固定的绑定关系。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;关键词：&lt;u&gt;固定的绑定关系&lt;/u&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;组合模式&#34;&gt;组合模式&lt;/h3&gt;
+&lt;p&gt;组合（Composite）模式将对象&lt;u&gt;组合成树型结构&lt;/u&gt;以&lt;u&gt;表示“部分——整体”&lt;/u&gt;的层次结构。Composite使得用户&lt;u&gt;对单个对象和组合对象的使用具有一致性&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;组合模式的结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682300973563.png&#34;
+	width=&#34;940&#34;
+	height=&#34;440&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682300973563_hu29c872695ca6ff6ded5279e7e927bfc7_52033_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682300973563_hu29c872695ca6ff6ded5279e7e927bfc7_52033_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;组合模式的结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;213&#34;
+		data-flex-basis=&#34;512px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Component&lt;/code&gt;：为组合中的对象&lt;u&gt;声明接口&lt;/u&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在适当情况下&lt;u&gt;实现所有类共有接口的默认行为&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;声明一个接口用于访问和管理&lt;code&gt;Component&lt;/code&gt;的子组件；&lt;/li&gt;
+&lt;li&gt;（可选）&lt;u&gt;在递归结构中定义一个接口，用于访问一个父组件&lt;/u&gt;，并在合适的情况下&lt;u&gt;实现&lt;/u&gt;它。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Leaf&lt;/code&gt;：在组合中表示&lt;u&gt;叶结点对象&lt;/u&gt;，叶结点没有子结点；在组合中&lt;u&gt;定义图元对象的行为&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Composite&lt;/code&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;定义有子组件的那些组件的行为；&lt;/li&gt;
+&lt;li&gt;存储子组件；&lt;/li&gt;
+&lt;li&gt;在&lt;code&gt;Component&lt;/code&gt;接口中实现与子组件有关的操作。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Client&lt;/code&gt;：通过&lt;code&gt;Component&lt;/code&gt;接口操纵组合组件的对象。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Composite模式适用于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;想表示对象的&lt;u&gt;部分——整体层次结构&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;希望用户&lt;u&gt;忽略组合对象与单个对象的不同&lt;/u&gt;，用户将&lt;u&gt;统一地使用组合结构中的所有对象&lt;/u&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;题目选项描述：&lt;/p&gt;
+&lt;p&gt;表示对象的部分——整体层次结构。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;装饰器模式&#34;&gt;装饰器模式&lt;/h3&gt;
+&lt;p&gt;装饰器（Decorator）模式&lt;u&gt;动态&lt;/u&gt;地给一个对象&lt;u&gt;添加一些额外的职责&lt;/u&gt;。就增加功能而言，&lt;u&gt;Decorator模式比生成子类更加灵活&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;装饰器模式结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682302304911.png&#34;
+	width=&#34;862&#34;
+	height=&#34;392&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682302304911_hu87036585f545fff625bfcce0389726df_55394_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682302304911_hu87036585f545fff625bfcce0389726df_55394_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;装饰器模式结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;219&#34;
+		data-flex-basis=&#34;527px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Component&lt;/code&gt;：定义一个&lt;u&gt;对象接口&lt;/u&gt;，可以给这些对象&lt;u&gt;动态地添加职责&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ConcreteComponent&lt;/code&gt;：定义一个对象，可以&lt;u&gt;给这个对象添加一些职责&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Decorator&lt;/code&gt;：&lt;u&gt;维持一个指向&lt;code&gt;Component&lt;/code&gt;对象的指针&lt;/u&gt;，并&lt;u&gt;定义一个与&lt;code&gt;Component&lt;/code&gt;接口一致的接口&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ConcreteDecorator&lt;/code&gt;：&lt;u&gt;向组件添加职责。&lt;/u&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Decorator模式适用于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在不影响其他对象的情况下，以动态、透明的方式给单个对象添加职责。&lt;/li&gt;
+&lt;li&gt;处理那些可以撤销的职责。&lt;/li&gt;
+&lt;li&gt;当不能采用生成子类的方式进行扩充时。一种情况是，可能有大量独立的扩展，为支持每一种组合将产生大量的子类，使得子类数目呈爆炸性增长。另一种情况可能是，由于类定义被隐藏，或类定义不能用于生成子类。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;题目选项描述：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将一个对象加以包装以提供一些额外的行为。&lt;/li&gt;
+&lt;li&gt;在不影响其他对象的情况下，以动态、透明的方式给单个对象添加职责。&lt;/li&gt;
+&lt;li&gt;动态地给一个对象添加一些额外的职责。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;关键词：&lt;u&gt;提供、添加、额外行为、指责&lt;/u&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;外观模式&#34;&gt;外观模式&lt;/h3&gt;
+&lt;p&gt;外观（Facade）模式&lt;u&gt;为子系统中的一组接口提供一个一致的界面&lt;/u&gt;，Facade模式&lt;u&gt;定义了&lt;/u&gt;一个&lt;u&gt;高层接口&lt;/u&gt;，这个接口&lt;u&gt;使得这一子系统更加容易使用&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;外观模式的结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682302810965.png&#34;
+	width=&#34;950&#34;
+	height=&#34;376&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682302810965_hu0169411cc8d389f824aec2bd1bd88e86_24708_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682302810965_hu0169411cc8d389f824aec2bd1bd88e86_24708_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;外观模式的结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;252&#34;
+		data-flex-basis=&#34;606px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Facade&lt;/code&gt;：知道哪些子系统类负责处理请求；&lt;u&gt;将客户的请求代理给适当的子系统对象&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Subsystem classes&lt;/code&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;实现子系统的功能；&lt;/li&gt;
+&lt;li&gt;处理有&lt;code&gt;Facade&lt;/code&gt;对象指派的任务；&lt;/li&gt;
+&lt;li&gt;没有&lt;code&gt;Facade&lt;/code&gt;的任何相关信息，即没有指向&lt;code&gt;Facade&lt;/code&gt;的指针。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Facade模式适用于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Facade可以提供一个简单的默认视图，供大多数用户使用。&lt;/p&gt;
+&lt;p&gt;要为一个复杂子系统提供一个简单接口时，子系统往往因为不断演化而变得越来越复杂。大多数模式使用时都会产生更多更小的类，这使得子系统更具有可重用性，也更容易对子系统进行定制，但也给那些不需要定制子系统的用户带来一些使用上的困难。&lt;/p&gt;
+&lt;p&gt;Facade提供的简单默认视图对大多数用户来说已经足够，而那些需要更多的可定制性的用户可以越过Facade层。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;u&gt;客户程序&lt;/u&gt;与&lt;u&gt;抽象类的实现&lt;/u&gt;部分之间&lt;u&gt;存在着很大的依赖性&lt;/u&gt;。&lt;u&gt;引入Facade将这个子系统与客户以及其他的子系统分离，可以提高子系统的独立性和可移植性。&lt;/u&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当需要&lt;u&gt;构建一个层次结构的子系统&lt;/u&gt;时，使用&lt;u&gt;Facade模式定义子系统中每层的入口点&lt;/u&gt;。如果&lt;u&gt;子系统之间是相互依赖的&lt;/u&gt;，则可以&lt;u&gt;让它们仅通过Facade进行通信，从而简化了它们之间的依赖关系&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;题目选项描述：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将一系列对象加以包装以简化其接口。&lt;/li&gt;
+&lt;li&gt;需要为一个复杂子系统提供一个简单接口。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;关键词：&lt;u&gt;简化接口、复杂子系统&lt;/u&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;享元模式&#34;&gt;享元模式&lt;/h3&gt;
+&lt;p&gt;享元（Flyweight）模式运用共亨技术有效地支持大量细粒度的对象。&lt;/p&gt;
+&lt;p&gt;享元模式的结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682305434953.png&#34;
+	width=&#34;870&#34;
+	height=&#34;561&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682305434953_hu5d09b2ef7c809ea7781b9cd3cc8a6bd3_70263_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682305434953_hu5d09b2ef7c809ea7781b9cd3cc8a6bd3_70263_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;享元模式的结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;155&#34;
+		data-flex-basis=&#34;372px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Flyweight&lt;/code&gt;：描述一个接口，通过这个接口&lt;code&gt;Flyweight&lt;/code&gt;可以&lt;u&gt;接受并作用于外部状态&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ConcreteFlyweight&lt;/code&gt;：&lt;u&gt;实现&lt;code&gt;Flyweight&lt;/code&gt;接口，并为内部状态（如果有）增加存储空间。&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ConcreteFlyweight&lt;/code&gt;对象必须是可共享的。它所存储的状态必须是内部的，即它必须独立于&lt;code&gt;ConcreteFlyweight&lt;/code&gt;对象的场景。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;并非所有的&lt;code&gt;Flyweight&lt;/code&gt;子类都需要被共享。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Flyweight&lt;/code&gt;接口使共享成为可能，但它并不强制共享。在&lt;code&gt;Flyweight&lt;/code&gt;对象结构的某些层次，&lt;code&gt;UnsharedConcreteFlyweight&lt;/code&gt;对象通常将&lt;code&gt;ConcreteFlyweight&lt;/code&gt;对象作为子结点。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;FlyweightFactory&lt;/code&gt;：&lt;u&gt;创建并管理&lt;code&gt;Flyweight&lt;/code&gt;对象&lt;/u&gt;；确保合理地共享&lt;code&gt;Flyweight&lt;/code&gt;，当用户请求一个&lt;code&gt;Flyweight&lt;/code&gt;时，&lt;code&gt;FlyweightFactory&lt;/code&gt;对象提供一个已创建的实例或者在不存在时创建一个实例。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Client&lt;/code&gt;：维持一个对&lt;code&gt;Flyweight&lt;/code&gt;的引用；计算或存储一个或多个&lt;code&gt;Flyweight&lt;/code&gt;的外部状态。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Flyweight模式适用于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个应用程序&lt;u&gt;使用了大量的对象&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;完全由于&lt;u&gt;使用大量的对象，造成很大的存储开销&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;对象的&lt;u&gt;大多数状态都可变为外部状态&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;如果&lt;u&gt;删除对象的外部状态&lt;/u&gt;，那么&lt;u&gt;可以用相对较少的共享对象取代很多组对象&lt;/u&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;代理模式&#34;&gt;代理模式&lt;/h3&gt;
+&lt;p&gt;代理（Proxy）模式为其他对象&lt;u&gt;提供一种代理以控制对这个对象的访问&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;代理模式的结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682306107287.png&#34;
+	width=&#34;807&#34;
+	height=&#34;348&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682306107287_hu0d398b0509b4d48f9b3205627bb8971a_28885_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682306107287_hu0d398b0509b4d48f9b3205627bb8971a_28885_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;代理模式的结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;231&#34;
+		data-flex-basis=&#34;556px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Proxy&lt;/code&gt;：保存一个引用使得&lt;u&gt;代理可以访问实体&lt;/u&gt;；提供一个与&lt;code&gt;Subject&lt;/code&gt;的接口相同的接口，使&lt;u&gt;代理可以用来代替实体&lt;/u&gt;；&lt;u&gt;控制对实体的存取&lt;/u&gt;，并可能负责创建和删除它。&lt;/p&gt;
+&lt;p&gt;其他功能依赖于代理的类型：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Remote Proxy&lt;/code&gt;：负责对请求及其参数进行编码，并向不同地址空间中的实体发送己编码的请求；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Virtual Proxy&lt;/code&gt;：可以缓存实体的附加信息，以便延迟对它的访问；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Protection Proxy&lt;/code&gt;：检查调用者是否具有实现一个请求所必需的访问权限。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Subject&lt;/code&gt;：定义&lt;code&gt;RealSubject&lt;/code&gt;和&lt;code&gt;Proxy&lt;/code&gt;的共用接口，这样就在任何使用&lt;code&gt;RealSubject&lt;/code&gt;的地方都可以使用&lt;code&gt;Proxy&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;RealSubject&lt;/code&gt;：定义&lt;code&gt;Proxy&lt;/code&gt;所代表的实体。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Proxy模式适用于在需要比较通用和复杂的对象指针代替简单的指针的时候，常见情况有:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;远程代理（Remote Proxy）：为一个对象在不同地址空间提供局部代表。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;虚代理(Virtual Proxy）：根据需要创建开销很大的对象。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;保护代理（Protection Proxy）：控制对原始对象的访问，用于对象应该有不同的访问权限的时候。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;智能引用（Smart Reference）：取代了简单的指针，它在访问对象时执行一些附加操作。&lt;/p&gt;
+&lt;p&gt;典型用途包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对指向实际对象的引用计数，这样当该对象没有引用时，可以被自动释放；&lt;/li&gt;
+&lt;li&gt;当第一次引用一个持久对象时，将它装入内存；&lt;/li&gt;
+&lt;li&gt;在访问一个实际对象前，检查是否已经锁定了它，以确保其他对象不能改变它。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;行为型设计模式&#34;&gt;行为型设计模式&lt;/h2&gt;
+&lt;p&gt;行为模式涉及&lt;u&gt;算法和对象间职责的分配&lt;/u&gt;。行为模式不仅&lt;u&gt;描述对象或类的模式&lt;/u&gt;，还&lt;u&gt;描述它们之间的通信模式&lt;/u&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;行为类模式：使用&lt;u&gt;继承机制&lt;/u&gt;在类间分派行为。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;行为对象模式：使用&lt;u&gt;对象复合&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;一些行为对象模式&lt;u&gt;描述了一组&lt;strong&gt;对等&lt;/strong&gt;的对象怎样相互协作以完成其中任一个对象都无法单独完成的任务&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;责任链模式&#34;&gt;责任链模式&lt;/h3&gt;
+&lt;p&gt;责任链（Chain of Responsibility）模式&lt;u&gt;使多个对象都有机会处理请求&lt;/u&gt;，从而避免请求的发送者和接收者之间的耦合关系。&lt;u&gt;将这些对象连成一条链&lt;/u&gt;，并&lt;u&gt;沿着这条链传递该请求，直到有一个对象处理它为止&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;责任链模式的结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682307471896.png&#34;
+	width=&#34;680&#34;
+	height=&#34;348&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682307471896_huf23cf1c3201c893b8b3f5c2bf75098c6_29363_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682307471896_huf23cf1c3201c893b8b3f5c2bf75098c6_29363_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;责任链模式的结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;195&#34;
+		data-flex-basis=&#34;468px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Handler&lt;/code&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;定义一个处理请求的接口；&lt;/li&gt;
+&lt;li&gt;（可选）实现后继链。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ConcreteHandler&lt;/code&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;处理它所负责的请求；&lt;/li&gt;
+&lt;li&gt;可访问它的后继者；&lt;/li&gt;
+&lt;li&gt;如果可处理该请求，就处理它，否则将该请求转发给后继者。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Client&lt;/code&gt;：向链上的具体处理者（&lt;code&gt;ConcreteHandler&lt;/code&gt;）对象提交请求。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Chain of Responsibility模式适用于以下条件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;有&lt;u&gt;多个的对象可以处理一个请求&lt;/u&gt;，哪个对象处理该请求&lt;u&gt;运行时刻自动确定&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;想在&lt;u&gt;不明确指定接收者的情况下向多个对象中的一个提交一个请求&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;可处理一个请求的对象集合应被&lt;u&gt;动态指定&lt;/u&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;题目选项描述：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;有多个对象可以处理一个请求，在运行时刻自动确定由哪个对象处理。&lt;/li&gt;
+&lt;li&gt;一个客户需要使用一组相关对象。&lt;/li&gt;
+&lt;li&gt;想在不明确指定接收者的情况下向多个对象中的一个提交一个请求。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;关键字：&lt;u&gt;多个对象、一个请求、一组相关对象&lt;/u&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;命令模式&#34;&gt;命令模式&lt;/h3&gt;
+&lt;p&gt;命令（Command）模式将&lt;u&gt;一个请求封装为一个对象&lt;/u&gt;，从而使得可以&lt;u&gt;用不同的请求对客户进行参数化&lt;/u&gt;；对&lt;u&gt;请求排队&lt;/u&gt;或&lt;u&gt;记录请求日志&lt;/u&gt;，以及&lt;u&gt;支持可撤销的操作&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;命令模式的结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682311014909.png&#34;
+	width=&#34;924&#34;
+	height=&#34;305&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682311014909_hu71620aca29416c3ad91bf9fc175e50fb_35195_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682311014909_hu71620aca29416c3ad91bf9fc175e50fb_35195_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;命令模式的结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;302&#34;
+		data-flex-basis=&#34;727px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Command&lt;/code&gt;：声明执行操作的接口。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ConcreteCommand&lt;/code&gt;：将&lt;u&gt;一个接收者对象绑定于一个动作；调用接收者相应的操作&lt;/u&gt;，以实现&lt;code&gt;Execute&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Client&lt;/code&gt;：创建一个具体命令对象并设定它的接收者。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Invoker&lt;/code&gt;：要求该命令执行这个请求。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Receiver&lt;/code&gt;：知道如何实施与执行一个请求相关的操作。&lt;/p&gt;
+&lt;p&gt;任何类都可能作为一个接收者。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Command模式适用于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;u&gt;抽象出待执行的动作以参数化某对象。&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;Command模式是过程语言中的&lt;u&gt;回调&lt;/u&gt;（Callback）&lt;u&gt;机制&lt;/u&gt;的一个面向对象的&lt;u&gt;替代品&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;在不同的时刻指定、排列和执行请求。&lt;/p&gt;
+&lt;p&gt;一个Command对象可以有一个与初始请求无关的生存期。&lt;/p&gt;
+&lt;p&gt;如果一个请求的接收者可用一种与地址空间无关的方式表达，那么就可以将负责该请求的命令对象传递给另一个不同的进程，并在那实现该请求。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;支持取消操作。&lt;/p&gt;
+&lt;p&gt;Command的Execute操作可在实施操作前将状态存储起来，在取消操作时这个状态用来消除该操作的影响。&lt;/p&gt;
+&lt;p&gt;Command接口必须添加一个Unexecute操作，该操作取消上一次Execute 调用的效果。&lt;/p&gt;
+&lt;p&gt;执行的命令被存储在一个历史列表中。可通过向后和向前遍历这一列表并分别调用Unexecute和Execute来实现重数不限的“取消和“重做”。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;支持修改日志。&lt;/p&gt;
+&lt;p&gt;这样当系统崩溃时，这些修改可以被重做一遍。&lt;/p&gt;
+&lt;p&gt;在 Command 接口中添加装载操作和存储操作，可以用来保持变动的一个一致的修改日志。&lt;/p&gt;
+&lt;p&gt;从崩溃中恢复的过程包括从磁盘中重新读入记录下来的命令并用Execute操作重新执行它们。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用构建在原语操作上的高层操作构造一个系统。&lt;/p&gt;
+&lt;p&gt;这样一种结构在支持事务（Transaction）的信息系统中很常见。&lt;/p&gt;
+&lt;p&gt;Command模式提供了对事务进行建模的方法。Command有一个公共接口，使得可以用同一种方式调用所有的事务，同时使用该模式也易于添加新事务以扩展系统。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;题目选项描述：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;抽象出执行的动作以参数化某对象。&lt;/li&gt;
+&lt;li&gt;将请求封装为对象从而可以使用不同的请求对客户进行参数化。&lt;/li&gt;
+&lt;li&gt;在不同的时刻指定、排列和执行请求。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;解释器模式&#34;&gt;解释器模式&lt;/h3&gt;
+&lt;p&gt;解释器（Interpreter）模式给定一个语言，定义它的文法的一种表示，并定义一个解释器，这个解释器使用该表示来解释语言中的句子。&lt;/p&gt;
+&lt;p&gt;解释器模式结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682311888750.png&#34;
+	width=&#34;705&#34;
+	height=&#34;369&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682311888750_hu0fd3a707223ef37ad012b4e875690974_34918_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682311888750_hu0fd3a707223ef37ad012b4e875690974_34918_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;解释器模式结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;191&#34;
+		data-flex-basis=&#34;458px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;AbstractExpression&lt;/code&gt;：声明一个&lt;u&gt;程序的解释操作&lt;/u&gt;，这个接口为抽象语法树中所有的结点所共享。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;TerminalExpression&lt;/code&gt;：&lt;u&gt;实现与文法中的终结符相关联的解释操作&lt;/u&gt;；一个句子中的每个终结符需要该类的一个实例。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;NonterminalExpression&lt;/code&gt;：对文法中的每一条规则都需要一个&lt;code&gt;NonterminalExpression&lt;/code&gt;类。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;为每个符号都维护一个&lt;code&gt;AbstractExpression&lt;/code&gt;类型的实例变量；&lt;/li&gt;
+&lt;li&gt;为文法中的非终结符实现解释（&lt;code&gt;Interpret&lt;/code&gt;）操作。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Context&lt;/code&gt;：包含解释器之外的一些&lt;u&gt;全局信息&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Client&lt;/code&gt;：构建（或被给定）表示该文法定义的语言中一个特定的句子的抽象语法树，该抽象语法树由&lt;code&gt;NonterminalExpression&lt;/code&gt;和&lt;code&gt;TerminalExpression&lt;/code&gt;的实例装配而成；调用解释操作。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Interpreter模式适用于当&lt;u&gt;有一个语言需要解释执行&lt;/u&gt;，且&lt;u&gt;可将该语言中的句子表示为一个抽象语法树&lt;/u&gt;时，以下情况效果最好:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;该&lt;u&gt;文法简单&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;对于复杂的发文，文法的类层次变得庞大而无法管理。此时语法分析程序生成器这样的工具是更好的选择。它们无须构建抽象语法树即可解释表达式，这样可以节省空间还可能节省时间。&lt;/p&gt;
+&lt;p&gt;即Interpreter模式需要构建抽象语法树，如果文法太复杂，需要构建复杂的语法树，不便于管理。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;u&gt;效率不是一个关键问题。&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;最高效的解释器通常不是通过直接解释语法分析树实现的，而是首先将它们转换成另一种形式。不过，即使在这种情况下，转换器仍然可用该模式实现。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;题目选项描述：&lt;/p&gt;
+&lt;p&gt;有一个语言需要&lt;u&gt;解释执行&lt;/u&gt;，并且可将句子表示为一个&lt;u&gt;抽象语法树&lt;/u&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;迭代器模式&#34;&gt;迭代器模式&lt;/h3&gt;
+&lt;p&gt;迭代器（Iterator）模式提供一种方法&lt;u&gt;顺序访问&lt;/u&gt;一个&lt;u&gt;聚合对象中的各个元素&lt;/u&gt;，且&lt;u&gt;不需要暴露该对象的内部表示&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;迭代器模式的结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682312615849.png&#34;
+	width=&#34;845&#34;
+	height=&#34;401&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682312615849_hub10e6946683a05bf6194a5483b6bc2bc_43952_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682312615849_hub10e6946683a05bf6194a5483b6bc2bc_43952_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;迭代器模式的结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;210&#34;
+		data-flex-basis=&#34;505px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Iterator&lt;/code&gt;（迭代器）：定义访问和遍历元素的接口。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ConcreteIterator&lt;/code&gt;（具体迭代器）：实现迭代器接口；对该聚合遍历时跟踪当前位置。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Aggregate&lt;/code&gt;（聚合）：定义创建相应迭代器对象的接口。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ConcreteAggregate&lt;/code&gt;（具体聚合）：实现创建相应迭代器的接口，该操作返回&lt;code&gt;ConcreteIterator&lt;/code&gt;的一个适当的实例。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Iterator模式适用于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;u&gt;访问&lt;/u&gt;一个&lt;u&gt;聚合对象的内容&lt;/u&gt;而&lt;u&gt;无须暴露它的内部表示&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;支持&lt;u&gt;对聚合对象的多种遍历&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;为&lt;u&gt;遍历不同的聚合结构提供一个统一的接口&lt;/u&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;题目选项描述：&lt;/p&gt;
+&lt;p&gt;访问一个聚合对象的内容而无须暴露它的内部表示。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;中介者模式&#34;&gt;中介者模式&lt;/h3&gt;
+&lt;p&gt;中介者模式（Mediator）用一个&lt;u&gt;中介对象&lt;/u&gt;来&lt;u&gt;封装&lt;/u&gt;一系列的&lt;u&gt;对象交互&lt;/u&gt;。中介者&lt;u&gt;使各对象不需要显式地相互引用&lt;/u&gt;，从而使其&lt;u&gt;耦合松散&lt;/u&gt;，而且&lt;u&gt;可以独立地改变它们之间的交互&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;中介者模式的结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682313139750.png&#34;
+	width=&#34;855&#34;
+	height=&#34;236&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682313139750_hue770aa3c8fde88302c9d09952e57e382_24131_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682313139750_hue770aa3c8fde88302c9d09952e57e382_24131_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;中介者模式的结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;362&#34;
+		data-flex-basis=&#34;869px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Mediator&lt;/code&gt;（中介者）：定义一个接口用于各同事（&lt;code&gt;Colleague&lt;/code&gt;）对象通信。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ConcreteMediator&lt;/code&gt;（具体中介者）：通过协调各同事对象实现协作行为；了解并维护它的各个同事。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Colleague&lt;/code&gt;（同事类）：知道它的中介者对象；每一个同事类对象在需要与其他同事通信的时候与它的中介者通信。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Mediator模式适用于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一组对象以&lt;u&gt;定义良好但是复杂的方式进行通信&lt;/u&gt;，产生的&lt;u&gt;相互依赖关系结构混乱且难以理解&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;一个对象&lt;u&gt;引用其他很多对象&lt;/u&gt;并且&lt;u&gt;直接与这些对象通信&lt;/u&gt;，导致&lt;u&gt;难以复用该对象&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;想&lt;u&gt;定制一个分布在多个类中的行为&lt;/u&gt;，而又&lt;u&gt;不想生成太多的子类&lt;/u&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;题目选项描述：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个对象引用其他很多对象并且直接与这些对象通信，导致难以复用该对象。&lt;/li&gt;
+&lt;li&gt;一组对象以定义良好但是复杂的方式进行通信，产生的相互依赖关系结构混乱且难以理解。&lt;/li&gt;
+&lt;li&gt;减少多个对象或类之间的通信复杂性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;备忘录模式&#34;&gt;备忘录模式&lt;/h3&gt;
+&lt;p&gt;备忘录（Memento）模式在&lt;u&gt;不破坏封装性的前提下捕获一个对象的内部状态&lt;/u&gt;，并在对象之外保存这个状态。这样以后就可以&lt;u&gt;将对象恢复到原先保存的状态&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;Memento模式的结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682314218216.png&#34;
+	width=&#34;847&#34;
+	height=&#34;266&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682314218216_hu96fb8022010cf254fe57392ea3f8173e_38752_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682314218216_hu96fb8022010cf254fe57392ea3f8173e_38752_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Memento模式的结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;318&#34;
+		data-flex-basis=&#34;764px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Memento&lt;/code&gt;（备忘录）：存储原发器对象的内部状态，原发器根据需要决定备忘录存储原发器的哪些内部状态；防止原发器以外的其他对象访问备忘录。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Originator&lt;/code&gt;（原发器）：创建一个备忘录，用于记录当前时刻它的内部状态；使用备忘录恢复内部状态。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Caretaker&lt;/code&gt;（管理者）负责保存好备忘录；不能对备忘录的内容进行操作或检查。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Memento模式适用于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;必须&lt;u&gt;保存&lt;/u&gt;一个&lt;u&gt;对象在某一个时刻的（部分）状态&lt;/u&gt;，这样以后需要时它才能&lt;u&gt;恢复到先前的状态&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;如果一个用接口来让其他对象直接得到这些状态，将会&lt;u&gt;暴露对象的实现细节并破坏对象的封装性&lt;/u&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;题目选项描述：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将对象的状态恢复到先前的状态。&lt;/li&gt;
+&lt;li&gt;在不破坏封装性的前提下，捕获对象的内部状态并在对象之外保存。&lt;/li&gt;
+&lt;li&gt;必须保存一个对象在某一个时刻的（部分）状态。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;关键词：&lt;u&gt;状态&lt;/u&gt;。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;观察者模式&#34;&gt;观察者模式&lt;/h3&gt;
+&lt;p&gt;观察者（Observer）模式定义对象间的一种&lt;u&gt;一对多的依赖关系&lt;/u&gt;，当一个对象的&lt;u&gt;状态发生改变&lt;/u&gt;时，所有&lt;u&gt;依赖于它的对象都得到通知并被自动更新&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;观察者模式的结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682314647475.png&#34;
+	width=&#34;814&#34;
+	height=&#34;315&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682314647475_hu9d1a28a63559700a0e73d11397468ba2_57129_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682314647475_hu9d1a28a63559700a0e73d11397468ba2_57129_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;观察者模式的结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;258&#34;
+		data-flex-basis=&#34;620px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Subject&lt;/code&gt;（目标）：提供注册和删除观察者对象的接口；知道它的观察者，可以有任意多个观察者观察同一个目标。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Observer&lt;/code&gt;（观察者）：为那些在目标发生改变时需获得通知的对象&lt;u&gt;定义&lt;/u&gt;一个&lt;u&gt;更新接口&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ConcreteSubject&lt;/code&gt;（具体目标）：将&lt;u&gt;有关状态存入各&lt;code&gt;ConcreteObserver&lt;/code&gt;对象&lt;/u&gt;；当它的&lt;u&gt;状态发生改变&lt;/u&gt;时，向它的各个观察者&lt;u&gt;发出通知&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ConcreteObserver&lt;/code&gt;（具体观察者）：维护一个指向&lt;code&gt;ConcreteSubject&lt;/code&gt;对象的引用；&lt;u&gt;存储有关状态&lt;/u&gt;，这些状态应与目标的状态保持一致；实现&lt;code&gt;Observer&lt;/code&gt;的更新接口，以&lt;u&gt;使自身状态与目标的状态保持一致&lt;/u&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Observer模式适用于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当一个抽象模型有两个方面，其中&lt;u&gt;一个方面依赖于另一个方面&lt;/u&gt;，将这两者封装在独立的对象中以使它们可以各自独立地改变和复用。&lt;/li&gt;
+&lt;li&gt;当对&lt;u&gt;一个对象的改变需要同时改变其他对象&lt;/u&gt;，而不知道具体有多少对象有待改变时。&lt;/li&gt;
+&lt;li&gt;当&lt;u&gt;一个对象必须通知其他对象&lt;/u&gt;，而它又不能假定其他对象是谁，即&lt;u&gt;不希望这些对象是紧耦合的&lt;/u&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;状态模式&#34;&gt;状态模式&lt;/h3&gt;
+&lt;p&gt;状态（State）模式允许一个对象在其&lt;u&gt;内部状态改变时改变它的行为&lt;/u&gt;。对象看起来似乎修改了它的类。&lt;/p&gt;
+&lt;p&gt;状态模式的结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682315217521.png&#34;
+	width=&#34;644&#34;
+	height=&#34;245&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682315217521_hu4dba732357bdf8362aa7b4938d2e11ca_27336_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682315217521_hu4dba732357bdf8362aa7b4938d2e11ca_27336_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;状态模式的结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;262&#34;
+		data-flex-basis=&#34;630px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;Context&lt;/code&gt;（上下文）：定义客户感兴趣的接口；维护一个&lt;code&gt;ConcreteState&lt;/code&gt;子类的实例，这个实例定义当前状态。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;State&lt;/code&gt;（状态）：定义一个接口以封装与&lt;code&gt;Context&lt;/code&gt;的一个特定状态相关的行为。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ConcreteState&lt;/code&gt;（具体状态子类）：每个子类实现与&lt;code&gt;Context&lt;/code&gt;的一个状态相关的行为。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;State模式适用于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;一个对象的&lt;u&gt;行为决定于它的状态&lt;/u&gt;，并且它必须&lt;u&gt;在运行时刻根据状态改变它的行为&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一个&lt;u&gt;操作中含有庞大的多分支的条件语句&lt;/u&gt;，且&lt;u&gt;这些分支依赖于该对象的状态&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;这个状态常用一个或多个&lt;u&gt;枚举常量&lt;/u&gt;表示。通常，有多个操作包含这一相同的条件结构。&lt;/p&gt;
+&lt;p&gt;State模式&lt;u&gt;将每一个条件分支放入一个独立的类中&lt;/u&gt;。这使得开发者可以根据对象自身的情况将对象的状态作为一个对象，这一对象可以不依赖于其他对象独立变化。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;题目选项描述：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个对象的行为决定于其状态且必须在运行时刻根据状态改变行为。&lt;/li&gt;
+&lt;li&gt;一个对象在其内部状态改变时改变其行为。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;策略模式&#34;&gt;策略模式&lt;/h3&gt;
+&lt;p&gt;策略（Strategy）模式&lt;u&gt;定义一系列的算法&lt;/u&gt;，把它们一个个封装起来，并且&lt;u&gt;使它们可以相互替换&lt;/u&gt;。此模式使得算法可以独立于使用它们的客户而变化。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Strategy&lt;/code&gt;（策略）：定义所有支持的算法的公共接口。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Context&lt;/code&gt;使用这个接口来调用某&lt;code&gt;ConcreteStrategy&lt;/code&gt;定义的算法。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ConcreteStrategy&lt;/code&gt;（具体策略）：以&lt;code&gt;Strategy&lt;/code&gt;接口实现某具体算法。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Context&lt;/code&gt;（上下文）：用一个&lt;code&gt;ConcreteStrategy&lt;/code&gt;对象来配置；维护一个对&lt;code&gt;Strategy&lt;/code&gt;对象的引用；可定义一个接口来让&lt;code&gt;Strategy&lt;/code&gt;访问它的数据。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Strategy模式适用于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;许多相关的类仅仅是行为有异。“策略”提供了一种用多个行为中的一个行为来配置-个类的方法。&lt;/li&gt;
+&lt;li&gt;需要使用一个算法的不同变体例如,定义一些反映不同空间的空间/时间权衡的算法。当这些变体实现为一个算法的类层次时，可以使厨策略模式。&lt;/li&gt;
+&lt;li&gt;算法使用客户不应该知道的数据。可使用策略模式以避免暴露复杂的、与算法相关的数据结构。&lt;/li&gt;
+&lt;li&gt;一个类定义了多种行为,并且这些行为在这个类的操作中以多个条件语句的形式出现，将相关的条件分支移入它们各自的Strategy类中，以代替这些条件语句。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;题目选项描述：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;需要使用一个算法地不同变体。&lt;/li&gt;
+&lt;li&gt;许多相关的类仅仅是行为有异。&lt;/li&gt;
+&lt;li&gt;在设计某购物中心的收银软件系统时，要求能够支持在不同时期推出打折、返利、满减等不同促销活动。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;模板方法模式&#34;&gt;模板方法模式&lt;/h3&gt;
+&lt;p&gt;模板方法模式（Template Method）定义一个操作中的算法骨架，而将一些步骤延迟到子类中。Template Method使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。&lt;/p&gt;
+&lt;p&gt;模板方法模式的结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682316789017.png&#34;
+	width=&#34;610&#34;
+	height=&#34;352&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682316789017_hu736eb87456a6272db6aa15cc311737f4_38587_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682316789017_hu736eb87456a6272db6aa15cc311737f4_38587_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;模板方法模式的结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;173&#34;
+		data-flex-basis=&#34;415px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;AbstractClass&lt;/code&gt;（抽象类）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;定义抽象的原语操作，具体的子类将重定义它们以实现一个算法的各步骤；&lt;/li&gt;
+&lt;li&gt;实现模板方法，定一个算法的骨架，该模板方法不仅调用原语操作，也调用定义在&lt;code&gt;AbstractClass&lt;/code&gt;或其他对象中的操作。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ConcreteClass&lt;/code&gt;（具体类）：实现原语操作以完成算法中与特定子类相关的步骤。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Template Method模式适用于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;u&gt;一次性实现&lt;/u&gt;一个&lt;u&gt;算法的不变的部分&lt;/u&gt;，并将&lt;u&gt;可变的行为留给子类来实现&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;各&lt;u&gt;子类中公共的行为应被提取出来并集中到一个公共父类&lt;/u&gt;中，以&lt;u&gt;避免代码重复&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;控制子类扩展。&lt;/p&gt;
+&lt;p&gt;模板方法旨在特定点调用“hook”操作（默认的行为，子类可以在必要时进行重定义扩展），这就只允许在这些点进行扩展。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;访问者模式&#34;&gt;访问者模式&lt;/h3&gt;
+&lt;p&gt;访问者（Visitor）模式表示一个作用于某对象结构中的各元素的操作。它允许在不改变各元素的类的前提下定义作用于这些元素的新操作。&lt;/p&gt;
+&lt;p&gt;访问者模式的结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682316261510.png&#34;
+	width=&#34;823&#34;
+	height=&#34;653&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682316261510_hu39725207e23c3afa845c404a5c71934c_93016_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682316261510_hu39725207e23c3afa845c404a5c71934c_93016_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;访问者模式的结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;126&#34;
+		data-flex-basis=&#34;302px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ConcreteVisitor&lt;/code&gt;（具体访问者）：实现每个有&lt;code&gt;Visitor&lt;/code&gt;声明的操作，每个操作实现本算法的一部分，而该算法片段乃是对应于结构中对象的类。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ConcreteVisitor&lt;/code&gt;为该算法提供了上下文并存储它的局部状态。这一状态常常在遍历该结构的过程中累积结果。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Element&lt;/code&gt;（元素）：定义以一个访问者为参数的&lt;code&gt;Accept&lt;/code&gt;操作。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ConcreteElement&lt;/code&gt;（具体元素）：实现以一个访问者为参数的&lt;code&gt;Accept&lt;/code&gt;操作。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ObjectStructure&lt;/code&gt;（对象结构）：能枚举它的元素；可以提供一个高层的接口以允许该访问者访问它的元素；可以是一个组合或者一个集合。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Visitor模式适用于：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;一个&lt;u&gt;对象结构包含很多类对象&lt;/u&gt;，它们有不同的接口，而用户想对这些对象&lt;u&gt;实施一些依赖于其具体类的操作&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;需要对一个&lt;u&gt;对象结构中的对象进行很多不同的并且不相关的操作&lt;/u&gt;，而又想要&lt;u&gt;避免&lt;/u&gt;这些操作&lt;u&gt;“污染”&lt;/u&gt;这些对象的类。&lt;/p&gt;
+&lt;p&gt;Visitor使得用户&lt;u&gt;可以将相关的操作集中起来定义在一个类中&lt;/u&gt;。当该对象结构被很多应用共享时，用Visitor模式让每个应用仅包含需要用到的操作。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;u&gt;定义对象结构的类很少改变&lt;/u&gt;，但经常需要在此结构上定义新的操作。&lt;/p&gt;
+&lt;p&gt;改变对象结构类需要重定义对所有访问者的接口，这可能需要很大的代价。如果对象结构类经常改变，那么可能还是在这些类中定义这些操作较好。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;题目选项描述：&lt;/p&gt;
+&lt;p&gt;需要对一个对象结构中的对象进行很多不同的并且不相关的操作。&lt;/p&gt;
+&lt;/blockquote&gt;
 </description>
         </item>
         <item>
@@ -978,18 +2052,18 @@
 </description>
         </item>
         <item>
-        <title>软件设计师——数据结构</title>
-        <link>https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+        <title>数据结构（软件设计师）</title>
+        <link>https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/</link>
         <pubDate>Tue, 04 Apr 2023 17:17:20 +0800</pubDate>
         
-        <guid>https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
+        <guid>https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/</guid>
         <description>&lt;h1 id=&#34;复杂度&#34;&gt;复杂度&lt;/h1&gt;
 &lt;h2 id=&#34;大o表示法&#34;&gt;大O表示法&lt;/h2&gt;
 &lt;p&gt;算法时间复杂度以算法中基本操附重复执行的次数（简称为频度）作为算法的时间度量。一般不必要精确计算出算法的时间复杂度，只要大致计算出相应的数量级即可，使用大$O$表示法表示（空间复杂度也是）。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/1681099842666.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1681099842666.png&#34;
 	width=&#34;1014&#34;
 	height=&#34;100&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/1681099842666_hu8fb0d0a3c83abecf36c375990db2efe0_51379_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/1681099842666_hu8fb0d0a3c83abecf36c375990db2efe0_51379_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1681099842666_hu8fb0d0a3c83abecf36c375990db2efe0_51379_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1681099842666_hu8fb0d0a3c83abecf36c375990db2efe0_51379_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1026,10 +2100,10 @@ $$&lt;/p&gt;
 &lt;p&gt;即，当$n \ge n_0$时，$c_1g(n) \le f(n) \le c_2g(n)$。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1681110832416.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1681110832416.png&#34;
 	width=&#34;966&#34;
 	height=&#34;1204&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1681110832416_hud8e84328d379d2eda520e5c710188239_380512_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1681110832416_hud8e84328d379d2eda520e5c710188239_380512_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1681110832416_hud8e84328d379d2eda520e5c710188239_380512_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1681110832416_hud8e84328d379d2eda520e5c710188239_380512_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;递归式主方法&#34;
@@ -1099,10 +2173,10 @@ $$&lt;/p&gt;
 &lt;h2 id=&#34;顺序存储结构&#34;&gt;顺序存储结构&lt;/h2&gt;
 &lt;p&gt;线性表的&lt;strong&gt;顺序存储&lt;/strong&gt;是指用一组&lt;strong&gt;地址连续的存储单元&lt;/strong&gt;依次存储线性表中的数据元素，从而使得逻辑上相邻的两个元素在物理位置上也相邻。在这种存储方式下，元素间的逻辑关系无须占用额外的空间来存储。&lt;/p&gt;
 &lt;p&gt;其存储结构如图所示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680610120418.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680610120418.png&#34;
 	width=&#34;130&#34;
 	height=&#34;266&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680610120418_hu2b33a584fc5a2d635ec65d6abeb2f0a4_3927_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680610120418_hu2b33a584fc5a2d635ec65d6abeb2f0a4_3927_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680610120418_hu2b33a584fc5a2d635ec65d6abeb2f0a4_3927_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680610120418_hu2b33a584fc5a2d635ec65d6abeb2f0a4_3927_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;顺序表存储结构&#34;
@@ -1187,10 +2261,10 @@ $$&lt;/p&gt;
 &lt;h2 id=&#34;链式存储结构&#34;&gt;链式存储结构&lt;/h2&gt;
 &lt;p&gt;线性表的&lt;strong&gt;链式存储&lt;/strong&gt;是指&lt;strong&gt;通过指针链接起来&lt;/strong&gt;的结点来存储数据元素。&lt;/p&gt;
 &lt;p&gt;其存储结构如下所示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680610469403.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680610469403.png&#34;
 	width=&#34;403&#34;
 	height=&#34;49&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680610469403_hueeee19018a01756f2e48de06f8910c88_6757_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680610469403_hueeee19018a01756f2e48de06f8910c88_6757_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680610469403_hueeee19018a01756f2e48de06f8910c88_6757_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680610469403_hueeee19018a01756f2e48de06f8910c88_6757_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;链式表存储结构&#34;
@@ -1216,10 +2290,10 @@ $$&lt;/p&gt;
 &lt;li&gt;长度不固定。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;链式表结点之间通过指针域构成一个链表，&lt;u&gt;若结点中只有一个指针域，则称为线性链表&lt;/u&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680610514354.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680610514354.png&#34;
 	width=&#34;685&#34;
 	height=&#34;64&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680610514354_hu9c9f9d7fee45544c6864faab3f820061_7122_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680610514354_hu9c9f9d7fee45544c6864faab3f820061_7122_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680610514354_hu9c9f9d7fee45544c6864faab3f820061_7122_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680610514354_hu9c9f9d7fee45544c6864faab3f820061_7122_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;链式表存储结构&#34;
@@ -1254,10 +2328,10 @@ $$&lt;/p&gt;
 &lt;p&gt;顺序栈的空间容量有限，所以每次入栈时都需要判断栈是否为满。&lt;/p&gt;
 &lt;h2 id=&#34;链式存储结构-1&#34;&gt;链式存储结构&lt;/h2&gt;
 &lt;p&gt;栈的链式存储结构称为&lt;strong&gt;链栈&lt;/strong&gt;。链栈的头指针就是栈顶指针。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680676944766.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680676944766.png&#34;
 	width=&#34;238&#34;
 	height=&#34;265&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680676944766_hu1bea4090283c9929deed80a707d4d0a3_11895_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680676944766_hu1bea4090283c9929deed80a707d4d0a3_11895_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680676944766_hu1bea4090283c9929deed80a707d4d0a3_11895_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680676944766_hu1bea4090283c9929deed80a707d4d0a3_11895_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;链栈的存储结构&#34;
@@ -1295,10 +2369,10 @@ $$&lt;/p&gt;
 &lt;li&gt;队尾指针：指向队尾元素的下标。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果顺序队列只按照数组下标大小顺序来设置指针（对头指针的值永不大于队尾指针），那么在经过一段时间的操作后，对头指针有可能指向的并不是数组的第一个元素，此时队列的长度永远都到达不了数组的长度（空间无法被充分利用，实际使用的长度和逻辑长度不符）。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680677900098.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680677900098.png&#34;
 	width=&#34;959&#34;
 	height=&#34;323&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680677900098_hua0e0c24049b10a1b1a22eff29a314663_53364_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680677900098_hua0e0c24049b10a1b1a22eff29a314663_53364_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680677900098_hua0e0c24049b10a1b1a22eff29a314663_53364_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680677900098_hua0e0c24049b10a1b1a22eff29a314663_53364_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;队列操作&#34;
@@ -1310,10 +2384,10 @@ $$&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;为了解决这个问题，我们可以把数组想象为一个环型的结构（将最后一个元素和第一个元素连接起来，队头指针可以比队尾指针大）。如果此时队列的状态是上图中步骤$(e)$的状态，此时再插入元素，可以将元素放在数组索引0的位置，再让队尾指针始终保持在队列最后一个元素的索引之后即可。将这种队列称为&lt;strong&gt;循环队列&lt;/strong&gt;，如：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680678225885.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680678225885.png&#34;
 	width=&#34;907&#34;
 	height=&#34;202&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680678225885_hu78897751e6ca29164f26d83cde2f776e_48040_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680678225885_hu78897751e6ca29164f26d83cde2f776e_48040_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680678225885_hu78897751e6ca29164f26d83cde2f776e_48040_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680678225885_hu78897751e6ca29164f26d83cde2f776e_48040_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;循环队列&#34;
@@ -1327,10 +2401,10 @@ $$&lt;/p&gt;
 &lt;h2 id=&#34;链式存储结构-2&#34;&gt;链式存储结构&lt;/h2&gt;
 &lt;p&gt;队列的链式存储也称为&lt;strong&gt;链队列&lt;/strong&gt;（&lt;strong&gt;链队&lt;/strong&gt;）。这里为了便于操作，可以给链队列添加一个头结点，并令头指针指向头结点。因此，队列为空的判定条件是头指针和尾指针的值相同，且
 均指向头结点。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680678441791.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680678441791.png&#34;
 	width=&#34;278&#34;
 	height=&#34;340&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680678441791_hud106655f2d3cb3393c4501ce0717f1de_16473_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680678441791_hud106655f2d3cb3393c4501ce0717f1de_16473_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680678441791_hud106655f2d3cb3393c4501ce0717f1de_16473_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680678441791_hud106655f2d3cb3393c4501ce0717f1de_16473_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1459,10 +2533,10 @@ $$&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;二维数组（仅讨论顺序存储结构）：&lt;/p&gt;
 &lt;p&gt;二维数组的存储结构（如下图），可以分为以行为主序（下图左边）和以列为主序（下图右边）两种。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680693946560.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680693946560.png&#34;
 	width=&#34;451&#34;
 	height=&#34;448&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680693946560_hu1932cb3790ae3468aeeee7cc636c93c8_34859_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680693946560_hu1932cb3790ae3468aeeee7cc636c93c8_34859_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680693946560_hu1932cb3790ae3468aeeee7cc636c93c8_34859_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680693946560_hu1932cb3790ae3468aeeee7cc636c93c8_34859_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1591,10 +2665,10 @@ $$&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;PS：《软件设计师教程（第五版）》中一维数组的下标$k$的取值范围错了：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/1680698007514.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1680698007514.png&#34;
 	width=&#34;999&#34;
 	height=&#34;344&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/1680698007514_hud68653e5fe46341035cf0f04b58f1fb8_157083_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/1680698007514_hud68653e5fe46341035cf0f04b58f1fb8_157083_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1680698007514_hud68653e5fe46341035cf0f04b58f1fb8_157083_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1680698007514_hud68653e5fe46341035cf0f04b58f1fb8_157083_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;对称矩阵&#34;
@@ -1770,10 +2844,10 @@ $$&lt;/p&gt;
 &lt;p&gt;完全二叉树适合采用顺序存储结构，而一般二叉树则不适合。&lt;/p&gt;
 &lt;h2 id=&#34;链式存储结构-4&#34;&gt;链式存储结构&lt;/h2&gt;
 &lt;p&gt;可以用&lt;strong&gt;三叉链表或二叉链表&lt;/strong&gt;来存储二叉树（一个结点含有3个或2个指针，其中必须有两个指针来分别存储左子树和右子树的根结点）。链表的头指针指向二叉树根结点：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680770614240.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680770614240.png&#34;
 	width=&#34;980&#34;
 	height=&#34;337&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680770614240_hu74a2d83457551f99334a785fee2a7f2b_53953_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680770614240_hu74a2d83457551f99334a785fee2a7f2b_53953_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680770614240_hu74a2d83457551f99334a785fee2a7f2b_53953_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680770614240_hu74a2d83457551f99334a785fee2a7f2b_53953_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;二叉树的链表存储结构&#34;
@@ -1975,10 +3049,10 @@ $$&lt;/p&gt;
 &lt;li&gt;将树中每个结点的左分支标上0，右分支标上1（左0右1）。&lt;/li&gt;
 &lt;li&gt;每个叶子结点代表字符的编码就是从根到叶子的路径上组成的0、1串。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680836524813.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680836524813.png&#34;
 	width=&#34;347&#34;
 	height=&#34;334&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680836524813_hu78baa79acc8330412526e447ee3074d0_24961_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680836524813_hu78baa79acc8330412526e447ee3074d0_24961_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680836524813_hu78baa79acc8330412526e447ee3074d0_24961_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680836524813_hu78baa79acc8330412526e447ee3074d0_24961_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;哈夫曼编码&#34;
@@ -1991,10 +3065,10 @@ $$&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;p&gt;其中，字符$a$字符$b$、$c$、$d$、$e$的编码分别为00、01、100、11、101。&lt;/p&gt;
 &lt;h3 id=&#34;压缩比&#34;&gt;压缩比&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680959771881.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680959771881.png&#34;
 	width=&#34;784&#34;
 	height=&#34;489&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680959771881_hu4f7b4b1585cf7b1f2369bc9d93906f07_66292_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1680959771881_hu4f7b4b1585cf7b1f2369bc9d93906f07_66292_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680959771881_hu4f7b4b1585cf7b1f2369bc9d93906f07_66292_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680959771881_hu4f7b4b1585cf7b1f2369bc9d93906f07_66292_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;压缩比例题&#34;
@@ -2277,10 +3351,10 @@ $$&lt;/p&gt;
 &lt;li&gt;可能存在弧$&amp;lt;v_i,v_j&amp;gt;$，一定不存在弧$&amp;lt;v_j,v_i&amp;gt;$；&lt;/li&gt;
 &lt;li&gt;可能存在$v_i$到$v_j$的路径，一定不存在$v_j$到$v_i$的路径。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1681115534531.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1681115534531.png&#34;
 	width=&#34;133&#34;
 	height=&#34;173&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1681115534531_hu9a36ad2327d0139feeb1c8e76c812997_7356_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1681115534531_hu9a36ad2327d0139feeb1c8e76c812997_7356_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1681115534531_hu9a36ad2327d0139feeb1c8e76c812997_7356_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1681115534531_hu9a36ad2327d0139feeb1c8e76c812997_7356_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;AOV网拓扑排序例子&#34;
@@ -2659,10 +3733,10 @@ $$&lt;/p&gt;
 &lt;p&gt;每趟排序，根据对应的增量$t_i$，将待排序列分割成若干长度为$t_i$的子序列，分别对各子表进行直接插入排序。仅增量因子为$1$时，整个序列作为一个表来处理，表长度即为整个序列的长度。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1681209778321.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1681209778321.png&#34;
 	width=&#34;649&#34;
 	height=&#34;460&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1681209778321_hu3445f2349c32f6de565415fce2b1b7c8_87538_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/uTools_1681209778321_hu3445f2349c32f6de565415fce2b1b7c8_87538_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1681209778321_hu3445f2349c32f6de565415fce2b1b7c8_87538_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1681209778321_hu3445f2349c32f6de565415fce2b1b7c8_87538_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3263,11 +4337,11 @@ $$&lt;/p&gt;
 </description>
         </item>
         <item>
-        <title>软件设计师——计算机系统</title>
-        <link>https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/</link>
+        <title>计算机系统（软件设计师）</title>
+        <link>https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/</link>
         <pubDate>Fri, 24 Mar 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/</guid>
+        <guid>https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/</guid>
         <description>&lt;h1 id=&#34;计算机的基本单位&#34;&gt;计算机的基本单位&lt;/h1&gt;
 &lt;table&gt;
 &lt;tr&gt;
@@ -3457,10 +4531,10 @@ $$&lt;/p&gt;
 &lt;p&gt;其实（个人认为）根据补码和移码的定义，可以将补码当作特殊的移码。其bias为$2^n$。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;各种码制带符号数的范围&#34;&gt;各种码制带符号数的范围&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B8%A6%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E8%8C%83%E5%9B%B4.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/%E5%B8%A6%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E8%8C%83%E5%9B%B4.png&#34;
 	width=&#34;1174&#34;
 	height=&#34;273&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B8%A6%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E8%8C%83%E5%9B%B4_huf86084d3b2fa3b4510a57d1d605f45ba_75716_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B8%A6%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E8%8C%83%E5%9B%B4_huf86084d3b2fa3b4510a57d1d605f45ba_75716_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/%E5%B8%A6%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E8%8C%83%E5%9B%B4_huf86084d3b2fa3b4510a57d1d605f45ba_75716_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/%E5%B8%A6%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E8%8C%83%E5%9B%B4_huf86084d3b2fa3b4510a57d1d605f45ba_75716_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3542,10 +4616,10 @@ $$&lt;/p&gt;
 &lt;li&gt;校验位由自身校验。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Example：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679983905932.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1679983905932.png&#34;
 	width=&#34;1023&#34;
 	height=&#34;1049&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679983905932_hu8233f94300cd2978c7262586b5e1abdc_350868_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679983905932_hu8233f94300cd2978c7262586b5e1abdc_350868_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1679983905932_hu8233f94300cd2978c7262586b5e1abdc_350868_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1679983905932_hu8233f94300cd2978c7262586b5e1abdc_350868_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3565,10 +4639,10 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;循环冗余码&#34;&gt;循环冗余码&lt;/h2&gt;
 &lt;p&gt;循环冗余校验码（Cyclic Redundancy Check，CRC）广泛应用于数据通信领域和磁介质存储系统中。它利用生成多项式为k个数据位产生个校验位来进行编码，其编码长度为k+r。CRC的代码格式为：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679825785079.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1679825785079.png&#34;
 	width=&#34;613&#34;
 	height=&#34;92&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679825785079_hue59488e391052e21a77b5920f121b7a3_12188_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679825785079_hue59488e391052e21a77b5920f121b7a3_12188_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1679825785079_hue59488e391052e21a77b5920f121b7a3_12188_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1679825785079_hue59488e391052e21a77b5920f121b7a3_12188_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3732,10 +4806,10 @@ $$&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;直接映像：主存的块与Cache块的对应关系是固定的。冲突多、关系固定。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884025087.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1679884025087.png&#34;
 	width=&#34;825&#34;
 	height=&#34;526&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884025087_hu5b011bac95c34a4b59523b3fc3e9bdf5_66159_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884025087_hu5b011bac95c34a4b59523b3fc3e9bdf5_66159_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1679884025087_hu5b011bac95c34a4b59523b3fc3e9bdf5_66159_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1679884025087_hu5b011bac95c34a4b59523b3fc3e9bdf5_66159_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3747,10 +4821,10 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;全相联映像：允许主存的任一块调入Cache存储器的任一块。冲突少、关系不固定。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884252415.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1679884252415.png&#34;
 	width=&#34;730&#34;
 	height=&#34;538&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884252415_hu0e33dbcf5fa3fed2f738b321711ef11e_91734_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679884252415_hu0e33dbcf5fa3fed2f738b321711ef11e_91734_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1679884252415_hu0e33dbcf5fa3fed2f738b321711ef11e_91734_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1679884252415_hu0e33dbcf5fa3fed2f738b321711ef11e_91734_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3774,10 +4848,10 @@ $$&lt;/p&gt;
 &lt;p&gt;中断是一种非常重要的技术，&lt;u&gt;输入输出&lt;/u&gt;设备和&lt;u&gt;主机交换数据&lt;/u&gt;、&lt;u&gt;分时操作&lt;/u&gt;、&lt;u&gt;实时系统&lt;/u&gt;、&lt;u&gt;计算机网络&lt;/u&gt;和&lt;u&gt;分布式计算机系统&lt;/u&gt;中都要用到这种技术。为了提高响应中断的速度，通常把所有中断服务程序的入口地址（或称为中断向量）汇集为中断向量表。&lt;/p&gt;
 &lt;h2 id=&#34;输入输出控制方式&#34;&gt;输入输出控制方式&lt;/h2&gt;
 &lt;p&gt;程序查询方式（程序直接控制方式）：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888001780.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1679888001780.png&#34;
 	width=&#34;754&#34;
 	height=&#34;1174&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888001780_hud6ebe6012cde16108d1ee611e4248e31_240258_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888001780_hud6ebe6012cde16108d1ee611e4248e31_240258_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1679888001780_hud6ebe6012cde16108d1ee611e4248e31_240258_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1679888001780_hud6ebe6012cde16108d1ee611e4248e31_240258_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3792,10 +4866,10 @@ $$&lt;/p&gt;
 &lt;li&gt;由CPU将数放入内存。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;中断驱动方式：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888578058.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1679888578058.png&#34;
 	width=&#34;787&#34;
 	height=&#34;1134&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888578058_huafad4d8f462045fe6ed8d3f6574e2433_264777_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888578058_huafad4d8f462045fe6ed8d3f6574e2433_264777_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1679888578058_huafad4d8f462045fe6ed8d3f6574e2433_264777_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1679888578058_huafad4d8f462045fe6ed8d3f6574e2433_264777_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3812,10 +4886,10 @@ $$&lt;/p&gt;
 &lt;li&gt;由CPU将数据放入内存。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;DMA方式（直接存储器存储方式）：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888972074.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1679888972074.png&#34;
 	width=&#34;816&#34;
 	height=&#34;723&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888972074_hu524534b10c6d25022b5676913927ee92_146843_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/uTools_1679888972074_hu524534b10c6d25022b5676913927ee92_146843_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1679888972074_hu524534b10c6d25022b5676913927ee92_146843_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1679888972074_hu524534b10c6d25022b5676913927ee92_146843_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3935,10 +5009,10 @@ $$&lt;/p&gt;
 &lt;p&gt;加密可以阻止被动攻击，认证可以阻止主动攻击（不可以处理被动攻击）。&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;系统可靠度&#34;&gt;系统可靠度&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E4%B8%B2%E8%81%94%E7%B3%BB%E7%BB%9F.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/%E4%B8%B2%E8%81%94%E7%B3%BB%E7%BB%9F.png&#34;
 	width=&#34;1157&#34;
 	height=&#34;400&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E4%B8%B2%E8%81%94%E7%B3%BB%E7%BB%9F_huc533c9ebe7073a641e0c4f0ca26fe76d_129377_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E4%B8%B2%E8%81%94%E7%B3%BB%E7%BB%9F_huc533c9ebe7073a641e0c4f0ca26fe76d_129377_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/%E4%B8%B2%E8%81%94%E7%B3%BB%E7%BB%9F_huc533c9ebe7073a641e0c4f0ca26fe76d_129377_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/%E4%B8%B2%E8%81%94%E7%B3%BB%E7%BB%9F_huc533c9ebe7073a641e0c4f0ca26fe76d_129377_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -3947,10 +5021,10 @@ $$&lt;/p&gt;
 		data-flex-basis=&#34;694px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B9%B6%E8%81%94%E7%B3%BB%E7%BB%9F.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/%E5%B9%B6%E8%81%94%E7%B3%BB%E7%BB%9F.png&#34;
 	width=&#34;1133&#34;
 	height=&#34;376&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B9%B6%E8%81%94%E7%B3%BB%E7%BB%9F_hu0151f1bd7a524d241456bee3273c718e_125234_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/%E5%B9%B6%E8%81%94%E7%B3%BB%E7%BB%9F_hu0151f1bd7a524d241456bee3273c718e_125234_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/%E5%B9%B6%E8%81%94%E7%B3%BB%E7%BB%9F_hu0151f1bd7a524d241456bee3273c718e_125234_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/%E5%B9%B6%E8%81%94%E7%B3%BB%E7%BB%9F_hu0151f1bd7a524d241456bee3273c718e_125234_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
