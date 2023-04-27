@@ -1198,7 +1198,7 @@ $$&lt;/p&gt;
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;1NF&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;所有的范式都满足1NF&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;每一个分量是不可再分的数据项&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;2NF&lt;/td&gt;
