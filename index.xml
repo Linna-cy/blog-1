@@ -304,7 +304,7 @@ $$&lt;/p&gt;
 &lt;li&gt;属性名（或列的序号）；&lt;/li&gt;
 &lt;li&gt;常数；&lt;/li&gt;
 &lt;li&gt;运算符&lt;/li&gt;
-&lt;li&gt;算术比较符（$&amp;lt;, \le, &amp;gt; \ge, \not\eq$）；&lt;/li&gt;
+&lt;li&gt;算术比较符（$&amp;lt;, \le, &amp;gt; \ge, \neq$）；&lt;/li&gt;
 &lt;li&gt;逻辑运算符（$wedge, \vee, \neg$）。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
