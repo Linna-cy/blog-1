@@ -681,8 +681,8 @@ $$</p>
 <li>属性名（或列的序号）；</li>
 <li>常数；</li>
 <li>运算符</li>
-<li>算术比较符（$&lt;, \le, &gt; \ge, \neq$）；</li>
-<li>逻辑运算符（$wedge, \vee, \neg$）。</li>
+<li>算术比较符（$&lt;, \le, &gt;, \ge, \neq$）；</li>
+<li>逻辑运算符（$\wedge, \vee, \neg$）。</li>
 </ul>
 </li>
 <li>
@@ -701,7 +701,7 @@ $$</p>
 <li>$X \theta Y$：连接的条件；</li>
 <li>$\theta$：比较运算符；</li>
 <li>$X$和$Y$分别为$R$和$S$上度数相等且可比的属性组；</li>
-<li>$t^n<input checked="" disabled="" type="checkbox"> $表示$R$中$t^n$元组的对应于属性$X$的一个分量；</li>
+<li>$t^n\left[ X \right]$表示$R$中$t^n$元组的对应于属性$X$的一个分量；</li>
 <li>$t^m[Y]$表示$S$中$t^m$元组的对应于属性$Y$的一个分量。</li>
 </ul>
 <p>$\theta$连接也可以表示为：</p>
@@ -710,17 +710,24 @@ R \mathop{\Join}\limits_{i \theta j} S = \{ t| (t=&lt;t^n,t^m&gt;) \wedge (t^n \
 $$</p>
 <p>其中，</p>
 <ul>
-<li>$i=1,2,3,\cdots,n$；</li>
-<li>$j=1,2,3,\cdots,m$；</li>
-<li>$i \theta j$：从两个关系$R$和$S$中选取$R$的第$i$列和$S$的第$j$列之间满足$\theta$运算的元组进行连接。</li>
+<li>
+<p>$i=1,2,3,\cdots,n$；</p>
+</li>
+<li>
+<p>$j=1,2,3,\cdots,m$；</p>
+</li>
+<li>
+<p>$i \theta j$：</p>
+<p>从两个关系$R$和$S$中选取$R$的第$i$列和$S$的第$j$列之间满足$\theta$运算的元组进行连接。</p>
+</li>
 </ul>
-<p>$theta$连接可以由基本的关系运算笛卡儿积和选取运算导出。因此，$theta$连接可表示为：</p>
+<p>$\theta$连接可以由基本的关系运算笛卡儿积和选取运算导出。因此，$\theta$连接可表示为：</p>
 <p>$$
 R \mathop{\Join}\limits_{X \theta Y} S = \sigma_{X \theta Y}(R \times S)
 $$</p>
 <p>或：</p>
 <p>$$
-R \mathop{\Join}\limits_{i \theta j} S = \sigma_{i \theta (i+j)}(R \times S)
+R \mathop{\Join}\limits_{i \theta j} S = \sigma_{i \theta j}(R \times S)
 $$</p>
 </li>
 <li>
@@ -728,6 +735,10 @@ $$</p>
 <p>$$
 R \mathop{\Join}\limits_{i = j} S = \{ t| (t=&lt;t^n,t^m&gt;) \wedge (t^n \in R) \wedge (t^m \in S) \wedge (t^n[i] = t^m[j]) \}
 $$</p>
+</li>
+<li>
+<p>$F$连接：从关系$R$和$S$的笛卡尔积中选取属性值满足某一公式$F$的元组，记为$\mathop{\Join}\limits_{F}$。</p>
+<p>$F$是形为$F_1 \wedge F_2 \wedge \cdots \wedge F_n$的公式，每个$F_p$是形为$i \theta j$的式子。</p>
 </li>
 <li>
 <p><strong>自然连接</strong>：自然连接是一种特殊的等值连接，它要求两个关系中<u>进行比较的分量必须是相同的属性组</u>，并且在结果集中<u>将重复属性列去掉</u>。</p>
@@ -1137,14 +1148,14 @@ WHRER <span style="color:#960050;background-color:#1e0010">列名</span> <span s
 </li>
 <li>
 <p><strong>部分函数依赖</strong>：如果$X \rightarrow Y$，但<strong>Y不完全函数依赖于X</strong>，则称Y对X部分函数依赖，记作$X \stackrel{P}{\longrightarrow} Y$。部分函数依赖也称为局部函数依赖。</p>
-<p>如，$(学号,班级代号) \rightarrow 姓名$，因为$学号 \rightarrow 姓名，所以$(学号,班级代号) \stackrel{P}{\longrightarrow} 姓名$。</p>
+<p>如，（学号，班级代号） $\rightarrow$ 姓名，因为学号 $\rightarrow$ 姓名，所以（学号，班级代号） $\stackrel{P}{\longrightarrow}$ 姓名。</p>
 </li>
 <li>
-<p><strong>传递依赖</strong>：在R(U,F)中（F是U上的一组函数依赖），如果$X \rightarrow Y,\ Y \not\subseteq X,\ Y \rightarrow Z$，则称<strong>Z对X传递依赖</strong>（$X \rightarrow Z$）。</p>
+<p><strong>传递依赖</strong>：在$R(U,F)$中（F是U上的一组函数依赖），如果$X \rightarrow Y,\ Y \not\subseteq X,\ Y \rightarrow Z$，则称<strong>Z对X传递依赖</strong>（$X \rightarrow Z$）。</p>
 <p>即$X \stackrel{f}{\longrightarrow} Y$，且$Y \rightarrow Z$，则$X \rightarrow Z$。</p>
 </li>
 <li>
-<p><strong>码</strong>：设<u>K为R(U,F)中属性的组合</u>，若$K \rightarrow U$，且对于K的任何一个真子集K&rsquo;都有<strong>K&rsquo;不能决定U</strong>，则<strong>K为R的候选码</strong>。</p>
+<p><strong>码</strong>：设$K$为$R(U,F)$中属性的组合，若$K \rightarrow U$，且对于$K$的任何一个真子集$K'$都有$K'$不能决定$U$，则$K$为$R$的候选码。</p>
 <p>即$K \stackrel{f}{\rightarrow} U$，那么K是R的候选码。</p>
 <p>若有多个候选码，则选一个作为主码（主键，主关键字）。候选码通常也称为<strong>候选关键字</strong>（候选键，键）。</p>
 </li>
@@ -1156,18 +1167,18 @@ WHRER <span style="color:#960050;background-color:#1e0010">列名</span> <span s
 </li>
 </ul>
 <p><strong>函数依赖的公理系统</strong>（Armstrong公理系统）：</p>
-<p>设关系模式R(U,F)，其中U为属性集，F是U上的一组函数依赖，那么有以下推理规则：</p>
+<p>设关系模式$R(U,F)$，其中$U$为属性集，$F是$U$上的一组函数依赖，那么有以下推理规则：</p>
 <ul>
 <li>
-<p><strong>自反律</strong>（A1）：若$Y \subseteq X \subseteq U$，则$X \rightarrow Y$为F所蕴涵（蕴含）。</p>
-<p>如，$学号,姓名 \rightarrow 姓名$是函数依赖所蕴涵的。</p>
+<p><strong>自反律</strong>（A1）：若$Y \subseteq X \subseteq U$，则$X \rightarrow Y$为$F$所蕴涵（蕴含）。</p>
+<p>如，（学号，姓名） $\rightarrow$ 姓名是函数依赖所蕴涵的。</p>
 </li>
 <li>
-<p><strong>增广律</strong>（A2）：若$X \rightarrow Y$为F所蕴涵，且$Z \subseteq U$,则$XZ \rightarrow XZ$为F所蕴涵。</p>
-<p>如$学号,姓名 \rightarrow 姓名,\ 班级 \subseteq 学生表$，那么$$学号,姓名,班级 \rightarrow 姓名$是函数依赖所蕴涵的。</p>
+<p><strong>增广律</strong>（A2）：若$X \rightarrow Y$为F所蕴涵，且$Z \subseteq U$,则$XZ \rightarrow YZ$为$F$所蕴涵。</p>
+<p>如，学号 $\rightarrow$ 姓名，班级 $\subseteq$ 学生表，那么（学号，班级） $\rightarrow$ （姓名，班级）是函数依赖所蕴涵的。</p>
 </li>
 <li>
-<p><strong>传递律</strong>（A3）：若$X \rightarrow Y,\ Y \rightarrow Z$为F所蕴涵，则$X \rightarrow Z$为F所蕴涵。</p>
+<p><strong>传递律</strong>（A3）：若$X \rightarrow Y,\ Y \rightarrow Z$为$F$所蕴涵，则$X \rightarrow Z$为$F$所蕴涵。</p>
 </li>
 </ul>
 <p>根据上述3条推理规则又可推出下述3条推理规则：</p>
@@ -1177,7 +1188,7 @@ WHRER <span style="color:#960050;background-color:#1e0010">列名</span> <span s
 <li><strong>分解规则</strong>：若$X \rightarrow Y,\ Z \subseteq Y$，则$X \rightarrow Z$为F所蕴涵。</li>
 </ul>
 <blockquote>
-<p>合并规则和分解规则是两个互逆的规则。即$X \rightarrow Y,\ X \rightarrow Z$，可得$X \rightarrow YZ$；那么$X \rightarrow YZ$，也可得$X \rightarrow Y,\ X \rightarrow Z$。</p>
+<p>合并规则和分解规则是两个互逆的规则。即$X \rightarrow Y,\ X \rightarrow Z$，可得$X \rightarrow YZ$；那么$X \rightarrow YZ$，也可得$X \rightarrow Y,\ X \rightarrow Z$（因为$Y,Z \sub YZ$）。</p>
 </blockquote>
 <p>总结：</p>
 <div class="table-wrapper"><table>
@@ -1191,8 +1202,8 @@ WHRER <span style="color:#960050;background-color:#1e0010">列名</span> <span s
 <tbody>
 <tr>
 <td style="text-align:center">函数依赖</td>
-<td style="text-align:left">元组在X上的属性值相等，那么在Y上的属性值也相等</td>
-<td style="text-align:left">X函数决定Y或Y函数依赖于X，记作$X \rightarrow Y$</td>
+<td style="text-align:left">元组在$X$上的属性值相等，那么在$Y$上的属性值也相等</td>
+<td style="text-align:left">$X$函数决定$Y$或$Y$函数依赖于$X$，记作$X \rightarrow Y$</td>
 </tr>
 <tr>
 <td style="text-align:center">非平凡的函数依赖</td>
@@ -1207,17 +1218,17 @@ WHRER <span style="color:#960050;background-color:#1e0010">列名</span> <span s
 <tr>
 <td style="text-align:center">完全函数依赖</td>
 <td style="text-align:left">$X \rightarrow Y$，$X' \subset X$，$X' \not\rightarrow Y$</td>
-<td style="text-align:left">Y对X完全函数依赖，记作$X \stackrel{f}{\longrightarrow} Y$</td>
+<td style="text-align:left">$Y$对$X$完全函数依赖，记作$X \stackrel{f}{\longrightarrow} Y$</td>
 </tr>
 <tr>
 <td style="text-align:center">部分函数依赖（局部函数依赖）</td>
 <td style="text-align:left">$X \rightarrow Y$，$X \stackrel{f}{\not\longrightarrow} Y$</td>
-<td style="text-align:left">Y对X部分函数依赖，记作$X \stackrel{P}{\longrightarrow} Y$</td>
+<td style="text-align:left">$Y$对$X$部分函数依赖，记作$X \stackrel{P}{\longrightarrow} Y$</td>
 </tr>
 <tr>
 <td style="text-align:center">传递依赖</td>
 <td style="text-align:left">$X \rightarrow Y$，$Y \not\subseteq X$，$Y \rightarrow Z$</td>
-<td style="text-align:left">Z对X传递依赖</td>
+<td style="text-align:left">$Z$对$X$传递依赖</td>
 </tr>
 </tbody>
 </table></div>
@@ -1231,7 +1242,7 @@ WHRER <span style="color:#960050;background-color:#1e0010">列名</span> <span s
 <tbody>
 <tr>
 <td style="text-align:center">码（候选码，候选关键字）</td>
-<td style="text-align:left">若$K \stackrel{f}{\rightarrow} U$，则K为R的候选码</td>
+<td style="text-align:left">若$K \stackrel{f}{\rightarrow} U$，则$K$为$R$的候选码</td>
 </tr>
 <tr>
 <td style="text-align:center">主属性</td>
@@ -1243,7 +1254,7 @@ WHRER <span style="color:#960050;background-color:#1e0010">列名</span> <span s
 </tr>
 <tr>
 <td style="text-align:center">外码</td>
-<td style="text-align:left">X非R的码，但X是另一个关系的码，则称X为外码</td>
+<td style="text-align:left">$X$非$R$的码，但$X$是另一个关系的码，则称$X$为外码</td>
 </tr>
 </tbody>
 </table></div>
@@ -1264,12 +1275,12 @@ WHRER <span style="color:#960050;background-color:#1e0010">列名</span> <span s
 </tr>
 <tr>
 <td style="text-align:center">增广律</td>
-<td style="text-align:left">$X \rightarrow Y$为F所蕴涵，$Z \subseteq U$</td>
+<td style="text-align:left">$X \rightarrow Y$，$Z \subseteq U$</td>
 <td style="text-align:left">$XZ \rightarrow XZ$</td>
 </tr>
 <tr>
 <td style="text-align:center">传递律</td>
-<td style="text-align:left">$X \rightarrow Y,\ Y \rightarrow Z$为F所蕴涵</td>
+<td style="text-align:left">$X \rightarrow Y,\ Y \rightarrow Z$</td>
 <td style="text-align:left">$X \rightarrow Z$</td>
 </tr>
 </tbody>
@@ -1729,7 +1740,7 @@ $$</p>
 <p><strong>实体</strong>：用<strong>矩形</strong>表示。</p>
 </li>
 <li>
-<p><strong>联系</strong>：用<strong>棱形</strong>表示，并用无向边分别与有关实体连接起来，同时在无向边标注联系的类型（1:1，1:n 或 m:n）。</p>
+<p><strong>联系</strong>：用<strong>棱形</strong>表示，并用无向边分别与有关实体连接起来，同时在无向边标注联系的类型（$1:1$，$1:n$ 或 $m:n$）。</p>
 </li>
 <li>
 <p><strong>属性</strong>：用<strong>椭圆形</strong>表示，并用无向边将其与相应的实体连接起来</p>
@@ -1795,7 +1806,7 @@ $$</p>
 <li>高层抽象流图一般反映系统的概貌，对数据的引用较为笼统；</li>
 <li>底层又可能过于细致，不能体现数据的关联关系。</li>
 </ul>
-<p>因此要<u>选择适当层次的数据流图，让这一层的每一部分对应一个局部应用，实现某一项功能。从这一层入手，就能很好地设计<strong>分E-R图</strong>。</p>
+<p>因此要<u>选择适当层次的数据流图，让这一层的每一部分对应一个局部应用，实现某一项功能。从这一层入手，就能很好地设计<strong>分E-R图</strong></u>。</p>
 </li>
 <li>
 <p>逐一设计分E-R图。</p>
@@ -1816,14 +1827,18 @@ $$</p>
 <p>逻辑结构设计就是在概念结构设计的基础上进行数据模型设计，可以是层次模型、网状模型和关系模型。</p>
 <p>通常是把概念模型转换成为<u>某个具体的数据库管理系统所支持的结构数据模型</u>（与DBMS有关）。即，将概念结构设计所得的E-R模型转换成关系模式。</p>
 <p>逻辑结构设计的工作步骤：</p>
-<p><img src="/uTools_1682561103092.png"
-	
-	
-	
+<p><img src="/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682577339219.png"
+	width="581"
+	height="296"
+	srcset="/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682577339219_hu0e28af6a5a7453a0a5eb6666d48c94c7_44563_480x0_resize_box_3.png 480w, /p/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682577339219_hu0e28af6a5a7453a0a5eb6666d48c94c7_44563_1024x0_resize_box_3.png 1024w"
 	loading="lazy"
 	
 		alt="逻辑结构设计的工作步骤"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="196"
+		data-flex-basis="471px"
 	
 ></p>
 <h3 id="e-r-模型转换关系模式">E-R 模型转换关系模式</h3>
@@ -1880,10 +1895,8 @@ $$</p>
 </li>
 <li>
 <p>方式2：</p>
-<p>$$
-厂长(姓名,性别,年龄) \\
-工厂(厂号,厂名,地点,(厂长)姓名,任期)
-$$</p>
+<p>厂长（姓名，性别，年龄）</p>
+<p>工厂（厂号，厂名，地点，（厂长）姓名，任期）</p>
 </li>
 </ul>
 </li>
@@ -1927,14 +1940,18 @@ $$</p>
 <p>多对多联系的转换：</p>
 <p>多对多联系只能转换成一个独立的关系模式，关系模式的名称取联系的名称，关系模式的属性取该联系所关联的两个多方实体的码及联系的属性，关系的码是多方实体的码构成的属性组。</p>
 <p>例如：</p>
-<p><img src="/uTools_1682564018777.png"
-	
-	
-	
+<p><img src="/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682564018777.png"
+	width="327"
+	height="373"
+	srcset="/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682564018777_hu8cf40dc2a076405a9cb5ca4646519d5e_36334_480x0_resize_box_3.png 480w, /p/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682564018777_hu8cf40dc2a076405a9cb5ca4646519d5e_36334_1024x0_resize_box_3.png 1024w"
 	loading="lazy"
 	
 		alt="多对多联系转换的示例"
 	
+	
+		class="gallery-image" 
+		data-flex-grow="87"
+		data-flex-basis="210px"
 	
 ></p>
 <p>转换成：</p>
@@ -1983,18 +2000,18 @@ $$</p>
 <p>事务的ACID性质：</p>
 <ul>
 <li>
-<p>原子性（Atomicity）：事务是原子的，要么都做，要么都不做。</p>
+<p><strong>原子性</strong>（Atomicity）：事务是原子的，要么都做，要么都不做。</p>
 </li>
 <li>
-<p>一致性（Consistency）：事务执行的结果必须保证数据库从一个一致性状态变到另一个一致性状态。</p>
+<p><strong>一致性</strong>（Consistency）：事务执行的结果必须保证数据库从一个一致性状态变到另一个一致性状态。</p>
 <p>因此，当数据库只包含成功事务提交的结果时，称数据库处于一致性状态。</p>
 </li>
 <li>
-<p>隔离性（Isolation）：事务相互隔离。</p>
+<p><strong>隔离性</strong>（Isolation）：事务相互隔离。</p>
 <p>当多个事务并发执行时，任一事务的更新操作直到其成功提交的整个过程，对其他事务都是不可见的</p>
 </li>
 <li>
-<p>持久性（Durability）：一旦事务成功提交，即使数据库崩溃，其对数据库的更新操作也将永久有效。</p>
+<p><strong>持久性</strong>（Durability）：一旦事务成功提交，即使数据库崩溃，其对数据库的更新操作也将永久有效。</p>
 </li>
 </ul>
 <hr>
@@ -2050,9 +2067,9 @@ $$</p>
 <h1 id="并发控制">并发控制</h1>
 <p>所谓并发操作，是指在多用户共享的系统中许多用户可能同时对同一数据进行操作。并发操作带来的问题是数据的不一致性，主要有三类：</p>
 <ul>
-<li>丢失更新</li>
-<li>不可重复读</li>
-<li>读脏数据</li>
+<li><strong>丢失更新</strong></li>
+<li><strong>不可重复读</strong></li>
+<li><strong>读脏数据</strong></li>
 </ul>
 <p>其主要原因是事务的并发操作破坏了事务的隔离性。DBMS的并发控制子系统负责协调并发事务的执行，保证数据库的完整性不受破坏，避免用户得到不正确的数据。</p>
 <h2 id="封锁">封锁</h2>

@@ -304,8 +304,8 @@ $$&lt;/p&gt;
 &lt;li&gt;属性名（或列的序号）；&lt;/li&gt;
 &lt;li&gt;常数；&lt;/li&gt;
 &lt;li&gt;运算符&lt;/li&gt;
-&lt;li&gt;算术比较符（$&amp;lt;, \le, &amp;gt; \ge, \neq$）；&lt;/li&gt;
-&lt;li&gt;逻辑运算符（$wedge, \vee, \neg$）。&lt;/li&gt;
+&lt;li&gt;算术比较符（$&amp;lt;, \le, &amp;gt;, \ge, \neq$）；&lt;/li&gt;
+&lt;li&gt;逻辑运算符（$\wedge, \vee, \neg$）。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -324,7 +324,7 @@ $$&lt;/p&gt;
 &lt;li&gt;$X \theta Y$：连接的条件；&lt;/li&gt;
 &lt;li&gt;$\theta$：比较运算符；&lt;/li&gt;
 &lt;li&gt;$X$和$Y$分别为$R$和$S$上度数相等且可比的属性组；&lt;/li&gt;
-&lt;li&gt;$t^n&lt;input checked=&#34;&#34; disabled=&#34;&#34; type=&#34;checkbox&#34;&gt; $表示$R$中$t^n$元组的对应于属性$X$的一个分量；&lt;/li&gt;
+&lt;li&gt;$t^n\left[ X \right]$表示$R$中$t^n$元组的对应于属性$X$的一个分量；&lt;/li&gt;
 &lt;li&gt;$t^m[Y]$表示$S$中$t^m$元组的对应于属性$Y$的一个分量。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;$\theta$连接也可以表示为：&lt;/p&gt;
@@ -333,17 +333,24 @@ R \mathop{\Join}\limits_{i \theta j} S = \{ t| (t=&amp;lt;t^n,t^m&amp;gt;) \wedg
 $$&lt;/p&gt;
 &lt;p&gt;其中，&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;$i=1,2,3,\cdots,n$；&lt;/li&gt;
-&lt;li&gt;$j=1,2,3,\cdots,m$；&lt;/li&gt;
-&lt;li&gt;$i \theta j$：从两个关系$R$和$S$中选取$R$的第$i$列和$S$的第$j$列之间满足$\theta$运算的元组进行连接。&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$i=1,2,3,\cdots,n$；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$j=1,2,3,\cdots,m$；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$i \theta j$：&lt;/p&gt;
+&lt;p&gt;从两个关系$R$和$S$中选取$R$的第$i$列和$S$的第$j$列之间满足$\theta$运算的元组进行连接。&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;$theta$连接可以由基本的关系运算笛卡儿积和选取运算导出。因此，$theta$连接可表示为：&lt;/p&gt;
+&lt;p&gt;$\theta$连接可以由基本的关系运算笛卡儿积和选取运算导出。因此，$\theta$连接可表示为：&lt;/p&gt;
 &lt;p&gt;$$
 R \mathop{\Join}\limits_{X \theta Y} S = \sigma_{X \theta Y}(R \times S)
 $$&lt;/p&gt;
 &lt;p&gt;或：&lt;/p&gt;
 &lt;p&gt;$$
-R \mathop{\Join}\limits_{i \theta j} S = \sigma_{i \theta (i+j)}(R \times S)
+R \mathop{\Join}\limits_{i \theta j} S = \sigma_{i \theta j}(R \times S)
 $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -351,6 +358,10 @@ $$&lt;/p&gt;
 &lt;p&gt;$$
 R \mathop{\Join}\limits_{i = j} S = \{ t| (t=&amp;lt;t^n,t^m&amp;gt;) \wedge (t^n \in R) \wedge (t^m \in S) \wedge (t^n[i] = t^m[j]) \}
 $$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$F$连接：从关系$R$和$S$的笛卡尔积中选取属性值满足某一公式$F$的元组，记为$\mathop{\Join}\limits_{F}$。&lt;/p&gt;
+&lt;p&gt;$F$是形为$F_1 \wedge F_2 \wedge \cdots \wedge F_n$的公式，每个$F_p$是形为$i \theta j$的式子。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;自然连接&lt;/strong&gt;：自然连接是一种特殊的等值连接，它要求两个关系中&lt;u&gt;进行比较的分量必须是相同的属性组&lt;/u&gt;，并且在结果集中&lt;u&gt;将重复属性列去掉&lt;/u&gt;。&lt;/p&gt;
@@ -760,14 +771,14 @@ WHRER &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;部分函数依赖&lt;/strong&gt;：如果$X \rightarrow Y$，但&lt;strong&gt;Y不完全函数依赖于X&lt;/strong&gt;，则称Y对X部分函数依赖，记作$X \stackrel{P}{\longrightarrow} Y$。部分函数依赖也称为局部函数依赖。&lt;/p&gt;
-&lt;p&gt;如，$(学号,班级代号) \rightarrow 姓名$，因为$学号 \rightarrow 姓名，所以$(学号,班级代号) \stackrel{P}{\longrightarrow} 姓名$。&lt;/p&gt;
+&lt;p&gt;如，（学号，班级代号） $\rightarrow$ 姓名，因为学号 $\rightarrow$ 姓名，所以（学号，班级代号） $\stackrel{P}{\longrightarrow}$ 姓名。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;传递依赖&lt;/strong&gt;：在R(U,F)中（F是U上的一组函数依赖），如果$X \rightarrow Y,\ Y \not\subseteq X,\ Y \rightarrow Z$，则称&lt;strong&gt;Z对X传递依赖&lt;/strong&gt;（$X \rightarrow Z$）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;传递依赖&lt;/strong&gt;：在$R(U,F)$中（F是U上的一组函数依赖），如果$X \rightarrow Y,\ Y \not\subseteq X,\ Y \rightarrow Z$，则称&lt;strong&gt;Z对X传递依赖&lt;/strong&gt;（$X \rightarrow Z$）。&lt;/p&gt;
 &lt;p&gt;即$X \stackrel{f}{\longrightarrow} Y$，且$Y \rightarrow Z$，则$X \rightarrow Z$。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;码&lt;/strong&gt;：设&lt;u&gt;K为R(U,F)中属性的组合&lt;/u&gt;，若$K \rightarrow U$，且对于K的任何一个真子集K&amp;rsquo;都有&lt;strong&gt;K&amp;rsquo;不能决定U&lt;/strong&gt;，则&lt;strong&gt;K为R的候选码&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;码&lt;/strong&gt;：设$K$为$R(U,F)$中属性的组合，若$K \rightarrow U$，且对于$K$的任何一个真子集$K&#39;$都有$K&#39;$不能决定$U$，则$K$为$R$的候选码。&lt;/p&gt;
 &lt;p&gt;即$K \stackrel{f}{\rightarrow} U$，那么K是R的候选码。&lt;/p&gt;
 &lt;p&gt;若有多个候选码，则选一个作为主码（主键，主关键字）。候选码通常也称为&lt;strong&gt;候选关键字&lt;/strong&gt;（候选键，键）。&lt;/p&gt;
 &lt;/li&gt;
@@ -779,18 +790,18 @@ WHRER &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;函数依赖的公理系统&lt;/strong&gt;（Armstrong公理系统）：&lt;/p&gt;
-&lt;p&gt;设关系模式R(U,F)，其中U为属性集，F是U上的一组函数依赖，那么有以下推理规则：&lt;/p&gt;
+&lt;p&gt;设关系模式$R(U,F)$，其中$U$为属性集，$F是$U$上的一组函数依赖，那么有以下推理规则：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;自反律&lt;/strong&gt;（A1）：若$Y \subseteq X \subseteq U$，则$X \rightarrow Y$为F所蕴涵（蕴含）。&lt;/p&gt;
-&lt;p&gt;如，$学号,姓名 \rightarrow 姓名$是函数依赖所蕴涵的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;自反律&lt;/strong&gt;（A1）：若$Y \subseteq X \subseteq U$，则$X \rightarrow Y$为$F$所蕴涵（蕴含）。&lt;/p&gt;
+&lt;p&gt;如，（学号，姓名） $\rightarrow$ 姓名是函数依赖所蕴涵的。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;增广律&lt;/strong&gt;（A2）：若$X \rightarrow Y$为F所蕴涵，且$Z \subseteq U$,则$XZ \rightarrow XZ$为F所蕴涵。&lt;/p&gt;
-&lt;p&gt;如$学号,姓名 \rightarrow 姓名,\ 班级 \subseteq 学生表$，那么$$学号,姓名,班级 \rightarrow 姓名$是函数依赖所蕴涵的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;增广律&lt;/strong&gt;（A2）：若$X \rightarrow Y$为F所蕴涵，且$Z \subseteq U$,则$XZ \rightarrow YZ$为$F$所蕴涵。&lt;/p&gt;
+&lt;p&gt;如，学号 $\rightarrow$ 姓名，班级 $\subseteq$ 学生表，那么（学号，班级） $\rightarrow$ （姓名，班级）是函数依赖所蕴涵的。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;传递律&lt;/strong&gt;（A3）：若$X \rightarrow Y,\ Y \rightarrow Z$为F所蕴涵，则$X \rightarrow Z$为F所蕴涵。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;传递律&lt;/strong&gt;（A3）：若$X \rightarrow Y,\ Y \rightarrow Z$为$F$所蕴涵，则$X \rightarrow Z$为$F$所蕴涵。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;根据上述3条推理规则又可推出下述3条推理规则：&lt;/p&gt;
@@ -800,7 +811,7 @@ WHRER &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&
 &lt;li&gt;&lt;strong&gt;分解规则&lt;/strong&gt;：若$X \rightarrow Y,\ Z \subseteq Y$，则$X \rightarrow Z$为F所蕴涵。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;合并规则和分解规则是两个互逆的规则。即$X \rightarrow Y,\ X \rightarrow Z$，可得$X \rightarrow YZ$；那么$X \rightarrow YZ$，也可得$X \rightarrow Y,\ X \rightarrow Z$。&lt;/p&gt;
+&lt;p&gt;合并规则和分解规则是两个互逆的规则。即$X \rightarrow Y,\ X \rightarrow Z$，可得$X \rightarrow YZ$；那么$X \rightarrow YZ$，也可得$X \rightarrow Y,\ X \rightarrow Z$（因为$Y,Z \sub YZ$）。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;总结：&lt;/p&gt;
 &lt;table&gt;
@@ -814,8 +825,8 @@ WHRER &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;函数依赖&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;元组在X上的属性值相等，那么在Y上的属性值也相等&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;X函数决定Y或Y函数依赖于X，记作$X \rightarrow Y$&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;元组在$X$上的属性值相等，那么在$Y$上的属性值也相等&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$X$函数决定$Y$或$Y$函数依赖于$X$，记作$X \rightarrow Y$&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;非平凡的函数依赖&lt;/td&gt;
@@ -830,17 +841,17 @@ WHRER &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;完全函数依赖&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;$X \rightarrow Y$，$X&#39; \subset X$，$X&#39; \not\rightarrow Y$&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Y对X完全函数依赖，记作$X \stackrel{f}{\longrightarrow} Y$&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$Y$对$X$完全函数依赖，记作$X \stackrel{f}{\longrightarrow} Y$&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;部分函数依赖（局部函数依赖）&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;$X \rightarrow Y$，$X \stackrel{f}{\not\longrightarrow} Y$&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Y对X部分函数依赖，记作$X \stackrel{P}{\longrightarrow} Y$&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$Y$对$X$部分函数依赖，记作$X \stackrel{P}{\longrightarrow} Y$&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;传递依赖&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;$X \rightarrow Y$，$Y \not\subseteq X$，$Y \rightarrow Z$&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;Z对X传递依赖&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$Z$对$X$传递依赖&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -854,7 +865,7 @@ WHRER &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&
 &lt;tbody&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;码（候选码，候选关键字）&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;若$K \stackrel{f}{\rightarrow} U$，则K为R的候选码&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;若$K \stackrel{f}{\rightarrow} U$，则$K$为$R$的候选码&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;主属性&lt;/td&gt;
@@ -866,7 +877,7 @@ WHRER &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;外码&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;X非R的码，但X是另一个关系的码，则称X为外码&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$X$非$R$的码，但$X$是另一个关系的码，则称$X$为外码&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -887,12 +898,12 @@ WHRER &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;增广律&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;$X \rightarrow Y$为F所蕴涵，$Z \subseteq U$&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$X \rightarrow Y$，$Z \subseteq U$&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;$XZ \rightarrow XZ$&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;传递律&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;$X \rightarrow Y,\ Y \rightarrow Z$为F所蕴涵&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$X \rightarrow Y,\ Y \rightarrow Z$&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;$X \rightarrow Z$&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
@@ -1352,7 +1363,7 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;实体&lt;/strong&gt;：用&lt;strong&gt;矩形&lt;/strong&gt;表示。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;联系&lt;/strong&gt;：用&lt;strong&gt;棱形&lt;/strong&gt;表示，并用无向边分别与有关实体连接起来，同时在无向边标注联系的类型（1:1，1:n 或 m:n）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;联系&lt;/strong&gt;：用&lt;strong&gt;棱形&lt;/strong&gt;表示，并用无向边分别与有关实体连接起来，同时在无向边标注联系的类型（$1:1$，$1:n$ 或 $m:n$）。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;属性&lt;/strong&gt;：用&lt;strong&gt;椭圆形&lt;/strong&gt;表示，并用无向边将其与相应的实体连接起来&lt;/p&gt;
@@ -1418,7 +1429,7 @@ $$&lt;/p&gt;
 &lt;li&gt;高层抽象流图一般反映系统的概貌，对数据的引用较为笼统；&lt;/li&gt;
 &lt;li&gt;底层又可能过于细致，不能体现数据的关联关系。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;因此要&lt;u&gt;选择适当层次的数据流图，让这一层的每一部分对应一个局部应用，实现某一项功能。从这一层入手，就能很好地设计&lt;strong&gt;分E-R图&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;因此要&lt;u&gt;选择适当层次的数据流图，让这一层的每一部分对应一个局部应用，实现某一项功能。从这一层入手，就能很好地设计&lt;strong&gt;分E-R图&lt;/strong&gt;&lt;/u&gt;。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;逐一设计分E-R图。&lt;/p&gt;
@@ -1439,14 +1450,18 @@ $$&lt;/p&gt;
 &lt;p&gt;逻辑结构设计就是在概念结构设计的基础上进行数据模型设计，可以是层次模型、网状模型和关系模型。&lt;/p&gt;
 &lt;p&gt;通常是把概念模型转换成为&lt;u&gt;某个具体的数据库管理系统所支持的结构数据模型&lt;/u&gt;（与DBMS有关）。即，将概念结构设计所得的E-R模型转换成关系模式。&lt;/p&gt;
 &lt;p&gt;逻辑结构设计的工作步骤：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/uTools_1682561103092.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682577339219.png&#34;
+	width=&#34;581&#34;
+	height=&#34;296&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682577339219_hu0e28af6a5a7453a0a5eb6666d48c94c7_44563_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682577339219_hu0e28af6a5a7453a0a5eb6666d48c94c7_44563_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;逻辑结构设计的工作步骤&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;196&#34;
+		data-flex-basis=&#34;471px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;h3 id=&#34;e-r-模型转换关系模式&#34;&gt;E-R 模型转换关系模式&lt;/h3&gt;
@@ -1503,10 +1518,8 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;方式2：&lt;/p&gt;
-&lt;p&gt;$$
-厂长(姓名,性别,年龄) \\
-工厂(厂号,厂名,地点,(厂长)姓名,任期)
-$$&lt;/p&gt;
+&lt;p&gt;厂长（姓名，性别，年龄）&lt;/p&gt;
+&lt;p&gt;工厂（厂号，厂名，地点，（厂长）姓名，任期）&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -1550,14 +1563,18 @@ $$&lt;/p&gt;
 &lt;p&gt;多对多联系的转换：&lt;/p&gt;
 &lt;p&gt;多对多联系只能转换成一个独立的关系模式，关系模式的名称取联系的名称，关系模式的属性取该联系所关联的两个多方实体的码及联系的属性，关系的码是多方实体的码构成的属性组。&lt;/p&gt;
 &lt;p&gt;例如：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/uTools_1682564018777.png&#34;
-	
-	
-	
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682564018777.png&#34;
+	width=&#34;327&#34;
+	height=&#34;373&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682564018777_hu8cf40dc2a076405a9cb5ca4646519d5e_36334_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682564018777_hu8cf40dc2a076405a9cb5ca4646519d5e_36334_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;多对多联系转换的示例&#34;
 	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;87&#34;
+		data-flex-basis=&#34;210px&#34;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;转换成：&lt;/p&gt;
@@ -1606,18 +1623,18 @@ $$&lt;/p&gt;
 &lt;p&gt;事务的ACID性质：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;原子性（Atomicity）：事务是原子的，要么都做，要么都不做。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原子性&lt;/strong&gt;（Atomicity）：事务是原子的，要么都做，要么都不做。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;一致性（Consistency）：事务执行的结果必须保证数据库从一个一致性状态变到另一个一致性状态。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;一致性&lt;/strong&gt;（Consistency）：事务执行的结果必须保证数据库从一个一致性状态变到另一个一致性状态。&lt;/p&gt;
 &lt;p&gt;因此，当数据库只包含成功事务提交的结果时，称数据库处于一致性状态。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;隔离性（Isolation）：事务相互隔离。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;隔离性&lt;/strong&gt;（Isolation）：事务相互隔离。&lt;/p&gt;
 &lt;p&gt;当多个事务并发执行时，任一事务的更新操作直到其成功提交的整个过程，对其他事务都是不可见的&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;持久性（Durability）：一旦事务成功提交，即使数据库崩溃，其对数据库的更新操作也将永久有效。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;持久性&lt;/strong&gt;（Durability）：一旦事务成功提交，即使数据库崩溃，其对数据库的更新操作也将永久有效。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
@@ -1673,9 +1690,9 @@ $$&lt;/p&gt;
 &lt;h1 id=&#34;并发控制&#34;&gt;并发控制&lt;/h1&gt;
 &lt;p&gt;所谓并发操作，是指在多用户共享的系统中许多用户可能同时对同一数据进行操作。并发操作带来的问题是数据的不一致性，主要有三类：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;丢失更新&lt;/li&gt;
-&lt;li&gt;不可重复读&lt;/li&gt;
-&lt;li&gt;读脏数据&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;丢失更新&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不可重复读&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;读脏数据&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;其主要原因是事务的并发操作破坏了事务的隔离性。DBMS的并发控制子系统负责协调并发事务的执行，保证数据库的完整性不受破坏，避免用户得到不正确的数据。&lt;/p&gt;
 &lt;h2 id=&#34;封锁&#34;&gt;封锁&lt;/h2&gt;
