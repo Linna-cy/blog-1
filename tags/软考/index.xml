@@ -2116,6 +2116,8 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;UML中关联的多重度：&lt;/p&gt;
+&lt;p&gt;进行面向对象设计时，类图中可以展现类之间的关联关系，还可以在类图中图示&lt;u&gt;关联中的数量关系&lt;/u&gt;，即多重度。表示数量关系时，&lt;u&gt;用多重度说明数量或数量范围&lt;/u&gt;，&lt;u&gt;表示有多少个实例（对象）能被连接起来&lt;/u&gt;，即&lt;u&gt;一个类的实例能够与另一个类的多少个实例相关联&lt;/u&gt;。&lt;/p&gt;
 &lt;h2 id=&#34;类图&#34;&gt;类图&lt;/h2&gt;
 &lt;p&gt;&lt;u&gt;类图&lt;/u&gt;（Class Diagram）&lt;u&gt;展现了一组对象、接口、协作和它们之间的关系&lt;/u&gt;。在面向对象系统的建模中所建立的&lt;u&gt;最常见的图就是类图&lt;/u&gt;。&lt;/p&gt;
 &lt;p&gt;类图中通常包括下述内容：&lt;/p&gt;
