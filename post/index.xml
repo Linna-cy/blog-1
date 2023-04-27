@@ -369,10 +369,24 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;自然连接&lt;/strong&gt;：自然连接是一种特殊的等值连接，它要求两个关系中&lt;u&gt;进行比较的分量必须是相同的属性组&lt;/u&gt;，并且在结果集中&lt;u&gt;将重复属性列去掉&lt;/u&gt;。&lt;/p&gt;
 &lt;p&gt;若：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;$t^n \in R$，$t^m \in S$；&lt;/li&gt;
-&lt;li&gt;$R$和$S$具有相同的属性组$B$，且$B=(B_1,B_2,,B_k)$；&lt;/li&gt;
-&lt;li&gt;假定$R$关系的属性：$A_1,A_2,\cdots,A_{n-k},B_1,B_2,\cdots,B_k$；&lt;/li&gt;
-&lt;li&gt;$S$关系的属性：$B_1,B2,\cdots,B_k,B_{k+1},B_{k+2},\cdots,B_m$；&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$t^n \in R$，$t^m \in S$；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$R$和$S$具有相同的属性组$B$，且$B=(B_1,B_2,,B_k)$；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;假定$R$关系的属性：&lt;/p&gt;
+&lt;p&gt;$$
+A_1,A_2,\cdots,A_{n-k},B_1,B_2,\cdots,B_k
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$S$关系的属性：&lt;/p&gt;
+&lt;p&gt;$$
+B_1,B2,\cdots,B_k,B_{k+1},B_{k+2},\cdots,B_m
+$$&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;自然连接可以记为$R \Join S$,其形式定义如下：&lt;/p&gt;
 &lt;p&gt;$$
