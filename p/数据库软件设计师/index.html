@@ -380,7 +380,7 @@
 
         
 
-        <div class="article-time--reading">共1792字</div>
+        <div class="article-time--reading">共1813字</div>
     </footer>
     
 
@@ -1090,11 +1090,37 @@ WHRER <span style="color:#960050;background-color:#1e0010">列名</span> <span s
 <span style="color:#66d9ef">TO</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">用户</span><span style="color:#f92672">&gt;</span>[, <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">用户</span><span style="color:#f92672">&gt;</span>]...
 [<span style="color:#66d9ef">WITH</span> <span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">OPTION</span>];
 </code></pre></div><p>不同类型的操作对象有不同的操作权限，常见的操作权限如下：</p>
-<p>对象|对象类型|操作权限
-属性列|<code>TABLE</code>|<code>SELECT</code>、<br><code>INSERT</code>、<br><code>UPDATE</code>、<br><code>DELETE</code>、<br><code>ALL PRIVILEGES</code>
-视图|<code>TABLE</code>|<code>SELECT</code>、<code>INSERT</code>、<code>UPDATE</code>、<code>DELETE</code>、<code>ALL PRIVILEGES</code>
-基本表|<code>TABLE</code>|<code>SELECT</code>、<code>INSERT</code>、<code>UPDATE</code>、<code>DELETE</code>、<code>ALTER</code>、<code>INDEX</code>、<code>ALL PRIVILEGES</code>
-数据库|<code>DATABASE</code>|<code>CREATETAB</code>建立表的权限，可由DBA授予普通用户</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:center">对象</th>
+<th style="text-align:center">对象类型</th>
+<th style="text-align:left">操作权限</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">属性列</td>
+<td style="text-align:center"><code>TABLE</code></td>
+<td style="text-align:left"><code>SELECT</code>、<br><code>INSERT</code>、<br><code>UPDATE</code>、<br><code>DELETE</code>、<br><code>ALL PRIVILEGES</code></td>
+</tr>
+<tr>
+<td style="text-align:center">视图</td>
+<td style="text-align:center"><code>TABLE</code></td>
+<td style="text-align:left"><code>SELECT</code>、<br><code>INSERT</code>、<br><code>UPDATE</code>、<br><code>DELETE</code>、<br><code>ALL PRIVILEGES</code></td>
+</tr>
+<tr>
+<td style="text-align:center">基本表</td>
+<td style="text-align:center"><code>TABLE</code></td>
+<td style="text-align:left"><code>SELECT</code>、<br><code>INSERT</code>、<br><code>UPDATE</code>、<br><code>DELETE</code>、<br><code>ALTER</code>、<br><code>INDEX</code>、<br><code>ALL PRIVILEGES</code></td>
+</tr>
+<tr>
+<td style="text-align:center">数据库</td>
+<td style="text-align:center"><code>DATABASE</code></td>
+<td style="text-align:left"><code>CREATETAB</code>：<br>建立表的权限，可由DBA授予普通用户</td>
+</tr>
+</tbody>
+</table></div>
 <ul>
 <li><code>WITH GRANT OPTION</code>：表示获得了这些权限的用户还可以将权限赋给其他用户。</li>
 </ul>
