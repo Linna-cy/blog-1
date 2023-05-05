@@ -7,6 +7,1112 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
         <lastBuildDate>Wed, 12 Apr 2023 16:28:00 +0800</lastBuildDate><atom:link href="https://blog.linner.asia/tags/%E8%BD%AF%E8%80%83/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>操作系统（软件设计师）</title>
+        <link>https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/</link>
+        <pubDate>Wed, 12 Apr 2023 16:28:00 +0800</pubDate>
+        
+        <guid>https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/</guid>
+        <description>&lt;h1 id=&#34;概述&#34;&gt;概述&lt;/h1&gt;
+&lt;p&gt;计算机系统由两部分组成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;硬件&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;软件&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;通常把未配置软件的计算机称为裸机。&lt;/p&gt;
+&lt;p&gt;操作系统（Operating System）目的是为了填补人与机器之间的鸿沟，即建立用户与计算机之间的接口，而为裸机配置的一种系统软件。&lt;/p&gt;
+&lt;p&gt;操作系统也包括了系统软件。&lt;/p&gt;
+&lt;p&gt;操作系统在计算机系统中的地位：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682583172164.png&#34;
+	width=&#34;309&#34;
+	height=&#34;145&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682583172164_hu95f8d82f9265c9b90d825ec44597f47b_15128_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682583172164_hu95f8d82f9265c9b90d825ec44597f47b_15128_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;操作系统在计算机系统中的地位&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;213&#34;
+		data-flex-basis=&#34;511px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;操作系统是用户与计算机之间的接口，它在计算机系统中占据重要而特殊的地位，所有其他软件，如编辑程序、汇编程序、编译程序、数据库管理系统等系统软件，以及大量的应用软件都是建立在操作系统基础上的，并得到它的支持和取得它的服务。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;进程管理&#34;&gt;进程管理&lt;/h1&gt;
+&lt;p&gt;进程管理也称&lt;strong&gt;处理机管理&lt;/strong&gt;。在多道程序批处理系统和分时系统中有多个并发执行的程序，为了描述系统中程序执行时动态变化的过程引入了进程。进程是&lt;u&gt;资源分配和独立运行的基本单位&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;进程有两个基本属性：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可拥有资源的独立单位；&lt;/li&gt;
+&lt;li&gt;可独立调度和分配的基本单位。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;程序执行顺序&#34;&gt;程序执行顺序&lt;/h2&gt;
+&lt;h3 id=&#34;程序顺序执行&#34;&gt;程序顺序执行&lt;/h3&gt;
+&lt;p&gt;前驱图是一种有向无循环图，由结点和有向边组成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;结点：代表各程序段的操作；&lt;/li&gt;
+&lt;li&gt;有向边：表示两个程序段（结点）操作之间存在的前驱关系（$\rightarrow$）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;前驱关系：&lt;/p&gt;
+&lt;p&gt;程序段$P_i$和$P_j$的前趋关系表示成$P_i \rightarrow P_j$，其中，$P_i$是$P_j$的前驱，$P_j$是$P_i$的后继，其含义是：&lt;/p&gt;
+&lt;p&gt;$P_i$执行结束后$P_j$才能执行。例如，输入、计算和输出：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682753834678.png&#34;
+	width=&#34;358&#34;
+	height=&#34;107&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682753834678_hu6d3bc9d03d4b0ff312250fbf00a60477_10333_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682753834678_hu6d3bc9d03d4b0ff312250fbf00a60477_10333_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;3个结点的前驱图&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;334&#34;
+		data-flex-basis=&#34;802px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;程序顺序执行时的主要特征包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;顺序性&lt;/li&gt;
+&lt;li&gt;封闭性&lt;/li&gt;
+&lt;li&gt;可再现性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;程序并发执行&#34;&gt;程序并发执行&lt;/h3&gt;
+&lt;p&gt;若在计算机系统中采用多道程序设计技术，则主存中的多道程序可处于并发执行状态。&lt;/p&gt;
+&lt;p&gt;虽然每个作业有前趋关系的各程序段不能在CPU和输入/输出各部件（同一个部件）中并行执行，但是同一个作业内没有前趋关系的程序段或不同作业的程序段可以分别在CPU和各输入/输出部件上（不同部件中）并行执行。&lt;/p&gt;
+&lt;p&gt;例如，某系统中有一个CPU、一台输入设备和一台输出设备，每个作业具有3个程序段输入I&lt;sub&gt;i&lt;/sub&gt;、计算C&lt;sub&gt;i&lt;/sub&gt;和输出P&lt;sub&gt;i&lt;/sub&gt;（i = 1，2，3）。其前驱图如（其中，在同一垂直方向上的作业并行执行）：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682754585700.png&#34;
+	width=&#34;480&#34;
+	height=&#34;203&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682754585700_hu4b10fcccafa543644054288a5464f60e_23561_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682754585700_hu4b10fcccafa543644054288a5464f60e_23561_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;程序并发执行的前驱图&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;236&#34;
+		data-flex-basis=&#34;567px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;程序并发执行时的特征：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;失去了程序的封闭性；&lt;/li&gt;
+&lt;li&gt;程序和机器的执行程序的活动不再一一对应；&lt;/li&gt;
+&lt;li&gt;并发程序间的相互制约性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;程序并发执行带来的问题：并发程序间共享了变量，破坏了程序的封闭性和可再现性。&lt;/p&gt;
+&lt;p&gt;并发程序的问题可以通过研究进程间的同步和互斥解决。&lt;/p&gt;
+&lt;h2 id=&#34;进程的三态模型&#34;&gt;进程的三态模型&lt;/h2&gt;
+&lt;p&gt;在多道程序系统中，进程在处理器上交替运行，状态也不断地发生变化，因此进程一般有3种基本状态：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;运行&lt;/strong&gt;：当一个进程在处理机上运行时。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;就绪&lt;/strong&gt;：一个进程获得了除处理机外的一切所需资源，一旦得到处理机即可运行（还未得到）。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;阻塞&lt;/strong&gt;（等待或睡眠）：一个进程正在等待某一事件发生而暂时停止运行，这时即使把处理机分配给进程也无法运行。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682757000186.png&#34;
+	width=&#34;314&#34;
+	height=&#34;275&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682757000186_hu9e5c56c8e04acd724f5897dbc39951bf_39384_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682757000186_hu9e5c56c8e04acd724f5897dbc39951bf_39384_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;进程的三态模型&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;114&#34;
+		data-flex-basis=&#34;274px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;进程间的通信&#34;&gt;进程间的通信&lt;/h2&gt;
+&lt;p&gt;在多道程序环境的系统中存在多个可以并发执行的进程，故进程间必然存在资源共享和相互合作的问题。进程通信是指各个进程交换信息的过程。&lt;/p&gt;
+&lt;h3 id=&#34;同步和互斥&#34;&gt;同步和互斥&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;同步&lt;/strong&gt;：合作进程间的直接制约问题。&lt;/p&gt;
+&lt;p&gt;进程间的同步：是指在系统中一些需要相互合作，协同工作的进程，这样的相互联系称为进程的同步。&lt;/p&gt;
+&lt;p&gt;例如，进程A向缓冲区送数据，进程B从缓冲区取数据加工，当进程B要取数据加工时，必须是进程A完成了向缓冲区送数据的操作，否则进程B必须停下来等待进程A的操作结束。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;互斥&lt;/strong&gt;：申请临界资源进程间的间接制约问题。&lt;/p&gt;
+&lt;p&gt;进程间的互斥：是指系统中多个进程因争用临界资源而互斥执行。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;临界资源（Critical Resource，CR）：在多道程序系统环境中，那些一次只能供一个进程使用的资源。如打印机、共享变量和表格等。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;临界区管理的原则：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;临界区（Critical Section，CS）：是进程中对临界资源实施操作的那段程序。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;对互斥临界区管理的4条原则如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;有空即进&lt;/strong&gt;：当&lt;u&gt;无进程处于临界区&lt;/u&gt;时，&lt;u&gt;允许&lt;/u&gt;进程&lt;u&gt;进入&lt;/u&gt;临界区，并且&lt;u&gt;只能在临界区运行有限
+的时间&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;无空则等&lt;/strong&gt;：当&lt;u&gt;有一个进程在临界区&lt;/u&gt;时，&lt;u&gt;其他欲进入临界区的进程必须等待&lt;/u&gt;，以保证进程互斥地访问临界资源。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;有限等待&lt;/strong&gt;：&lt;u&gt;对于要求访问临界资源的进程，应保证进程能在有限的时间进入临界区，以免陷入“&lt;strong&gt;饥饿&lt;/strong&gt;”状态&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;让权等待&lt;/strong&gt;：&lt;u&gt;当进程不能进入自己的临界区时，应立即释放处理机，以免进程陷入&lt;strong&gt;忙等&lt;/strong&gt;状态。&lt;/u&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;信号量机制&#34;&gt;信号量机制&lt;/h3&gt;
+&lt;p&gt;信号量机制是一种有效的进程同步与互斥工具。&lt;/p&gt;
+&lt;p&gt;信号量机制主要有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;整型信号量&lt;/li&gt;
+&lt;li&gt;记录型信号量&lt;/li&gt;
+&lt;li&gt;信号量集机制&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;整型信号量：&lt;/p&gt;
+&lt;p&gt;信号量是一个整型变量，根据控制对象的不同被赋予不同的值。信号量分为如下两类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;公用信号量：实现进程间的互斥，初值为&lt;code&gt;1&lt;/code&gt;或资源的数目。&lt;/li&gt;
+&lt;li&gt;私用信号量：实现进程间的同步，初值为&lt;code&gt;0&lt;/code&gt;或某个正整数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;信号量$S$的物理意义：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$S \ge 0$：表示某资源的可用数，此时&lt;strong&gt;有可用资源&lt;/strong&gt;；&lt;/li&gt;
+&lt;li&gt;$S &amp;lt; 0$：则其绝对值表示阻塞队列中等待该资源的进程数，此时无可用资源，并且有进程被阻塞。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;pv操作&#34;&gt;PV操作&lt;/h3&gt;
+&lt;p&gt;PV操作：实现进程同步与互斥的常用方法。&lt;/p&gt;
+&lt;p&gt;P操作和V操作是低级通信原语，在执行期间不可分割。其中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;P操作&lt;/strong&gt;（减）：表示&lt;strong&gt;申请&lt;/strong&gt;一个资源；&lt;/p&gt;
+&lt;p&gt;定义：$S := S-1$（$S$表示信号量）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$S \ge 0$：执行P操作的进程继续执行；&lt;/li&gt;
+&lt;li&gt;$S &amp;lt; 0$：无可用资源，置该进程为&lt;strong&gt;阻塞&lt;/strong&gt;状态，并将其插入阻塞队列。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;V操作&lt;/strong&gt;（加）：表示&lt;strong&gt;释放&lt;/strong&gt;一个资源。&lt;/p&gt;
+&lt;p&gt;定义：$S := S+1$。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$S &amp;gt; 0$：执行V操作的进程继续执行；&lt;/li&gt;
+&lt;li&gt;$S \le 0$：表示释放前有程序被阻塞，从阻塞状态唤醒一个进程，并将其插入就绪队列，然后执行V操作的进程继续。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;利用PV操作实现进程的互斥：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;令信号量&lt;code&gt;mutex&lt;/code&gt;的初始值为1；&lt;/li&gt;
+&lt;li&gt;进入临界区：执行P操作；&lt;/li&gt;
+&lt;li&gt;推出临界区：执行V操作。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;利用PV操作实现进程的同步：&lt;/p&gt;
+&lt;p&gt;实现进程的同步可用一个信号量与消息联系起来。&lt;/p&gt;
+&lt;p&gt;信号量的值：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;为&lt;code&gt;0&lt;/code&gt;：表示希望的消息未产生；&lt;/li&gt;
+&lt;li&gt;非&lt;code&gt;0&lt;/code&gt;：表示希望的消息已经存在。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;假定信号量S表示某条消息，进程可以：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;调用P操作：测试消息是否到达；&lt;/li&gt;
+&lt;li&gt;调用V操作：通知消息已经准备好。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;生产者进程$P_1$：不间断地生产产品送入缓冲区；&lt;/li&gt;
+&lt;li&gt;消费者进程$P_2$：不断地从缓冲区中取产品消费。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;为实现$P_1$与$P_2$间同步问题，分别设置信号量：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$S_1$：初值为1，表示缓冲区空，可以将产品送入缓冲区；&lt;/li&gt;
+&lt;li&gt;$S_2$：初值为0，表示缓冲区有产品。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;同步过程如图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1682764456232.png&#34;
+	width=&#34;979&#34;
+	height=&#34;310&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1682764456232_hu6e19bc324f149858223ccc26524ab5b3_49832_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1682764456232_hu6e19bc324f149858223ccc26524ab5b3_49832_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;PV实现进程同步例子&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;315&#34;
+		data-flex-basis=&#34;757px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;若缓冲区可存放$n$件产品，生产者不断生产，消费者不断消费。可以设置3个信号量：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$S$：互斥信号量，初值为1；&lt;/li&gt;
+&lt;li&gt;$S_1$：表示是否可以将产品放入缓冲区，初值为$n$；&lt;/li&gt;
+&lt;li&gt;$S_2$：表示缓冲区是否存有产品，初值为0。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其同步过程如图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682764884289.png&#34;
+	width=&#34;550&#34;
+	height=&#34;368&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682764884289_hu368c9d1d9bbd6fc224fbfea4ef2251fc_27674_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682764884289_hu368c9d1d9bbd6fc224fbfea4ef2251fc_27674_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;n缓冲区的同步&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;358px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;死锁现象&#34;&gt;死锁现象&lt;/h3&gt;
+&lt;p&gt;死锁是指两个以上的进程互相都要请求对方己经占有的资源，导致这些进程都无法继续运行下去的现象。&lt;/p&gt;
+&lt;p&gt;产生死锁的原因有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;进程间互相&lt;u&gt;竞争资源&lt;/u&gt;：&lt;/p&gt;
+&lt;p&gt;多个进程所共享的资源不足以满足它们的需求时，将引起它们对资源的竞争，从而导致死锁。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;u&gt;进程推进顺序非法&lt;/u&gt;：&lt;/p&gt;
+&lt;p&gt;进程在运行的过程中请求和释放资源的顺序不当，从而导致死锁。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;产生死锁的4个必要条件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;互斥条件&lt;/li&gt;
+&lt;li&gt;请求保持条件&lt;/li&gt;
+&lt;li&gt;不可剥夺条件&lt;/li&gt;
+&lt;li&gt;环路条件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;发生死锁时，在进程资源有向图中必构成环路（每个进程占有了下一个进程申请的一个或多个资源），如：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682766203339.png&#34;
+	width=&#34;323&#34;
+	height=&#34;242&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682766203339_hud4a0dc9a9e923fd6220edd8b9fb65856_13413_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682766203339_hud4a0dc9a9e923fd6220edd8b9fb65856_13413_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;2个进程死锁的资源有向图&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;133&#34;
+		data-flex-basis=&#34;320px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;资源：用&lt;strong&gt;方框&lt;/strong&gt;表示资源的集合，&lt;strong&gt;方框中的圆圈&lt;/strong&gt;表示资源；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;进程：用&lt;strong&gt;圆圈&lt;/strong&gt;表示；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;有向边：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;请求资源：箭头由进程指向资源&lt;/p&gt;
+&lt;p&gt;$$
+\bigcirc \rightarrow \Box
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;分配资源：箭头由资源指向进程&lt;/p&gt;
+&lt;p&gt;$$
+\bigcirc \leftarrow \Box
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;造成死锁的情况有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;进程推进顺序不当：&lt;/p&gt;
+&lt;p&gt;设有两个互斥资源$A$和$B$被两个并发执行的进程$P_1$和$P_2$共享。假如它们按照如下次序请求，则系统会发生死锁：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;$P_1.Request(A)$：请求成功，资源$A$被$P_1$占用；&lt;/li&gt;
+&lt;li&gt;$P_2.Request(B)$：请求成功，资源$B$被$P_2$占用；&lt;/li&gt;
+&lt;li&gt;$P_1.Request(B)$：请求失败，资源$B$已被$P_2$占用；&lt;/li&gt;
+&lt;li&gt;$P_2.Request(A)$：请求失败，资源$A$已被$P_1$占用。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;上述请求顺序中，1和2的顺序可以交换，3和4的顺序可以交换。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;同类资源分配不当：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$m$：资源数，&lt;/li&gt;
+&lt;li&gt;$n$：进程数，&lt;/li&gt;
+&lt;li&gt;$k$：每个进程都要求的资源数。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当资源数小于进程所有求的总数（$m &amp;lt; nk$）时，可能会引起死锁。&lt;/p&gt;
+&lt;p&gt;若满足$m \ge n \times (k-1) + 1$，则不会发生死锁。&lt;/p&gt;
+&lt;p&gt;若每个进程要求的资源数不同，为$k_i$（$i = 1,2,\cdots,n$），那么此时可能会引起死锁的原因是：&lt;/p&gt;
+&lt;p&gt;$$
+m &amp;lt; \sum_{i=1}^{n}{k_i}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PV操作使用不当：&lt;/p&gt;
+&lt;p&gt;如图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682767634275.png&#34;
+	width=&#34;577&#34;
+	height=&#34;290&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682767634275_hue3c28c66fad26634474279e0ad2c7ba2_24056_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682767634275_hue3c28c66fad26634474279e0ad2c7ba2_24056_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;PV死锁示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;198&#34;
+		data-flex-basis=&#34;477px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;当信号量$S_1=S_2=0$时将发生死锁。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$P_2.P(S_2)$：执行前$S_2 = 0$，执行后$S_2 = -1$，$P_2$等待；&lt;/li&gt;
+&lt;li&gt;$P_1.P(S_1)$：执行前$S_1 = 0$，执行后$S_1 = -1$，$P_1$等待。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;此时$P_1$和$P_2$都无法继续运行，造成死锁。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;死锁的处理&#34;&gt;死锁的处理&lt;/h3&gt;
+&lt;p&gt;死锁的处理策略主要有4种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;鸵鸟策略（不理睬策略）&lt;/li&gt;
+&lt;li&gt;预防策略&lt;/li&gt;
+&lt;li&gt;避免策略&lt;/li&gt;
+&lt;li&gt;检测与解除死锁&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;死锁预防：&lt;/p&gt;
+&lt;p&gt;死锁预防是&lt;u&gt;采用某种策略限制并发进程对资源的请求，破坏死锁产生的4个必要条件之一，严格防止死锁的产生&lt;/u&gt;，使系统在任何时刻都不满足死锁的必要条件。预防死锁的两种策略如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;预先静态分配法：破坏了“不可剥夺条件”，&lt;u&gt;预先分配所需资源，保证不等待资源&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;该方法的问题是降低了对资源的利用率，降低进程的并发程度；有时可能无法预先知道所需资源。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;资源有序分配法：破坏了“环路条件”，&lt;u&gt;把资源分类按顺序排列，保证不形成环路&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;该方法存在的问题是限制进程对资源的请求：由于资源的排序占用系统开销。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;死锁避免：&lt;/p&gt;
+&lt;p&gt;比起死锁预防，&lt;u&gt;死锁避免则不那么严格地限制产生死锁的必要条件&lt;/u&gt;。最著名的死锁避免算法是银行家算法，死锁避免算法需要很大的系统开销。&lt;/p&gt;
+&lt;h3 id=&#34;银行家算法&#34;&gt;银行家算法&lt;/h3&gt;
+&lt;p&gt;银行家算法对于进程发出的、每一个系统可以满足的&lt;u&gt;资源请求命令加以检测&lt;/u&gt;，若分配资源后系统：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;进入不安全状态，则不予分配；&lt;/li&gt;
+&lt;li&gt;仍处于安全状态，则实施分配。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;与死锁预防策略相比，银行家算法提高了资源的利用率，但对于分配资源后系统是否安全的检测，增加了系统开销。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;安全状态：指系统能按某种顺序如$&amp;lt;P_1, P_2, \cdots, P_n&amp;gt;$来为每个进程分配其所需资源，直到最大需求，使每个进程都可顺序完成。&lt;/p&gt;
+&lt;p&gt;通常称$&amp;lt;P_1, P_2, \cdots, P_n&amp;gt;$序列为安全序列。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;不安全状态：若系统不存在这样一个安全序列，则称系统处于不安全状态。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;假设系统有$n$个进程（$P_i, i = 1, 2, \cdots, n$），使用银行家算法求系统安全序列的一般步骤为：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;根据目前可用资源数和仍需资源数求得序列当前的第$k$（$1 \le k \le n$）个进程应为$P_i$。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$P_i$的仍需资源数$\le$系统可用资源数。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;根据$P_i$的已分配资源数 + 分配前系统可用资源数，求出系统执行完$P_i$后的可用资源数。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;系统执行完$P_4$后，会释放$P_4$占用的资源。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重复执行步骤1到步骤2，直到能判断系统处于安全状态还是不安全状态。若为安全状态，则可求出安全序列。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;假设系统种有三类互斥资源$R_1$、$R_2$和$R_3$，可用资源数分别为8、7和4。在$T_0$时刻系统种有$P_1$、$P_2$、$P_3$、$P_4$和$P_5$这5个进程，这些进程对资源的最大需求量和已分配资源数如图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682941260775.png&#34;
+	width=&#34;490&#34;
+	height=&#34;231&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682941260775_huc824e9a1db295e8386ae441612171dce_27041_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682941260775_huc824e9a1db295e8386ae441612171dce_27041_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;进程对资源的最大需求量和已分配资源数&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;212&#34;
+		data-flex-basis=&#34;509px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;由上图可得系统的仍需资源数（最大需求量 - 已分配资源数）为：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$R_1$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$R_2$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$R_3$&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;5&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;6&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;可得系统目前可用资源数（可用资源数 - 所有进程的最大需求量）：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$R_1$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$R_2$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$R_3$&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;求出安全序列的过程：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;根据目前可用资源数和仍需资源数可得序列中第1个进程应为$P_4$。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;因为$P_4$仅仅只需要再分配一个$R_1$，而系统目前恰好剩余1个$R_1$和$R_2$。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;系统执行完$P_4$后，会释放$P_4$占用的资源，那么此时系统可用资源数为（已分配资源数 + 分配前可用资源数）：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$R_1$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$R_2$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$R_3$&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;与上一步类似，可求得序列中第2个进程为$P_2$或$P_5$。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;若为$P_2$，执行完$P_2$后，系统可用资源数为：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$R_1$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$R_2$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$R_3$&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;若为$P_5$，执行完$P_5$后，系统可用资源数为：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$R_1$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$R_2$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$R_3$&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;根据上一步，有两个可能的安全序列：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;若序列的上一个进程为$P_2$，序列的第3个进程为$P_5$。&lt;/li&gt;
+&lt;li&gt;若序列的上一个进程为$P_5$，序列的第3个进程为$P_2$。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;此时，无论当前序列为$&amp;lt;P_4, P_2, P_5&amp;gt;$还是$&amp;lt;P_4, P_5, P_2&amp;gt;$，它们执行完序列的第3个进程后，系统可用资源数都为：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; $R_1$|$R_2$|$R_3$
+ :---:|:---:|:---:
+ 5    |5    |3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;根据上一步的系统可用资源数，上一步所得的两个序列的第4个进程都为$P_1$。&lt;/p&gt;
+&lt;p&gt;此时，它们执行完$P_1$后，系统可用资源数为：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$R_1$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$R_2$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$R_3$&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;6&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;6&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;两个序列的第4个进程都为$P_3$。&lt;/p&gt;
+&lt;p&gt;它们执行完$P_3$后，系统可用资源数为：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$R_1$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$R_2$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$R_3$&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;8&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;7&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;此时系统可用资源数与检测前的可用资源数相等，即所有资源都被释放，没有被任何进程占用。&lt;/p&gt;
+&lt;p&gt;那么该系统处于安全状态，且一共有两个安全序列，分别为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$&amp;lt;P_4, P_2, P_5, P_4, P_3&amp;gt;$；&lt;/li&gt;
+&lt;li&gt;$&amp;lt;P_4, P_5, P_2, P_4, P_3&amp;gt;$。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;线程&#34;&gt;线程&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;传统进程有两个基本属性：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可拥有资源的独立单位；&lt;/li&gt;
+&lt;li&gt;可独立调度和分配的基本单位。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;引入线程的原因是，进程的系统必须付出较大的时空开销。引入线程后，将传统进程的两个基本属性分开：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;线程：作为调度和分配的基本单位；&lt;/li&gt;
+&lt;li&gt;进程：作为独立分配资源的单位。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;线程是进程中的一个实体，是被系统独立分配和调度的基本单位。&lt;/p&gt;
+&lt;p&gt;线程的特点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;线程&lt;u&gt;基本上不拥有资源&lt;/u&gt;，只拥有一点运行中必不可少的资源（如程序计数器、一组寄存器和栈），它可与同属一个进程的其他线程共享进程所拥有的全部资源。&lt;/li&gt;
+&lt;li&gt;线程&lt;u&gt;也具有就绪、运行和阻塞3种基本状态&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;u&gt;线程可创建另一个线程。&lt;/u&gt;&lt;/li&gt;
+&lt;li&gt;&lt;u&gt;同一个进程中的多个线程可并发执行。&lt;/u&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;线程因其具有许多传统进程所具有的特性，故称为&amp;quot;轻型进程（Light-Weight Process）&amp;quot;；而传统进程称为&amp;quot;重型进程（Heavy-Weight Process）&amp;quot;。&lt;/p&gt;
+&lt;p&gt;线程分为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用户级线程（User-Level Threads）：不依赖于内核，该类线程的创建、撤销和切换都不利用系统调用来实现；&lt;/li&gt;
+&lt;li&gt;内核支持线程（Kernel-Supported Threads）：依赖于内核，即无论是在用户进程中的线程，还是在系统中的线程，它们的创建、撤销和切换都利用系统调用来实现。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;某些系统同时实现了两种类型的线程。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;与线程不同的是，不论是系统进程还是用户进程，在进行切换时，都要依赖于内核中的进程调度。因此，不论是什么进程都是与内核有关的，是在内核支持下进行切换的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;存储管理&#34;&gt;存储管理&lt;/h1&gt;
+&lt;h2 id=&#34;程序局部性原理&#34;&gt;程序局部性原理&lt;/h2&gt;
+&lt;p&gt;程序在执行时将呈现出局部性规律，即在一段时间内，程序的执行仅局限于某个部分。相应地，它所访问的存储空间也局限于某个区域内。&lt;/p&gt;
+&lt;p&gt;程序的局限性表现在以下两个方面：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;时间局限性&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果程序中的某条&lt;u&gt;指令一旦执行&lt;/u&gt;，则不久的将来该指令&lt;u&gt;可能再次被执行&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;如果某个&lt;u&gt;存储单元被访问&lt;/u&gt;，则不久以后该存储单元&lt;u&gt;可能再次被访问&lt;/u&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;产生时间局限性的典型原因是&lt;u&gt;在程序中存在着大量的循环操作&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;空间局限性&lt;/strong&gt;：指一旦&lt;u&gt;程序访问了某个存储单元&lt;/u&gt;，则在不久的将来，&lt;u&gt;其附近的存储单元也最有可能被访问&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;即程序在一段时间内所访问的地址可能集中在一定的范围内，其典型原因为&lt;u&gt;程序是顺序执行的&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;分页存储管理&#34;&gt;分页存储管理&lt;/h2&gt;
+&lt;p&gt;分页原理：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;页&lt;/strong&gt;：将一个进程的地址空间划分成若干个大小相等的区域，称为页。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;块&lt;/strong&gt;（&lt;strong&gt;页框&lt;/strong&gt;）：将主存空间划分成与页相同大小的若干个物理块，称为块或页框。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在为进程分配主存时，将进程中若干页分别装入多个不相邻接的块中。&lt;/p&gt;
+&lt;p&gt;地址结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683184749140.png&#34;
+	width=&#34;496&#34;
+	height=&#34;55&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683184749140_huc3516dc5b3afdb66549a0018a9af7acc_4005_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683184749140_huc3516dc5b3afdb66549a0018a9af7acc_4005_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;分页地址结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;901&#34;
+		data-flex-basis=&#34;2164px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;其中，页内地址是同一页（页号）中的偏移量。&lt;/p&gt;
+&lt;p&gt;分页的过程是由操作系统完成的，对用户是透明的，所以用户不必关心分页的过程，其优点是能有效地提高主存利用率，其缺点是不易实现共享。&lt;/p&gt;
+&lt;h2 id=&#34;分段存储管理&#34;&gt;分段存储管理&lt;/h2&gt;
+&lt;p&gt;在分段存储管理方式中，作业的地址空间被划分为若干个段。每个段是一组完整的逻辑信息，例如有主程序段、子程序段、数据段及堆栈段等。每个段都有自己的名字，都是从0开始编址的一段连续的地址空间，各段的长度是不等的。&lt;/p&gt;
+&lt;p&gt;分段系统的地址结构如：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683184796335.png&#34;
+	width=&#34;504&#34;
+	height=&#34;61&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683184796335_hu25a29dab249da34b410fe572ea519567_5391_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683184796335_hu25a29dab249da34b410fe572ea519567_5391_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;分段的地址结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;826&#34;
+		data-flex-basis=&#34;1982px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;段是信息的逻辑单位，其优点是易于实现段的共享，即允许若干个进程共享一个或多个段，而且对段的保护也十分简单。&lt;/p&gt;
+&lt;h2 id=&#34;段页式存储管理&#34;&gt;段页式存储管理&lt;/h2&gt;
+&lt;p&gt;结合分页和分段存储管理方式，形成一种新的存储管理方式，即段页式存储管理。段页式系统有两种系统的优点。&lt;/p&gt;
+&lt;p&gt;段页式系统的基本原理是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;将整个主存划分成大小相等的存储块（页框）。&lt;/li&gt;
+&lt;li&gt;将用户程序按程序的逻辑关系分为若干个段，并为每个段赋予一个段名。&lt;/li&gt;
+&lt;li&gt;将每个段划分成若干页，以页框为单位离散分配。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;段页式地址空间的结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683185435872.png&#34;
+	width=&#34;507&#34;
+	height=&#34;59&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683185435872_hudceecbbea023b28d9d0b4202d398bc34_6863_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683185435872_hudceecbbea023b28d9d0b4202d398bc34_6863_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;段页式的地址结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;859&#34;
+		data-flex-basis=&#34;2062px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;设备管理&#34;&gt;设备管理&lt;/h1&gt;
+&lt;h2 id=&#34;缓冲技术&#34;&gt;缓冲技术&lt;/h2&gt;
+&lt;p&gt;缓冲技术可提高外设利用率，尽可能使外设处于忙状态。缓冲技术可以采用两种方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;硬件缓冲：利用专门的硬件寄存器作为缓冲；&lt;/li&gt;
+&lt;li&gt;软件缓冲：通过操作系统来管理的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;单缓冲&#34;&gt;单缓冲&lt;/h3&gt;
+&lt;p&gt;单缓冲工作过程图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683187166221.png&#34;
+	width=&#34;601&#34;
+	height=&#34;138&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683187166221_hu2e2de07b65dca5af28bd1f31f21a9e74_17060_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683187166221_hu2e2de07b65dca5af28bd1f31f21a9e74_17060_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;单缓冲工作过程图&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;435&#34;
+		data-flex-basis=&#34;1045px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;当第1块数据送入用户工作区后（进行数据处理），缓冲区是空闲的，可以传送第2块数据（输入）。即第1块数据的处理$C_1$与第2块数据的输入$T_2$是可以并行的，以此类推：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683189558038.png&#34;
+	width=&#34;1251&#34;
+	height=&#34;272&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683189558038_huf41226c97da8111160feca89ef09c095_5839_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683189558038_huf41226c97da8111160feca89ef09c095_5839_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;单缓冲并行工作示意图&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;459&#34;
+		data-flex-basis=&#34;1103px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;若$T$为输入的时间，$M$为传输的时间，$C$为处理的时间系统对每一块数据的处理时间为：$Max(C, T) + M$：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$T &amp;gt; C$：处理时间为$M + T$；&lt;/li&gt;
+&lt;li&gt;$T &amp;lt; C$：处理时间为$M + C$。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$n$个作业的单缓冲所花费的时间为：&lt;/p&gt;
+&lt;p&gt;$$
+(Max(C, T) + M) \times n + Min(C, T)
+$$&lt;/p&gt;
+&lt;h3 id=&#34;双缓冲&#34;&gt;双缓冲&lt;/h3&gt;
+&lt;p&gt;双缓冲进一步加快了I/O的速度，提高了设备的利用率。其工作基本过程是在设备输入时，先将数据输入到缓冲区1，装满后便转向缓冲区2。&lt;/p&gt;
+&lt;p&gt;双缓冲工作过程图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683187304566.png&#34;
+	width=&#34;586&#34;
+	height=&#34;141&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683187304566_hu42e162687d638192c0899ff8af8eca78_27945_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683187304566_hu42e162687d638192c0899ff8af8eca78_27945_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;双缓冲工作过程图&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;415&#34;
+		data-flex-basis=&#34;997px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;双缓冲的工作特点是，可以实现对缓冲中数据的输入$T$和提取$M$，与CPU的计算$C$，三者并行工作：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683189296831.png&#34;
+	width=&#34;1147&#34;
+	height=&#34;257&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683189296831_hu582c92cd9e0fed45f58d15d99767bd10_23747_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683189296831_hu582c92cd9e0fed45f58d15d99767bd10_23747_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;双缓冲并行工作示意图&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;446&#34;
+		data-flex-basis=&#34;1071px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;在双缓冲时，系统处理一块数据的时间可以粗略地认为是$Max(C, T)$：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$C &amp;lt; T$：可使块设备连续输入；&lt;/li&gt;
+&lt;li&gt;$C &amp;gt; T$：可使系统不必等待设备输入。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$n$个作业的双缓冲所花费的时间为：&lt;/p&gt;
+&lt;p&gt;$$
+Max(T, M, C) \times n + T + M + C - Max(T, M, C)
+$$&lt;/p&gt;
+&lt;p&gt;即，&lt;/p&gt;
+&lt;p&gt;$$
+Max(T, M, C) \times (n - 1) + T + M + C
+$$&lt;/p&gt;
+&lt;h2 id=&#34;磁盘调度算法&#34;&gt;磁盘调度算法&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;先来先服务&lt;/strong&gt;（First-Come First-Served，FCFS）：根据进程请求访问磁盘的先后次序进行调度。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;优点：公平、简单，且每个进程的请求都能依次得到处理，不会出现某进程的请求长期得不到满足的情况。&lt;/li&gt;
+&lt;li&gt;缺点：此算法由于未对寻道进行优化，致使平均寻道时间可能较长。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;最短寻道时间优先&lt;/strong&gt;（Shortest Seek Time First，SSTF，最短移臂算法）：该算法选择这样的进程，其要求访问的磁道与当前磁头所在的磁道距离最近，使得每次的寻道时间最短。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;优点：可能会出现饥饿现象。&lt;/li&gt;
+&lt;li&gt;缺点：不能保证平均寻道时间最短。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;扫描算法&lt;/strong&gt;（SCAN，电梯调度算法）：总是从磁头当前位置开始，沿磁头的移动方向去选择离当前磁头最近的那个柱面的请求。如果沿磁头的方向无请求访问时，就改变磁头的移动方向。&lt;/p&gt;
+&lt;p&gt;在这种调度方法下磁头的移动类似于电梯的调度，所以它也称为电梯调度算法。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;优点：避免了饥饿现象的出现。&lt;/li&gt;
+&lt;li&gt;缺点：当磁头刚从里向外移动过某一磁道时，恰有一进程请求访问此磁道，这时该进程必须等待，待磁头从里向外，再从外向里扫描完所有要访问的磁道后才处理该进程的请求，致使该进程的请求被严重地推迟。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;单向扫描算法&lt;/strong&gt;（CSCAN，循环扫描算法）：为了减少上述SCAN缺点中存在的这种延迟，算法规定磁头只做单向移动。&lt;/p&gt;
+&lt;p&gt;例如，只是自里向外移动，从当前位置开始沿磁头的移动方向去选择离当前磁头最近的那个柱面访问，如果沿磁头的方向无请求访问时，磁头立即返回到最里面的欲访问的柱面，再亦即将最小柱面号紧接着最大柱面号构成循环，进行循环扫描。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;旋转调度算法&#34;&gt;旋转调度算法&lt;/h2&gt;
+&lt;p&gt;旋转调度要考虑的问题是，当移动臂定位后，有多个进程等待访问该柱面时，应当如何决定这些进程的访问顺序。显然，系统应该选择延迟时间最短的进程对磁盘的扇区进行访问。&lt;/p&gt;
+&lt;p&gt;当有若干等待进程请求访问磁盘上的信息时，旋转调度应考虑如下情况：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;进程请求访问的是同一磁道上不同编号的扇区。&lt;/li&gt;
+&lt;li&gt;进程请求访问的是不同磁道上不同编号的扇区。&lt;/li&gt;
+&lt;li&gt;进程请求访问的是不同磁道上具有相同编号的扇区。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;对于情况1和2，旋转调度总是让首先到达读/写磁头位置下的扇区先进行传送操作：对于情况3，旋转调度可以任选一个读/写磁头位置下的扇区进行传送操作。&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;假设磁盘旋转速度为20ms/圈，每读一个记录后处理需要4ms。若格式化时每个磁道被分为10个扇区，有10个逻辑记录存放在同一磁道上，其排序顺序如下图所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683254658689.png&#34;
+	width=&#34;799&#34;
+	height=&#34;84&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683254658689_hu487242034338a061bdbac38b652b0fd8_18129_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683254658689_hu487242034338a061bdbac38b652b0fd8_18129_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;旋转调度算法例题排序表&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;951&#34;
+		data-flex-basis=&#34;2282px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;初始时读写头停在记录A处，程序顺序处理这些记录（A～J）。&lt;/p&gt;
+&lt;p&gt;顺序处理完这些记录的总时间：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683268410250.png&#34;
+	width=&#34;322&#34;
+	height=&#34;311&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683268410250_hua6d0da9a28446871d2f3485a4e0dfcf2_31100_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683268410250_hua6d0da9a28446871d2f3485a4e0dfcf2_31100_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;初始逻辑记录分布情况&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;103&#34;
+		data-flex-basis=&#34;248px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;经过一个扇区的时间 $= 20ms /10 = 2ms$。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;处理完A，磁盘转到读写头指向B开始处时，这个过程的时间为$2ms + 20ms = 22ms$。&lt;/p&gt;
+&lt;p&gt;因为磁盘是一直在旋转的，而读取A扇区（2ms）后，处理A扇区花费4ms。此时磁盘可以再经过两个扇区，来到记录D的开始处。&lt;/p&gt;
+&lt;p&gt;为了顺序处理记录，磁盘需要再旋转8个扇区回到B开始处。相当于处理完A后磁盘需要再旋转一圈以开始读取B。这样一个过程所耗费的时间即为$2ms + 20ms = 22ms$。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;顺序处理完所有记录的总时间 $= 9 \times (2ms + 20ms) + 2ms + 4ms$。&lt;/p&gt;
+&lt;p&gt;前9个记录（A～J）的一个过程所耗费的时间是一样的（$ 9 \times (2ms + 20ms)$）。&lt;/p&gt;
+&lt;p&gt;当处理完记录I并旋转到J开始处时，只需要读取J（2ms）并且处理完（4ms）即可。这个过程的时间应为（$2ms + 4ms$）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;记录优化分布方案：&lt;/p&gt;
+&lt;p&gt;让下一个要读取的记录，刚好在上一个记录处理完成后读写头所停的扇区。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683268275593.png&#34;
+	width=&#34;370&#34;
+	height=&#34;358&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683268275593_hu1fd7a0d7b66c86301a4701cd6064b2ca_34524_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683268275593_hu1fd7a0d7b66c86301a4701cd6064b2ca_34524_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;优化后记录的分布情况&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;103&#34;
+		data-flex-basis=&#34;248px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;优化后的总时间 $= 10 \times (2ms + 4ms) = 60ms$。&lt;/p&gt;
+&lt;p&gt;设$n$个扇区的磁盘，经过一个扇区的时间为$t$，读取一个记录后处理的时间为$c$，那么：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;顺序处理完所有记录的总时间为：&lt;/p&gt;
+&lt;p&gt;$$
+(t + nt) (n-1) + t + c
+$$&lt;/p&gt;
+&lt;p&gt;即：&lt;/p&gt;
+&lt;p&gt;$$
+t \times n^2 + c
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;记录优化后的总时间：&lt;/p&gt;
+&lt;p&gt;$$
+n(t + c)
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;文件管理&#34;&gt;文件管理&lt;/h1&gt;
+&lt;h2 id=&#34;多级索引结构&#34;&gt;多级索引结构&lt;/h2&gt;
+&lt;p&gt;磁盘索引是指在索引表中记录磁盘的地址项，地址项直接或间接地记录了磁盘数据块的地址。&lt;/p&gt;
+&lt;p&gt;磁盘索引有以下几种结构：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;直接索引&lt;/strong&gt;：索引表中的地址项直接指向磁盘数据块。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683271855209.png&#34;
+	width=&#34;670&#34;
+	height=&#34;659&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683271855209_huf7e40bf65f513be949eb336b71dc4ea2_12373_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683271855209_huf7e40bf65f513be949eb336b71dc4ea2_12373_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;直接索引&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;101&#34;
+		data-flex-basis=&#34;244px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;一级间接地址索引&lt;/strong&gt;：索引表中的地址项指向一个磁盘索引块。这个索引块中的记录是地址项，这些地址项直接指向磁盘数据块。&lt;/p&gt;
+&lt;p&gt;称这个磁盘索引块为&lt;strong&gt;一级索引块&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683274982800.png&#34;
+	width=&#34;904&#34;
+	height=&#34;737&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683274982800_huff8f6fdfb39dd4f32432b5e59af5e0b4_20046_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683274982800_huff8f6fdfb39dd4f32432b5e59af5e0b4_20046_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;一级间接地址索引&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;122&#34;
+		data-flex-basis=&#34;294px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;二级间接地址索引&lt;/strong&gt;：索引表中的地址项指向一个磁盘索引块。这个索引块中的一个记录指向一个一级索引块。&lt;/p&gt;
+&lt;p&gt;称这个记录指向一级索引块的磁盘索引块为&lt;strong&gt;二级索引块&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683275164015.png&#34;
+	width=&#34;1121&#34;
+	height=&#34;784&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683275164015_hua10eb987a90138ea134a6bae248d9c53_39919_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683275164015_hua10eb987a90138ea134a6bae248d9c53_39919_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;二级间接地址索引&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;142&#34;
+		data-flex-basis=&#34;343px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;文件目录&#34;&gt;文件目录&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;文件控制块&lt;/strong&gt;（FCB）：用于文件的描述和控制的数据结构，实现了文件的“按名存取”。&lt;/p&gt;
+&lt;p&gt;文件控制块至少要包括文件名和存放文件的物理地址。&lt;/p&gt;
+&lt;p&gt;文件控制块也称为&lt;strong&gt;文件的说明&lt;/strong&gt;或&lt;strong&gt;文件目录项&lt;/strong&gt;（简称&lt;strong&gt;目录项&lt;/strong&gt;）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;文件目录&lt;/strong&gt;：文件控制块的有序集合。&lt;/p&gt;
+&lt;p&gt;即文件目录是由文件控制块组成的，专门用于文件的检索。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;文件控制块&#34;&gt;文件控制块&lt;/h3&gt;
+&lt;p&gt;文件控制块中包含以下信息：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;基本信息类：例如文件名、文件的物理地址、文件长度和文件块数等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;存取控制信息类：文件的存取权限。&lt;/p&gt;
+&lt;p&gt;UNIX中，用户分成三类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;文件主用户&lt;/li&gt;
+&lt;li&gt;同组用户&lt;/li&gt;
+&lt;li&gt;一般用户&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以上三类用户对文件的权限为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;读&lt;/li&gt;
+&lt;li&gt;写&lt;/li&gt;
+&lt;li&gt;执行&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用信息类：文件建立日期、最后一次修改日期、最后一次访问的日期、当前使用的
+信息（如打开文件的进程数、在文件上的等待队列）等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;目录结构&#34;&gt;目录结构&lt;/h3&gt;
+&lt;p&gt;组织好文件的目录是设计文件系统的重要环节，文件目录结构的组织方式直接影响到文件的存取速度，关系到文件的共享性和安全性。&lt;/p&gt;
+&lt;p&gt;常见的目录结构有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;一级目录结构&lt;/strong&gt;：一级目录的整个目录组织是一个&lt;u&gt;线性结构&lt;/u&gt;，在整个系统中&lt;u&gt;只需建立一张目录表&lt;/u&gt;，系统为每个文件分配一个目录项。&lt;/p&gt;
+&lt;p&gt;优点：结构简单；&lt;/p&gt;
+&lt;p&gt;缺点：查找速度慢，不允许重名和不便于实现文件共享等。&lt;/p&gt;
+&lt;p&gt;主要用在单用户环境中。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;二级目录结构&lt;/strong&gt;：为了克服一级目录结构存在的缺点引入了二级目录结构。&lt;/p&gt;
+&lt;p&gt;二级目录结构的组成为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;主文件目录&lt;/strong&gt;（Master File Directory，MFD）：每个用户文件目录都占有一个目录项，其目录项中包括用户名和指向该用户目录文件的指针；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;用户目录&lt;/strong&gt;（User File Directory，UFD）：由用户所有文件的目录项组成的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;优点：提高了检索目录的速度，较好地解决了重名问题。&lt;/p&gt;
+&lt;p&gt;缺点：该结构虽然能有效地将多个用户隔离开（这种隔离在各个用户之间完全无关时是一个优点），但当多个用户之间要相互合作去共同完成一个大任务，且一个用户又需要去访问其他用户的文件时，这种隔离便成为一个缺点，因为这种隔离使诸用户之间不便于共享文件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;多级目录结构&lt;/strong&gt;：在多道程序设计系统中常采用多级目录结构。&lt;/p&gt;
+&lt;p&gt;多级目录结构是树型目录结构。从根结点向下，每一个结点是一个目录，叶结点是文件。&lt;/p&gt;
+&lt;p&gt;在采用多级目录结构的文件系统中，用户要访问一个文件，必须指出文件所在的路径名。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;路径名&lt;/strong&gt;：从某个目录开始到该文件的通路上所有各级目录名拼起来得到的。&lt;/p&gt;
+&lt;p&gt;在各目录名之间、目录名与文件名之间需要用分隔符隔开。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;绝对路径名&lt;/strong&gt;（Absolute Path Name）：指从根目录开始的完整路径。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;相对路径名&lt;/strong&gt;：从当前所在目录开始到其他目录或文件的路径。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;位示图&#34;&gt;位示图&lt;/h2&gt;
+&lt;p&gt;位示图（Bitmap）是一种空闲空间管理方法。通过在外存上建立一张位示图，记录文件存储器的使用情况。&lt;/p&gt;
+&lt;p&gt;位示图用二进制的一位来表示一个物理块的使用情况：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;0&lt;/code&gt;：表示空闲；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;1&lt;/code&gt;：表示占用。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683253664111.png&#34;
+	width=&#34;569&#34;
+	height=&#34;256&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683253664111_hu7a2cf55f628e04ce29478d10a9f586cd_28648_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683253664111_hu7a2cf55f628e04ce29478d10a9f586cd_28648_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;位示图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;222&#34;
+		data-flex-basis=&#34;533px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;位示图的大小由磁盘空间的大小（物理块总数）决定。&lt;/p&gt;
+&lt;p&gt;位示图的描述能力强，适合各种物理结构。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>数据库（软件设计师）</title>
         <link>https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/</link>
         <pubDate>Wed, 12 Apr 2023 16:28:00 +0800</pubDate>
