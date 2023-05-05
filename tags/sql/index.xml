@@ -737,11 +737,12 @@ WHRER &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;数据库&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;DATABASE&lt;/code&gt;&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;CREATETAB&lt;/code&gt;：&lt;br&gt;建立表的权限，可由DBA授予普通用户&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;CREATETAB&lt;/code&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;ul&gt;
+&lt;li&gt;建立表的权限，可由DBA授予普通用户；&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;WITH GRANT OPTION&lt;/code&gt;：表示获得了这些权限的用户还可以将权限赋给其他用户。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;收回权限语句格式（&lt;code&gt;REVOKE&lt;/code&gt;）：&lt;/p&gt;
