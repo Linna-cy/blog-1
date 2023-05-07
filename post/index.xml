@@ -908,7 +908,7 @@ $$&lt;/p&gt;
 &lt;p&gt;为了顺序处理记录，磁盘需要再旋转8个扇区回到B开始处。相当于处理完A后磁盘需要再旋转一圈以开始读取B。这样一个过程所耗费的时间即为$2ms + 20ms = 22ms$。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;顺序处理完所有记录的总时间 $= 9 \times (2ms + 20ms) + 2ms + 4ms$。&lt;/p&gt;
+&lt;p&gt;顺序处理完所有记录的总时间 $= 9 \times (2ms + 20ms) + 2ms + 4ms = 204ms$。&lt;/p&gt;
 &lt;p&gt;前9个记录（A～J）的一个过程所耗费的时间是一样的（$ 9 \times (2ms + 20ms)$）。&lt;/p&gt;
 &lt;p&gt;当处理完记录I并旋转到J开始处时，只需要读取J（2ms）并且处理完（4ms）即可。这个过程的时间应为（$2ms + 4ms$）。&lt;/p&gt;
 &lt;/li&gt;
