@@ -337,7 +337,6 @@ $$&lt;/p&gt;
 &lt;li&gt;$n$：进程数，&lt;/li&gt;
 &lt;li&gt;$k$：每个进程都要求的资源数。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;当资源数小于进程所有求的总数（$m &amp;lt; nk$）时，可能会引起死锁。&lt;/p&gt;
 &lt;p&gt;若满足$m \ge n \times (k-1) + 1$，则不会发生死锁。&lt;/p&gt;
 &lt;p&gt;若每个进程要求的资源数不同，为$k_i$（$i = 1,2,\cdots,n$），那么此时可能会引起死锁的原因是：&lt;/p&gt;
 &lt;p&gt;$$
