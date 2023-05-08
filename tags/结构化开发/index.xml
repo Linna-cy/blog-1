@@ -6,10 +6,10 @@
         <description>Recent content in 结构化开发 on Linner&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
-        <lastBuildDate>Sun, 07 May 2023 16:28:00 +0800</lastBuildDate><atom:link href="https://blog.linner.asia/tags/%E7%BB%93%E6%9E%84%E5%8C%96%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 07 May 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.linner.asia/tags/%E7%BB%93%E6%9E%84%E5%8C%96%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>结构化开发（软件设计师）</title>
         <link>https://blog.linner.asia/p/%E7%BB%93%E6%9E%84%E5%8C%96%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/</link>
-        <pubDate>Sun, 07 May 2023 16:28:00 +0800</pubDate>
+        <pubDate>Sun, 07 May 2023 00:00:00 +0000</pubDate>
         
         <guid>https://blog.linner.asia/p/%E7%BB%93%E6%9E%84%E5%8C%96%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/</guid>
         <description>&lt;h1 id=&#34;概述&#34;&gt;概述&lt;/h1&gt;
@@ -230,7 +230,7 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;模块的作用范围应该在其控制范围之内：&lt;/p&gt;
+&lt;p&gt;模块的作用范围应该在其控制范围之内。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;系统文档&#34;&gt;系统文档&lt;/h2&gt;
@@ -371,7 +371,7 @@
 &lt;p&gt;数据流图中的基本图形元素包括：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;数据流（Data Flow）：由一组固定成分的数据组成，表示数据的流向。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;数据流&lt;/strong&gt;（Data Flow）：由一组固定成分的数据组成，表示数据的流向。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%93%E6%9E%84%E5%8C%96%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683518468182.png&#34;
 	width=&#34;193&#34;
 	height=&#34;71&#34;
@@ -394,10 +394,11 @@
 &lt;li&gt;从&lt;u&gt;外部实体&lt;/u&gt;流向&lt;u&gt;加工&lt;/u&gt;（输入）；&lt;/li&gt;
 &lt;li&gt;从&lt;u&gt;加工&lt;/u&gt;流向&lt;u&gt;外部实体&lt;/u&gt;（输出）。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;即数据流的起点或终点必须有一个是加工。&lt;/p&gt;
+&lt;p&gt;即数据流的&lt;u&gt;起点或终点必须至少有一个是加工&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;除了与数据存储有关的数据流（流向数据存储或从数据存储流出），DFD中的每个数据流都必须用一个定义明确的名字表示。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;加工（Process）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;加工&lt;/strong&gt;（Process）：加工描述了输入数据流到输出数据流之间的变换，也就是&lt;u&gt;输入数据流经过什么处理后变成了输出数据流&lt;/u&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%93%E6%9E%84%E5%8C%96%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1683518239889.png&#34;
 	width=&#34;282&#34;
 	height=&#34;105&#34;
@@ -412,9 +413,46 @@
 		data-flex-basis=&#34;644px&#34;
 	
 &gt;&lt;/p&gt;
+&lt;p&gt;每个加工都有一个名字和编号。&lt;/p&gt;
+&lt;p&gt;一个加工可以有多个输入数据流和多个输出数据流，但&lt;u&gt;至少有一个输入数据流和一个输出数据流&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;数据流图中常见的3种错误如下所示：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;黑洞&lt;/strong&gt;：加工只有输入，没有输出。&lt;/p&gt;
+&lt;p&gt;如下图加工1。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;数据存储（Data Store）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;白洞&lt;/strong&gt;：加工只有输出但没有输入。&lt;/p&gt;
+&lt;p&gt;如下图加工2。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;灰洞&lt;/strong&gt;：加工中输入数据不足以产生输出数据。&lt;/p&gt;
+&lt;p&gt;有几种可能的原因：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个错误的命名过程；&lt;/li&gt;
+&lt;li&gt;错误命名的输入或输出；&lt;/li&gt;
+&lt;li&gt;不完全的事实。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如下图加工3。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%93%E6%9E%84%E5%8C%96%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1683528176745.png&#34;
+	width=&#34;793&#34;
+	height=&#34;542&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%BB%93%E6%9E%84%E5%8C%96%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1683528176745_hu5869eb4ddb2b6e895b99cd504e3e35d8_119530_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%BB%93%E6%9E%84%E5%8C%96%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1683528176745_hu5869eb4ddb2b6e895b99cd504e3e35d8_119530_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;数据流图中常见错误&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;146&#34;
+		data-flex-basis=&#34;351px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;数据存储&lt;/strong&gt;（Data Store）：存储和提供数据。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%93%E6%9E%84%E5%8C%96%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683517944926.png&#34;
 	width=&#34;350&#34;
 	height=&#34;79&#34;
@@ -429,9 +467,27 @@
 		data-flex-basis=&#34;1063px&#34;
 	
 &gt;&lt;/p&gt;
+&lt;p&gt;每个数据存储都有一个定义明确的名字标识。&lt;/p&gt;
+&lt;p&gt;数据存储可以：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;存储加工的输出数据：数据流流入数据存储，表示数据的写入操作；&lt;/li&gt;
+&lt;li&gt;提供加工的输入数据：数据流从数据存储流出，表示数据的读操作。&lt;/li&gt;
+&lt;li&gt;双向箭头的数据流指向数据存储，表示对数据的修改。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;DFD中的数据存储在具体实现时可以用以下方式实现：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;文件系统实现；&lt;/li&gt;
+&lt;li&gt;数据库系统实现。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;数据存储的存储介质可以是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;磁盘、&lt;/li&gt;
+&lt;li&gt;磁带、&lt;/li&gt;
+&lt;li&gt;其他存储介质。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;外部实体（External Agent）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;外部实体&lt;/strong&gt;（External Agent，外部主体）：指&lt;u&gt;存在于软件系统之外的人员、组织、物体或外部系统&lt;/u&gt;，它指出系统所需数据的&lt;u&gt;发源地（源）&lt;/u&gt;和&lt;u&gt;系统所产生的数据的归宿地（宿）&lt;/u&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%93%E6%9E%84%E5%8C%96%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683517896893.png&#34;
 	width=&#34;118&#34;
 	height=&#34;79&#34;
@@ -446,12 +502,108 @@
 		data-flex-basis=&#34;358px&#34;
 	
 &gt;&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;人员：学生、老师、员工、主观、医生、客户……&lt;/li&gt;
+&lt;li&gt;组织：供应商、采购部门……&lt;/li&gt;
+&lt;li&gt;物体：传感器、控制器、单车、车辆……&lt;/li&gt;
+&lt;li&gt;外部系统：支付系统、车辆交易系统、库存管理系统、道闸控制系统……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在许多系统中，某个源和某个宿可以是同一个人员、组织、物体或外部系统，此时，在DFD中可以用同一个符号表示：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当数据流从该符号流出时，表示它是源；&lt;/li&gt;
+&lt;li&gt;当数据流流向该符号时，表示它是宿；&lt;/li&gt;
+&lt;li&gt;当两者皆有时，表示它既是源又是宿。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;外部实体表示存在于系统之外的对象，用来帮助用户理解系统数据的来源和去向。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;其中：&lt;/p&gt;
+&lt;p&gt;其中，软件系统内部的&lt;strong&gt;数据处理模型&lt;/strong&gt;：使用&lt;u&gt;数据流&lt;/u&gt;、&lt;u&gt;加工&lt;/u&gt;和&lt;u&gt;数据存储&lt;/u&gt;构建。&lt;/p&gt;
+&lt;p&gt;数据流图描述了系统的分解，但没有对图中各成分进行说明。&lt;/p&gt;
+&lt;h2 id=&#34;数据字典&#34;&gt;数据字典&lt;/h2&gt;
+&lt;p&gt;数据字典（DD）是为数据流图中的以下成分做出说明：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;数据流、加工和数据存储用于构建软件系统内部的数据处理模型；&lt;/li&gt;
-&lt;li&gt;外部实体表示存在于系统之外的对象，用来帮助用户理解系统数据的来源和去向。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;数据流&lt;/strong&gt;；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;文件&lt;/strong&gt;；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;加工&lt;/strong&gt;：对加工的描述称为“小说明”或“加工逻辑说明”；&lt;/li&gt;
+&lt;li&gt;组成数据流或文件的&lt;strong&gt;数据项&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;数据字典有以下4类条目：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;数据流&lt;/strong&gt;条目：对DFD中数据流的定义，通常列出该数据流的各组成数据项。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;符号&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;含义&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;举例及说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$=$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;被定义为&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$+$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;与&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$x = a + b$：$x$由$a$和$b$组成&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$[a|b]$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;或&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$x = [a&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\{a\}$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;重复&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$x = \{a\}$：$x$由任意个$a$组成&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$m\{a\}n$&lt;br&gt;或&lt;br&gt;$\big\{ a \big\}^{n}_{m}$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;重复&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$x=m\{a\}n$ 或 $x=\big\{a\big\}^{n}_{m}$：$x$中出现$m \sim n$次$a$&lt;br&gt;&lt;ul&gt;&lt;li&gt;$n$：重复次数的上限&lt;/li&gt;&lt;li&gt;$m$：重复次数的下限&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$(a)$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;可选&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$x = (a)$：$a$在$x$中出现$0$或$1$次&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$&amp;ldquo;a&amp;rdquo;$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;基本数据元素&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$x = &amp;ldquo;a&amp;rdquo;$：$x$是取值为字符$a$的数据元素&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$m..n$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;连接符&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$x = m..n$：$x$可取$m \sim n$中的任意一个值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;数据项&lt;/strong&gt;条目：组成数据流和数据存储的最小元素，是不可再分解的数据单位。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;数据存储&lt;/strong&gt;条目：对DFD中数据存储的定义。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;基本加工&lt;/strong&gt;条目：用来说明DFD中（下层）基本加工的处理逻辑。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;源点、终点不在系统之内，故一般不在字典中说明。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;用户界面设计&#34;&gt;用户界面设计&lt;/h1&gt;
+&lt;p&gt;用户界面（UI）设计在人与计算机之间搭建了一个有效的交流媒介。&lt;/p&gt;
+&lt;h2 id=&#34;黄金原则&#34;&gt;黄金原则&lt;/h2&gt;
+&lt;p&gt;黄金原则一共有3条：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用户操纵控制&lt;/li&gt;
+&lt;li&gt;减少用户的记忆负担&lt;/li&gt;
+&lt;li&gt;保持界面一致&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         </item>
