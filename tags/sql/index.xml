@@ -6,10 +6,10 @@
         <description>Recent content in SQL on Linner&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
-        <lastBuildDate>Wed, 12 Apr 2023 16:28:00 +0800</lastBuildDate><atom:link href="https://blog.linner.asia/tags/sql/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 22 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.linner.asia/tags/sql/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>数据库（软件设计师）</title>
         <link>https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/</link>
-        <pubDate>Wed, 12 Apr 2023 16:28:00 +0800</pubDate>
+        <pubDate>Sat, 22 Apr 2023 00:00:00 +0000</pubDate>
         
         <guid>https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/</guid>
         <description>&lt;h1 id=&#34;数据库体系结构&#34;&gt;数据库体系结构&lt;/h1&gt;
@@ -1493,7 +1493,7 @@ $$&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;概念模型的建立采用E-R模型。&lt;/p&gt;
 &lt;h3 id=&#34;e-r-模型&#34;&gt;E-R 模型&lt;/h3&gt;
-&lt;p&gt;E-R模型用E-R图表示，E-R图有以下几个成分：&lt;/p&gt;
+&lt;p&gt;E-R模型用E-R图（ERD）表示，E-R图有以下几个成分：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;实体&lt;/strong&gt;：用&lt;strong&gt;矩形&lt;/strong&gt;表示。&lt;/p&gt;
