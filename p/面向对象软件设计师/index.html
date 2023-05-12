@@ -359,7 +359,7 @@
 
         
 
-        <div class="article-time--reading">共792字</div>
+        <div class="article-time--reading">共935字</div>
     </footer>
     
 
@@ -1053,7 +1053,7 @@
 </ul>
 <hr>
 <h1 id="设计模式">设计模式</h1>
-<p>设计模式的核心在于提供了相关问题的解决方案，使得人们可以更加简单方便地复用成功的设计和体系结构。</p>
+<p>每一个设计模式描述了一个在我们周围不断重复发生的问题，以及该问题的解决方案的核心。使用设计模式能减少一些重复劳动。设计模式的核心在于提供了相关问题的解决方案，使得人们可以更加简单方便地复用成功的设计和体系结构。</p>
 <p>设计模式分类：</p>
 <div class="table-wrapper"><table>
 <thead>
@@ -1068,25 +1068,26 @@
 <tr>
 <td style="text-align:center">类</td>
 <td style="text-align:left">Factory Method（工厂方法模式）</td>
-<td style="text-align:left">Adapter（适配器模式，类）</td>
+<td style="text-align:left">Adapter（适配器模式）</td>
 <td style="text-align:left">Interpreter（解释器模式）<br>Template Method（模板方法模式）</td>
 </tr>
 <tr>
 <td style="text-align:center">对象</td>
 <td style="text-align:left">Abstract Factory（抽象工厂模式）<br>Builder（生成器模式）<br>Prototype（原型模式）<br>Singleton（单例模式）</td>
-<td style="text-align:left">Adapter（适配器模式，对象）<br>Bridge（桥接模式）<br>Composite（组合模式）<br>Decorator（装饰器模式）<br>Facade（外观模式）<br>Flyweight（享元模式）<br>Proxy（代理模式）</td>
+<td style="text-align:left">Adapter（适配器模式）<br>Bridge（桥接模式）<br>Composite（组合模式）<br>Decorator（装饰器模式）<br>Facade（外观模式）<br>Flyweight（享元模式）<br>Proxy（代理模式）</td>
 <td style="text-align:left">Chain of Responsibility（责任链模式）<br>Command（命令模式）<br>Iterator（迭代器模式）<br>Mediator（中介者模式）<br>Memento（备忘录模式）<br>Observer（观察者模式）<br>State（状态模式）<br>Strategy（策略模式）<br>Visitor（访问者模式）</td>
 </tr>
 </tbody>
 </table></div>
-<h2 id="创新型设计模式">创新型设计模式</h2>
+<h2 id="创建型设计模式">创建型设计模式</h2>
+<p>创建型模式顾名思义就是针对对象的创建过程所做的设计模式。</p>
 <p>创建型模式<u>抽象了实例化过程</u>。</p>
 <ul>
 <li>类创建型模式：使用继承改变被实例化的类；</li>
 <li>对象创建型模式：将实例化委托给另一个对象。</li>
 </ul>
 <h3 id="工厂模式">工厂模式</h3>
-<p>工厂模式（Factory Method）定义一个用于<u>创建对象的接口</u>，让<u>子类决定实例化哪一个类</u>。工厂模式使一个类的实例化延迟到其子类。</p>
+<p>工厂方法（Factory Method）模式定义一个用于<u>创建对象的接口</u>，让<u>子类决定实例化哪一个类</u>。工厂模式使一个类的实例化延迟到其子类。</p>
 <blockquote>
 <p>即接口不创建具体的对象，交由子类来决定实例化哪个类。</p>
 </blockquote>
@@ -1129,6 +1130,12 @@
 <blockquote>
 <p>关键词：<u>子类指定创建对象</u>。</p>
 </blockquote>
+<p>工厂模式：</p>
+<ul>
+<li>特点：用户类和工厂类分开。</li>
+<li>优点：用户需要什么对象，只需向工厂请求即可。用户无需修改就可使用对象。</li>
+<li>缺点：对象修改时，工厂类也需要做相应的修改。</li>
+</ul>
 <h3 id="抽象工厂模式">抽象工厂模式</h3>
 <p>抽象工厂（Abstract Factory）提供一个<u>创建一系列相关或相互依赖对象的接口</u>，而<u>无须指定它们具体的类</u>。</p>
 <blockquote>
@@ -1186,7 +1193,8 @@
 </ul>
 <p>关键词：<u>系列</u>。</p>
 </blockquote>
-<h3 id="生成器模式">生成器模式</h3>
+<p>抽象工厂模式：核心工厂类不再负责所有产品的创建，而是将具体创建的工作交给子类去做。它仅负责给存储具体工厂类必须实现的接口。</p>
+<h3 id="生成器建造者模式">生成器（建造者）模式</h3>
 <p>生成器（Builder，建造者）模式将一个<u>复杂对象的<strong>构建</strong>与它的<strong>表示</strong>分离</u>，使得<u>同样的构建过程可以创建不同的表示</u>。</p>
 <p>生成器模式结构：</p>
 <p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682231345251.png"
@@ -1262,8 +1270,14 @@
 <li>为了避免创建一个与产品类层次平行的工厂类层次时。</li>
 <li>当一个类的实例只能有几个不同状态组合中的一种时。建立相应数目的原型并克隆它们，可能比每次用合适的状态手工实例化该类更方便一些。</li>
 </ul>
-<h3 id="单例模式">单例模式</h3>
-<p>单例（Singleton）模式保证<u>一个类仅有一个实例</u>，并<u>提供一个访问它的全局访问点</u>。</p>
+<p>原型模式：</p>
+<ul>
+<li>特点：通过给出一个原型对象来指明所要创建的对象的类型，然后复制这个原型对象的方法创建出更多同类型的对象。</li>
+<li>优点：允许动态的增加或减少产品类，产品类不需要非得有任何事先确定的等级结构，原始模型模式适用于任何的等级结构。</li>
+<li>缺点：每一个类都必须配备一个克隆方法。</li>
+</ul>
+<h3 id="单例单态模式">单例（单态）模式</h3>
+<p>单例（Singleton，单态）模式保证<u>一个类仅有一个实例</u>，并<u>提供一个访问它的全局访问点</u>。</p>
 <blockquote>
 <p>就好像Spring中的Bean，每个Bean有且仅有一个实例，通过<code>@Autowired</code>自动装配（来访问）。</p>
 </blockquote>
@@ -1294,8 +1308,9 @@
 <blockquote>
 <p>关键词：<u>唯一实例、一个实例</u>。</p>
 </blockquote>
+<p>单例模式：确保某一个类只有一个实例，而且自行实例化并向整个系统提供这个实例单例模式。单例模式只应在有真正的“单一实例”的需求时才可使用。</p>
 <h2 id="结构型设计模式">结构型设计模式</h2>
-<p>结构型设计模式涉及<u>如何组合类和对象以获得更大的结构</u>。</p>
+<p>结构型设计模式涉及<u>如何组合类或对象以获得更大的结构</u>。</p>
 <ul>
 <li>
 <p>结构型类模式：<u>采用继承机制来组合接口或实现</u>。</p>
@@ -1307,8 +1322,8 @@
 <p>因为可以在运行时刻改变对象组合关系，所以对象组合方式具有更大的灵活性，而这种机制用静态类组合是不可能实现的。</p>
 </li>
 </ul>
-<h3 id="适配器模式">适配器模式</h3>
-<p>适配器（Adapter）模式<u>将一个类的接口转换成客户希望的另外一个接口</u>。使得原本由于接口不兼容而不能一起工作的那些类可以一起工作。</p>
+<h3 id="适配器变压器模式">适配器（变压器）模式</h3>
+<p>适配器（Adapter，变压器）模式<u>将一个类的接口转换成客户希望的另外一个接口</u>。使得原本由于接口不兼容而不能一起工作的那些类可以一起工作。</p>
 <p>类适配器使用多重继承对一个接口与另一个接口进行匹配：</p>
 <p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682299306295.png"
 	width="885"
@@ -1340,6 +1355,7 @@
 </ul>
 <p>关键词：<u>另一个接口、接口不符合要求、接口兼容、接口转换</u>。</p>
 </blockquote>
+<p>适配器模式：把一个类的接口变换成客户端所期待的另一种接口，从而使原本因接口原因不匹配而无法一起工作的两个类能够一起工作。适配类可以根据参数返还一个合适的实例给客户端。</p>
 <h3 id="桥接模式">桥接模式</h3>
 <p>桥接（Bridge）模式将<strong>抽象</strong>部分与其<strong>实现</strong>部分<strong>分离</strong>，使它们都可以<strong>独立地变化</strong>。</p>
 <p>桥接模式结构：</p>
@@ -1403,8 +1419,9 @@
 </ul>
 <p>关键词：<u>固定的绑定关系</u>。</p>
 </blockquote>
-<h3 id="组合模式">组合模式</h3>
-<p>组合（Composite）模式将对象<u>组合成树型结构</u>以<u>表示“部分——整体”</u>的层次结构。Composite使得用户<u>对单个对象和组合对象的使用具有一致性</u>。</p>
+<p>桥梁模式：将抽象化与实现化脱耦，使得二者可以独立的变化，也就是说将他们之间的强关联变成弱关联。也就是指在一个软件系统的抽象化和实现化之间使用组合/聚合关系而不是继承关系，从而使两者可以独立的变化。</p>
+<h3 id="组合合成模式">组合（合成）模式</h3>
+<p>组合（Composite，合成）模式将对象<u>组合成树型结构</u>以<u>表示“部分——整体”</u>的层次结构。Composite使得用户<u>对单个对象和组合对象的使用具有一致性</u>。</p>
 <p>组合模式的结构：</p>
 <p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682300973563.png"
 	width="940"
@@ -1453,8 +1470,9 @@
 <p>题目选项描述：</p>
 <p>表示对象的部分——整体层次结构。</p>
 </blockquote>
+<p>合成模式：合成模式将对象组织到树结构中，可以用来描述整体与部分的关系。合成模式就是一个处理对象的树结构的模式。合成模式把部分与整体的关系用树结构表示出来。合成模式使得客户端把一个个单独的成分对象和由他们复合而成的合成对象同等看待。</p>
 <h3 id="装饰器模式">装饰器模式</h3>
-<p>装饰器（Decorator）模式<u>动态</u>地给一个对象<u>添加一些额外的职责</u>。就增加功能而言，<u>Decorator模式比生成子类更加灵活</u>。</p>
+<p>装饰器（Decorator）模式<u>动态</u>地给一个对象<u>添加一些额外的职责</u>。装饰器提供了用子类扩展功能的灵活替代。就增加功能而言，<u>Decorator模式比派生子类更加灵活</u>。</p>
 <p>装饰器模式结构：</p>
 <p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682302304911.png"
 	width="862"
@@ -1491,8 +1509,8 @@
 </ul>
 <p>关键词：<u>提供、添加、额外行为、指责</u>。</p>
 </blockquote>
-<h3 id="外观模式">外观模式</h3>
-<p>外观（Facade）模式<u>为子系统中的一组接口提供一个一致的界面</u>，Facade模式<u>定义了</u>一个<u>高层接口</u>，这个接口<u>使得这一子系统更加容易使用</u>。</p>
+<h3 id="外观门面模式">外观（门面）模式</h3>
+<p>外观（Facade，门面）模式<u>为子系统中的一组接口提供一个一致的门面（界面）</u>，Facade模式<u>定义了</u>一个<u>高层接口</u>，这个接口<u>使得这一子系统更加容易使用</u>。</p>
 <p>外观模式的结构：</p>
 <p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682302810965.png"
 	width="950"
@@ -1543,8 +1561,14 @@
 </ul>
 <p>关键词：<u>简化接口、复杂子系统</u>。</p>
 </blockquote>
+<p>外观模式：外部与一个子系统的通信必须通过一个统一的门面对象进行。</p>
+<p>外观模式提供一个高层次的接口，使得子系统更易于使用：</p>
+<ul>
+<li>每一个子系统只有一个门面类，而且此门面类只有一个实例，也就是说它是一个<u>单例模式</u>。</li>
+<li>整个系统可以有多个门面类。</li>
+</ul>
 <h3 id="享元模式">享元模式</h3>
-<p>享元（Flyweight）模式运用共亨技术有效地支持大量细粒度的对象。</p>
+<p>享元（Flyweight）模式运用共享技术有效地支持大量细粒度的对象。</p>
 <p>享元模式的结构：</p>
 <p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682305434953.png"
 	width="870"
@@ -1586,6 +1610,13 @@
 <li>对象的<u>大多数状态都可变为外部状态</u>。</li>
 <li>如果<u>删除对象的外部状态</u>，那么<u>可以用相对较少的共享对象取代很多组对象</u>。</li>
 </ul>
+<p>享元模式能做到共享的关键是区分状态：</p>
+<ul>
+<li>内蕴状态：存储在享元内部，不会随环境的改变而有所不同。</li>
+<li>外蕴状态：随环境的改变而改变的。</li>
+</ul>
+<p>外蕴状态不能影响内蕴状态，它们是相互独立的。</p>
+<p>享元模式：将可以共享的状态和不可以共享的状态从常规类中区分开来，将不可以共享的状态从类里剔除出去。客户端不可以直接创建被共享的对象，而应当使用一个工厂对象负责创建被共享的对象。享元模式大幅度的降低内存中对象的数量。</p>
 <h3 id="代理模式">代理模式</h3>
 <p>代理（Proxy）模式为其他对象<u>提供一种代理以控制对这个对象的访问</u>。</p>
 <p>代理模式的结构：</p>
@@ -1641,6 +1672,8 @@
 </ul>
 </li>
 </ul>
+<p>某些情况下，用户不想或者不能够直接引用一个对象，代理对象可以在用户和目标对象直接起到中介的作用。</p>
+<p>客户端分辨不出代理主题对象与真实主题对象。代理模式可以不知道真正的被代理对象，而仅仅持有一个被代理对象的接口，这时候代理对象不能够创建被代理对象，被代理对象必须有系统的其他角色代为创建并传入。</p>
 <h2 id="行为型设计模式">行为型设计模式</h2>
 <p>行为模式涉及<u>算法和对象间职责的分配</u>。行为模式不仅<u>描述对象或类的模式</u>，还<u>描述它们之间的通信模式</u>。</p>
 <ul>
@@ -1704,6 +1737,9 @@
 </ul>
 <p>关键字：<u>多个对象、一个请求、一组相关对象</u>。</p>
 </blockquote>
+<p>责任链模式：在责任链模式中，很多对象由每一个对象对其下家的引用而接起来形成一条链。请求在这个链上传递，直到链上的某一个对象决定处理此请求。客户并不知道链上的哪一个对象最终处理这个请求，系统可以在不影响客户端的情况下动态的重新组织链和分配责任。</p>
+<p>处理者有两个选择：承担责任或者把责任推给下家。</p>
+<p>一个请求可以最终不被任何接收端对象所接受。</p>
 <h3 id="命令模式">命令模式</h3>
 <p>命令（Command）模式将<u>一个请求封装为一个对象</u>，从而使得可以<u>用不同的请求对客户进行参数化</u>；对<u>请求排队</u>或<u>记录请求日志</u>，以及<u>支持可撤销的操作</u>。</p>
 <p>命令模式的结构：</p>
@@ -1776,6 +1812,12 @@
 <li>在不同的时刻指定、排列和执行请求。</li>
 </ul>
 </blockquote>
+<p>命令模式：把一个请求或者操作封装到一个对象中。命令模式把<u>发出命令的责任</u>和<u>执行命令的责任</u>分割开，委派给不同的对象。命令模式允许请求的一方和发送的一方独立开来，使得请求的一方：</p>
+<ul>
+<li>不必知道接收请求的一方的接口；</li>
+<li>不必知道请求是怎么被接收</li>
+<li>不必知道请求的操作是否执行，何时被执行以及是怎么被执行的。</li>
+</ul>
 <h3 id="解释器模式">解释器模式</h3>
 <p>解释器（Interpreter）模式给定一个语言，定义它的文法的一种表示，并定义一个解释器，这个解释器使用该表示来解释语言中的句子。</p>
 <p>解释器模式结构：</p>
@@ -1830,8 +1872,11 @@
 <p>题目选项描述：</p>
 <p>有一个语言需要<u>解释执行</u>，并且可将句子表示为一个<u>抽象语法树</u>。</p>
 </blockquote>
+<p>解释器模式实现了一个表达式接口，该接口解释一个特定的上下文。这种模式被用在SQL解析、符号处理引擎等。</p>
 <h3 id="迭代器模式">迭代器模式</h3>
 <p>迭代器（Iterator）模式提供一种方法<u>顺序访问</u>一个<u>聚合对象中的各个元素</u>，且<u>不需要暴露该对象的内部表示</u>。</p>
+<p>多个对象聚在一起形成的总体称之为聚合（聚集），聚合对象是能够包容一组对象的容器对象。</p>
+<p>迭代子模式将迭代逻辑封装到一个独立的子对象中，从而与聚集本身隔开。</p>
 <p>迭代器模式的结构：</p>
 <p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682312615849.png"
 	width="845"
@@ -1863,8 +1908,8 @@
 <p>题目选项描述：</p>
 <p>访问一个聚合对象的内容而无须暴露它的内部表示。</p>
 </blockquote>
-<h3 id="中介者模式">中介者模式</h3>
-<p>中介者模式（Mediator）用一个<u>中介对象</u>来<u>封装</u>一系列的<u>对象交互</u>。中介者<u>使各对象不需要显式地相互引用</u>，从而使其<u>耦合松散</u>，而且<u>可以独立地改变它们之间的交互</u>。</p>
+<h3 id="中介者调停者模式">中介者（调停者）模式</h3>
+<p>中介者模式（Mediator，调停者）用一个<u>中介对象</u>来<u>封装</u>一系列的<u>对象交互</u>。中介者<u>使各对象不需要显式地相互引用</u>，从而使其<u>耦合松散</u>，而且<u>可以独立地改变它们之间的交互</u>。</p>
 <p>中介者模式的结构：</p>
 <p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682313139750.png"
 	width="855"
@@ -1899,8 +1944,11 @@
 <li>减少多个对象或类之间的通信复杂性。</li>
 </ul>
 </blockquote>
+<p>中介者模式：包装了一系列对象相互作用的方式，使得这些对象不必相互明显作用。从而使他们可以松散偶合。</p>
+<p>当某些对象之间的作用发生改变时，不会立即影响其他的一些对象之间的作用。保证这些作用可以彼此独立的变化。中介者模式将多对多的相互作用转化为一对多的相互作用。</p>
+<p>中介者模式将对象的行为和协作抽象化，把对象在小尺度的行为上与其他对象的相互作用分开处理。</p>
 <h3 id="备忘录模式">备忘录模式</h3>
-<p>备忘录（Memento）模式在<u>不破坏封装性的前提下捕获一个对象的内部状态</u>，并在对象之外保存这个状态。这样以后就可以<u>将对象恢复到原先保存的状态</u>。</p>
+<p>备忘录（Memento）模式在<u>不破坏封装性的前提下，捕获一个对象的内部状态</u>，并在对象之外保存这个状态。这样以后就可以<u>将对象恢复到原先保存的状态</u>。</p>
 <p>Memento模式的结构：</p>
 <p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682314218216.png"
 	width="847"
@@ -1935,8 +1983,10 @@
 </ul>
 <p>关键词：<u>状态</u>。</p>
 </blockquote>
+<p>备忘录模式：备忘录对象是一个用来存储另外一个对象内部状态的快照的对象。备忘录模式的用意是在不破坏封装的条件下，将一个对象的状态捉住，并外部化，存储起来，从而可以在将来合适的时候把这个对象还原到存储起来的状态。</p>
 <h3 id="观察者模式">观察者模式</h3>
 <p>观察者（Observer）模式定义对象间的一种<u>一对多的依赖关系</u>，当一个对象的<u>状态发生改变</u>时，所有<u>依赖于它的对象都得到通知并被自动更新</u>。</p>
+<p>即，观察者模式让多个观察者对象同时监听某一个主题对象。这个主题对象在状态上发生变化时，会通知所有观察者对象，使他们能够自动更新自己。</p>
 <p>观察者模式的结构：</p>
 <p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682314647475.png"
 	width="814"
@@ -1966,6 +2016,8 @@
 </ul>
 <h3 id="状态模式">状态模式</h3>
 <p>状态（State）模式允许一个对象在其<u>内部状态改变时改变它的行为</u>。对象看起来似乎修改了它的类。</p>
+<p>状态模式把所研究的对象的行为包装在不同的状态对象里，每一个状态对象都属于一个抽象状态类的一个子类。</p>
+<p>状态模式需要对每一个系统可能取得的状态创立一个状态类的子类。当系统的状态变化时，系统便改变所选的子类。</p>
 <p>状态模式的结构：</p>
 <p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682315217521.png"
 	width="644"
@@ -2006,6 +2058,7 @@
 </blockquote>
 <h3 id="策略模式">策略模式</h3>
 <p>策略（Strategy）模式<u>定义一系列的算法</u>，把它们一个个封装起来，并且<u>使它们可以相互替换</u>。此模式使得算法可以独立于使用它们的客户而变化。</p>
+<p>即，策略模式针对一组算法，将每一个算法封装到具有共同接口的独立的类中，从而使得它们可以相互替换。</p>
 <ul>
 <li>
 <p><code>Strategy</code>（策略）：定义所有支持的算法的公共接口。</p>
@@ -2033,6 +2086,9 @@
 <li>在设计某购物中心的收银软件系统时，要求能够支持在不同时期推出打折、返利、满减等不同促销活动。</li>
 </ul>
 </blockquote>
+<p>策略模式使得算法可以在不影响到客户端的情况下发生变化。</p>
+<p>策略模把行为和环境分开：环境类负责维持和查询行为类，各种算法在具体的策略类中提供。</p>
+<p>由于算法和环境独立开来，算法的增减，修改都不会影响到环境和客户端。</p>
 <h3 id="模板方法模式">模板方法模式</h3>
 <p>模板方法模式（Template Method）定义一个操作中的算法骨架，而将一些步骤延迟到子类中。Template Method使得子类可以不改变一个算法的结构即可重定义该算法的某些特定步骤。</p>
 <p>模板方法模式的结构：</p>
@@ -2075,8 +2131,10 @@
 <p>模板方法旨在特定点调用“hook”操作（默认的行为，子类可以在必要时进行重定义扩展），这就只允许在这些点进行扩展。</p>
 </li>
 </ul>
+<p>模板方法模式准备一个抽象类，将部分逻辑以具体方法以及具体构造子的形式实现，然后声明一些抽象方法来迫使子类实现剩余的逻辑。不同的子类可以以不同的方式实现这些抽象方法，从而对剩余的逻辑有不同的实现。先制定一个顶级逻辑框架，而将逻辑的细节留给具体的子类去实现。</p>
 <h3 id="访问者模式">访问者模式</h3>
-<p>访问者（Visitor）模式表示一个作用于某对象结构中的各元素的操作。它允许在不改变各元素的类的前提下定义作用于这些元素的新操作。</p>
+<p>访问者（Visitor）模式表示一个作用于某对象结构中的各元素的操作。它<u>允许在不改变各元素的类的前提下，定义作用于这些元素的新操作</u>。</p>
+<p>即，访问者模式的目的是<u>封装一些施加于某种数据结构元素之上的操作</u>。一旦<u>这些操作需要修改</u>的话，<u>接受这个操作的数据结构可以保持不变</u>。</p>
 <p>访问者模式的结构：</p>
 <p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682316261510.png"
 	width="823"
@@ -2125,6 +2183,159 @@
 <p>题目选项描述：</p>
 <p>需要对一个对象结构中的对象进行很多不同的并且不相关的操作。</p>
 </blockquote>
+<p>访问者模式将有关的行为集中到一个访问者对象中，而不是分散到一个个的节点类中。当使用访问者模式时，要将尽可能多的对象浏览逻辑放在访问者类中，而不是放到它的子类中。访问者模式可以跨过几个类的等级结构访问属于不同的等级结构的成员类。</p>
+<h2 id="设计模式总结">设计模式总结</h2>
+<p>创建型设计模式（抽象了对象的实例化过程）：</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">关键字</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>工厂方法</strong></td>
+<td style="text-align:center">动态生产对象</td>
+<td style="text-align:left">定义创建对象的接口，由子类实例化对象。</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>抽象工厂模式</strong></td>
+<td style="text-align:center">生成系列对象</td>
+<td style="text-align:left">提供创建一系列对象的接口，无需指定具体的类。</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>生成器模式</strong></td>
+<td style="text-align:center">构造复杂对象</td>
+<td style="text-align:left">将复杂类的构建与表示分离。<br>同样的构建可以创建不同的表示。</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>原型模式</strong></td>
+<td style="text-align:center">克隆对象</td>
+<td style="text-align:left">用原型实例指定创建对象的类型，通过复制原型来创建对象。</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>单例模式</strong></td>
+<td style="text-align:center">一个实例</td>
+<td style="text-align:left">保证一个类仅有一个实例，并提供一个全局访问点。</td>
+</tr>
+</tbody>
+</table></div>
+<p>结构型模式（组合类或对象获得新的结构）：</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">关键字</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>适配器模式</strong></td>
+<td style="text-align:center">接口转换</td>
+<td style="text-align:left">将类的接口转换成兼容其他类的接口。</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>桥接模式</strong></td>
+<td style="text-align:center">抽象与实现分离</td>
+<td style="text-align:left">将类的抽象与实现分离，使它们可以独立变化。</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>组合模式</strong></td>
+<td style="text-align:center">组合对象</td>
+<td style="text-align:left">将对象组合成树型结构以表示“部分——整体”的层次结构。<br>使得用户对单个对象和组合对象的使用具有一致性。</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>装饰模式</strong></td>
+<td style="text-align:center">动态附加职责</td>
+<td style="text-align:left">动态地给一个对象添加一些额外的职责，比用子类来扩展功能更灵活。</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>外观模式</strong></td>
+<td style="text-align:center">对外统一接口</td>
+<td style="text-align:left">为子系统定义和提供一个统一的对外高层接口（外观）。<br>简化了该子系统的使用。</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>享元模式</strong></td>
+<td style="text-align:center">共享大量细粒度对象</td>
+<td style="text-align:left">提供支持大量细粒度对象共享的有效方法。</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>代理模式</strong></td>
+<td style="text-align:center">中介代理</td>
+<td style="text-align:left">为其他对象提供一种代理以控制对这个对象的访问。</td>
+</tr>
+</tbody>
+</table></div>
+<p>行为型模式：</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">关键字</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>责任链模式</strong></td>
+<td style="text-align:center">职责传递</td>
+<td style="text-align:left">将处理请求的多个对象连成一条链，请求在链中传递，直到有对象处理。<br>给多个对象处理请求的机会，减少请求的发送者与接收者之间的耦合。</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>命令模式</strong></td>
+<td style="text-align:center">请求封装为对象</td>
+<td style="text-align:left">将一个请求封装为一个对象，可用不同请求对客户进行参数化。<br>将请求排队或记录日志，支持撤销操作。</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>解释器模式</strong></td>
+<td style="text-align:center">语句解释</td>
+<td style="text-align:left">给定一种语言，定义其文法和解释器，解释器根据文法解释语言中的句子。</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>迭代器模式</strong></td>
+<td style="text-align:center">顺序访问数据集</td>
+<td style="text-align:left">提供一个顺序访问聚合对象中元素的方法，不需要暴露对象的内部表示。</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>中介者模式</strong></td>
+<td style="text-align:center">不直接引用</td>
+<td style="text-align:left">用中介对象封装一系列的对象交互。<br>使各对象不需显式地相互调用，达到低耦合。<br>可以独立改变对象间的交互。</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>备忘录模式</strong></td>
+<td style="text-align:center">保存状态</td>
+<td style="text-align:left">不破坏封装的前提下，捕获对象的内部状态，并在该对象之外保存。<br>可以在以后恢复保存的状态。</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>观察者模式</strong></td>
+<td style="text-align:center">联动</td>
+<td style="text-align:left">定义对象间的一种一对多依赖关系。<br>一个对象状态改变，所有依赖于它的对象都得到通知并被自动更新。</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>状态模式</strong></td>
+<td style="text-align:center">状态封装成类</td>
+<td style="text-align:left">把对象的行为封装在不同的状态对象中。<br>允许一个对象在其内部状态改变时改变它的行为。</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>策略模式</strong></td>
+<td style="text-align:center">多方案切换</td>
+<td style="text-align:left">定义并封装一系列算法，使它们可以在不影响客户端的情况下相互替换。</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>模板方法模式</strong></td>
+<td style="text-align:center">框架</td>
+<td style="text-align:left">定义一个操作中的算法骨架，让其子类来实现算法中的剩余逻辑。<br>可以不改变算法结构而重新定义其某些特定步骤。</td>
+</tr>
+<tr>
+<td style="text-align:center"><strong>访问者模式</strong></td>
+<td style="text-align:center">数据与操作分离</td>
+<td style="text-align:left">封装作用与某对象结构中元素的操作。<br>可以在不改变元素类的前提下，定义或修改作用于这些元素的操作。</td>
+</tr>
+</tbody>
+</table></div>
 
 </section>
 
