@@ -163,6 +163,12 @@
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;偶然内聚&lt;/strong&gt;（&lt;strong&gt;巧合内聚&lt;/strong&gt;）：指一个模块内的各&lt;u&gt;处理元素之间没有任何联系&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;偶然内聚具有最低的内聚性。&lt;/p&gt;
+&lt;p&gt;具有偶然内聚的模块具有以下特点（缺点）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不易修改、理解和维护；&lt;/li&gt;
+&lt;li&gt;会影响到模块间的耦合关系。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;逻辑内聚&lt;/strong&gt;：指模块内&lt;u&gt;执行若干个逻辑上相似的功能，通过参数确定该模块完成哪一个功能&lt;/u&gt;。&lt;/p&gt;
