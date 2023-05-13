@@ -1175,13 +1175,43 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;己管理级&lt;/strong&gt;（Managed）：&lt;/p&gt;
-&lt;p&gt;制定了软件过程和产品质量的详细度量标准。软件过程的产品质量都被开发组织的成员所理解和控制。&lt;/p&gt;
+&lt;p&gt;制定了软件过程和产品质量的详细度量标准。软件过程和产品质量都被开发组织的成员所理解和控制。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;优化级&lt;/strong&gt;（Optimized）：&lt;/p&gt;
 &lt;p&gt;加强了定量分析，通过来自过程质量反馈和来自新观念、新技术的反馈使过程能不断持续地改进。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;成熟度级别&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;初始级&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;杂乱无章，几乎没有明确定义的步骤。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;可重复级&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;建立基本的项目管理过程和实践来跟踪项目费用、进度和功能特性。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;已定义级&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;将管理和工程文档化、标准化并综合成标准软件过程；&lt;br&gt;使用标准开发过程（或方法论）构建（或集成）系统。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;己管理级&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;对软件过程和产品质量制定了的详细度量标准，且有定量的理解和控制。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;优化级&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;加强了定量分析，通过过程质量和新观念、新技术使过程不断地改进。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;h2 id=&#34;能力成熟度模型集成&#34;&gt;能力成熟度模型集成&lt;/h2&gt;
 &lt;p&gt;能力成熟度模型集成（CMMI）是若干过程模型的综合和改进，是支持多个工程学科和领域的、系统的、一致的过程改进框架，能适应现代工程的特点和需要，能提高过程的质量和工作效率&lt;/p&gt;
 &lt;p&gt;CⅫ提供了两种表示方法：&lt;/p&gt;
@@ -1210,28 +1240,40 @@ $$&lt;/p&gt;
 &lt;p&gt;CMMI中包括6个过程域能力等级（0~5）：&lt;/p&gt;
   &lt;ol start=&#34;0&#34;&gt;
   &lt;li&gt;
-      $CL_0$（未完成的）：过程域&lt;u&gt;未执行&lt;/u&gt;或&lt;u&gt;未得到$CL_1$中定义的所有目标&lt;/u&gt;。
+      $CL_0$（未完成的）：
+      &lt;br&gt;
+      过程域&lt;u&gt;未执行&lt;/u&gt;或&lt;u&gt;未得到$CL_1$中定义的所有目标&lt;/u&gt;。
   &lt;/li&gt;
   &lt;li&gt;
-      $CL_1$（已执行的）：其共性目标是&lt;u&gt;过程将可标识的输入工作产品转换成可标识的输出工作产品&lt;/u&gt;，以&lt;u&gt;实现支持过程域的特定目标&lt;/u&gt;。
+      $CL_1$（已执行的）：
+      &lt;br&gt;
+      其共性目标是&lt;u&gt;过程将可标识的输入工作产品转换成可标识的输出工作产品&lt;/u&gt;，以&lt;u&gt;实现支持过程域的特定目标&lt;/u&gt;。
       &lt;br&gt;
       关注于&lt;u&gt;过程域的特定目标的完成&lt;/u&gt;。
   &lt;/li&gt;
   &lt;li&gt;
-      $CL_2$（已管理的）：其共性目标集中于&lt;u&gt;已管理的过程的制度化&lt;/u&gt;。
+      $CL_2$（已管理的）：
+      &lt;br&gt;
+      其共性目标集中于&lt;u&gt;已管理的过程的制度化&lt;/u&gt;。
       &lt;br&gt;
       关注于&lt;u&gt;针对单个过程实例的能力&lt;/u&gt;。
   &lt;/li&gt;
   &lt;li&gt;
-      $CL_3$（已定义级的）：其共性目标集中于&lt;u&gt;已定义的过程的制度化&lt;/u&gt;。
+      $CL_3$（已定义级的）：
+      &lt;br&gt;
+      其共性目标集中于&lt;u&gt;已定义的过程的制度化&lt;/u&gt;。
       &lt;br&gt;
       关注于&lt;u&gt;过程的组织级标准化和部署&lt;/u&gt;。
   &lt;/li&gt;
   &lt;li&gt;
-      $CL_4$（定量管理的）：其共性目标集中于&lt;u&gt;可定量管理的过程的制度化&lt;/u&gt;。
+      $CL_4$（定量管理的）：
+      &lt;br&gt;
+      其共性目标集中于&lt;u&gt;可定量管理的过程的制度化&lt;/u&gt;。
   &lt;/li&gt;
   &lt;li&gt;
-      $CL_5$（优化的）：使用量化（统计学）手段改变和优化过程域，以满足客户要求的改变和持续改进计划中的过程域的功效。
+      $CL_5$（优化的）：
+      &lt;br&gt;
+      使用量化（统计学）手段改变和优化过程域，以满足客户要求的改变和持续改进计划中的过程域的功效。
       &lt;br&gt;
       其共性目标集中于&lt;u&gt;优化的过程的制度化&lt;/u&gt;，表明&lt;u&gt;过程得到很好地执行&lt;/u&gt;且&lt;u&gt;持续得到改进&lt;/u&gt;。
   &lt;/li&gt;
