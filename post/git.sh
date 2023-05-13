@@ -1,3 +1,4 @@
+#!/bin/bash
 function myblog_git(){
     cd ../..
     ./git.sh $1 $2
@@ -51,3 +52,4 @@ then
     myblog_git $2 $3
 else
     param $1 $2
+fi
