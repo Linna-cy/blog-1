@@ -543,7 +543,14 @@
 &lt;p&gt;流量控制：检测网络系统信息中的信息流量，防止出现网络拥塞，也属于分组交换确保数据信息在网络上可靠传递。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;###　TCP/IP 分层模型&lt;/p&gt;
+&lt;h3 id=&#34;tcpip-分层模型&#34;&gt;TCP/IP 分层模型&lt;/h3&gt;
+&lt;p&gt;TCP/IP分层模型由4个层次构成：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;应用层&lt;/li&gt;
+&lt;li&gt;传输层&lt;/li&gt;
+&lt;li&gt;网际层&lt;/li&gt;
+&lt;li&gt;网络接口层&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683880948768.png&#34;
 	width=&#34;697&#34;
 	height=&#34;339&#34;
@@ -558,13 +565,6 @@
 		data-flex-basis=&#34;493px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;TCP/IP分层模型由4个层次构成：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;应用层&lt;/li&gt;
-&lt;li&gt;传输层&lt;/li&gt;
-&lt;li&gt;网际层&lt;/li&gt;
-&lt;li&gt;网络接口层&lt;/li&gt;
-&lt;/ol&gt;
 &lt;h3 id=&#34;传输层协议-tcp-和-udp&#34;&gt;传输层协议 TCP 和 UDP&lt;/h3&gt;
 &lt;p&gt;TCP和UDP都是应用于传输层的网络协议：&lt;/p&gt;
 &lt;ul&gt;
