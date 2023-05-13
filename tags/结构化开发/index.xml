@@ -420,7 +420,9 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;h3 id=&#34;数据流图&#34;&gt;数据流图&lt;/h3&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;结构化分析方法&#34;&gt;结构化分析方法&lt;/h1&gt;
+&lt;h2 id=&#34;数据流图&#34;&gt;数据流图&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;数据流图&lt;/strong&gt;也称&lt;strong&gt;数据流程图&lt;/strong&gt;（Data Flow Diagram，&lt;strong&gt;DFD&lt;/strong&gt;），是一种便于用户理解、分析系统数据流程的图形工具。它&lt;u&gt;摆脱了系统的物理内容&lt;/u&gt;，精确地在逻辑上描述系统的功能、输入、输出和数据存储等，是系统逻辑模型的重要组成部分。&lt;/p&gt;
 &lt;p&gt;数据流图中的基本图形元素包括：&lt;/p&gt;
 &lt;ul&gt;
