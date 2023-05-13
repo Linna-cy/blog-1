@@ -576,6 +576,89 @@
 &lt;/ul&gt;
 &lt;p&gt;其中，软件系统内部的&lt;strong&gt;数据处理模型&lt;/strong&gt;：使用&lt;u&gt;数据流&lt;/u&gt;、&lt;u&gt;加工&lt;/u&gt;和&lt;u&gt;数据存储&lt;/u&gt;构建。&lt;/p&gt;
 &lt;p&gt;数据流图描述了系统的分解，但没有对图中各成分进行说明。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;基本元素&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;图形表示&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;数据流&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%93%E6%9E%84%E5%8C%96%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683518468182.png&#34;
+	width=&#34;193&#34;
+	height=&#34;71&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%BB%93%E6%9E%84%E5%8C%96%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683518468182_hu1fccd0f4bc92c1a7ca6417a3c5762d95_691_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%BB%93%E6%9E%84%E5%8C%96%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683518468182_hu1fccd0f4bc92c1a7ca6417a3c5762d95_691_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;数据流&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;271&#34;
+		data-flex-basis=&#34;652px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;加工&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%93%E6%9E%84%E5%8C%96%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1683518239889.png&#34;
+	width=&#34;282&#34;
+	height=&#34;105&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%BB%93%E6%9E%84%E5%8C%96%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1683518239889_hua1275ed5909c87bf24a2f46b2412656d_4453_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%BB%93%E6%9E%84%E5%8C%96%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1683518239889_hua1275ed5909c87bf24a2f46b2412656d_4453_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;加工&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;268&#34;
+		data-flex-basis=&#34;644px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;数据存储&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%93%E6%9E%84%E5%8C%96%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683517944926.png&#34;
+	width=&#34;350&#34;
+	height=&#34;79&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%BB%93%E6%9E%84%E5%8C%96%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683517944926_hu07d5f627c7e21f9ad8b48cfa71d5e47e_1735_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%BB%93%E6%9E%84%E5%8C%96%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683517944926_hu07d5f627c7e21f9ad8b48cfa71d5e47e_1735_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;数据存储&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;443&#34;
+		data-flex-basis=&#34;1063px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;外部实体&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%93%E6%9E%84%E5%8C%96%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683517896893.png&#34;
+	width=&#34;118&#34;
+	height=&#34;79&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%BB%93%E6%9E%84%E5%8C%96%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683517896893_hu053e7e7f1170dc0aa7a02a640e921728_501_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%BB%93%E6%9E%84%E5%8C%96%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683517896893_hu053e7e7f1170dc0aa7a02a640e921728_501_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;外部实体&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;358px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;数据流图必须确保：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据流的起点或终点必须至少有一个是加工。&lt;/li&gt;
+&lt;li&gt;加工至少有一个输入数据流和一个输出数据流。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2 id=&#34;数据字典&#34;&gt;数据字典&lt;/h2&gt;
 &lt;p&gt;数据字典（DD）是为数据流图中的以下成分做出说明：&lt;/p&gt;
 &lt;ul&gt;
