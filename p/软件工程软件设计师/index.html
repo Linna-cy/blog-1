@@ -48,6 +48,17 @@
   按照软件的应用领域，可以将计算机软件分为十大类：
  系统软件 应用软件 工程/科学软件 嵌入式软件 产品线软件 Web应用 人工智能软件 开放计算 网络资源 开源软件  软件生存周期  可行性分析与项目开发计划 需求分析 概要设计 详细设计 编码 测试 维护   软件过程模型 软件开发中所遵循的路线图（一系列可预测的步骤）称为“软件过程”。过程是活动的集合，活动是任务的集合。">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+<style>
+    u {
+        text-decoration-line: none;
+        border-bottom: 1.5px solid;
+        padding-bottom: 1.5px;
+    }
+    li {
+        margin: 1em 0;
+    }
+</style>
     </head>
     <body class="
     article-page
@@ -332,7 +343,7 @@
 
         
 
-        <div class="article-time--reading">共1581字</div>
+        <div class="article-time--reading">共1599字</div>
     </footer>
     
 
@@ -1768,7 +1779,7 @@
 <ul>
 <li>
 <p><strong>逻辑覆盖</strong>：考察用测试数据运行被测程序时，对程序逻辑的覆盖程度。</p>
-<p>主要的逻辑覆盖标准以下6种：</p>
+<p>主要的逻辑覆盖标准有6种，它们的覆盖程度从低到高为：</p>
 <ol>
 <li>
 <p><strong>语句覆盖</strong>：指选择足够的测试数据，使<u>被测试程序中的每条语句至少执行一次</u>。</p>
@@ -1801,7 +1812,7 @@
 </ul>
 </li>
 <li>
-<p><strong>路径覆盖</strong>：路径覆盖是指覆盖被测试程序中所有可能的路径。</p>
+<p><strong>路径覆盖</strong>：指<u>覆盖被测试程序中所有可能的路径</u>。</p>
 </li>
 </ol>
 </li>
@@ -1812,6 +1823,42 @@
 <p><strong>基本路径测试</strong></p>
 </li>
 </ul>
+<h3 id="总结-1">总结</h3>
+<p>白盒测试逻辑覆盖技术总结（覆盖程度从低到高）：</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:center">逻辑覆盖</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">语句覆盖</td>
+<td style="text-align:left">每条语句执行一次</td>
+</tr>
+<tr>
+<td style="text-align:center">分支（判定）覆盖</td>
+<td style="text-align:left">每个分支获得一次True/False</td>
+</tr>
+<tr>
+<td style="text-align:center">条件覆盖</td>
+<td style="text-align:left">每个分支中的每个逻辑条件的所有可能取值满足一次</td>
+</tr>
+<tr>
+<td style="text-align:center">判定/条件覆盖</td>
+<td style="text-align:left">分支覆盖 + 条件覆盖</td>
+</tr>
+<tr>
+<td style="text-align:center">条件组合覆盖</td>
+<td style="text-align:left">每个判定中条件的各种可能值的组合都出现一次</td>
+</tr>
+<tr>
+<td style="text-align:center">路径覆盖</td>
+<td style="text-align:left">覆盖被测试程序中所有可能的路径</td>
+</tr>
+</tbody>
+</table></div>
 <hr>
 <h1 id="运行和维护">运行和维护</h1>
 <p>软件维护是软件生命周期中的最后一个阶段，处于系统投入生产性运行以后的时期中，因此<u>不属于系统开发过程</u>。<u>软件维护是在软件已经交付使用之后为了改正错误或满足新的需求而修改软件的过程</u>，即软件在交付使用后对软件所做的一切改动。</p>

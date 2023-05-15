@@ -42,6 +42,17 @@ vim ~/.config/code-server/config.yaml   添加code-server服务：
 vim /lib/systemd/system/codeweb.service 写入如下内容：
 [Unit] Description=The nginx HTTP and reverse proxy server After=network.target remote-fs.target nss-lookup.target [Service] Type=simple ExecStart=/usr/bin/code-server KillSignal=SIGQUIT TimeoutStopSec=5 KillMode=process PrivateTmp=true StandardOutput=syslog StandardError=inherit [Install] WantedBy=multi-user.target   ">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+<style>
+    u {
+        text-decoration-line: none;
+        border-bottom: 1.5px solid;
+        padding-bottom: 1.5px;
+    }
+    li {
+        margin: 1em 0;
+    }
+</style>
     </head>
     <body class="
     article-page

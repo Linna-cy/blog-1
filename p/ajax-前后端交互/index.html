@@ -27,6 +27,17 @@ AJAX 作用有以下两方面：
  与服务器进行数据交换：通过AJAX可以给服务器发送请求，服务器将数据直接响应回给浏览器。 异步交互：可以在不重新加载整个页面的情况下，与服务器交换数据并更新部分网页的技术，如：搜索联想、用户名是否可用校验等等。  同步：浏览器页面在发送请求给服务器，在服务器处理请求的过程中，浏览器页面不能做其他的操作。只能等到服务器响应结束后，浏览器页面才能继续做其他的操作。 异步：浏览器页面发送请求给服务器，在服务器处理请求的过程中，浏览器页面还可以做其他的操作。    Ajax 简单使用 服务端：
 package web.servlet; import javax.servlet.ServletException; import javax.servlet.annotation.WebServlet; import javax.servlet.http.HttpServlet; import javax.servlet.http.HttpServletRequest; import javax.servlet.http.HttpServletResponse; import java.io.IOException; @WebServlet(&amp;#34;/ajaxServlet&amp;#34;) public class AjaxServlet extends HttpServlet { @Override protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException { // 返回给客户端响应数据  resp.getWriter().write(&amp;#34;Hello Ajax!&amp;#34;); } @Override protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException { this.">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+<style>
+    u {
+        text-decoration-line: none;
+        border-bottom: 1.5px solid;
+        padding-bottom: 1.5px;
+    }
+    li {
+        margin: 1em 0;
+    }
+</style>
     </head>
     <body class="
     article-page

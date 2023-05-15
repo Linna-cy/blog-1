@@ -27,6 +27,17 @@ def BFMatch(s, p): if len(s) &amp;lt; len(p): return -1 i, j = 0, 0 # 匹配阶�
  将S和T左对齐，并比较其第一个元素。 若匹配，则继续比较下一个元素，一直到第M个元素。 若不匹配则T向右移动一个位置。 接着根据步骤3和4进行比较，直到匹配到或者T移动了N-M且仍未匹配到。  代码实现 Python实现 实现1：
 def BFMatch(s, p): if len(s) &amp;lt; len(p): return -1 i, j = 0, 0 # 匹配阶段 while i &amp;lt; len(s) and j &amp;lt; len(p): # 匹配，s和p的指针均向前一步 if s[i] == p[j]: i &#43;= 1 j &#43;= 1 # 不匹配，i后退到下一个要匹配的位置，j后头到p开头 else: i = i - j &#43; 1 j = 0 if j == len(p): return i - j return -1 if __name__ == &amp;#34;__main__&amp;#34;: s = &amp;#34;abcdefghijkl&amp;#34; p = &amp;#34;ijk&amp;#34; result = BFMatch(s, p) if result == -1: print(&amp;#34;False&amp;#34;) else: print(result) 实现2：">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+<style>
+    u {
+        text-decoration-line: none;
+        border-bottom: 1.5px solid;
+        padding-bottom: 1.5px;
+    }
+    li {
+        margin: 1em 0;
+    }
+</style>
     </head>
     <body class="
     article-page

@@ -42,6 +42,17 @@
 字符可以单独列出：[abc]，匹配 &#39;a&#39;、&#39;b&#39;、&#39;c&#39;。
 可以表示字符范围，通过用 &#39;-&#39; 将两个字符连起来：[a-z] 将匹配任何小写 ASCII 字符； 可以指定多个范围：[a-zA-Z] 将匹配所有英文字符。 如果 - 进行了转义 （比如 [a-z]）或者它的位置在首位或者末尾（如 [-a] 或 [a-]），它就只表示普通字符 &#39;-&#39;。 特殊字符在集合中，失去它的特殊含义：[(&#43;*)] 只会匹配这几个文法字符 &#39;(&#39;、&#39;&#43;&#39;、&#39;*&#39; 或 &#39;)&#39;。 字符类如 \w 或者 \S 在集合内可以接受，它们可以匹配的字符由 ASCII 或者 LOCALE 模式决定。">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+<style>
+    u {
+        text-decoration-line: none;
+        border-bottom: 1.5px solid;
+        padding-bottom: 1.5px;
+    }
+    li {
+        margin: 1em 0;
+    }
+</style>
     </head>
     <body class="
     article-page

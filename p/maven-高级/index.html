@@ -57,6 +57,17 @@ maven-dao模块的pom.xml中：
 Maven指定了一系列规则来解决依赖冲突问题。
  特殊优先：同级下（依赖树中同个父节点的依赖为同级，即同个pom.xml下），配置了相同资源的不同版本，后配置的覆盖先配置。 路径优先：依赖树中，层级越浅，优先级越高；层级越深，优先级越低。 声明优先：资源在相同层级被依赖时，配置顺序靠前的覆盖配置顺序靠后的。即，谁先声明用谁。   注意：依赖的优先级只对当前项目起作用。即，当前项目选择的依赖版本并不会影响到依赖中相同资源不同版本的依赖。 最终选择的依赖结果根据Idea中Mavem面板的依赖树视图。">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+<style>
+    u {
+        text-decoration-line: none;
+        border-bottom: 1.5px solid;
+        padding-bottom: 1.5px;
+    }
+    li {
+        margin: 1em 0;
+    }
+</style>
     </head>
     <body class="
     article-page
