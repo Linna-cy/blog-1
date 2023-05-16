@@ -2605,6 +2605,7 @@ $$&lt;/p&gt;
 &lt;p&gt;模块的耦合、内聚、作用范围与控制范围的关系等都对可修改性有影响。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;软件文档与软件维护&lt;/strong&gt;：&lt;/p&gt;
 &lt;p&gt;&lt;u&gt;软件文档是软件可维护性的决定因素。&lt;/u&gt;文档是软件产品的一部分，并且编写高质量的文档可以提高软件开发的质量。&lt;/p&gt;
 &lt;p&gt;软件系统的文档分为：&lt;/p&gt;
 &lt;ul&gt;
