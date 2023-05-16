@@ -1,5 +1,5 @@
 #!/bin/bash
-function myblog_git(){
+function public_git(){
     cd ../..
     ./git.sh $1 $2
     cd content/post
@@ -49,7 +49,7 @@ if [ "$1" == "blog" ]
 then
     param $2 $3
     echo "-------------MYBLOG-------------"
-    myblog_git $2 $3
+    public_git $2 $3
 else
     param $1 $2
 fi
