@@ -1890,7 +1890,7 @@ $$&lt;/p&gt;
 T_l(V_{out}) = T_l(V_{in}) - (T(&amp;lt;V_{out}, V_{in}&amp;gt;) + T_s(&amp;lt;V_{out}, V_{in}&amp;gt;))
 $$&lt;/p&gt;
 &lt;p&gt;即：&lt;u&gt;该流出任务的流入事件的最迟时刻&lt;/u&gt; -（&lt;u&gt;该流出任务的所需时间&lt;/u&gt; + &lt;u&gt;松弛时间&lt;/u&gt;）。&lt;/p&gt;
-&lt;p&gt;如果松弛时间未知：&lt;/p&gt;
+&lt;p&gt;如果松弛时间未知或为0：&lt;/p&gt;
 &lt;p&gt;$$
 T_l(V_{out}) = T_l(V_{in}) - T(&amp;lt;V_{out}, V_{in}&amp;gt;)
 $$&lt;/p&gt;
@@ -1964,18 +1964,21 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;所有任务持续时间的和，是PERT图所有路径中最大的，并且与结束事件的最早时刻（或最晚时刻）相等。&lt;/p&gt;
-&lt;p&gt;设关键路径中所有事件为$V_i$（$i = 1, 2, \cdots, n$），且该路径下的任务为$&amp;lt;V_j, V_{j+1}&amp;gt;$（$1 \le j \le n-1$），那么该关键路径结束事件的最早时刻（或最晚时刻）为：&lt;/p&gt;
+&lt;p&gt;设关键路径中所有事件为$V_i$（$i = 1, 2, \cdots, n$），且该路径下的任务为$&amp;lt;V_j, V_{j+1}&amp;gt;$（$1 \le j \le n-1$）（表示$V_1$是开始事件，$V_2$是$V_1$往下的一个事件，以此类推，$V_n$是结束事件），那么该关键路径结束事件的最早时刻（或最晚时刻）为：&lt;/p&gt;
 &lt;p&gt;$$
 T_e(V_n) = \sum_{i = 1}^{n-1} T(&amp;lt;V_i, V_{i+1}&amp;gt;)
 $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;最迟时刻的另一种求法（PERT图存在关键路径的情况下）：&lt;/p&gt;
-&lt;p&gt;已知某PERT图结束事件的最晚时刻（最早时刻），该PERT图中某一条路径中所有事件为$V_j$（$j = 1, 2, \cdots, n$），且该路径下的任务为$&amp;lt;V_k, V_{k+1}&amp;gt;$（$1 \le k \le n-1$），该路径下任务的持续时间$T(&amp;lt;V_{k-1}, V_k&amp;gt;)$已知，（即$V_1$是开始事件，按照次序往下，$V_n$是结束事件），计算某一事件的最迟时刻$T_l(V_i)$（$1 \le i &amp;lt; n$）：&lt;/p&gt;
+&lt;p&gt;已知某PERT图结束事件的最晚时刻（最早时刻），该PERT图中某一条路径（假设该路径没有分支）中所有事件为$V_j$（$j = 1, 2, \cdots, n$），且该路径下的任务为$&amp;lt;V_k, V_{k+1}&amp;gt;$（$1 \le k \le n-1$），该路径下任务的持续时间$T(&amp;lt;V_{k-1}, V_k&amp;gt;)$已知，（即$V_1$是开始事件，按照次序往下，$V_n$是结束事件），计算某一事件的最迟时刻$T_l(V_i)$（$1 \le i &amp;lt; n$）：&lt;/p&gt;
 &lt;p&gt;$$
 T_l(V_i) = T_l(V_n) - \sum_{j = i}^{n - 1} T(&amp;lt;V_j, V_{j + 1}&amp;gt;)
 $$&lt;/p&gt;
 &lt;p&gt;即：&lt;u&gt;结束事件的最晚时刻&lt;/u&gt; - &lt;u&gt;该事件到结束事件之间所有的任务的持续时间总和&lt;/u&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意：如果事件$V_i$到结束事件之间存在多条路径，应该选择那条任务持续时间总和最大的路径。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;PERT图的优点：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;给出了每个任务的开始时间、结束时间和完成该任务所需的时间；&lt;/li&gt;
