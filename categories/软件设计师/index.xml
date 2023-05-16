@@ -2642,6 +2642,24 @@ $$&lt;/p&gt;
 &lt;p&gt;例如将专用报表功能改成通用报表生成功能，以适应将来报表格式的变化。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;这4个维护内容中，正确性和完善性维护是针对来自系统内部的维护，适应性和预防性是针对来自系统外部的维护。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;正确性维护针对的是系统内部的错误。&lt;/p&gt;
+&lt;p&gt;来自系统内部的，与错误有关的都是属于正确性维护。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;完善性维护针对的是系统内部与功能、性能等方面有关的维护。&lt;/p&gt;
+&lt;p&gt;来自系统内部的，与系统功能、性能等方面有关的改善都是完善性维护。完善性维护的需求可以来自外部，例如功能的扩展。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;适应性维护是针对来自系统外部的技术、管理需求等方面的变化。&lt;/p&gt;
+&lt;p&gt;针对来自系统外部的变化，系统功能等方面没有缺失，仅仅只是适应当前环境变化所做的更改，都是属于适应性维护。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;预防性维护针对的是未来的环境变化。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;项目管理&#34;&gt;项目管理&lt;/h1&gt;
 &lt;h2 id=&#34;沟通路径&#34;&gt;沟通路径&lt;/h2&gt;
@@ -2731,6 +2749,57 @@ $$&lt;/p&gt;
 &lt;p&gt;规模估算选择：&lt;strong&gt;代码行&lt;/strong&gt;。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;h3 id=&#34;总结-2&#34;&gt;总结&lt;/h3&gt;
+&lt;p&gt;COCOMO模型：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;模型分类&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;类型或说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;基本COCOMO模型&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;静态单变量模型，对整个软件系统进行估算&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;中级COCOMO模型&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;静态多变量模型，将系统模型分为系统和部件2个层次&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;详细COCOMO模型&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;将系统模型分为系统、子系统和模块3个层次&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;COCOMOII&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;层次结构，分为应用组装模型、早期设计阶段模型和体系结构阶段模型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;COCOMOII的使用时期及规模估算选择：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;阶段性模型&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;规模估算选择&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;应用组装模型&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;对象点&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;早期设计阶段模型&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;功能点&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;体系结构阶段模型&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;代码行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;h2 id=&#34;进度管理&#34;&gt;进度管理&lt;/h2&gt;
 &lt;p&gt;进度安排：&lt;/p&gt;
 &lt;p&gt;为监控软件项目的进度计划和工作的实际进展情况，表示各项任务之间进度的相互依赖关系，需要采用图示的方法。在图中明确标明如下内容：&lt;/p&gt;
@@ -2792,7 +2861,7 @@ $$&lt;/p&gt;
 &lt;p&gt;Gantt图缺点：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;不能清晰地反映各任务之间的&lt;u&gt;依赖关系&lt;/u&gt;；&lt;/li&gt;
-&lt;li&gt;难以确定&lt;u&gt;整个项目的关键所在&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;难以确定&lt;u&gt;整个项目的关键所在&lt;/u&gt;，即不能清晰地确定影响进度的&lt;u&gt;关键任务&lt;/u&gt;；&lt;/li&gt;
 &lt;li&gt;不能反映&lt;u&gt;计划中有潜力的部分&lt;/u&gt;。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
@@ -2805,7 +2874,7 @@ $$&lt;/p&gt;
 &lt;p&gt;任务包含以下成分：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;u&gt;完成该任务所需的时间&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;完成该任务所需的时间&lt;/u&gt;（任务持续时间）。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;u&gt;松弛时间&lt;/u&gt;（Slack Time）：表示在&lt;u&gt;不影响整个工期的前提下完成该任务有多少机动余地&lt;/u&gt;。&lt;/p&gt;
@@ -2863,26 +2932,14 @@ $$&lt;/p&gt;
 &lt;p&gt;$$
 T_e(V_{in}) = T_e(V_{out}) + T(&amp;lt;V_{out}, V_{in}&amp;gt;)
 $$&lt;/p&gt;
-&lt;p&gt;即，该流入任务的流出事件的最早时刻 + 完成该流入任务的所需时间。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683719224977.png&#34;
-	width=&#34;931&#34;
-	height=&#34;341&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683719224977_hu89f160ee9e5081c0094ce31c4ac579dc_24904_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683719224977_hu89f160ee9e5081c0094ce31c4ac579dc_24904_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;273&#34;
-		data-flex-basis=&#34;655px&#34;
-	
-&gt;&lt;/p&gt;
+&lt;p&gt;即：&lt;u&gt;该流入任务的流出事件的最早时刻&lt;/u&gt; + &lt;u&gt;完成该流入任务的所需时间&lt;/u&gt;。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;多个任务流入时，设与每个任务相对应的流出事件为$V_{out}[ \ i \ ]$，则这些任务为$&amp;lt;V_{out}[ \ i \ ], V_{in}&amp;gt;$：&lt;/p&gt;
 &lt;p&gt;$$
 T_e(V_{in}) = Max(T_e(V_{out}[ \ i \ ]) + T(&amp;lt;V_{out}[ \ i \ ], V_{in}&amp;gt;))
 $$&lt;/p&gt;
-&lt;p&gt;即，流入该事件的每个任务计算出的最早时刻的最大值。&lt;/p&gt;
+&lt;p&gt;即&lt;u&gt;流入该事件的每个任务计算出的最早时刻的最大值&lt;/u&gt;。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;开始事件$V_{start}$：&lt;/p&gt;
@@ -2900,7 +2957,7 @@ $$&lt;/p&gt;
 &lt;p&gt;$$
 T_l(V_{out}) = T_l(V_{in}) - (T(&amp;lt;V_{out}, V_{in}&amp;gt;) + T_s(&amp;lt;V_{out}, V_{in}&amp;gt;))
 $$&lt;/p&gt;
-&lt;p&gt;即，该流出任务的流入事件的最迟时刻 -（该流出任务的所需时间 + 松弛时间）&lt;/p&gt;
+&lt;p&gt;即：&lt;u&gt;该流出任务的流入事件的最迟时刻&lt;/u&gt; -（&lt;u&gt;该流出任务的所需时间&lt;/u&gt; + &lt;u&gt;松弛时间&lt;/u&gt;）。&lt;/p&gt;
 &lt;p&gt;如果松弛时间未知：&lt;/p&gt;
 &lt;p&gt;$$
 T_l(V_{out}) = T_l(V_{in}) - T(&amp;lt;V_{out}, V_{in}&amp;gt;)
@@ -2911,7 +2968,7 @@ $$&lt;/p&gt;
 &lt;p&gt;$$
 Min(V_{out}[ \ i \ ]) = T_l(V_{in}) - (T(&amp;lt;V_{out}[ \ i \ ], V_{in}&amp;gt;) + T_s(&amp;lt;V_{out}[ \ i \ ], V_{in}&amp;gt;))
 $$&lt;/p&gt;
-&lt;p&gt;即，流出该事件的每个任务计算出的最晚时刻的最大值。&lt;/p&gt;
+&lt;p&gt;即&lt;u&gt;流出该事件的每个任务计算出的最晚时刻的最大值&lt;/u&gt;。&lt;/p&gt;
 &lt;p&gt;如果松弛时间未知：&lt;/p&gt;
 &lt;p&gt;$$
 Min(V_{out}[ \ i \ ]) = T_l(V_{in}) - T(&amp;lt;V_{out}[ \ i \ ], V_{in}&amp;gt;)
@@ -2922,20 +2979,35 @@ $$&lt;/p&gt;
 &lt;p&gt;$$
 T_l(V_{end}) = T_e(V_{end})
 $$&lt;/p&gt;
-&lt;p&gt;即结束事件的最早时刻与最迟时刻相等。&lt;/p&gt;
+&lt;p&gt;即&lt;u&gt;结束事件的最早时刻与最迟时刻相等&lt;/u&gt;。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;设某任务的流入事件为$V_{in}$，流出事件为$V_{out}$，则该任务$&amp;lt;V_{out}, V_{in}&amp;gt;$的&lt;u&gt;松弛时间&lt;/u&gt;$T_s(&amp;lt;V_{out}, V_{in}&amp;gt;)$，。&lt;/p&gt;
+&lt;p&gt;设某任务的流入事件为$V_{in}$，流出事件为$V_{out}$，则该任务$&amp;lt;V_{out}, V_{in}&amp;gt;$的&lt;u&gt;松弛时间&lt;/u&gt;$T_s(&amp;lt;V_{out}, V_{in}&amp;gt;)$。&lt;/p&gt;
 &lt;p&gt;$$
 T_s(&amp;lt;V_{out}, V_{in}&amp;gt;) = T_l(V_{in}) - T(&amp;lt;V_{out}, V_{in}&amp;gt;) - T_e(V_{out})
 $$&lt;/p&gt;
 &lt;p&gt;即，该任务的流入事件的最迟时刻 - 该任务的所需时间 - 该任务的流出事件的最早时刻&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683719224977.png&#34;
+	width=&#34;931&#34;
+	height=&#34;341&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683719224977_hu89f160ee9e5081c0094ce31c4ac579dc_24904_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683719224977_hu89f160ee9e5081c0094ce31c4ac579dc_24904_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;PERT图公式参照图&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;273&#34;
+		data-flex-basis=&#34;655px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;p&gt;PERT图的路径：从开始事件到结束事件的一条通路。&lt;/p&gt;
 &lt;p&gt;PERT图的&lt;strong&gt;关键路径&lt;/strong&gt;：指&lt;u&gt;所有的任务的松弛时间都为0的路径&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;关键路径的长度：指结束事件的最早（或最晚）时刻。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683706944555.png&#34;
 	width=&#34;785&#34;
 	height=&#34;457&#34;
@@ -2952,15 +3024,32 @@ $$&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;p&gt;关键路径的特点：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;所有任务的松弛时间都为0。&lt;/li&gt;
-&lt;li&gt;每个事件的最早时刻和最迟时刻都是相等的。&lt;/li&gt;
-&lt;li&gt;所有任务持续时间的和，是PERT图所有路径中最大的，并且与结束事件的最早时刻（或最晚时刻）相等。&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;所有任务的松弛时间都为0。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;每个事件的最早时刻和最迟时刻都是相等的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;所有任务持续时间的和，是PERT图所有路径中最大的，并且与结束事件的最早时刻（或最晚时刻）相等。&lt;/p&gt;
+&lt;p&gt;设关键路径中所有事件为$V_i$（$i = 1, 2, \cdots, n$），且该路径下的任务为$&amp;lt;V_j, V_{j+1}&amp;gt;$（$1 \le j \le n-1$），那么该关键路径结束事件的最早时刻（或最晚时刻）为：&lt;/p&gt;
+&lt;p&gt;$$
+T_e(V_n) = \sum_{i = 1}^{n-1} T(&amp;lt;V_i, V_{i+1}&amp;gt;)
+$$&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;最迟时刻的另一种求法（PERT图存在关键路径的情况下）：&lt;/p&gt;
+&lt;p&gt;已知某PERT图结束事件的最晚时刻（最早时刻），该PERT图中某一条路径中所有事件为$V_j$（$j = 1, 2, \cdots, n$），且该路径下的任务为$&amp;lt;V_k, V_{k+1}&amp;gt;$（$1 \le k \le n-1$），该路径下任务的持续时间$T(&amp;lt;V_{k-1}, V_k&amp;gt;)$已知，（即$V_1$是开始事件，按照次序往下，$V_n$是结束事件），计算某一事件的最迟时刻$T_l(V_i)$（$1 \le i &amp;lt; n$）：&lt;/p&gt;
+&lt;p&gt;$$
+T_l(V_i) = T_l(V_n) - \sum_{j = i}^{n - 1} T(&amp;lt;V_j, V_{j + 1}&amp;gt;)
+$$&lt;/p&gt;
+&lt;p&gt;即：&lt;u&gt;结束事件的最晚时刻&lt;/u&gt; - &lt;u&gt;该事件到结束事件之间所有的任务的持续时间总和&lt;/u&gt;。&lt;/p&gt;
 &lt;p&gt;PERT图的优点：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;给出了每个任务的开始时间、结束时间和完成该任务所需的时间；&lt;/li&gt;
-&lt;li&gt;给出了任务之间的关系。即任务之间的执行顺序。&lt;/li&gt;
+&lt;li&gt;给出了任务之间的关系（依赖关系）。即任务之间的执行顺序。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;PERT图不能清晰地描述任务之间的并行情况。&lt;/p&gt;
 &lt;h3 id=&#34;项目活动图&#34;&gt;项目活动图&lt;/h3&gt;
 &lt;p&gt;项目活动图是一种有向图（与PERT图十分类似）：&lt;/p&gt;
 &lt;ul&gt;
@@ -3261,21 +3350,48 @@ $$&lt;/p&gt;
 &lt;p&gt;可靠性、可用性和可维护性是软件的质量属性，软件工程中，用$0 \sim 1$之间的数来度量。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;可靠性：指一个系统对于给定的时间间隔内、在给定条件下无失效运作的概率。&lt;/p&gt;
+&lt;p&gt;可靠性：指一个系统对于&lt;u&gt;给定的时间间隔内、在给定条件下无失效运作的概率&lt;/u&gt;。&lt;/p&gt;
 &lt;p&gt;可以用$\cfrac{MTTF}{1+MTTF}$来度量。&lt;/p&gt;
-&lt;p&gt;MTTF为平均无故障时间。&lt;/p&gt;
+&lt;p&gt;$MTTF$为&lt;u&gt;平均无故障时间&lt;/u&gt;。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;可用性：指在给定的时间点上，一个系统能够按照规格说明正确运作的概率。&lt;/p&gt;
+&lt;p&gt;可用性：指&lt;u&gt;在给定的时间点上&lt;/u&gt;，一个&lt;u&gt;系统能够按照规格说明正确运作的概率&lt;/u&gt;。&lt;/p&gt;
 &lt;p&gt;可以用$\cfrac{MTBF}{1+MTBF}$来度量。&lt;/p&gt;
-&lt;p&gt;MTBF为平均失效间隔时间。&lt;/p&gt;
+&lt;p&gt;$MTBF$为&lt;u&gt;平均失效间隔时间&lt;/u&gt;。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;可维护性：在给定的使用条件下，在规定的时间间隔内，使用规定的过程和资源完成维护活动的概率。&lt;/p&gt;
+&lt;p&gt;可维护性：&lt;u&gt;在给定的使用条件下，在规定的时间间隔内，使用规定的过程和资源完成维护活动的概率&lt;/u&gt;。&lt;/p&gt;
 &lt;p&gt;可以用$\cfrac{1}{1+MTTR}$来度量。&lt;/p&gt;
-&lt;p&gt;MTTR为平均修复时间。&lt;/p&gt;
+&lt;p&gt;$MTTR$为&lt;u&gt;平均修复时间&lt;/u&gt;。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;总结：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;质量属性&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;度量公式&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;可靠性&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;p&gt;$\cfrac{MTTF}{1+MTTF}$&lt;/p&gt;&lt;p&gt;$MTTF$：平均无故障时间&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;给定时间间隔内、给定条件下，无失效运作的概率&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;可用性&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;p&gt;$\cfrac{MTBF}{1+MTBF}$&lt;/p&gt;&lt;p&gt;$MTBF$：平均失效间隔时间&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;给定时间点上、能按照规格说明正确运作的概率&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;可维护性&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;p&gt;$\cfrac{1}{1+MTTR}$&lt;/p&gt;&lt;p&gt;$MTTR$：平均修复时间&lt;/p&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;给定使用条件下、规定时间间隔内，使用规定过程和资源完成维护的概率&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;h2 id=&#34;软件质量模型&#34;&gt;软件质量模型&lt;/h2&gt;
 &lt;p&gt;讨论软件质量首先要了解软件的质量特性，目前己经有多种软件质量模型来描述软件质量特性，如：&lt;/p&gt;
 &lt;ul&gt;
@@ -3297,36 +3413,40 @@ $$&lt;/p&gt;
     &lt;th&gt;含义&lt;/th&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-    &lt;td style=&#34;text-align: center;&#34; rowspan=&#34;6&#34;&gt;&lt;b&gt;功能性&lt;/b&gt;（Functionality）&lt;/td&gt;
+    &lt;td style=&#34;text-align: center;&#34; rowspan=&#34;6&#34;&gt;
+        &lt;b&gt;功能性&lt;/b&gt;（Functionality）
+    &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
-    &lt;td style=&#34;text-align: center;&#34;&gt;适合性（Suitability）&lt;/td&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;
+        适合性（Suitability）
+    &lt;/td&gt;
     &lt;td&gt;
-        与对规定任务能否提供一组功能以及这组功能是否适合有关的软件属性。
+        &lt;p&gt;与对规定任务能否提供一组功能以及这组功能是否适合有关的软件属性。&lt;/p&gt;
     &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
     &lt;td style=&#34;text-align: center;&#34;&gt;准确性（Accurateness）&lt;/td&gt;
     &lt;td&gt;
-        与能够得到正确或相符的结果或效果有关的软件属性。
+        &lt;p&gt;与能够得到正确或相符的结果或效果有关的软件属性。&lt;/p&gt;
     &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
     &lt;td style=&#34;text-align: center;&#34;&gt;互用性（Interoperability）&lt;/td&gt;
     &lt;td&gt;
-        &lt;u&gt;与其他指定系统进行交互操作&lt;/u&gt;的能力相关的软件属性。
+        &lt;p&gt;&lt;u&gt;与其他指定系统进行交互操作&lt;/u&gt;的能力相关的软件属性。&lt;/p&gt;
     &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
     &lt;td style=&#34;text-align: center;&#34;&gt;依从性（Compliance）&lt;/td&gt;
     &lt;td&gt;
-        &lt;u&gt;使软件服从有关的标准、约定、法规及类似规定&lt;/u&gt;的软件属性。
+        &lt;p&gt;&lt;u&gt;使软件服从有关的标准、约定、法规及类似规定&lt;/u&gt;的软件属性。&lt;/p&gt;
     &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
     &lt;td style=&#34;text-align: center;&#34;&gt;安全性（Security）&lt;/td&gt;
     &lt;td&gt;
-        与避免对程序及数据的非授权故意或意外访问的能力有关的软件属性。
+        &lt;p&gt;与避免对程序及数据的非授权故意或意外访问的能力有关的软件属性。&lt;/p&gt;
     &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -3335,19 +3455,19 @@ $$&lt;/p&gt;
 &lt;tr&gt;
     &lt;td style=&#34;text-align: center;&#34;&gt;成熟性（Maturity）&lt;/td&gt;
     &lt;td&gt;
-        与由软件故障引起失效的频度有关的软件属性。
+        &lt;p&gt;与由软件故障引起失效的频度有关的软件属性。&lt;/p&gt;
     &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
     &lt;td style=&#34;text-align: center;&#34;&gt;容错性（Fault tolerance）&lt;/td&gt;
     &lt;td&gt;
-        与&lt;u&gt;在软件错误或违反指定接口&lt;/u&gt;的情况下&lt;u&gt;维持指定的性能水平&lt;/u&gt;的能力有关的软件属性。
+        &lt;p&gt;与&lt;u&gt;在软件错误或违反指定接口&lt;/u&gt;的情况下&lt;u&gt;维持指定的性能水平&lt;/u&gt;的能力有关的软件属性。&lt;/p&gt;
     &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
     &lt;td style=&#34;text-align: center;&#34;&gt;易恢复性（Recoverability）&lt;/td&gt;
     &lt;td&gt;
-        与&lt;u&gt;在故障发生后，重新建立其性能水平并恢复直接受影响数据&lt;/u&gt;的能力，以及为达到此目的所需的时间和努力有关的软件属性。
+        &lt;p&gt;与&lt;u&gt;在故障发生后，重新建立其性能水平并恢复直接受影响数据&lt;/u&gt;的能力，以及为达到此目的所需的时间和努力有关的软件属性。&lt;/p&gt;
     &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -3356,19 +3476,19 @@ $$&lt;/p&gt;
 &lt;tr&gt;
     &lt;td style=&#34;text-align: center;&#34;&gt;易理解性（Understandability）&lt;/td&gt;
     &lt;td&gt;
-        与用户为理解逻辑概念及其应用所付出的劳动有关的软件属性。
+        &lt;p&gt;与用户为理解逻辑概念及其应用所付出的劳动有关的软件属性。&lt;/p&gt;
     &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
     &lt;td style=&#34;text-align: center;&#34;&gt;易学性（Learnability）&lt;/td&gt;
     &lt;td&gt;
-        与用户为学习其应用（例如操作控制、输入、输出）所付出的努力相关的软件属性。
+        &lt;p&gt;与用户为学习其应用（例如操作控制、输入、输出）所付出的努力相关的软件属性。&lt;/p&gt;
     &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
     &lt;td style=&#34;text-align: center;&#34;&gt;易操作性（Operability）&lt;/td&gt;
     &lt;td&gt;
-        与用户为进行操作和操作控制所付出的努力有关的软件属性。
+        &lt;p&gt;与用户为进行操作和操作控制所付出的努力有关的软件属性。&lt;/p&gt;
     &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -3377,13 +3497,13 @@ $$&lt;/p&gt;
 &lt;tr&gt;
     &lt;td style=&#34;text-align: center;&#34;&gt;时间特性（Time behavior）&lt;/td&gt;
     &lt;td&gt;
-        与响应和处理时间以及软件执行其功能时的吞吐量有关的软件属性。
+        &lt;p&gt;与响应和处理时间以及软件执行其功能时的吞吐量有关的软件属性。&lt;/p&gt;
     &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
     &lt;td style=&#34;text-align: center;&#34;&gt;资源特性（Resource behavior）&lt;/td&gt;
     &lt;td&gt;
-        与软件执行其功能时，所使用的资源量以及使用资源的持续时间有关的软件属性。
+        &lt;p&gt;与软件执行其功能时，所使用的资源量以及使用资源的持续时间有关的软件属性。&lt;/p&gt;
     &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -3392,25 +3512,25 @@ $$&lt;/p&gt;
 &lt;tr&gt;
     &lt;td style=&#34;text-align: center;&#34;&gt;易分析性（Analyzability）&lt;/td&gt;
     &lt;td&gt;
-        与为诊断缺陷或失效原因，或为判定待修改的部分所需努力有关的软件属性。
+        &lt;p&gt;与为诊断缺陷或失效原因，或为判定待修改的部分所需努力有关的软件属性。&lt;/p&gt;
     &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
     &lt;td style=&#34;text-align: center;&#34;&gt;易改变性（Changeability）&lt;/td&gt;
     &lt;td&gt;
-        与进行修改、排错或适应环境变换所需努力有关的软件属性。
+        &lt;p&gt;与进行修改、排错或适应环境变换所需努力有关的软件属性。&lt;/p&gt;
     &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
     &lt;td style=&#34;text-align: center;&#34;&gt;稳定性（Stability）&lt;/td&gt;
     &lt;td&gt;
-        与修改造成未预料效果的风险有关的软件属性。
+        &lt;p&gt;与修改造成未预料效果的风险有关的软件属性。&lt;/p&gt;
     &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
     &lt;td style=&#34;text-align: center;&#34;&gt;易测试性（Testability）&lt;/td&gt;
     &lt;td&gt;
-        为确认经修改软件所需努力有关的软件属性。
+        &lt;p&gt;为确认经修改软件所需努力有关的软件属性。&lt;/p&gt;
     &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
@@ -3419,25 +3539,25 @@ $$&lt;/p&gt;
 &lt;tr&gt;
     &lt;td style=&#34;text-align: center;&#34;&gt;适应性（Adaptability）&lt;/td&gt;
     &lt;td&gt;
-        与软件转移到不同环境时的处理或手段有关的软件属性。
+        &lt;p&gt;与软件转移到不同环境时的处理或手段有关的软件属性。&lt;/p&gt;
     &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
     &lt;td style=&#34;text-align: center;&#34;&gt;易安装性（Installability）&lt;/td&gt;
     &lt;td&gt;
-        与在指定环境下安装软件所需努力有关的软件属性。
+        &lt;p&gt;与在指定环境下安装软件所需努力有关的软件属性。&lt;/p&gt;
     &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
     &lt;td style=&#34;text-align: center;&#34;&gt;一致性（Conformance）&lt;/td&gt;
     &lt;td&gt;
-        使软件服从与可移植性有关的标准或约定的软件属性。
+        &lt;p&gt;使软件服从与可移植性有关的标准或约定的软件属性。&lt;/p&gt;
     &lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
     &lt;td style=&#34;text-align: center;&#34;&gt;易替换性（Replaceability）&lt;/td&gt;
     &lt;td&gt;
-        与一软件在该软件环境中用来替代指定的其他软件的可能和努力有关的软件属性。
+        &lt;p&gt;与一软件在该软件环境中用来替代指定的其他软件的可能和努力有关的软件属性。&lt;/p&gt;
     &lt;/td&gt;
 &lt;/tr&gt;
 &lt;/table&gt;

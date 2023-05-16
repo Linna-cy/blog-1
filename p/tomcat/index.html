@@ -69,9 +69,7 @@ Maven Web 项目结构  📁project_name &amp;mdash; 项目主目录  📁src &a
     <script>
         (function() {
             const colorSchemeKey = 'StackColorScheme';
-            if(!localStorage.getItem(colorSchemeKey)){
-                localStorage.setItem(colorSchemeKey, "auto");
-            }
+            localStorage.setItem(colorSchemeKey, "auto");
         })();
     </script><script>
     (function() {
@@ -245,26 +243,6 @@ Maven Web 项目结构  📁project_name &amp;mdash; 项目主目录  📁src &a
         <div class="menu-bottom-section">
             
             
-                <li id="dark-mode-toggle">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="8" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z"/>
-  <circle cx="16" cy="12" r="2" />
-  <rect x="2" y="6" width="20" height="12" rx="6" />
-</svg>
-
-
-
-                    <span>暗色模式</span>
-                </li>
-            
         </div>
     </ol>
 </aside>
@@ -289,7 +267,7 @@ Maven Web 项目结构  📁project_name &amp;mdash; 项目主目录  📁src &a
         <h2 class="widget-title section-title">目录</h2>
         
         <div class="widget--toc">
-            <nav id="TableOfContents" class="js-toc"></nav>
+            <nav id="TableOfContents"></nav>
             
         </div>
     </section>
