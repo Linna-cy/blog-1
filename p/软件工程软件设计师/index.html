@@ -321,7 +321,7 @@
 
         
 
-        <div class="article-time--reading">共1754字</div>
+        <div class="article-time--reading">共1751字</div>
     </footer>
     
 
@@ -2183,15 +2183,21 @@ $$</p>
 <li>
 <p>只有一个任务流入时，设该任务的流出事件为$V_{out}$，则该任务为$&lt;V_{out}, V_{in}&gt;$：</p>
 <p>$$
-T_e(V_{in}) = T_e(V_{out}) + T(&lt;V_{out}, V_{in}&gt;)
+T_e(V_{in}) = T_e(V_{out}) + T
 $$</p>
+<blockquote>
+<p>这里将$T(&lt;V_{out}, V_{in}&gt;)$简写为了$T$。</p>
+</blockquote>
 <p>即：<u>该流入任务的流出事件的最早时刻</u> + <u>完成该流入任务的所需时间</u>。</p>
 </li>
 <li>
 <p>多个任务流入时，设与每个任务相对应的流出事件为$V_{out}[ \ i \ ]$，则这些任务为$&lt;V_{out}[ \ i \ ], V_{in}&gt;$：</p>
 <p>$$
-T_e(V_{in}) = Max(T_e(V_{out}[ \ i \ ]) + T(&lt;V_{out}[ \ i \ ], V_{in}&gt;))
+T_e(V_{in}) = Max(T_e(V_{out}[ \ i \ ]) + T_i)
 $$</p>
+<blockquote>
+<p>这里将$T(&lt;V_{out}[ \ i \ ], V_{in}&gt;)$简写为了$T_i$。</p>
+</blockquote>
 <p>即<u>流入该事件的每个任务计算出的最早时刻的最大值</u>。</p>
 </li>
 <li>
@@ -2208,23 +2214,29 @@ $$</p>
 <li>
 <p>只有一个任务流出时，设该任务的流入事件为$V_{in}$，则该任务为$&lt;V_{out}, V_{in}&gt;$：</p>
 <p>$$
-T_l(V_{out}) = T_l(V_{in}) - (T(&lt;V_{out}, V_{in}&gt;) + T_s(&lt;V_{out}, V_{in}&gt;))
+T_l(V_{out}) = T_l(V_{in}) - (T + T_s)
 $$</p>
+<blockquote>
+<p>这里将$T_s(&lt;V_{out}, V_{in}&gt;)$简写为$T_s$。</p>
+</blockquote>
 <p>即：<u>该流出任务的流入事件的最迟时刻</u> -（<u>该流出任务的所需时间</u> + <u>松弛时间</u>）。</p>
 <p>如果松弛时间未知或为0：</p>
 <p>$$
-T_l(V_{out}) = T_l(V_{in}) - T(&lt;V_{out}, V_{in}&gt;)
+T_l(V_{out}) = T_l(V_{in}) - T
 $$</p>
 </li>
 <li>
-<p>多个任务流出时，设与每个任务相对应的流入事件为$V_{out}[ \ i \ ]$，则这些任务为$&lt;V_{out}[ \ i \ ], V_{in}&gt;$：</p>
+<p>多个任务流出时，设与每个任务相对应的流入事件为$V_{in}[ \ i \ ]$，则这些任务为$&lt;V_{out}, V_{in}[ \ i \ ]&gt;$：</p>
 <p>$$
-Min(V_{out}[ \ i \ ]) = T_l(V_{in}) - (T(&lt;V_{out}[ \ i \ ], V_{in}&gt;) + T_s(&lt;V_{out}[ \ i \ ], V_{in}&gt;))
+T_l(V_{out}) = Min(T_l(V_{in}[ \ i \ ]) - (T_i + S_i))
 $$</p>
+<blockquote>
+<p>这里把$T(&lt;V_{out}, V_{in}[ \ i \ ]&gt;)$简写为$T_i$，把$T_s(&lt;V_{out}, V_{in}[ \ i \ ]&gt;)$简写为$S_i$。</p>
+</blockquote>
 <p>即<u>流出该事件的每个任务计算出的最晚时刻的最大值</u>。</p>
-<p>如果松弛时间未知：</p>
+<p>如果松弛时间未知或为0：</p>
 <p>$$
-Min(V_{out}[ \ i \ ]) = T_l(V_{in}) - T(&lt;V_{out}[ \ i \ ], V_{in}&gt;)
+T_l(V_{out}) = Min(T_l(V_{in}[ \ i \ ]) - T_i)
 $$</p>
 </li>
 <li>
@@ -2239,7 +2251,7 @@ $$</p>
 <li>
 <p>设某任务的流入事件为$V_{in}$，流出事件为$V_{out}$，则该任务$&lt;V_{out}, V_{in}&gt;$的<u>松弛时间</u>$T_s(&lt;V_{out}, V_{in}&gt;)$。</p>
 <p>$$
-T_s(&lt;V_{out}, V_{in}&gt;) = T_l(V_{in}) - T(&lt;V_{out}, V_{in}&gt;) - T_e(V_{out})
+T_s = T_l(V_{in}) - T - T_e(V_{out})
 $$</p>
 <p>即，该任务的流入事件的最迟时刻 - 该任务的所需时间 - 该任务的流出事件的最早时刻</p>
 </li>
@@ -2287,15 +2299,21 @@ $$</p>
 <p>所有任务持续时间的和，是PERT图所有路径中最大的，并且与结束事件的最早时刻（或最晚时刻）相等。</p>
 <p>设关键路径中所有事件为$V_i$（$i = 1, 2, \cdots, n$），且该路径下的任务为$&lt;V_j, V_{j+1}&gt;$（$1 \le j \le n-1$）（表示$V_1$是开始事件，$V_2$是$V_1$往下的一个事件，以此类推，$V_n$是结束事件），那么该关键路径结束事件的最早时刻（或最晚时刻）为：</p>
 <p>$$
-T_e(V_n) = \sum_{i = 1}^{n-1} T(&lt;V_i, V_{i+1}&gt;)
+T_e(V_n) = \sum_{i = 1}^{n-1} T_i
 $$</p>
+<blockquote>
+<p>这里$T_i$代表$T(&lt;V_i, V_{i+1}&gt;)$。</p>
+</blockquote>
 </li>
 </ul>
 <p>最迟时刻的另一种求法（PERT图存在关键路径的情况下）：</p>
 <p>已知某PERT图结束事件的最晚时刻（最早时刻），该PERT图中某一条路径（假设该路径没有分支）中所有事件为$V_j$（$j = 1, 2, \cdots, n$），且该路径下的任务为$&lt;V_k, V_{k+1}&gt;$（$1 \le k \le n-1$），该路径下任务的持续时间$T(&lt;V_{k-1}, V_k&gt;)$已知，（即$V_1$是开始事件，按照次序往下，$V_n$是结束事件），计算某一事件的最迟时刻$T_l(V_i)$（$1 \le i &lt; n$）：</p>
 <p>$$
-T_l(V_i) = T_l(V_n) - \sum_{j = i}^{n - 1} T(&lt;V_j, V_{j + 1}&gt;)
+T_l(V_i) = T_l(V_n) - \sum_{j = i}^{n - 1} T_j
 $$</p>
+<blockquote>
+<p>这里$T_j$代表$T(&lt;V_j, V_{j + 1}&gt;)$。</p>
+</blockquote>
 <p>即：<u>结束事件的最晚时刻</u> - <u>该事件到结束事件之间所有的任务的持续时间总和</u>。</p>
 <blockquote>
 <p>注意：如果事件$V_i$到结束事件之间存在多条路径，应该选择那条任务持续时间总和最大的路径。</p>
