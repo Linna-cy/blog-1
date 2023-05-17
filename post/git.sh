@@ -8,7 +8,7 @@ function public_git(){
 
 function add(){
     echo "自动缓存"
-    git add --all    
+    git add --all
 }
 
 function commit(){
@@ -53,7 +53,7 @@ elif [ "$1" == "all" ]
 then
     param $2 $3
     public_git $2 $3
-elif [ -z "$1" ]
+elif [[ "$1" == "add" || "$1" == "commit" || "$1" == "push" ]]
 then
     param $1 $2
 else
