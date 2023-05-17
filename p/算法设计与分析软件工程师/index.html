@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='算法概述 算法（Algorithm）是对特定问题求解步骤的一种描述，它是指令的有限序列，其中每一条指令表示一个或多个操作。算法具有下列5个重要特性：
+ 有穷性：一个算法必须总是（对任何合法的输入值）在执行有穷步之后结束，且每一步都可在有穷时间内完成。 确定性：算法中的每一条指令必须有确切的含义，理解时不会产生二义性。并且在任何条件下，算法只有唯一的一条执行路径，即对于相同的输入只能得出相同的输出。 可行性：一个算法是可行的，即算法中描述的操作都可以通过已经实现的基本运算执行有限次来实现。 输入：一个算法有零个或多个输入，这些输入取自于某个特定的对象的集合。 输出：一个算法有一个或多个输出，这些输出是同输入有着某些特定关系的量。  常用的表示算法的方法有：
+  自然语言：优点是易理解；缺点是易出现二义性，算法通常很冗长。
+  流程图：优点是直观易懂；缺点是严密性不如程序设计语言，灵活性不如自然语言。
+  程序设计语言：优点是能用计算机直接执行；缺点是抽象性差，使算法设计者拘泥于描述算法的具体细节，忽略了“好”算法和正确逻辑的重要性，要求算法设计者掌握程序设计语言及编程技巧。
+  伪代码：伪代码是介于自然语言和程序设计语言之间的方法，它采用某一程序设计语言的基本语法，同时结合自然语言来表达。
+计算机科学家从来没有对伪代码的书写形式达成过共识。
+在伪代码中，可以采用最具表达力的、最简明扼要的方法来表达一个给定的算法。
+   算法分析 复杂度 由于时间复杂度与空间复杂度分别对算法占用的时间和空间资源进行分析，计算方法相似。
+算法的时间复杂度分析主要时分析算法的运行时间，即算法执行所需要的基本操作数。算法时间复杂度以算法中基本操附重复执行的次数（简称为频度）作为算法的时间度量。一般不必要精确计算出算法的时间复杂度，只要大致计算出相应的数量级即可。
+算法的复杂度通常是用大O表示法。
+ 加法规则：多项相加，保留最高阶项，并将系数化为1； 乘法规则：多项相乘都保留，并将系数化为1。  递归式的时间（空间）复杂度：
+$$ 递归的次数 \times 每次递归的时间（空间）复杂度 $$
+渐进符号 可以用渐进符号来表示渐进复杂度。
+渐进符号包括：
+  $O$：算法运行时间的渐进上界。
+给定一个函数$g(n)$，$O\big( g(n) \big) = \{ f(n):\exists 正常数c和n_0,使得\forall n \ge n_0, 有 0 \le f(n) \le cg(n) \}$。
+即，当$n \ge n_0$时，$f(n) \le c \cdot g(n)$。'>
+
+
+<title>算法设计与分析(软件工程师)</title>
+
+<link rel='canonical' href='https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/'>
+
+<link rel="stylesheet" href="/scss/style.min.7a68e2beb371039eca9f5e8f87aa11bdb1fdc96a55744700a091f658cd1e66a7.css">
+<link rel="stylesheet" href="/css/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+<meta property='og:title' content='算法设计与分析(软件工程师)'>
+<meta property='og:description' content='算法概述 算法（Algorithm）是对特定问题求解步骤的一种描述，它是指令的有限序列，其中每一条指令表示一个或多个操作。算法具有下列5个重要特性：
+ 有穷性：一个算法必须总是（对任何合法的输入值）在执行有穷步之后结束，且每一步都可在有穷时间内完成。 确定性：算法中的每一条指令必须有确切的含义，理解时不会产生二义性。并且在任何条件下，算法只有唯一的一条执行路径，即对于相同的输入只能得出相同的输出。 可行性：一个算法是可行的，即算法中描述的操作都可以通过已经实现的基本运算执行有限次来实现。 输入：一个算法有零个或多个输入，这些输入取自于某个特定的对象的集合。 输出：一个算法有一个或多个输出，这些输出是同输入有着某些特定关系的量。  常用的表示算法的方法有：
+  自然语言：优点是易理解；缺点是易出现二义性，算法通常很冗长。
+  流程图：优点是直观易懂；缺点是严密性不如程序设计语言，灵活性不如自然语言。
+  程序设计语言：优点是能用计算机直接执行；缺点是抽象性差，使算法设计者拘泥于描述算法的具体细节，忽略了“好”算法和正确逻辑的重要性，要求算法设计者掌握程序设计语言及编程技巧。
+  伪代码：伪代码是介于自然语言和程序设计语言之间的方法，它采用某一程序设计语言的基本语法，同时结合自然语言来表达。
+计算机科学家从来没有对伪代码的书写形式达成过共识。
+在伪代码中，可以采用最具表达力的、最简明扼要的方法来表达一个给定的算法。
+   算法分析 复杂度 由于时间复杂度与空间复杂度分别对算法占用的时间和空间资源进行分析，计算方法相似。
+算法的时间复杂度分析主要时分析算法的运行时间，即算法执行所需要的基本操作数。算法时间复杂度以算法中基本操附重复执行的次数（简称为频度）作为算法的时间度量。一般不必要精确计算出算法的时间复杂度，只要大致计算出相应的数量级即可。
+算法的复杂度通常是用大O表示法。
+ 加法规则：多项相加，保留最高阶项，并将系数化为1； 乘法规则：多项相乘都保留，并将系数化为1。  递归式的时间（空间）复杂度：
+$$ 递归的次数 \times 每次递归的时间（空间）复杂度 $$
+渐进符号 可以用渐进符号来表示渐进复杂度。
+渐进符号包括：
+  $O$：算法运行时间的渐进上界。
+给定一个函数$g(n)$，$O\big( g(n) \big) = \{ f(n):\exists 正常数c和n_0,使得\forall n \ge n_0, 有 0 \le f(n) \le cg(n) \}$。
+即，当$n \ge n_0$时，$f(n) \le c \cdot g(n)$。'>
+<meta property='og:url' content='https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/'>
+<meta property='og:site_name' content='Linner&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='软考' /><meta property='article:tag' content='软件设计师' /><meta property='article:tag' content='算法' /><meta property='article:published_time' content='2023-05-17T12:52:42&#43;08:00'/><meta property='article:modified_time' content='2023-05-17T12:52:42&#43;08:00'/>
+<meta name="twitter:title" content="算法设计与分析(软件工程师)">
+<meta name="twitter:description" content="算法概述 算法（Algorithm）是对特定问题求解步骤的一种描述，它是指令的有限序列，其中每一条指令表示一个或多个操作。算法具有下列5个重要特性：
+ 有穷性：一个算法必须总是（对任何合法的输入值）在执行有穷步之后结束，且每一步都可在有穷时间内完成。 确定性：算法中的每一条指令必须有确切的含义，理解时不会产生二义性。并且在任何条件下，算法只有唯一的一条执行路径，即对于相同的输入只能得出相同的输出。 可行性：一个算法是可行的，即算法中描述的操作都可以通过已经实现的基本运算执行有限次来实现。 输入：一个算法有零个或多个输入，这些输入取自于某个特定的对象的集合。 输出：一个算法有一个或多个输出，这些输出是同输入有着某些特定关系的量。  常用的表示算法的方法有：
+  自然语言：优点是易理解；缺点是易出现二义性，算法通常很冗长。
+  流程图：优点是直观易懂；缺点是严密性不如程序设计语言，灵活性不如自然语言。
+  程序设计语言：优点是能用计算机直接执行；缺点是抽象性差，使算法设计者拘泥于描述算法的具体细节，忽略了“好”算法和正确逻辑的重要性，要求算法设计者掌握程序设计语言及编程技巧。
+  伪代码：伪代码是介于自然语言和程序设计语言之间的方法，它采用某一程序设计语言的基本语法，同时结合自然语言来表达。
+计算机科学家从来没有对伪代码的书写形式达成过共识。
+在伪代码中，可以采用最具表达力的、最简明扼要的方法来表达一个给定的算法。
+   算法分析 复杂度 由于时间复杂度与空间复杂度分别对算法占用的时间和空间资源进行分析，计算方法相似。
+算法的时间复杂度分析主要时分析算法的运行时间，即算法执行所需要的基本操作数。算法时间复杂度以算法中基本操附重复执行的次数（简称为频度）作为算法的时间度量。一般不必要精确计算出算法的时间复杂度，只要大致计算出相应的数量级即可。
+算法的复杂度通常是用大O表示法。
+ 加法规则：多项相加，保留最高阶项，并将系数化为1； 乘法规则：多项相乘都保留，并将系数化为1。  递归式的时间（空间）复杂度：
+$$ 递归的次数 \times 每次递归的时间（空间）复杂度 $$
+渐进符号 可以用渐进符号来表示渐进复杂度。
+渐进符号包括：
+  $O$：算法运行时间的渐进上界。
+给定一个函数$g(n)$，$O\big( g(n) \big) = \{ f(n):\exists 正常数c和n_0,使得\forall n \ge n_0, 有 0 \le f(n) \le cg(n) \}$。
+即，当$n \ge n_0$时，$f(n) \le c \cdot g(n)$。">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+<style>
+    u {
+        text-decoration-line: none;
+        border-bottom: 1.5px solid;
+        padding-bottom: 1.5px;
+    }
+    li {
+        margin: 1em 0;
+    }
+</style>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            localStorage.setItem(colorSchemeKey, "auto");
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu0c2331fe09320137a3bd1d4b5cc68791_142496_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Linner&#39;s Blog</a></h1>
+            <h2 class="site-description">随便看看就行，副标题暂时还没想好</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Linna-cy'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+        </div>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+    <section class="widget archives" id="toc-list">
+        <div class="widget-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+        </div>
+        <h2 class="widget-title section-title">目录</h2>
+        
+        <div class="widget--toc">
+            <nav id="TableOfContents"></nav>
+            
+        </div>
+    </section>
+
+
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/" >
+                软件设计师
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/">算法设计与分析(软件工程师)</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 17, 2023</time>
+                |
+            </div>
+        
+
+        
+
+        <div class="article-time--reading">共108字</div>
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="算法概述">算法概述</h1>
+<p>算法（Algorithm）是对特定问题求解步骤的一种描述，它是指令的有限序列，其中每一条指令表示一个或多个操作。算法具有下列5个重要特性：</p>
+<ul>
+<li><strong>有穷性</strong>：一个算法必须总是（对任何合法的输入值）在<u>执行有穷步之后结束</u>，且<u>每一步都可在有穷时间内完成</u>。</li>
+<li><strong>确定性</strong>：算法中的<u>每一条指令必须有确切的含义</u>，理解时<u>不会产生二义性</u>。并且在任何条件下，算法只有唯一的一条执行路径，即对于<u>相同的输入只能得出相同的输出</u>。</li>
+<li><strong>可行性</strong>：一个算法是可行的，即算法中描述的操作都可以通过已经实现的基本运算执行有限次来实现。</li>
+<li><strong>输入</strong>：一个算法有<u>零个或多个输入</u>，这些输入取自于某个特定的对象的集合。</li>
+<li><strong>输出</strong>：一个算法有<u>一个或多个输出</u>，这些输出是同输入有着某些特定关系的量。</li>
+</ul>
+<p>常用的表示算法的方法有：</p>
+<ul>
+<li>
+<p><strong>自然语言</strong>：优点是易理解；缺点是易出现二义性，算法通常很冗长。</p>
+</li>
+<li>
+<p><strong>流程图</strong>：优点是直观易懂；缺点是严密性不如程序设计语言，灵活性不如自然语言。</p>
+</li>
+<li>
+<p><strong>程序设计语言</strong>：优点是能用计算机直接执行；缺点是抽象性差，使算法设计者拘泥于描述算法的具体细节，忽略了“好”算法和正确逻辑的重要性，要求算法设计者掌握程序设计语言及编程技巧。</p>
+</li>
+<li>
+<p><strong>伪代码</strong>：伪代码是介于自然语言和程序设计语言之间的方法，它采用某一程序设计语言的基本语法，同时结合自然语言来表达。</p>
+<p>计算机科学家从来没有对伪代码的书写形式达成过共识。</p>
+<p>在伪代码中，可以采用最具表达力的、最简明扼要的方法来表达一个给定的算法。</p>
+</li>
+</ul>
+<hr>
+<h1 id="算法分析">算法分析</h1>
+<h2 id="复杂度">复杂度</h2>
+<p>由于时间复杂度与空间复杂度分别对算法占用的时间和空间资源进行分析，计算方法相似。</p>
+<p>算法的时间复杂度分析主要时分析算法的运行时间，即算法执行所需要的基本操作数。算法时间复杂度以算法中基本操附重复执行的次数（简称为频度）作为算法的时间度量。一般不必要精确计算出算法的时间复杂度，只要大致计算出相应的数量级即可。</p>
+<p>算法的复杂度通常是用大O表示法。</p>
+<ul>
+<li>加法规则：多项相加，保留最高阶项，并将系数化为1；</li>
+<li>乘法规则：多项相乘都保留，并将系数化为1。</li>
+</ul>
+<p><img src="/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/1681099842666.png"
+	width="1014"
+	height="100"
+	srcset="/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/1681099842666_hu8fb0d0a3c83abecf36c375990db2efe0_51379_480x0_resize_box_3.png 480w, /p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/1681099842666_hu8fb0d0a3c83abecf36c375990db2efe0_51379_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="算法复杂度大小比较"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="1014"
+		data-flex-basis="2433px"
+	
+></p>
+<p>递归式的时间（空间）复杂度：</p>
+<p>$$
+递归的次数 \times 每次递归的时间（空间）复杂度
+$$</p>
+<h2 id="渐进符号">渐进符号</h2>
+<p>可以用渐进符号来表示渐进复杂度。</p>
+<p>渐进符号包括：</p>
+<ul>
+<li>
+<p>$O$：算法运行时间的渐进上界。</p>
+<p>给定一个函数$g(n)$，$O\big( g(n) \big) = \{ f(n):\exists 正常数c和n_0,使得\forall n \ge n_0, 有 0 \le f(n) \le cg(n) \}$。</p>
+<p>即，当$n \ge n_0$时，$f(n) \le c \cdot g(n)$。</p>
+</li>
+<li>
+<p>$\Omega$：算法运行时间的渐进下界。</p>
+<p>给定一个函数$g(n)$，$O\big( g(n) \big) = \{ f(n):\exists 正常数c和n_0,使得\forall n \ge n_0, 有 0 \le cg(n) \le f(n) \}$。</p>
+<p>即，当$n \ge n_0$时，$c \cdot g(n) \le f(n)$。</p>
+</li>
+<li>
+<p>$\Theta$：算法运行时间的渐进上界和渐进下界，即渐进紧致界（又叫紧缺界）。</p>
+<p>给定一个函数$g(n)$，$O\big( g(n) \big) = \{ f(n):\exists 正常数c_1、c_2和n_0,使得\forall n \ge n_0, 有 0 \le c_1g(n) \le f(n) \le c_2g(n) \}$。</p>
+<p>即，当$n \ge n_0$时，$c_1g(n) \le f(n) \le c_2g(n)$。</p>
+</li>
+</ul>
+<p><img src="/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/uTools_1681110832416.png"
+	width="966"
+	height="1204"
+	srcset="/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/uTools_1681110832416_hud8e84328d379d2eda520e5c710188239_380512_480x0_resize_box_3.png 480w, /p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/uTools_1681110832416_hud8e84328d379d2eda520e5c710188239_380512_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="递归式主方法"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="80"
+		data-flex-basis="192px"
+	
+></p>
+<hr>
+<h1 id="分治法">分治法</h1>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/%E8%BD%AF%E8%80%83/">软考</a>
+        
+            <a href="/tags/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/">软件设计师</a>
+        
+            <a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+       
+</article>
+
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/">
+        
+        
+
+        数据结构（软件设计师）</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/">
+        
+        
+
+        计算机网络（软件设计师）</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/">
+        
+        
+
+        软件工程（软件设计师）</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/%E7%BB%93%E6%9E%84%E5%8C%96%E5%BC%80%E5%8F%91%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/">
+        
+        
+
+        结构化开发（软件设计师）</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/">
+        
+        
+
+        数据库（软件设计师）</a>
+</div>
+</section>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2022 - 
+        
+        2023 Linner&#39;s Blog
+
+        <span style="padding-left: 5px;padding-right: 5px;">|</span>
+
+        <a href="https://beian.miit.gov.cn/" target="_blank" >粤ICP备2022125602号-1</a>
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

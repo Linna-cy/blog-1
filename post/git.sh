@@ -1,11 +1,10 @@
 #!/bin/bash
 function public_git(){
     cd ../..
+    echo "-------------MYBLOG-------------"
     ./git.sh $1 $2
     cd content/post
 }
-
-echo "--------------POST--------------"
 
 function add(){
     echo "自动缓存"
@@ -31,6 +30,8 @@ function push(){
 }
 
 function param(){
+    echo "--------------POST--------------"
+
     if [ "$1" == "add" ]
     then
         add
@@ -47,9 +48,14 @@ function param(){
 
 if [ "$1" == "blog" ]
 then
-    param $2 $3
-    echo "-------------MYBLOG-------------"
     public_git $2 $3
-else
+elif [ "$1" == "all" ]
+then
+    param $2 $3
+    public_git $2 $3
+elif [ -z "$1" ]
+then
     param $1 $2
+else
+    echo "请正确使用命令"
 fi

@@ -13,13 +13,18 @@
         
         <guid>https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/</guid>
         <description>&lt;h1 id=&#34;复杂度&#34;&gt;复杂度&lt;/h1&gt;
-&lt;h2 id=&#34;大o表示法&#34;&gt;大O表示法&lt;/h2&gt;
 &lt;p&gt;算法时间复杂度以算法中基本操附重复执行的次数（简称为频度）作为算法的时间度量。一般不必要精确计算出算法的时间复杂度，只要大致计算出相应的数量级即可，使用大$O$表示法表示（空间复杂度也是）。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;加法规则：多项相加，保留最高阶项，并将系数化为1；&lt;/li&gt;
+&lt;li&gt;乘法规则：多项相乘都保留，并将系数化为1。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1681099842666.png&#34;
 	width=&#34;1014&#34;
 	height=&#34;100&#34;
 	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1681099842666_hu8fb0d0a3c83abecf36c375990db2efe0_51379_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1681099842666_hu8fb0d0a3c83abecf36c375990db2efe0_51379_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
+	
+		alt=&#34;算法复杂度大小比较&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -27,48 +32,10 @@
 		data-flex-basis=&#34;2433px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;加法规则：多项相加，保留最高阶项，并将系数化为1；&lt;/li&gt;
-&lt;li&gt;乘法规则：多项相乘都保留，并将系数化为1。&lt;/li&gt;
-&lt;/ul&gt;
 &lt;p&gt;递归式的时间（空间）复杂度：&lt;/p&gt;
 &lt;p&gt;$$
 递归的次数 \times 每次递归的时间（空间）复杂度
 $$&lt;/p&gt;
-&lt;h2 id=&#34;渐进符号&#34;&gt;渐进符号&lt;/h2&gt;
-&lt;p&gt;可以用渐进符号来表示渐进复杂度。&lt;/p&gt;
-&lt;p&gt;渐进符号包括：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;$O$：算法运行时间的渐进上界。&lt;/p&gt;
-&lt;p&gt;给定一个函数$g(n)$，$O\big( g(n) \big) = \{ f(n):\exists 正常数c和n_0,使得\forall n \ge n_0, 有 0 \le f(n) \le cg(n) \}$。&lt;/p&gt;
-&lt;p&gt;即，当$n \ge n_0$时，$f(n) \le c \cdot g(n)$。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$\Omega$：算法运行时间的渐进下界。&lt;/p&gt;
-&lt;p&gt;给定一个函数$g(n)$，$O\big( g(n) \big) = \{ f(n):\exists 正常数c和n_0,使得\forall n \ge n_0, 有 0 \le cg(n) \le f(n) \}$。&lt;/p&gt;
-&lt;p&gt;即，当$n \ge n_0$时，$c \cdot g(n) \le f(n)$。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;$\Theta$：算法运行时间的渐进上界和渐进下界，即渐进紧致界（又叫紧缺界）。&lt;/p&gt;
-&lt;p&gt;给定一个函数$g(n)$，$O\big( g(n) \big) = \{ f(n):\exists 正常数c_1、c_2和n_0,使得\forall n \ge n_0, 有 0 \le c_1g(n) \le f(n) \le c_2g(n) \}$。&lt;/p&gt;
-&lt;p&gt;即，当$n \ge n_0$时，$c_1g(n) \le f(n) \le c_2g(n)$。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1681110832416.png&#34;
-	width=&#34;966&#34;
-	height=&#34;1204&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1681110832416_hud8e84328d379d2eda520e5c710188239_380512_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1681110832416_hud8e84328d379d2eda520e5c710188239_380512_1024x0_resize_box_3.png 1024w&#34;
-	loading=&#34;lazy&#34;
-	
-		alt=&#34;递归式主方法&#34;
-	
-	
-		class=&#34;gallery-image&#34; 
-		data-flex-grow=&#34;80&#34;
-		data-flex-basis=&#34;192px&#34;
-	
-&gt;&lt;/p&gt;
 &lt;h1 id=&#34;逻辑结构分类&#34;&gt;逻辑结构分类&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;线性结构
