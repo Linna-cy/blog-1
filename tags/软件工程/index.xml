@@ -116,7 +116,7 @@
 &lt;/ol&gt;
 &lt;h2 id=&#34;能力成熟度模型集成&#34;&gt;能力成熟度模型集成&lt;/h2&gt;
 &lt;p&gt;能力成熟度模型集成（CMMI）是若干过程模型的综合和改进，是支持多个工程学科和领域的、系统的、一致的过程改进框架，能适应现代工程的特点和需要，能提高过程的质量和工作效率&lt;/p&gt;
-&lt;p&gt;CⅫ提供了两种表示方法：&lt;/p&gt;
+&lt;p&gt;CMMI提供了两种表示方法：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;阶段式模型&lt;/strong&gt;：&lt;/p&gt;
@@ -2571,60 +2571,50 @@ $$&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;功能性：
 &lt;ul&gt;
-&lt;li&gt;适合性：与对规定任务能否提供一组功能以及这组功能是否适合有关的软件属性。&lt;/li&gt;
-&lt;li&gt;准确性：与能够得到正确或相符的结果或效果有关的软件属性。&lt;/li&gt;
-&lt;li&gt;互用性：&lt;u&gt;与其他指定系统进行交互操作&lt;/u&gt;的能力相关的软件属性。&lt;/li&gt;
-&lt;li&gt;依从性：&lt;u&gt;使软件服从有关的标准、约定、法规及类似规定&lt;/u&gt;的软件属性。&lt;/li&gt;
-&lt;li&gt;安全性：与避免对程序及数据的非授权故意或意外访问的能力有关的软件属性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;适合性&lt;/strong&gt;：与对规定任务能否提供一组功能以及这组功能是否适合有关的软件属性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;准确性&lt;/strong&gt;：与能够得到正确或相符的结果或效果有关的软件属性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;互用性&lt;/strong&gt;：&lt;u&gt;与其他指定系统进行交互操作&lt;/u&gt;的能力相关的软件属性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;依从性&lt;/strong&gt;：&lt;u&gt;使软件服从有关的标准、约定、法规及类似规定&lt;/u&gt;的软件属性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;安全性&lt;/strong&gt;：与避免对程序及数据的非授权故意或意外访问的能力有关的软件属性。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;可靠性：
 &lt;ul&gt;
-&lt;li&gt;成熟性：与由软件故障引起失效的频度有关的软件属性。&lt;/li&gt;
-&lt;li&gt;容错性：与&lt;u&gt;在软件错误或违反指定接口的情况下维持指定的性能水平&lt;/u&gt;的能力有关的软件属性。&lt;/li&gt;
-&lt;li&gt;易恢复性：与&lt;u&gt;在故障发生后，重新建立其性能水平并恢复直接受影响数据&lt;/u&gt;的能力，以及为达到此目的所需的时间和努力有关的软件属性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;成熟性&lt;/strong&gt;：与由软件故障引起失效的频度有关的软件属性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;容错性&lt;/strong&gt;：与&lt;u&gt;在软件错误或违反指定接口的情况下维持指定的性能水平&lt;/u&gt;的能力有关的软件属性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;易恢复性&lt;/strong&gt;：与&lt;u&gt;在故障发生后，重新建立其性能水平并恢复直接受影响数据&lt;/u&gt;的能力，以及为达到此目的所需的时间和努力有关的软件属性。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;易使用性：
 &lt;ul&gt;
-&lt;li&gt;易理解性：与用户为理解逻辑概念及其应用所付出的劳动有关的软件属性。&lt;/li&gt;
-&lt;li&gt;易学性：与用户为学习其应用（例如操作控制、输入、输出）所付出的努力相关的软件属性。&lt;/li&gt;
-&lt;li&gt;易操作性：与用户为进行操作和操作控制所付出的努力有关的软件属性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;易理解性&lt;/strong&gt;：与用户为理解逻辑概念及其应用所付出的劳动有关的软件属性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;易学性&lt;/strong&gt;：与用户为学习其应用（例如操作控制、输入、输出）所付出的努力相关的软件属性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;易操作性&lt;/strong&gt;：与用户为进行操作和操作控制所付出的努力有关的软件属性。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;效率：
 &lt;ul&gt;
-&lt;li&gt;时间特性：与响应和处理时间以及软件执行其功能时的吞吐量有关的软件属性。&lt;/li&gt;
-&lt;li&gt;资源特性：与软件执行其功能时，所使用的资源量以及使用资源的持续时间有关的软件属性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;时间特性&lt;/strong&gt;：与响应和处理时间以及软件执行其功能时的吞吐量有关的软件属性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;资源特性&lt;/strong&gt;：与软件执行其功能时，所使用的资源量以及使用资源的持续时间有关的软件属性。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;可维护性：
 &lt;ul&gt;
-&lt;li&gt;易分析性：与为诊断缺陷或失效原因，或为判定待修改的部分所需努力有关的软件属性。&lt;/li&gt;
-&lt;li&gt;易改变性：与进行修改、排错或适应环境变换所需努力有关的软件属性。&lt;/li&gt;
-&lt;li&gt;稳定性：与修改造成未预料效果的风险有关的软件属性。&lt;/li&gt;
-&lt;li&gt;易测试性：为确认经修改软件所需努力有关的软件属性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;易分析性&lt;/strong&gt;：与为诊断缺陷或失效原因，或为判定待修改的部分所需努力有关的软件属性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;易改变性&lt;/strong&gt;：与进行修改、排错或适应环境变换所需努力有关的软件属性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;稳定性&lt;/strong&gt;：与修改造成未预料效果的风险有关的软件属性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;易测试性&lt;/strong&gt;：为确认经修改软件所需努力有关的软件属性。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;可移植性：
 &lt;ul&gt;
-&lt;li&gt;适应性：与软件转移到不同环境时的处理或手段有关的软件属性。&lt;/li&gt;
-&lt;li&gt;易安装性：与在指定环境下安装软件所需努力有关的软件属性。&lt;/li&gt;
-&lt;li&gt;一致性：使软件服从与可移植性有关的标准或约定的软件属性。&lt;/li&gt;
-&lt;li&gt;易替换性：与一软件在该软件环境中用来替代指定的其他软件的可能和努力有关的软件属性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;适应性&lt;/strong&gt;：与软件转移到不同环境时的处理或手段有关的软件属性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;易安装性&lt;/strong&gt;：与在指定环境下安装软件所需努力有关的软件属性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;一致性&lt;/strong&gt;：使软件服从与可移植性有关的标准或约定的软件属性。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;易替换性&lt;/strong&gt;：与一软件在该软件环境中用来替代指定的其他软件的可能和努力有关的软件属性。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;!--
-质量特性    |质量子特性
-:---------:|:---
-**功能性**  |&lt;ul&gt;&lt;li&gt;适合性&lt;/li&gt;&lt;li&gt;准确性&lt;/li&gt;&lt;li&gt;互用性&lt;/li&gt;&lt;li&gt;依从性&lt;/li&gt;&lt;li&gt;安全性&lt;/li&gt;&lt;/ul&gt;
-**可靠性**  |&lt;ul&gt;&lt;li&gt;成熟性&lt;/li&gt;&lt;li&gt;容错性&lt;/li&gt;&lt;li&gt;易恢复性&lt;/li&gt;&lt;/ul&gt;
-**易使用性**|&lt;ul&gt;&lt;li&gt;易理解性&lt;/li&gt;&lt;li&gt;易学性&lt;/li&gt;&lt;li&gt;易操作性&lt;/li&gt;&lt;/ul&gt;
-**效率**    |&lt;ul&gt;&lt;li&gt;时间特性&lt;/li&gt;&lt;li&gt;资源特性&lt;/li&gt;&lt;/ul&gt;
-**可维护性**|&lt;ul&gt;&lt;li&gt;易分析性&lt;/li&gt;&lt;li&gt;易改变性&lt;/li&gt;&lt;li&gt;稳定性&lt;/li&gt;&lt;li&gt;易测试性&lt;/li&gt;&lt;/ul&gt;
-**可移植性**|&lt;ul&gt;&lt;li&gt;适应性&lt;/li&gt;&lt;li&gt;易安装性&lt;/li&gt;&lt;li&gt;一致性&lt;/li&gt;&lt;li&gt;易替换性&lt;/li&gt;&lt;/ul&gt;
---&gt;
 &lt;h3 id=&#34;mc-call-软件质量模型&#34;&gt;Mc Call 软件质量模型&lt;/h3&gt;
 &lt;p&gt;Mc Call软件质量模型从以下3个方面确定了11个质量特性：&lt;/p&gt;
 &lt;ul&gt;
