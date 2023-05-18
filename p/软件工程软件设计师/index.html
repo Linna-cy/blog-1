@@ -44,12 +44,18 @@
         margin-top: 0;
         padding-top: 0;
     }
+    .article-content td:last-child {
+        padding-bottom: 0;
+    }
     .article-content td ol, 
     .article-content td ul {
         padding-left: 1.2em;
     }
     .article-content td {
         padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
     }
     .article-content td li {
         margin-bottom: 0.8em;
@@ -326,13 +332,13 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 57 分钟
+                    阅读时长: 58 分钟
                 </time>
                 |
             </div>
         
 
-        <div class="article-time--reading">共28514字</div>
+        <div class="article-time--reading">共28881字</div>
     </footer>
     
 
@@ -540,7 +546,48 @@
 	
 ></p>
 <p>瀑布模型假设：<u>一个待开发的系统需求是完整的、简明的、一致的</u>，而且<u>可以先于设计和实现完成之前产生</u>。</p>
-<p>瀑布模型的一个变体是<strong>V模型</strong>。V模型<u>描述了质量保证活动和沟通、建模相关活动以及早期构建相关的活动之间的关系</u>：</p>
+<p>瀑布模型：</p>
+<ul>
+<li>
+<p>优点：</p>
+<ul>
+<li>容易理解；</li>
+<li>管理成本低；</li>
+<li>每个阶段都有对应的成果产物；</li>
+<li>各个阶段有明显的界限划分和顺序需求；</li>
+<li>强调开发的阶段性早期计划及需求调查和产品测试。</li>
+</ul>
+</li>
+<li>
+<p>缺点：</p>
+<ul>
+<li>
+<p>需要客户能够完整、正确和清晰地表达自己的需要；</p>
+</li>
+<li>
+<p>在开始的两个或3个阶段中，很难评估真正的进度状态；</p>
+</li>
+<li>
+<p>当接近项目结束时，出现了大量的集成和测试工作；</p>
+</li>
+<li>
+<p>直到项目结束之前，都不能演示系统的能力；</p>
+</li>
+<li>
+<p>一旦发生错误，整个项目要推到重新开始。</p>
+<p>需求或设计中的错误往往只有到了项目后期才能够被发现，对于项目风险的控制能力较弱，从而导致项目常常延期完成，开发费用超出预算。</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>瀑布模式适合用于：</p>
+<ul>
+<li><u>开发需求明确</u>的，<u>需求大致固定且不会随意变更</u>的系统；</li>
+<li>开发人员对软件的应用领域很熟悉；</li>
+<li>开发工作对用户参与的要求很低。</li>
+</ul>
+<h2 id="v模型">V模型</h2>
+<p>V模型式是瀑布模型的一个变体，<u>描述了质量保证活动和沟通、建模相关活动以及早期构建相关的活动之间的关系</u>。</p>
 <p><img src="/p/%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683593148604.png"
 	width="492"
 	height="423"
@@ -564,33 +611,7 @@
 <p>其实际上是<u>执行了一系列测试</u>（质量保证活动），这些测试<u>验证了团队沿着V模型左侧步骤向下推进过程中所生成的每个模型</u>。</p>
 </li>
 </ul>
-<p>V模型提供了一种将验证确认活动应用于早期软件工程工作中的方法。</p>
-<p>瀑布模型：</p>
-<ul>
-<li>
-<p>优点：</p>
-<ul>
-<li>容易理解，管理成本低；</li>
-<li>强调开发的阶段性早期计划及需求调查和产品测试。</li>
-</ul>
-</li>
-<li>
-<p>缺点：</p>
-<ul>
-<li>客户必须能够完整、正确和清晰地表达他们的需要；</li>
-<li>在开始的两个或3个阶段中，很难评估真正的进度状态；</li>
-<li>当接近项目结束时，出现了大量的集成和测试工作；</li>
-<li>直到项目结束之前，都不能演示系统的能力；</li>
-<li>需求或设计中的错误往往只有到了项目后期才能够被发现，对于项目风险的控制能力较弱，从而导致项目常常延期完成，开发费用超出预算。</li>
-</ul>
-</li>
-</ul>
-<p>瀑布模式适合用于：</p>
-<ul>
-<li><u>开发需求明确</u>的，<u>需求大致固定且不会随意变更</u>的系统；</li>
-<li>开发人员对软件的应用领域很熟悉；</li>
-<li>开发工作对用户参与的要求很低。</li>
-</ul>
+<p>V模型是一种测试的开发模型，强调测试贯穿项目的始终，而不是集中在测试阶段。V模型提供了一种将验证确认活动（测试）应用于早期软件工程工作中的方法。</p>
 <h2 id="增量模型">增量模型</h2>
 <p>增量模型（Incremental Model）融合了<u>瀑布模型的基本成分</u>和<u>原型实现的迭代特征</u>。</p>
 <p>增量模型<u>假设可以将需求分段为一系列增量产品，每一增量可以分别开发</u>。该模型采用<u>随着日程时间的进展而交错的线性序列</u>，每一个线性序列产生软件的一个可发布的“增量”：</p>
@@ -610,7 +631,7 @@
 ></p>
 <ul>
 <li>从分析到测试为一个增量的过程（线性序列）。</li>
-<li>第1个增量往往是核心的产品。</li>
+<li><u>核心功能先完成</u>：第1个增量往往是核心的产品。</li>
 <li>客户对每个增量的使用和评估都作为下一个增量发布的新特征和功能，这个过程在每一个增量发布后不断重复，直到产生了最终的完善产品。</li>
 <li>增量模型强调<u>每一个增量均发布一个可操作的产品</u>。</li>
 </ul>
@@ -727,6 +748,7 @@
 </ol>
 </li>
 </ol>
+<p><u>螺旋模型属于面向对象开发模型。</u></p>
 <p>螺旋模型适用于：</p>
 <ul>
 <li><u>庞大、复杂并且具有高风险的系统</u>；</li>
@@ -1102,38 +1124,55 @@
 </tr>
 </tbody>
 </table></div>
-<p>各模型的适用范围：</p>
+<p>各开发模型的适用范围：</p>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
 <th style="text-align:center">模型</th>
+<th style="text-align:left">说明</th>
 <th style="text-align:left">适用范围</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:center">瀑布模型</td>
+<td style="text-align:left">将软件生存周期中的活动定为线性顺序链接的阶段模型</td>
 <td style="text-align:left">需求明确、大致固定且变更少</td>
 </tr>
 <tr>
+<td style="text-align:center">V模型</td>
+<td style="text-align:left">瀑布模型的变体，强调测试贯穿项目的始终，是一种测试的开发模型</td>
+<td style="text-align:left">需求明确、低风险</td>
+</tr>
+<tr>
 <td style="text-align:center">增量模型</td>
+<td style="text-align:left">融合瀑布模型和原型迭代，核心功能先完成，每轮迭代都会有新的增量，核心功能得到充分测试，强调每个增量均发布一个可操作的产品</td>
 <td style="text-align:left">快速构造可运行的产品，产品升级，领域熟悉或已有原型</td>
 </tr>
 <tr>
 <td style="text-align:center">演化模型</td>
-<td style="text-align:left">需求无法被完整定义，功能在使用过程中不断完善</td>
+<td style="text-align:left">迭代的过程模型，需求无法被完整定义，功能在使用过程中不断完善</td>
+<td style="text-align:left">对软件需求缺乏准确认识的情况</td>
 </tr>
 <tr>
 <td style="text-align:center">原型模型</td>
-<td style="text-align:left">快速、低成本构架原型，需求不清或多变、领域陌生；不适合大规模系统</td>
+<td style="text-align:left">原型开发方法模型，目的是快速、低成本地构建原型系统</td>
+<td style="text-align:left">需求不清或多变、领域陌生；不适合大规模系统</td>
 </tr>
 <tr>
 <td style="text-align:center">螺旋模型</td>
+<td style="text-align:left">结合瀑布和演化模型，强调引入风险分析，属于面向对象开发模型</td>
 <td style="text-align:left">庞大、复杂、高风险的系统，开发人员有丰富的风险评估经验和知识</td>
 </tr>
 <tr>
 <td style="text-align:center">喷泉模型</td>
+<td style="text-align:left">面向对象模型，特点是迭代、无间隙和支持重用，各阶段无明显界限，可迭代交叉</td>
 <td style="text-align:left">面向对象的开发过程</td>
+</tr>
+<tr>
+<td style="text-align:center">统一过程</td>
+<td style="text-align:left">用例驱动、以架构为中心、迭代和增量</td>
+<td></td>
 </tr>
 </tbody>
 </table></div>
