@@ -342,7 +342,7 @@ $$ 递归的次数 \times 每次递归的时间（空间）复杂度 $$
 
         
 
-        <div class="article-time--reading">共797字</div>
+        <div class="article-time--reading">共824字</div>
     </footer>
     
 
@@ -608,6 +608,50 @@ $$</p>
 </li>
 </ul>
 <p>分支限界法经典实例：0-1 背包问题。</p>
+<hr>
+<h1 id="算法设计方法总结">算法设计方法总结</h1>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:center">算法设计方法</th>
+<th style="text-align:left">说明</th>
+<th style="text-align:left">特点</th>
+<th style="text-align:left">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">分治法</td>
+<td style="text-align:left"><ol><li>将原问题<strong>分解</strong>成多个<u>与原问题相同的子问题</u></li><li><strong>递归地求解</strong>各子问题</li><li>将子问题的解<strong>合并</strong>成原问题的解</li></ol></td>
+<td style="text-align:left"><p>原问题规模大且能分解为多个与原问题相同的子问题</p></td>
+<td style="text-align:left"><ul><li>归并排序</li><li>快速排序</li><li>最大字段和问题</li></ul></td>
+</tr>
+<tr>
+<td style="text-align:center">动态规划法</td>
+<td style="text-align:left"><ol><li>找出并刻画最优解的结构特征</li><li>递归地定义最优解的值</li><li>自底向上方式计算最优值或构造最优解</li></ol></td>
+<td style="text-align:left"><p>求解具有某种最优性质的问题</p></td>
+<td style="text-align:left"><ul><li>0-1 背包问题</li><li>矩阵连乘</li><li>最长公共序列（LCS）</li></ul></td>
+</tr>
+<tr>
+<td style="text-align:center">贪心法</td>
+<td style="text-align:left"><p>与动态规划类似，但贪心法考虑的是局部最优解</p></td>
+<td style="text-align:left"><p>并不保证得到全局最优解，但通常能得到近似最优解</p></td>
+<td style="text-align:left"><ul><li>活动选择问题</li><li>背包问题</li></ul></td>
+</tr>
+<tr>
+<td style="text-align:center">回溯法</td>
+<td style="text-align:left"><p>在解空间树中，按<u>深度优先策略</u>，从根结点出发搜索解空间树</p></td>
+<td style="text-align:left"><ul><li>可以搜索问题的所有解或任一解</li><li>适用于求解组合数较大的问题</li><li>通过限界函数减少问题的搜索空间</li></ul></td>
+<td style="text-align:left"><ul><li>0-1背包问题</li><li>n皇后问题</li></ul></td>
+</tr>
+<tr>
+<td style="text-align:center">分支限界法</td>
+<td style="text-align:left"><p>与回溯法类似，在解空间树种按<u>广度优先</u>或<u>最小耗费</u>优先方式，搜索满足约束条件的一个解</p></td>
+<td style="text-align:left"><p><ul><li>可以给出<u>在某种意义下的最优解</u></li><li>分为队列式和优先队列式，优先队列式通过最大堆或最小堆实现</li></u></ul></p></td>
+<td style="text-align:left"><p>0-1 背包问题</p></td>
+</tr>
+</tbody>
+</table></div>
 <hr>
 <h1 id="查找算法">查找算法</h1>
 <p>查找是一种常用的基本运算。查找表是指由同一类型的数据元素（或记录）构成的集合。</p>
