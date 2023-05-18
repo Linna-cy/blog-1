@@ -20,13 +20,39 @@
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
 <style>
-    u {
+    .article-content {
+        position: relative;
+    }
+    .article-content table, 
+    .article-content tbody {
+        white-space: normal;
+        word-break: keep-all;
+    }
+    .article-content u {
         text-decoration-line: none;
         border-bottom: 1.5px solid;
         padding-bottom: 1.5px;
     }
-    li {
-        margin: 1em 0;
+    .article-content li {
+        margin-bottom: 1.6em;
+    }
+    .article-content ul:last-child, 
+    .article-content ol:last-child {
+        margin-bottom: 0;
+    }
+    .article-content td * {
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .article-content td ol, 
+    .article-content td ul {
+        padding-left: 1.2em;
+    }
+    .article-content td {
+        padding-top: 1em;
+    }
+    .article-content td li {
+        margin-bottom: 0.8em;
     }
 </style><link rel="preload" href="https://blog.linner.asia/search/index.json" as="fetch" crossorigin="anonymous">
     </head>

@@ -71,13 +71,39 @@ $$ 递归的次数 \times 每次递归的时间（空间）复杂度 $$
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
 <style>
-    u {
+    .article-content {
+        position: relative;
+    }
+    .article-content table, 
+    .article-content tbody {
+        white-space: normal;
+        word-break: keep-all;
+    }
+    .article-content u {
         text-decoration-line: none;
         border-bottom: 1.5px solid;
         padding-bottom: 1.5px;
     }
-    li {
-        margin: 1em 0;
+    .article-content li {
+        margin-bottom: 1.6em;
+    }
+    .article-content ul:last-child, 
+    .article-content ol:last-child {
+        margin-bottom: 0;
+    }
+    .article-content td * {
+        margin-top: 0;
+        padding-top: 0;
+    }
+    .article-content td ol, 
+    .article-content td ul {
+        padding-left: 1.2em;
+    }
+    .article-content td {
+        padding-top: 1em;
+    }
+    .article-content td li {
+        margin-bottom: 0.8em;
     }
 </style>
     </head>
@@ -516,19 +542,19 @@ $$</p>
 <tr>
 <th style="text-align:center">名称</th>
 <th style="text-align:center">时间复杂度</th>
-<th style="text-align:left">空间复杂度</th>
+<th style="text-align:center">空间复杂度</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:center">0-1 背包问题</td>
 <td style="text-align:center">$O(nW)$，$W$为背包容量</td>
-<td style="text-align:left">$O(nW)$</td>
+<td style="text-align:center">$O(nW)$</td>
 </tr>
 <tr>
 <td style="text-align:center">矩阵连乘</td>
 <td style="text-align:center">$O(n^3)$</td>
-<td style="text-align:left">$O(n^2)$</td>
+<td style="text-align:center">$O(n^2)$</td>
 </tr>
 <tr>
 <td style="text-align:center">最长公共序列（LCS）</td>
@@ -623,32 +649,32 @@ $$</p>
 <tr>
 <td style="text-align:center">分治法</td>
 <td style="text-align:left"><ol><li>将原问题<strong>分解</strong>成多个<u>与原问题相同的子问题</u></li><li><strong>递归地求解</strong>各子问题</li><li>将子问题的解<strong>合并</strong>成原问题的解</li></ol></td>
-<td style="text-align:left"><p>原问题规模大且能分解为多个与原问题相同的子问题</p></td>
+<td style="text-align:left">原问题规模大且能分解为多个与原问题相同的子问题</td>
 <td style="text-align:left"><ul><li>归并排序</li><li>快速排序</li><li>最大字段和问题</li></ul></td>
 </tr>
 <tr>
 <td style="text-align:center">动态规划法</td>
 <td style="text-align:left"><ol><li>找出并刻画最优解的结构特征</li><li>递归地定义最优解的值</li><li>自底向上方式计算最优值或构造最优解</li></ol></td>
-<td style="text-align:left"><p>求解具有某种最优性质的问题</p></td>
+<td style="text-align:left">求解具有某种最优性质的问题</td>
 <td style="text-align:left"><ul><li>0-1 背包问题</li><li>矩阵连乘</li><li>最长公共序列（LCS）</li></ul></td>
 </tr>
 <tr>
 <td style="text-align:center">贪心法</td>
-<td style="text-align:left"><p>与动态规划类似，但贪心法考虑的是局部最优解</p></td>
-<td style="text-align:left"><p>并不保证得到全局最优解，但通常能得到近似最优解</p></td>
+<td style="text-align:left">与动态规划类似，但贪心法考虑的是局部最优解</td>
+<td style="text-align:left">并不保证得到全局最优解，但通常能得到近似最优解</td>
 <td style="text-align:left"><ul><li>活动选择问题</li><li>背包问题</li></ul></td>
 </tr>
 <tr>
 <td style="text-align:center">回溯法</td>
-<td style="text-align:left"><p>在解空间树中，按<u>深度优先策略</u>，从根结点出发搜索解空间树</p></td>
+<td style="text-align:left">在解空间树中，按<u>深度优先策略</u>，从根结点出发搜索解空间树</td>
 <td style="text-align:left"><ul><li>可以搜索问题的所有解或任一解</li><li>适用于求解组合数较大的问题</li><li>通过限界函数减少问题的搜索空间</li></ul></td>
 <td style="text-align:left"><ul><li>0-1背包问题</li><li>n皇后问题</li></ul></td>
 </tr>
 <tr>
 <td style="text-align:center">分支限界法</td>
-<td style="text-align:left"><p>与回溯法类似，在解空间树种按<u>广度优先</u>或<u>最小耗费</u>优先方式，搜索满足约束条件的一个解</p></td>
-<td style="text-align:left"><p><ul><li>可以给出<u>在某种意义下的最优解</u></li><li>分为队列式和优先队列式，优先队列式通过最大堆或最小堆实现</li></u></ul></p></td>
-<td style="text-align:left"><p>0-1 背包问题</p></td>
+<td style="text-align:left">与回溯法类似，在解空间树种按<u>广度优先</u>或<u>最小耗费</u>优先方式，搜索满足约束条件的一个解</td>
+<td style="text-align:left"><ul><li>可以给出<u>在某种意义下的最优解</u></li><li>分为队列式和优先队列式，优先队列式通过最大堆或最小堆实现</li></u></ul></td>
+<td style="text-align:left"><ul><li>0-1 背包问题</li></ul></td>
 </tr>
 </tbody>
 </table></div>
