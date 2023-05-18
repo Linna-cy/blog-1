@@ -3,7 +3,7 @@ cd ../..
 
 if [ "$1" == "server" ]
 then
-    hugo server;
+    hugo server --buildDrafts;
 elif [ "$1" == "new" ]
 then
     if [ "$2" != "site" ]

@@ -6,7 +6,269 @@
         <description>Recent content in 软件设计师 on Linner&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
-        <lastBuildDate>Fri, 12 May 2023 06:01:08 +0000</lastBuildDate><atom:link href="https://blog.linner.asia/categories/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 17 May 2023 12:52:42 +0800</lastBuildDate><atom:link href="https://blog.linner.asia/categories/%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>算法设计与分析（软件工程师）</title>
+        <link>https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/</link>
+        <pubDate>Wed, 17 May 2023 12:52:42 +0800</pubDate>
+        
+        <guid>https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/</guid>
+        <description>&lt;h1 id=&#34;算法概述&#34;&gt;算法概述&lt;/h1&gt;
+&lt;p&gt;算法（Algorithm）是对特定问题求解步骤的一种描述，它是指令的有限序列，其中每一条指令表示一个或多个操作。算法具有下列5个重要特性：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;有穷性&lt;/strong&gt;：一个算法必须总是（对任何合法的输入值）在&lt;u&gt;执行有穷步之后结束&lt;/u&gt;，且&lt;u&gt;每一步都可在有穷时间内完成&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;确定性&lt;/strong&gt;：算法中的&lt;u&gt;每一条指令必须有确切的含义&lt;/u&gt;，理解时&lt;u&gt;不会产生二义性&lt;/u&gt;。并且在任何条件下，算法只有唯一的一条执行路径，即对于&lt;u&gt;相同的输入只能得出相同的输出&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可行性&lt;/strong&gt;：一个算法是可行的，即算法中描述的操作都可以通过已经实现的基本运算执行有限次来实现。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;输入&lt;/strong&gt;：一个算法有&lt;u&gt;零个或多个输入&lt;/u&gt;，这些输入取自于某个特定的对象的集合。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;输出&lt;/strong&gt;：一个算法有&lt;u&gt;一个或多个输出&lt;/u&gt;，这些输出是同输入有着某些特定关系的量。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;常用的表示算法的方法有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;自然语言&lt;/strong&gt;：优点是易理解；缺点是易出现二义性，算法通常很冗长。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;流程图&lt;/strong&gt;：优点是直观易懂；缺点是严密性不如程序设计语言，灵活性不如自然语言。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;程序设计语言&lt;/strong&gt;：优点是能用计算机直接执行；缺点是抽象性差，使算法设计者拘泥于描述算法的具体细节，忽略了“好”算法和正确逻辑的重要性，要求算法设计者掌握程序设计语言及编程技巧。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;伪代码&lt;/strong&gt;：伪代码是介于自然语言和程序设计语言之间的方法，它采用某一程序设计语言的基本语法，同时结合自然语言来表达。&lt;/p&gt;
+&lt;p&gt;计算机科学家从来没有对伪代码的书写形式达成过共识。&lt;/p&gt;
+&lt;p&gt;在伪代码中，可以采用最具表达力的、最简明扼要的方法来表达一个给定的算法。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;算法分析&#34;&gt;算法分析&lt;/h1&gt;
+&lt;h2 id=&#34;复杂度&#34;&gt;复杂度&lt;/h2&gt;
+&lt;p&gt;由于时间复杂度与空间复杂度分别对算法占用的时间和空间资源进行分析，计算方法相似。&lt;/p&gt;
+&lt;p&gt;算法的时间复杂度分析主要时分析算法的运行时间，即算法执行所需要的基本操作数。算法时间复杂度以算法中基本操附重复执行的次数（简称为频度）作为算法的时间度量。一般不必要精确计算出算法的时间复杂度，只要大致计算出相应的数量级即可。&lt;/p&gt;
+&lt;p&gt;算法的复杂度通常是用大O表示法。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;加法规则：多项相加，保留最高阶项，并将系数化为1；&lt;/li&gt;
+&lt;li&gt;乘法规则：多项相乘都保留，并将系数化为1。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/1681099842666.png&#34;
+	width=&#34;1014&#34;
+	height=&#34;100&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/1681099842666_hu8fb0d0a3c83abecf36c375990db2efe0_51379_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/1681099842666_hu8fb0d0a3c83abecf36c375990db2efe0_51379_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;算法复杂度大小比较&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;1014&#34;
+		data-flex-basis=&#34;2433px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;递归式的时间（空间）复杂度：&lt;/p&gt;
+&lt;p&gt;$$
+递归的次数 \times 每次递归的时间（空间）复杂度
+$$&lt;/p&gt;
+&lt;h2 id=&#34;渐进符号&#34;&gt;渐进符号&lt;/h2&gt;
+&lt;p&gt;可以用渐进符号来表示渐进复杂度。&lt;/p&gt;
+&lt;p&gt;渐进符号包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$O$：算法运行时间的渐进上界。&lt;/p&gt;
+&lt;p&gt;给定一个函数$gn. $，$O\big( gn.  \big) = \{ fn. :\exists 正常数c和n_0,使得\forall n \ge n_0, 有 0 \le fn.  \le cgn.  \}$。&lt;/p&gt;
+&lt;p&gt;即，当$n \ge n_0$时，$fn.  \le c \cdot gn. $。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\Omega$：算法运行时间的渐进下界。&lt;/p&gt;
+&lt;p&gt;给定一个函数$gn. $，$O\big( gn.  \big) = \{ fn. :\exists 正常数c和n_0,使得\forall n \ge n_0, 有 0 \le cgn.  \le fn.  \}$。&lt;/p&gt;
+&lt;p&gt;即，当$n \ge n_0$时，$c \cdot gn.  \le fn. $。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\Theta$：算法运行时间的渐进上界和渐进下界，即渐进紧致界（又叫紧缺界）。&lt;/p&gt;
+&lt;p&gt;给定一个函数$gn. $，$O\big( gn.  \big) = \{ fn. :\exists 正常数c_1、c_2和n_0,使得\forall n \ge n_0, 有 0 \le c_1gn.  \le fn.  \le c_2gn.  \}$。&lt;/p&gt;
+&lt;p&gt;即，当$n \ge n_0$时，$c_1gn.  \le fn.  \le c_2gn. $。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/uTools_1681110832416.png&#34;
+	width=&#34;966&#34;
+	height=&#34;1204&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/uTools_1681110832416_hud8e84328d379d2eda520e5c710188239_380512_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/uTools_1681110832416_hud8e84328d379d2eda520e5c710188239_380512_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;递归式主方法&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;80&#34;
+		data-flex-basis=&#34;192px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;分治法&#34;&gt;分治法&lt;/h1&gt;
+&lt;p&gt;任何一个可以用计算机求解的问题所需要的计算时间都与其规模有关。要想直接解决一个较大的问题，有时是相当困难的。问题的规模越小，解题所需要的计算时间往往越少，从而较容易处理。分治法的设计思想是&lt;u&gt;将一个难以直接解决的大问题分解成一些规模较小的相同问题，以便各个击破，分而治之&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;如果规模为$n$的问题可分解成$k$个子问题（$1 &amp;lt; k \le n $），这些子问题互相独立且与原问题相同。分治法产生的子问题往往是原问题的较小模式。&lt;/p&gt;
+&lt;p&gt;一般来说，分治算法在每一层递归上都有3个步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;分解&lt;/strong&gt;：将原问题分解成一系列子问题。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;求解&lt;/strong&gt;：递归地求解各子问题。&lt;/p&gt;
+&lt;p&gt;若子问题足够小，则直接求解。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;合并&lt;/strong&gt;：将子问题的解合并成原问题的解。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;分治的典型实例有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;归并排序；&lt;/li&gt;
+&lt;li&gt;快速排序；&lt;/li&gt;
+&lt;li&gt;最大子段和问题。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;递归&#34;&gt;递归&lt;/h2&gt;
+&lt;p&gt;递归是指子程序（或函数）直接调用自己或通过一系列调用语句间接调用自己，是一种描述问题和解决问题的常用方法。还有一些问题，虽然其本身并没有明显的递归结构，但用递归技术来求解使设计出的算法简洁易懂且易于分析。&lt;/p&gt;
+&lt;p&gt;递归有两个基本要素：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;边界条件（递归出口）：确定递归到何时终止。&lt;/li&gt;
+&lt;li&gt;递归模式（递归体）：大问题是如何分解为小问题的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;递归可以将大规模的问题分解为若干个小规模的问题，然后先解决小规模问题，再将解决完的小规模问题合并再一起，再次进行处理，最后解决完所有问题。这与分治的思想不谋而合。&lt;/p&gt;
+&lt;p&gt;递归是分治的一个解决方案，而分治并不一定需要通过递归实现。分治还可以通过循环结构实现。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;动态规划法&#34;&gt;动态规划法&lt;/h1&gt;
+&lt;p&gt;动态规划算法与分治法类似，其基本思想也是&lt;u&gt;将待求解问题分解成若干个子问题，先求解子问题，然后从这些子问题的解得到原问题的解&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;与分治法不同的是，适合用动态规划法求解的问题，&lt;u&gt;经分解得到的子问题往往不是独立的&lt;/u&gt;。不同子问题的数目常常只有多项式量级，可以&lt;u&gt;用一个表来记录所有己解决的子问题的答案，在需要时再找出己求得的答案&lt;/u&gt;，这样就可以避免大量的重复计算，从而得到多项式时间的算法。不管该子问题以后是否被用到，只要它被计算过，就将其结果填入表中。&lt;/p&gt;
+&lt;p&gt;动态规划算法通常&lt;u&gt;用于求解具有某种最优性质的问题&lt;/u&gt;。在这类问题中，可能会有许多可行解，每个解都对应于一个值。而最优解可能会有多个，动态规划算法能找出其中的一个最优解。设计一个动态规划算法，通常按照以下几个步骤进行：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;找出最优解的性质，并刻画其结构特征。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;递归地定义最优解的值。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;以自底向上的方式计算出最优值。&lt;/p&gt;
+&lt;p&gt;到此步骤为止的以上步骤（包括此步骤），是动态规划算法的基本步骤。&lt;/p&gt;
+&lt;p&gt;如果需要给出最优解，通常需要在此步骤中记录更多的信息，以便在步骤4中根据所记录的信息快速构造出一个最优解。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;根据计算最优值时得到的信息，构造一个最优解。&lt;/p&gt;
+&lt;p&gt;在只需要求出最优值的情形下，该步骤可省略；若需要求出问题的一个最优解，该步骤必须执行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;对于一个给定的问题，若其具有以下两个性质，可以考虑用动态规划法来求解：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;最优子结构&lt;/strong&gt;：如果一个问题的最优解中包含了其子问题的最优解，就说该问题具有最优子结构。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;当一个问题具有最优子结构时，提示我们动态规划法可能会适用，但是此时贪心策略可能也是适用的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;重叠子问题&lt;/strong&gt;：指用来解原问题的递归算法可反复地解同样的子问题，而不是总在产生新的子问题。&lt;/p&gt;
+&lt;p&gt;即当一个递归算法不断地调用同一个问题时，就说该问题包含重叠子问题。&lt;/p&gt;
+&lt;p&gt;此时若用分治法递归求解，则每次遇到子问题都会视为新问题，会极大地降低算法的效率，而动态规划法总是充分利用重叠子问题，对每个子问题仅计算一次，把解保存在一个在需要时就可以查看的表中，而每次查表的时间为常数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;动态规划的经典问题：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;名称&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;时间复杂度&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;空间复杂度&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;0-1 背包问题&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(nW)$，$W$为背包容量&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$O(nW)$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;矩阵连乘&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(n^3)$&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$O(n^2)$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;最长公共序列（LCS）&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$O(n^2)$&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;矩阵连乘：&lt;/p&gt;
+&lt;p&gt;两个矩阵$A_{(m \cdot n)}$和$B_{(n \cdot p)}$相乘的次数为：$m \cdot n \cdot p$，相乘后得到的新矩阵为：$(A \cdot B)_{(m \cdot p)}$。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;贪心法&#34;&gt;贪心法&lt;/h1&gt;
+&lt;p&gt;和动态规划一样，贪心法也经常&lt;u&gt;用于解决最优化问题&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;与动态规划法不同的是，贪心法在解决问题的策略上是仅根据当前己有的信息做出选择，而且一旦做出了选择，不管将来有什么结果，这个选择都不会改变。换而言之，贪心法并&lt;u&gt;不是从整体最优考虑&lt;/u&gt;，它所&lt;u&gt;做出的选择只是在某种意义上的局部最优&lt;/u&gt;。&lt;u&gt;这种局部最优选择并不能保证总能获得全局最优解，但通常能得到较好的近似最优解。&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;例如，平时购物找钱时，为使找回的零钱的硬币数最少，从最大面值的币种开始，按递减的顺序考虑各币种，先尽量用大面值的币种，当不足大面值币种的金额时才去考虑下一种较小面值的币种，这就是在采用贪心法。这种方法在这里总是最优，是因为银行对其发行的硬币种类和硬币面值的巧妙安排。如果只有面值分别为1、5和11单位的硬币，而希望找回总额为15单位的硬币，按贪心算法，应找1个11单位面值的硬币和4个1单位面值的硬币，共找回5个硬币。但最优的解答应是3个5单位面值的硬币。&lt;/p&gt;
+&lt;p&gt;贪心法的典型实例：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;活动选择问题&lt;/li&gt;
+&lt;li&gt;背包问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;回溯法&#34;&gt;回溯法&lt;/h1&gt;
+&lt;p&gt;回溯法有“通用的解题法”之称，用它&lt;u&gt;可以系统地搜索一个问题的所有解或任一解&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;回溯法是一个既带有系统性又带有跳跃性的搜索算法。它在包含问题的所有解的解空间树中，按照深度优先的策略，从根结点出发搜索解空间树。算法搜索至解空间树的任一结点时，总是先判断该结点是否肯定不包含问题的解：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果肯定不包含：跳过对以该结点为根的子树的系统搜索，逐层向其祖先结点回溯；&lt;/li&gt;
+&lt;li&gt;否则：进入该子树，继续按深度优先的策略进行搜索。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;使用回溯法求解问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用来求问题的所有解时，要回溯到根，且根结点的所有子树都已被搜索遍才结束；&lt;/li&gt;
+&lt;li&gt;用来求问题的任一解时，只要搜索到问题的一个解就可以结束。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;回溯法适用于解一些组合数较大的问题。&lt;/p&gt;
+&lt;p&gt;回溯法经典实例：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;0-1 背包问题&lt;/li&gt;
+&lt;li&gt;n 皇后问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;解空间&#34;&gt;解空间&lt;/h2&gt;
+&lt;p&gt;应用回溯法解问题时，首先应明确定义问题的解空间。问题的解空间应至少包含问题的一个（最优）解。&lt;/p&gt;
+&lt;p&gt;通常将解空间表示为树或图的形式。&lt;/p&gt;
+&lt;h2 id=&#34;基本思想&#34;&gt;基本思想&lt;/h2&gt;
+&lt;p&gt;确定解空间的组织结构后，回溯法从开始结点（根结点）出发，以深度优先的方式搜索整个解空间。这个开始结点就成为一个活结点，同时也成为当前的扩展结点。在当前的扩展结点处，搜索向纵深方向移至一个新结点。这个新结点就成为一个新的活结点，并成为当前扩展结点。如果在当前扩展结点处不能再向纵深方向移动，则当前的扩展结点就成为死结点。此时，应往回移动（回溯）至最近的一个活结点处，并使这个活结点成为当前的扩展结点。回溯法即以这种工作方式递归地在解空间中搜索，直到找到所要求的解或解空间中己无活结点时为止。&lt;/p&gt;
+&lt;p&gt;运用回溯法解题通常包含以下3个步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;针对所给问题，定义问题的解空间。&lt;/li&gt;
+&lt;li&gt;确定易于搜索的解空间结构。&lt;/li&gt;
+&lt;li&gt;以深度优先的方式搜索解空间。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;限界函数&#34;&gt;限界函数&lt;/h2&gt;
+&lt;p&gt;限界函数的设计是回溯法的核心问题，也是难题。问题的解空间往往很大，为了有效地进行搜索，需要在搜索的过程中对某些结点进行剪枝，而对哪些结点进行剪枝，需要设计限界函数来判断。&lt;/p&gt;
+&lt;p&gt;设计限界函数的通用的指导原则是尽可能多和尽可能早地“杀掉”不可能产生最优解的活结点。好的限界函数可以大大减少问题的搜索空间，从而大大提高算法的效率。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;分支限界法&#34;&gt;分支限界法&lt;/h1&gt;
+&lt;p&gt;分支限界法类似于回溯法，也是一种&lt;u&gt;在问题的解空间树$T$上搜索问题解&lt;/u&gt;的算法。在一般情况下，分支限界法的求解目标是&lt;u&gt;找出满足约束条件的一个解&lt;/u&gt;，或是在满足约束条件的解中找出使某一目标函数值达到极大或极小的解，即&lt;u&gt;在某种意义下的最优解&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;分支限界法以&lt;u&gt;广度优先&lt;/u&gt;或以&lt;u&gt;最小耗费优先&lt;/u&gt;的方式&lt;u&gt;搜索解空间树$T$&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;分支限界法的搜索策略是：每一个活结点只有一次机会成为扩展结点。&lt;/p&gt;
+&lt;p&gt;活结点一旦成为扩展结点，就一次性产生其所有子结点。在这些子结点中，那些导致不可行解或非最优解的子结点被舍弃，其余子结点被加入活结点表中。此后，从活结点表中取下一结点成为当前扩展结点，并重复上述结点扩展过程。这个过程一直持续到找到所需的解或活结点表为空时为止。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;目前己有许多利用分支限界法解决大量离散最优化的实际问题的实例。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;与回溯法相似，限界函数的设计是分支限界法的一个核心问题和难题。如何设计限界函数来有效地减小搜索空间是应用分支限界法要考虑的问题。&lt;/p&gt;
+&lt;p&gt;根据从活结点表中选择下一扩展结点的不同方式，可将分支限界法分为几种不同的类型。最常用的有以下两种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;队列式（FIFO，先进先出）分支限界法：将活结点表组织成一个队列，并按队列的先进先出原则选择下一个结点作为扩展结点。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;优先队列式分支限界法：将活结点表组织成一个优先队列，并按优先队列中规定的结点优先级选取优先级最高的下一个结点作为扩展结点。&lt;/p&gt;
+&lt;p&gt;结点优先级：通常用一个与该结点相关的数值$p$来表示，规定$p$值较大的结点优先级较高。&lt;/p&gt;
+&lt;p&gt;在算法实现时，有两种实现方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通常用一个最大堆（根结点比左右子结点大）来实现最大优先队列，用最大堆的Deletemax操作（删除最大堆顶）抽取堆中下一个结点成为当前扩展结点。&lt;/li&gt;
+&lt;li&gt;最小优先队列规定$p$值较小的结点优先级较高。通常用一个最小堆根结点比左右子结点小）来实现最小优先队列，用最小堆的Deletemin操作（删除最小堆顶）抽取堆中下一个结点成为当前扩展结点。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;分支限界法经典实例：0-1 背包问题。&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>计算机网络（软件设计师）</title>
         <link>https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/</link>
         <pubDate>Fri, 12 May 2023 06:01:08 +0000</pubDate>
