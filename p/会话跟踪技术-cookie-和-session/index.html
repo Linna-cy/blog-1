@@ -1,19 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='会话跟踪技术 会话是指一个终端用户与交互系统进行通讯的过程，例如从浏览器发出请求到服务端响应数据给前端这个过程即为一个会话。
-会话跟踪指的是一种维护浏览器状态的方法。服务器会收到多个请求，这多个请求可能来自多个浏览器。服务器需要识别多次请求是否来自于同一浏览器，以便在同一次会话的多次请求间共享数据。
-浏览器和服务器不支持数据共享的原因：
- HTTP协议是无状态的，每次浏览器向服务器请求时，服务器都会将该请求视为新的请求。 HTTP协议设计成无状态的目的是让每次请求之间相互独立，互不影响。 请求与请求之间独立后，就无法实现多次请求之间的数据共享。  实现会话跟踪技术的方式有：
- 客户端会话跟踪技术：Cookie。 Cookie是存储在浏览器端。 服务端会话跟踪技术：Session。 Session是存储在服务器端。   Cookie Cookie是一种客户端会话技术，将数据保存到客户端，在以后的每次请求中都携带Cookie数据进行访问。
-服务器将Cookie发送给浏览器，是通过在响应头中添加Set-Cookie键值对实现的，如Set-Cookie: message=&amp;quot;Hello Wrold&amp;quot;。在多个Cookie之间使用;分割。
-浏览器在接收了服务器发送来的Cookie后，会将数据存储在浏览器的内存中。在接下来的每次请求中，浏览器都会将获取到的Cookie发送到服务器（同一次会话中或在Cookie存活时间内）。浏览器将Cookie发送到服务器，是通过在请求头中设置Cookie键值对实现的，如Cookie: message=&amp;quot;Hello Wrold&amp;quot;。同样的，在多个Cookie之间使用;分割。
-  创建Cookie对象：
-Cookie cookie = new Cookie(&amp;#34;key&amp;#34;,&amp;#34;value&amp;#34;)   发送Cookie到客户端（使用Response对象）：
-response.addCookie(cookie)   从客户端获取Cookie（使用Request对象）：
-request.getCookies()   创建Maven web项目。
-项目依赖：
-&amp;lt;packaging&amp;gt;war&amp;lt;/packaging&amp;gt; &amp;lt;dependencies&amp;gt; &amp;lt;!--servlet--&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;javax.servlet&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;javax.servlet-api&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.1.0&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;provided&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; &amp;lt;build&amp;gt; &amp;lt;pluginManagement&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.tomcat.maven&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;tomcat7-maven-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.2&amp;lt;/version&amp;gt; &amp;lt;/plugin&amp;gt; &amp;lt;/plugins&amp;gt; &amp;lt;/pluginManagement&amp;gt; &amp;lt;/build&amp;gt; 发送 Cookie 发送Cookie使用的是HttpServletResponse对象提供的addCookie()：'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='会话跟踪技术 会话是指一个终端用户与交互系统进行通讯的过程，例如从浏览器发出请求到服务端响应数据给前端这个过程即为一个会话。 会话跟踪指的是一种'>
 
 
 <title>会话跟踪技术 —— Cookie 和 Session</title>
@@ -23,36 +11,12 @@ request.getCookies()   创建Maven web项目。
 <link rel="stylesheet" href="/scss/style.min.7a68e2beb371039eca9f5e8f87aa11bdb1fdc96a55744700a091f658cd1e66a7.css">
 <link rel="stylesheet" href="/css/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
 <meta property='og:title' content='会话跟踪技术 —— Cookie 和 Session'>
-<meta property='og:description' content='会话跟踪技术 会话是指一个终端用户与交互系统进行通讯的过程，例如从浏览器发出请求到服务端响应数据给前端这个过程即为一个会话。
-会话跟踪指的是一种维护浏览器状态的方法。服务器会收到多个请求，这多个请求可能来自多个浏览器。服务器需要识别多次请求是否来自于同一浏览器，以便在同一次会话的多次请求间共享数据。
-浏览器和服务器不支持数据共享的原因：
- HTTP协议是无状态的，每次浏览器向服务器请求时，服务器都会将该请求视为新的请求。 HTTP协议设计成无状态的目的是让每次请求之间相互独立，互不影响。 请求与请求之间独立后，就无法实现多次请求之间的数据共享。  实现会话跟踪技术的方式有：
- 客户端会话跟踪技术：Cookie。 Cookie是存储在浏览器端。 服务端会话跟踪技术：Session。 Session是存储在服务器端。   Cookie Cookie是一种客户端会话技术，将数据保存到客户端，在以后的每次请求中都携带Cookie数据进行访问。
-服务器将Cookie发送给浏览器，是通过在响应头中添加Set-Cookie键值对实现的，如Set-Cookie: message=&amp;quot;Hello Wrold&amp;quot;。在多个Cookie之间使用;分割。
-浏览器在接收了服务器发送来的Cookie后，会将数据存储在浏览器的内存中。在接下来的每次请求中，浏览器都会将获取到的Cookie发送到服务器（同一次会话中或在Cookie存活时间内）。浏览器将Cookie发送到服务器，是通过在请求头中设置Cookie键值对实现的，如Cookie: message=&amp;quot;Hello Wrold&amp;quot;。同样的，在多个Cookie之间使用;分割。
-  创建Cookie对象：
-Cookie cookie = new Cookie(&amp;#34;key&amp;#34;,&amp;#34;value&amp;#34;)   发送Cookie到客户端（使用Response对象）：
-response.addCookie(cookie)   从客户端获取Cookie（使用Request对象）：
-request.getCookies()   创建Maven web项目。
-项目依赖：
-&amp;lt;packaging&amp;gt;war&amp;lt;/packaging&amp;gt; &amp;lt;dependencies&amp;gt; &amp;lt;!--servlet--&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;javax.servlet&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;javax.servlet-api&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.1.0&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;provided&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; &amp;lt;build&amp;gt; &amp;lt;pluginManagement&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.tomcat.maven&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;tomcat7-maven-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.2&amp;lt;/version&amp;gt; &amp;lt;/plugin&amp;gt; &amp;lt;/plugins&amp;gt; &amp;lt;/pluginManagement&amp;gt; &amp;lt;/build&amp;gt; 发送 Cookie 发送Cookie使用的是HttpServletResponse对象提供的addCookie()：'>
+<meta property='og:description' content='会话跟踪技术 会话是指一个终端用户与交互系统进行通讯的过程，例如从浏览器发出请求到服务端响应数据给前端这个过程即为一个会话。 会话跟踪指的是一种'>
 <meta property='og:url' content='https://blog.linner.asia/p/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF-cookie-%E5%92%8C-session/'>
 <meta property='og:site_name' content='Linner&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='JavaWeb' /><meta property='article:tag' content='Tomcat' /><meta property='article:published_time' content='2022-09-23T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-09-23T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="会话跟踪技术 —— Cookie 和 Session">
-<meta name="twitter:description" content="会话跟踪技术 会话是指一个终端用户与交互系统进行通讯的过程，例如从浏览器发出请求到服务端响应数据给前端这个过程即为一个会话。
-会话跟踪指的是一种维护浏览器状态的方法。服务器会收到多个请求，这多个请求可能来自多个浏览器。服务器需要识别多次请求是否来自于同一浏览器，以便在同一次会话的多次请求间共享数据。
-浏览器和服务器不支持数据共享的原因：
- HTTP协议是无状态的，每次浏览器向服务器请求时，服务器都会将该请求视为新的请求。 HTTP协议设计成无状态的目的是让每次请求之间相互独立，互不影响。 请求与请求之间独立后，就无法实现多次请求之间的数据共享。  实现会话跟踪技术的方式有：
- 客户端会话跟踪技术：Cookie。 Cookie是存储在浏览器端。 服务端会话跟踪技术：Session。 Session是存储在服务器端。   Cookie Cookie是一种客户端会话技术，将数据保存到客户端，在以后的每次请求中都携带Cookie数据进行访问。
-服务器将Cookie发送给浏览器，是通过在响应头中添加Set-Cookie键值对实现的，如Set-Cookie: message=&amp;quot;Hello Wrold&amp;quot;。在多个Cookie之间使用;分割。
-浏览器在接收了服务器发送来的Cookie后，会将数据存储在浏览器的内存中。在接下来的每次请求中，浏览器都会将获取到的Cookie发送到服务器（同一次会话中或在Cookie存活时间内）。浏览器将Cookie发送到服务器，是通过在请求头中设置Cookie键值对实现的，如Cookie: message=&amp;quot;Hello Wrold&amp;quot;。同样的，在多个Cookie之间使用;分割。
-  创建Cookie对象：
-Cookie cookie = new Cookie(&amp;#34;key&amp;#34;,&amp;#34;value&amp;#34;)   发送Cookie到客户端（使用Response对象）：
-response.addCookie(cookie)   从客户端获取Cookie（使用Request对象）：
-request.getCookies()   创建Maven web项目。
-项目依赖：
-&amp;lt;packaging&amp;gt;war&amp;lt;/packaging&amp;gt; &amp;lt;dependencies&amp;gt; &amp;lt;!--servlet--&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;javax.servlet&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;javax.servlet-api&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.1.0&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;provided&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; &amp;lt;build&amp;gt; &amp;lt;pluginManagement&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.tomcat.maven&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;tomcat7-maven-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.2&amp;lt;/version&amp;gt; &amp;lt;/plugin&amp;gt; &amp;lt;/plugins&amp;gt; &amp;lt;/pluginManagement&amp;gt; &amp;lt;/build&amp;gt; 发送 Cookie 发送Cookie使用的是HttpServletResponse对象提供的addCookie()：">
+<meta name="twitter:description" content="会话跟踪技术 会话是指一个终端用户与交互系统进行通讯的过程，例如从浏览器发出请求到服务端响应数据给前端这个过程即为一个会话。 会话跟踪指的是一种">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
 <style>
@@ -345,7 +309,7 @@ request.getCookies()   创建Maven web项目。
 
         
 
-        <div class="article-time--reading">共592字</div>
+        <div class="article-time--reading">共3527字</div>
     </footer>
     
 

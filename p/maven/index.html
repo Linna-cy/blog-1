@@ -1,17 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Maven 简介 Apache Maven是专门用于管理和构建Java项目的工具, 它基于项目对象模型 (POM) 的概念, 通过一小段描述信息来管理项目的构建, 报告和文档.
-Maven的主要功能有:
- 提供了一套标准化的项目结构. 提供了一套标准化的构建流程 (编译, 测试, 打包, 发布&amp;hellip;). 提供了一套依赖管理机制.  Maven 模型 Maven模型包含:
- 项目对象模型 (Project Object Model) 依赖管理模型 (Dependency) 插件 (Plugin)  Maven模型图示:
-其中紫色框框起来的部分, 就是用来完成标准化构建流程.
-仓库 Maven仓库是项目中依赖的第三方库, 这个库所在的位置叫做仓库 (在Maven的术语中，仓库是一个位置, place).
-Maven中, 任何一个依赖、插件或者项目构建的输出，都可以称之为构件. Maven仓库能帮助我们管理构件 (主要是JAR), 它就是放置所有JAR文件 (WAR, ZIP, POM等等) 的地方.
-仓库有三种类型:
- 本地 (local) 中央 (central) 远程 (remote)  在项目中使用坐标引入对应依赖jar包后, Maven会按照本地仓库 &amp;ndash;&amp;gt; 远程仓库&amp;ndash;&amp;gt; 中央仓库的顺序去查找相应的jar包. 只要jar包存在, 如果是在本地仓库则直接使用, 而如果在远程仓库或中央仓库, Maven则将jar包自动下载到本地仓库.
-本地仓库 本地仓库在第一次执行maven命令的时候才被创建.
-运行 Maven 的时候, Maven 所需要的任何构件都是直接从本地仓库获取的.'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Maven 简介 Apache Maven是专门用于管理和构建Java项目的工具, 它基于项目对象模型 (POM) 的概念, 通过一小段描述信息来管理项目的构建, 报告和文档. Mav'>
 
 
 <title>Maven</title>
@@ -21,32 +11,12 @@ Maven中, 任何一个依赖、插件或者项目构建的输出，都可以称�
 <link rel="stylesheet" href="/scss/style.min.7a68e2beb371039eca9f5e8f87aa11bdb1fdc96a55744700a091f658cd1e66a7.css">
 <link rel="stylesheet" href="/css/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
 <meta property='og:title' content='Maven'>
-<meta property='og:description' content='Maven 简介 Apache Maven是专门用于管理和构建Java项目的工具, 它基于项目对象模型 (POM) 的概念, 通过一小段描述信息来管理项目的构建, 报告和文档.
-Maven的主要功能有:
- 提供了一套标准化的项目结构. 提供了一套标准化的构建流程 (编译, 测试, 打包, 发布&amp;hellip;). 提供了一套依赖管理机制.  Maven 模型 Maven模型包含:
- 项目对象模型 (Project Object Model) 依赖管理模型 (Dependency) 插件 (Plugin)  Maven模型图示:
-其中紫色框框起来的部分, 就是用来完成标准化构建流程.
-仓库 Maven仓库是项目中依赖的第三方库, 这个库所在的位置叫做仓库 (在Maven的术语中，仓库是一个位置, place).
-Maven中, 任何一个依赖、插件或者项目构建的输出，都可以称之为构件. Maven仓库能帮助我们管理构件 (主要是JAR), 它就是放置所有JAR文件 (WAR, ZIP, POM等等) 的地方.
-仓库有三种类型:
- 本地 (local) 中央 (central) 远程 (remote)  在项目中使用坐标引入对应依赖jar包后, Maven会按照本地仓库 &amp;ndash;&amp;gt; 远程仓库&amp;ndash;&amp;gt; 中央仓库的顺序去查找相应的jar包. 只要jar包存在, 如果是在本地仓库则直接使用, 而如果在远程仓库或中央仓库, Maven则将jar包自动下载到本地仓库.
-本地仓库 本地仓库在第一次执行maven命令的时候才被创建.
-运行 Maven 的时候, Maven 所需要的任何构件都是直接从本地仓库获取的.'>
+<meta property='og:description' content='Maven 简介 Apache Maven是专门用于管理和构建Java项目的工具, 它基于项目对象模型 (POM) 的概念, 通过一小段描述信息来管理项目的构建, 报告和文档. Mav'>
 <meta property='og:url' content='https://blog.linner.asia/p/maven/'>
 <meta property='og:site_name' content='Linner&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='JavaWeb' /><meta property='article:tag' content='项目管理' /><meta property='article:tag' content='Maven' /><meta property='article:published_time' content='2022-08-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-08-14T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Maven">
-<meta name="twitter:description" content="Maven 简介 Apache Maven是专门用于管理和构建Java项目的工具, 它基于项目对象模型 (POM) 的概念, 通过一小段描述信息来管理项目的构建, 报告和文档.
-Maven的主要功能有:
- 提供了一套标准化的项目结构. 提供了一套标准化的构建流程 (编译, 测试, 打包, 发布&amp;hellip;). 提供了一套依赖管理机制.  Maven 模型 Maven模型包含:
- 项目对象模型 (Project Object Model) 依赖管理模型 (Dependency) 插件 (Plugin)  Maven模型图示:
-其中紫色框框起来的部分, 就是用来完成标准化构建流程.
-仓库 Maven仓库是项目中依赖的第三方库, 这个库所在的位置叫做仓库 (在Maven的术语中，仓库是一个位置, place).
-Maven中, 任何一个依赖、插件或者项目构建的输出，都可以称之为构件. Maven仓库能帮助我们管理构件 (主要是JAR), 它就是放置所有JAR文件 (WAR, ZIP, POM等等) 的地方.
-仓库有三种类型:
- 本地 (local) 中央 (central) 远程 (remote)  在项目中使用坐标引入对应依赖jar包后, Maven会按照本地仓库 &amp;ndash;&amp;gt; 远程仓库&amp;ndash;&amp;gt; 中央仓库的顺序去查找相应的jar包. 只要jar包存在, 如果是在本地仓库则直接使用, 而如果在远程仓库或中央仓库, Maven则将jar包自动下载到本地仓库.
-本地仓库 本地仓库在第一次执行maven命令的时候才被创建.
-运行 Maven 的时候, Maven 所需要的任何构件都是直接从本地仓库获取的.">
+<meta name="twitter:description" content="Maven 简介 Apache Maven是专门用于管理和构建Java项目的工具, 它基于项目对象模型 (POM) 的概念, 通过一小段描述信息来管理项目的构建, 报告和文档. Mav">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
 <style>
@@ -347,7 +317,7 @@ Maven中, 任何一个依赖、插件或者项目构建的输出，都可以称�
 
         
 
-        <div class="article-time--reading">共424字</div>
+        <div class="article-time--reading">共2885字</div>
     </footer>
     
 

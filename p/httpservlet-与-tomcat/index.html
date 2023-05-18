@@ -1,14 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='HttpServlet 简介 HttpServlet是对HTTP协议封装的Servlet实现类。
-Servlet的体系结构：
-在开发中，关注更多的是Servlet.service()方法。而每实现一个Servlet就必须实现Servlet接口，重写接口中的5个方法。
-但其实可以通过继承HttpServlet来编写Servlet，简化Servlet的开发流程。并且，如果是开发B/S架构的Web项目，针对的都是HTTP协议。
-使用HttpServlet的格式如下：
-package com.linner.web; import javax.servlet.ServletException; import javax.servlet.annotation.WebServlet; import javax.servlet.http.*; import java.io.IOException; @WebServlet(&amp;#34;/demo&amp;#34;) public class ServletDemo extends HttpServlet { // 需要复写以下两个方法:  @Override protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException { System.out.println(&amp;#34;Get...&amp;#34;); } @Override protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException { System.out.println(&amp;#34;Post...&amp;#34;); } }   启动Tomcat，使用浏览器访问http://localhost:8080/web-demo/demo可以在控制台看到doGet()方法被执行。
-  在项目的webapp目录下新建index.html，写入：
-&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;zh&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;title&amp;gt;TestPost&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;form action=&amp;#34;/web-demo/demo&amp;#34; method=&amp;#34;post&amp;#34;&amp;gt; &amp;lt;input name=&amp;#34;username&amp;#34;/&amp;gt;&amp;lt;input type=&amp;#34;submit&amp;#34;/&amp;gt; &amp;lt;/form&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 启动Tomcat，访问http://localhost:8080/web-demo/，在表单输入内容后提交。即可在控制台看到doPost()被执行。'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='HttpServlet 简介 HttpServlet是对HTTP协议封装的Servlet实现类。 Servlet的体系结构： 在开发中，关注更多的是Servlet.se'>
 
 
 <title>HttpServlet 与 Tomcat</title>
@@ -18,26 +11,12 @@ package com.linner.web; import javax.servlet.ServletException; import javax.serv
 <link rel="stylesheet" href="/scss/style.min.7a68e2beb371039eca9f5e8f87aa11bdb1fdc96a55744700a091f658cd1e66a7.css">
 <link rel="stylesheet" href="/css/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
 <meta property='og:title' content='HttpServlet 与 Tomcat'>
-<meta property='og:description' content='HttpServlet 简介 HttpServlet是对HTTP协议封装的Servlet实现类。
-Servlet的体系结构：
-在开发中，关注更多的是Servlet.service()方法。而每实现一个Servlet就必须实现Servlet接口，重写接口中的5个方法。
-但其实可以通过继承HttpServlet来编写Servlet，简化Servlet的开发流程。并且，如果是开发B/S架构的Web项目，针对的都是HTTP协议。
-使用HttpServlet的格式如下：
-package com.linner.web; import javax.servlet.ServletException; import javax.servlet.annotation.WebServlet; import javax.servlet.http.*; import java.io.IOException; @WebServlet(&amp;#34;/demo&amp;#34;) public class ServletDemo extends HttpServlet { // 需要复写以下两个方法:  @Override protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException { System.out.println(&amp;#34;Get...&amp;#34;); } @Override protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException { System.out.println(&amp;#34;Post...&amp;#34;); } }   启动Tomcat，使用浏览器访问http://localhost:8080/web-demo/demo可以在控制台看到doGet()方法被执行。
-  在项目的webapp目录下新建index.html，写入：
-&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;zh&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;title&amp;gt;TestPost&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;form action=&amp;#34;/web-demo/demo&amp;#34; method=&amp;#34;post&amp;#34;&amp;gt; &amp;lt;input name=&amp;#34;username&amp;#34;/&amp;gt;&amp;lt;input type=&amp;#34;submit&amp;#34;/&amp;gt; &amp;lt;/form&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 启动Tomcat，访问http://localhost:8080/web-demo/，在表单输入内容后提交。即可在控制台看到doPost()被执行。'>
+<meta property='og:description' content='HttpServlet 简介 HttpServlet是对HTTP协议封装的Servlet实现类。 Servlet的体系结构： 在开发中，关注更多的是Servlet.se'>
 <meta property='og:url' content='https://blog.linner.asia/p/httpservlet-%E4%B8%8E-tomcat/'>
 <meta property='og:site_name' content='Linner&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='JavaWeb' /><meta property='article:tag' content='Tomcat' /><meta property='article:published_time' content='2022-09-12T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-09-12T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="HttpServlet 与 Tomcat">
-<meta name="twitter:description" content="HttpServlet 简介 HttpServlet是对HTTP协议封装的Servlet实现类。
-Servlet的体系结构：
-在开发中，关注更多的是Servlet.service()方法。而每实现一个Servlet就必须实现Servlet接口，重写接口中的5个方法。
-但其实可以通过继承HttpServlet来编写Servlet，简化Servlet的开发流程。并且，如果是开发B/S架构的Web项目，针对的都是HTTP协议。
-使用HttpServlet的格式如下：
-package com.linner.web; import javax.servlet.ServletException; import javax.servlet.annotation.WebServlet; import javax.servlet.http.*; import java.io.IOException; @WebServlet(&amp;#34;/demo&amp;#34;) public class ServletDemo extends HttpServlet { // 需要复写以下两个方法:  @Override protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException { System.out.println(&amp;#34;Get...&amp;#34;); } @Override protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException { System.out.println(&amp;#34;Post...&amp;#34;); } }   启动Tomcat，使用浏览器访问http://localhost:8080/web-demo/demo可以在控制台看到doGet()方法被执行。
-  在项目的webapp目录下新建index.html，写入：
-&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;zh&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;title&amp;gt;TestPost&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;form action=&amp;#34;/web-demo/demo&amp;#34; method=&amp;#34;post&amp;#34;&amp;gt; &amp;lt;input name=&amp;#34;username&amp;#34;/&amp;gt;&amp;lt;input type=&amp;#34;submit&amp;#34;/&amp;gt; &amp;lt;/form&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; 启动Tomcat，访问http://localhost:8080/web-demo/，在表单输入内容后提交。即可在控制台看到doPost()被执行。">
+<meta name="twitter:description" content="HttpServlet 简介 HttpServlet是对HTTP协议封装的Servlet实现类。 Servlet的体系结构： 在开发中，关注更多的是Servlet.se">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
 <style>
@@ -338,7 +317,7 @@ package com.linner.web; import javax.servlet.ServletException; import javax.serv
 
         
 
-        <div class="article-time--reading">共2007字</div>
+        <div class="article-time--reading">共8139字</div>
     </footer>
     
 

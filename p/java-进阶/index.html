@@ -1,20 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='反射 反射是Java中一种用于动态获取类或对象的信息以及动态调用对象方法的功能机制。在运行状态中，对于任意一个类，使用反射可以获取这个类的所有属性和方法；对于任意一个对象，使用反射能够调用它的任意属性和方法。利用反射可以无视对象的修饰符，调用类里面的内容。利用反射可以跟配置文件结合起来使用，把要创建的对象信息和方法写在配置文件中。
-使用反射包含以下步骤：
- 获取class字节码文件对象。 利用反射可以操作类或对象的信息有：  构造方法（获取、创建对象） 成员变量（获取、赋值） 成员方法（获取、运行）    获取字节码文件对象 Java中的每个类都是一个Class对象（字节码文件对象）。获取字节码文件对象共有以下三种方式：
-  通过class字节码文件获取：Class.forName(&amp;quot;类的全类名&amp;quot;)
-类的全类名=类的包名.类名。
-使用该方式，是通过.java源代码文件编译后生成的.class字节码文件获取。
-Class clazz = Class.forName(&amp;#34;com.linner.repo.Student&amp;#34;);   通过Class对象的class属性获取：类名.class
-该方式是对象已载入内存后使用的，需要使用import语句将对应的类导入（.class文件加载到内存后产生的Class对象也是唯一的）。
-Class clazz = Student.class;   通过对象获取：对象.getClass()
-通过创建对象后的getClass()方法来返回该对象的Class对象。该方法需要创建具体对象后才能使用。
-Student student = new Student(); Class clazz = student.getClass();     以上三种方法获取到的Class对象均为同一个对象。即，使用==分别判断以上三种方法获取到的对象均为true。
-  获取了Class对象后就可以获取到该类的各种信息。
-获取构造方法 获取构造方法即为获取Constructor对象。
-   方法名 说明     Constructor&amp;lt;?&amp;gt;[] getConstructors() 获得所有的公共构造方法（public）   Constructor&amp;lt;?&amp;gt;[] getDeclaredConstructors() 获得所有的构造方法（包括private）    Constructor&amp;lt;T&amp;gt; getConstructor(Class&amp;lt;?'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='反射 反射是Java中一种用于动态获取类或对象的信息以及动态调用对象方法的功能机制。在运行状态中，对于任意一个类，使用反射可以获取这个类的所有'>
 
 
 <title>Java 进阶</title>
@@ -24,38 +11,12 @@ Student student = new Student(); Class clazz = student.getClass();     以上三
 <link rel="stylesheet" href="/scss/style.min.7a68e2beb371039eca9f5e8f87aa11bdb1fdc96a55744700a091f658cd1e66a7.css">
 <link rel="stylesheet" href="/css/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
 <meta property='og:title' content='Java 进阶'>
-<meta property='og:description' content='反射 反射是Java中一种用于动态获取类或对象的信息以及动态调用对象方法的功能机制。在运行状态中，对于任意一个类，使用反射可以获取这个类的所有属性和方法；对于任意一个对象，使用反射能够调用它的任意属性和方法。利用反射可以无视对象的修饰符，调用类里面的内容。利用反射可以跟配置文件结合起来使用，把要创建的对象信息和方法写在配置文件中。
-使用反射包含以下步骤：
- 获取class字节码文件对象。 利用反射可以操作类或对象的信息有：  构造方法（获取、创建对象） 成员变量（获取、赋值） 成员方法（获取、运行）    获取字节码文件对象 Java中的每个类都是一个Class对象（字节码文件对象）。获取字节码文件对象共有以下三种方式：
-  通过class字节码文件获取：Class.forName(&amp;quot;类的全类名&amp;quot;)
-类的全类名=类的包名.类名。
-使用该方式，是通过.java源代码文件编译后生成的.class字节码文件获取。
-Class clazz = Class.forName(&amp;#34;com.linner.repo.Student&amp;#34;);   通过Class对象的class属性获取：类名.class
-该方式是对象已载入内存后使用的，需要使用import语句将对应的类导入（.class文件加载到内存后产生的Class对象也是唯一的）。
-Class clazz = Student.class;   通过对象获取：对象.getClass()
-通过创建对象后的getClass()方法来返回该对象的Class对象。该方法需要创建具体对象后才能使用。
-Student student = new Student(); Class clazz = student.getClass();     以上三种方法获取到的Class对象均为同一个对象。即，使用==分别判断以上三种方法获取到的对象均为true。
-  获取了Class对象后就可以获取到该类的各种信息。
-获取构造方法 获取构造方法即为获取Constructor对象。
-   方法名 说明     Constructor&amp;lt;?&amp;gt;[] getConstructors() 获得所有的公共构造方法（public）   Constructor&amp;lt;?&amp;gt;[] getDeclaredConstructors() 获得所有的构造方法（包括private）    Constructor&amp;lt;T&amp;gt; getConstructor(Class&amp;lt;?'>
+<meta property='og:description' content='反射 反射是Java中一种用于动态获取类或对象的信息以及动态调用对象方法的功能机制。在运行状态中，对于任意一个类，使用反射可以获取这个类的所有'>
 <meta property='og:url' content='https://blog.linner.asia/p/java-%E8%BF%9B%E9%98%B6/'>
 <meta property='og:site_name' content='Linner&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:published_time' content='2023-02-14T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-02-14T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Java 进阶">
-<meta name="twitter:description" content="反射 反射是Java中一种用于动态获取类或对象的信息以及动态调用对象方法的功能机制。在运行状态中，对于任意一个类，使用反射可以获取这个类的所有属性和方法；对于任意一个对象，使用反射能够调用它的任意属性和方法。利用反射可以无视对象的修饰符，调用类里面的内容。利用反射可以跟配置文件结合起来使用，把要创建的对象信息和方法写在配置文件中。
-使用反射包含以下步骤：
- 获取class字节码文件对象。 利用反射可以操作类或对象的信息有：  构造方法（获取、创建对象） 成员变量（获取、赋值） 成员方法（获取、运行）    获取字节码文件对象 Java中的每个类都是一个Class对象（字节码文件对象）。获取字节码文件对象共有以下三种方式：
-  通过class字节码文件获取：Class.forName(&amp;quot;类的全类名&amp;quot;)
-类的全类名=类的包名.类名。
-使用该方式，是通过.java源代码文件编译后生成的.class字节码文件获取。
-Class clazz = Class.forName(&amp;#34;com.linner.repo.Student&amp;#34;);   通过Class对象的class属性获取：类名.class
-该方式是对象已载入内存后使用的，需要使用import语句将对应的类导入（.class文件加载到内存后产生的Class对象也是唯一的）。
-Class clazz = Student.class;   通过对象获取：对象.getClass()
-通过创建对象后的getClass()方法来返回该对象的Class对象。该方法需要创建具体对象后才能使用。
-Student student = new Student(); Class clazz = student.getClass();     以上三种方法获取到的Class对象均为同一个对象。即，使用==分别判断以上三种方法获取到的对象均为true。
-  获取了Class对象后就可以获取到该类的各种信息。
-获取构造方法 获取构造方法即为获取Constructor对象。
-   方法名 说明     Constructor&amp;lt;?&amp;gt;[] getConstructors() 获得所有的公共构造方法（public）   Constructor&amp;lt;?&amp;gt;[] getDeclaredConstructors() 获得所有的构造方法（包括private）    Constructor&amp;lt;T&amp;gt; getConstructor(Class&amp;lt;?">
+<meta name="twitter:description" content="反射 反射是Java中一种用于动态获取类或对象的信息以及动态调用对象方法的功能机制。在运行状态中，对于任意一个类，使用反射可以获取这个类的所有">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
 <style>
@@ -348,7 +309,7 @@ Student student = new Student(); Class clazz = student.getClass();     以上三
 
         
 
-        <div class="article-time--reading">共1070字</div>
+        <div class="article-time--reading">共4521字</div>
     </footer>
     
 

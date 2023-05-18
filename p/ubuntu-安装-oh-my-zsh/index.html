@@ -1,22 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='oh-my-zsh主页： https://ohmyz.sh/
-安装并设置zsh 安装zsh：
-sudo apt install zsh 查看系统中所有的shell：
-cat /etc/shells # /etc/shells: valid login shells /bin/sh /bin/bash /usr/bin/bash /bin/rbash /usr/bin/rbash /bin/dash /usr/bin/dash /usr/bin/tmux /usr/bin/screen /bin/zsh /usr/bin/zsh 将zsh设置为默认的shell：
-sudo chsh -s /bin/zsh 重新连接到Ubuntu，然后查看当前默认shell：
-echo $SHELL 如果显示/bin/zsh则配置成功。
- 安装 oh-my-zsh 下载install.sh：
-wget https://gitee.com/mirrors/oh-my-zsh/raw/master/tools/install.sh 给install.sh添加权限：
-chmod &#43;x install.sh 执行install.sh：
-./install.sh  📌在执行install.sh之前还需要安装git。否则会报错。
-安装git：
-sudo apt install git   配置zsh zsh的配置文件为：~/.zshrc。
-vim ~/.zshrc 修改主题 主题配置项为：ZSH_THEME。
-默认主题配置为：
-ZSH_THEME=&amp;#34;robbyrussell&amp;#34; 可以修改为其中之一：
-ZSH_THEME=&amp;#34;ys&amp;#34; ZSH_THEME=&amp;#34;geoffgarside&amp;#34; 还可以访问https://github.com/ohmyzsh/ohmyzsh/wiki/Themes 查看更多主题。'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='oh-my-zsh主页： https://ohmyz.sh/ 安装并设置zsh 安装zsh： sudo apt install zsh 查看系统中所有的shell： cat /etc/shells # /etc/shells: valid login shells /bin/sh /bin/bash /usr/bin/bash /bin/rbash /usr/bin/rbash /bin/dash /usr/bin/dash /usr/bin/tmux /usr/bin/screen /bin/zsh /usr/bin/zsh 将zsh设置为'>
 
 
 <title>Ubuntu 安装 Oh my zsh</title>
@@ -26,42 +11,12 @@ ZSH_THEME=&amp;#34;ys&amp;#34; ZSH_THEME=&amp;#34;geoffgarside&amp;#34; 还可�
 <link rel="stylesheet" href="/scss/style.min.7a68e2beb371039eca9f5e8f87aa11bdb1fdc96a55744700a091f658cd1e66a7.css">
 <link rel="stylesheet" href="/css/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
 <meta property='og:title' content='Ubuntu 安装 Oh my zsh'>
-<meta property='og:description' content='oh-my-zsh主页： https://ohmyz.sh/
-安装并设置zsh 安装zsh：
-sudo apt install zsh 查看系统中所有的shell：
-cat /etc/shells # /etc/shells: valid login shells /bin/sh /bin/bash /usr/bin/bash /bin/rbash /usr/bin/rbash /bin/dash /usr/bin/dash /usr/bin/tmux /usr/bin/screen /bin/zsh /usr/bin/zsh 将zsh设置为默认的shell：
-sudo chsh -s /bin/zsh 重新连接到Ubuntu，然后查看当前默认shell：
-echo $SHELL 如果显示/bin/zsh则配置成功。
- 安装 oh-my-zsh 下载install.sh：
-wget https://gitee.com/mirrors/oh-my-zsh/raw/master/tools/install.sh 给install.sh添加权限：
-chmod &#43;x install.sh 执行install.sh：
-./install.sh  📌在执行install.sh之前还需要安装git。否则会报错。
-安装git：
-sudo apt install git   配置zsh zsh的配置文件为：~/.zshrc。
-vim ~/.zshrc 修改主题 主题配置项为：ZSH_THEME。
-默认主题配置为：
-ZSH_THEME=&amp;#34;robbyrussell&amp;#34; 可以修改为其中之一：
-ZSH_THEME=&amp;#34;ys&amp;#34; ZSH_THEME=&amp;#34;geoffgarside&amp;#34; 还可以访问https://github.com/ohmyzsh/ohmyzsh/wiki/Themes 查看更多主题。'>
+<meta property='og:description' content='oh-my-zsh主页： https://ohmyz.sh/ 安装并设置zsh 安装zsh： sudo apt install zsh 查看系统中所有的shell： cat /etc/shells # /etc/shells: valid login shells /bin/sh /bin/bash /usr/bin/bash /bin/rbash /usr/bin/rbash /bin/dash /usr/bin/dash /usr/bin/tmux /usr/bin/screen /bin/zsh /usr/bin/zsh 将zsh设置为'>
 <meta property='og:url' content='https://blog.linner.asia/p/ubuntu-%E5%AE%89%E8%A3%85-oh-my-zsh/'>
 <meta property='og:site_name' content='Linner&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='Ubuntu' /><meta property='article:tag' content='Shell' /><meta property='article:published_time' content='2022-01-26T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-01-26T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Ubuntu 安装 Oh my zsh">
-<meta name="twitter:description" content="oh-my-zsh主页： https://ohmyz.sh/
-安装并设置zsh 安装zsh：
-sudo apt install zsh 查看系统中所有的shell：
-cat /etc/shells # /etc/shells: valid login shells /bin/sh /bin/bash /usr/bin/bash /bin/rbash /usr/bin/rbash /bin/dash /usr/bin/dash /usr/bin/tmux /usr/bin/screen /bin/zsh /usr/bin/zsh 将zsh设置为默认的shell：
-sudo chsh -s /bin/zsh 重新连接到Ubuntu，然后查看当前默认shell：
-echo $SHELL 如果显示/bin/zsh则配置成功。
- 安装 oh-my-zsh 下载install.sh：
-wget https://gitee.com/mirrors/oh-my-zsh/raw/master/tools/install.sh 给install.sh添加权限：
-chmod &#43;x install.sh 执行install.sh：
-./install.sh  📌在执行install.sh之前还需要安装git。否则会报错。
-安装git：
-sudo apt install git   配置zsh zsh的配置文件为：~/.zshrc。
-vim ~/.zshrc 修改主题 主题配置项为：ZSH_THEME。
-默认主题配置为：
-ZSH_THEME=&amp;#34;robbyrussell&amp;#34; 可以修改为其中之一：
-ZSH_THEME=&amp;#34;ys&amp;#34; ZSH_THEME=&amp;#34;geoffgarside&amp;#34; 还可以访问https://github.com/ohmyzsh/ohmyzsh/wiki/Themes 查看更多主题。">
+<meta name="twitter:description" content="oh-my-zsh主页： https://ohmyz.sh/ 安装并设置zsh 安装zsh： sudo apt install zsh 查看系统中所有的shell： cat /etc/shells # /etc/shells: valid login shells /bin/sh /bin/bash /usr/bin/bash /bin/rbash /usr/bin/rbash /bin/dash /usr/bin/dash /usr/bin/tmux /usr/bin/screen /bin/zsh /usr/bin/zsh 将zsh设置为">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
 <style>
@@ -354,7 +309,7 @@ ZSH_THEME=&amp;#34;ys&amp;#34; ZSH_THEME=&amp;#34;geoffgarside&amp;#34; 还可�
 
         
 
-        <div class="article-time--reading">共66字</div>
+        <div class="article-time--reading">共347字</div>
     </footer>
     
 

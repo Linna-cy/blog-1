@@ -1,15 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='下载frp：
-wget https://github.com/fatedier/frp/releases/download/v0.44.0/frp_0.44.0_linux_amd64.tar.gz 或者访问frp项目获取自己需要的版本。
-  解压：
-tar -zxvf frp_0.44.0_linux_amd64.tar.gz   进入目录后，配置frps.ini和frpc.ini：
-cd frp_0.44.0_linux_amd64   服务端：
-vim frps.ini 将文件按照下面修改：
-[common] # frp监听的端口，默认是7000，可以改成其他的 bind_port = 7000 # 授权码，请改成更复杂的 token = 123456 # 这个token之后在客户端会用到 # frp管理后台端口，请按自己需求更改 dashboard_port = 7500 # frp管理后台用户名和密码，请改成自己的 dashboard_user = admin dashboard_pwd = admin enable_prometheus = true # frp日志配置 log_file = /var/log/frps.log log_level = info log_max_days = 3   客户端：
-vim frpc.ini 将文件按照下面修改：
-# 客户端配置 [common] server_addr = 服务器ip server_port = 7000 # 与frps.'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='下载frp： wget https://github.com/fatedier/frp/releases/download/v0.44.0/frp_0.44.0_linux_amd64.tar.gz 或者访问frp项目获取自己需要的版本。 解压： tar -zxvf frp_0.44.0_linux_amd64.tar.gz 进入目录后，配置frps.ini和frpc.ini： cd frp_0.44.0_linux_amd64 服务端： vim frps.ini 将文件'>
 
 
 <title>搭建 frp 服务</title>
@@ -19,28 +11,12 @@ vim frpc.ini 将文件按照下面修改：
 <link rel="stylesheet" href="/scss/style.min.7a68e2beb371039eca9f5e8f87aa11bdb1fdc96a55744700a091f658cd1e66a7.css">
 <link rel="stylesheet" href="/css/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
 <meta property='og:title' content='搭建 frp 服务'>
-<meta property='og:description' content='下载frp：
-wget https://github.com/fatedier/frp/releases/download/v0.44.0/frp_0.44.0_linux_amd64.tar.gz 或者访问frp项目获取自己需要的版本。
-  解压：
-tar -zxvf frp_0.44.0_linux_amd64.tar.gz   进入目录后，配置frps.ini和frpc.ini：
-cd frp_0.44.0_linux_amd64   服务端：
-vim frps.ini 将文件按照下面修改：
-[common] # frp监听的端口，默认是7000，可以改成其他的 bind_port = 7000 # 授权码，请改成更复杂的 token = 123456 # 这个token之后在客户端会用到 # frp管理后台端口，请按自己需求更改 dashboard_port = 7500 # frp管理后台用户名和密码，请改成自己的 dashboard_user = admin dashboard_pwd = admin enable_prometheus = true # frp日志配置 log_file = /var/log/frps.log log_level = info log_max_days = 3   客户端：
-vim frpc.ini 将文件按照下面修改：
-# 客户端配置 [common] server_addr = 服务器ip server_port = 7000 # 与frps.'>
+<meta property='og:description' content='下载frp： wget https://github.com/fatedier/frp/releases/download/v0.44.0/frp_0.44.0_linux_amd64.tar.gz 或者访问frp项目获取自己需要的版本。 解压： tar -zxvf frp_0.44.0_linux_amd64.tar.gz 进入目录后，配置frps.ini和frpc.ini： cd frp_0.44.0_linux_amd64 服务端： vim frps.ini 将文件'>
 <meta property='og:url' content='https://blog.linner.asia/p/%E6%90%AD%E5%BB%BA-frp-%E6%9C%8D%E5%8A%A1/'>
 <meta property='og:site_name' content='Linner&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Linux' /><meta property='article:tag' content='Ubuntu' /><meta property='article:published_time' content='2022-07-23T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-07-23T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="搭建 frp 服务">
-<meta name="twitter:description" content="下载frp：
-wget https://github.com/fatedier/frp/releases/download/v0.44.0/frp_0.44.0_linux_amd64.tar.gz 或者访问frp项目获取自己需要的版本。
-  解压：
-tar -zxvf frp_0.44.0_linux_amd64.tar.gz   进入目录后，配置frps.ini和frpc.ini：
-cd frp_0.44.0_linux_amd64   服务端：
-vim frps.ini 将文件按照下面修改：
-[common] # frp监听的端口，默认是7000，可以改成其他的 bind_port = 7000 # 授权码，请改成更复杂的 token = 123456 # 这个token之后在客户端会用到 # frp管理后台端口，请按自己需求更改 dashboard_port = 7500 # frp管理后台用户名和密码，请改成自己的 dashboard_user = admin dashboard_pwd = admin enable_prometheus = true # frp日志配置 log_file = /var/log/frps.log log_level = info log_max_days = 3   客户端：
-vim frpc.ini 将文件按照下面修改：
-# 客户端配置 [common] server_addr = 服务器ip server_port = 7000 # 与frps.">
+<meta name="twitter:description" content="下载frp： wget https://github.com/fatedier/frp/releases/download/v0.44.0/frp_0.44.0_linux_amd64.tar.gz 或者访问frp项目获取自己需要的版本。 解压： tar -zxvf frp_0.44.0_linux_amd64.tar.gz 进入目录后，配置frps.ini和frpc.ini： cd frp_0.44.0_linux_amd64 服务端： vim frps.ini 将文件">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
 <style>
@@ -304,7 +280,7 @@ vim frpc.ini 将文件按照下面修改：
 
         
 
-        <div class="article-time--reading">共177字</div>
+        <div class="article-time--reading">共617字</div>
     </footer>
     
 

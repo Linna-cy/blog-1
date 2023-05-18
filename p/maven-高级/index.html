@@ -1,20 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='多模块开发 多模块开发有以下两种：
- 按照功能拆分。 按照模块拆分。  例如，将项目中的DAO类拆分出来作为一个独立的模块。然后使用Maven将该模块作为依赖导入项目中。
-假设现在已经将项目中的实体类拆分出来作为maven-dao模块。该模块也使用Maven构建，然后导入该项目所需依赖。经过测试后，将该项目的&amp;lt;groupId&amp;gt;、&amp;lt;artifactId&amp;gt;和&amp;lt;version&amp;gt;导入原本项目。
-maven-dao模块的pom.xml中：
-&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt; &amp;lt;project xmlns=&amp;#34;http://maven.apache.org/POM/4.0.0&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xsi:schemaLocation=&amp;#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;#34;&amp;gt; &amp;lt;!-- ... --&amp;gt; &amp;lt;!-- 将下面内容作为依赖导入到原项目中 --&amp;gt; &amp;lt;groupId&amp;gt;com.linner&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;springmvc-demo&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.0-SNAPSHOT&amp;lt;/version&amp;gt; &amp;lt;!-- END --&amp;gt; &amp;lt;!-- ... --&amp;gt; &amp;lt;/project&amp;gt; 将上方&amp;lt;groupId&amp;gt;、&amp;lt;artifactId&amp;gt;和&amp;lt;version&amp;gt;导入原项目：
-&amp;lt;dependencies&amp;gt; &amp;lt;!-- ... --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.linner&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;springmvc-demo&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.0-SNAPSHOT&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;!-- ... --&amp;gt; &amp;lt;/dependencies&amp;gt; 接着使用Maven的install命令将maven-dao模块安装到Maven本地仓库中，项目即可正常启动。
- 依赖管理 依赖传递 Maven项目中的依赖是具有传递性的。即，依赖的依赖可以作为依赖使用。将依赖关系作为树状结构看待，那么依赖的子孙依赖，也可以作为项目的依赖。
-依赖传递有直接依赖和间接依赖。
-  直接依赖：
-在pom.xml中编写的依赖就是该项目的直接依赖。即，依赖树中，子依赖（子节点）即为当前项目（根节点）的直接依赖。
-  间接依赖： 依赖树中，直接依赖下的所有依赖（孙子节点）即为当前项目的间接依赖。
-  因为依赖传递的存在，会导致使用依赖的过程中出现冲突问题。例如有两个相同的依赖，它们的版本不同，就会导致依赖冲突。
-Maven指定了一系列规则来解决依赖冲突问题。
- 特殊优先：同级下（依赖树中同个父节点的依赖为同级，即同个pom.xml下），配置了相同资源的不同版本，后配置的覆盖先配置。 路径优先：依赖树中，层级越浅，优先级越高；层级越深，优先级越低。 声明优先：资源在相同层级被依赖时，配置顺序靠前的覆盖配置顺序靠后的。即，谁先声明用谁。   注意：依赖的优先级只对当前项目起作用。即，当前项目选择的依赖版本并不会影响到依赖中相同资源不同版本的依赖。 最终选择的依赖结果根据Idea中Mavem面板的依赖树视图。'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='多模块开发 多模块开发有以下两种： 按照功能拆分。 按照模块拆分。 例如，将项目中的DAO类拆分出来作为一个独立的模块。然后使用Maven将该模块作'>
 
 
 <title>Maven 高级</title>
@@ -24,38 +11,12 @@ Maven指定了一系列规则来解决依赖冲突问题。
 <link rel="stylesheet" href="/scss/style.min.7a68e2beb371039eca9f5e8f87aa11bdb1fdc96a55744700a091f658cd1e66a7.css">
 <link rel="stylesheet" href="/css/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
 <meta property='og:title' content='Maven 高级'>
-<meta property='og:description' content='多模块开发 多模块开发有以下两种：
- 按照功能拆分。 按照模块拆分。  例如，将项目中的DAO类拆分出来作为一个独立的模块。然后使用Maven将该模块作为依赖导入项目中。
-假设现在已经将项目中的实体类拆分出来作为maven-dao模块。该模块也使用Maven构建，然后导入该项目所需依赖。经过测试后，将该项目的&amp;lt;groupId&amp;gt;、&amp;lt;artifactId&amp;gt;和&amp;lt;version&amp;gt;导入原本项目。
-maven-dao模块的pom.xml中：
-&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt; &amp;lt;project xmlns=&amp;#34;http://maven.apache.org/POM/4.0.0&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xsi:schemaLocation=&amp;#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;#34;&amp;gt; &amp;lt;!-- ... --&amp;gt; &amp;lt;!-- 将下面内容作为依赖导入到原项目中 --&amp;gt; &amp;lt;groupId&amp;gt;com.linner&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;springmvc-demo&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.0-SNAPSHOT&amp;lt;/version&amp;gt; &amp;lt;!-- END --&amp;gt; &amp;lt;!-- ... --&amp;gt; &amp;lt;/project&amp;gt; 将上方&amp;lt;groupId&amp;gt;、&amp;lt;artifactId&amp;gt;和&amp;lt;version&amp;gt;导入原项目：
-&amp;lt;dependencies&amp;gt; &amp;lt;!-- ... --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.linner&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;springmvc-demo&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.0-SNAPSHOT&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;!-- ... --&amp;gt; &amp;lt;/dependencies&amp;gt; 接着使用Maven的install命令将maven-dao模块安装到Maven本地仓库中，项目即可正常启动。
- 依赖管理 依赖传递 Maven项目中的依赖是具有传递性的。即，依赖的依赖可以作为依赖使用。将依赖关系作为树状结构看待，那么依赖的子孙依赖，也可以作为项目的依赖。
-依赖传递有直接依赖和间接依赖。
-  直接依赖：
-在pom.xml中编写的依赖就是该项目的直接依赖。即，依赖树中，子依赖（子节点）即为当前项目（根节点）的直接依赖。
-  间接依赖： 依赖树中，直接依赖下的所有依赖（孙子节点）即为当前项目的间接依赖。
-  因为依赖传递的存在，会导致使用依赖的过程中出现冲突问题。例如有两个相同的依赖，它们的版本不同，就会导致依赖冲突。
-Maven指定了一系列规则来解决依赖冲突问题。
- 特殊优先：同级下（依赖树中同个父节点的依赖为同级，即同个pom.xml下），配置了相同资源的不同版本，后配置的覆盖先配置。 路径优先：依赖树中，层级越浅，优先级越高；层级越深，优先级越低。 声明优先：资源在相同层级被依赖时，配置顺序靠前的覆盖配置顺序靠后的。即，谁先声明用谁。   注意：依赖的优先级只对当前项目起作用。即，当前项目选择的依赖版本并不会影响到依赖中相同资源不同版本的依赖。 最终选择的依赖结果根据Idea中Mavem面板的依赖树视图。'>
+<meta property='og:description' content='多模块开发 多模块开发有以下两种： 按照功能拆分。 按照模块拆分。 例如，将项目中的DAO类拆分出来作为一个独立的模块。然后使用Maven将该模块作'>
 <meta property='og:url' content='https://blog.linner.asia/p/maven-%E9%AB%98%E7%BA%A7/'>
 <meta property='og:site_name' content='Linner&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='项目管理' /><meta property='article:tag' content='Maven' /><meta property='article:published_time' content='2023-02-27T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-02-27T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Maven 高级">
-<meta name="twitter:description" content="多模块开发 多模块开发有以下两种：
- 按照功能拆分。 按照模块拆分。  例如，将项目中的DAO类拆分出来作为一个独立的模块。然后使用Maven将该模块作为依赖导入项目中。
-假设现在已经将项目中的实体类拆分出来作为maven-dao模块。该模块也使用Maven构建，然后导入该项目所需依赖。经过测试后，将该项目的&amp;lt;groupId&amp;gt;、&amp;lt;artifactId&amp;gt;和&amp;lt;version&amp;gt;导入原本项目。
-maven-dao模块的pom.xml中：
-&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt; &amp;lt;project xmlns=&amp;#34;http://maven.apache.org/POM/4.0.0&amp;#34; xmlns:xsi=&amp;#34;http://www.w3.org/2001/XMLSchema-instance&amp;#34; xsi:schemaLocation=&amp;#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&amp;#34;&amp;gt; &amp;lt;!-- ... --&amp;gt; &amp;lt;!-- 将下面内容作为依赖导入到原项目中 --&amp;gt; &amp;lt;groupId&amp;gt;com.linner&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;springmvc-demo&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.0-SNAPSHOT&amp;lt;/version&amp;gt; &amp;lt;!-- END --&amp;gt; &amp;lt;!-- ... --&amp;gt; &amp;lt;/project&amp;gt; 将上方&amp;lt;groupId&amp;gt;、&amp;lt;artifactId&amp;gt;和&amp;lt;version&amp;gt;导入原项目：
-&amp;lt;dependencies&amp;gt; &amp;lt;!-- ... --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;com.linner&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;springmvc-demo&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;1.0-SNAPSHOT&amp;lt;/version&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;!-- ... --&amp;gt; &amp;lt;/dependencies&amp;gt; 接着使用Maven的install命令将maven-dao模块安装到Maven本地仓库中，项目即可正常启动。
- 依赖管理 依赖传递 Maven项目中的依赖是具有传递性的。即，依赖的依赖可以作为依赖使用。将依赖关系作为树状结构看待，那么依赖的子孙依赖，也可以作为项目的依赖。
-依赖传递有直接依赖和间接依赖。
-  直接依赖：
-在pom.xml中编写的依赖就是该项目的直接依赖。即，依赖树中，子依赖（子节点）即为当前项目（根节点）的直接依赖。
-  间接依赖： 依赖树中，直接依赖下的所有依赖（孙子节点）即为当前项目的间接依赖。
-  因为依赖传递的存在，会导致使用依赖的过程中出现冲突问题。例如有两个相同的依赖，它们的版本不同，就会导致依赖冲突。
-Maven指定了一系列规则来解决依赖冲突问题。
- 特殊优先：同级下（依赖树中同个父节点的依赖为同级，即同个pom.xml下），配置了相同资源的不同版本，后配置的覆盖先配置。 路径优先：依赖树中，层级越浅，优先级越高；层级越深，优先级越低。 声明优先：资源在相同层级被依赖时，配置顺序靠前的覆盖配置顺序靠后的。即，谁先声明用谁。   注意：依赖的优先级只对当前项目起作用。即，当前项目选择的依赖版本并不会影响到依赖中相同资源不同版本的依赖。 最终选择的依赖结果根据Idea中Mavem面板的依赖树视图。">
+<meta name="twitter:description" content="多模块开发 多模块开发有以下两种： 按照功能拆分。 按照模块拆分。 例如，将项目中的DAO类拆分出来作为一个独立的模块。然后使用Maven将该模块作">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
 <style>
@@ -356,7 +317,7 @@ Maven指定了一系列规则来解决依赖冲突问题。
 
         
 
-        <div class="article-time--reading">共412字</div>
+        <div class="article-time--reading">共3651字</div>
     </footer>
     
 

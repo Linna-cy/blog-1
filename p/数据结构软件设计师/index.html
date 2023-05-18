@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='复杂度 算法时间复杂度以算法中基本操附重复执行的次数（简称为频度）作为算法的时间度量。一般不必要精确计算出算法的时间复杂度，只要大致计算出相应的数量级即可，使用大$O$表示法表示（空间复杂度也是）。
- 加法规则：多项相加，保留最高阶项，并将系数化为1； 乘法规则：多项相乘都保留，并将系数化为1。  递归式的时间（空间）复杂度：
-$$ 递归的次数 \times 每次递归的时间（空间）复杂度 $$
-逻辑结构分类  线性结构  线性表（一般线性表） 特殊线性表  栈 队列 字符串   线性表的推广  数组 广义表     非线性结构  树结构  二叉树 多叉树   图结构  有向图 无向图   集合结构     线性表 由 $n(n \geq 0)$ 个数据特性相同的元素构成的有限序列称为线性表。$n=0$ 时，称为空表。非空表的特点如下：
- 存在唯一一个“第一个”元素。 存在唯一一个“最后一个”元素。 相邻元素之间存在序偶关系：  除第一个之外，结构中的每个数据元素均只有一个前驱； 除最后一个之外，结构中的每个数据元素均只有一个后继。    线性表的存储结构分为：
- 顺序存储； 链式存储  顺序存储结构 线性表的顺序存储是指用一组地址连续的存储单元依次存储线性表中的数据元素，从而使得逻辑上相邻的两个元素在物理位置上也相邻。在这种存储方式下，元素间的逻辑关系无须占用额外的空间来存储。'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='复杂度 算法时间复杂度以算法中基本操附重复执行的次数（简称为频度）作为算法的时间度量。一般不必要精确计算出算法的时间复杂度，只要大致计算出相应'>
 
 
 <title>数据结构（软件设计师）</title>
@@ -16,22 +11,12 @@ $$ 递归的次数 \times 每次递归的时间（空间）复杂度 $$
 <link rel="stylesheet" href="/scss/style.min.7a68e2beb371039eca9f5e8f87aa11bdb1fdc96a55744700a091f658cd1e66a7.css">
 <link rel="stylesheet" href="/css/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
 <meta property='og:title' content='数据结构（软件设计师）'>
-<meta property='og:description' content='复杂度 算法时间复杂度以算法中基本操附重复执行的次数（简称为频度）作为算法的时间度量。一般不必要精确计算出算法的时间复杂度，只要大致计算出相应的数量级即可，使用大$O$表示法表示（空间复杂度也是）。
- 加法规则：多项相加，保留最高阶项，并将系数化为1； 乘法规则：多项相乘都保留，并将系数化为1。  递归式的时间（空间）复杂度：
-$$ 递归的次数 \times 每次递归的时间（空间）复杂度 $$
-逻辑结构分类  线性结构  线性表（一般线性表） 特殊线性表  栈 队列 字符串   线性表的推广  数组 广义表     非线性结构  树结构  二叉树 多叉树   图结构  有向图 无向图   集合结构     线性表 由 $n(n \geq 0)$ 个数据特性相同的元素构成的有限序列称为线性表。$n=0$ 时，称为空表。非空表的特点如下：
- 存在唯一一个“第一个”元素。 存在唯一一个“最后一个”元素。 相邻元素之间存在序偶关系：  除第一个之外，结构中的每个数据元素均只有一个前驱； 除最后一个之外，结构中的每个数据元素均只有一个后继。    线性表的存储结构分为：
- 顺序存储； 链式存储  顺序存储结构 线性表的顺序存储是指用一组地址连续的存储单元依次存储线性表中的数据元素，从而使得逻辑上相邻的两个元素在物理位置上也相邻。在这种存储方式下，元素间的逻辑关系无须占用额外的空间来存储。'>
+<meta property='og:description' content='复杂度 算法时间复杂度以算法中基本操附重复执行的次数（简称为频度）作为算法的时间度量。一般不必要精确计算出算法的时间复杂度，只要大致计算出相应'>
 <meta property='og:url' content='https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/'>
 <meta property='og:site_name' content='Linner&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='软考' /><meta property='article:tag' content='软件设计师' /><meta property='article:tag' content='数据结构' /><meta property='article:tag' content='算法' /><meta property='article:published_time' content='2023-04-08T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-04-08T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="数据结构（软件设计师）">
-<meta name="twitter:description" content="复杂度 算法时间复杂度以算法中基本操附重复执行的次数（简称为频度）作为算法的时间度量。一般不必要精确计算出算法的时间复杂度，只要大致计算出相应的数量级即可，使用大$O$表示法表示（空间复杂度也是）。
- 加法规则：多项相加，保留最高阶项，并将系数化为1； 乘法规则：多项相乘都保留，并将系数化为1。  递归式的时间（空间）复杂度：
-$$ 递归的次数 \times 每次递归的时间（空间）复杂度 $$
-逻辑结构分类  线性结构  线性表（一般线性表） 特殊线性表  栈 队列 字符串   线性表的推广  数组 广义表     非线性结构  树结构  二叉树 多叉树   图结构  有向图 无向图   集合结构     线性表 由 $n(n \geq 0)$ 个数据特性相同的元素构成的有限序列称为线性表。$n=0$ 时，称为空表。非空表的特点如下：
- 存在唯一一个“第一个”元素。 存在唯一一个“最后一个”元素。 相邻元素之间存在序偶关系：  除第一个之外，结构中的每个数据元素均只有一个前驱； 除最后一个之外，结构中的每个数据元素均只有一个后继。    线性表的存储结构分为：
- 顺序存储； 链式存储  顺序存储结构 线性表的顺序存储是指用一组地址连续的存储单元依次存储线性表中的数据元素，从而使得逻辑上相邻的两个元素在物理位置上也相邻。在这种存储方式下，元素间的逻辑关系无须占用额外的空间来存储。">
+<meta name="twitter:description" content="复杂度 算法时间复杂度以算法中基本操附重复执行的次数（简称为频度）作为算法的时间度量。一般不必要精确计算出算法的时间复杂度，只要大致计算出相应">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
 <style>
@@ -332,7 +317,7 @@ $$ 递归的次数 \times 每次递归的时间（空间）复杂度 $$
 
         
 
-        <div class="article-time--reading">共1449字</div>
+        <div class="article-time--reading">共14198字</div>
     </footer>
     
 

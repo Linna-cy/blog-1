@@ -1,17 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='SpringBoot 简介 SpringBoot 是由 Pivotal 团队提供的全新框架，其设计目的是用来简化 Spring 应用的初始搭建以及开发过程。
-SpringBoot开发分为如下几步：
- 创建新模块，选择Spring初始化，并配置模块相关基础信息。 选择当前模块需要使用的技术集。 开发控制器类。 运行自动生成的Application类。  项目创建及配置 创建项目  注意：
-  在创建好的工程中不需要创建配置类。
-  创建好的项目会自动生成其他的一些文件（这些文件目前来说没有任何作用），可以将这些文件删除。
-可以删除的目录和文件如下：
- .mvn .gitignore HELP.md mvnw mvnw.cmd     项目依赖 在项目中的pom.xml中有如下代码：
-&amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.0.3&amp;lt;/version&amp;gt; &amp;lt;relativePath/&amp;gt; &amp;lt;!-- lookup parent from repository --&amp;gt; &amp;lt;/parent&amp;gt; 该代码指定了一个父工程，父工程中的东西在该工程中可以继承过来使用。
-并且使用Spring Initializr创建的项目会自动在pom.xml中导入所需的起步依赖（包含starter的依赖）。
-引导类 创建的每个SpringBoot项目都包含一个引导类，如：
-@SpringBootApplication public class SpringbootDemoApplication { public static void main(String[] args) { SpringApplication.run(SpringbootDemoApplication.class, args); } } 引导类是项目的入口，运行main()就可以启动项目。'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='SpringBoot 简介 SpringBoot 是由 Pivotal 团队提供的全新框架，其设计目的是用来简化 Spring 应用的初始搭建以及开发过程。 SpringBoot开发分为如下几步： 创建新模块，选择S'>
 
 
 <title>SpringBoot 基础</title>
@@ -21,32 +11,12 @@ SpringBoot开发分为如下几步：
 <link rel="stylesheet" href="/scss/style.min.7a68e2beb371039eca9f5e8f87aa11bdb1fdc96a55744700a091f658cd1e66a7.css">
 <link rel="stylesheet" href="/css/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
 <meta property='og:title' content='SpringBoot 基础'>
-<meta property='og:description' content='SpringBoot 简介 SpringBoot 是由 Pivotal 团队提供的全新框架，其设计目的是用来简化 Spring 应用的初始搭建以及开发过程。
-SpringBoot开发分为如下几步：
- 创建新模块，选择Spring初始化，并配置模块相关基础信息。 选择当前模块需要使用的技术集。 开发控制器类。 运行自动生成的Application类。  项目创建及配置 创建项目  注意：
-  在创建好的工程中不需要创建配置类。
-  创建好的项目会自动生成其他的一些文件（这些文件目前来说没有任何作用），可以将这些文件删除。
-可以删除的目录和文件如下：
- .mvn .gitignore HELP.md mvnw mvnw.cmd     项目依赖 在项目中的pom.xml中有如下代码：
-&amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.0.3&amp;lt;/version&amp;gt; &amp;lt;relativePath/&amp;gt; &amp;lt;!-- lookup parent from repository --&amp;gt; &amp;lt;/parent&amp;gt; 该代码指定了一个父工程，父工程中的东西在该工程中可以继承过来使用。
-并且使用Spring Initializr创建的项目会自动在pom.xml中导入所需的起步依赖（包含starter的依赖）。
-引导类 创建的每个SpringBoot项目都包含一个引导类，如：
-@SpringBootApplication public class SpringbootDemoApplication { public static void main(String[] args) { SpringApplication.run(SpringbootDemoApplication.class, args); } } 引导类是项目的入口，运行main()就可以启动项目。'>
+<meta property='og:description' content='SpringBoot 简介 SpringBoot 是由 Pivotal 团队提供的全新框架，其设计目的是用来简化 Spring 应用的初始搭建以及开发过程。 SpringBoot开发分为如下几步： 创建新模块，选择S'>
 <meta property='og:url' content='https://blog.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/'>
 <meta property='og:site_name' content='Linner&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='JavaWeb' /><meta property='article:tag' content='Spring' /><meta property='article:tag' content='Maven' /><meta property='article:published_time' content='2023-02-20T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-02-20T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="SpringBoot 基础">
-<meta name="twitter:description" content="SpringBoot 简介 SpringBoot 是由 Pivotal 团队提供的全新框架，其设计目的是用来简化 Spring 应用的初始搭建以及开发过程。
-SpringBoot开发分为如下几步：
- 创建新模块，选择Spring初始化，并配置模块相关基础信息。 选择当前模块需要使用的技术集。 开发控制器类。 运行自动生成的Application类。  项目创建及配置 创建项目  注意：
-  在创建好的工程中不需要创建配置类。
-  创建好的项目会自动生成其他的一些文件（这些文件目前来说没有任何作用），可以将这些文件删除。
-可以删除的目录和文件如下：
- .mvn .gitignore HELP.md mvnw mvnw.cmd     项目依赖 在项目中的pom.xml中有如下代码：
-&amp;lt;parent&amp;gt; &amp;lt;groupId&amp;gt;org.springframework.boot&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;spring-boot-starter-parent&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.0.3&amp;lt;/version&amp;gt; &amp;lt;relativePath/&amp;gt; &amp;lt;!-- lookup parent from repository --&amp;gt; &amp;lt;/parent&amp;gt; 该代码指定了一个父工程，父工程中的东西在该工程中可以继承过来使用。
-并且使用Spring Initializr创建的项目会自动在pom.xml中导入所需的起步依赖（包含starter的依赖）。
-引导类 创建的每个SpringBoot项目都包含一个引导类，如：
-@SpringBootApplication public class SpringbootDemoApplication { public static void main(String[] args) { SpringApplication.run(SpringbootDemoApplication.class, args); } } 引导类是项目的入口，运行main()就可以启动项目。">
+<meta name="twitter:description" content="SpringBoot 简介 SpringBoot 是由 Pivotal 团队提供的全新框架，其设计目的是用来简化 Spring 应用的初始搭建以及开发过程。 SpringBoot开发分为如下几步： 创建新模块，选择S">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
 <style>
@@ -351,7 +321,7 @@ SpringBoot开发分为如下几步：
 
         
 
-        <div class="article-time--reading">共604字</div>
+        <div class="article-time--reading">共3309字</div>
     </footer>
     
 

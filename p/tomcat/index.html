@@ -1,18 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Tomcat基本使用 Tomcat安装 访问Tomcat官网下载。Tomcat是绿色版，直接解压即可。
-启动Tomcat 以Windows系统为例，运行Tomcat目录下 bin\startup.bat 启动脚本即可完成启动。
-启动后，通过浏览器访问 http://localhost:8080能看到Apache Tomcat的内容就说明Tomcat已经启动成功。
-Windows系统下启动的过程中，如果控制台有中文乱码，需要修改conf/logging.prooperties。
-将
-java.util.logging.ConsoleHandler.encoding = UTF-8 修改为
-java.util.logging.ConsoleHandler.encoding = GBK 关闭Tomcat 关闭Tomcat不应该直接关闭运行窗口来强制关闭。应该运行bin\shutdown.bat或ctrl&#43;c来正常关闭。
-修改端口 Tomcat默认的端口是8080，通过修改 conf/server.xml 来修改端口号：
-&amp;lt;Connector port=&amp;#34;8080&amp;#34; protocol=&amp;#34;HTTP/1.1&amp;#34; connectionTimeout=&amp;#34;20000&amp;#34; redirectPort=&amp;#34;8443&amp;#34;&amp;gt; 部署 Tomcat部署项目： 将项目放置到webapps目录下，即部署完成。
-一般JavaWeb项目会被打包称war包，然后将war包放到webapps目录下，Tomcat会自动解压缩。
- Maven 创建 Web 项目 使用Maven工具能更加简单快捷的创建Web项目。
-Maven Web 项目结构  📁project_name &amp;mdash; 项目主目录  📁src &amp;mdash; 源代码和测试代码文件目录  📁main &amp;mdash; 源代码文件目录  📁java &amp;mdash; 源代码Java文件目录 📁resourcs &amp;mdash; 源代码配置文件目录 ❗📁webapp 或 web &amp;mdash; Web项目核心目录 存放web配置文件和web项目代码 (html, css, javascript等)  ❗📁WEB-INF &amp;mdash; Web项目核心目录  📄web.'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Tomcat基本使用 Tomcat安装 访问Tomcat官网下载。Tomcat是绿色版，直接解压即可。 启动Tomcat 以Windows系统为例，'>
 
 
 <title>Tomcat</title>
@@ -22,34 +11,12 @@ Maven Web 项目结构  📁project_name &amp;mdash; 项目主目录  📁src &a
 <link rel="stylesheet" href="/scss/style.min.7a68e2beb371039eca9f5e8f87aa11bdb1fdc96a55744700a091f658cd1e66a7.css">
 <link rel="stylesheet" href="/css/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
 <meta property='og:title' content='Tomcat'>
-<meta property='og:description' content='Tomcat基本使用 Tomcat安装 访问Tomcat官网下载。Tomcat是绿色版，直接解压即可。
-启动Tomcat 以Windows系统为例，运行Tomcat目录下 bin\startup.bat 启动脚本即可完成启动。
-启动后，通过浏览器访问 http://localhost:8080能看到Apache Tomcat的内容就说明Tomcat已经启动成功。
-Windows系统下启动的过程中，如果控制台有中文乱码，需要修改conf/logging.prooperties。
-将
-java.util.logging.ConsoleHandler.encoding = UTF-8 修改为
-java.util.logging.ConsoleHandler.encoding = GBK 关闭Tomcat 关闭Tomcat不应该直接关闭运行窗口来强制关闭。应该运行bin\shutdown.bat或ctrl&#43;c来正常关闭。
-修改端口 Tomcat默认的端口是8080，通过修改 conf/server.xml 来修改端口号：
-&amp;lt;Connector port=&amp;#34;8080&amp;#34; protocol=&amp;#34;HTTP/1.1&amp;#34; connectionTimeout=&amp;#34;20000&amp;#34; redirectPort=&amp;#34;8443&amp;#34;&amp;gt; 部署 Tomcat部署项目： 将项目放置到webapps目录下，即部署完成。
-一般JavaWeb项目会被打包称war包，然后将war包放到webapps目录下，Tomcat会自动解压缩。
- Maven 创建 Web 项目 使用Maven工具能更加简单快捷的创建Web项目。
-Maven Web 项目结构  📁project_name &amp;mdash; 项目主目录  📁src &amp;mdash; 源代码和测试代码文件目录  📁main &amp;mdash; 源代码文件目录  📁java &amp;mdash; 源代码Java文件目录 📁resourcs &amp;mdash; 源代码配置文件目录 ❗📁webapp 或 web &amp;mdash; Web项目核心目录 存放web配置文件和web项目代码 (html, css, javascript等)  ❗📁WEB-INF &amp;mdash; Web项目核心目录  📄web.'>
+<meta property='og:description' content='Tomcat基本使用 Tomcat安装 访问Tomcat官网下载。Tomcat是绿色版，直接解压即可。 启动Tomcat 以Windows系统为例，'>
 <meta property='og:url' content='https://blog.linner.asia/p/tomcat/'>
 <meta property='og:site_name' content='Linner&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='JavaWeb' /><meta property='article:tag' content='HTTP' /><meta property='article:tag' content='服务器' /><meta property='article:tag' content='Tomcat' /><meta property='article:published_time' content='2022-09-10T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-09-10T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Tomcat">
-<meta name="twitter:description" content="Tomcat基本使用 Tomcat安装 访问Tomcat官网下载。Tomcat是绿色版，直接解压即可。
-启动Tomcat 以Windows系统为例，运行Tomcat目录下 bin\startup.bat 启动脚本即可完成启动。
-启动后，通过浏览器访问 http://localhost:8080能看到Apache Tomcat的内容就说明Tomcat已经启动成功。
-Windows系统下启动的过程中，如果控制台有中文乱码，需要修改conf/logging.prooperties。
-将
-java.util.logging.ConsoleHandler.encoding = UTF-8 修改为
-java.util.logging.ConsoleHandler.encoding = GBK 关闭Tomcat 关闭Tomcat不应该直接关闭运行窗口来强制关闭。应该运行bin\shutdown.bat或ctrl&#43;c来正常关闭。
-修改端口 Tomcat默认的端口是8080，通过修改 conf/server.xml 来修改端口号：
-&amp;lt;Connector port=&amp;#34;8080&amp;#34; protocol=&amp;#34;HTTP/1.1&amp;#34; connectionTimeout=&amp;#34;20000&amp;#34; redirectPort=&amp;#34;8443&amp;#34;&amp;gt; 部署 Tomcat部署项目： 将项目放置到webapps目录下，即部署完成。
-一般JavaWeb项目会被打包称war包，然后将war包放到webapps目录下，Tomcat会自动解压缩。
- Maven 创建 Web 项目 使用Maven工具能更加简单快捷的创建Web项目。
-Maven Web 项目结构  📁project_name &amp;mdash; 项目主目录  📁src &amp;mdash; 源代码和测试代码文件目录  📁main &amp;mdash; 源代码文件目录  📁java &amp;mdash; 源代码Java文件目录 📁resourcs &amp;mdash; 源代码配置文件目录 ❗📁webapp 或 web &amp;mdash; Web项目核心目录 存放web配置文件和web项目代码 (html, css, javascript等)  ❗📁WEB-INF &amp;mdash; Web项目核心目录  📄web.">
+<meta name="twitter:description" content="Tomcat基本使用 Tomcat安装 访问Tomcat官网下载。Tomcat是绿色版，直接解压即可。 启动Tomcat 以Windows系统为例，">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
 <style>
@@ -350,7 +317,7 @@ Maven Web 项目结构  📁project_name &amp;mdash; 项目主目录  📁src &a
 
         
 
-        <div class="article-time--reading">共209字</div>
+        <div class="article-time--reading">共1881字</div>
     </footer>
     
 

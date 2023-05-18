@@ -1,15 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Python 语法 注释 Python 的注释风格：
-# 行注释 &amp;#39;&amp;#39;&amp;#39; 块注释1 &amp;#39;&amp;#39;&amp;#39; &amp;#34;&amp;#34;&amp;#34; 块注释2 &amp;#34;&amp;#34;&amp;#34; 注释中的内容将不会被执行。
- 标识符   首字母必须是大写或小写的英文字母或者下划线 _。
-  其他部分由大写或小写的英文字母、数字和下划线组成。
-  大小写敏感（区分大小写）。
-  Python3 中允许使用非 ASCII 标识符，即中文也可作为标识符：
-&amp;gt;&amp;gt;&amp;gt; 变量 = 5 &amp;gt;&amp;gt;&amp;gt; print(变量) 5  关键字 Python 关键字（keyword）不能作为标识符使用，关键字又称保留字。
-使用 keyword 模块输出 Python 的所有关键字：
-&amp;gt;&amp;gt;&amp;gt; import keyword &amp;gt;&amp;gt;&amp;gt; print(keyword.kwlist) [&amp;#39;False&amp;#39;, &amp;#39;None&amp;#39;, &amp;#39;True&amp;#39;, &amp;#39;and&amp;#39;, &amp;#39;as&amp;#39;, &amp;#39;assert&amp;#39;, &amp;#39;break&amp;#39;, &amp;#39;class&amp;#39;, &amp;#39;continue&amp;#39;, &amp;#39;def&amp;#39;, &amp;#39;del&amp;#39;, &amp;#39;elif&amp;#39;, &amp;#39;else&amp;#39;, &amp;#39;except&amp;#39;, &amp;#39;finally&amp;#39;, &amp;#39;for&amp;#39;, &amp;#39;from&amp;#39;, &amp;#39;global&amp;#39;, &amp;#39;if&amp;#39;, &amp;#39;import&amp;#39;, &amp;#39;in&amp;#39;, &amp;#39;is&amp;#39;, &amp;#39;lambda&amp;#39;, &amp;#39;nonlocal&amp;#39;, &amp;#39;not&amp;#39;, &amp;#39;or&amp;#39;, &amp;#39;pass&amp;#39;, &amp;#39;raise&amp;#39;, &amp;#39;return&amp;#39;, &amp;#39;try&amp;#39;, &amp;#39;while&amp;#39;, &amp;#39;with&amp;#39;, &amp;#39;yield&amp;#39;]  变量的赋值 Python 中的变量并不需要声明，直接赋值后就可使用。还可以同时为多个变量赋值。'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Python 语法 注释 Python 的注释风格： # 行注释 &amp;#39;&amp;#39;&amp;#39; 块注释1 &amp;#39;&amp;#39;&amp;#39; &amp;#34;&amp;#34;&amp;#34; 块注释2 &amp;#34;&amp;#34;&amp;#34; 注释中的内容将不会被执行。 标识符 首字母必须是大写或小写的英文字母或者下划线 _。 其他部'>
 
 
 <title>Python 基础</title>
@@ -19,28 +11,12 @@
 <link rel="stylesheet" href="/scss/style.min.7a68e2beb371039eca9f5e8f87aa11bdb1fdc96a55744700a091f658cd1e66a7.css">
 <link rel="stylesheet" href="/css/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
 <meta property='og:title' content='Python 基础'>
-<meta property='og:description' content='Python 语法 注释 Python 的注释风格：
-# 行注释 &amp;#39;&amp;#39;&amp;#39; 块注释1 &amp;#39;&amp;#39;&amp;#39; &amp;#34;&amp;#34;&amp;#34; 块注释2 &amp;#34;&amp;#34;&amp;#34; 注释中的内容将不会被执行。
- 标识符   首字母必须是大写或小写的英文字母或者下划线 _。
-  其他部分由大写或小写的英文字母、数字和下划线组成。
-  大小写敏感（区分大小写）。
-  Python3 中允许使用非 ASCII 标识符，即中文也可作为标识符：
-&amp;gt;&amp;gt;&amp;gt; 变量 = 5 &amp;gt;&amp;gt;&amp;gt; print(变量) 5  关键字 Python 关键字（keyword）不能作为标识符使用，关键字又称保留字。
-使用 keyword 模块输出 Python 的所有关键字：
-&amp;gt;&amp;gt;&amp;gt; import keyword &amp;gt;&amp;gt;&amp;gt; print(keyword.kwlist) [&amp;#39;False&amp;#39;, &amp;#39;None&amp;#39;, &amp;#39;True&amp;#39;, &amp;#39;and&amp;#39;, &amp;#39;as&amp;#39;, &amp;#39;assert&amp;#39;, &amp;#39;break&amp;#39;, &amp;#39;class&amp;#39;, &amp;#39;continue&amp;#39;, &amp;#39;def&amp;#39;, &amp;#39;del&amp;#39;, &amp;#39;elif&amp;#39;, &amp;#39;else&amp;#39;, &amp;#39;except&amp;#39;, &amp;#39;finally&amp;#39;, &amp;#39;for&amp;#39;, &amp;#39;from&amp;#39;, &amp;#39;global&amp;#39;, &amp;#39;if&amp;#39;, &amp;#39;import&amp;#39;, &amp;#39;in&amp;#39;, &amp;#39;is&amp;#39;, &amp;#39;lambda&amp;#39;, &amp;#39;nonlocal&amp;#39;, &amp;#39;not&amp;#39;, &amp;#39;or&amp;#39;, &amp;#39;pass&amp;#39;, &amp;#39;raise&amp;#39;, &amp;#39;return&amp;#39;, &amp;#39;try&amp;#39;, &amp;#39;while&amp;#39;, &amp;#39;with&amp;#39;, &amp;#39;yield&amp;#39;]  变量的赋值 Python 中的变量并不需要声明，直接赋值后就可使用。还可以同时为多个变量赋值。'>
+<meta property='og:description' content='Python 语法 注释 Python 的注释风格： # 行注释 &amp;#39;&amp;#39;&amp;#39; 块注释1 &amp;#39;&amp;#39;&amp;#39; &amp;#34;&amp;#34;&amp;#34; 块注释2 &amp;#34;&amp;#34;&amp;#34; 注释中的内容将不会被执行。 标识符 首字母必须是大写或小写的英文字母或者下划线 _。 其他部'>
 <meta property='og:url' content='https://blog.linner.asia/p/python-%E5%9F%BA%E7%A1%80/'>
 <meta property='og:site_name' content='Linner&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Python' /><meta property='article:published_time' content='2022-01-12T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-01-12T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Python 基础">
-<meta name="twitter:description" content="Python 语法 注释 Python 的注释风格：
-# 行注释 &amp;#39;&amp;#39;&amp;#39; 块注释1 &amp;#39;&amp;#39;&amp;#39; &amp;#34;&amp;#34;&amp;#34; 块注释2 &amp;#34;&amp;#34;&amp;#34; 注释中的内容将不会被执行。
- 标识符   首字母必须是大写或小写的英文字母或者下划线 _。
-  其他部分由大写或小写的英文字母、数字和下划线组成。
-  大小写敏感（区分大小写）。
-  Python3 中允许使用非 ASCII 标识符，即中文也可作为标识符：
-&amp;gt;&amp;gt;&amp;gt; 变量 = 5 &amp;gt;&amp;gt;&amp;gt; print(变量) 5  关键字 Python 关键字（keyword）不能作为标识符使用，关键字又称保留字。
-使用 keyword 模块输出 Python 的所有关键字：
-&amp;gt;&amp;gt;&amp;gt; import keyword &amp;gt;&amp;gt;&amp;gt; print(keyword.kwlist) [&amp;#39;False&amp;#39;, &amp;#39;None&amp;#39;, &amp;#39;True&amp;#39;, &amp;#39;and&amp;#39;, &amp;#39;as&amp;#39;, &amp;#39;assert&amp;#39;, &amp;#39;break&amp;#39;, &amp;#39;class&amp;#39;, &amp;#39;continue&amp;#39;, &amp;#39;def&amp;#39;, &amp;#39;del&amp;#39;, &amp;#39;elif&amp;#39;, &amp;#39;else&amp;#39;, &amp;#39;except&amp;#39;, &amp;#39;finally&amp;#39;, &amp;#39;for&amp;#39;, &amp;#39;from&amp;#39;, &amp;#39;global&amp;#39;, &amp;#39;if&amp;#39;, &amp;#39;import&amp;#39;, &amp;#39;in&amp;#39;, &amp;#39;is&amp;#39;, &amp;#39;lambda&amp;#39;, &amp;#39;nonlocal&amp;#39;, &amp;#39;not&amp;#39;, &amp;#39;or&amp;#39;, &amp;#39;pass&amp;#39;, &amp;#39;raise&amp;#39;, &amp;#39;return&amp;#39;, &amp;#39;try&amp;#39;, &amp;#39;while&amp;#39;, &amp;#39;with&amp;#39;, &amp;#39;yield&amp;#39;]  变量的赋值 Python 中的变量并不需要声明，直接赋值后就可使用。还可以同时为多个变量赋值。">
+<meta name="twitter:description" content="Python 语法 注释 Python 的注释风格： # 行注释 &amp;#39;&amp;#39;&amp;#39; 块注释1 &amp;#39;&amp;#39;&amp;#39; &amp;#34;&amp;#34;&amp;#34; 块注释2 &amp;#34;&amp;#34;&amp;#34; 注释中的内容将不会被执行。 标识符 首字母必须是大写或小写的英文字母或者下划线 _。 其他部">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
 <style>
@@ -333,7 +309,7 @@
 
         
 
-        <div class="article-time--reading">共6767字</div>
+        <div class="article-time--reading">共27319字</div>
     </footer>
     
 

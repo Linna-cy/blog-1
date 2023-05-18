@@ -1,17 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='命题的定义 具有确切真值的陈述句称为命题（proposition）。命题可以取一个 “值”，称为真值。真值只有 “真”（用 “T” or “1” 表示，即 True）和 “假”（用 “F” or “0” 表示，即 False）。
- 通常用带或不带下标的大写英文字母表示命题。
-  非命题 一切没有判断内容的句子，如命令句（祈使句）、感叹句、疑问句、二义性的陈述句等都不能作为命题。
- 原子命题与复合命题  原子命题（简单命题）：不能再分解为更简单命题的命题。 复合命题：可以分解为更为简单命题的命题。这些简单命题之间是通过联结词和标点符号复合而成。   命题变元 一个特定的命题是一个常值命题，它不是具有值 “T”，就是具有值 “F”。
-一个任意的没有赋予具体内容的原子命题就是一个变量命题，常称它为命题变量（或命题变元，propositional vatiable）。
-命题变元无具体的真值，它的变域是集合 ${T,F}$（或 ${0,1}$）。
- 联结词 联结词是两个命题真值之间的联结，而不是命题内容之间的连接，因此复合命题的真值只取决于构成它们的各简单命题的真值，而与它们的内容无关，与二者之间是否有关系无关。
- 否定联结词 设 $P$ 是任意一个命题，复合命题 “非 $P$”（或 “$P$ 的否定”）称为 $P$ 的否定式（negation），记作 $\neg P$，“$\neg$” 为否定联结词。
-$P$ 为真当且仅当 $\neg P$ 为假。
-真值表：
-   $P$ $\neg P$     0 1   1 0     “$\neg$” 是自然语言中的 “非”、“不”、“没有” 等的逻辑抽象。'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='命题的定义 具有确切真值的陈述句称为命题（proposition）。命题可以取一个 “值”，称为真值。真值只有 “真”（用 “T” or “1” 表示，即 T'>
 
 
 <title>命题逻辑</title>
@@ -21,32 +11,12 @@ $P$ 为真当且仅当 $\neg P$ 为假。
 <link rel="stylesheet" href="/scss/style.min.7a68e2beb371039eca9f5e8f87aa11bdb1fdc96a55744700a091f658cd1e66a7.css">
 <link rel="stylesheet" href="/css/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
 <meta property='og:title' content='命题逻辑'>
-<meta property='og:description' content='命题的定义 具有确切真值的陈述句称为命题（proposition）。命题可以取一个 “值”，称为真值。真值只有 “真”（用 “T” or “1” 表示，即 True）和 “假”（用 “F” or “0” 表示，即 False）。
- 通常用带或不带下标的大写英文字母表示命题。
-  非命题 一切没有判断内容的句子，如命令句（祈使句）、感叹句、疑问句、二义性的陈述句等都不能作为命题。
- 原子命题与复合命题  原子命题（简单命题）：不能再分解为更简单命题的命题。 复合命题：可以分解为更为简单命题的命题。这些简单命题之间是通过联结词和标点符号复合而成。   命题变元 一个特定的命题是一个常值命题，它不是具有值 “T”，就是具有值 “F”。
-一个任意的没有赋予具体内容的原子命题就是一个变量命题，常称它为命题变量（或命题变元，propositional vatiable）。
-命题变元无具体的真值，它的变域是集合 ${T,F}$（或 ${0,1}$）。
- 联结词 联结词是两个命题真值之间的联结，而不是命题内容之间的连接，因此复合命题的真值只取决于构成它们的各简单命题的真值，而与它们的内容无关，与二者之间是否有关系无关。
- 否定联结词 设 $P$ 是任意一个命题，复合命题 “非 $P$”（或 “$P$ 的否定”）称为 $P$ 的否定式（negation），记作 $\neg P$，“$\neg$” 为否定联结词。
-$P$ 为真当且仅当 $\neg P$ 为假。
-真值表：
-   $P$ $\neg P$     0 1   1 0     “$\neg$” 是自然语言中的 “非”、“不”、“没有” 等的逻辑抽象。'>
+<meta property='og:description' content='命题的定义 具有确切真值的陈述句称为命题（proposition）。命题可以取一个 “值”，称为真值。真值只有 “真”（用 “T” or “1” 表示，即 T'>
 <meta property='og:url' content='https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/'>
 <meta property='og:site_name' content='Linner&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='数学' /><meta property='article:published_time' content='2022-01-23T02:03:41&#43;08:00'/><meta property='article:modified_time' content='2022-01-23T02:03:41&#43;08:00'/>
 <meta name="twitter:title" content="命题逻辑">
-<meta name="twitter:description" content="命题的定义 具有确切真值的陈述句称为命题（proposition）。命题可以取一个 “值”，称为真值。真值只有 “真”（用 “T” or “1” 表示，即 True）和 “假”（用 “F” or “0” 表示，即 False）。
- 通常用带或不带下标的大写英文字母表示命题。
-  非命题 一切没有判断内容的句子，如命令句（祈使句）、感叹句、疑问句、二义性的陈述句等都不能作为命题。
- 原子命题与复合命题  原子命题（简单命题）：不能再分解为更简单命题的命题。 复合命题：可以分解为更为简单命题的命题。这些简单命题之间是通过联结词和标点符号复合而成。   命题变元 一个特定的命题是一个常值命题，它不是具有值 “T”，就是具有值 “F”。
-一个任意的没有赋予具体内容的原子命题就是一个变量命题，常称它为命题变量（或命题变元，propositional vatiable）。
-命题变元无具体的真值，它的变域是集合 ${T,F}$（或 ${0,1}$）。
- 联结词 联结词是两个命题真值之间的联结，而不是命题内容之间的连接，因此复合命题的真值只取决于构成它们的各简单命题的真值，而与它们的内容无关，与二者之间是否有关系无关。
- 否定联结词 设 $P$ 是任意一个命题，复合命题 “非 $P$”（或 “$P$ 的否定”）称为 $P$ 的否定式（negation），记作 $\neg P$，“$\neg$” 为否定联结词。
-$P$ 为真当且仅当 $\neg P$ 为假。
-真值表：
-   $P$ $\neg P$     0 1   1 0     “$\neg$” 是自然语言中的 “非”、“不”、“没有” 等的逻辑抽象。">
+<meta name="twitter:description" content="命题的定义 具有确切真值的陈述句称为命题（proposition）。命题可以取一个 “值”，称为真值。真值只有 “真”（用 “T” or “1” 表示，即 T">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
 <style>
@@ -339,7 +309,7 @@ $P$ 为真当且仅当 $\neg P$ 为假。
 
         
 
-        <div class="article-time--reading">共1811字</div>
+        <div class="article-time--reading">共10106字</div>
     </footer>
     
 

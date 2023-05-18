@@ -1,19 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='简介 SpringMVC是Spring下的一个用于Web表现层开发的技术。相比Servlet，SpringMVC更加高效快捷。
-SpringMVC流程如下：
- 浏览器发送请求到Tomcat服务器； Tomcat接收请求后，将请求交给SpringMVC中的DispatcherServlet（前端控制器）来处理。 DispatcherServlet按照对应规则将请求分发到对应的Bean。 Bean由我们自己编写来处理不同的请求。 每个Bean中可以处理一个或多个不同的请求 URL。   DispatcherServlet和Bean对象都需要交给Spring容器来进行管理。
- 综上，我们需要编写的内容为：
-  Bean对象；
-  请求URL和Bean对象对应关系的配置；
-  构建Spring容器。
-将DispatcherServlet和Bean对象交给容器管理。
-  配置Tomcat服务器。
-使Tomcat能够识别Spring容器，并将请求交给容器中的DispatcherServlet来分发请求。
-  项目的基本实现步骤如下：
- 创建Web工程（Maven结构），并在工程的pom.xml中添加SpringMVC和Servlet坐标。 创建SpringMVC控制器类（等同于Servlet功能）。 初始化SpringMVC环境（同Spring环境），设定SpringMVC加载对应的Bean。 初始化Servlet容器，加载SpringMVC环境，并设置SpringMVC技术处理的请求。  项目结构及基础环境配置 使用SpringMVC开发的项目结构如下：
- 📁project-file-name  📁src  📁main  📁java  📁com.linner  📁config —— 配置类 📁controller —— 表现层 📁dao —— 持久层 📁domain —— 实体类 📁service —— 业务层     📁resourcs 📁webapp        这种项目结构采用了SSM架构，即：'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='简介 SpringMVC是Spring下的一个用于Web表现层开发的技术。相比Servlet，SpringMVC更加高效快捷。 SpringMV'>
 
 
 <title>SpringMVC 基础</title>
@@ -23,36 +11,12 @@ SpringMVC流程如下：
 <link rel="stylesheet" href="/scss/style.min.7a68e2beb371039eca9f5e8f87aa11bdb1fdc96a55744700a091f658cd1e66a7.css">
 <link rel="stylesheet" href="/css/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
 <meta property='og:title' content='SpringMVC 基础'>
-<meta property='og:description' content='简介 SpringMVC是Spring下的一个用于Web表现层开发的技术。相比Servlet，SpringMVC更加高效快捷。
-SpringMVC流程如下：
- 浏览器发送请求到Tomcat服务器； Tomcat接收请求后，将请求交给SpringMVC中的DispatcherServlet（前端控制器）来处理。 DispatcherServlet按照对应规则将请求分发到对应的Bean。 Bean由我们自己编写来处理不同的请求。 每个Bean中可以处理一个或多个不同的请求 URL。   DispatcherServlet和Bean对象都需要交给Spring容器来进行管理。
- 综上，我们需要编写的内容为：
-  Bean对象；
-  请求URL和Bean对象对应关系的配置；
-  构建Spring容器。
-将DispatcherServlet和Bean对象交给容器管理。
-  配置Tomcat服务器。
-使Tomcat能够识别Spring容器，并将请求交给容器中的DispatcherServlet来分发请求。
-  项目的基本实现步骤如下：
- 创建Web工程（Maven结构），并在工程的pom.xml中添加SpringMVC和Servlet坐标。 创建SpringMVC控制器类（等同于Servlet功能）。 初始化SpringMVC环境（同Spring环境），设定SpringMVC加载对应的Bean。 初始化Servlet容器，加载SpringMVC环境，并设置SpringMVC技术处理的请求。  项目结构及基础环境配置 使用SpringMVC开发的项目结构如下：
- 📁project-file-name  📁src  📁main  📁java  📁com.linner  📁config —— 配置类 📁controller —— 表现层 📁dao —— 持久层 📁domain —— 实体类 📁service —— 业务层     📁resourcs 📁webapp        这种项目结构采用了SSM架构，即：'>
+<meta property='og:description' content='简介 SpringMVC是Spring下的一个用于Web表现层开发的技术。相比Servlet，SpringMVC更加高效快捷。 SpringMV'>
 <meta property='og:url' content='https://blog.linner.asia/p/springmvc-%E5%9F%BA%E7%A1%80/'>
 <meta property='og:site_name' content='Linner&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='JavaWeb' /><meta property='article:tag' content='Spring' /><meta property='article:tag' content='Maven' /><meta property='article:published_time' content='2023-02-20T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-02-20T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="SpringMVC 基础">
-<meta name="twitter:description" content="简介 SpringMVC是Spring下的一个用于Web表现层开发的技术。相比Servlet，SpringMVC更加高效快捷。
-SpringMVC流程如下：
- 浏览器发送请求到Tomcat服务器； Tomcat接收请求后，将请求交给SpringMVC中的DispatcherServlet（前端控制器）来处理。 DispatcherServlet按照对应规则将请求分发到对应的Bean。 Bean由我们自己编写来处理不同的请求。 每个Bean中可以处理一个或多个不同的请求 URL。   DispatcherServlet和Bean对象都需要交给Spring容器来进行管理。
- 综上，我们需要编写的内容为：
-  Bean对象；
-  请求URL和Bean对象对应关系的配置；
-  构建Spring容器。
-将DispatcherServlet和Bean对象交给容器管理。
-  配置Tomcat服务器。
-使Tomcat能够识别Spring容器，并将请求交给容器中的DispatcherServlet来分发请求。
-  项目的基本实现步骤如下：
- 创建Web工程（Maven结构），并在工程的pom.xml中添加SpringMVC和Servlet坐标。 创建SpringMVC控制器类（等同于Servlet功能）。 初始化SpringMVC环境（同Spring环境），设定SpringMVC加载对应的Bean。 初始化Servlet容器，加载SpringMVC环境，并设置SpringMVC技术处理的请求。  项目结构及基础环境配置 使用SpringMVC开发的项目结构如下：
- 📁project-file-name  📁src  📁main  📁java  📁com.linner  📁config —— 配置类 📁controller —— 表现层 📁dao —— 持久层 📁domain —— 实体类 📁service —— 业务层     📁resourcs 📁webapp        这种项目结构采用了SSM架构，即：">
+<meta name="twitter:description" content="简介 SpringMVC是Spring下的一个用于Web表现层开发的技术。相比Servlet，SpringMVC更加高效快捷。 SpringMV">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
 <style>
@@ -357,7 +321,7 @@ SpringMVC流程如下：
 
         
 
-        <div class="article-time--reading">共1264字</div>
+        <div class="article-time--reading">共7261字</div>
     </footer>
     
 

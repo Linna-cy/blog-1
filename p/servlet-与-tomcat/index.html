@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Servlet 简介 Java Servlet 是运行在 Web 服务器或应用服务器上的程序，它是作为来自 Web 浏览器或其他 HTTP 客户端的请求和 HTTP 服务器上的数据库或应用程序之间的中间层。
- Servlet 基本使用   创建Maven Web项目后，导入Servlet依赖坐标和Tomcat插件：
-&amp;lt;dependencies&amp;gt; &amp;lt;!-- Servlet依赖 --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;javax.servlet&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;javax.servlet-api&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.1.0&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;provided&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; &amp;lt;build&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;!-- Tomcat插件 --&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.tomcat.maven&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;tomcat7-maven-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.2&amp;lt;/version&amp;gt; &amp;lt;/plugin&amp;gt; &amp;lt;/plugins&amp;gt; &amp;lt;/build&amp;gt;  使用&amp;lt;scope&amp;gt;provided&amp;lt;/scope&amp;gt;的原因： provided指的是在编译和测试过程中有效，最后生成的war包时不会加入。 因为Tomcat的lib目录中已经有servlet-api这个jar包，如果在生成war包的时候生效就会和Tomcat中的jar包冲突，导致报错。
-   创建Servlet类，实现Servlet接口，并重写接口中所有方法：
-package com.linner.web; import javax.servlet.*; import javax.servlet.annotation.WebServlet; import java.io.IOException; @WebServlet(&amp;#34;/demo&amp;#34;) public class ServletDemo implements Servlet { @Override public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException { System.'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='Servlet 简介 Java Servlet 是运行在 Web 服务器或应用服务器上的程序，它是作为来自 Web 浏览器或其他 HTTP 客户端的请求和 HTTP 服务器上的数据库或应用程序之间的中间层。 Servlet 基本使'>
 
 
 <title>Servlet 与 Tomcat</title>
@@ -15,20 +11,12 @@ package com.linner.web; import javax.servlet.*; import javax.servlet.annotation.
 <link rel="stylesheet" href="/scss/style.min.7a68e2beb371039eca9f5e8f87aa11bdb1fdc96a55744700a091f658cd1e66a7.css">
 <link rel="stylesheet" href="/css/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
 <meta property='og:title' content='Servlet 与 Tomcat'>
-<meta property='og:description' content='Servlet 简介 Java Servlet 是运行在 Web 服务器或应用服务器上的程序，它是作为来自 Web 浏览器或其他 HTTP 客户端的请求和 HTTP 服务器上的数据库或应用程序之间的中间层。
- Servlet 基本使用   创建Maven Web项目后，导入Servlet依赖坐标和Tomcat插件：
-&amp;lt;dependencies&amp;gt; &amp;lt;!-- Servlet依赖 --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;javax.servlet&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;javax.servlet-api&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.1.0&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;provided&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; &amp;lt;build&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;!-- Tomcat插件 --&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.tomcat.maven&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;tomcat7-maven-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.2&amp;lt;/version&amp;gt; &amp;lt;/plugin&amp;gt; &amp;lt;/plugins&amp;gt; &amp;lt;/build&amp;gt;  使用&amp;lt;scope&amp;gt;provided&amp;lt;/scope&amp;gt;的原因： provided指的是在编译和测试过程中有效，最后生成的war包时不会加入。 因为Tomcat的lib目录中已经有servlet-api这个jar包，如果在生成war包的时候生效就会和Tomcat中的jar包冲突，导致报错。
-   创建Servlet类，实现Servlet接口，并重写接口中所有方法：
-package com.linner.web; import javax.servlet.*; import javax.servlet.annotation.WebServlet; import java.io.IOException; @WebServlet(&amp;#34;/demo&amp;#34;) public class ServletDemo implements Servlet { @Override public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException { System.'>
+<meta property='og:description' content='Servlet 简介 Java Servlet 是运行在 Web 服务器或应用服务器上的程序，它是作为来自 Web 浏览器或其他 HTTP 客户端的请求和 HTTP 服务器上的数据库或应用程序之间的中间层。 Servlet 基本使'>
 <meta property='og:url' content='https://blog.linner.asia/p/servlet-%E4%B8%8E-tomcat/'>
 <meta property='og:site_name' content='Linner&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='JavaWeb' /><meta property='article:tag' content='Tomcat' /><meta property='article:published_time' content='2022-09-12T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-09-12T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Servlet 与 Tomcat">
-<meta name="twitter:description" content="Servlet 简介 Java Servlet 是运行在 Web 服务器或应用服务器上的程序，它是作为来自 Web 浏览器或其他 HTTP 客户端的请求和 HTTP 服务器上的数据库或应用程序之间的中间层。
- Servlet 基本使用   创建Maven Web项目后，导入Servlet依赖坐标和Tomcat插件：
-&amp;lt;dependencies&amp;gt; &amp;lt;!-- Servlet依赖 --&amp;gt; &amp;lt;dependency&amp;gt; &amp;lt;groupId&amp;gt;javax.servlet&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;javax.servlet-api&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;3.1.0&amp;lt;/version&amp;gt; &amp;lt;scope&amp;gt;provided&amp;lt;/scope&amp;gt; &amp;lt;/dependency&amp;gt; &amp;lt;/dependencies&amp;gt; &amp;lt;build&amp;gt; &amp;lt;plugins&amp;gt; &amp;lt;!-- Tomcat插件 --&amp;gt; &amp;lt;plugin&amp;gt; &amp;lt;groupId&amp;gt;org.apache.tomcat.maven&amp;lt;/groupId&amp;gt; &amp;lt;artifactId&amp;gt;tomcat7-maven-plugin&amp;lt;/artifactId&amp;gt; &amp;lt;version&amp;gt;2.2&amp;lt;/version&amp;gt; &amp;lt;/plugin&amp;gt; &amp;lt;/plugins&amp;gt; &amp;lt;/build&amp;gt;  使用&amp;lt;scope&amp;gt;provided&amp;lt;/scope&amp;gt;的原因： provided指的是在编译和测试过程中有效，最后生成的war包时不会加入。 因为Tomcat的lib目录中已经有servlet-api这个jar包，如果在生成war包的时候生效就会和Tomcat中的jar包冲突，导致报错。
-   创建Servlet类，实现Servlet接口，并重写接口中所有方法：
-package com.linner.web; import javax.servlet.*; import javax.servlet.annotation.WebServlet; import java.io.IOException; @WebServlet(&amp;#34;/demo&amp;#34;) public class ServletDemo implements Servlet { @Override public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException { System.">
+<meta name="twitter:description" content="Servlet 简介 Java Servlet 是运行在 Web 服务器或应用服务器上的程序，它是作为来自 Web 浏览器或其他 HTTP 客户端的请求和 HTTP 服务器上的数据库或应用程序之间的中间层。 Servlet 基本使">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
 <style>
@@ -329,7 +317,7 @@ package com.linner.web; import javax.servlet.*; import javax.servlet.annotation.
 
         
 
-        <div class="article-time--reading">共402字</div>
+        <div class="article-time--reading">共2796字</div>
     </footer>
     
 

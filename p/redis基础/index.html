@@ -1,20 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='数据类型 Redis存储的是key-value结构的数据，其中key是字符串类型，value有5种常用的数据类型：
-  字符串 —— string
-  哈希 —— hash
-适合存储对象。
-  列表 —— list
-按照插入顺序排序，可以有重复元素。可以用来做任务队列。
-  集合 —— set
-无序集合，没有重复元素（后插入的元素会覆盖已有的相同元素）。
-  有序集合 —— sorted set
-有序集合（使用分值进行排序），没有重复元素。
-   常用命令  Redis命令符不区分大小写，但是key是区分大小写的。 更多命令请参考Redis中文网。
- 字符串操作命令 SET key value  设置指定key的值。 key相同的情况下，后设的值会覆盖前面的值。  GET key  获取指key的值。  SETEX key seconds value  设置指定key的值，并将key的过期时间设为seconds秒。  SETNX key value   只有在key不存在时设置key的值。
-  如：
-&amp;gt; SETNX key1 value1 1 &amp;gt; SETNX key1 value2 0 &amp;gt; GET key1 value1   哈希操作命令 Redis hash 是一个string类型的field和value的映射表，hash特别适合用于存储对象。'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='数据类型 Redis存储的是key-value结构的数据，其中key是字符串类型，value有5种常用的数据类型： 字符串 —— string 哈希 —— hash 适合存'>
 
 
 <title>Redis基础</title>
@@ -24,38 +11,12 @@
 <link rel="stylesheet" href="/scss/style.min.7a68e2beb371039eca9f5e8f87aa11bdb1fdc96a55744700a091f658cd1e66a7.css">
 <link rel="stylesheet" href="/css/katex.min.css"><script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
 <meta property='og:title' content='Redis基础'>
-<meta property='og:description' content='数据类型 Redis存储的是key-value结构的数据，其中key是字符串类型，value有5种常用的数据类型：
-  字符串 —— string
-  哈希 —— hash
-适合存储对象。
-  列表 —— list
-按照插入顺序排序，可以有重复元素。可以用来做任务队列。
-  集合 —— set
-无序集合，没有重复元素（后插入的元素会覆盖已有的相同元素）。
-  有序集合 —— sorted set
-有序集合（使用分值进行排序），没有重复元素。
-   常用命令  Redis命令符不区分大小写，但是key是区分大小写的。 更多命令请参考Redis中文网。
- 字符串操作命令 SET key value  设置指定key的值。 key相同的情况下，后设的值会覆盖前面的值。  GET key  获取指key的值。  SETEX key seconds value  设置指定key的值，并将key的过期时间设为seconds秒。  SETNX key value   只有在key不存在时设置key的值。
-  如：
-&amp;gt; SETNX key1 value1 1 &amp;gt; SETNX key1 value2 0 &amp;gt; GET key1 value1   哈希操作命令 Redis hash 是一个string类型的field和value的映射表，hash特别适合用于存储对象。'>
+<meta property='og:description' content='数据类型 Redis存储的是key-value结构的数据，其中key是字符串类型，value有5种常用的数据类型： 字符串 —— string 哈希 —— hash 适合存'>
 <meta property='og:url' content='https://blog.linner.asia/p/redis%E5%9F%BA%E7%A1%80/'>
 <meta property='og:site_name' content='Linner&#39;s Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='NoSQL' /><meta property='article:tag' content='Redis' /><meta property='article:tag' content='数据库' /><meta property='article:published_time' content='2023-03-11T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-03-11T00:00:00&#43;00:00'/>
 <meta name="twitter:title" content="Redis基础">
-<meta name="twitter:description" content="数据类型 Redis存储的是key-value结构的数据，其中key是字符串类型，value有5种常用的数据类型：
-  字符串 —— string
-  哈希 —— hash
-适合存储对象。
-  列表 —— list
-按照插入顺序排序，可以有重复元素。可以用来做任务队列。
-  集合 —— set
-无序集合，没有重复元素（后插入的元素会覆盖已有的相同元素）。
-  有序集合 —— sorted set
-有序集合（使用分值进行排序），没有重复元素。
-   常用命令  Redis命令符不区分大小写，但是key是区分大小写的。 更多命令请参考Redis中文网。
- 字符串操作命令 SET key value  设置指定key的值。 key相同的情况下，后设的值会覆盖前面的值。  GET key  获取指key的值。  SETEX key seconds value  设置指定key的值，并将key的过期时间设为seconds秒。  SETNX key value   只有在key不存在时设置key的值。
-  如：
-&amp;gt; SETNX key1 value1 1 &amp;gt; SETNX key1 value2 0 &amp;gt; GET key1 value1   哈希操作命令 Redis hash 是一个string类型的field和value的映射表，hash特别适合用于存储对象。">
+<meta name="twitter:description" content="数据类型 Redis存储的是key-value结构的数据，其中key是字符串类型，value有5种常用的数据类型： 字符串 —— string 哈希 —— hash 适合存">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
 <style>
@@ -348,7 +309,7 @@
 
         
 
-        <div class="article-time--reading">共729字</div>
+        <div class="article-time--reading">共2340字</div>
     </footer>
     
 
