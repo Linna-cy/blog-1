@@ -1552,6 +1552,7 @@ $$&lt;/p&gt;
 		data-flex-basis=&#34;423px&#34;
 	
 &gt;&lt;/p&gt;
+&lt;p&gt;子实体由称为子类，它会有一个超类，并且能继承超类的属性，超类的属性是实体集中所有子实体的相同属性。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;E-R图中的主要构件（包含扩充的E-R模型成分）：&lt;/p&gt;
@@ -1625,6 +1626,7 @@ $$&lt;/p&gt;
 &lt;li&gt;实体的属性：转换成关系模式的属性；&lt;/li&gt;
 &lt;li&gt;实体标识符：关系的码（键）。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;超类和子类的转换：超类和子类定义为两个关系模式，将超类的主键加到子类中。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;联系向关系模式的转换：&lt;/p&gt;
