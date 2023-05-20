@@ -1536,7 +1536,7 @@ $$&lt;/p&gt;
 &lt;p&gt;例如职工与家属的联系，家属总是属于某职工的（在关系模式中需要依赖职工而存在），所以家属是弱实体。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;特殊化：将一个实体集按照某些特性区分为几个子实体。这种从普遍到特殊的过程即为特殊化。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;特殊化&lt;/strong&gt;：将一个实体集&lt;u&gt;按照某些特性区分为几个&lt;strong&gt;子实体&lt;/strong&gt;&lt;/u&gt;。这种从普遍到特殊的过程即为特殊化。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;E-R图中的主要构件（包含扩充的E-R模型成分）：&lt;/p&gt;
