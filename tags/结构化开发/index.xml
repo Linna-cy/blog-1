@@ -581,7 +581,7 @@
 &lt;p&gt;外部实体表示存在于系统之外的对象，用来帮助用户理解系统数据的来源和去向。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;其中，软件系统内部的&lt;strong&gt;数据处理模型&lt;/strong&gt;：使用&lt;u&gt;数据流&lt;/u&gt;、&lt;u&gt;加工&lt;/u&gt;和&lt;u&gt;数据存储&lt;/u&gt;构建。&lt;/p&gt;
+&lt;p&gt;软件系统内部的&lt;strong&gt;数据处理模型&lt;/strong&gt;：使用&lt;u&gt;数据流&lt;/u&gt;、&lt;u&gt;加工&lt;/u&gt;和&lt;u&gt;数据存储&lt;/u&gt;构建。&lt;/p&gt;
 &lt;p&gt;数据流图描述了系统的分解，但没有对图中各成分进行说明。&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
