@@ -6,7 +6,504 @@
         <description>Recent content in Posts on Linner&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
-        <lastBuildDate>Wed, 17 May 2023 12:52:42 +0800</lastBuildDate><atom:link href="https://blog.linner.asia/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 20 May 2023 13:29:14 +0800</lastBuildDate><atom:link href="https://blog.linner.asia/post/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>软考图类汇总</title>
+        <link>https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/</link>
+        <pubDate>Sat, 20 May 2023 13:29:14 +0800</pubDate>
+        
+        <guid>https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/</guid>
+        <description>&lt;h1 id=&#34;数据流图dfd&#34;&gt;数据流图（DFD）&lt;/h1&gt;
+&lt;p&gt;数据流图是在逻辑上描述系统的功能、输入、输出和数据存储等。&lt;/p&gt;
+&lt;p&gt;数据流图中的基本图形元素包括：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;基本元素&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;图形表示&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;数据流&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1683518468182.png&#34;
+	width=&#34;193&#34;
+	height=&#34;71&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1683518468182_hu1fccd0f4bc92c1a7ca6417a3c5762d95_691_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1683518468182_hu1fccd0f4bc92c1a7ca6417a3c5762d95_691_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;数据流&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;271&#34;
+		data-flex-basis=&#34;652px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;加工&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/1683518239889.png&#34;
+	width=&#34;282&#34;
+	height=&#34;105&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/1683518239889_hua1275ed5909c87bf24a2f46b2412656d_4453_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/1683518239889_hua1275ed5909c87bf24a2f46b2412656d_4453_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;加工&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;268&#34;
+		data-flex-basis=&#34;644px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;数据存储&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1683517944926.png&#34;
+	width=&#34;350&#34;
+	height=&#34;79&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1683517944926_hu07d5f627c7e21f9ad8b48cfa71d5e47e_1735_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1683517944926_hu07d5f627c7e21f9ad8b48cfa71d5e47e_1735_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;数据存储&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;443&#34;
+		data-flex-basis=&#34;1063px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;外部实体&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1683517896893.png&#34;
+	width=&#34;118&#34;
+	height=&#34;79&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1683517896893_hu053e7e7f1170dc0aa7a02a640e921728_501_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1683517896893_hu053e7e7f1170dc0aa7a02a640e921728_501_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;外部实体&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;358px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;软件系统内部的&lt;strong&gt;数据处理模型&lt;/strong&gt;，使用&lt;u&gt;数据流&lt;/u&gt;、&lt;u&gt;加工&lt;/u&gt;和&lt;u&gt;数据存储&lt;/u&gt;构建。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;数据流&lt;/strong&gt;（Data Flow）：由一组固定成分的数据组成，表示数据的流向。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1683518468182.png&#34;
+	width=&#34;193&#34;
+	height=&#34;71&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1683518468182_hu1fccd0f4bc92c1a7ca6417a3c5762d95_691_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1683518468182_hu1fccd0f4bc92c1a7ca6417a3c5762d95_691_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;数据流&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;271&#34;
+		data-flex-basis=&#34;652px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;在DFD种，数据流的流向由以下几种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;从&lt;u&gt;加工&lt;/u&gt;流向另一个&lt;u&gt;加工&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;从&lt;u&gt;加工&lt;/u&gt;流向&lt;u&gt;数据存储&lt;/u&gt;（写）；&lt;/li&gt;
+&lt;li&gt;从&lt;u&gt;数据存储&lt;/u&gt;流向&lt;u&gt;加工&lt;/u&gt;（读）；&lt;/li&gt;
+&lt;li&gt;从&lt;u&gt;外部实体&lt;/u&gt;流向&lt;u&gt;加工&lt;/u&gt;（输入）；&lt;/li&gt;
+&lt;li&gt;从&lt;u&gt;加工&lt;/u&gt;流向&lt;u&gt;外部实体&lt;/u&gt;（输出）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;即数据流的&lt;u&gt;起点或终点必须至少有一个是加工&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;除了与数据存储有关的数据流（流向数据存储或从数据存储流出），DFD中的每个数据流都必须用一个定义明确的名字表示。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;加工&lt;/strong&gt;（Process）：加工描述了输入数据流到输出数据流之间的变换，也就是&lt;u&gt;输入数据流经过什么处理后变成了输出数据流&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/1683518239889.png&#34;
+	width=&#34;282&#34;
+	height=&#34;105&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/1683518239889_hua1275ed5909c87bf24a2f46b2412656d_4453_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/1683518239889_hua1275ed5909c87bf24a2f46b2412656d_4453_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;加工&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;268&#34;
+		data-flex-basis=&#34;644px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;每个加工都有一个名字和编号。&lt;/p&gt;
+&lt;p&gt;一个加工可以有多个输入数据流和多个输出数据流，但&lt;u&gt;至少有一个输入数据流和一个输出数据流&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;数据流图中常见的3种错误如下所示：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;黑洞&lt;/strong&gt;：加工只有输入，没有输出。&lt;/p&gt;
+&lt;p&gt;如下图加工1。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;白洞&lt;/strong&gt;：加工只有输出但没有输入。&lt;/p&gt;
+&lt;p&gt;如下图加工2。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;灰洞&lt;/strong&gt;：加工中输入数据不足以产生输出数据。&lt;/p&gt;
+&lt;p&gt;有几种可能的原因：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个错误的命名过程；&lt;/li&gt;
+&lt;li&gt;错误命名的输入或输出；&lt;/li&gt;
+&lt;li&gt;不完全的事实。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如下图加工3。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/1683528176745.png&#34;
+	width=&#34;793&#34;
+	height=&#34;542&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/1683528176745_hu5869eb4ddb2b6e895b99cd504e3e35d8_119530_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/1683528176745_hu5869eb4ddb2b6e895b99cd504e3e35d8_119530_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;数据流图中常见错误&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;146&#34;
+		data-flex-basis=&#34;351px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;数据存储&lt;/strong&gt;（Data Store）：存储和提供数据。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1683517944926.png&#34;
+	width=&#34;350&#34;
+	height=&#34;79&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1683517944926_hu07d5f627c7e21f9ad8b48cfa71d5e47e_1735_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1683517944926_hu07d5f627c7e21f9ad8b48cfa71d5e47e_1735_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;数据存储&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;443&#34;
+		data-flex-basis=&#34;1063px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;每个数据存储都有一个定义明确的名字标识。&lt;/p&gt;
+&lt;p&gt;数据存储可以：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;存储加工的输出数据：数据流流入数据存储，表示数据的写入操作；&lt;/li&gt;
+&lt;li&gt;提供加工的输入数据：数据流从数据存储流出，表示数据的读操作。&lt;/li&gt;
+&lt;li&gt;双向箭头的数据流指向数据存储，表示对数据的修改。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;DFD中的数据存储在具体实现时可以用以下方式实现：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;文件系统实现；&lt;/li&gt;
+&lt;li&gt;数据库系统实现。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;数据存储的存储介质可以是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;磁盘、&lt;/li&gt;
+&lt;li&gt;磁带、&lt;/li&gt;
+&lt;li&gt;其他存储介质。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;外部实体&lt;/strong&gt;（External Agent，外部主体）：指&lt;u&gt;存在于软件系统之外的人员、组织、物体或外部系统&lt;/u&gt;，它指出系统所需数据的&lt;u&gt;发源地（源）&lt;/u&gt;和&lt;u&gt;系统所产生的数据的归宿地（宿）&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1683517896893.png&#34;
+	width=&#34;118&#34;
+	height=&#34;79&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1683517896893_hu053e7e7f1170dc0aa7a02a640e921728_501_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1683517896893_hu053e7e7f1170dc0aa7a02a640e921728_501_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;外部实体&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;358px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;人员：学生、老师、员工、主观、医生、客户……&lt;/li&gt;
+&lt;li&gt;组织：供应商、采购部门……&lt;/li&gt;
+&lt;li&gt;物体：传感器、控制器、单车、车辆……&lt;/li&gt;
+&lt;li&gt;外部系统：支付系统、车辆交易系统、库存管理系统、道闸控制系统……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在许多系统中，某个源和某个宿可以是同一个人员、组织、物体或外部系统，此时，在DFD中可以用同一个符号表示：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当数据流从该符号流出时，表示它是源；&lt;/li&gt;
+&lt;li&gt;当数据流流向该符号时，表示它是宿；&lt;/li&gt;
+&lt;li&gt;当两者皆有时，表示它既是源又是宿。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;外部实体表示存在于系统之外的对象，用来帮助用户理解系统数据的来源和去向。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;数据流图必须确保：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据流的起点或终点必须至少有一个是加工。&lt;/li&gt;
+&lt;li&gt;加工至少有一个输入数据流和一个输出数据流。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;分层数据流图：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;顶层图：描述系统的输入和输出。&lt;/p&gt;
+&lt;p&gt;即描述系统从哪些外部实体接受数据流，以及系统发送数据流到哪些外部实体。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;顶层图只有一个加工，即待开发的软件系统。&lt;/li&gt;
+&lt;li&gt;顶层图中的数据流就是系统的输入/输出信息。&lt;/li&gt;
+&lt;li&gt;顶层图中通常没有数据存储。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;0层图：分解顶层图的加工。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;再分解：将DFD中某些比较复杂的加工再次分解成一张DFD子图。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;实体联系图e-r-图erd&#34;&gt;实体联系图（E-R 图，ERD）&lt;/h1&gt;
+&lt;p&gt;E-R图有以下几个成分（包含扩充的E-R模型成分）：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1682508598814.png&#34;
+	width=&#34;1035&#34;
+	height=&#34;391&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1682508598814_hub0bc3034b48557bb84109435ab8e458e_191424_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1682508598814_hub0bc3034b48557bb84109435ab8e458e_191424_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;E-R图中的主要构件&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;264&#34;
+		data-flex-basis=&#34;635px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;实体&lt;/strong&gt;：用&lt;strong&gt;矩形&lt;/strong&gt;表示。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;弱实体&lt;/strong&gt;：使用&lt;strong&gt;双线矩形框&lt;/strong&gt;表示。将需要依赖其他实体存在的实体。&lt;/p&gt;
+&lt;p&gt;实体间的所有（Ownership，拥有）关系代表一个实体对另一些实体具有很强的依赖关系，即一个实体的存在必须以另一个实体为前提。&lt;/p&gt;
+&lt;p&gt;例如职工与家属的联系，家属总是属于某职工的（在关系模式中需要依赖职工而存在），所以家属是弱实体。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;特殊化&lt;/strong&gt;：将一个实体集&lt;u&gt;按照某些特性区分为几个&lt;strong&gt;子实体&lt;/strong&gt;&lt;/u&gt;。这种从普遍到特殊的过程即为特殊化。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;联系&lt;/strong&gt;：用&lt;strong&gt;棱形&lt;/strong&gt;表示，并用无向边分别与有关实体连接起来，同时在无向边标注联系的类型。&lt;/p&gt;
+&lt;p&gt;联系的类型有两种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;两个实体间的联系：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$1:1$：一对一联系；&lt;/li&gt;
+&lt;li&gt;$1:n$：一对多联系；&lt;/li&gt;
+&lt;li&gt;$m:n$：多对多联系。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;两个以上实体间的联系：&lt;/p&gt;
+&lt;p&gt;例如3个实体间的联系有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$1:1:1$&lt;/li&gt;
+&lt;li&gt;$1:1:n$&lt;/li&gt;
+&lt;li&gt;$1:m:n$&lt;/li&gt;
+&lt;li&gt;$r:m:n$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;属性&lt;/strong&gt;：用&lt;strong&gt;椭圆形&lt;/strong&gt;表示，并用无向边将其与相应的实体连接起来&lt;/p&gt;
+&lt;p&gt;E-R模型中的属性有以下分类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;简单属性：是原子的、不可再分的。&lt;/li&gt;
+&lt;li&gt;复合属性：可以细分为更小的部分。&lt;/li&gt;
+&lt;li&gt;单值属性：一个属性对应一个值。&lt;/li&gt;
+&lt;li&gt;多值属性：一个属性对应一组值。&lt;/li&gt;
+&lt;li&gt;NULL属性：实体在某个属性上没有值或属性值未知时，使用NULL值表示。&lt;/li&gt;
+&lt;li&gt;派生属性：派生属性可以从其他属性得来（通过运算等方式求出）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;概念结构模型合并分-e-r-图&#34;&gt;概念结构模型（合并分 E-R 图）&lt;/h2&gt;
+&lt;p&gt;建立概念结构模型的步骤如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;选择局部应用：选择适当层次的数据流图，让这一层的每一部分对应一个局部应用，实现某一项功能。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;逐一设计分E-R图。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;E-R图合并：&lt;/p&gt;
+&lt;p&gt;合并时需要考虑各分E-R图之间的冲突：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;属性冲突&lt;/strong&gt;：同一属性在不同的分E-R图上的属性类型、取值范围和数据单位等可能会不一致。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;命名冲突&lt;/strong&gt;：相同意义的属性在不同的分E-R图上可能会有不同的命名。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;结构冲突&lt;/strong&gt;：同一实体在不同的分E-R图中可能会有不同的属性；同一对象在某一分E-R图中被抽象为实体，而在另一分E-R图中又可能被抽象为属性，反之亦然。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;转换关系模式&#34;&gt;转换关系模式&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;实体向关系模式的转换：&lt;/p&gt;
+&lt;p&gt;将E-R图中的实体逐一转换成为一个关系模式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;实体名：对应关系模式的名称；&lt;/li&gt;
+&lt;li&gt;实体的属性：转换成关系模式的属性；&lt;/li&gt;
+&lt;li&gt;实体标识符：关系的码（键）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;联系向关系模式的转换：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;一对一联系的转换：&lt;/p&gt;
+&lt;p&gt;有两种方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;方式1：将联系转换成一个独立的关系模式，关系模式的名称取联系的名称，关系模式的属性包括该联系所关联的两个实体的码及联系的属性，关系的码取自任一方实体的码。&lt;/p&gt;
+&lt;p&gt;那么一个一对一联系需要转换成三个关系模式。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方式2（一般使用该方式）：将联系归并到关联的两个实体的任一方，给待归并的一方实体属性集中增加另一方实体的码和该联系的属性即可，归并后的实体码保持不变。&lt;/p&gt;
+&lt;p&gt;一个一对一联系仅需转换成两个关系模式。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1682562445900.png&#34;
+	width=&#34;304&#34;
+	height=&#34;358&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1682562445900_hu39b33fe28157809884f3b45df834a34e_28041_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1682562445900_hu39b33fe28157809884f3b45df834a34e_28041_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;联系向关系模式的转换示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;84&#34;
+		data-flex-basis=&#34;203px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;方式1：&lt;/p&gt;
+&lt;p&gt;厂长（&lt;strong&gt;姓名&lt;/strong&gt;，性别，年龄）&lt;/p&gt;
+&lt;p&gt;工厂（&lt;strong&gt;厂号&lt;/strong&gt;，厂名，地点）&lt;/p&gt;
+&lt;p&gt;管理（（厂长）&lt;strong&gt;姓名&lt;/strong&gt;，厂号，任期）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;粗体代表该关系模式的码。管理的码可以为姓名或厂号。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方式2：&lt;/p&gt;
+&lt;p&gt;厂长（姓名，性别，年龄）&lt;/p&gt;
+&lt;p&gt;工厂（厂号，厂名，地点，（厂长）姓名，任期）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一对多联系的转换：&lt;/p&gt;
+&lt;p&gt;两种方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;方式1：将联系转换成一个独立的关系模式，关系模式的名称取联系的名称，关系模式的属性取该联系所关联的两个实体的码及联系的属性，&lt;u&gt;关系的码是多方实体的码&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;方式2（一般使用该方式）：将联系&lt;u&gt;归并到关联的两个实体的多方&lt;/u&gt;，给待归并的多方实体属性集中增加一方实体的码和该联系的属性即可，归并后的多方实体码保持不变。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1682563544291.png&#34;
+	width=&#34;315&#34;
+	height=&#34;361&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1682563544291_hue1cce8af0395e2bd704f6df0a3e3321e_30915_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1682563544291_hue1cce8af0395e2bd704f6df0a3e3321e_30915_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;一对多联系转换的例子&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;87&#34;
+		data-flex-basis=&#34;209px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;方式1:&lt;/p&gt;
+&lt;p&gt;仓库（&lt;strong&gt;仓库号&lt;/strong&gt;，地点，面积）&lt;/p&gt;
+&lt;p&gt;商品（&lt;strong&gt;货号&lt;/strong&gt;，商品名，价格）&lt;/p&gt;
+&lt;p&gt;仓储（&lt;strong&gt;货号&lt;/strong&gt;，仓库号，数量）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方式2：&lt;/p&gt;
+&lt;p&gt;仓库（&lt;strong&gt;仓库号&lt;/strong&gt;，地点，面积）&lt;/p&gt;
+&lt;p&gt;商品（&lt;strong&gt;货号&lt;/strong&gt;，商品名，价格，仓库号，数量）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多对多联系的转换：&lt;/p&gt;
+&lt;p&gt;多对多联系只能转换成一个独立的关系模式，关系模式的名称取联系的名称，关系模式的属性取该联系所关联的两个多方实体的码及联系的属性，关系的码是多方实体的码构成的属性组。&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1682564018777.png&#34;
+	width=&#34;327&#34;
+	height=&#34;373&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1682564018777_hu8cf40dc2a076405a9cb5ca4646519d5e_36334_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1682564018777_hu8cf40dc2a076405a9cb5ca4646519d5e_36334_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;多对多联系转换的示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;87&#34;
+		data-flex-basis=&#34;210px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;转换成：&lt;/p&gt;
+&lt;p&gt;学生（&lt;strong&gt;学号&lt;/strong&gt;，姓名，性别，年龄）&lt;/p&gt;
+&lt;p&gt;课程（&lt;strong&gt;课程号&lt;/strong&gt;，课程名，学时）&lt;/p&gt;
+&lt;p&gt;选修（&lt;strong&gt;（学号，课程号）&lt;/strong&gt;，成绩）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多个实体间联系的转换：&lt;/p&gt;
+&lt;p&gt;将多个实体间的联系，分别拆分成两个实体间的联系，再依据上述方法进行转换。&lt;/p&gt;
+&lt;p&gt;例如，供应商、零件和项目的关系类型是$r:m:n$多个实体间的联系。将它们分别拆分成：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;关系&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;类型&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;供应商 : 零件&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$r:m$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;供应商 : 项目&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$r:n$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;零件 : 项目&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$m:n$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</description>
+        </item>
+        <item>
         <title>算法设计与分析（软件工程师）</title>
         <link>https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E5%B8%88/</link>
         <pubDate>Wed, 17 May 2023 12:52:42 +0800</pubDate>
