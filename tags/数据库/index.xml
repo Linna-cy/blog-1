@@ -1537,6 +1537,21 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;特殊化&lt;/strong&gt;：将一个实体集&lt;u&gt;按照某些特性区分为几个&lt;strong&gt;子实体&lt;/strong&gt;&lt;/u&gt;。这种从普遍到特殊的过程即为特殊化。&lt;/p&gt;
+&lt;p&gt;子实体的图形表示如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684564987147.png&#34;
+	width=&#34;256&#34;
+	height=&#34;145&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684564987147_huad14f3e1152e9df0e94e04c64131c1cf_1087_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684564987147_huad14f3e1152e9df0e94e04c64131c1cf_1087_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;子实体&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;176&#34;
+		data-flex-basis=&#34;423px&#34;
+	
+&gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;E-R图中的主要构件（包含扩充的E-R模型成分）：&lt;/p&gt;
