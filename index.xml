@@ -10713,6 +10713,190 @@ $$&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+&lt;p&gt;活动图是一种特殊的状态图，它们的差异如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;相同点：状态中都有初态和终态。&lt;/li&gt;
+&lt;li&gt;主要差异：
+&lt;ul&gt;
+&lt;li&gt;活动图的转换称为流；&lt;/li&gt;
+&lt;li&gt;活动图有分支、并发分岔和并发汇合。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以下是UML图的总结：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;UML 图&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;说明&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;示例图&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;类图&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;展现一组&lt;u&gt;对象（类）&lt;/u&gt;、&lt;u&gt;接口&lt;/u&gt;、&lt;u&gt;协作&lt;/u&gt;和它们之间的&lt;u&gt;关系&lt;/u&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682061210921.png&#34;
+	width=&#34;619&#34;
+	height=&#34;467&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682061210921_hub4b131b7f109e06635ca875a61e12a0b_45450_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682061210921_hub4b131b7f109e06635ca875a61e12a0b_45450_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;类图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;132&#34;
+		data-flex-basis=&#34;318px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;对象图&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;展现某一时刻的一组&lt;u&gt;对象&lt;/u&gt;以及它们之间的&lt;u&gt;关系&lt;/u&gt;，描述了在类图中所建立事物的实例的静态快照&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682061786263.png&#34;
+	width=&#34;713&#34;
+	height=&#34;312&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682061786263_hua46f494b700cf1a0ac17d6d1520c7d36_50579_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682061786263_hua46f494b700cf1a0ac17d6d1520c7d36_50579_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;对象图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;228&#34;
+		data-flex-basis=&#34;548px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;用例图&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;展现了一组&lt;u&gt;用例&lt;/u&gt;、&lt;u&gt;参与者&lt;/u&gt;以及它们之间的&lt;u&gt;关系（包含、扩展、关联和泛化）&lt;/u&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682062071630.png&#34;
+	width=&#34;756&#34;
+	height=&#34;382&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682062071630_hue8ceb70c383d5b84d539f99bc1fa6287_66549_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682062071630_hue8ceb70c383d5b84d539f99bc1fa6287_66549_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;用例图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;197&#34;
+		data-flex-basis=&#34;474px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;序列图（顺序图，时序图）&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;描述了以&lt;u&gt;时间顺序&lt;/u&gt;组织的&lt;u&gt;对象&lt;/u&gt;之间的&lt;u&gt;交互活动&lt;/u&gt;，强调&lt;u&gt;消息时间顺序&lt;/u&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682064874751.png&#34;
+	width=&#34;691&#34;
+	height=&#34;471&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682064874751_hu9f8f021651236d17904ea27f843ab916_52872_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682064874751_hu9f8f021651236d17904ea27f843ab916_52872_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;序列图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;146&#34;
+		data-flex-basis=&#34;352px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;通信图（协作图）&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;强调&lt;u&gt;收发消息的对象的结构组织&lt;/u&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682065157645.png&#34;
+	width=&#34;719&#34;
+	height=&#34;314&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682065157645_hu479fbd97a58f555006937d3c577e3006_30791_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682065157645_hu479fbd97a58f555006937d3c577e3006_30791_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;通信图&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;228&#34;
+		data-flex-basis=&#34;549px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;状态图（状态转换图）&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;展现了一个状态机，强调&lt;u&gt;对象行为的事件顺序&lt;/u&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682066287326.png&#34;
+	width=&#34;831&#34;
+	height=&#34;431&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682066287326_hu94ea09022f5bcd63fe669c1e18a4beb2_47522_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682066287326_hu94ea09022f5bcd63fe669c1e18a4beb2_47522_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;状态图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;192&#34;
+		data-flex-basis=&#34;462px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;活动图&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;一种特殊的状态图，展现了在&lt;u&gt;系统内从一个活动到另一个活动的流程&lt;/u&gt;，强调&lt;u&gt;对象间的控制流程&lt;/u&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1682067363114.png&#34;
+	width=&#34;654&#34;
+	height=&#34;744&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1682067363114_hua57a5009862c06a77af06a14b99cf391_95291_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1682067363114_hua57a5009862c06a77af06a14b99cf391_95291_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;活动图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;87&#34;
+		data-flex-basis=&#34;210px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;构件图（组件图)&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;展现了一组&lt;u&gt;构件之间的组织和依赖&lt;/u&gt;，将构件映射为类、接口或协作&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682068370459.png&#34;
+	width=&#34;638&#34;
+	height=&#34;332&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682068370459_hue00d8420ae8e9d060383db5e372a8f97_47534_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682068370459_hue00d8420ae8e9d060383db5e372a8f97_47534_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;构件图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;192&#34;
+		data-flex-basis=&#34;461px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;部署图&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;对物理建模，展现了&lt;u&gt;运行时处理结点以及其中构件（制品）的配置&lt;/u&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682073176388.png&#34;
+	width=&#34;491&#34;
+	height=&#34;327&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682073176388_hu28a5a922204a8226fa8f8a21e50bdfbf_36398_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682073176388_hu28a5a922204a8226fa8f8a21e50bdfbf_36398_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;部署图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;360px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;设计模式&#34;&gt;设计模式&lt;/h1&gt;
 &lt;p&gt;每一个设计模式描述了一个在我们周围不断重复发生的问题，以及该问题的解决方案的核心。使用设计模式能减少一些重复劳动。设计模式的核心在于提供了相关问题的解决方案，使得人们可以更加简单方便地复用成功的设计和体系结构。&lt;/p&gt;
