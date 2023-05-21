@@ -342,7 +342,7 @@
             </div>
         
 
-        <div class="article-time--reading">共25123字</div>
+        <div class="article-time--reading">共25193字</div>
     </footer>
     
 
@@ -731,7 +731,7 @@
 <li>组合结构图</li>
 <li><strong>部署图</strong></li>
 <li>包图</li>
-<li>交互图：
+<li><strong>交互图</strong>：
 <ul>
 <li><strong>序列图</strong></li>
 <li><strong>通信图</strong></li>
@@ -1171,7 +1171,7 @@
 <li>序列图有控制焦点。</li>
 </ul>
 <h4 id="通信图">通信图</h4>
-<p><u>通信图</u>（Communication Diagram，<strong>协作图</strong>）<u>强调收发消息的对象的结构组织</u>。通信图<u>强调参加交互的对象的组织</u>。</p>
+<p><u>通信图</u>（Communication Diagram，<strong>协作图</strong>）<u>强调收发消息的对象的结构组织</u>。</p>
 <p>通信图的组成：</p>
 <ol>
 <li>将参加交互的<u>对象</u>作为图的<u>顶点</u>；</li>
@@ -1185,7 +1185,7 @@
 	srcset="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682065157645_hu479fbd97a58f555006937d3c577e3006_30791_480x0_resize_box_3.png 480w, /p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682065157645_hu479fbd97a58f555006937d3c577e3006_30791_1024x0_resize_box_3.png 1024w"
 	loading="lazy"
 	
-		alt="通信图"
+		alt="通信图示例"
 	
 	
 		class="gallery-image" 
@@ -1199,7 +1199,7 @@
 <p>对象：与序列图一样，是用一个方框框起来的<code>对象名:类名</code>。</p>
 </li>
 <li>
-<p>路径（链接）：用实线表示，可以在链的末端附上一个路径构造型。</p>
+<p><strong>路径</strong>（链接）：用实线表示，可以在链的末端附上一个路径构造型。</p>
 <p>通常仅需显式地表示以下几种链的路径：</p>
 <div class="table-wrapper"><table>
 <thead>
@@ -1230,7 +1230,7 @@
 <p>不必表示<code>association</code>（关联）。</p>
 </li>
 <li>
-<p>序号：用来表示消息的时间顺序。是消息前的一个数字前缀，可使用带小数点的号码表示嵌套消息，嵌套可为任意深度。</p>
+<p><strong>序号</strong>：用来表示消息的时间顺序。是消息前的一个数字前缀，可使用带小数点的号码表示嵌套消息，嵌套可为任意深度。</p>
 <p>如2表示第2个消息，2.1表示嵌套在消息2中的第1个消息。</p>
 </li>
 <li>
@@ -1242,6 +1242,60 @@
 <li>通信图有路径；</li>
 <li>通信图有序号。</li>
 </ul>
+<h4 id="总结">总结</h4>
+<p>顺序图和通信图是同构的，它们之间可以相互转换。它们的差异如下：</p>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:center">差异</th>
+<th style="text-align:center">序列图</th>
+<th style="text-align:center">通信图</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">强调</td>
+<td style="text-align:center">消息时间顺序</td>
+<td style="text-align:center">收发消息的对象的结构组织</td>
+</tr>
+<tr>
+<td style="text-align:center">不同的特性</td>
+<td style="text-align:center">有对象生命线和控制焦点</td>
+<td style="text-align:center">有路径和序号</td>
+</tr>
+<tr>
+<td style="text-align:center">示例图</td>
+<td style="text-align:center"><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682064874751.png"
+	width="691"
+	height="471"
+	srcset="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682064874751_hu9f8f021651236d17904ea27f843ab916_52872_480x0_resize_box_3.png 480w, /p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682064874751_hu9f8f021651236d17904ea27f843ab916_52872_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="序列图示例"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="146"
+		data-flex-basis="352px"
+	
+></td>
+<td style="text-align:center"><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682065157645.png"
+	width="719"
+	height="314"
+	srcset="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682065157645_hu479fbd97a58f555006937d3c577e3006_30791_480x0_resize_box_3.png 480w, /p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682065157645_hu479fbd97a58f555006937d3c577e3006_30791_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="通信图示例"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="228"
+		data-flex-basis="549px"
+	
+></td>
+</tr>
+</tbody>
+</table></div>
 <h3 id="状态图">状态图</h3>
 <p>状态图（State Diagram，状态转换图）展现了一个状态机。状态图关注系统的动态视图，对于接口、类和协作的行为建模尤为重要，<u>强调对象行为的事件顺序</u>。</p>
 <p>状态图由以下组成：</p>
@@ -1366,7 +1420,7 @@
 <li>结点。</li>
 </ul>
 <p>当对系统、类或用例的动态方面建模时，通常是对反应型对象建模。</p>
-<h4 id="活动图">活动图</h4>
+<h3 id="活动图">活动图</h3>
 <p>活动图（Activity Diagram）是一种特殊的状态图，它<u>展现了在系统内从一个活动到另一个活动的流程</u>。活动图<u>专注于系统的动态视图</u>，它对于系统的功能建模特别重要，并<u>强调对象间的控制流程</u>。</p>
 <p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1682067363114.png"
 	width="654"
@@ -1454,7 +1508,7 @@
 <blockquote>
 <p><code>&lt;&lt;artifact&gt;&gt;</code>表示制品。</p>
 </blockquote>
-<h3 id="总结">总结</h3>
+<h3 id="总结-1">总结</h3>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
