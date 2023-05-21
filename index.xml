@@ -1278,8 +1278,8 @@
 &lt;ul&gt;
 &lt;li&gt;构件：用&lt;u&gt;矩形&lt;/u&gt;表示，在矩形&lt;u&gt;右上方有一个小标记&lt;/u&gt;。&lt;/li&gt;
 &lt;li&gt;供接口：用一个&lt;u&gt;&lt;strong&gt;圆圈&lt;/strong&gt;和连接到构件上的实线&lt;/u&gt;表示。构件提供接口给其它构件使用。&lt;/li&gt;
-&lt;li&gt;需接口：用一个&lt;u&gt;&lt;strong&gt;半圆&lt;/strong&gt;和连接到构件上的实线&lt;/u&gt;表示。构件使用需接口表示需要其它构件提供接口。&lt;/li&gt;
-&lt;li&gt;依赖：将供接口（圆圈）和虚接口（半圆）连接到一起，表示两个构建通过这个接口相依赖。&lt;/li&gt;
+&lt;li&gt;需接口：用一个&lt;u&gt;&lt;strong&gt;半圆&lt;/strong&gt;和连接到构件上的实线&lt;/u&gt;表示。构件使用需接口表示需要调用其它构件提供接口。&lt;/li&gt;
+&lt;li&gt;依赖：将供接口（圆圈）和虚接口（半圆）连接到一起，表示两个构件通过这个接口相依赖。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;部署图&#34;&gt;部署图&lt;/h3&gt;
 &lt;p&gt;部署图（Deployment Diagram）是用来&lt;u&gt;对面向对象系统的&lt;strong&gt;物理方面&lt;/strong&gt;建模&lt;/u&gt;的方法，展现了运行时处理结点以及其中构件（制品）的配置。部署图&lt;u&gt;对系统的静态部署视图进行建模&lt;/u&gt;，它与构件图相关。&lt;/p&gt;
@@ -10801,7 +10801,7 @@ $$&lt;/p&gt;
 &lt;li&gt;对操作建模；&lt;/li&gt;
 &lt;li&gt;对业务的复杂流程建模。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;构建图&#34;&gt;构建图&lt;/h3&gt;
+&lt;h3 id=&#34;构件图&#34;&gt;构件图&lt;/h3&gt;
 &lt;p&gt;构件图（Component Diagram，&lt;strong&gt;组件图&lt;/strong&gt;）展现了&lt;u&gt;一组构件之间的组织和依赖&lt;/u&gt;。构件图&lt;u&gt;专注于系统的静态实现视图&lt;/u&gt;，它&lt;u&gt;与类图相关，通常把构件映射为一个或多个类、接口或协作&lt;/u&gt;。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682068370459.png&#34;
 	width=&#34;638&#34;
@@ -10809,7 +10809,7 @@ $$&lt;/p&gt;
 	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682068370459_hue00d8420ae8e9d060383db5e372a8f97_47534_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682068370459_hue00d8420ae8e9d060383db5e372a8f97_47534_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;构建图示例&#34;
+		alt=&#34;构件图示例&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -10821,8 +10821,8 @@ $$&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;构件：用&lt;u&gt;矩形&lt;/u&gt;表示，在矩形&lt;u&gt;右上方有一个小标记&lt;/u&gt;。&lt;/li&gt;
 &lt;li&gt;供接口：用一个&lt;u&gt;&lt;strong&gt;圆圈&lt;/strong&gt;和连接到构件上的实线&lt;/u&gt;表示。构件提供接口给其它构件使用。&lt;/li&gt;
-&lt;li&gt;需接口：用一个&lt;u&gt;&lt;strong&gt;半圆&lt;/strong&gt;和连接到构件上的实线&lt;/u&gt;表示。构件使用需接口表示需要其它构件提供接口。&lt;/li&gt;
-&lt;li&gt;依赖：将供接口（圆圈）和虚接口（半圆）连接到一起，表示两个构建通过这个接口相依赖。&lt;/li&gt;
+&lt;li&gt;需接口：用一个&lt;u&gt;&lt;strong&gt;半圆&lt;/strong&gt;和连接到构件上的实线&lt;/u&gt;表示。构件使用需接口表示需要调用其它构件提供接口。&lt;/li&gt;
+&lt;li&gt;依赖：将供接口（圆圈）和虚接口（半圆）连接到一起，表示两个构件通过这个接口相依赖。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;部署图&#34;&gt;部署图&lt;/h3&gt;
 &lt;p&gt;部署图（Deployment Diagram）是用来&lt;u&gt;对面向对象系统的&lt;strong&gt;物理方面&lt;/strong&gt;建模&lt;/u&gt;的方法，展现了运行时处理结点以及其中构件（制品）的配置。部署图&lt;u&gt;对系统的静态部署视图进行建模&lt;/u&gt;，它与构件图相关。&lt;/p&gt;
