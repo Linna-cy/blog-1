@@ -34,18 +34,15 @@
         padding-bottom: 1.5px;
     }
     .article-content li {
-        margin-bottom: 1.6em;
+        margin-top: 0.8em;
+        margin-bottom: 0.8em;
     }
     .article-content ul:last-child, 
     .article-content ol:last-child {
         margin-bottom: 0;
     }
     .article-content td * {
-        margin-top: 0;
-        padding-top: 0;
-    }
-    .article-content td:last-child {
-        padding-bottom: 0;
+         
     }
     .article-content td ol, 
     .article-content td ul {
@@ -57,8 +54,15 @@
         padding-left: 1em;
         padding-right: 1em;
     }
-    .article-content td li {
-        margin-bottom: 0.8em;
+    .article-content td li:first-child,
+    .article-content td ol:first-child, 
+    .article-content td ul:first-child {
+        margin-top: 0;
+    }
+    .article-content td ul:last-child,
+    .article-content td ol:last-child,
+    .article-content td ul:first-child {
+        margin-bottom: 0;
     }
 </style>
     </head>
@@ -332,13 +336,13 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 50 分钟
+                    阅读时长: 51 分钟
                 </time>
                 |
             </div>
         
 
-        <div class="article-time--reading">共24971字</div>
+        <div class="article-time--reading">共25123字</div>
     </footer>
     
 
@@ -1363,7 +1367,7 @@
 </ul>
 <p>当对系统、类或用例的动态方面建模时，通常是对反应型对象建模。</p>
 <h4 id="活动图">活动图</h4>
-<p>活动图（Activity Diagram）是一种特殊的状态图，它<u>展现了在系统内从一个活动到另一个活动的流程</u>。活动图专注于系统的动态视图，它对于系统的功能建模特别重要，并<u>强调对象间的控制流程</u>。</p>
+<p>活动图（Activity Diagram）是一种特殊的状态图，它<u>展现了在系统内从一个活动到另一个活动的流程</u>。活动图<u>专注于系统的动态视图</u>，它对于系统的功能建模特别重要，并<u>强调对象间的控制流程</u>。</p>
 <p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1682067363114.png"
 	width="654"
 	height="744"
@@ -1408,11 +1412,11 @@
 <li>对业务的复杂流程建模。</li>
 </ul>
 <h3 id="构建图">构建图</h3>
-<p>构件图（Component Diagram，又称组件图）展现了<u>一组构件之间的组织和依赖</u>。构件图专注于系统的静态实现视图。它<u>与类图相关，通常把构件映射为一个或多个类、接口或协作</u>。</p>
+<p>构件图（Component Diagram，<strong>组件图</strong>）展现了<u>一组构件之间的组织和依赖</u>。构件图<u>专注于系统的静态实现视图</u>，它<u>与类图相关，通常把构件映射为一个或多个类、接口或协作</u>。</p>
 <p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682068370459.png"
 	width="638"
 	height="332"
-	srcset="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682068370459_hub55b12b010797b943f2ecf558036ffb6_42642_480x0_resize_box_3.png 480w, /p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682068370459_hub55b12b010797b943f2ecf558036ffb6_42642_1024x0_resize_box_3.png 1024w"
+	srcset="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682068370459_hue00d8420ae8e9d060383db5e372a8f97_47534_480x0_resize_box_3.png 480w, /p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682068370459_hue00d8420ae8e9d060383db5e372a8f97_47534_1024x0_resize_box_3.png 1024w"
 	loading="lazy"
 	
 		alt="构建图示例"
@@ -1423,8 +1427,16 @@
 		data-flex-basis="461px"
 	
 ></p>
+<p>构件图的成分有：</p>
+<ul>
+<li>构件：用<u>矩形</u>表示，在矩形<u>右上方有一个小标记</u>。</li>
+<li>供接口：用一个<u><strong>圆圈</strong>和连接到构件上的实线</u>表示。构件提供接口给其它构件使用。</li>
+<li>需接口：用一个<u><strong>半圆</strong>和连接到构件上的实线</u>表示。构件使用需接口表示需要其它构件提供接口。</li>
+<li>依赖：将供接口（圆圈）和虚接口（半圆）连接到一起，表示两个构建通过这个接口相依赖。</li>
+</ul>
 <h3 id="部署图">部署图</h3>
-<p>部署图（Deployment Diagram）是用来对面向对象系统的物理方面建模的方法，<u>展现了运行时处理结点以及其中构件（制品）的配置</u>。部署图对系统的静态部署视图进行建模，它与构件图相关。</p>
+<p>部署图（Deployment Diagram）是用来<u>对面向对象系统的<strong>物理方面</strong>建模</u>的方法，展现了运行时处理结点以及其中构件（制品）的配置。部署图<u>对系统的静态部署视图进行建模</u>，它与构件图相关。</p>
+<p>部署图<u>展现了系统的软件和硬件之间的关系，在实施阶段使用</u>。</p>
 <p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682073176388.png"
 	width="491"
 	height="327"
@@ -1441,38 +1453,74 @@
 ></p>
 <blockquote>
 <p><code>&lt;&lt;artifact&gt;&gt;</code>表示制品。</p>
-<p>部署图展现了系统的软件和硬件之间的关系在实施阶段使用。</p>
 </blockquote>
 <h3 id="总结">总结</h3>
-<ul>
-<li>静态建模：
-<ul>
-<li>类图</li>
-<li>对象图</li>
-<li>用例图</li>
-</ul>
-</li>
-<li>动态建模：
-<ul>
-<li>序列图（顺序图，时序图）</li>
-<li>通信图（协作图）</li>
-<li>状态图</li>
-<li>活动图</li>
-</ul>
-</li>
-<li>物理建模：
-<ul>
-<li>构件图（组件图)</li>
-<li>部署图</li>
-</ul>
-</li>
-<li>交互图：
-<ul>
-<li>序列图（顺序图，时序图）</li>
-<li>通信图（协作图）</li>
-</ul>
-</li>
-</ul>
+<div class="table-wrapper"><table>
+<thead>
+<tr>
+<th style="text-align:center">UML图</th>
+<th style="text-align:center">静态建模</th>
+<th style="text-align:center">动态建模</th>
+<th style="text-align:center">物理建模</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">类图</td>
+<td style="text-align:center">$\checkmark$</td>
+<td style="text-align:center">$\times$</td>
+<td style="text-align:center">$\times$</td>
+</tr>
+<tr>
+<td style="text-align:center">对象图</td>
+<td style="text-align:center">$\checkmark$</td>
+<td style="text-align:center">$\times$</td>
+<td style="text-align:center">$\times$</td>
+</tr>
+<tr>
+<td style="text-align:center">用例图</td>
+<td style="text-align:center">$\checkmark$</td>
+<td style="text-align:center">$\times$</td>
+<td style="text-align:center">$\times$</td>
+</tr>
+<tr>
+<td style="text-align:center">构件图（组件图)</td>
+<td style="text-align:center">$\checkmark$</td>
+<td style="text-align:center">$\times$</td>
+<td style="text-align:center">$\checkmark$</td>
+</tr>
+<tr>
+<td style="text-align:center">部署图</td>
+<td style="text-align:center">$\checkmark$</td>
+<td style="text-align:center">$\times$</td>
+<td style="text-align:center">$\checkmark$</td>
+</tr>
+<tr>
+<td style="text-align:center">序列图（顺序图，时序图）</td>
+<td style="text-align:center">$\times$</td>
+<td style="text-align:center">$\checkmark$</td>
+<td style="text-align:center">$\times$</td>
+</tr>
+<tr>
+<td style="text-align:center">通信图（协作图）</td>
+<td style="text-align:center">$\times$</td>
+<td style="text-align:center">$\checkmark$</td>
+<td style="text-align:center">$\times$</td>
+</tr>
+<tr>
+<td style="text-align:center">状态图</td>
+<td style="text-align:center">$\times$</td>
+<td style="text-align:center">$\checkmark$</td>
+<td style="text-align:center">$\times$</td>
+</tr>
+<tr>
+<td style="text-align:center">活动图</td>
+<td style="text-align:center">$\times$</td>
+<td style="text-align:center">$\checkmark$</td>
+<td style="text-align:center">$\times$</td>
+</tr>
+</tbody>
+</table></div>
 <hr>
 <h1 id="设计模式">设计模式</h1>
 <p>每一个设计模式描述了一个在我们周围不断重复发生的问题，以及该问题的解决方案的核心。使用设计模式能减少一些重复劳动。设计模式的核心在于提供了相关问题的解决方案，使得人们可以更加简单方便地复用成功的设计和体系结构。</p>

@@ -35,18 +35,15 @@
         padding-bottom: 1.5px;
     }
     .article-content li {
-        margin-bottom: 1.6em;
+        margin-top: 0.8em;
+        margin-bottom: 0.8em;
     }
     .article-content ul:last-child, 
     .article-content ol:last-child {
         margin-bottom: 0;
     }
     .article-content td * {
-        margin-top: 0;
-        padding-top: 0;
-    }
-    .article-content td:last-child {
-        padding-bottom: 0;
+         
     }
     .article-content td ol, 
     .article-content td ul {
@@ -58,8 +55,15 @@
         padding-left: 1em;
         padding-right: 1em;
     }
-    .article-content td li {
-        margin-bottom: 0.8em;
+    .article-content td li:first-child,
+    .article-content td ol:first-child, 
+    .article-content td ul:first-child {
+        margin-top: 0;
+    }
+    .article-content td ul:last-child,
+    .article-content td ol:last-child,
+    .article-content td ul:first-child {
+        margin-bottom: 0;
     }
 </style>
     </head>
@@ -543,13 +547,13 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 50 分钟
+                    阅读时长: 51 分钟
                 </time>
                 |
             </div>
         
 
-        <div class="article-time--reading">共24971字</div>
+        <div class="article-time--reading">共25123字</div>
     </footer>
     
 
