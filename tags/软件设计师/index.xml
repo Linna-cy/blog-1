@@ -963,10 +963,7 @@
 		data-flex-basis=&#34;474px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;h3 id=&#34;交互图&#34;&gt;交互图&lt;/h3&gt;
-&lt;p&gt;交互图用于&lt;u&gt;对系统的动态方面进行建模&lt;/u&gt;。&lt;/p&gt;
-&lt;p&gt;交互图中，顺序图和通信图是同构的，它们之间可以相互转换。&lt;/p&gt;
-&lt;h4 id=&#34;序列图&#34;&gt;序列图&lt;/h4&gt;
+&lt;h3 id=&#34;序列图&#34;&gt;序列图&lt;/h3&gt;
 &lt;p&gt;序列图（Sequence Diagram，&lt;strong&gt;顺序图&lt;/strong&gt;）&lt;u&gt;描述了以时间顺序组织的对象之间的交互活动&lt;/u&gt;，&lt;u&gt;强调消息时间顺序&lt;/u&gt;。&lt;/p&gt;
 &lt;p&gt;序列图的组成：&lt;/p&gt;
 &lt;ol&gt;
@@ -1024,7 +1021,7 @@
 &lt;li&gt;序列图有对象生命线；&lt;/li&gt;
 &lt;li&gt;序列图有控制焦点。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4 id=&#34;通信图&#34;&gt;通信图&lt;/h4&gt;
+&lt;h3 id=&#34;通信图&#34;&gt;通信图&lt;/h3&gt;
 &lt;p&gt;&lt;u&gt;通信图&lt;/u&gt;（Communication Diagram，&lt;strong&gt;协作图&lt;/strong&gt;）&lt;u&gt;强调收发消息的对象的结构组织&lt;/u&gt;。通信图&lt;u&gt;强调参加交互的对象的组织&lt;/u&gt;。&lt;/p&gt;
 &lt;p&gt;通信图的组成：&lt;/p&gt;
 &lt;ol&gt;
