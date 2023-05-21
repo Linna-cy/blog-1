@@ -338,13 +338,13 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 19 分钟
+                    阅读时长: 17 分钟
                 </time>
                 |
             </div>
         
 
-        <div class="article-time--reading">共9503字</div>
+        <div class="article-time--reading">共8094字</div>
     </footer>
     
 
@@ -848,18 +848,7 @@
 <p>UML中有4种事物：</p>
 <ul>
 <li>
-<p><strong>结构事物</strong>（Structural Thing）：是UML模型中的名词。它们<u>通常是模型的<strong>静态部分</strong>，描述概念或物理元素</u>。</p>
-<p>结构事物包括：</p>
-<ul>
-<li>类（Class）；</li>
-<li>接口（Interface）；</li>
-<li>协作（Collaboration）；</li>
-<li>用例（Use Case）；</li>
-<li>主动类（Active Class）；</li>
-<li>构件（Component）；</li>
-<li>制品（Artifact）；</li>
-<li>结点（Node）。</li>
-</ul>
+<p><strong>结构事物</strong>（Structural Thing）：模型的<u>静态部分</u>。</p>
 <p><img src="/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1682055522161.png"
 	width="708"
 	height="294"
@@ -876,13 +865,7 @@
 ></p>
 </li>
 <li>
-<p><strong>行为事物</strong>（Behavior Thing）：<u>是UML模型的<strong>动态部分</strong></u>。它们是模型中的动词，描述了跨越时间和空间的行为。</p>
-<p>行为事物包括：</p>
-<ul>
-<li>交互（Interaction）；</li>
-<li>状态机（State Machine）；</li>
-<li>活动（Activity）。</li>
-</ul>
+<p><strong>行为事物</strong>（Behavior Thing）：模型的<u>动态部分</u>。</p>
 <p><img src="/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1682055712246.png"
 	width="621"
 	height="133"
@@ -899,27 +882,10 @@
 ></p>
 </li>
 <li>
-<p><strong>分组事物</strong>（Grouping Thing）：分组事物是UML模型的<strong>组织部分</strong>，是一些由模型分解成的“盒子”。</p>
-<p><u>在所有的分组事物中，最主要的分组事物是包（Package）</u>。包是把元素组织成组的机制，这种机制具有多种用途。结构事物、行为事物甚至其他分组事物都可以放进包内。</p>
-<p>包与构件（仅在运行时存在）不同，它纯粹是概念上的（即它仅在开发时存在）。</p>
-<p><img src="/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1682055987585.png"
-	width="224"
-	height="157"
-	srcset="/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1682055987585_hude1f550d1c91183afc794d1e3aa09c46_4122_480x0_resize_box_3.png 480w, /p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1682055987585_hude1f550d1c91183afc794d1e3aa09c46_4122_1024x0_resize_box_3.png 1024w"
-	loading="lazy"
-	
-		alt="包的图形化表示"
-	
-	
-		class="gallery-image" 
-		data-flex-grow="142"
-		data-flex-basis="342px"
-	
-></p>
+<p>分组事物（Grouping Thing）：模型的<u>组织部分</u>。</p>
 </li>
 <li>
-<p><strong>注释事物</strong>（Annotational Thing）：注释事物是UML模型的<strong>解释部分</strong>。这些注释事物用来描述、说明和标注模型的任何元素。</p>
-<p>注解（Note）是一种主要的注释事物。注解是一个依附于一个元素或者一组元素之上，对它进行约束或解释的简单符号。</p>
+<p>注释事物（Annotational Thing）：模型的<u>解释部分</u>。</p>
 </li>
 </ul>
 <h2 id="关系">关系</h2>
@@ -942,13 +908,6 @@
 		data-flex-basis="1000px"
 	
 ></p>
-<p>依赖的变体有：</p>
-<ul>
-<li>精化；</li>
-<li>跟踪；</li>
-<li>包含；</li>
-<li>延伸。</li>
-</ul>
 <p>依赖有偶然性和临时性，即需要的时候依赖，不需要的时候不依赖。</p>
 </li>
 <li>
@@ -965,7 +924,6 @@
 <p>使用一端带<u>实心菱形</u>的实线表示。</p>
 </li>
 </ul>
-<p>关联和聚集的图形化表示如图：</p>
 <p><img src="/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/1682057458153.png"
 	width="408"
 	height="101"
@@ -980,15 +938,23 @@
 		data-flex-basis="969px"
 	
 ></p>
-<p>聚合和组合中，带菱形的一端指向整体，另一端指向部分。</p>
-<p>单向关联：用<u>带箭头实线</u>表示。</p>
 <blockquote>
+<p>聚合和组合中，带菱形的一端指向整体，另一端指向部分。</p>
 <p>关联的关系强度比依赖的关系强度要强一点。</p>
 </blockquote>
+<ul>
+<li>
+<p>单向关联：用<u>带箭头实线</u>表示。</p>
+</li>
+<li>
 <p>多重度：</p>
 <p>进行面向对象设计时，类图中可以展现类之间的关联关系，还可以在类图中图示<u>关联中的数量关系</u>，即多重度。表示数量关系时，<u>用多重度说明数量或数量范围</u>，<u>表示有多少个实例（对象）能被连接起来</u>，即<u>一个类的实例能够与另一个类的多少个实例相关联</u>。</p>
+</li>
+<li>
 <p>关联类：</p>
 <p>当两个类之间的关联的重复度是多对多时，需要借助额外的属性来帮助表达它们之间的关系，而这个属性就需要定义在一个新的关联类中。关联类记录了这两个类之间的关联信息。关联中这些额外的属性用一条<u>垂直于关联的实线</u>表示，实线的一段连接接到关联的实线上，另一端指向这些属性。</p>
+</li>
+</ul>
 </li>
 <li>
 <p><strong>泛化</strong>（Generalization）：是一种特殊/一般关系，<u>特殊元素（子元素）的对象可替代一般元素（父元素）的对象</u>。用这种方法，<u>子元素共享了父元素的结构和行为</u>。</p>
@@ -1010,11 +976,6 @@
 </li>
 <li>
 <p><strong>实现</strong>（Realization）：是<u>类元之间的语义关系，其中一个类元指定了由另一个类元保证执行的契约</u>。</p>
-<p>在两种情况下会使用实现关系：</p>
-<ul>
-<li>在接口和实现它们的类或构件之间：</li>
-<li>在用例和实现它们的协作之间。</li>
-</ul>
 <p>在图形上，把一个实现关系画成一条<u>带有空心箭头的虚线</u>，箭头指向模板类，另一端于实现类连接。</p>
 <p><img src="/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1682058026631.png"
 	width="167"
@@ -1033,44 +994,24 @@
 </li>
 </ul>
 <h2 id="uml图">UML图</h2>
-<p>UML2.0提供了13种图，分别是（<strong>加粗</strong>是重点，其它的作为了解）：</p>
-<ul>
-<li><strong>类图</strong></li>
-<li><strong>对象图</strong></li>
-<li><strong>用例图</strong></li>
-<li><strong>状态图</strong></li>
-<li><strong>活动图</strong></li>
-<li><strong>构件图</strong></li>
-<li>组合结构图</li>
-<li><strong>部署图</strong></li>
-<li>包图</li>
-<li><strong>交互图</strong>：
-<ul>
-<li><strong>序列图</strong></li>
-<li><strong>通信图</strong></li>
-<li>交互概览图</li>
-<li>计时图</li>
-</ul>
-</li>
-</ul>
 <h3 id="类图">类图</h3>
-<p><u>类图</u>（Class Diagram）<u>展现了一组对象、接口、协作和它们之间的关系</u>。在面向对象系统的建模中所建立的<u>最常见的图就是类图</u>。类图给出系统的静态设计视图，包含主动类的类图（少见）给出了系统的静态进程视图。</p>
+<p>类图（Class Diagram）<u>展现了一组对象、接口、协作和它们之间的关系</u>。在面向对象系统的建模中<u>最常见的图就是类图</u>。类图给出<u>系统的静态设计视图</u>。</p>
 <p>类图中通常包括下述内容：</p>
 <ul>
 <li>
 <p>类：</p>
-<p><img src="/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1684570702111.png"
-	width="106"
-	height="243"
-	srcset="/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1684570702111_hu4741eab1f2430fa5cd37f3e95504f684_7846_480x0_resize_box_3.png 480w, /p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1684570702111_hu4741eab1f2430fa5cd37f3e95504f684_7846_1024x0_resize_box_3.png 1024w"
+<p><img src="/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1684650129674.png"
+	width="142"
+	height="139"
+	srcset="/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1684650129674_hucae45be9ae605ee21a469444ed126234_7038_480x0_resize_box_3.png 480w, /p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1684650129674_hucae45be9ae605ee21a469444ed126234_7038_1024x0_resize_box_3.png 1024w"
 	loading="lazy"
 	
 		alt="类的图形表示"
 	
 	
 		class="gallery-image" 
-		data-flex-grow="43"
-		data-flex-basis="104px"
+		data-flex-grow="102"
+		data-flex-basis="245px"
 	
 ></p>
 <p>类中的方法和属性前面有以下三种修饰符：</p>
@@ -1158,7 +1099,7 @@
 ></p>
 </li>
 <li>
-<p>依赖、泛化和关联关系：</p>
+<p>关系：</p>
 <p><img src="/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1682057108089.png"
 	width="200"
 	height="48"
@@ -1217,29 +1158,6 @@
 		data-flex-basis="318px"
 	
 ></p>
-<p>类图中也可以包含：</p>
-<ul>
-<li>注解和约束；</li>
-<li>包或子系统。</li>
-</ul>
-<p>类图用于对系统的静态设计视图建模，<u>这种视图主要支持系统的功能需求</u>，通常以下述3种方式之一使用类图：</p>
-<ul>
-<li>
-<p>对系统的词汇建模：</p>
-<p>涉及做出这样的决定：</p>
-<ul>
-<li>哪些抽象是考虑中的系统的一部分；</li>
-<li>哪些抽象处于系统边界之外。</li>
-</ul>
-<p>用类图详细描述这些抽象和它们的职责。</p>
-</li>
-<li>
-<p>对简单的协作建模：协作是一些共同工作的类、接口和其他元素的群体，该群体提供的一些合作行为强于所有这些元素的行为之和。</p>
-</li>
-<li>
-<p>对逻辑数据库模式建模：将模式看作为数据库的概念设计的蓝图。在很多领域中，要在关系数据库或面向对象数据库中存储永久信息，可以用类图对这些数据库的模式建模。</p>
-</li>
-</ul>
 <h3 id="对象图">对象图</h3>
 <p>对象图（Object Diagram）展现了<u>某一时刻一组对象以及它们之间的关系</u>，<u>描述了在类图中所建立的事物的实例的静态快照</u>。</p>
 <p>对象图一般包括对象和链，如图：</p>
@@ -1257,53 +1175,48 @@
 		data-flex-basis="548px"
 	
 ></p>
-<ul>
-<li>
 <p>对象：对象图中的对象包含了类名、对象名和属性。</p>
 <p>其图形化如下：</p>
-  <table style="width: 150px; text-align: center;">
-      <tr>
-      <th style="text-align: center;">
-          对象名 : 类名
-      </th>
-      </tr>
-      <tr>
-      <td style="text-align: center;">
-      <p>
-          <code>属性1 = 值1</code>
-          <br>
-          <code>属性2 = 值2</code>
-          <br>
-          ......
-      </p>
-      </td>
-      </tr>
-  </table>
+<table style="width: 150px; text-align: center;">
+    <tr>
+    <th style="text-align: center;">
+        对象名 : 类名
+    </th>
+    </tr>
+    <tr>
+    <td style="text-align: center;">
+    <p>
+        <code>属性1 = 值1</code>
+        <br>
+        <code>属性2 = 值2</code>
+        <br>
+        ......
+    </p>
+    </td>
+    </tr>
+</table>
 <p>匿名对象（没有对象名）：</p>
-  <table style="width: 150px;">
-      <tr>
-      <th style="text-align: center;">
-          : 类名
-      </th>
-      </tr>
-      <tr>
-      <td style="text-align: center;">
-      <p>
-          <code>属性1 = 值1</code>
-          <br>
-          <code>属性2 = 值2</code>
-          <br>
-          ......
-      </p>
-      </td>
-      </tr>
-  </table>
-</li>
-</ul>
-<p>和类图一样，对象图给出系统的静态设计视图或静态进程视图，但它们是从真实的或原型实例的角度建立的。</p>
+<table style="width: 150px;">
+    <tr>
+    <th style="text-align: center;">
+        : 类名
+    </th>
+    </tr>
+    <tr>
+    <td style="text-align: center;">
+    <p>
+        <code>属性1 = 值1</code>
+        <br>
+        <code>属性2 = 值2</code>
+        <br>
+        ......
+    </p>
+    </td>
+    </tr>
+</table>
+<p>和类图一样，对象图给出<u>系统的静态设计视图</u>或<u>静态进程视图</u>，但它们是<u>从真实的或原型实例的角度建立的</u>。</p>
 <h3 id="用例图">用例图</h3>
-<p>用例图（Use Case Diagram）展现了一组用例、参与者（Actor）以及它们之间的关系。</p>
-<p>用例图通常包括以下内容：</p>
+<p>用例图（Use Case Diagram）通常包括以下内容：</p>
 <ul>
 <li>
 <p>用例：是从<strong>用户角度</strong>描述<strong>系统的行为</strong>，它将<strong>系统的一个功能</strong>描述成一系列的事件，这些事件最终对操作者产生有价值的观测结果。</p>
@@ -1324,7 +1237,7 @@
 ></p>
 </li>
 <li>
-<p>参与者：是与系统交互的<strong>外部实体</strong>，可能是<strong>使用者</strong>，也可能是与系统交互的<strong>外部系统</strong>、<strong>基础设备</strong>等。</p>
+<p>参与者：是与系统交互的<strong>外部实体</strong>。</p>
 <p>参与者用一个<u>人形图标</u>表示。</p>
 </li>
 <li>
@@ -1395,38 +1308,10 @@
 	
 ></p>
 <h3 id="交互图">交互图</h3>
-<p>交互图用于<u>对系统的动态方面进行建模</u>。一张交互图表现的是一个交互，由一组对象和它们之间的关系组成，包含它们之间可能传递的消息。</p>
-<p>每种交互图针对不同的目的，能适用于不同的情况。交互图表现为：</p>
-<ul>
-<li><strong>序列图</strong>：强调<strong>消息时间顺序</strong>的交互图；</li>
-<li><strong>通信图</strong>：强调<strong>接收和发送消息的对象的结构组织</strong>的交互图；</li>
-<li><strong>交互概览图</strong>：强调<strong>控制流</strong>的交互图；</li>
-<li><strong>计时图</strong>。</li>
-</ul>
-<p>其中顺序图和通信图是同构的，它们之间可以相互转换。</p>
-<p>在多数情况下，交互图包括对以下内容的具体的或原型化的实例以及它们之间传递的消息进行建模：</p>
-<ul>
-<li>类；</li>
-<li>接口；</li>
-<li>构件；</li>
-<li>结点。</li>
-</ul>
-<p>所有这些都位于一个表达行为的脚本的语境中。</p>
-<p>交互图一般包含：</p>
-<ul>
-<li>
-<p>对象；</p>
-</li>
-<li>
-<p>链；</p>
-</li>
-<li>
-<p>消息</p>
-<p>&hellip;&hellip;</p>
-</li>
-</ul>
+<p>交互图用于<u>对系统的动态方面进行建模</u>。</p>
+<p>交互图中，顺序图和通信图是同构的，它们之间可以相互转换。</p>
 <h4 id="序列图">序列图</h4>
-<p>序列图（Sequence Diagram，<strong>顺序图</strong>）是场景（Scenario）的图形化表示，<u>描述了以时间顺序组织的对象之间的交互活动</u>，<u>强调消息时间顺序</u>。</p>
+<p>序列图（Sequence Diagram，<strong>顺序图</strong>）<u>描述了以时间顺序组织的对象之间的交互活动</u>，<u>强调消息时间顺序</u>。</p>
 <p>序列图的组成：</p>
 <ol>
 <li>
@@ -1491,7 +1376,6 @@
 <li>把连接这些对象的<u>链</u>表示为图的<u>弧</u>；</li>
 <li>用对象发送和接收的<u>消息</u>来<u>修饰这些链</u>。</li>
 </ol>
-<p>这就提供了在协作对象的结构组织的语境中观察控制流的一个清晰的可视化轨迹。</p>
 <p><img src="/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/uTools_1682065157645.png"
 	width="719"
 	height="314"
@@ -1556,7 +1440,7 @@
 <li>通信图有序号。</li>
 </ul>
 <h3 id="状态图">状态图</h3>
-<p>状态图（State Diagram，状态转换图）展现了一个状态机。状态图关注系统的动态视图，对于接口、类和协作的行为建模尤为重要，<u>强调对象行为的事件顺序</u>。</p>
+<p>状态图（State Diagram，状态转换图）关注<u>系统的动态视图</u>，<u>强调对象行为的事件顺序</u>。</p>
 <p>状态图由以下组成：</p>
 <ul>
 <li>
@@ -1675,16 +1559,8 @@
 		data-flex-basis="462px"
 	
 ></p>
-<p>可以用状态图对系统的动态方面建模。这些动态方面可以包括出现在系统体系结构的任何视图中的任何一种对象的按事件排序的行为，这些对象包括：</p>
-<ul>
-<li>类（各主动类）；</li>
-<li>接口；</li>
-<li>构件；</li>
-<li>结点。</li>
-</ul>
-<p>当对系统、类或用例的动态方面建模时，通常是对反应型对象建模。</p>
 <h3 id="活动图">活动图</h3>
-<p>活动图（Activity Diagram）是一种特殊的状态图，它<u>展现了在系统内从一个活动到另一个活动的流程</u>。活动图<u>专注于系统的动态视图</u>，它对于系统的功能建模特别重要，并<u>强调对象间的控制流程</u>。</p>
+<p>活动图（Activity Diagram）是一种特殊的状态图，它<u>展现了在系统内从一个活动到另一个活动的流程</u>。活动图<u>专注于系统的动态视图</u>，<u>强调对象间的控制流程</u>。</p>
 <p><img src="/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB/1682067363114.png"
 	width="654"
 	height="744"
