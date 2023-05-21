@@ -1248,7 +1248,7 @@
 &lt;/ul&gt;
 &lt;p&gt;活动图可以表示：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;分支（判断）；&lt;/li&gt;
+&lt;li&gt;分支（判断）：分支的流上用&lt;code&gt;[]&lt;/code&gt;标记的是监护表达式；&lt;/li&gt;
 &lt;li&gt;（并发）分岔：将一个流分为多个可并发执行的流；&lt;/li&gt;
 &lt;li&gt;（并发）汇合：将分岔出去的多个流合并为同一个流。&lt;/li&gt;
 &lt;/ul&gt;
@@ -10791,7 +10791,7 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;活动图可以表示：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;分支（判断）；&lt;/li&gt;
+&lt;li&gt;分支（判断）：分支的流上用&lt;code&gt;[]&lt;/code&gt;标记的是监护表达式；&lt;/li&gt;
 &lt;li&gt;（并发）分岔：将一个流分为多个可并发执行的流；&lt;/li&gt;
 &lt;li&gt;（并发）汇合：将分岔出去的多个流合并为同一个流。&lt;/li&gt;
 &lt;/ul&gt;
