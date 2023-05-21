@@ -338,13 +338,13 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 52 分钟
+                    阅读时长: 53 分钟
                 </time>
                 |
             </div>
         
 
-        <div class="article-time--reading">共25901字</div>
+        <div class="article-time--reading">共26184字</div>
     </footer>
     
 
@@ -1988,12 +1988,35 @@
 </tbody>
 </table></div>
 <h2 id="创建型设计模式">创建型设计模式</h2>
-<p>创建型模式顾名思义就是针对对象的创建过程所做的设计模式。</p>
 <p>创建型模式<u>抽象了实例化过程</u>。</p>
 <ul>
 <li>类创建型模式：使用继承改变被实例化的类；</li>
 <li>对象创建型模式：将实例化委托给另一个对象。</li>
 </ul>
+<h3 id="简单工厂模式">简单工厂模式</h3>
+<p>简单工厂模式属于创建型模式，但不属于23种设计模式之一。</p>
+<p>简单工厂模式定义了一个工厂类，它可以根据参数的不同，返回不同类的实例，被创建的实例通常都具有共同的父类。</p>
+<p>在简单工厂模式中用于创建实例的方法通常长为静态（<code>static</code>）方法，因此简单工厂模式又称为静态工厂方法（Static Factroy Method）。</p>
+<p>简单工厂模式包含以下三种角色：</p>
+<ul>
+<li>工厂（核心）：负责实现创建所有产品的内部逻辑。工厂类可以被外界直接调用，创建所需对象。</li>
+<li>抽象产品：工厂类所创建的所有对象的父类，封装了产品对象的公共方法，所有的具体产品为其子类对象。</li>
+<li>具体产品：简单工厂模式的创建目标，所有被创建的对象都是某个具体类的实例，它要实现抽象产品中声明的抽象方法。</li>
+</ul>
+<p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684673603980.png"
+	width="388"
+	height="389"
+	srcset="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684673603980_hu2ef0ebae0df52fd887858a47b2f64eb2_23589_480x0_resize_box_3.png 480w, /p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684673603980_hu2ef0ebae0df52fd887858a47b2f64eb2_23589_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="简单工厂模式"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="99"
+		data-flex-basis="239px"
+	
+></p>
 <h3 id="工厂模式">工厂模式</h3>
 <p>工厂方法（Factory Method）模式定义一个用于<u>创建对象的接口</u>，让<u>子类决定实例化哪一个类</u>。工厂模式使一个类的实例化延迟到其子类。</p>
 <blockquote>
