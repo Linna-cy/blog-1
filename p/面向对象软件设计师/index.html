@@ -338,13 +338,13 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 56 分钟
+                    阅读时长: 57 分钟
                 </time>
                 |
             </div>
         
 
-        <div class="article-time--reading">共27727字</div>
+        <div class="article-time--reading">共28086字</div>
     </footer>
     
 
@@ -1990,8 +1990,8 @@
 <h2 id="创建型设计模式">创建型设计模式</h2>
 <p>创建型模式<u>抽象了实例化过程</u>。</p>
 <ul>
-<li>类创建型模式：使用继承改变被实例化的类；</li>
-<li>对象创建型模式：将实例化委托给另一个对象。</li>
+<li>类创建型模式（工厂方法）：使用继承改变被实例化的类；</li>
+<li>对象创建型模式（剩余的其它）：将实例化委托给另一个对象。</li>
 </ul>
 <h3 id="简单工厂模式">简单工厂模式</h3>
 <p>简单工厂模式属于创建型模式，但不属于23种设计模式之一。</p>
@@ -2595,42 +2595,97 @@
 <p>因为可以在运行时刻改变对象组合关系，所以对象组合方式具有更大的灵活性，而这种机制用静态类组合是不可能实现的。</p>
 </li>
 </ul>
-<h3 id="适配器变压器模式">适配器（变压器）模式</h3>
-<p>适配器（Adapter，变压器）模式<u>将一个类的接口转换成客户希望的另外一个接口</u>。使得原本由于接口不兼容而不能一起工作的那些类可以一起工作。</p>
+<h3 id="适配器模式">适配器模式</h3>
+<p>适配器（Adapter，<strong>变压器</strong>）模式<u>将一个类的接口转换成客户希望的另外一个接口</u>。使得原本由于接口不兼容而不能一起工作的那些类可以一起工作。</p>
+<ul>
+<li>
 <p>类适配器使用多重继承对一个接口与另一个接口进行匹配：</p>
-<p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682299306295.png"
-	width="885"
-	height="674"
-	srcset="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682299306295_hu274e97e19deac790c686089605963483_65147_480x0_resize_box_3.png 480w, /p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682299306295_hu274e97e19deac790c686089605963483_65147_1024x0_resize_box_3.png 1024w"
+<p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684742134174.png"
+	width="834"
+	height="283"
+	srcset="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684742134174_hu7df046caa470d36e253230e85d6e2972_27919_480x0_resize_box_3.png 480w, /p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684742134174_hu7df046caa470d36e253230e85d6e2972_27919_1024x0_resize_box_3.png 1024w"
 	loading="lazy"
 	
-		alt="适配器模式结构"
+		alt="类适配器模式结构"
 	
 	
 		class="gallery-image" 
-		data-flex-grow="131"
-		data-flex-basis="315px"
+		data-flex-grow="294"
+		data-flex-basis="707px"
 	
 ></p>
-<p>Adapter模式适用于：</p>
+</li>
+<li>
+<p>对象适配器依赖于对象组合：</p>
+<p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682299306295.png"
+	width="885"
+	height="340"
+	srcset="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682299306295_hu70732d4798a13d6a6d2177345328e203_31455_480x0_resize_box_3.png 480w, /p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682299306295_hu70732d4798a13d6a6d2177345328e203_31455_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="对象适配器模式结构"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="260"
+		data-flex-basis="624px"
+	
+></p>
+</li>
+</ul>
+<p>其中：</p>
+<ul>
+<li><code>Target</code>：定义<code>Client</code>使用的与特定领域相关的接口。</li>
+<li><code>Client</code>：与符合<code>Target</code>接口的对象协同。</li>
+<li><code>Adaptee</code>：定义一个已经存在的接口，这个接口需要适配。</li>
+<li><code>Adapter</code>（适配器）：对<code>Adaptee</code>的接口与<code>Target</code>接口进行适配。</li>
+</ul>
+<p>对象适配器对象模式代码示例：</p>
+<p><code>Target</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 目标接口
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Target</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">request</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Target request...&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>Adaptee</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 需适配接口
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Adaptee</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">specificRequest</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Adaptee specificRequest...&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>Adapter</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Adapter</span> <span style="color:#66d9ef">extends</span> Target <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// 对象适配
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> Adaptee adaptee <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Adaptee<span style="color:#f92672">();</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">request</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 重写并在其中调用Adaptee的对应方法
+</span><span style="color:#75715e"></span>        adaptee<span style="color:#f92672">.</span><span style="color:#a6e22e">specificRequest</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>测试：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AdapterTest</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Target target <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Adapter<span style="color:#f92672">();</span>
+        target<span style="color:#f92672">.</span><span style="color:#a6e22e">request</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Adapter模式适用于：</p>
 <ul>
 <li>想使用一个已经存在的类，而它的<u>接口不符合要求</u>。</li>
-<li>想创建一个可以服用的类，该类可以<u>与其他不相关的类或不可预见的类（即那些接口可能不一定兼容的类）协同工作</u>。</li>
+<li>想创建一个可以复用的类，该类可以<u>与其他不相关的类或不可预见的类（即那些接口可能不一定兼容的类）协同工作</u>。</li>
 <li>（仅适用于对象Adapter）想使用一个已经存在的子类，但是不可能对每一个都进行子类化以匹配它们的接口。<u>对象适配器可以适配它的父类接口。</u></li>
 </ul>
-<blockquote>
-<p>题目选项描述：</p>
-<ul>
-<li>将一个对象加以包装以给客户提供其希望的另外一个接口。</li>
-<li>想使用一个已经存在的类，而其接口不符合要求。</li>
-<li>使所有接口不兼容类可以一起工作。</li>
-<li>将一个类的接口转换成客户希望的另一个接口。</li>
-</ul>
-<p>关键词：<u>另一个接口、接口不符合要求、接口兼容、接口转换</u>。</p>
-</blockquote>
 <p>适配器模式：把一个类的接口变换成客户端所期待的另一种接口，从而使原本因接口原因不匹配而无法一起工作的两个类能够一起工作。适配类可以根据参数返还一个合适的实例给客户端。</p>
 <h3 id="桥接模式">桥接模式</h3>
-<p>桥接（Bridge）模式将<strong>抽象</strong>部分与其<strong>实现</strong>部分<strong>分离</strong>，使它们都可以<strong>独立地变化</strong>。</p>
+<p>桥接（Bridge）模式<u>将抽象部分与其实现部分分离，使它们都可以独立地变化</u>。</p>
 <p>桥接模式结构：</p>
 <p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682299992836.png"
 	width="932"
@@ -2655,13 +2710,85 @@
 </li>
 <li>
 <p><code>Implementor</code>：定义<u>实现类的接口</u>，该接口不一定要与<code>Abstraction</code>的接口完全一致；事实上这两个接口可以完全不同。</p>
-<p>一般来说，<code>Implementor</code>接口仅提供基本操作，而<code>Abstraction</code>：定义了基于这些基本操作的较高层次的操作。</p>
+<p>一般来说，<code>Implementor</code>接口仅提供基本操作，而<code>Abstraction</code>定义了基于这些基本操作的较高层次的操作。</p>
 </li>
 <li>
 <p><code>ConcreteImplementor</code>：实现<code>Implementor</code>接口并定义它的具体实现。</p>
 </li>
 </ul>
-<p>Bridge模式适用于：</p>
+<p>代码实现：</p>
+<p><code>Color</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 产品颜色接口
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Color</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">operationImp</span><span style="color:#f92672">(</span>Product product<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>Product</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 产品接口
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Product</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// 默认名称
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> String name <span style="color:#f92672">=</span> Product<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;@&#34;</span> <span style="color:#f92672">+</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">toHexString</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">hashCode</span><span style="color:#f92672">());</span>
+    <span style="color:#66d9ef">protected</span> Color color<span style="color:#f92672">;</span>  <span style="color:#75715e">// 指向Implementor的指针，其实用private也可以，只需要为其定义getter、setter
+</span><span style="color:#75715e"></span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">operation</span><span style="color:#f92672">();</span>
+
+    <span style="color:#66d9ef">public</span> Color <span style="color:#a6e22e">getColor</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> color<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setColor</span><span style="color:#f92672">(</span>Color color<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> color<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getName</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> name<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setName</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Product{&#34;</span> <span style="color:#f92672">+</span>
+                <span style="color:#e6db74">&#34;name=&#39;&#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;&#39;</span> <span style="color:#f92672">+</span>
+                <span style="color:#e6db74">&#34;, color=&#34;</span> <span style="color:#f92672">+</span> color <span style="color:#f92672">+</span>
+                <span style="color:#e6db74">&#39;}&#39;</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>Red</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Red</span> <span style="color:#66d9ef">implements</span> Color <span style="color:#f92672">{</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">operationImp</span><span style="color:#f92672">(</span>Product product<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>product<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>Bule</code>与<code>Red</code>类似，略。</p>
+<p><code>ProductA</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ProductA</span> <span style="color:#66d9ef">extends</span> Product <span style="color:#f92672">{</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">operation</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        color<span style="color:#f92672">.</span><span style="color:#a6e22e">operationImp</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>测试：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Bridge</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Product productA1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ProductA<span style="color:#f92672">();</span>
+        Color red <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Red<span style="color:#f92672">();</span>
+        productA1<span style="color:#f92672">.</span><span style="color:#a6e22e">setColor</span><span style="color:#f92672">(</span>red<span style="color:#f92672">);</span>
+        productA1<span style="color:#f92672">.</span><span style="color:#a6e22e">operation</span><span style="color:#f92672">();</span>
+
+        Product productA2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ProductA<span style="color:#f92672">();</span>
+        Color blue <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Blue<span style="color:#f92672">();</span>
+        productA2<span style="color:#f92672">.</span><span style="color:#a6e22e">setColor</span><span style="color:#f92672">(</span>blue<span style="color:#f92672">);</span>
+        productA2<span style="color:#f92672">.</span><span style="color:#a6e22e">operation</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Bridge模式适用于：</p>
 <ul>
 <li>
 <p><u>不希望在抽象和它的实现部分之间有一个固定的绑定关系。</u></p>
@@ -2684,17 +2811,9 @@
 <p>想在<u>多个对象间共享实现</u>（可能使用引用计数），但同时要求<u>客户并不知道这一点</u>。</p>
 </li>
 </ul>
-<blockquote>
-<p>题目选项描述：</p>
-<ul>
-<li>类的抽象和其实现之间不希望有一个固定的绑定关系。</li>
-<li>不希望在抽象和它的实现部分之间有一个固定的绑定关系。</li>
-</ul>
-<p>关键词：<u>固定的绑定关系</u>。</p>
-</blockquote>
 <p>桥梁模式：将抽象化与实现化脱耦，使得二者可以独立的变化，也就是说将他们之间的强关联变成弱关联。也就是指在一个软件系统的抽象化和实现化之间使用组合/聚合关系而不是继承关系，从而使两者可以独立的变化。</p>
-<h3 id="组合合成模式">组合（合成）模式</h3>
-<p>组合（Composite，合成）模式将对象<u>组合成树型结构</u>以<u>表示“部分——整体”</u>的层次结构。Composite使得用户<u>对单个对象和组合对象的使用具有一致性</u>。</p>
+<h3 id="组合模式">组合模式</h3>
+<p>组合（Composite，<strong>合成</strong>）模式将对象<u>组合成树型结构</u>以<u>表示“部分——整体”</u>的层次结构。Composite使得用户<u>对单个对象和组合对象的使用具有一致性</u>。</p>
 <p>组合模式的结构：</p>
 <p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682300973563.png"
 	width="940"
@@ -2782,8 +2901,8 @@
 </ul>
 <p>关键词：<u>提供、添加、额外行为、指责</u>。</p>
 </blockquote>
-<h3 id="外观门面模式">外观（门面）模式</h3>
-<p>外观（Facade，门面）模式<u>为子系统中的一组接口提供一个一致的门面（界面）</u>，Facade模式<u>定义了</u>一个<u>高层接口</u>，这个接口<u>使得这一子系统更加容易使用</u>。</p>
+<h3 id="外观模式">外观模式</h3>
+<p>外观（Facade，<strong>门面</strong>）模式<u>为子系统中的一组接口提供一个一致的门面（界面）</u>，Facade模式<u>定义了</u>一个<u>高层接口</u>，这个接口<u>使得这一子系统更加容易使用</u>。</p>
 <p>外观模式的结构：</p>
 <p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682302810965.png"
 	width="950"
