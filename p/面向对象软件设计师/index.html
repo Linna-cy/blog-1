@@ -338,13 +338,13 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 57 分钟
+                    阅读时长: 58 分钟
                 </time>
                 |
             </div>
         
 
-        <div class="article-time--reading">共28086字</div>
+        <div class="article-time--reading">共28897字</div>
     </footer>
     
 
@@ -2813,7 +2813,7 @@
 </ul>
 <p>桥梁模式：将抽象化与实现化脱耦，使得二者可以独立的变化，也就是说将他们之间的强关联变成弱关联。也就是指在一个软件系统的抽象化和实现化之间使用组合/聚合关系而不是继承关系，从而使两者可以独立的变化。</p>
 <h3 id="组合模式">组合模式</h3>
-<p>组合（Composite，<strong>合成</strong>）模式将对象<u>组合成树型结构</u>以<u>表示“部分——整体”</u>的层次结构。Composite使得用户<u>对单个对象和组合对象的使用具有一致性</u>。</p>
+<p>组合（Composite，<strong>合成</strong>）模式<u>将对象组合成树型结构以表示“部分——整体”的层次结构</u>。Composite使得用户<u>对单个对象和组合对象的使用具有一致性</u>。</p>
 <p>组合模式的结构：</p>
 <p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682300973563.png"
 	width="940"
@@ -2853,18 +2853,189 @@
 <p><code>Client</code>：通过<code>Component</code>接口操纵组合组件的对象。</p>
 </li>
 </ul>
-<p>Composite模式适用于：</p>
+<p>代码示例：</p>
+<p><code>AbstractFile</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AbstractFile</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">protected</span> String name<span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getName</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> name<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 模范Linux tree命令的输出
+</span><span style="color:#75715e">     * &lt;p&gt;
+</span><span style="color:#75715e">     *     只是为了展示，并不重要
+</span><span style="color:#75715e">     * &lt;/p&gt;
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> String <span style="color:#a6e22e">toTreeString</span><span style="color:#f92672">(</span>AbstractFile file<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        String treeString <span style="color:#f92672">=</span> file<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">();</span>
+        List<span style="color:#f92672">&lt;</span>AbstractFile<span style="color:#f92672">&gt;</span> childrenList <span style="color:#f92672">=</span> file<span style="color:#f92672">.</span><span style="color:#a6e22e">getChildrenList</span><span style="color:#f92672">();</span>
+
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>childrenList <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            treeString <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#39;\n&#39;</span><span style="color:#f92672">;</span>
+            <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> childrenList<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">();</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+                AbstractFile children <span style="color:#f92672">=</span> childrenList<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>i<span style="color:#f92672">);</span>
+                String childTreeString <span style="color:#f92672">=</span> toTreeString<span style="color:#f92672">(</span>children<span style="color:#f92672">);</span>
+                String<span style="color:#f92672">[]</span> split <span style="color:#f92672">=</span> childTreeString<span style="color:#f92672">.</span><span style="color:#a6e22e">split</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;\n&#34;</span><span style="color:#f92672">);</span>
+                childTreeString <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">;</span>
+                <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> split<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span> j<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+                    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>split<span style="color:#f92672">[</span>j<span style="color:#f92672">].</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>0<span style="color:#f92672">)</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;├&#39;</span>
+                     <span style="color:#f92672">||</span> split<span style="color:#f92672">[</span>j<span style="color:#f92672">].</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>0<span style="color:#f92672">)</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;└&#39;</span>
+                     <span style="color:#f92672">||</span> split<span style="color:#f92672">[</span>j<span style="color:#f92672">].</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>0<span style="color:#f92672">)</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;│&#39;</span>
+                     <span style="color:#f92672">||</span> split<span style="color:#f92672">[</span>j<span style="color:#f92672">].</span><span style="color:#a6e22e">charAt</span><span style="color:#f92672">(</span>0<span style="color:#f92672">)</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39; &#39;</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">==</span> childrenList<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                            split<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;    &#34;</span> <span style="color:#f92672">+</span> split<span style="color:#f92672">[</span>j<span style="color:#f92672">];</span>
+                        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                            split<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;│   &#34;</span> <span style="color:#f92672">+</span> split<span style="color:#f92672">[</span>j<span style="color:#f92672">];</span>
+                        <span style="color:#f92672">}</span>
+                    <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">==</span> childrenList<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                            split<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;└── &#34;</span> <span style="color:#f92672">+</span> split<span style="color:#f92672">[</span>j<span style="color:#f92672">];</span>
+                        <span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+                            split<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;├── &#34;</span> <span style="color:#f92672">+</span> split<span style="color:#f92672">[</span>j<span style="color:#f92672">];</span>
+                        <span style="color:#f92672">}</span>
+                    <span style="color:#f92672">}</span>
+                    split<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">+=</span> <span style="color:#e6db74">&#39;\n&#39;</span><span style="color:#f92672">;</span>
+                    childTreeString <span style="color:#f92672">+=</span> split<span style="color:#f92672">[</span>j<span style="color:#f92672">];</span>
+                <span style="color:#f92672">}</span>
+                treeString <span style="color:#f92672">+=</span> childTreeString<span style="color:#f92672">;</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+
+        <span style="color:#66d9ef">return</span> treeString<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>AbstractFile file<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>AbstractFile file<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> List<span style="color:#f92672">&lt;</span>AbstractFile<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getChildrenList</span><span style="color:#f92672">();</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>File</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">File</span> <span style="color:#66d9ef">extends</span> AbstractFile <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">File</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>AbstractFile file<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>AbstractFile file<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>AbstractFile<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getChildrenList</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>Folder</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Folder</span> <span style="color:#66d9ef">extends</span> AbstractFile <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> List<span style="color:#f92672">&lt;</span>AbstractFile<span style="color:#f92672">&gt;</span> childrenList <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;</span>AbstractFile<span style="color:#f92672">&gt;();</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Folder</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>AbstractFile file<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> childrenList<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>file<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>AbstractFile file<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> childrenList<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>file<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> List<span style="color:#f92672">&lt;</span>AbstractFile<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">getChildrenList</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> childrenList<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> toTreeString<span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>测试：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Composite</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 模仿Linux的文件结构
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        AbstractFile root <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Folder<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">);</span>
+
+        String<span style="color:#f92672">[]</span> childrenNameList <span style="color:#f92672">=</span> <span style="color:#f92672">{</span><span style="color:#e6db74">&#34;sbin&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;boot&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;sys&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;etc&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;usr&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;home&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;root&#34;</span><span style="color:#f92672">};</span>
+
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>String childrenName <span style="color:#f92672">:</span> childrenNameList<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            AbstractFile children <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Folder<span style="color:#f92672">(</span>childrenName<span style="color:#f92672">);</span>
+            root<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>children<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+
+        List<span style="color:#f92672">&lt;</span>AbstractFile<span style="color:#f92672">&gt;</span> childrenList <span style="color:#f92672">=</span> root<span style="color:#f92672">.</span><span style="color:#a6e22e">getChildrenList</span><span style="color:#f92672">();</span>
+        AbstractFile myFolder <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Folder<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;linner&#34;</span><span style="color:#f92672">);</span>
+        AbstractFile homeFolder <span style="color:#f92672">=</span> childrenList<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>5<span style="color:#f92672">);</span>
+        homeFolder<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>myFolder<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> 5<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+            AbstractFile file <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;file&#34;</span> <span style="color:#f92672">+</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span>i <span style="color:#f92672">+</span> 1<span style="color:#f92672">));</span>
+            myFolder<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>file<span style="color:#f92672">);</span>
+            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">%</span> 2 <span style="color:#f92672">==</span> 0<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+                AbstractFile folder <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Folder<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;folder&#34;</span> <span style="color:#f92672">+</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span>i <span style="color:#f92672">+</span> 1<span style="color:#f92672">));</span>
+                myFolder<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>folder<span style="color:#f92672">);</span>
+                <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> j <span style="color:#f92672">&lt;</span> 3<span style="color:#f92672">;</span> j<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+                    AbstractFile folderFile <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;file&#34;</span>
+                            <span style="color:#f92672">+</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span>i <span style="color:#f92672">+</span> 1<span style="color:#f92672">)</span>
+                            <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;_&#39;</span> <span style="color:#f92672">+</span> Integer<span style="color:#f92672">.</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">(</span>j <span style="color:#f92672">+</span> 1<span style="color:#f92672">));</span>
+                    folder<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>folderFile<span style="color:#f92672">);</span>
+                <span style="color:#f92672">}</span>
+            <span style="color:#f92672">}</span>
+        <span style="color:#f92672">}</span>
+
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>root<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>输出如下：</p>
+<pre tabindex="0"><code>/
+├── sbin
+├── boot
+├── sys
+├── etc
+├── usr
+├── home
+│   └── linner
+│       ├── file1
+│       ├── folder1
+│       │   ├── file1_1
+│       │   ├── file1_2
+│       │   └── file1_3
+│       ├── file2
+│       ├── file3
+│       ├── folder3
+│       │   ├── file3_1
+│       │   ├── file3_2
+│       │   └── file3_3
+│       ├── file4
+│       ├── file5
+│       └── folder5
+│           ├── file5_1
+│           ├── file5_2
+│           └── file5_3
+└── root
+</code></pre><p>Composite模式适用于：</p>
 <ul>
 <li>想表示对象的<u>部分——整体层次结构</u>。</li>
 <li>希望用户<u>忽略组合对象与单个对象的不同</u>，用户将<u>统一地使用组合结构中的所有对象</u>。</li>
 </ul>
-<blockquote>
-<p>题目选项描述：</p>
-<p>表示对象的部分——整体层次结构。</p>
-</blockquote>
 <p>合成模式：合成模式将对象组织到树结构中，可以用来描述整体与部分的关系。合成模式就是一个处理对象的树结构的模式。合成模式把部分与整体的关系用树结构表示出来。合成模式使得客户端把一个个单独的成分对象和由他们复合而成的合成对象同等看待。</p>
 <h3 id="装饰器模式">装饰器模式</h3>
-<p>装饰器（Decorator）模式<u>动态</u>地给一个对象<u>添加一些额外的职责</u>。装饰器提供了用子类扩展功能的灵活替代。就增加功能而言，<u>Decorator模式比派生子类更加灵活</u>。</p>
+<p>装饰器（Decorator）模式<u>动态地给一个对象添加一些额外的职责</u>。装饰器提供了用子类扩展功能的灵活替代。就增加功能而言，<u>Decorator模式比派生子类更加灵活</u>。</p>
 <p>装饰器模式结构：</p>
 <p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682302304911.png"
 	width="862"
@@ -2886,21 +3057,71 @@
 <li><code>Decorator</code>：<u>维持一个指向<code>Component</code>对象的指针</u>，并<u>定义一个与<code>Component</code>接口一致的接口</u>。</li>
 <li><code>ConcreteDecorator</code>：<u>向组件添加职责。</u></li>
 </ul>
-<p>Decorator模式适用于：</p>
+<p>代码示例：</p>
+<p><code>Person</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">protected</span> String name<span style="color:#f92672">;</span>
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 职责
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">operation</span><span style="color:#f92672">();</span>
+
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getName</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> name<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>Student</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Student</span> <span style="color:#66d9ef">extends</span> Person <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Student</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">){</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">operation</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;的职责：学习&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>Decorator</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Decorator</span> <span style="color:#66d9ef">extends</span> Person <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">protected</span> Person person<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>DecoratorA</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DecoratorA</span> <span style="color:#66d9ef">extends</span> Decorator <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">DecoratorA</span><span style="color:#f92672">(</span>Person person<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">person</span> <span style="color:#f92672">=</span> person<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> person<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">operation</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        person<span style="color:#f92672">.</span><span style="color:#a6e22e">operation</span><span style="color:#f92672">();</span> <span style="color:#75715e">// 原本的职责
+</span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;新职责：摸鱼&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>DecoratorB</code>与<code>DecoratorA</code>类似，略；</p>
+<p>测试：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">DecoratorPattern</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Person zhangsan <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Student<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;张三&#34;</span><span style="color:#f92672">);</span>
+        zhangsan<span style="color:#f92672">.</span><span style="color:#a6e22e">operation</span><span style="color:#f92672">();</span>
+
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;============================&#34;</span><span style="color:#f92672">);</span>
+
+        <span style="color:#75715e">/*Decorator decoratorA = new DecoratorA(zhangsan);
+</span><span style="color:#75715e">        decoratorA.operation();*/</span>
+        <span style="color:#75715e">// 装饰器对象也相当于Person
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// 装饰链
+</span><span style="color:#75715e"></span>        zhangsan <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DecoratorA<span style="color:#f92672">(</span>zhangsan<span style="color:#f92672">);</span>
+        zhangsan <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> DecoratorB<span style="color:#f92672">(</span>zhangsan<span style="color:#f92672">);</span>
+        zhangsan<span style="color:#f92672">.</span><span style="color:#a6e22e">operation</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Decorator模式适用于：</p>
 <ul>
-<li>在不影响其他对象的情况下，以动态、透明的方式给单个对象添加职责。</li>
-<li>处理那些可以撤销的职责。</li>
+<li>在<u>不影响其他对象的情况下</u>，以动态、透明的方式给单个对象<u>添加职责</u>。</li>
+<li><u>处理那些可以撤销的职责</u>。</li>
 <li>当不能采用生成子类的方式进行扩充时。一种情况是，可能有大量独立的扩展，为支持每一种组合将产生大量的子类，使得子类数目呈爆炸性增长。另一种情况可能是，由于类定义被隐藏，或类定义不能用于生成子类。</li>
 </ul>
-<blockquote>
-<p>题目选项描述：</p>
-<ul>
-<li>将一个对象加以包装以提供一些额外的行为。</li>
-<li>在不影响其他对象的情况下，以动态、透明的方式给单个对象添加职责。</li>
-<li>动态地给一个对象添加一些额外的职责。</li>
-</ul>
-<p>关键词：<u>提供、添加、额外行为、指责</u>。</p>
-</blockquote>
 <h3 id="外观模式">外观模式</h3>
 <p>外观（Facade，<strong>门面</strong>）模式<u>为子系统中的一组接口提供一个一致的门面（界面）</u>，Facade模式<u>定义了</u>一个<u>高层接口</u>，这个接口<u>使得这一子系统更加容易使用</u>。</p>
 <p>外观模式的结构：</p>
