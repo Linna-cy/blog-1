@@ -338,13 +338,13 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 53 分钟
+                    阅读时长: 56 分钟
                 </time>
                 |
             </div>
         
 
-        <div class="article-time--reading">共26540字</div>
+        <div class="article-time--reading">共27727字</div>
     </footer>
     
 
@@ -2009,7 +2009,7 @@
 	srcset="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684673603980_hu2ef0ebae0df52fd887858a47b2f64eb2_23589_480x0_resize_box_3.png 480w, /p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684673603980_hu2ef0ebae0df52fd887858a47b2f64eb2_23589_1024x0_resize_box_3.png 1024w"
 	loading="lazy"
 	
-		alt="简单工厂模式"
+		alt="简单工厂模式示例"
 	
 	
 		class="gallery-image" 
@@ -2018,54 +2018,45 @@
 	
 ></p>
 <p>代码示例如下：</p>
-<ul>
-<li>
 <p><code>Product</code>：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
 </span><span style="color:#75715e"> * 抽象产品
-</span><span style="color:#75715e">*/</span>
+</span><span style="color:#75715e"> */</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Product</span> <span style="color:#f92672">{</span>
     <span style="color:#75715e">/**
-</span><span style="color:#75715e">    * 抽象方法
-</span><span style="color:#75715e">    */</span>
+</span><span style="color:#75715e">     * 抽象方法，返回产品信息
+</span><span style="color:#75715e">     */</span>
     <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">info</span><span style="color:#f92672">();</span>
 <span style="color:#f92672">}</span>
-</code></pre></div></li>
-<li>
-<p><code>ProductA</code>：</p>
+</code></pre></div><p><code>ProductA</code>：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
 </span><span style="color:#75715e"> * 具体产品A
-</span><span style="color:#75715e">*/</span>
+</span><span style="color:#75715e"> */</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ProductA</span> <span style="color:#66d9ef">extends</span> Product <span style="color:#f92672">{</span>
     <span style="color:#a6e22e">@Override</span>
     <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">info</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
         System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;产品的信息：A&#34;</span><span style="color:#f92672">);</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div></li>
-<li>
-<p><code>ProductB</code>：</p>
+</code></pre></div><p><code>ProductB</code>：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
 </span><span style="color:#75715e"> * 具体产品B
-</span><span style="color:#75715e">*/</span>
+</span><span style="color:#75715e"> */</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ProductB</span> <span style="color:#66d9ef">extends</span> Product <span style="color:#f92672">{</span>
     <span style="color:#a6e22e">@Override</span>
     <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">info</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;产品信息：B&#34;</span><span style="color:#f92672">);</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;产品的信息：B&#34;</span><span style="color:#f92672">);</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div></li>
-<li>
-<p><code>Factory</code>：</p>
+</code></pre></div><p><code>Factory</code>：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
 </span><span style="color:#75715e"> * 静态工厂类
-</span><span style="color:#75715e">*/</span>
+</span><span style="color:#75715e"> */</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Factory</span> <span style="color:#f92672">{</span>
     <span style="color:#75715e">/**
 </span><span style="color:#75715e">     * 根据参数获取Product
-</span><span style="color:#75715e">    * @param type
-</span><span style="color:#75715e">    * @return
-</span><span style="color:#75715e">    */</span>
+</span><span style="color:#75715e">     * @param type 指定创建的对象的类型
+</span><span style="color:#75715e">     */</span>
     <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Product <span style="color:#a6e22e">createProduct</span><span style="color:#f92672">(</span>String type<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         Product product <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
 
@@ -2081,9 +2072,7 @@
         <span style="color:#66d9ef">return</span> product<span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div></li>
-<li>
-<p><code>SimpleFactory</code>测试：</p>
+</code></pre></div><p>测试方法：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SimpleFactory</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         Product productA <span style="color:#f92672">=</span> Factory<span style="color:#f92672">.</span><span style="color:#a6e22e">createProduct</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;A&#34;</span><span style="color:#f92672">);</span>
@@ -2096,21 +2085,19 @@
         System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>productC<span style="color:#f92672">);</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div></li>
-</ul>
-<h3 id="工厂模式">工厂模式</h3>
-<p>工厂方法（Factory Method）模式定义一个用于<u>创建对象的接口</u>，让<u>子类决定实例化哪一个类</u>。工厂模式使一个类的实例化延迟到其子类。</p>
+</code></pre></div><h3 id="工厂方法">工厂方法</h3>
+<p>工厂方法（Factory Method）模式定义一个用于<u>创建对象的接口</u>，让<u>子类决定实例化哪一个类</u>。工厂模式<u>使一个类的实例化延迟到其子类</u>。</p>
 <blockquote>
-<p>即接口不创建具体的对象，交由子类来决定实例化哪个类。</p>
+<p>简单工厂违反了开放封闭原则，对扩展是开发的，对修改是封闭的。所以工厂方法的接口不创建具体的对象，而是交由子类来实现。</p>
 </blockquote>
-<p>工厂模式结构：</p>
+<p>工厂方法结构：</p>
 <p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682232330534.png"
 	width="725"
 	height="268"
 	srcset="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682232330534_huc77d54806485b83d5b01369d9c023787_25091_480x0_resize_box_3.png 480w, /p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682232330534_huc77d54806485b83d5b01369d9c023787_25091_1024x0_resize_box_3.png 1024w"
 	loading="lazy"
 	
-		alt="工厂模式结构"
+		alt="工厂方法结构"
 	
 	
 		class="gallery-image" 
@@ -2127,21 +2114,110 @@
 </li>
 <li>
 <p><code>Creator</code>：声明工厂方法，该方法返回一个<code>Product</code>类型的对象。</p>
-<p><code>Creator</code>也可以定义一个工厂方法的默认实现，它返回一个默认的<code>ConcreteProduct</code>对象，可以调用工厂方法以创建一个<code>Product</code>对象。</p>
+<p><code>Creator</code>也可以定义一个工厂方法的默认实现，它返回一个默认的<code>ConcreteProduct</code>对象。</p>
 </li>
 <li>
 <p><code>ConcreteCreator</code>：重定义工厂方法以返回一个<code>ConcreteProduct</code>实例。</p>
 </li>
 </ul>
-<p>Factory Method模式适用于：</p>
+<p>代码示例：</p>
+<p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684730369571.png"
+	width="485"
+	height="463"
+	srcset="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684730369571_hu7977095aad3e90574890476c02b8b81e_30170_480x0_resize_box_3.png 480w, /p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684730369571_hu7977095aad3e90574890476c02b8b81e_30170_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="工厂方法示例"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="104"
+		data-flex-basis="251px"
+	
+></p>
+<p><code>Product</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 产品接口
+</span><span style="color:#75715e"> * &lt;p&gt;
+</span><span style="color:#75715e"> *     这里抽象产品是接口还是抽象类不重要，重要的是Factory一定得是接口
+</span><span style="color:#75715e"> * &lt;/p&gt;
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Product</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 接口方法，返回产品信息
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">info</span><span style="color:#f92672">();</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>ProductA</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ProductA</span> <span style="color:#66d9ef">implements</span> Product <span style="color:#f92672">{</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">info</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;产品的信息：A&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>ProductB</code>与<code>ProductA</code>类似，代码略。</p>
+<p><code>Factory</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 工厂方法接口
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Factory</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">    * 接口方法，获取Product
+</span><span style="color:#75715e">    */</span>
+    <span style="color:#66d9ef">public</span> Product <span style="color:#a6e22e">createProduct</span><span style="color:#f92672">();</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>FactoryA</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 工厂A
+</span><span style="color:#75715e"> * &lt;p&gt;
+</span><span style="color:#75715e"> *     只负责生产ProductA
+</span><span style="color:#75715e"> * &lt;/p&gt;
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FactoryA</span> <span style="color:#66d9ef">implements</span> Factory <span style="color:#f92672">{</span>
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 实现方法创建ProductA
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> Product <span style="color:#a6e22e">createProduct</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 直接返回ProductA
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ProductA<span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>FactoryB</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 工厂B
+</span><span style="color:#75715e"> * &lt;p&gt;
+</span><span style="color:#75715e"> *     只负责生产ProductB
+</span><span style="color:#75715e"> * &lt;/p&gt;
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FactoryB</span> <span style="color:#66d9ef">implements</span> Factory <span style="color:#f92672">{</span>
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 实现方法创建ProductB
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> Product <span style="color:#a6e22e">createProduct</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 直接返回ProductB
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ProductB<span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>测试方法：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FactoryMethod</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Factory factory <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FactoryA<span style="color:#f92672">();</span>
+        Product productA <span style="color:#f92672">=</span> factory<span style="color:#f92672">.</span><span style="color:#a6e22e">createProduct</span><span style="color:#f92672">();</span>
+        productA<span style="color:#f92672">.</span><span style="color:#a6e22e">info</span><span style="color:#f92672">();</span>
+
+        factory <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FactoryB<span style="color:#f92672">();</span>
+        Product productB <span style="color:#f92672">=</span> factory<span style="color:#f92672">.</span><span style="color:#a6e22e">createProduct</span><span style="color:#f92672">();</span>
+        productB<span style="color:#f92672">.</span><span style="color:#a6e22e">info</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Factory Method模式适用于：</p>
 <ul>
-<li>当一个类<u>不知道它所必须创建的对象的类</u>的时候。</li>
-<li>当一个类<u>希望由它的子类来指定它所创建的对象</u>的时候。</li>
+<li>当一个类<u>不知道它所必须创建的对象的类</u>（不知道要创建的具体类）的时候。</li>
+<li>当一个类希望<u>由它的子类来指定它所创建的对象</u>的时候。</li>
 <li>当类<u>将创建对象的职责委托给多个帮助子类中的某一个</u>，并且你希望将哪一个<u>帮助子类是代理者</u>这一信息局部化的时候。</li>
 </ul>
-<blockquote>
-<p>关键词：<u>子类指定创建对象</u>。</p>
-</blockquote>
 <p>工厂模式：</p>
 <ul>
 <li>特点：用户类和工厂类分开。</li>
@@ -2151,7 +2227,7 @@
 <h3 id="抽象工厂模式">抽象工厂模式</h3>
 <p>抽象工厂（Abstract Factory）提供一个<u>创建一系列相关或相互依赖对象的接口</u>，而<u>无须指定它们具体的类</u>。</p>
 <blockquote>
-<p>即提供对象的接口，用户无需考虑实现类。</p>
+<p>抽象工厂的工厂类是<code>abstract class</code>（抽象类），工厂方法是<code>interface</code>。抽象工厂可以创建更多的类。</p>
 </blockquote>
 <p>抽象工厂模式的结构：</p>
 <p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682230457950.png"
@@ -2175,39 +2251,73 @@
 <li><code>ConcreteProduct</code>：定义一个将被相应的具体工厂创建的产品对象，实现<code>AbstractProduct</code>接口。</li>
 <li><code>Client</code>：仅使用由<code>AbstractFactory</code>和<code>AbstractProduct</code>类声明的接口。</li>
 </ul>
-<p>Abstract Factory模式适用于：</p>
+<p>代码示例：</p>
+<p>创建两个产品接口<code>ProductA</code>和<code>ProductB</code>，并分别创建这两个产品接口的实现类<code>ProductA1</code>和<code>ProductA2</code>以及<code>ProductB1</code>和<code>ProductB2</code>。代码略。需要注意的是这里<code>ProductA</code>和<code>ProductB</code>代表两种不同的产品，它们的类型可以完全不相同。</p>
+<p><code>Factory</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Factory</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 接口方法获取ProductA
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">public</span> ProductA <span style="color:#a6e22e">createProductA</span><span style="color:#f92672">();</span>
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 接口方法获取ProductB
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">public</span> ProductB <span style="color:#a6e22e">createProductB</span><span style="color:#f92672">();</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>Factory1</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 工厂1创建产品ProductA1和ProductB1
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Factory1</span> <span style="color:#66d9ef">implements</span> Factory <span style="color:#f92672">{</span>
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 创建产品ProductA1
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> ProductA <span style="color:#a6e22e">createProductA</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ProductA1<span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 创建产品ProductB1
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> ProductB <span style="color:#a6e22e">createProductB</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ProductB1<span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>Factory2</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 工厂2创建产品ProductA2和ProductB2
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Factory2</span> <span style="color:#66d9ef">implements</span> Factory <span style="color:#f92672">{</span>
+    <span style="color:#75715e">/* 代码与Factory1类似，略 */</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>测试类：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AbstractFactory</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Factory factory <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Factory1<span style="color:#f92672">();</span>
+        ProductA productA1 <span style="color:#f92672">=</span> factory<span style="color:#f92672">.</span><span style="color:#a6e22e">createProductA</span><span style="color:#f92672">();</span>
+        ProductB productB1 <span style="color:#f92672">=</span> factory<span style="color:#f92672">.</span><span style="color:#a6e22e">createProductB</span><span style="color:#f92672">();</span>
+        productA1<span style="color:#f92672">.</span><span style="color:#a6e22e">info</span><span style="color:#f92672">();</span>
+        productB1<span style="color:#f92672">.</span><span style="color:#a6e22e">info</span><span style="color:#f92672">();</span>
+
+        factory <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Factory2<span style="color:#f92672">();</span>
+        ProductA productA2 <span style="color:#f92672">=</span> factory<span style="color:#f92672">.</span><span style="color:#a6e22e">createProductA</span><span style="color:#f92672">();</span>
+        ProductB productB2 <span style="color:#f92672">=</span> factory<span style="color:#f92672">.</span><span style="color:#a6e22e">createProductB</span><span style="color:#f92672">();</span>
+        productA2<span style="color:#f92672">.</span><span style="color:#a6e22e">info</span><span style="color:#f92672">();</span>
+        productB2<span style="color:#f92672">.</span><span style="color:#a6e22e">info</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Abstract Factory模式适用于：</p>
 <ul>
-<li>一个系统要<strong>独立</strong>于它的<strong>产品的创建</strong>、<strong>组合</strong>和<strong>表示</strong>时。</li>
+<li>一个系统要<u>独立于它的产品的创建、<strong>组合</strong>和表示</u>时。</li>
 <li>一个系统要由<u>多个产品系列中的一个来配置</u>时。</li>
 <li>当要强调<u>一系列相关的产品</u>对象的设计以便进行<u>联合使用</u>时。</li>
 <li>当提供一个<u>产品类库</u>，只想<u>显示它们的接口而不是实现</u>时。</li>
 </ul>
-<blockquote>
-<p>题目选项描述：</p>
-<ul>
-<li>
-<p>提供创建一系列相关或相互依赖的对象的接口，而无需指定这些对象所属的具体类。</p>
-</li>
-<li>
-<p>当一个系统应该独立于它的产品创建、构成和表示时。</p>
-</li>
-<li>
-<p>当要强调一系列相关的产品对象的设计以便进行联合使用时。</p>
-</li>
-<li>
-<p>一个系统要由多个产品系列中的一个来配置时。</p>
-</li>
-<li>
-<p>为图形用户界面（GUI）组件定义不同平台的并行类层次结构。</p>
-<pre><code>不同平台的GUI组件，使用同样的接口，根据平台使用不同的实现。
-</code></pre>
-</li>
-</ul>
-<p>关键词：<u>系列</u>。</p>
-</blockquote>
-<p>抽象工厂模式：核心工厂类不再负责所有产品的创建，而是将具体创建的工作交给子类去做。它仅负责给存储具体工厂类必须实现的接口。</p>
-<h3 id="生成器建造者模式">生成器（建造者）模式</h3>
-<p>生成器（Builder，建造者）模式将一个<u>复杂对象的<strong>构建</strong>与它的<strong>表示</strong>分离</u>，使得<u>同样的构建过程可以创建不同的表示</u>。</p>
+<p>抽象工厂模式：核心工厂类不再负责所有产品的创建，而是将具体创建的工作交给子类（具体工厂）去做。它仅负责给存储具体工厂类必须实现的接口。</p>
+<h3 id="生成器模式">生成器模式</h3>
+<p>生成器（Builder，<strong>建造者</strong>）模式将一个<u>复杂对象的<strong>构建</strong>与它的<strong>表示</strong>分离</u>，使得<u>同样的构建过程可以创建不同的表示</u>。</p>
 <p>生成器模式结构：</p>
 <p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682231345251.png"
 	width="729"
@@ -2229,30 +2339,100 @@
 </li>
 <li>
 <p><code>Builder</code>：为创建一个<code>Product</code>对象的各个部件指定抽象接口。</p>
+<p><code>BuildPart()</code>：生成零件。</p>
 </li>
 <li>
 <p><code>ConcreteBuilder</code>：实现<code>Builder</code>的接口以构造和装配该产品的各个部件，定义并明确它所创建的表示，提供一个检索产品的接口。</p>
 <p><code>ConcreteBuilder</code>创建<code>Product</code>对象产品的内部表示并定义它的装配过程。包含定义组成组件的类，包括将这些组件装配成最终产品的接口。</p>
+<p><code>GetResult()</code>：获取生成（组装完成）的产品。</p>
 </li>
 <li>
-<p><code>Director</code>：构造一个使用<code>Builder</code>接口的对象。</p>
+<p><code>Director</code>：构造一个使用<code>Builder</code>接口的对象。最终是使用<code>Director</code>来构造<code>Product</code>。</p>
 </li>
 </ul>
-<p>Builder模式适用于：</p>
+<p>代码示例：</p>
+<p><code>Product</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Product</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> parts <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ArrayList<span style="color:#f92672">&lt;&gt;();</span> <span style="color:#75715e">// 零件
+</span><span style="color:#75715e"></span>
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 添加零件
+</span><span style="color:#75715e">     * @param part 要添加的零件
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>String part<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        parts<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>part<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Product{&#34;</span> <span style="color:#f92672">+</span>
+                <span style="color:#e6db74">&#34;parts=&#34;</span> <span style="color:#f92672">+</span> parts <span style="color:#f92672">+</span>
+                <span style="color:#e6db74">&#39;}&#39;</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>Builder</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Builder</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 生成产品零件
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">buildPart</span><span style="color:#f92672">();</span>
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 获取结果
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> Product <span style="color:#a6e22e">getResult</span><span style="color:#f92672">();</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>Builder1</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Builder1</span> <span style="color:#66d9ef">extends</span> Builder <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> Product product <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Product<span style="color:#f92672">();</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">buildPart</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        product<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;A&#34;</span><span style="color:#f92672">);</span>
+        product<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;B&#34;</span><span style="color:#f92672">);</span>
+        product<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;C&#34;</span><span style="color:#f92672">);</span>
+        product<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;D&#34;</span><span style="color:#f92672">);</span>
+        product<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;E&#34;</span><span style="color:#f92672">);</span>
+        product<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;F&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> Product <span style="color:#a6e22e">getResult</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> product<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>Builder2</code>与<code>Builder1</code>类似，略。</p>
+<p><code>Director</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Director</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 根据指定的Builder来生产零件
+</span><span style="color:#75715e">     * @param builder 指定用来生产零件的Builder
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">construct</span><span style="color:#f92672">(</span>Builder builder<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        builder<span style="color:#f92672">.</span><span style="color:#a6e22e">buildPart</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>测试：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BuilderTest</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Director director <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Director<span style="color:#f92672">();</span>
+
+        Builder builder1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Builder1<span style="color:#f92672">();</span>
+        director<span style="color:#f92672">.</span><span style="color:#a6e22e">construct</span><span style="color:#f92672">(</span>builder1<span style="color:#f92672">);</span>
+        Product product1 <span style="color:#f92672">=</span> builder1<span style="color:#f92672">.</span><span style="color:#a6e22e">getResult</span><span style="color:#f92672">();</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>product1<span style="color:#f92672">);</span>
+
+        Builder2 builder2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Builder2<span style="color:#f92672">();</span>
+        director<span style="color:#f92672">.</span><span style="color:#a6e22e">construct</span><span style="color:#f92672">(</span>builder2<span style="color:#f92672">);</span>
+        Product product2 <span style="color:#f92672">=</span> builder2<span style="color:#f92672">.</span><span style="color:#a6e22e">getResult</span><span style="color:#f92672">();</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>product2<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Builder模式适用于：</p>
 <ul>
 <li>当<u>创建复杂对象的算法</u>应该<u>独立于该对象的组成部分以及它们的装配方式时</u>。</li>
 <li>当<u>构造过程必须允许被构造的对象有不同的表示时</u>。</li>
 </ul>
-<blockquote>
-<p>题目选项描述</p>
-<ul>
-<li>当创建复杂对象的算法应该独立于该对象的组成部分及其装配方式时。</li>
-<li>当构造过程必须允许被构造的对象有不同的表示时。</li>
-<li>将一个复杂对象的构建与其表示分离，使得同样的构建过程可以创建不同的表示。</li>
-<li>适用于抽象复杂对象的构建步骤和基于构建过程的具体实现构建复杂对象的不同表示。</li>
-</ul>
-<p>关键词：<u>复杂对象、不同表示</u>。</p>
-</blockquote>
 <h3 id="原型模式">原型模式</h3>
 <p>原型（Prototype）模式用<u>原型实例指定创建对象的种类</u>，并且<u>通过复制这些原型创建新的对象</u>。</p>
 <p>原型模式结构：</p>
@@ -2275,12 +2455,62 @@
 <li><code>ConcretePrototype</code>：实现一个复制自身的操作。</li>
 <li><code>Client</code>：让一个原型复制自身从而创建一个新的对象。</li>
 </ul>
-<p>Prototype模式适用于：</p>
+<p>代码示例：</p>
+<p><code>Prototype</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Prototype</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 克隆方法
+</span><span style="color:#75715e">     * @return
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">public</span> Object <span style="color:#a6e22e">clone</span><span style="color:#f92672">();</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>Product</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Product</span> <span style="color:#66d9ef">implements</span> Prototype <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> Integer id<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> Double price<span style="color:#f92672">;</span>   <span style="color:#75715e">// 价格
+</span><span style="color:#75715e"></span>
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Product</span><span style="color:#f92672">()</span> <span style="color:#f92672">{}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Product</span><span style="color:#f92672">(</span>Integer id<span style="color:#f92672">,</span> Double price<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> id<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">price</span> <span style="color:#f92672">=</span> price<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> Object <span style="color:#a6e22e">clone</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        Product object <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Product<span style="color:#f92672">();</span>    <span style="color:#75715e">// 这里也可以直接使用带参的构造方法，而不必使用setter
+</span><span style="color:#75715e"></span>        object<span style="color:#f92672">.</span><span style="color:#a6e22e">setId</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">id</span><span style="color:#f92672">);</span>
+        object<span style="color:#f92672">.</span><span style="color:#a6e22e">setPrice</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">price</span><span style="color:#f92672">);</span>
+
+        <span style="color:#66d9ef">return</span> object<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#75715e">// 省略 getter, setter
+</span><span style="color:#75715e"></span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Product{&#34;</span> <span style="color:#f92672">+</span>
+                <span style="color:#e6db74">&#34;id=&#34;</span> <span style="color:#f92672">+</span> id <span style="color:#f92672">+</span>
+                <span style="color:#e6db74">&#34;, price=&#34;</span> <span style="color:#f92672">+</span> price <span style="color:#f92672">+</span>
+                <span style="color:#e6db74">&#39;}&#39;</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>测试：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PrototypeTest</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Product product1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Product<span style="color:#f92672">(</span>2023<span style="color:#f92672">,</span> 5<span style="color:#f92672">.</span><span style="color:#a6e22e">22</span><span style="color:#f92672">);</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;product1: &#34;</span> <span style="color:#f92672">+</span> product1<span style="color:#f92672">);</span>
+
+        Product product2 <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>Product<span style="color:#f92672">)</span> product1<span style="color:#f92672">.</span><span style="color:#a6e22e">clone</span><span style="color:#f92672">();</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;product2: &#34;</span> <span style="color:#f92672">+</span> product2<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Prototype模式适用于：</p>
 <ul>
-<li>当一个系统应该独立于它的产品创建、构成和表示时。</li>
-<li>当要实例化的类是在运行时刻指定时，例如，通过动态装载。</li>
-<li>为了避免创建一个与产品类层次平行的工厂类层次时。</li>
-<li>当一个类的实例只能有几个不同状态组合中的一种时。建立相应数目的原型并克隆它们，可能比每次用合适的状态手工实例化该类更方便一些。</li>
+<li>当一个系统应该<u>独立于它的产品创建、<strong>构成</strong>和表示</u>时。</li>
+<li>当要实例化的类是在<u>运行时刻指定</u>时，例如，通过动态装载。</li>
+<li>为了<u>避免创建</u>一个<u>与产品类层次平行的工厂类层次</u>时。</li>
+<li>当一个类的<u>实例只能有几个不同状态组合中的一种</u>时。建立相应数目的原型并克隆它们，可能比每次用合适的状态手工实例化该类更方便一些。</li>
 </ul>
 <p>原型模式：</p>
 <ul>
@@ -2288,10 +2518,10 @@
 <li>优点：允许动态的增加或减少产品类，产品类不需要非得有任何事先确定的等级结构，原始模型模式适用于任何的等级结构。</li>
 <li>缺点：每一个类都必须配备一个克隆方法。</li>
 </ul>
-<h3 id="单例单态模式">单例（单态）模式</h3>
+<h3 id="单例模式">单例模式</h3>
 <p>单例（Singleton，单态）模式保证<u>一个类仅有一个实例</u>，并<u>提供一个访问它的全局访问点</u>。</p>
 <blockquote>
-<p>就好像Spring中的Bean，每个Bean有且仅有一个实例，通过<code>@Autowired</code>自动装配（来访问）。</p>
+<p>就好像Spring中的Bean，每个Bean默认有且仅有一个实例，通过<code>@Autowired</code>自动装配（来访问）。</p>
 </blockquote>
 <p>单例模式结构：</p>
 <p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682233866165.png"
@@ -2312,14 +2542,45 @@
 <li><code>Singleton</code>：指定一个<code>Instance</code>操作，允许客户访问它的唯一实例。</li>
 <li><code>Instance</code>：是一个类操作；可能负责创建它自己的唯一实例。</li>
 </ul>
-<p>Singleton模式适用于：</p>
+<p>代码示例：</p>
+<p><code>Singleton</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Singleton</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// 在内部示例化
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> Singleton instance <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Singleton<span style="color:#f92672">();</span>
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 定义私有的构造方法，让其它外部类无法通过构造方法示例化对象
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">private</span> <span style="color:#a6e22e">Singleton</span><span style="color:#f92672">()</span> <span style="color:#f92672">{}</span>
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 全局访问方法
+</span><span style="color:#75715e">     * &lt;p&gt;
+</span><span style="color:#75715e">     *     因为该类为单例，所以使用静态方法获取即可
+</span><span style="color:#75715e">     * &lt;/p&gt;
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Singleton <span style="color:#a6e22e">getInstance</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> instance<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>测试：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SingletonTest</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 验证Singleton是否为单例，打印它的地址即可
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Singleton singleton1 <span style="color:#f92672">=</span> Singleton<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">();</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>singleton1<span style="color:#f92672">);</span>
+
+        Singleton singleton2 <span style="color:#f92672">=</span> Singleton<span style="color:#f92672">.</span><span style="color:#a6e22e">getInstance</span><span style="color:#f92672">();</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>singleton2<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Singleton模式适用于：</p>
 <ul>
 <li>当类<u>只能有一个实例</u>而且客户可以从一个众所周知的访问点访问它时。</li>
 <li>当这个<u>唯一实例</u>应该是通过子类化可扩展的，并且<u>客户无须更改代码就能使用一个扩展的实例</u>时。</li>
 </ul>
-<blockquote>
-<p>关键词：<u>唯一实例、一个实例</u>。</p>
-</blockquote>
 <p>单例模式：确保某一个类只有一个实例，而且自行实例化并向整个系统提供这个实例单例模式。单例模式只应在有真正的“单一实例”的需求时才可使用。</p>
 <h2 id="结构型设计模式">结构型设计模式</h2>
 <p>结构型设计模式涉及<u>如何组合类或对象以获得更大的结构</u>。</p>
@@ -3210,7 +3471,7 @@
 <tr>
 <td style="text-align:center"><strong>工厂方法</strong></td>
 <td style="text-align:center">动态生产对象</td>
-<td style="text-align:left">定义创建对象的接口，由子类实例化对象。</td>
+<td style="text-align:left">定义创建对象的接口，由子类实例化对象。让类的实例化延迟到其子类。</td>
 </tr>
 <tr>
 <td style="text-align:center"><strong>抽象工厂模式</strong></td>

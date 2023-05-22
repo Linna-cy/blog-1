@@ -11158,7 +11158,7 @@ $$&lt;/p&gt;
 	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684673603980_hu2ef0ebae0df52fd887858a47b2f64eb2_23589_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684673603980_hu2ef0ebae0df52fd887858a47b2f64eb2_23589_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;简单工厂模式&#34;
+		alt=&#34;简单工厂模式示例&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -11167,54 +11167,45 @@ $$&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;代码示例如下：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
 &lt;p&gt;&lt;code&gt;Product&lt;/code&gt;：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;/**
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * 抽象产品
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;*/&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; */&lt;/span&gt;
 &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;abstract&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Product&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
     &lt;span style=&#34;color:#75715e&#34;&gt;/**
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;    * 抽象方法
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;    */&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 抽象方法，返回产品信息
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     */&lt;/span&gt;
     &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;abstract&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;info&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;ProductA&lt;/code&gt;：&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;ProductA&lt;/code&gt;：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;/**
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * 具体产品A
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;*/&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; */&lt;/span&gt;
 &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ProductA&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;extends&lt;/span&gt; Product &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
     &lt;span style=&#34;color:#a6e22e&#34;&gt;@Override&lt;/span&gt;
     &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;info&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
         System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;产品的信息：A&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
     &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;ProductB&lt;/code&gt;：&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;ProductB&lt;/code&gt;：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;/**
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * 具体产品B
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;*/&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; */&lt;/span&gt;
 &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ProductB&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;extends&lt;/span&gt; Product &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
     &lt;span style=&#34;color:#a6e22e&#34;&gt;@Override&lt;/span&gt;
     &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;info&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-        System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;产品信息：B&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+        System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;产品的信息：B&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
     &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;Factory&lt;/code&gt;：&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;Factory&lt;/code&gt;：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;/**
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * 静态工厂类
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;*/&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; */&lt;/span&gt;
 &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Factory&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
     &lt;span style=&#34;color:#75715e&#34;&gt;/**
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 根据参数获取Product
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;    * @param type
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;    * @return
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;    */&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * @param type 指定创建的对象的类型
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     */&lt;/span&gt;
     &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; Product &lt;span style=&#34;color:#a6e22e&#34;&gt;createProduct&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;String type&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
         Product product &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
 
@@ -11230,9 +11221,7 @@ $$&lt;/p&gt;
         &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; product&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
     &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;SimpleFactory&lt;/code&gt;测试：&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;测试方法：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;SimpleFactory&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
     &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; args&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
         Product productA &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Factory&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;createProduct&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;A&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
@@ -11245,21 +11234,19 @@ $$&lt;/p&gt;
         System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;productC&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
     &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;工厂模式&#34;&gt;工厂模式&lt;/h3&gt;
-&lt;p&gt;工厂方法（Factory Method）模式定义一个用于&lt;u&gt;创建对象的接口&lt;/u&gt;，让&lt;u&gt;子类决定实例化哪一个类&lt;/u&gt;。工厂模式使一个类的实例化延迟到其子类。&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;工厂方法&#34;&gt;工厂方法&lt;/h3&gt;
+&lt;p&gt;工厂方法（Factory Method）模式定义一个用于&lt;u&gt;创建对象的接口&lt;/u&gt;，让&lt;u&gt;子类决定实例化哪一个类&lt;/u&gt;。工厂模式&lt;u&gt;使一个类的实例化延迟到其子类&lt;/u&gt;。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;即接口不创建具体的对象，交由子类来决定实例化哪个类。&lt;/p&gt;
+&lt;p&gt;简单工厂违反了开放封闭原则，对扩展是开发的，对修改是封闭的。所以工厂方法的接口不创建具体的对象，而是交由子类来实现。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;工厂模式结构：&lt;/p&gt;
+&lt;p&gt;工厂方法结构：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682232330534.png&#34;
 	width=&#34;725&#34;
 	height=&#34;268&#34;
 	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682232330534_huc77d54806485b83d5b01369d9c023787_25091_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682232330534_huc77d54806485b83d5b01369d9c023787_25091_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
-		alt=&#34;工厂模式结构&#34;
+		alt=&#34;工厂方法结构&#34;
 	
 	
 		class=&#34;gallery-image&#34; 
@@ -11276,21 +11263,110 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;Creator&lt;/code&gt;：声明工厂方法，该方法返回一个&lt;code&gt;Product&lt;/code&gt;类型的对象。&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;Creator&lt;/code&gt;也可以定义一个工厂方法的默认实现，它返回一个默认的&lt;code&gt;ConcreteProduct&lt;/code&gt;对象，可以调用工厂方法以创建一个&lt;code&gt;Product&lt;/code&gt;对象。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Creator&lt;/code&gt;也可以定义一个工厂方法的默认实现，它返回一个默认的&lt;code&gt;ConcreteProduct&lt;/code&gt;对象。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;ConcreteCreator&lt;/code&gt;：重定义工厂方法以返回一个&lt;code&gt;ConcreteProduct&lt;/code&gt;实例。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Factory Method模式适用于：&lt;/p&gt;
+&lt;p&gt;代码示例：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684730369571.png&#34;
+	width=&#34;485&#34;
+	height=&#34;463&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684730369571_hu7977095aad3e90574890476c02b8b81e_30170_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684730369571_hu7977095aad3e90574890476c02b8b81e_30170_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;工厂方法示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;104&#34;
+		data-flex-basis=&#34;251px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Product&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * 产品接口
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * &amp;lt;p&amp;gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; *     这里抽象产品是接口还是抽象类不重要，重要的是Factory一定得是接口
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * &amp;lt;/p&amp;gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; */&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Product&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 接口方法，返回产品信息
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     */&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;info&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;ProductA&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;ProductA&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;implements&lt;/span&gt; Product &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;@Override&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;info&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;产品的信息：A&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;ProductB&lt;/code&gt;与&lt;code&gt;ProductA&lt;/code&gt;类似，代码略。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Factory&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * 工厂方法接口
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; */&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Factory&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;    * 接口方法，获取Product
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;    */&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; Product &lt;span style=&#34;color:#a6e22e&#34;&gt;createProduct&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;FactoryA&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * 工厂A
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * &amp;lt;p&amp;gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; *     只负责生产ProductA
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * &amp;lt;/p&amp;gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; */&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;FactoryA&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;implements&lt;/span&gt; Factory &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 实现方法创建ProductA
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     */&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;@Override&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; Product &lt;span style=&#34;color:#a6e22e&#34;&gt;createProduct&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 直接返回ProductA
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; ProductA&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;FactoryB&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * 工厂B
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * &amp;lt;p&amp;gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; *     只负责生产ProductB
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * &amp;lt;/p&amp;gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; */&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;FactoryB&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;implements&lt;/span&gt; Factory &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 实现方法创建ProductB
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     */&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;@Override&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; Product &lt;span style=&#34;color:#a6e22e&#34;&gt;createProduct&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#75715e&#34;&gt;// 直接返回ProductB
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; ProductB&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;测试方法：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;FactoryMethod&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; args&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        Factory factory &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; FactoryA&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+        Product productA &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; factory&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;createProduct&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+        productA&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;info&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+
+        factory &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; FactoryB&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+        Product productB &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; factory&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;createProduct&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+        productB&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;info&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Factory Method模式适用于：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;当一个类&lt;u&gt;不知道它所必须创建的对象的类&lt;/u&gt;的时候。&lt;/li&gt;
-&lt;li&gt;当一个类&lt;u&gt;希望由它的子类来指定它所创建的对象&lt;/u&gt;的时候。&lt;/li&gt;
+&lt;li&gt;当一个类&lt;u&gt;不知道它所必须创建的对象的类&lt;/u&gt;（不知道要创建的具体类）的时候。&lt;/li&gt;
+&lt;li&gt;当一个类希望&lt;u&gt;由它的子类来指定它所创建的对象&lt;/u&gt;的时候。&lt;/li&gt;
 &lt;li&gt;当类&lt;u&gt;将创建对象的职责委托给多个帮助子类中的某一个&lt;/u&gt;，并且你希望将哪一个&lt;u&gt;帮助子类是代理者&lt;/u&gt;这一信息局部化的时候。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;关键词：&lt;u&gt;子类指定创建对象&lt;/u&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
 &lt;p&gt;工厂模式：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;特点：用户类和工厂类分开。&lt;/li&gt;
@@ -11300,7 +11376,7 @@ $$&lt;/p&gt;
 &lt;h3 id=&#34;抽象工厂模式&#34;&gt;抽象工厂模式&lt;/h3&gt;
 &lt;p&gt;抽象工厂（Abstract Factory）提供一个&lt;u&gt;创建一系列相关或相互依赖对象的接口&lt;/u&gt;，而&lt;u&gt;无须指定它们具体的类&lt;/u&gt;。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;即提供对象的接口，用户无需考虑实现类。&lt;/p&gt;
+&lt;p&gt;抽象工厂的工厂类是&lt;code&gt;abstract class&lt;/code&gt;（抽象类），工厂方法是&lt;code&gt;interface&lt;/code&gt;。抽象工厂可以创建更多的类。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;抽象工厂模式的结构：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682230457950.png&#34;
@@ -11324,39 +11400,73 @@ $$&lt;/p&gt;
 &lt;li&gt;&lt;code&gt;ConcreteProduct&lt;/code&gt;：定义一个将被相应的具体工厂创建的产品对象，实现&lt;code&gt;AbstractProduct&lt;/code&gt;接口。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Client&lt;/code&gt;：仅使用由&lt;code&gt;AbstractFactory&lt;/code&gt;和&lt;code&gt;AbstractProduct&lt;/code&gt;类声明的接口。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Abstract Factory模式适用于：&lt;/p&gt;
+&lt;p&gt;代码示例：&lt;/p&gt;
+&lt;p&gt;创建两个产品接口&lt;code&gt;ProductA&lt;/code&gt;和&lt;code&gt;ProductB&lt;/code&gt;，并分别创建这两个产品接口的实现类&lt;code&gt;ProductA1&lt;/code&gt;和&lt;code&gt;ProductA2&lt;/code&gt;以及&lt;code&gt;ProductB1&lt;/code&gt;和&lt;code&gt;ProductB2&lt;/code&gt;。代码略。需要注意的是这里&lt;code&gt;ProductA&lt;/code&gt;和&lt;code&gt;ProductB&lt;/code&gt;代表两种不同的产品，它们的类型可以完全不相同。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Factory&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Factory&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 接口方法获取ProductA
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     */&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; ProductA &lt;span style=&#34;color:#a6e22e&#34;&gt;createProductA&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 接口方法获取ProductB
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     */&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; ProductB &lt;span style=&#34;color:#a6e22e&#34;&gt;createProductB&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;Factory1&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * 工厂1创建产品ProductA1和ProductB1
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; */&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Factory1&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;implements&lt;/span&gt; Factory &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 创建产品ProductA1
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     */&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;@Override&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; ProductA &lt;span style=&#34;color:#a6e22e&#34;&gt;createProductA&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; ProductA1&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 创建产品ProductB1
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     */&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;@Override&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; ProductB &lt;span style=&#34;color:#a6e22e&#34;&gt;createProductB&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; ProductB1&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;Factory2&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * 工厂2创建产品ProductA2和ProductB2
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; */&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Factory2&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;implements&lt;/span&gt; Factory &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;/* 代码与Factory1类似，略 */&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;测试类：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;AbstractFactory&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; args&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        Factory factory &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Factory1&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+        ProductA productA1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; factory&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;createProductA&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+        ProductB productB1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; factory&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;createProductB&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+        productA1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;info&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+        productB1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;info&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+
+        factory &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Factory2&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+        ProductA productA2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; factory&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;createProductA&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+        ProductB productB2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; factory&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;createProductB&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+        productA2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;info&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+        productB2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;info&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Abstract Factory模式适用于：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;一个系统要&lt;strong&gt;独立&lt;/strong&gt;于它的&lt;strong&gt;产品的创建&lt;/strong&gt;、&lt;strong&gt;组合&lt;/strong&gt;和&lt;strong&gt;表示&lt;/strong&gt;时。&lt;/li&gt;
+&lt;li&gt;一个系统要&lt;u&gt;独立于它的产品的创建、&lt;strong&gt;组合&lt;/strong&gt;和表示&lt;/u&gt;时。&lt;/li&gt;
 &lt;li&gt;一个系统要由&lt;u&gt;多个产品系列中的一个来配置&lt;/u&gt;时。&lt;/li&gt;
 &lt;li&gt;当要强调&lt;u&gt;一系列相关的产品&lt;/u&gt;对象的设计以便进行&lt;u&gt;联合使用&lt;/u&gt;时。&lt;/li&gt;
 &lt;li&gt;当提供一个&lt;u&gt;产品类库&lt;/u&gt;，只想&lt;u&gt;显示它们的接口而不是实现&lt;/u&gt;时。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;题目选项描述：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;提供创建一系列相关或相互依赖的对象的接口，而无需指定这些对象所属的具体类。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;当一个系统应该独立于它的产品创建、构成和表示时。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;当要强调一系列相关的产品对象的设计以便进行联合使用时。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;一个系统要由多个产品系列中的一个来配置时。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;为图形用户界面（GUI）组件定义不同平台的并行类层次结构。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;不同平台的GUI组件，使用同样的接口，根据平台使用不同的实现。
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;关键词：&lt;u&gt;系列&lt;/u&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;抽象工厂模式：核心工厂类不再负责所有产品的创建，而是将具体创建的工作交给子类去做。它仅负责给存储具体工厂类必须实现的接口。&lt;/p&gt;
-&lt;h3 id=&#34;生成器建造者模式&#34;&gt;生成器（建造者）模式&lt;/h3&gt;
-&lt;p&gt;生成器（Builder，建造者）模式将一个&lt;u&gt;复杂对象的&lt;strong&gt;构建&lt;/strong&gt;与它的&lt;strong&gt;表示&lt;/strong&gt;分离&lt;/u&gt;，使得&lt;u&gt;同样的构建过程可以创建不同的表示&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;抽象工厂模式：核心工厂类不再负责所有产品的创建，而是将具体创建的工作交给子类（具体工厂）去做。它仅负责给存储具体工厂类必须实现的接口。&lt;/p&gt;
+&lt;h3 id=&#34;生成器模式&#34;&gt;生成器模式&lt;/h3&gt;
+&lt;p&gt;生成器（Builder，&lt;strong&gt;建造者&lt;/strong&gt;）模式将一个&lt;u&gt;复杂对象的&lt;strong&gt;构建&lt;/strong&gt;与它的&lt;strong&gt;表示&lt;/strong&gt;分离&lt;/u&gt;，使得&lt;u&gt;同样的构建过程可以创建不同的表示&lt;/u&gt;。&lt;/p&gt;
 &lt;p&gt;生成器模式结构：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682231345251.png&#34;
 	width=&#34;729&#34;
@@ -11378,30 +11488,100 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;Builder&lt;/code&gt;：为创建一个&lt;code&gt;Product&lt;/code&gt;对象的各个部件指定抽象接口。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;BuildPart()&lt;/code&gt;：生成零件。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;ConcreteBuilder&lt;/code&gt;：实现&lt;code&gt;Builder&lt;/code&gt;的接口以构造和装配该产品的各个部件，定义并明确它所创建的表示，提供一个检索产品的接口。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;ConcreteBuilder&lt;/code&gt;创建&lt;code&gt;Product&lt;/code&gt;对象产品的内部表示并定义它的装配过程。包含定义组成组件的类，包括将这些组件装配成最终产品的接口。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;GetResult()&lt;/code&gt;：获取生成（组装完成）的产品。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;code&gt;Director&lt;/code&gt;：构造一个使用&lt;code&gt;Builder&lt;/code&gt;接口的对象。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Director&lt;/code&gt;：构造一个使用&lt;code&gt;Builder&lt;/code&gt;接口的对象。最终是使用&lt;code&gt;Director&lt;/code&gt;来构造&lt;code&gt;Product&lt;/code&gt;。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Builder模式适用于：&lt;/p&gt;
+&lt;p&gt;代码示例：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Product&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Product&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; List&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; parts &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; ArrayList&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;gt;();&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;// 零件
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 添加零件
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * @param part 要添加的零件
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     */&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;String part&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        parts&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;part&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;@Override&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;toString&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Product{&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;parts=&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; parts &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;}&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;Builder&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;abstract&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Builder&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 生成产品零件
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     */&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;abstract&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;buildPart&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+
+    &lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 获取结果
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     */&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;abstract&lt;/span&gt; Product &lt;span style=&#34;color:#a6e22e&#34;&gt;getResult&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;Builder1&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Builder1&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;extends&lt;/span&gt; Builder &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; Product product &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Product&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;@Override&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;buildPart&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        product&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;A&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+        product&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;B&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+        product&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;C&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+        product&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;D&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+        product&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;E&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+        product&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;add&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;F&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;@Override&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; Product &lt;span style=&#34;color:#a6e22e&#34;&gt;getResult&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; product&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;Builder2&lt;/code&gt;与&lt;code&gt;Builder1&lt;/code&gt;类似，略。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Director&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Director&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 根据指定的Builder来生产零件
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * @param builder 指定用来生产零件的Builder
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     */&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;construct&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Builder builder&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        builder&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;buildPart&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;测试：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;BuilderTest&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; args&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        Director director &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Director&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+
+        Builder builder1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Builder1&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+        director&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;construct&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;builder1&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+        Product product1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; builder1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getResult&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+        System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;product1&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+
+        Builder2 builder2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Builder2&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+        director&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;construct&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;builder2&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+        Product product2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; builder2&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getResult&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+        System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;product2&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Builder模式适用于：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;当&lt;u&gt;创建复杂对象的算法&lt;/u&gt;应该&lt;u&gt;独立于该对象的组成部分以及它们的装配方式时&lt;/u&gt;。&lt;/li&gt;
 &lt;li&gt;当&lt;u&gt;构造过程必须允许被构造的对象有不同的表示时&lt;/u&gt;。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;题目选项描述&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;当创建复杂对象的算法应该独立于该对象的组成部分及其装配方式时。&lt;/li&gt;
-&lt;li&gt;当构造过程必须允许被构造的对象有不同的表示时。&lt;/li&gt;
-&lt;li&gt;将一个复杂对象的构建与其表示分离，使得同样的构建过程可以创建不同的表示。&lt;/li&gt;
-&lt;li&gt;适用于抽象复杂对象的构建步骤和基于构建过程的具体实现构建复杂对象的不同表示。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;关键词：&lt;u&gt;复杂对象、不同表示&lt;/u&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
 &lt;h3 id=&#34;原型模式&#34;&gt;原型模式&lt;/h3&gt;
 &lt;p&gt;原型（Prototype）模式用&lt;u&gt;原型实例指定创建对象的种类&lt;/u&gt;，并且&lt;u&gt;通过复制这些原型创建新的对象&lt;/u&gt;。&lt;/p&gt;
 &lt;p&gt;原型模式结构：&lt;/p&gt;
@@ -11424,12 +11604,62 @@ $$&lt;/p&gt;
 &lt;li&gt;&lt;code&gt;ConcretePrototype&lt;/code&gt;：实现一个复制自身的操作。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Client&lt;/code&gt;：让一个原型复制自身从而创建一个新的对象。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Prototype模式适用于：&lt;/p&gt;
+&lt;p&gt;代码示例：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Prototype&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;interface&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Prototype&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 克隆方法
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * @return
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     */&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; Object &lt;span style=&#34;color:#a6e22e&#34;&gt;clone&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;Product&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Product&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;implements&lt;/span&gt; Prototype &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; Integer id&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; Double price&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;   &lt;span style=&#34;color:#75715e&#34;&gt;// 价格
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Product&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Product&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Integer id&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; Double price&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;id&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; id&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;price&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; price&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;@Override&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; Object &lt;span style=&#34;color:#a6e22e&#34;&gt;clone&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        Product object &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Product&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;// 这里也可以直接使用带参的构造方法，而不必使用setter
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;        object&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setId&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;id&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+        object&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setPrice&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;this&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;price&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; object&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#75715e&#34;&gt;// 省略 getter, setter
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#a6e22e&#34;&gt;@Override&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; String &lt;span style=&#34;color:#a6e22e&#34;&gt;toString&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Product{&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id=&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; id &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;, price=&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; price &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt;
+                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;}&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;测试：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;PrototypeTest&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; args&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        Product product1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Product&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;2023&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; 5&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;22&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+        System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;product1: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; product1&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+
+        Product product2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;Product&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; product1&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;clone&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+        System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;product2: &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; product2&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Prototype模式适用于：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;当一个系统应该独立于它的产品创建、构成和表示时。&lt;/li&gt;
-&lt;li&gt;当要实例化的类是在运行时刻指定时，例如，通过动态装载。&lt;/li&gt;
-&lt;li&gt;为了避免创建一个与产品类层次平行的工厂类层次时。&lt;/li&gt;
-&lt;li&gt;当一个类的实例只能有几个不同状态组合中的一种时。建立相应数目的原型并克隆它们，可能比每次用合适的状态手工实例化该类更方便一些。&lt;/li&gt;
+&lt;li&gt;当一个系统应该&lt;u&gt;独立于它的产品创建、&lt;strong&gt;构成&lt;/strong&gt;和表示&lt;/u&gt;时。&lt;/li&gt;
+&lt;li&gt;当要实例化的类是在&lt;u&gt;运行时刻指定&lt;/u&gt;时，例如，通过动态装载。&lt;/li&gt;
+&lt;li&gt;为了&lt;u&gt;避免创建&lt;/u&gt;一个&lt;u&gt;与产品类层次平行的工厂类层次&lt;/u&gt;时。&lt;/li&gt;
+&lt;li&gt;当一个类的&lt;u&gt;实例只能有几个不同状态组合中的一种&lt;/u&gt;时。建立相应数目的原型并克隆它们，可能比每次用合适的状态手工实例化该类更方便一些。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;原型模式：&lt;/p&gt;
 &lt;ul&gt;
@@ -11437,10 +11667,10 @@ $$&lt;/p&gt;
 &lt;li&gt;优点：允许动态的增加或减少产品类，产品类不需要非得有任何事先确定的等级结构，原始模型模式适用于任何的等级结构。&lt;/li&gt;
 &lt;li&gt;缺点：每一个类都必须配备一个克隆方法。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;单例单态模式&#34;&gt;单例（单态）模式&lt;/h3&gt;
+&lt;h3 id=&#34;单例模式&#34;&gt;单例模式&lt;/h3&gt;
 &lt;p&gt;单例（Singleton，单态）模式保证&lt;u&gt;一个类仅有一个实例&lt;/u&gt;，并&lt;u&gt;提供一个访问它的全局访问点&lt;/u&gt;。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;就好像Spring中的Bean，每个Bean有且仅有一个实例，通过&lt;code&gt;@Autowired&lt;/code&gt;自动装配（来访问）。&lt;/p&gt;
+&lt;p&gt;就好像Spring中的Bean，每个Bean默认有且仅有一个实例，通过&lt;code&gt;@Autowired&lt;/code&gt;自动装配（来访问）。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;单例模式结构：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682233866165.png&#34;
@@ -11461,14 +11691,45 @@ $$&lt;/p&gt;
 &lt;li&gt;&lt;code&gt;Singleton&lt;/code&gt;：指定一个&lt;code&gt;Instance&lt;/code&gt;操作，允许客户访问它的唯一实例。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;Instance&lt;/code&gt;：是一个类操作；可能负责创建它自己的唯一实例。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Singleton模式适用于：&lt;/p&gt;
+&lt;p&gt;代码示例：&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Singleton&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Singleton&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;// 在内部示例化
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; Singleton instance &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Singleton&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+
+    &lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 定义私有的构造方法，让其它外部类无法通过构造方法示例化对象
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     */&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Singleton&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{}&lt;/span&gt;
+
+    &lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 全局访问方法
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * &amp;lt;p&amp;gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     *     因为该类为单例，所以使用静态方法获取即可
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * &amp;lt;/p&amp;gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     */&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; Singleton &lt;span style=&#34;color:#a6e22e&#34;&gt;getInstance&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; instance&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;测试：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;SingletonTest&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;/**
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     * 验证Singleton是否为单例，打印它的地址即可
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     */&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;String&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt; args&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+        Singleton singleton1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Singleton&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getInstance&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+        System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;singleton1&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+
+        Singleton singleton2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; Singleton&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getInstance&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+        System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;singleton2&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Singleton模式适用于：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;当类&lt;u&gt;只能有一个实例&lt;/u&gt;而且客户可以从一个众所周知的访问点访问它时。&lt;/li&gt;
 &lt;li&gt;当这个&lt;u&gt;唯一实例&lt;/u&gt;应该是通过子类化可扩展的，并且&lt;u&gt;客户无须更改代码就能使用一个扩展的实例&lt;/u&gt;时。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;blockquote&gt;
-&lt;p&gt;关键词：&lt;u&gt;唯一实例、一个实例&lt;/u&gt;。&lt;/p&gt;
-&lt;/blockquote&gt;
 &lt;p&gt;单例模式：确保某一个类只有一个实例，而且自行实例化并向整个系统提供这个实例单例模式。单例模式只应在有真正的“单一实例”的需求时才可使用。&lt;/p&gt;
 &lt;h2 id=&#34;结构型设计模式&#34;&gt;结构型设计模式&lt;/h2&gt;
 &lt;p&gt;结构型设计模式涉及&lt;u&gt;如何组合类或对象以获得更大的结构&lt;/u&gt;。&lt;/p&gt;
@@ -12359,7 +12620,7 @@ $$&lt;/p&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;工厂方法&lt;/strong&gt;&lt;/td&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;动态生产对象&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;定义创建对象的接口，由子类实例化对象。&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;定义创建对象的接口，由子类实例化对象。让类的实例化延迟到其子类。&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;抽象工厂模式&lt;/strong&gt;&lt;/td&gt;
