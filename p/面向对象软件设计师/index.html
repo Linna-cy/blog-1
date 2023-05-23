@@ -338,13 +338,13 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 58 分钟
+                    阅读时长: 59 分钟
                 </time>
                 |
             </div>
         
 
-        <div class="article-time--reading">共28897字</div>
+        <div class="article-time--reading">共29494字</div>
     </footer>
     
 
@@ -1930,6 +1930,10 @@
 </ul>
 <hr>
 <h1 id="设计模式">设计模式</h1>
+<blockquote>
+<p>设计模式代码仓库：<a class="link" href="https://gitee.com/linner_cheng/design-patterns"  target="_blank" rel="noopener"
+    >https://gitee.com/linner_cheng/design-patterns</a></p>
+</blockquote>
 <p>每一个设计模式描述了一个在我们周围不断重复发生的问题，以及该问题的解决方案的核心。使用设计模式能减少一些重复劳动。设计模式的核心在于提供了相关问题的解决方案，使得人们可以更加简单方便地<u>复用成功的设计和体系结构</u>。</p>
 <p>设计模式一般有以下4个要素：</p>
 <ul>
@@ -3152,28 +3156,62 @@
 </ul>
 </li>
 </ul>
-<p>Facade模式适用于：</p>
+<p>代码示例：</p>
+<p><code>SubSystem1</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SubSystem1</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">method1</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;执行子系统1的功能&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>SubSystem2</code>和<code>SubSystem3</code>与<code>SubSystem1</code>类似，代码略。</p>
+<p><code>Facade</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Facade</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">private</span> SubSystem1 subSystem1<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> SubSystem2 subSystem2<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">private</span> SubSystem3 subSystem3<span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Facade</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        subSystem1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SubSystem1<span style="color:#f92672">();</span>
+        subSystem2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SubSystem2<span style="color:#f92672">();</span>
+        subSystem3 <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SubSystem3<span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">methodA</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        subSystem1<span style="color:#f92672">.</span><span style="color:#a6e22e">method1</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">methodB</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        subSystem2<span style="color:#f92672">.</span><span style="color:#a6e22e">method2</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">methodC</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        subSystem3<span style="color:#f92672">.</span><span style="color:#a6e22e">method3</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>测试：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FacadePattern</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        Facade facade <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Facade<span style="color:#f92672">();</span>
+
+        facade<span style="color:#f92672">.</span><span style="color:#a6e22e">methodA</span><span style="color:#f92672">();</span>
+        facade<span style="color:#f92672">.</span><span style="color:#a6e22e">methodB</span><span style="color:#f92672">();</span>
+        facade<span style="color:#f92672">.</span><span style="color:#a6e22e">methodC</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Facade模式适用于：</p>
 <ul>
 <li>
 <p>Facade可以提供一个简单的默认视图，供大多数用户使用。</p>
-<p>要为一个复杂子系统提供一个简单接口时，子系统往往因为不断演化而变得越来越复杂。大多数模式使用时都会产生更多更小的类，这使得子系统更具有可重用性，也更容易对子系统进行定制，但也给那些不需要定制子系统的用户带来一些使用上的困难。</p>
+<p>要<u>为一个复杂子系统提供一个简单接口</u>时，子系统往往因为不断演化而变得越来越复杂。大多数模式使用时都会产生更多更小的类，这使得子系统更具有可重用性，也更容易对子系统进行定制，但也给那些不需要定制子系统的用户带来一些使用上的困难。</p>
 <p>Facade提供的简单默认视图对大多数用户来说已经足够，而那些需要更多的可定制性的用户可以越过Facade层。</p>
 </li>
 <li>
-<p><u>客户程序</u>与<u>抽象类的实现</u>部分之间<u>存在着很大的依赖性</u>。<u>引入Facade将这个子系统与客户以及其他的子系统分离，可以提高子系统的独立性和可移植性。</u></p>
+<p><u>客户程序与抽象类的实现部分之间存在着很大的依赖性</u>。引入Facade将这个子系统与客户以及其他的子系统分离，可以<u>提高子系统的独立性和可移植性</u>。</p>
 </li>
 <li>
-<p>当需要<u>构建一个层次结构的子系统</u>时，使用<u>Facade模式定义子系统中每层的入口点</u>。如果<u>子系统之间是相互依赖的</u>，则可以<u>让它们仅通过Facade进行通信，从而简化了它们之间的依赖关系</u>。</p>
+<p>当需要<u>构建一个层次结构的子系统</u>时，<u>使用Facade模式定义子系统中每层的入口点</u>。如果子系统之间是相互依赖的，则可以让它们仅通过Facade进行通信，从而<u>简化了它们之间的依赖关系</u>。</p>
 </li>
 </ul>
-<blockquote>
-<p>题目选项描述：</p>
-<ul>
-<li>将一系列对象加以包装以简化其接口。</li>
-<li>需要为一个复杂子系统提供一个简单接口。</li>
-</ul>
-<p>关键词：<u>简化接口、复杂子系统</u>。</p>
-</blockquote>
 <p>外观模式：外部与一个子系统的通信必须通过一个统一的门面对象进行。</p>
 <p>外观模式提供一个高层次的接口，使得子系统更易于使用：</p>
 <ul>
@@ -3181,7 +3219,10 @@
 <li>整个系统可以有多个门面类。</li>
 </ul>
 <h3 id="享元模式">享元模式</h3>
-<p>享元（Flyweight）模式运用共享技术有效地支持大量细粒度的对象。</p>
+<p>享元（Flyweight）模式<u>运用共享技术有效地支持大量细粒度的对象</u>。</p>
+<blockquote>
+<p>细粒度对象：在业务模型上，按照业务需求将对象加以细分，从而得到更多的业务模型对象。</p>
+</blockquote>
 <p>享元模式的结构：</p>
 <p><img src="/p/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682305434953.png"
 	width="870"
@@ -3216,11 +3257,73 @@
 <p><code>Client</code>：维持一个对<code>Flyweight</code>的引用；计算或存储一个或多个<code>Flyweight</code>的外部状态。</p>
 </li>
 </ul>
-<p>Flyweight模式适用于：</p>
+<p>代码示例：</p>
+<p><code>Piece</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Piece</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">protected</span> String color<span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> x<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> y<span style="color:#f92672">);</span>
+
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getColor</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> color<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>WhitePiece</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WhitePiece</span> <span style="color:#66d9ef">extends</span> Piece <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">WhitePiece</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">color</span> <span style="color:#f92672">=</span> PieceFactory<span style="color:#f92672">.</span><span style="color:#a6e22e">WHITE</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">draw</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> x<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> y<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 打印地址和坐标信息
+</span><span style="color:#75715e"></span>        String piece <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;WhitePiece@&#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">hashCode</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;{&#39;</span> <span style="color:#f92672">+</span>
+                       <span style="color:#e6db74">&#34;x=&#34;</span> <span style="color:#f92672">+</span> x <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;, &#34;</span> <span style="color:#f92672">+</span>
+                       <span style="color:#e6db74">&#34;y=&#34;</span> <span style="color:#f92672">+</span> y <span style="color:#f92672">+</span>
+                       <span style="color:#e6db74">&#39;}&#39;</span><span style="color:#f92672">;</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>piece<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>BlackPiece</code>与<code>WhitePiece</code>类似，代码略。</p>
+<p><code>PieceFactory</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">PieceFactory</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> String WHITE <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;white&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">final</span> String BLACK <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;black&#34;</span><span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">private</span> Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Piece<span style="color:#f92672">&gt;</span> piecesMap <span style="color:#f92672">=</span> Map<span style="color:#f92672">.</span><span style="color:#a6e22e">of</span><span style="color:#f92672">(</span>
+            WHITE<span style="color:#f92672">,</span> <span style="color:#66d9ef">new</span> WhitePiece<span style="color:#f92672">(),</span>
+            BLACK<span style="color:#f92672">,</span> <span style="color:#66d9ef">new</span> BlackPiece<span style="color:#f92672">());</span>
+
+    <span style="color:#66d9ef">public</span> Piece <span style="color:#a6e22e">getPiece</span><span style="color:#f92672">(</span>String key<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> piecesMap<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>key<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>测试：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Flyweight</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        PieceFactory factory <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> PieceFactory<span style="color:#f92672">();</span>
+
+        Piece whitePiece1 <span style="color:#f92672">=</span> factory<span style="color:#f92672">.</span><span style="color:#a6e22e">getPiece</span><span style="color:#f92672">(</span>PieceFactory<span style="color:#f92672">.</span><span style="color:#a6e22e">WHITE</span><span style="color:#f92672">);</span>
+        whitePiece1<span style="color:#f92672">.</span><span style="color:#a6e22e">draw</span><span style="color:#f92672">(</span>20<span style="color:#f92672">,</span> 23<span style="color:#f92672">);</span>
+        Piece whitePiece2 <span style="color:#f92672">=</span> factory<span style="color:#f92672">.</span><span style="color:#a6e22e">getPiece</span><span style="color:#f92672">(</span>PieceFactory<span style="color:#f92672">.</span><span style="color:#a6e22e">WHITE</span><span style="color:#f92672">);</span>
+        whitePiece2<span style="color:#f92672">.</span><span style="color:#a6e22e">draw</span><span style="color:#f92672">(</span>5<span style="color:#f92672">,</span> 27<span style="color:#f92672">);</span>
+
+        Piece blackPiece1 <span style="color:#f92672">=</span> factory<span style="color:#f92672">.</span><span style="color:#a6e22e">getPiece</span><span style="color:#f92672">(</span>PieceFactory<span style="color:#f92672">.</span><span style="color:#a6e22e">BLACK</span><span style="color:#f92672">);</span>
+        blackPiece1<span style="color:#f92672">.</span><span style="color:#a6e22e">draw</span><span style="color:#f92672">(</span>20<span style="color:#f92672">,</span> 22<span style="color:#f92672">);</span>
+        Piece blackPiece2 <span style="color:#f92672">=</span> factory<span style="color:#f92672">.</span><span style="color:#a6e22e">getPiece</span><span style="color:#f92672">(</span>PieceFactory<span style="color:#f92672">.</span><span style="color:#a6e22e">BLACK</span><span style="color:#f92672">);</span>
+        blackPiece2<span style="color:#f92672">.</span><span style="color:#a6e22e">draw</span><span style="color:#f92672">(</span>5<span style="color:#f92672">,</span> 28<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Flyweight模式适用于：</p>
 <ul>
 <li>一个应用程序<u>使用了大量的对象</u>。</li>
 <li>完全由于<u>使用大量的对象，造成很大的存储开销</u>。</li>
-<li>对象的<u>大多数状态都可变为外部状态</u>。</li>
+<li>对象的<u>大多数状态都可变为外部状态</u>。
+<ul>
+<li>外部状态：容易发生改变的状态；</li>
+<li>内部状态：不容易发生改变的状态。</li>
+</ul>
+</li>
 <li>如果<u>删除对象的外部状态</u>，那么<u>可以用相对较少的共享对象取代很多组对象</u>。</li>
 </ul>
 <p>享元模式能做到共享的关键是区分状态：</p>
@@ -3264,7 +3367,49 @@
 <p><code>RealSubject</code>：定义<code>Proxy</code>所代表的实体。</p>
 </li>
 </ul>
-<p>Proxy模式适用于在需要比较通用和复杂的对象指针代替简单的指针的时候，常见情况有:</p>
+<p>代码示例：</p>
+<p><code>Subject</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">Subject</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">request</span><span style="color:#f92672">();</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>RealSubject</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 代理实体
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RealSubject</span> <span style="color:#66d9ef">implements</span> Subject <span style="color:#f92672">{</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">request</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;RealSubject request...&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>Proxy</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 代理
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Proxy</span> <span style="color:#66d9ef">implements</span> Subject <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">protected</span> RealSubject realSubject<span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Proxy</span><span style="color:#f92672">(</span>RealSubject realSubject<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">realSubject</span> <span style="color:#f92672">=</span> realSubject<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">request</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Proxy pre-request...&#34;</span><span style="color:#f92672">);</span>
+        realSubject<span style="color:#f92672">.</span><span style="color:#a6e22e">request</span><span style="color:#f92672">();</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Proxy post-request...&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>测试：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ProxyPattern</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        RealSubject realSubject <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> RealSubject<span style="color:#f92672">();</span>
+        Proxy proxy <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Proxy<span style="color:#f92672">(</span>realSubject<span style="color:#f92672">);</span>
+
+        proxy<span style="color:#f92672">.</span><span style="color:#a6e22e">request</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Proxy模式适用于在需要比较通用和复杂的对象指针代替简单的指针的时候，常见情况有:</p>
 <ul>
 <li>
 <p>远程代理（Remote Proxy）：为一个对象在不同地址空间提供局部代表。</p>
