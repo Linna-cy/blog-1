@@ -133,7 +133,7 @@ $$&lt;/p&gt;
 &lt;li&gt;优点：&lt;strong&gt;可以随机存取表中的元素&lt;/strong&gt;，不需要额外的存储空间来表达元素之间的逻辑关系；&lt;/li&gt;
 &lt;li&gt;缺点：&lt;strong&gt;插入和删除操作不方便、效率低、比较耗时&lt;/strong&gt;（&lt;strong&gt;插入和删除操作需要移动元素&lt;/strong&gt;），顺序表的长度是固定的。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;在表厂为$n$的线性表中，有$n+1$个插入位置（不考虑插入是否会导致溢出）：&lt;/p&gt;
+&lt;p&gt;在表为$n$的线性表中，有$n+1$个插入位置（不考虑插入是否会导致溢出）：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;在第$i$个插入位置插入，需要移动$n+1-i$个元素。&lt;/p&gt;
