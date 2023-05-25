@@ -191,6 +191,9 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;P减V加，P进V出。&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;利用PV操作实现进程的互斥：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;令信号量&lt;code&gt;mutex&lt;/code&gt;的初始值为1；&lt;/li&gt;

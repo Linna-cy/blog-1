@@ -344,7 +344,7 @@
             </div>
         
 
-        <div class="article-time--reading">共29054字</div>
+        <div class="article-time--reading">共29058字</div>
     </footer>
     
 
@@ -1410,7 +1410,7 @@ $$</p>
 <li>$S \ge 0$：表示某资源的可用数，此时<strong>有可用资源</strong>；</li>
 <li>$S &lt; 0$：则其绝对值表示阻塞队列中等待该资源的进程数，此时无可用资源，并且有进程被阻塞。</li>
 </ul>
-<p>PV操作：P（申请）减V（释放）加。</p>
+<p>PV操作：P申请V释放，P减V加，P进V出。</p>
 <ul>
 <li>P操作$S &lt; 0$：无可用资源，置该进程为<strong>阻塞</strong>状态。</li>
 <li>V操作$S \le 0$：表示释放前有程序被阻塞，从阻塞状态唤醒一个进程，并将其插入就绪队列。</li>
