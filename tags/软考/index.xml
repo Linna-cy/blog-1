@@ -3774,7 +3774,7 @@ $$&lt;/p&gt;
 &lt;li&gt;DHCP服务器地址&lt;/li&gt;
 &lt;li&gt;默认网关的地址&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;无效地址：&lt;/p&gt;
+&lt;h3 id=&#34;无效地址&#34;&gt;无效地址&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Windows无效地址：169.254.X.X&lt;/p&gt;
@@ -3863,7 +3863,7 @@ $$&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;在IPv4中，全&lt;code&gt;0&lt;/code&gt;代表的是网络，全&lt;code&gt;1&lt;/code&gt;代表的是广播。&lt;/p&gt;
-&lt;p&gt;由于IPv4能表示的地址个数为：&lt;/p&gt;
+&lt;p&gt;IPv4能表示的地址个数为：&lt;/p&gt;
 &lt;p&gt;$$
 2^{32} \approx 40亿
 $$&lt;/p&gt;
