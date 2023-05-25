@@ -17257,7 +17257,7 @@ $$&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;有限自动机识别成功的依据是路跑的通并且跑完后的终点是终态。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;有限自动机识别成功的依据是路跑的通并且跑完后的终点是终态。&lt;/u&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;有向弧中出现如 $a,b$，代表该有向弧输入的值可以为$a$&lt;strong&gt;或&lt;/strong&gt;$b$。即&lt;code&gt;,&lt;/code&gt;代表或。&lt;/p&gt;
 &lt;/blockquote&gt;
