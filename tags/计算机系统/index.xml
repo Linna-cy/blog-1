@@ -138,7 +138,7 @@
 &lt;p&gt;地址寄存器（AR）：保存当前CPU所访问的内存单元的地址。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;指令译码器(ID)。指令包含操作码和地址码两部分，而指令译码器就是对指令中的操作码字段进行分析解释，识别该指令规定的操作，向操作控制器发出具体的控制信号，控制各部件工作，完成所需的功能。&lt;/p&gt;
+&lt;p&gt;指令译码器（ID）：指令包含操作码和地址码两部分，而指令译码器就是对指令中的操作码字段进行分析解释，识别该指令规定的操作，向操作控制器发出具体的控制信号，控制各部件工作，完成所需的功能。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
@@ -154,6 +154,7 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;反码&#34;&gt;反码&lt;/h2&gt;
 &lt;p&gt;最高位为符号位，0表示正号，1表示负号，其余的n-1位表示数值的绝对值。正数的反码与原码相同，负数的反码则是除符号位以外其余各位按位取反。&lt;/p&gt;
+&lt;p&gt;原码特点：0的表示不唯一。&lt;/p&gt;
 &lt;h2 id=&#34;补码&#34;&gt;补码&lt;/h2&gt;
 &lt;p&gt;计算机中的补码是模2补码&lt;/p&gt;
 &lt;p&gt;概念：在一个模运算（Moduler Arithmetic）系统中，同余（Congruence Modulo）的数等价。&lt;/p&gt;
@@ -202,6 +203,8 @@
 	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/%E5%B8%A6%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E8%8C%83%E5%9B%B4_huf86084d3b2fa3b4510a57d1d605f45ba_75716_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/%E5%B8%A6%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E8%8C%83%E5%9B%B4_huf86084d3b2fa3b4510a57d1d605f45ba_75716_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
+		alt=&#34;带符号数的范围&#34;
+	
 	
 		class=&#34;gallery-image&#34; 
 		data-flex-grow=&#34;430&#34;
@@ -245,10 +248,22 @@ $$&lt;/p&gt;
 &lt;p&gt;即，一个校验码要想能够检错和纠错那么它的码距至少是3。&lt;/p&gt;
 &lt;h2 id=&#34;奇偶校验码&#34;&gt;奇偶校验码&lt;/h2&gt;
 &lt;p&gt;奇偶校验（Parity Codes）是通过在编码中增加一位校验位来&lt;u&gt;使编码中1的个数为奇数（奇校验）或者为偶数（偶校验）&lt;/u&gt;。但该编码只能检错，但不能纠错。&lt;/p&gt;
+&lt;p&gt;奇偶校验：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;奇偶校验码码距为2。&lt;/li&gt;
-&lt;li&gt;奇校验：仅检测出代码中奇数位数（奇数个0或1发生错误），不能发现偶数位数出错。偶校验反之。&lt;/li&gt;
-&lt;li&gt;常用的奇偶校验码有3种：水平奇偶校验码、垂直奇偶校验码和水平垂直校验码。&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;码距为2。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;仅检测出代码中奇数位数（奇数个0或1发生错误），不能发现偶数位数出错。&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;奇数 + 偶数 = 奇数
+奇数 + 奇数 = 偶数
+偶数 + 偶数 = 偶数
+偶数 + 奇数 = 奇数
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;即奇数可以改变奇偶性，偶数不能，所以当代码中偶数位出错时，奇偶性不变，无法发现错误。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;常用的奇偶校验码有3种：水平奇偶校验码、垂直奇偶校验码和水平垂直校验码。&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;海明码&#34;&gt;海明码&lt;/h2&gt;
 &lt;p&gt;海明码（Hamming Code）是一种利用奇偶性来&lt;u&gt;检错和纠错&lt;/u&gt;的校验方法。海明码是在数据位之间的特定位置上插入k个校验位，通过扩大码距来实现检错和纠错。设数据位是$n$位，校验位是$k$位，则$n$和$k$必须满足以下关系：&lt;/p&gt;
@@ -427,11 +442,8 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;按存储器工作方式：&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;读/写存储器（RAM）。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;只读存储器：ROM、PROM、EPROM、EEPROM等。&lt;/p&gt;
+&lt;li&gt;读/写存储器（RAM）。&lt;/li&gt;
+&lt;li&gt;只读存储器：ROM、PROM、EPROM、EEPROM等。
 &lt;ul&gt;
 &lt;li&gt;固定只读存储器（ROM）：厂家生产时就写好数据在其中。只能读（用户）不能写。一般用于存放BIOS和微程序控制。&lt;/li&gt;
 &lt;li&gt;可编程读只读存储器（PROM）：其内容可以由用户一次性地写入，写入后不能再修改。&lt;/li&gt;
@@ -504,8 +516,8 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;blockquote&gt;
-&lt;p&gt;发生块冲突从多到少的顺序：直接映像 &amp;gt; 组相联映像 &amp;gt; 全相联映像。
-地址映像都是由硬件自动完成。&lt;/p&gt;
+&lt;p&gt;发生块冲突从多到少的顺序：直接映像 &amp;gt; 组相联映像 &amp;gt; 全相联映像。&lt;/p&gt;
+&lt;p&gt;地址映像都是由硬件自动完成。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;中断&#34;&gt;中断&lt;/h1&gt;
@@ -638,7 +650,7 @@ $$&lt;/p&gt;
 &lt;p&gt;发送方用自己的&lt;u&gt;私钥对摘要进行签名&lt;/u&gt;（加密）。得到数字签名放在密文后一起发送过去。&lt;/p&gt;
 &lt;p&gt;接收方用发送方的&lt;u&gt;公钥对数字签名进行验证&lt;/u&gt;（解密）。如果验证成功则该消息没有被假冒且不能否认，否则该消息的真实性为假冒发送。&lt;/p&gt;
 &lt;h2 id=&#34;数字证书&#34;&gt;数字证书&lt;/h2&gt;
-&lt;p&gt;数字证书是用第三方CA机构使用自己的私钥对用户的公钥签名（加密），来保证这个公钥不被篡改。然后接收方用CA的公钥验证（解密），从而得到用户的公钥。&lt;/p&gt;
+&lt;p&gt;数字证书是第三方CA机构使用自己的私钥对用户的公钥签名（加密），来保证这个公钥不被篡改。然后接收方用CA的公钥验证（解密），从而得到用户的公钥。&lt;/p&gt;
 &lt;h2 id=&#34;加密算法&#34;&gt;加密算法&lt;/h2&gt;
 &lt;p&gt;对称密钥（私钥、私有密钥加密）算法（共享密钥加密算法）：&lt;/p&gt;
 &lt;ul&gt;
