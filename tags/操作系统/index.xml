@@ -7,11 +7,11 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
         <lastBuildDate>Wed, 12 Apr 2023 16:28:00 +0800</lastBuildDate><atom:link href="https://blog.linner.asia/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>操作系统（软件设计师）</title>
-        <link>https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/</link>
+        <title>操作系统篇</title>
+        <link>https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/</link>
         <pubDate>Wed, 12 Apr 2023 16:28:00 +0800</pubDate>
         
-        <guid>https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/</guid>
+        <guid>https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/</guid>
         <description>&lt;h1 id=&#34;概述&#34;&gt;概述&lt;/h1&gt;
 &lt;p&gt;计算机系统由两部分组成：&lt;/p&gt;
 &lt;ul&gt;
@@ -22,10 +22,10 @@
 &lt;p&gt;操作系统（Operating System）目的是为了填补人与机器之间的鸿沟，即建立用户与计算机之间的接口，而为裸机配置的一种系统软件。&lt;/p&gt;
 &lt;p&gt;操作系统也包括了系统软件。&lt;/p&gt;
 &lt;p&gt;操作系统在计算机系统中的地位：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682583172164.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1682583172164.png&#34;
 	width=&#34;309&#34;
 	height=&#34;145&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682583172164_hu95f8d82f9265c9b90d825ec44597f47b_15128_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682583172164_hu95f8d82f9265c9b90d825ec44597f47b_15128_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1682583172164_hu95f8d82f9265c9b90d825ec44597f47b_15128_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1682583172164_hu95f8d82f9265c9b90d825ec44597f47b_15128_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;操作系统在计算机系统中的地位&#34;
@@ -55,10 +55,10 @@
 &lt;p&gt;前驱关系：&lt;/p&gt;
 &lt;p&gt;程序段$P_i$和$P_j$的前趋关系表示成$P_i \rightarrow P_j$，其中，$P_i$是$P_j$的前驱，$P_j$是$P_i$的后继，其含义是：&lt;/p&gt;
 &lt;p&gt;$P_i$执行结束后$P_j$才能执行。例如，输入、计算和输出：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682753834678.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1682753834678.png&#34;
 	width=&#34;358&#34;
 	height=&#34;107&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682753834678_hu6d3bc9d03d4b0ff312250fbf00a60477_10333_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682753834678_hu6d3bc9d03d4b0ff312250fbf00a60477_10333_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1682753834678_hu6d3bc9d03d4b0ff312250fbf00a60477_10333_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1682753834678_hu6d3bc9d03d4b0ff312250fbf00a60477_10333_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;3个结点的前驱图&#34;
@@ -79,10 +79,10 @@
 &lt;p&gt;若在计算机系统中采用多道程序设计技术，则主存中的多道程序可处于并发执行状态。&lt;/p&gt;
 &lt;p&gt;虽然每个作业有前趋关系的各程序段不能在CPU和输入/输出各部件（同一个部件）中并行执行，但是同一个作业内没有前趋关系的程序段或不同作业的程序段可以分别在CPU和各输入/输出部件上（不同部件中）并行执行。&lt;/p&gt;
 &lt;p&gt;例如，某系统中有一个CPU、一台输入设备和一台输出设备，每个作业具有3个程序段输入I&lt;sub&gt;i&lt;/sub&gt;、计算C&lt;sub&gt;i&lt;/sub&gt;和输出P&lt;sub&gt;i&lt;/sub&gt;（i = 1，2，3）。其前驱图如（其中，在同一垂直方向上的作业并行执行）：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682754585700.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1682754585700.png&#34;
 	width=&#34;480&#34;
 	height=&#34;203&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682754585700_hu4b10fcccafa543644054288a5464f60e_23561_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682754585700_hu4b10fcccafa543644054288a5464f60e_23561_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1682754585700_hu4b10fcccafa543644054288a5464f60e_23561_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1682754585700_hu4b10fcccafa543644054288a5464f60e_23561_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;程序并发执行的前驱图&#34;
@@ -108,10 +108,10 @@
 &lt;li&gt;&lt;strong&gt;就绪&lt;/strong&gt;：一个进程获得了除处理机外的一切所需资源，一旦得到处理机即可运行（还未得到）。&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;阻塞&lt;/strong&gt;（等待或睡眠）：一个进程正在等待某一事件发生而暂时停止运行，这时即使把处理机分配给进程也无法运行。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682757000186.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1682757000186.png&#34;
 	width=&#34;314&#34;
 	height=&#34;275&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682757000186_hu9e5c56c8e04acd724f5897dbc39951bf_39384_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682757000186_hu9e5c56c8e04acd724f5897dbc39951bf_39384_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1682757000186_hu9e5c56c8e04acd724f5897dbc39951bf_39384_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1682757000186_hu9e5c56c8e04acd724f5897dbc39951bf_39384_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;进程的三态模型&#34;
@@ -220,10 +220,10 @@
 &lt;li&gt;$S_2$：初值为0，表示缓冲区有产品。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;同步过程如图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1682764456232.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/1682764456232.png&#34;
 	width=&#34;979&#34;
 	height=&#34;310&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1682764456232_hu6e19bc324f149858223ccc26524ab5b3_49832_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1682764456232_hu6e19bc324f149858223ccc26524ab5b3_49832_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/1682764456232_hu6e19bc324f149858223ccc26524ab5b3_49832_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/1682764456232_hu6e19bc324f149858223ccc26524ab5b3_49832_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;PV实现进程同步例子&#34;
@@ -241,10 +241,10 @@
 &lt;li&gt;$S_2$：表示缓冲区是否存有产品，初值为0。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;其同步过程如图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682764884289.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1682764884289.png&#34;
 	width=&#34;550&#34;
 	height=&#34;368&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682764884289_hu368c9d1d9bbd6fc224fbfea4ef2251fc_27674_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682764884289_hu368c9d1d9bbd6fc224fbfea4ef2251fc_27674_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1682764884289_hu368c9d1d9bbd6fc224fbfea4ef2251fc_27674_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1682764884289_hu368c9d1d9bbd6fc224fbfea4ef2251fc_27674_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;n缓冲区的同步&#34;
@@ -276,10 +276,10 @@
 &lt;li&gt;环路条件&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;发生死锁时，在进程资源有向图中必构成环路（每个进程占有了下一个进程申请的一个或多个资源），如：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682766203339.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1682766203339.png&#34;
 	width=&#34;323&#34;
 	height=&#34;242&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682766203339_hud4a0dc9a9e923fd6220edd8b9fb65856_13413_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682766203339_hud4a0dc9a9e923fd6220edd8b9fb65856_13413_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1682766203339_hud4a0dc9a9e923fd6220edd8b9fb65856_13413_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1682766203339_hud4a0dc9a9e923fd6220edd8b9fb65856_13413_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;2个进程死锁的资源有向图&#34;
@@ -346,10 +346,10 @@ $$&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;PV操作使用不当：&lt;/p&gt;
 &lt;p&gt;如图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682767634275.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1682767634275.png&#34;
 	width=&#34;577&#34;
 	height=&#34;290&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682767634275_hue3c28c66fad26634474279e0ad2c7ba2_24056_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682767634275_hue3c28c66fad26634474279e0ad2c7ba2_24056_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1682767634275_hue3c28c66fad26634474279e0ad2c7ba2_24056_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1682767634275_hue3c28c66fad26634474279e0ad2c7ba2_24056_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;PV死锁示例&#34;
@@ -425,10 +425,10 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;假设系统种有三类互斥资源$R_1$、$R_2$和$R_3$，可用资源数分别为8、7和4。在$T_0$时刻系统种有$P_1$、$P_2$、$P_3$、$P_4$和$P_5$这5个进程，这些进程对资源的最大需求量和已分配资源数如图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682941260775.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1682941260775.png&#34;
 	width=&#34;490&#34;
 	height=&#34;231&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682941260775_huc824e9a1db295e8386ae441612171dce_27041_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1682941260775_huc824e9a1db295e8386ae441612171dce_27041_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1682941260775_huc824e9a1db295e8386ae441612171dce_27041_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1682941260775_huc824e9a1db295e8386ae441612171dce_27041_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;进程对资源的最大需求量和已分配资源数&#34;
@@ -678,10 +678,10 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;在为进程分配主存时，将进程中若干页分别装入多个不相邻接的块中。&lt;/p&gt;
 &lt;p&gt;地址结构：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683184749140.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683184749140.png&#34;
 	width=&#34;496&#34;
 	height=&#34;55&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683184749140_huc3516dc5b3afdb66549a0018a9af7acc_4005_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683184749140_huc3516dc5b3afdb66549a0018a9af7acc_4005_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683184749140_huc3516dc5b3afdb66549a0018a9af7acc_4005_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683184749140_huc3516dc5b3afdb66549a0018a9af7acc_4005_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;分页地址结构&#34;
@@ -697,10 +697,10 @@ $$&lt;/p&gt;
 &lt;h2 id=&#34;分段存储管理&#34;&gt;分段存储管理&lt;/h2&gt;
 &lt;p&gt;在分段存储管理方式中，作业的地址空间被划分为若干个段。每个段是一组完整的逻辑信息，例如有主程序段、子程序段、数据段及堆栈段等。每个段都有自己的名字，都是从0开始编址的一段连续的地址空间，各段的长度是不等的。&lt;/p&gt;
 &lt;p&gt;分段系统的地址结构如：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683184796335.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683184796335.png&#34;
 	width=&#34;504&#34;
 	height=&#34;61&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683184796335_hu25a29dab249da34b410fe572ea519567_5391_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683184796335_hu25a29dab249da34b410fe572ea519567_5391_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683184796335_hu25a29dab249da34b410fe572ea519567_5391_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683184796335_hu25a29dab249da34b410fe572ea519567_5391_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;分段的地址结构&#34;
@@ -721,10 +721,10 @@ $$&lt;/p&gt;
 &lt;li&gt;将每个段划分成若干页，以页框为单位离散分配。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;段页式地址空间的结构：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683185435872.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683185435872.png&#34;
 	width=&#34;507&#34;
 	height=&#34;59&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683185435872_hudceecbbea023b28d9d0b4202d398bc34_6863_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683185435872_hudceecbbea023b28d9d0b4202d398bc34_6863_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683185435872_hudceecbbea023b28d9d0b4202d398bc34_6863_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683185435872_hudceecbbea023b28d9d0b4202d398bc34_6863_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;段页式的地址结构&#34;
@@ -745,10 +745,10 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;单缓冲&#34;&gt;单缓冲&lt;/h3&gt;
 &lt;p&gt;单缓冲工作过程图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683187166221.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683187166221.png&#34;
 	width=&#34;601&#34;
 	height=&#34;138&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683187166221_hu2e2de07b65dca5af28bd1f31f21a9e74_17060_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683187166221_hu2e2de07b65dca5af28bd1f31f21a9e74_17060_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683187166221_hu2e2de07b65dca5af28bd1f31f21a9e74_17060_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683187166221_hu2e2de07b65dca5af28bd1f31f21a9e74_17060_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;单缓冲工作过程图&#34;
@@ -760,10 +760,10 @@ $$&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;当第1块数据送入用户工作区后（进行数据处理），缓冲区是空闲的，可以传送第2块数据（输入）。即第1块数据的处理$C_1$与第2块数据的输入$T_2$是可以并行的，以此类推：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683189558038.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683189558038.png&#34;
 	width=&#34;1251&#34;
 	height=&#34;272&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683189558038_huf41226c97da8111160feca89ef09c095_5839_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683189558038_huf41226c97da8111160feca89ef09c095_5839_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683189558038_huf41226c97da8111160feca89ef09c095_5839_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683189558038_huf41226c97da8111160feca89ef09c095_5839_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;单缓冲并行工作示意图&#34;
@@ -786,10 +786,10 @@ $$&lt;/p&gt;
 &lt;h3 id=&#34;双缓冲&#34;&gt;双缓冲&lt;/h3&gt;
 &lt;p&gt;双缓冲进一步加快了I/O的速度，提高了设备的利用率。其工作基本过程是在设备输入时，先将数据输入到缓冲区1，装满后便转向缓冲区2。&lt;/p&gt;
 &lt;p&gt;双缓冲工作过程图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683187304566.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683187304566.png&#34;
 	width=&#34;586&#34;
 	height=&#34;141&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683187304566_hu42e162687d638192c0899ff8af8eca78_27945_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683187304566_hu42e162687d638192c0899ff8af8eca78_27945_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683187304566_hu42e162687d638192c0899ff8af8eca78_27945_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683187304566_hu42e162687d638192c0899ff8af8eca78_27945_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;双缓冲工作过程图&#34;
@@ -801,10 +801,10 @@ $$&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;双缓冲的工作特点是，可以实现对缓冲中数据的输入$T$和提取$M$，与CPU的计算$C$，三者并行工作：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683189296831.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683189296831.png&#34;
 	width=&#34;1147&#34;
 	height=&#34;257&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683189296831_hu582c92cd9e0fed45f58d15d99767bd10_23747_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683189296831_hu582c92cd9e0fed45f58d15d99767bd10_23747_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683189296831_hu582c92cd9e0fed45f58d15d99767bd10_23747_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683189296831_hu582c92cd9e0fed45f58d15d99767bd10_23747_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;双缓冲并行工作示意图&#34;
@@ -868,10 +868,10 @@ $$&lt;/p&gt;
 &lt;p&gt;对于情况1和2，旋转调度总是让首先到达读/写磁头位置下的扇区先进行传送操作：对于情况3，旋转调度可以任选一个读/写磁头位置下的扇区进行传送操作。&lt;/p&gt;
 &lt;p&gt;例如：&lt;/p&gt;
 &lt;p&gt;假设磁盘旋转速度为20ms/圈，每读一个记录后处理需要4ms。若格式化时每个磁道被分为10个扇区，有10个逻辑记录存放在同一磁道上，其排序顺序如下图所示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683254658689.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683254658689.png&#34;
 	width=&#34;799&#34;
 	height=&#34;84&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683254658689_hu487242034338a061bdbac38b652b0fd8_18129_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683254658689_hu487242034338a061bdbac38b652b0fd8_18129_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683254658689_hu487242034338a061bdbac38b652b0fd8_18129_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683254658689_hu487242034338a061bdbac38b652b0fd8_18129_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;旋转调度算法例题排序表&#34;
@@ -884,10 +884,10 @@ $$&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;p&gt;初始时读写头停在记录A处，程序顺序处理这些记录（A～J）。&lt;/p&gt;
 &lt;p&gt;顺序处理完这些记录的总时间：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683268410250.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683268410250.png&#34;
 	width=&#34;322&#34;
 	height=&#34;311&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683268410250_hua6d0da9a28446871d2f3485a4e0dfcf2_31100_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683268410250_hua6d0da9a28446871d2f3485a4e0dfcf2_31100_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683268410250_hua6d0da9a28446871d2f3485a4e0dfcf2_31100_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683268410250_hua6d0da9a28446871d2f3485a4e0dfcf2_31100_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;初始逻辑记录分布情况&#34;
@@ -915,10 +915,10 @@ $$&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;记录优化分布方案：&lt;/p&gt;
 &lt;p&gt;让下一个要读取的记录，刚好在上一个记录处理完成后读写头所停的扇区。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683268275593.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683268275593.png&#34;
 	width=&#34;370&#34;
 	height=&#34;358&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683268275593_hu1fd7a0d7b66c86301a4701cd6064b2ca_34524_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683268275593_hu1fd7a0d7b66c86301a4701cd6064b2ca_34524_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683268275593_hu1fd7a0d7b66c86301a4701cd6064b2ca_34524_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683268275593_hu1fd7a0d7b66c86301a4701cd6064b2ca_34524_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;优化后记录的分布情况&#34;
@@ -957,10 +957,10 @@ $$&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;直接索引&lt;/strong&gt;：索引表中的地址项直接指向磁盘数据块。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683271855209.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683271855209.png&#34;
 	width=&#34;670&#34;
 	height=&#34;659&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683271855209_huf7e40bf65f513be949eb336b71dc4ea2_12373_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683271855209_huf7e40bf65f513be949eb336b71dc4ea2_12373_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683271855209_huf7e40bf65f513be949eb336b71dc4ea2_12373_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683271855209_huf7e40bf65f513be949eb336b71dc4ea2_12373_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;直接索引&#34;
@@ -975,10 +975,10 @@ $$&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;一级间接地址索引&lt;/strong&gt;：索引表中的地址项指向一个磁盘索引块。这个索引块中的记录是地址项，这些地址项直接指向磁盘数据块。&lt;/p&gt;
 &lt;p&gt;称这个磁盘索引块为&lt;strong&gt;一级索引块&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683274982800.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683274982800.png&#34;
 	width=&#34;904&#34;
 	height=&#34;737&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683274982800_huff8f6fdfb39dd4f32432b5e59af5e0b4_20046_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683274982800_huff8f6fdfb39dd4f32432b5e59af5e0b4_20046_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683274982800_huff8f6fdfb39dd4f32432b5e59af5e0b4_20046_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683274982800_huff8f6fdfb39dd4f32432b5e59af5e0b4_20046_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;一级间接地址索引&#34;
@@ -993,10 +993,10 @@ $$&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;二级间接地址索引&lt;/strong&gt;：索引表中的地址项指向一个磁盘索引块。这个索引块中的一个记录指向一个一级索引块。&lt;/p&gt;
 &lt;p&gt;称这个记录指向一级索引块的磁盘索引块为&lt;strong&gt;二级索引块&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683275164015.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683275164015.png&#34;
 	width=&#34;1121&#34;
 	height=&#34;784&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683275164015_hua10eb987a90138ea134a6bae248d9c53_39919_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683275164015_hua10eb987a90138ea134a6bae248d9c53_39919_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683275164015_hua10eb987a90138ea134a6bae248d9c53_39919_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683275164015_hua10eb987a90138ea134a6bae248d9c53_39919_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;二级间接地址索引&#34;
@@ -1094,10 +1094,10 @@ $$&lt;/p&gt;
 &lt;li&gt;&lt;code&gt;1&lt;/code&gt;：表示占用。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;例如：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683253664111.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683253664111.png&#34;
 	width=&#34;569&#34;
 	height=&#34;256&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683253664111_hu7a2cf55f628e04ce29478d10a9f586cd_28648_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1683253664111_hu7a2cf55f628e04ce29478d10a9f586cd_28648_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683253664111_hu7a2cf55f628e04ce29478d10a9f586cd_28648_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1683253664111_hu7a2cf55f628e04ce29478d10a9f586cd_28648_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;位示图示例&#34;

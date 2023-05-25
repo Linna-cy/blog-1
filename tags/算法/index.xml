@@ -7,11 +7,11 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
         <lastBuildDate>Wed, 17 May 2023 12:52:42 +0800</lastBuildDate><atom:link href="https://blog.linner.asia/tags/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>算法设计与分析（软件设计师）</title>
-        <link>https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/</link>
+        <title>算法设计与分析篇</title>
+        <link>https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/</link>
         <pubDate>Wed, 17 May 2023 12:52:42 +0800</pubDate>
         
-        <guid>https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/</guid>
+        <guid>https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/</guid>
         <description>&lt;h1 id=&#34;算法概述&#34;&gt;算法概述&lt;/h1&gt;
 &lt;p&gt;算法（Algorithm）是对特定问题求解步骤的一种描述，它是指令的有限序列，其中每一条指令表示一个或多个操作。算法具有下列5个重要特性：&lt;/p&gt;
 &lt;ul&gt;
@@ -48,10 +48,10 @@
 &lt;li&gt;加法规则：多项相加，保留最高阶项，并将系数化为1；&lt;/li&gt;
 &lt;li&gt;乘法规则：多项相乘都保留，并将系数化为1。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1681099842666.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/1681099842666.png&#34;
 	width=&#34;1014&#34;
 	height=&#34;100&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1681099842666_hu8fb0d0a3c83abecf36c375990db2efe0_51379_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1681099842666_hu8fb0d0a3c83abecf36c375990db2efe0_51379_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/1681099842666_hu8fb0d0a3c83abecf36c375990db2efe0_51379_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/1681099842666_hu8fb0d0a3c83abecf36c375990db2efe0_51379_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;算法复杂度大小比较&#34;
@@ -86,10 +86,10 @@ $$&lt;/p&gt;
 &lt;p&gt;即，当$n \ge n_0$时，$c_1g(n) \le f(n) \le c_2g(n)$。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1681110832416.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1681110832416.png&#34;
 	width=&#34;966&#34;
 	height=&#34;1204&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1681110832416_hud8e84328d379d2eda520e5c710188239_380512_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1681110832416_hud8e84328d379d2eda520e5c710188239_380512_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1681110832416_hud8e84328d379d2eda520e5c710188239_380512_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1681110832416_hud8e84328d379d2eda520e5c710188239_380512_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;递归式主方法&#34;
@@ -471,10 +471,10 @@ $$&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;定义问题的解空间：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684485061214.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684485061214.png&#34;
 	width=&#34;1112&#34;
 	height=&#34;493&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684485061214_hua26943b3666cfead45e3354c9c250048_93761_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684485061214_hua26943b3666cfead45e3354c9c250048_93761_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684485061214_hua26943b3666cfead45e3354c9c250048_93761_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684485061214_hua26943b3666cfead45e3354c9c250048_93761_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;0-1背包问题解空间树示例&#34;
@@ -520,10 +520,10 @@ $$&lt;/p&gt;
 &lt;h2 id=&#34;背包问题&#34;&gt;背包问题&lt;/h2&gt;
 &lt;p&gt;有$n$个物品，第$i$个物品价值为$v_i$，重量为$w_i$，背包容量为$W$，$v_i$、$w_i$和$W$均为非负数。背包问题与0-1背包问题类似，但是每个物品可以部分装入背包，即$0 \le x_i \le 1$。&lt;/p&gt;
 &lt;p&gt;假设$n = 5, W = 100$，各物品的重量、价值和单位重量的价值如图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684482734674.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684482734674.png&#34;
 	width=&#34;1278&#34;
 	height=&#34;225&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684482734674_hu5b03cee14e409ca2e1a9d512eb500245_36650_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684482734674_hu5b03cee14e409ca2e1a9d512eb500245_36650_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684482734674_hu5b03cee14e409ca2e1a9d512eb500245_36650_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684482734674_hu5b03cee14e409ca2e1a9d512eb500245_36650_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;物品基本信息&#34;
@@ -593,10 +593,10 @@ $$&lt;/p&gt;
 &lt;p&gt;计算最优解的值：&lt;/p&gt;
 &lt;p&gt;根据上述递归式自底向上地求出最优解的值。将$l[i, j]$的值存储在表$l[1 \dots m, 1 \dots n]$中，以行为主序从左到右计算表$l$中的元素，同时维持表$b[1 \dots m, 1 \dots n]$，用其中的元素$b[i, j]$记录使得$l[i, j]$取最优值的最优子结构。&lt;/p&gt;
 &lt;p&gt;例如$X=ABCBDAD$和$Y=BDCABA$，对应的表$l$和$b$如图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684475662212.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684475662212.png&#34;
 	width=&#34;599&#34;
 	height=&#34;480&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684475662212_huf8741ffb03170f75828435beb229b8f8_55892_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684475662212_huf8741ffb03170f75828435beb229b8f8_55892_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684475662212_huf8741ffb03170f75828435beb229b8f8_55892_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684475662212_huf8741ffb03170f75828435beb229b8f8_55892_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;动态规划求解LCS示例&#34;
@@ -664,10 +664,10 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;用回溯法求解4-皇后问题：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684495382071.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684495382071.png&#34;
 	width=&#34;1275&#34;
 	height=&#34;506&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684495382071_huc186b02913aa15127675d2c019dabd0c_58233_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1684495382071_huc186b02913aa15127675d2c019dabd0c_58233_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684495382071_huc186b02913aa15127675d2c019dabd0c_58233_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684495382071_huc186b02913aa15127675d2c019dabd0c_58233_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;用回溯法求解4-皇后问题的搜索过程&#34;
@@ -1043,10 +1043,10 @@ $$&lt;/p&gt;
 &lt;p&gt;每趟排序，根据对应的增量$t_i$，将待排序列分割成若干长度为$t_i$的子序列，分别对各子表进行直接插入排序。仅增量因子为$1$时，整个序列作为一个表来处理，表长度即为整个序列的长度。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1681209778321.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1681209778321.png&#34;
 	width=&#34;649&#34;
 	height=&#34;460&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1681209778321_hu3445f2349c32f6de565415fce2b1b7c8_87538_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1681209778321_hu3445f2349c32f6de565415fce2b1b7c8_87538_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1681209778321_hu3445f2349c32f6de565415fce2b1b7c8_87538_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1681209778321_hu3445f2349c32f6de565415fce2b1b7c8_87538_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;希尔排序示例&#34;
@@ -1133,21 +1133,21 @@ $$&lt;/p&gt;
 </description>
         </item>
         <item>
-        <title>数据结构（软件设计师）</title>
-        <link>https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/</link>
+        <title>数据结构篇</title>
+        <link>https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/</link>
         <pubDate>Sat, 08 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/</guid>
+        <guid>https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/</guid>
         <description>&lt;h1 id=&#34;复杂度&#34;&gt;复杂度&lt;/h1&gt;
 &lt;p&gt;算法时间复杂度以算法中基本操附重复执行的次数（简称为频度）作为算法的时间度量。一般不必要精确计算出算法的时间复杂度，只要大致计算出相应的数量级即可，使用大$O$表示法表示（空间复杂度也是）。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;加法规则：多项相加，保留最高阶项，并将系数化为1；&lt;/li&gt;
 &lt;li&gt;乘法规则：多项相乘都保留，并将系数化为1。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1681099842666.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/1681099842666.png&#34;
 	width=&#34;1014&#34;
 	height=&#34;100&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1681099842666_hu8fb0d0a3c83abecf36c375990db2efe0_51379_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1681099842666_hu8fb0d0a3c83abecf36c375990db2efe0_51379_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/1681099842666_hu8fb0d0a3c83abecf36c375990db2efe0_51379_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/1681099842666_hu8fb0d0a3c83abecf36c375990db2efe0_51379_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;算法复杂度大小比较&#34;
@@ -1221,10 +1221,10 @@ $$&lt;/p&gt;
 &lt;h2 id=&#34;顺序存储结构&#34;&gt;顺序存储结构&lt;/h2&gt;
 &lt;p&gt;线性表的&lt;strong&gt;顺序存储&lt;/strong&gt;是指用一组&lt;strong&gt;地址连续的存储单元&lt;/strong&gt;依次存储线性表中的数据元素，从而使得逻辑上相邻的两个元素在物理位置上也相邻。在这种存储方式下，元素间的逻辑关系无须占用额外的空间来存储。&lt;/p&gt;
 &lt;p&gt;其存储结构如图所示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680610120418.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680610120418.png&#34;
 	width=&#34;130&#34;
 	height=&#34;266&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680610120418_hu2b33a584fc5a2d635ec65d6abeb2f0a4_3927_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680610120418_hu2b33a584fc5a2d635ec65d6abeb2f0a4_3927_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680610120418_hu2b33a584fc5a2d635ec65d6abeb2f0a4_3927_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680610120418_hu2b33a584fc5a2d635ec65d6abeb2f0a4_3927_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;顺序表存储结构&#34;
@@ -1319,10 +1319,10 @@ $$&lt;/p&gt;
 &lt;h2 id=&#34;链式存储结构&#34;&gt;链式存储结构&lt;/h2&gt;
 &lt;p&gt;线性表的&lt;strong&gt;链式存储&lt;/strong&gt;是指&lt;strong&gt;通过指针链接起来&lt;/strong&gt;的结点来存储数据元素。&lt;/p&gt;
 &lt;p&gt;其存储结构如下所示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680610469403.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680610469403.png&#34;
 	width=&#34;403&#34;
 	height=&#34;49&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680610469403_hueeee19018a01756f2e48de06f8910c88_6757_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680610469403_hueeee19018a01756f2e48de06f8910c88_6757_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680610469403_hueeee19018a01756f2e48de06f8910c88_6757_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680610469403_hueeee19018a01756f2e48de06f8910c88_6757_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;链式表存储结构&#34;
@@ -1348,10 +1348,10 @@ $$&lt;/p&gt;
 &lt;li&gt;长度不固定。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;链式表结点之间通过指针域构成一个链表，&lt;u&gt;若结点中只有一个指针域，则称为线性链表&lt;/u&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680610514354.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680610514354.png&#34;
 	width=&#34;685&#34;
 	height=&#34;64&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680610514354_hu9c9f9d7fee45544c6864faab3f820061_7122_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680610514354_hu9c9f9d7fee45544c6864faab3f820061_7122_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680610514354_hu9c9f9d7fee45544c6864faab3f820061_7122_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680610514354_hu9c9f9d7fee45544c6864faab3f820061_7122_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;链式表存储结构&#34;
@@ -1386,10 +1386,10 @@ $$&lt;/p&gt;
 &lt;p&gt;顺序栈的空间容量有限，所以每次入栈时都需要判断栈是否为满。&lt;/p&gt;
 &lt;h2 id=&#34;链式存储结构-1&#34;&gt;链式存储结构&lt;/h2&gt;
 &lt;p&gt;栈的链式存储结构称为&lt;strong&gt;链栈&lt;/strong&gt;。链栈的头指针就是栈顶指针。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680676944766.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680676944766.png&#34;
 	width=&#34;238&#34;
 	height=&#34;265&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680676944766_hu1bea4090283c9929deed80a707d4d0a3_11895_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680676944766_hu1bea4090283c9929deed80a707d4d0a3_11895_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680676944766_hu1bea4090283c9929deed80a707d4d0a3_11895_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680676944766_hu1bea4090283c9929deed80a707d4d0a3_11895_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;链栈的存储结构&#34;
@@ -1427,10 +1427,10 @@ $$&lt;/p&gt;
 &lt;li&gt;队尾指针：指向队尾元素的下标。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;如果顺序队列只按照数组下标大小顺序来设置指针（对头指针的值永不大于队尾指针），那么在经过一段时间的操作后，对头指针有可能指向的并不是数组的第一个元素，此时队列的长度永远都到达不了数组的长度（空间无法被充分利用，实际使用的长度和逻辑长度不符）。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680677900098.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680677900098.png&#34;
 	width=&#34;959&#34;
 	height=&#34;323&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680677900098_hua0e0c24049b10a1b1a22eff29a314663_53364_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680677900098_hua0e0c24049b10a1b1a22eff29a314663_53364_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680677900098_hua0e0c24049b10a1b1a22eff29a314663_53364_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680677900098_hua0e0c24049b10a1b1a22eff29a314663_53364_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;队列操作&#34;
@@ -1442,10 +1442,10 @@ $$&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;为了解决这个问题，我们可以把数组想象为一个环型的结构（将最后一个元素和第一个元素连接起来，队头指针可以比队尾指针大）。如果此时队列的状态是上图中步骤$(e)$的状态，此时再插入元素，可以将元素放在数组索引0的位置，再让队尾指针始终保持在队列最后一个元素的索引之后即可。将这种队列称为&lt;strong&gt;循环队列&lt;/strong&gt;，如：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680678225885.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680678225885.png&#34;
 	width=&#34;907&#34;
 	height=&#34;202&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680678225885_hu78897751e6ca29164f26d83cde2f776e_48040_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680678225885_hu78897751e6ca29164f26d83cde2f776e_48040_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680678225885_hu78897751e6ca29164f26d83cde2f776e_48040_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680678225885_hu78897751e6ca29164f26d83cde2f776e_48040_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;循环队列&#34;
@@ -1459,10 +1459,10 @@ $$&lt;/p&gt;
 &lt;h2 id=&#34;链式存储结构-2&#34;&gt;链式存储结构&lt;/h2&gt;
 &lt;p&gt;队列的链式存储也称为&lt;strong&gt;链队列&lt;/strong&gt;（&lt;strong&gt;链队&lt;/strong&gt;）。这里为了便于操作，可以给链队列添加一个头结点，并令头指针指向头结点。因此，队列为空的判定条件是头指针和尾指针的值相同，且
 均指向头结点。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680678441791.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680678441791.png&#34;
 	width=&#34;278&#34;
 	height=&#34;340&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680678441791_hud106655f2d3cb3393c4501ce0717f1de_16473_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680678441791_hud106655f2d3cb3393c4501ce0717f1de_16473_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680678441791_hud106655f2d3cb3393c4501ce0717f1de_16473_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680678441791_hud106655f2d3cb3393c4501ce0717f1de_16473_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1591,10 +1591,10 @@ $$&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;二维数组（仅讨论顺序存储结构）：&lt;/p&gt;
 &lt;p&gt;二维数组的存储结构（如下图），可以分为以行为主序（下图左边）和以列为主序（下图右边）两种。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680693946560.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680693946560.png&#34;
 	width=&#34;451&#34;
 	height=&#34;448&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680693946560_hu1932cb3790ae3468aeeee7cc636c93c8_34859_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680693946560_hu1932cb3790ae3468aeeee7cc636c93c8_34859_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680693946560_hu1932cb3790ae3468aeeee7cc636c93c8_34859_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680693946560_hu1932cb3790ae3468aeeee7cc636c93c8_34859_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1723,10 +1723,10 @@ $$&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;blockquote&gt;
 &lt;p&gt;PS：《软件设计师教程（第五版）》中一维数组的下标$k$的取值范围错了：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1680698007514.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/1680698007514.png&#34;
 	width=&#34;999&#34;
 	height=&#34;344&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1680698007514_hud68653e5fe46341035cf0f04b58f1fb8_157083_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/1680698007514_hud68653e5fe46341035cf0f04b58f1fb8_157083_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/1680698007514_hud68653e5fe46341035cf0f04b58f1fb8_157083_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/1680698007514_hud68653e5fe46341035cf0f04b58f1fb8_157083_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;对称矩阵&#34;
@@ -1902,10 +1902,10 @@ $$&lt;/p&gt;
 &lt;p&gt;完全二叉树适合采用顺序存储结构，而一般二叉树则不适合。&lt;/p&gt;
 &lt;h2 id=&#34;链式存储结构-4&#34;&gt;链式存储结构&lt;/h2&gt;
 &lt;p&gt;可以用&lt;strong&gt;三叉链表或二叉链表&lt;/strong&gt;来存储二叉树（一个结点含有3个或2个指针，其中必须有两个指针来分别存储左子树和右子树的根结点）。链表的头指针指向二叉树根结点：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680770614240.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680770614240.png&#34;
 	width=&#34;980&#34;
 	height=&#34;337&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680770614240_hu74a2d83457551f99334a785fee2a7f2b_53953_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680770614240_hu74a2d83457551f99334a785fee2a7f2b_53953_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680770614240_hu74a2d83457551f99334a785fee2a7f2b_53953_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680770614240_hu74a2d83457551f99334a785fee2a7f2b_53953_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;二叉树的链表存储结构&#34;
@@ -2107,10 +2107,10 @@ $$&lt;/p&gt;
 &lt;li&gt;将树中每个结点的左分支标上0，右分支标上1（左0右1）。&lt;/li&gt;
 &lt;li&gt;每个叶子结点代表字符的编码就是从根到叶子的路径上组成的0、1串。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680836524813.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680836524813.png&#34;
 	width=&#34;347&#34;
 	height=&#34;334&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680836524813_hu78baa79acc8330412526e447ee3074d0_24961_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680836524813_hu78baa79acc8330412526e447ee3074d0_24961_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680836524813_hu78baa79acc8330412526e447ee3074d0_24961_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680836524813_hu78baa79acc8330412526e447ee3074d0_24961_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;哈夫曼编码&#34;
@@ -2123,10 +2123,10 @@ $$&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;p&gt;其中，字符$a$字符$b$、$c$、$d$、$e$的编码分别为00、01、100、11、101。&lt;/p&gt;
 &lt;h3 id=&#34;压缩比&#34;&gt;压缩比&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680959771881.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680959771881.png&#34;
 	width=&#34;784&#34;
 	height=&#34;489&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680959771881_hu4f7b4b1585cf7b1f2369bc9d93906f07_66292_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1680959771881_hu4f7b4b1585cf7b1f2369bc9d93906f07_66292_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680959771881_hu4f7b4b1585cf7b1f2369bc9d93906f07_66292_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1680959771881_hu4f7b4b1585cf7b1f2369bc9d93906f07_66292_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;压缩比例题&#34;
@@ -2409,10 +2409,10 @@ $$&lt;/p&gt;
 &lt;li&gt;可能存在弧$&amp;lt;v_i,v_j&amp;gt;$，一定不存在弧$&amp;lt;v_j,v_i&amp;gt;$；&lt;/li&gt;
 &lt;li&gt;可能存在$v_i$到$v_j$的路径，一定不存在$v_j$到$v_i$的路径。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1681115534531.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1681115534531.png&#34;
 	width=&#34;133&#34;
 	height=&#34;173&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1681115534531_hu9a36ad2327d0139feeb1c8e76c812997_7356_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E5%B8%88/uTools_1681115534531_hu9a36ad2327d0139feeb1c8e76c812997_7356_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1681115534531_hu9a36ad2327d0139feeb1c8e76c812997_7356_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E7%AF%87/uTools_1681115534531_hu9a36ad2327d0139feeb1c8e76c812997_7356_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;AOV网拓扑排序例子&#34;

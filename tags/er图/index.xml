@@ -1,0 +1,3909 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>ER图 on Linner&#39;s Blog</title>
+        <link>https://blog.linner.asia/tags/er%E5%9B%BE/</link>
+        <description>Recent content in ER图 on Linner&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh</language>
+        <lastBuildDate>Sat, 20 May 2023 13:29:14 +0800</lastBuildDate><atom:link href="https://blog.linner.asia/tags/er%E5%9B%BE/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>软考图类汇总篇</title>
+        <link>https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/</link>
+        <pubDate>Sat, 20 May 2023 13:29:14 +0800</pubDate>
+        
+        <guid>https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/</guid>
+        <description>&lt;h1 id=&#34;数据流图dfd&#34;&gt;数据流图（DFD）&lt;/h1&gt;
+&lt;p&gt;数据流图是在逻辑上描述系统的功能、输入、输出和数据存储等。&lt;/p&gt;
+&lt;p&gt;数据流图中的基本图形元素包括：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;基本元素&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;图形表示&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;数据流&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683518468182.png&#34;
+	width=&#34;193&#34;
+	height=&#34;71&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683518468182_hu1fccd0f4bc92c1a7ca6417a3c5762d95_691_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683518468182_hu1fccd0f4bc92c1a7ca6417a3c5762d95_691_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;数据流&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;271&#34;
+		data-flex-basis=&#34;652px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;加工&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1683518239889.png&#34;
+	width=&#34;282&#34;
+	height=&#34;105&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1683518239889_hua1275ed5909c87bf24a2f46b2412656d_4453_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1683518239889_hua1275ed5909c87bf24a2f46b2412656d_4453_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;加工&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;268&#34;
+		data-flex-basis=&#34;644px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;数据存储&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683517944926.png&#34;
+	width=&#34;350&#34;
+	height=&#34;79&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683517944926_hu07d5f627c7e21f9ad8b48cfa71d5e47e_1735_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683517944926_hu07d5f627c7e21f9ad8b48cfa71d5e47e_1735_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;数据存储&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;443&#34;
+		data-flex-basis=&#34;1063px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;外部实体&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683517896893.png&#34;
+	width=&#34;118&#34;
+	height=&#34;79&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683517896893_hu053e7e7f1170dc0aa7a02a640e921728_501_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683517896893_hu053e7e7f1170dc0aa7a02a640e921728_501_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;外部实体&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;358px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;软件系统内部的&lt;strong&gt;数据处理模型&lt;/strong&gt;，使用&lt;u&gt;数据流&lt;/u&gt;、&lt;u&gt;加工&lt;/u&gt;和&lt;u&gt;数据存储&lt;/u&gt;构建。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;数据流&lt;/strong&gt;（Data Flow）：由一组固定成分的数据组成，表示数据的流向。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683518468182.png&#34;
+	width=&#34;193&#34;
+	height=&#34;71&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683518468182_hu1fccd0f4bc92c1a7ca6417a3c5762d95_691_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683518468182_hu1fccd0f4bc92c1a7ca6417a3c5762d95_691_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;数据流&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;271&#34;
+		data-flex-basis=&#34;652px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;在DFD种，数据流的流向由以下几种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;从&lt;u&gt;加工&lt;/u&gt;流向另一个&lt;u&gt;加工&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;从&lt;u&gt;加工&lt;/u&gt;流向&lt;u&gt;数据存储&lt;/u&gt;（写）；&lt;/li&gt;
+&lt;li&gt;从&lt;u&gt;数据存储&lt;/u&gt;流向&lt;u&gt;加工&lt;/u&gt;（读）；&lt;/li&gt;
+&lt;li&gt;从&lt;u&gt;外部实体&lt;/u&gt;流向&lt;u&gt;加工&lt;/u&gt;（输入）；&lt;/li&gt;
+&lt;li&gt;从&lt;u&gt;加工&lt;/u&gt;流向&lt;u&gt;外部实体&lt;/u&gt;（输出）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;即数据流的&lt;u&gt;起点或终点必须至少有一个是加工&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;除了与数据存储有关的数据流（流向数据存储或从数据存储流出），DFD中的每个数据流都必须用一个定义明确的名字表示。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;加工&lt;/strong&gt;（Process）：加工描述了输入数据流到输出数据流之间的变换，也就是&lt;u&gt;输入数据流经过什么处理后变成了输出数据流&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1683518239889.png&#34;
+	width=&#34;282&#34;
+	height=&#34;105&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1683518239889_hua1275ed5909c87bf24a2f46b2412656d_4453_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1683518239889_hua1275ed5909c87bf24a2f46b2412656d_4453_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;加工&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;268&#34;
+		data-flex-basis=&#34;644px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;每个加工都有一个名字和编号。&lt;/p&gt;
+&lt;p&gt;一个加工可以有多个输入数据流和多个输出数据流，但&lt;u&gt;至少有一个输入数据流和一个输出数据流&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;数据流图中常见的3种错误如下所示：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;黑洞&lt;/strong&gt;：加工只有输入，没有输出。&lt;/p&gt;
+&lt;p&gt;如下图加工1。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;白洞&lt;/strong&gt;：加工只有输出但没有输入。&lt;/p&gt;
+&lt;p&gt;如下图加工2。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;灰洞&lt;/strong&gt;：加工中输入数据不足以产生输出数据。&lt;/p&gt;
+&lt;p&gt;有几种可能的原因：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个错误的命名过程；&lt;/li&gt;
+&lt;li&gt;错误命名的输入或输出；&lt;/li&gt;
+&lt;li&gt;不完全的事实。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如下图加工3。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1683528176745.png&#34;
+	width=&#34;793&#34;
+	height=&#34;542&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1683528176745_hu5869eb4ddb2b6e895b99cd504e3e35d8_119530_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1683528176745_hu5869eb4ddb2b6e895b99cd504e3e35d8_119530_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;数据流图中常见错误&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;146&#34;
+		data-flex-basis=&#34;351px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;数据存储&lt;/strong&gt;（Data Store）：存储和提供数据。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683517944926.png&#34;
+	width=&#34;350&#34;
+	height=&#34;79&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683517944926_hu07d5f627c7e21f9ad8b48cfa71d5e47e_1735_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683517944926_hu07d5f627c7e21f9ad8b48cfa71d5e47e_1735_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;数据存储&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;443&#34;
+		data-flex-basis=&#34;1063px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;每个数据存储都有一个定义明确的名字标识。&lt;/p&gt;
+&lt;p&gt;数据存储可以：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;存储加工的输出数据：数据流流入数据存储，表示数据的写入操作；&lt;/li&gt;
+&lt;li&gt;提供加工的输入数据：数据流从数据存储流出，表示数据的读操作。&lt;/li&gt;
+&lt;li&gt;双向箭头的数据流指向数据存储，表示对数据的修改。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;DFD中的数据存储在具体实现时可以用以下方式实现：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;文件系统实现；&lt;/li&gt;
+&lt;li&gt;数据库系统实现。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;数据存储的存储介质可以是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;磁盘、&lt;/li&gt;
+&lt;li&gt;磁带、&lt;/li&gt;
+&lt;li&gt;其他存储介质。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;外部实体&lt;/strong&gt;（External Agent，外部主体）：指&lt;u&gt;存在于软件系统之外的人员、组织、物体或外部系统&lt;/u&gt;，它指出系统所需数据的&lt;u&gt;发源地（源）&lt;/u&gt;和&lt;u&gt;系统所产生的数据的归宿地（宿）&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683517896893.png&#34;
+	width=&#34;118&#34;
+	height=&#34;79&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683517896893_hu053e7e7f1170dc0aa7a02a640e921728_501_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683517896893_hu053e7e7f1170dc0aa7a02a640e921728_501_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;外部实体&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;358px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;人员：学生、老师、员工、主观、医生、客户……&lt;/li&gt;
+&lt;li&gt;组织：供应商、采购部门……&lt;/li&gt;
+&lt;li&gt;物体：传感器、控制器、单车、车辆……&lt;/li&gt;
+&lt;li&gt;外部系统：支付系统、车辆交易系统、库存管理系统、道闸控制系统……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在许多系统中，某个源和某个宿可以是同一个人员、组织、物体或外部系统，此时，在DFD中可以用同一个符号表示：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当数据流从该符号流出时，表示它是源；&lt;/li&gt;
+&lt;li&gt;当数据流流向该符号时，表示它是宿；&lt;/li&gt;
+&lt;li&gt;当两者皆有时，表示它既是源又是宿。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;外部实体表示存在于系统之外的对象，用来帮助用户理解系统数据的来源和去向。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;数据流图必须确保：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据流的起点或终点必须至少有一个是加工。&lt;/li&gt;
+&lt;li&gt;加工至少有一个输入数据流和一个输出数据流。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;分层数据流图：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;顶层图：描述系统的输入和输出。&lt;/p&gt;
+&lt;p&gt;即描述系统从哪些外部实体接受数据流，以及系统发送数据流到哪些外部实体。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;顶层图只有一个加工，即待开发的软件系统。&lt;/li&gt;
+&lt;li&gt;顶层图中的数据流就是系统的输入/输出信息。&lt;/li&gt;
+&lt;li&gt;顶层图中通常没有数据存储。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;0层图：分解顶层图的加工。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;再分解：将DFD中某些比较复杂的加工再次分解成一张DFD子图。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;实体联系图e-r-图erd&#34;&gt;实体联系图（E-R 图，ERD）&lt;/h1&gt;
+&lt;p&gt;E-R图有以下几个成分（包含扩充的E-R模型成分）：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682508598814.png&#34;
+	width=&#34;1035&#34;
+	height=&#34;391&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682508598814_hub0bc3034b48557bb84109435ab8e458e_191424_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682508598814_hub0bc3034b48557bb84109435ab8e458e_191424_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;E-R图中的主要构件&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;264&#34;
+		data-flex-basis=&#34;635px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;实体&lt;/strong&gt;：用&lt;strong&gt;矩形&lt;/strong&gt;表示。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;弱实体&lt;/strong&gt;：使用&lt;strong&gt;双线矩形框&lt;/strong&gt;表示。将需要依赖其他实体存在的实体。&lt;/p&gt;
+&lt;p&gt;实体间的所有（Ownership，拥有）关系代表一个实体对另一些实体具有很强的依赖关系，即一个实体的存在必须以另一个实体为前提。&lt;/p&gt;
+&lt;p&gt;例如职工与家属的联系，家属总是属于某职工的（在关系模式中需要依赖职工而存在），所以家属是弱实体。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;特殊化&lt;/strong&gt;：将一个实体集&lt;u&gt;按照某些特性区分为几个&lt;strong&gt;子实体&lt;/strong&gt;&lt;/u&gt;。这种从普遍到特殊的过程即为特殊化。&lt;/p&gt;
+&lt;p&gt;子实体的图形表示如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684564987147.png&#34;
+	width=&#34;256&#34;
+	height=&#34;145&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684564987147_huad14f3e1152e9df0e94e04c64131c1cf_1087_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684564987147_huad14f3e1152e9df0e94e04c64131c1cf_1087_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;子实体&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;176&#34;
+		data-flex-basis=&#34;423px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;子实体由称为子类，它会有一个超类，并且能继承超类的属性，超类的属性是实体集中所有子实体的相同属性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;联系&lt;/strong&gt;：用&lt;strong&gt;棱形&lt;/strong&gt;表示，并用无向边分别与有关实体连接起来，同时在无向边标注联系的类型。&lt;/p&gt;
+&lt;p&gt;联系的类型有两种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;两个实体间的联系：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$1:1$：一对一联系；&lt;/li&gt;
+&lt;li&gt;$1:n$：一对多联系；&lt;/li&gt;
+&lt;li&gt;$m:n$：多对多联系。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;两个以上实体间的联系：&lt;/p&gt;
+&lt;p&gt;例如3个实体间的联系有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$1:1:1$&lt;/li&gt;
+&lt;li&gt;$1:1:n$&lt;/li&gt;
+&lt;li&gt;$1:m:n$&lt;/li&gt;
+&lt;li&gt;$r:m:n$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;属性&lt;/strong&gt;：用&lt;strong&gt;椭圆形&lt;/strong&gt;表示，并用无向边将其与相应的实体连接起来&lt;/p&gt;
+&lt;p&gt;E-R模型中的属性有以下分类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;简单属性：是原子的、不可再分的。&lt;/li&gt;
+&lt;li&gt;复合属性：可以细分为更小的部分。&lt;/li&gt;
+&lt;li&gt;单值属性：一个属性对应一个值。&lt;/li&gt;
+&lt;li&gt;多值属性：一个属性对应一组值。&lt;/li&gt;
+&lt;li&gt;NULL属性：实体在某个属性上没有值或属性值未知时，使用NULL值表示。&lt;/li&gt;
+&lt;li&gt;派生属性：派生属性可以从其他属性得来（通过运算等方式求出）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;概念结构模型合并分-e-r-图&#34;&gt;概念结构模型（合并分 E-R 图）&lt;/h2&gt;
+&lt;p&gt;建立概念结构模型的步骤如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;选择局部应用：选择适当层次的数据流图，让这一层的每一部分对应一个局部应用，实现某一项功能。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;逐一设计分E-R图。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;E-R图合并：&lt;/p&gt;
+&lt;p&gt;合并时需要考虑各分E-R图之间的冲突：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;属性冲突&lt;/strong&gt;：同一属性在不同的分E-R图上的属性类型、取值范围和数据单位等可能会不一致。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;命名冲突&lt;/strong&gt;：相同意义的属性在不同的分E-R图上可能会有不同的命名。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;结构冲突&lt;/strong&gt;：同一实体在不同的分E-R图中可能会有不同的属性；同一对象在某一分E-R图中被抽象为实体，而在另一分E-R图中又可能被抽象为属性，反之亦然。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;转换关系模式&#34;&gt;转换关系模式&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;实体向关系模式的转换：&lt;/p&gt;
+&lt;p&gt;将E-R图中的实体逐一转换成为一个关系模式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;实体名：对应关系模式的名称；&lt;/li&gt;
+&lt;li&gt;实体的属性：转换成关系模式的属性；&lt;/li&gt;
+&lt;li&gt;实体标识符：关系的码（键）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;超类和子类的转换：超类和子类定义为两个关系模式，将超类的主键加到子类中。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;联系向关系模式的转换：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;一对一联系的转换：&lt;/p&gt;
+&lt;p&gt;有两种方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;方式1：将联系转换成一个独立的关系模式，关系模式的名称取联系的名称，关系模式的属性包括该联系所关联的两个实体的码及联系的属性，关系的码取自任一方实体的码。&lt;/p&gt;
+&lt;p&gt;那么一个一对一联系需要转换成三个关系模式。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方式2（一般使用该方式）：将联系归并到关联的两个实体的任一方，给待归并的一方实体属性集中增加另一方实体的码和该联系的属性即可，归并后的实体码保持不变。&lt;/p&gt;
+&lt;p&gt;一个一对一联系仅需转换成两个关系模式。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682562445900.png&#34;
+	width=&#34;304&#34;
+	height=&#34;358&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682562445900_hu39b33fe28157809884f3b45df834a34e_28041_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682562445900_hu39b33fe28157809884f3b45df834a34e_28041_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;联系向关系模式的转换示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;84&#34;
+		data-flex-basis=&#34;203px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;方式1：&lt;/p&gt;
+&lt;p&gt;厂长（&lt;strong&gt;姓名&lt;/strong&gt;，性别，年龄）&lt;/p&gt;
+&lt;p&gt;工厂（&lt;strong&gt;厂号&lt;/strong&gt;，厂名，地点）&lt;/p&gt;
+&lt;p&gt;管理（（厂长）&lt;strong&gt;姓名&lt;/strong&gt;，厂号，任期）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;粗体代表该关系模式的码。管理的码可以为姓名或厂号。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方式2：&lt;/p&gt;
+&lt;p&gt;厂长（姓名，性别，年龄）&lt;/p&gt;
+&lt;p&gt;工厂（厂号，厂名，地点，（厂长）姓名，任期）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一对多联系的转换：&lt;/p&gt;
+&lt;p&gt;两种方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;方式1：将联系转换成一个独立的关系模式，关系模式的名称取联系的名称，关系模式的属性取该联系所关联的两个实体的码及联系的属性，&lt;u&gt;关系的码是多方实体的码&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;方式2（一般使用该方式）：将联系&lt;u&gt;归并到关联的两个实体的多方&lt;/u&gt;，给待归并的多方实体属性集中增加一方实体的码和该联系的属性即可，归并后的多方实体码保持不变。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682563544291.png&#34;
+	width=&#34;315&#34;
+	height=&#34;361&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682563544291_hue1cce8af0395e2bd704f6df0a3e3321e_30915_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682563544291_hue1cce8af0395e2bd704f6df0a3e3321e_30915_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;一对多联系转换的例子&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;87&#34;
+		data-flex-basis=&#34;209px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;方式1:&lt;/p&gt;
+&lt;p&gt;仓库（&lt;strong&gt;仓库号&lt;/strong&gt;，地点，面积）&lt;/p&gt;
+&lt;p&gt;商品（&lt;strong&gt;货号&lt;/strong&gt;，商品名，价格）&lt;/p&gt;
+&lt;p&gt;仓储（&lt;strong&gt;货号&lt;/strong&gt;，仓库号，数量）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方式2：&lt;/p&gt;
+&lt;p&gt;仓库（&lt;strong&gt;仓库号&lt;/strong&gt;，地点，面积）&lt;/p&gt;
+&lt;p&gt;商品（&lt;strong&gt;货号&lt;/strong&gt;，商品名，价格，仓库号，数量）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多对多联系的转换：&lt;/p&gt;
+&lt;p&gt;多对多联系只能转换成一个独立的关系模式，关系模式的名称取联系的名称，关系模式的属性取该联系所关联的两个多方实体的码及联系的属性，关系的码是多方实体的码构成的属性组。&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682564018777.png&#34;
+	width=&#34;327&#34;
+	height=&#34;373&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682564018777_hu8cf40dc2a076405a9cb5ca4646519d5e_36334_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682564018777_hu8cf40dc2a076405a9cb5ca4646519d5e_36334_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;多对多联系转换的示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;87&#34;
+		data-flex-basis=&#34;210px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;转换成：&lt;/p&gt;
+&lt;p&gt;学生（&lt;strong&gt;学号&lt;/strong&gt;，姓名，性别，年龄）&lt;/p&gt;
+&lt;p&gt;课程（&lt;strong&gt;课程号&lt;/strong&gt;，课程名，学时）&lt;/p&gt;
+&lt;p&gt;选修（&lt;strong&gt;（学号，课程号）&lt;/strong&gt;，成绩）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;uml&#34;&gt;UML&lt;/h1&gt;
+&lt;p&gt;UML（Unified Modeling Language，统一建模语言）是面向对象软件的标准化建模语言。&lt;/p&gt;
+&lt;p&gt;UML中包含3种基本构造块：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;事物；&lt;/li&gt;
+&lt;li&gt;关系；&lt;/li&gt;
+&lt;li&gt;图。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;事物&#34;&gt;事物&lt;/h2&gt;
+&lt;p&gt;UML中有4种事物：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;结构事物&lt;/strong&gt;（Structural Thing）：模型的&lt;u&gt;静态部分&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682055522161.png&#34;
+	width=&#34;708&#34;
+	height=&#34;294&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682055522161_hu872254ba18803fa50bd84092332d0d27_39442_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682055522161_hu872254ba18803fa50bd84092332d0d27_39442_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;结构事物的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;240&#34;
+		data-flex-basis=&#34;577px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;行为事物&lt;/strong&gt;（Behavior Thing）：模型的&lt;u&gt;动态部分&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682055712246.png&#34;
+	width=&#34;621&#34;
+	height=&#34;133&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682055712246_hu926c842303194b37bd3d84d241da7490_18166_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682055712246_hu926c842303194b37bd3d84d241da7490_18166_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;行为事物的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;466&#34;
+		data-flex-basis=&#34;1120px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;分组事物（Grouping Thing）：模型的&lt;u&gt;组织部分&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;注释事物（Annotational Thing）：模型的&lt;u&gt;解释部分&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;关系&#34;&gt;关系&lt;/h2&gt;
+&lt;p&gt;UML中有4种关系，这4种关系是UML模型中可以包含的基本关系事物：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;依赖&lt;/strong&gt;（Dependency）：是&lt;u&gt;两个事物间的语义关系，其中一个事物（&lt;strong&gt;独立事物&lt;/strong&gt;）发生变化会影响另一个事物（&lt;strong&gt;依赖事物&lt;/strong&gt;）的语义&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;在图形上，把一个依赖画成一条&lt;u&gt;可能有方向的虚线&lt;/u&gt;，如图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057108089.png&#34;
+	width=&#34;200&#34;
+	height=&#34;48&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057108089_hufef657bed6e876bd373e5f4bb9f34af6_1059_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057108089_hufef657bed6e876bd373e5f4bb9f34af6_1059_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;依赖的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;416&#34;
+		data-flex-basis=&#34;1000px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;依赖有偶然性和临时性，即需要的时候依赖，不需要的时候不依赖。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;关联&lt;/strong&gt;（Association）：是一种&lt;u&gt;结构关系&lt;/u&gt;，它描述了一组链，&lt;u&gt;链是对象之间的连接&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;关联使用&lt;u&gt;实线&lt;/u&gt;表示，在关联上可以标注重复度（Multiplicity）和角色（Role）。&lt;/p&gt;
+&lt;p&gt;描述了&lt;u&gt;整体和部分&lt;/u&gt;间的结构关系的特殊类型的关联：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;聚集&lt;/strong&gt;（Aggregation，聚合）：&lt;u&gt;部分和整体的生命周期不一致&lt;/u&gt;，整体消失了，部分仍然存在，&lt;u&gt;部分可以脱离整体存在&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;使用一端带&lt;u&gt;空心菱形&lt;/u&gt;的实线表示。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;组合&lt;/strong&gt;：&lt;u&gt;部分和整体的生命周期一致&lt;/u&gt;，整体消失了，部分也消失了，&lt;u&gt;部分不可以脱离整体而存在&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;使用一端带&lt;u&gt;实心菱形&lt;/u&gt;的实线表示。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682057458153.png&#34;
+	width=&#34;408&#34;
+	height=&#34;101&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682057458153_hu37f2bf65b423a501f386d9709f6e6bc4_8075_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682057458153_hu37f2bf65b423a501f386d9709f6e6bc4_8075_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;关联和聚集的图形化表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;403&#34;
+		data-flex-basis=&#34;969px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;聚合和组合中，带菱形的一端指向整体，另一端指向部分。&lt;/p&gt;
+&lt;p&gt;关联的关系强度比依赖的关系强度要强一点。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;单向关联：用&lt;u&gt;带箭头实线&lt;/u&gt;表示。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多重度：&lt;/p&gt;
+&lt;p&gt;进行面向对象设计时，类图中可以展现类之间的关联关系，还可以在类图中图示&lt;u&gt;关联中的数量关系&lt;/u&gt;，即多重度。表示数量关系时，&lt;u&gt;用多重度说明数量或数量范围&lt;/u&gt;，&lt;u&gt;表示有多少个实例（对象）能被连接起来&lt;/u&gt;，即&lt;u&gt;一个类的实例能够与另一个类的多少个实例相关联&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关联类：&lt;/p&gt;
+&lt;p&gt;当两个类之间的关联的重复度是多对多时，需要借助额外的属性来帮助表达它们之间的关系，而这个属性就需要定义在一个新的关联类中。关联类记录了这两个类之间的关联信息。关联中这些额外的属性用一条&lt;u&gt;垂直于关联的实线&lt;/u&gt;表示，实线的一段连接接到关联的实线上，另一端指向这些属性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;泛化&lt;/strong&gt;（Generalization）：是一种特殊/一般关系，&lt;u&gt;特殊元素（子元素）的对象可替代一般元素（父元素）的对象&lt;/u&gt;。用这种方法，&lt;u&gt;子元素共享了父元素的结构和行为&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;在图形上，把一个泛化关系画成一条&lt;u&gt;带有空心箭头的实线&lt;/u&gt;，它指向父元素：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057764410.png&#34;
+	width=&#34;162&#34;
+	height=&#34;53&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057764410_huaf9267ff556daac18150e46c6cbbde24_1023_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057764410_huaf9267ff556daac18150e46c6cbbde24_1023_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;泛化的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;305&#34;
+		data-flex-basis=&#34;733px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;实现&lt;/strong&gt;（Realization）：是&lt;u&gt;类元之间的语义关系，其中一个类元指定了由另一个类元保证执行的契约&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;在图形上，把一个实现关系画成一条&lt;u&gt;带有空心箭头的虚线&lt;/u&gt;，箭头指向模板类，另一端于实现类连接。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682058026631.png&#34;
+	width=&#34;167&#34;
+	height=&#34;61&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682058026631_hu09469114d42fa29e39948f21a9a04633_1340_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682058026631_hu09469114d42fa29e39948f21a9a04633_1340_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;实现的图形化表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;273&#34;
+		data-flex-basis=&#34;657px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;uml图&#34;&gt;UML图&lt;/h2&gt;
+&lt;h3 id=&#34;类图&#34;&gt;类图&lt;/h3&gt;
+&lt;p&gt;类图（Class Diagram）&lt;u&gt;展现了一组对象、接口、协作和它们之间的关系&lt;/u&gt;。在面向对象系统的建模中&lt;u&gt;最常见的图就是类图&lt;/u&gt;。类图给出&lt;u&gt;系统的静态设计视图&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;类图中通常包括下述内容：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;类：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684650129674.png&#34;
+	width=&#34;142&#34;
+	height=&#34;139&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684650129674_hucae45be9ae605ee21a469444ed126234_7038_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684650129674_hucae45be9ae605ee21a469444ed126234_7038_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;类的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;102&#34;
+		data-flex-basis=&#34;245px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;类中的方法和属性前面有以下三种修饰符：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;修饰符&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;+&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;public&lt;/code&gt; 公有的&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;-&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;private&lt;/code&gt; 私有的&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;#&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;protected&lt;/code&gt; 受保护的&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;~&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;package&lt;/code&gt; 包的&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+  &lt;table style=&#34;width: 200px; margin: auto;&#34;&gt;
+      &lt;tr&gt;&lt;th&gt;Student&lt;/th&gt;&lt;/tr&gt;
+      &lt;tr&gt;
+      &lt;td&gt;
+      &lt;p&gt;
+          &lt;code&gt;- id&amp;nbsp;&amp;nbsp;&amp;nbsp;:&amp;nbsp;int&lt;/code&gt;
+          &lt;br&gt;
+          &lt;code&gt;+ name&amp;nbsp;:&amp;nbsp;String&lt;/code&gt;
+          &lt;br&gt;
+          &lt;code&gt;+ age&amp;nbsp;&amp;nbsp;:&amp;nbsp;int&lt;/code&gt;
+      &lt;/p&gt;
+      &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+      &lt;td&gt;
+      &lt;p&gt;
+          &lt;code&gt;+ getId()&amp;nbsp;:&amp;nbsp;int&lt;/code&gt;
+      &lt;/p&gt;
+      &lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;接口：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684570786524.png&#34;
+	width=&#34;135&#34;
+	height=&#34;74&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684570786524_hu5845e575cae00345fed5de09da321787_3491_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684570786524_hu5845e575cae00345fed5de09da321787_3491_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;接口的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;182&#34;
+		data-flex-basis=&#34;437px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;协作：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684570820946.png&#34;
+	width=&#34;107&#34;
+	height=&#34;67&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684570820946_huaaba4fad0440f7f5bf987a2dd4b8f107_2415_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684570820946_huaaba4fad0440f7f5bf987a2dd4b8f107_2415_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;协作的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;159&#34;
+		data-flex-basis=&#34;383px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关系：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057108089.png&#34;
+	width=&#34;200&#34;
+	height=&#34;48&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057108089_hufef657bed6e876bd373e5f4bb9f34af6_1059_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057108089_hufef657bed6e876bd373e5f4bb9f34af6_1059_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;依赖的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;416&#34;
+		data-flex-basis=&#34;1000px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682057458153.png&#34;
+	width=&#34;408&#34;
+	height=&#34;101&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682057458153_hu37f2bf65b423a501f386d9709f6e6bc4_8075_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682057458153_hu37f2bf65b423a501f386d9709f6e6bc4_8075_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;关联图形化表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;403&#34;
+		data-flex-basis=&#34;969px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057764410.png&#34;
+	width=&#34;162&#34;
+	height=&#34;53&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057764410_huaf9267ff556daac18150e46c6cbbde24_1023_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057764410_huaf9267ff556daac18150e46c6cbbde24_1023_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;泛化的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;305&#34;
+		data-flex-basis=&#34;733px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682061210921.png&#34;
+	width=&#34;619&#34;
+	height=&#34;467&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682061210921_hub4b131b7f109e06635ca875a61e12a0b_45450_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682061210921_hub4b131b7f109e06635ca875a61e12a0b_45450_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;类图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;132&#34;
+		data-flex-basis=&#34;318px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;对象图&#34;&gt;对象图&lt;/h3&gt;
+&lt;p&gt;对象图（Object Diagram）展现了&lt;u&gt;某一时刻一组对象以及它们之间的关系&lt;/u&gt;，&lt;u&gt;描述了在类图中所建立的事物的实例的静态快照&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;对象图一般包括对象和链，如图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682061786263.png&#34;
+	width=&#34;713&#34;
+	height=&#34;312&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682061786263_hua46f494b700cf1a0ac17d6d1520c7d36_50579_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682061786263_hua46f494b700cf1a0ac17d6d1520c7d36_50579_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;对象图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;228&#34;
+		data-flex-basis=&#34;548px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;对象：对象图中的对象包含了类名、对象名和属性。&lt;/p&gt;
+&lt;p&gt;其图形化如下：&lt;/p&gt;
+&lt;table style=&#34;width: 150px; text-align: center;&#34;&gt;
+    &lt;tr&gt;
+    &lt;th style=&#34;text-align: center;&#34;&gt;
+        对象名 : 类名
+    &lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;
+    &lt;p&gt;
+        &lt;code&gt;属性1 = 值1&lt;/code&gt;
+        &lt;br&gt;
+        &lt;code&gt;属性2 = 值2&lt;/code&gt;
+        &lt;br&gt;
+        ......
+    &lt;/p&gt;
+    &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;匿名对象（没有对象名）：&lt;/p&gt;
+&lt;table style=&#34;width: 150px;&#34;&gt;
+    &lt;tr&gt;
+    &lt;th style=&#34;text-align: center;&#34;&gt;
+        : 类名
+    &lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;
+    &lt;p&gt;
+        &lt;code&gt;属性1 = 值1&lt;/code&gt;
+        &lt;br&gt;
+        &lt;code&gt;属性2 = 值2&lt;/code&gt;
+        &lt;br&gt;
+        ......
+    &lt;/p&gt;
+    &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;和类图一样，对象图给出&lt;u&gt;系统的静态设计视图&lt;/u&gt;或&lt;u&gt;静态进程视图&lt;/u&gt;，但它们是&lt;u&gt;从真实的或原型实例的角度建立的&lt;/u&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;用例图&#34;&gt;用例图&lt;/h3&gt;
+&lt;p&gt;用例图（Use Case Diagram）通常包括以下内容：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;用例：是从&lt;strong&gt;用户角度&lt;/strong&gt;描述&lt;strong&gt;系统的行为&lt;/strong&gt;，它将&lt;strong&gt;系统的一个功能&lt;/strong&gt;描述成一系列的事件，这些事件最终对操作者产生有价值的观测结果。&lt;/p&gt;
+&lt;p&gt;用例是一个类，它代表&lt;strong&gt;一类功能&lt;/strong&gt;而不是使用该功能的某一具体实例。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684574449513.png&#34;
+	width=&#34;114&#34;
+	height=&#34;73&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684574449513_hu50f432d3b590de151e3190057472158d_3109_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684574449513_hu50f432d3b590de151e3190057472158d_3109_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;用例的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;156&#34;
+		data-flex-basis=&#34;374px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;参与者：是与系统交互的&lt;strong&gt;外部实体&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;参与者用一个&lt;u&gt;人形图标&lt;/u&gt;表示。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关系：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;用例之间的关系：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;包含关系：用带&lt;code&gt;&amp;lt;&amp;lt;include&amp;gt;&amp;gt;&lt;/code&gt;的虚线箭头表示，如：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684578078948.png&#34;
+	width=&#34;613&#34;
+	height=&#34;182&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684578078948_hubb51fa3891e688e7291daaa781680867_10772_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684578078948_hubb51fa3891e688e7291daaa781680867_10772_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;包含关系&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;336&#34;
+		data-flex-basis=&#34;808px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;扩展关系：用带&lt;code&gt;&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;&lt;/code&gt;的虚线箭头表示，如：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684578542547.png&#34;
+	width=&#34;607&#34;
+	height=&#34;136&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684578542547_hu0236ed30d2e6f19ac3b3e55246e9489d_7977_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684578542547_hu0236ed30d2e6f19ac3b3e55246e9489d_7977_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;扩展关系&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;446&#34;
+		data-flex-basis=&#34;1071px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;扩展用例是指，一个用例中，符合某些特定情况才会触发的另一个用例。&lt;/p&gt;
+&lt;p&gt;即一个用例执行的时候，可能会发生一些特殊情况或可选情况，这种情况就是这个用例的扩展用例。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;参与者和用例之间的关联关系。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用例与用例以及参与者与参与者之间的泛化关系。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682062071630.png&#34;
+	width=&#34;756&#34;
+	height=&#34;382&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682062071630_hue8ceb70c383d5b84d539f99bc1fa6287_66549_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682062071630_hue8ceb70c383d5b84d539f99bc1fa6287_66549_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;用例图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;197&#34;
+		data-flex-basis=&#34;474px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;序列图&#34;&gt;序列图&lt;/h3&gt;
+&lt;p&gt;序列图（Sequence Diagram，&lt;strong&gt;顺序图&lt;/strong&gt;）&lt;u&gt;描述了以时间顺序组织的对象之间的交互活动&lt;/u&gt;，&lt;u&gt;强调消息时间顺序&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;序列图的组成：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;把参加交互的对象放在图的上方，沿水平方向排列。&lt;/p&gt;
+&lt;p&gt;通常把发起交互的对象放在左边，下级对象依次放在右边。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;把这些对象发送和接收的消息，沿垂直方向，按时间顺序从上到下放置。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682064874751.png&#34;
+	width=&#34;691&#34;
+	height=&#34;471&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682064874751_hu9f8f021651236d17904ea27f843ab916_52872_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682064874751_hu9f8f021651236d17904ea27f843ab916_52872_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;序列图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;146&#34;
+		data-flex-basis=&#34;352px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;序列图的组成部分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;对象：用方框框起来的&lt;code&gt;对象名:类名&lt;/code&gt;，没有属性和方法等成分。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;对象生命线&lt;/strong&gt;：表示&lt;u&gt;一个对象存在的时间段&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;如上图中对象下方垂直的虚线。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对象可以在交互过程中创建：生命线从接收到构造型&lt;code&gt;create&lt;/code&gt;消息开始；&lt;/li&gt;
+&lt;li&gt;也可以在交互过程中撤销：生命线从接收到构造型&lt;code&gt;destroy&lt;/code&gt;消息结束，并且给出一个大$\times$的标记表明生命线的结束。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;控制焦点&lt;/strong&gt;：控制焦点表示&lt;u&gt;一个对象执行一个动作所经历的时间段&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;如上图中对象下方的空表矩形条框。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;消息&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;普通的消息用&lt;u&gt;带箭头的实线&lt;/u&gt;表示。所有消息的箭头都是指向接收对象。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;返回消息：用&lt;u&gt;带箭头的虚线&lt;/u&gt;表示。&lt;/li&gt;
+&lt;li&gt;同步消息（调用消息）：指消息发送给接收对象后，需要等待接收对象返回后才可进行下一步操作。&lt;/li&gt;
+&lt;li&gt;异步消息：指消息发送给接收对象后，无需等待接收对象返回即可进行下一步操作。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;序列图有两个不同于通信图的特性：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;序列图有对象生命线；&lt;/li&gt;
+&lt;li&gt;序列图有控制焦点。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;通信图&#34;&gt;通信图&lt;/h3&gt;
+&lt;p&gt;&lt;u&gt;通信图&lt;/u&gt;（Communication Diagram，&lt;strong&gt;协作图&lt;/strong&gt;）&lt;u&gt;强调收发消息的对象的结构组织&lt;/u&gt;。通信图&lt;u&gt;强调参加交互的对象的组织&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;通信图的组成：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;将参加交互的&lt;u&gt;对象&lt;/u&gt;作为图的&lt;u&gt;顶点&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;把连接这些对象的&lt;u&gt;链&lt;/u&gt;表示为图的&lt;u&gt;弧&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;用对象发送和接收的&lt;u&gt;消息&lt;/u&gt;来&lt;u&gt;修饰这些链&lt;/u&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682065157645.png&#34;
+	width=&#34;719&#34;
+	height=&#34;314&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682065157645_hu479fbd97a58f555006937d3c577e3006_30791_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682065157645_hu479fbd97a58f555006937d3c577e3006_30791_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;通信图&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;228&#34;
+		data-flex-basis=&#34;549px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;通信图有以下成分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;对象：与序列图一样，是用一个方框框起来的&lt;code&gt;对象名:类名&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;路径（链接）：用实线表示，可以在链的末端附上一个路径构造型。&lt;/p&gt;
+&lt;p&gt;通常仅需显式地表示以下几种链的路径：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;构造型&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;&amp;lt;&amp;lt;local&amp;gt;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;局部&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;&amp;lt;&amp;lt;parameter&amp;gt;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;参数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;&amp;lt;&amp;lt;global&amp;gt;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;全局&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;&amp;lt;&amp;lt;self&amp;gt;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;自身&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;不必表示&lt;code&gt;association&lt;/code&gt;（关联）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;序号：用来表示消息的时间顺序。是消息前的一个数字前缀，可使用带小数点的号码表示嵌套消息，嵌套可为任意深度。&lt;/p&gt;
+&lt;p&gt;如2表示第2个消息，2.1表示嵌套在消息2中的第1个消息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;消息：沿同一个链可以显示许多消息（可能发自不同方向），并且每个消息都有唯一的序号。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;通信图有两个不同于序列图的特性：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通信图有路径；&lt;/li&gt;
+&lt;li&gt;通信图有序号。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;状态图&#34;&gt;状态图&lt;/h3&gt;
+&lt;p&gt;状态图（State Diagram，状态转换图）关注&lt;u&gt;系统的动态视图&lt;/u&gt;，&lt;u&gt;强调对象行为的事件顺序&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;状态图由以下组成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;状态&lt;/strong&gt;：指对象的生命周期中某个条件或者状态，是&lt;u&gt;任何可以被观察到的系统行为模式&lt;/u&gt;，&lt;u&gt;一个状态代表系统的一种行为模式&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;状态规定了系统内对事件的响应方式。&lt;/p&gt;
+&lt;p&gt;系统对事件的响应：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以是&lt;u&gt;做一个（或一系列）动作&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;可以是仅仅&lt;u&gt;改变系统本身的状态&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;可以是&lt;u&gt;即改变状态，又做动作&lt;/u&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;状态转换图中定义的状态主要有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;初态&lt;/strong&gt;（初始状态）：用一个&lt;u&gt;实心圆点&lt;/u&gt;表示。一张状态图&lt;u&gt;只能有一个初态&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;终态&lt;/strong&gt;（最终状态）：用一个&lt;u&gt;实心圆点外加一个圆圈&lt;/u&gt;表示。一张状态图&lt;u&gt;可以没有终态，也可以有多个&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;中间状态&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;状态图中的状态用一个&lt;u&gt;圆角矩形&lt;/u&gt;表示，可以用两条水平横线将其分为上中下3个部分：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;上面部分（必须）：状态的名称；&lt;/li&gt;
+&lt;li&gt;中间部分（可选）：状态变量的名称和值；&lt;/li&gt;
+&lt;li&gt;下面部分（可选）：活动表。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;状态还可分为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;简单状态。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;组合状态：含有子状态的状态，这个状态也称为其子状态的超状态。&lt;/p&gt;
+&lt;p&gt;子状态：嵌套在另外一个状态中的状态。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;转换&lt;/strong&gt;（迁移）：是两个状态之间的一种关系，表示对象将在源状态中执行一定的动作，并在某个特定事件发生，而且某个特定的警界（监护）条件满足时进入目标状态。&lt;/p&gt;
+&lt;p&gt;状态转换用一条&lt;u&gt;带箭头的实线&lt;/u&gt;表示。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;事件&lt;/strong&gt;：是在某个特定时刻发生的事情，&lt;u&gt;它是对引起系统做动作或（和）从一个状态转换到另个状态的外界事件的抽象&lt;/u&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;u&gt;事件触发&lt;/u&gt;状态转换：&lt;u&gt;状态变迁通常是由事件触发的。&lt;/u&gt;状态之间带箭头实线上的事件发生时，状态转换开始（还可称之为状态“点火”或状态被“触发”）。&lt;/p&gt;
+&lt;p&gt;这种情况下应在表达状态转换的箭头线上标出触发转换的&lt;u&gt;事件表达式&lt;/u&gt;：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;事件说明 [守卫条件] / 动作表达式
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;事件说明的语法为：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;事件名 (参数表)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;守卫条件（监护条件）：一个布尔表达式。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当且仅当事件发生且守卫条件为真时，状态转换才发生；&lt;/li&gt;
+&lt;li&gt;只有守卫条件没有事件说明时，只要守卫条件为真，状态转换就发生。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;动作表达式是一个过程表达式，当状态转换（事件）开始时执行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;u&gt;自动触发&lt;/u&gt;状态转换：如果箭头线上未标明事件，则表示&lt;u&gt;在源状态的内部活动执行完之后自动触发转换&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684587930655.png&#34;
+	width=&#34;717&#34;
+	height=&#34;135&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684587930655_hub194f1dce76ed4c99298044c9667a40d_7727_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684587930655_hub194f1dce76ed4c99298044c9667a40d_7727_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;状态图中的事件和转换&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;531&#34;
+		data-flex-basis=&#34;1274px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;活动&lt;/strong&gt;：指状态中的活动表中的活动。&lt;/p&gt;
+&lt;p&gt;语法如下：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;事件名 (参数表) /动作表达式
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;事件名：可以是任何事件的名称。&lt;/p&gt;
+&lt;p&gt;在活动表中经常使用以下3中标准事件：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;事件名&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;entry&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;u&gt;入口动作&lt;/u&gt;，指定&lt;u&gt;进入该状态&lt;/u&gt;的动作，立即执行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;exit&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;u&gt;出口动作&lt;/u&gt;，指定&lt;u&gt;退出该状态&lt;/u&gt;的动作，立即执行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;do&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;u&gt;内部活动&lt;/u&gt;，指定&lt;u&gt;在该状态下&lt;/u&gt;的动作，占有有限时间，并可中断地工作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;活动（动作）可以在状态内执行，也可以在状态转换（迁移）时执行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682066287326.png&#34;
+	width=&#34;831&#34;
+	height=&#34;431&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682066287326_hu94ea09022f5bcd63fe669c1e18a4beb2_47522_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682066287326_hu94ea09022f5bcd63fe669c1e18a4beb2_47522_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;状态图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;192&#34;
+		data-flex-basis=&#34;462px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;当状态图对系统、类或用例的动态方面建模时，通常是对反应型对象建模。&lt;/p&gt;
+&lt;h3 id=&#34;活动图&#34;&gt;活动图&lt;/h3&gt;
+&lt;p&gt;活动图（Activity Diagram）是一种特殊的状态图，它&lt;u&gt;展现了在系统内从一个活动到另一个活动的流程&lt;/u&gt;。活动图&lt;u&gt;专注于系统的动态视图&lt;/u&gt;，&lt;u&gt;强调对象间的控制流程&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682067363114.png&#34;
+	width=&#34;654&#34;
+	height=&#34;744&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682067363114_hua57a5009862c06a77af06a14b99cf391_95291_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682067363114_hua57a5009862c06a77af06a14b99cf391_95291_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;活动图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;87&#34;
+		data-flex-basis=&#34;210px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;活动图一般包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;状态：&lt;/p&gt;
+&lt;p&gt;活动图的状态也包含初态和终态。其余的状态还可分为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;动作状态：不能被分解，动作不能被中断。&lt;/li&gt;
+&lt;li&gt;活动状态：能够被进一步分解，可以被中断，其活动由其它的活动图来表示。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;流（转换）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对象。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;活动图可以表示：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;分支（判断）：分支的流上用&lt;code&gt;[]&lt;/code&gt;标记的是监护表达式；&lt;/li&gt;
+&lt;li&gt;（并发）分岔：将一个流分为多个可并发执行的流；&lt;/li&gt;
+&lt;li&gt;（并发）汇合：将分岔出去的多个流合并为同一个流。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当对一个系统的动态方面建模时，有以下几种使用活动图的方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对工作流建模；&lt;/li&gt;
+&lt;li&gt;对操作建模；&lt;/li&gt;
+&lt;li&gt;对业务的复杂流程建模。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;构件图&#34;&gt;构件图&lt;/h3&gt;
+&lt;p&gt;构件图（Component Diagram，&lt;strong&gt;组件图&lt;/strong&gt;）展现了&lt;u&gt;一组构件之间的组织和依赖&lt;/u&gt;。构件图&lt;u&gt;专注于系统的静态实现视图&lt;/u&gt;，它&lt;u&gt;与类图相关，通常把构件映射为一个或多个类、接口或协作&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682068370459.png&#34;
+	width=&#34;638&#34;
+	height=&#34;332&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682068370459_hue00d8420ae8e9d060383db5e372a8f97_47534_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682068370459_hue00d8420ae8e9d060383db5e372a8f97_47534_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;构件图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;192&#34;
+		data-flex-basis=&#34;461px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;构件图的成分有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;构件：用&lt;u&gt;矩形&lt;/u&gt;表示，在矩形&lt;u&gt;右上方有一个小标记&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;供接口：用一个&lt;u&gt;&lt;strong&gt;圆圈&lt;/strong&gt;和连接到构件上的实线&lt;/u&gt;表示。构件提供接口给其它构件使用。&lt;/li&gt;
+&lt;li&gt;需接口：用一个&lt;u&gt;&lt;strong&gt;半圆&lt;/strong&gt;和连接到构件上的实线&lt;/u&gt;表示。构件使用需接口表示需要调用其它构件提供接口。&lt;/li&gt;
+&lt;li&gt;依赖：将供接口（圆圈）和虚接口（半圆）连接到一起，表示两个构件通过这个接口相依赖。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;部署图&#34;&gt;部署图&lt;/h3&gt;
+&lt;p&gt;部署图（Deployment Diagram）是用来&lt;u&gt;对面向对象系统的&lt;strong&gt;物理方面&lt;/strong&gt;建模&lt;/u&gt;的方法，展现了运行时处理结点以及其中构件（制品）的配置。部署图&lt;u&gt;对系统的静态部署视图进行建模&lt;/u&gt;，它与构件图相关。&lt;/p&gt;
+&lt;p&gt;部署图&lt;u&gt;展现了系统的软件和硬件之间的关系，在实施阶段使用&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682073176388.png&#34;
+	width=&#34;491&#34;
+	height=&#34;327&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682073176388_hu28a5a922204a8226fa8f8a21e50bdfbf_36398_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682073176388_hu28a5a922204a8226fa8f8a21e50bdfbf_36398_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;部署图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;360px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&lt;/code&gt;表示制品。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;总结&#34;&gt;总结&lt;/h3&gt;
+&lt;p&gt;UML图分类：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;UML图&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;静态建模&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;动态建模&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;物理建模&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;类图&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\checkmark$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;对象图&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\checkmark$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;用例图&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\checkmark$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;构件图（组件图)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\checkmark$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\checkmark$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;部署图&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\checkmark$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\checkmark$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;序列图（顺序图，时序图）&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\checkmark$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;通信图（协作图）&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\checkmark$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;状态图&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\checkmark$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;活动图&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\checkmark$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;类图成分总结：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;名称&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;图示&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;类&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684650129674.png&#34;
+	width=&#34;142&#34;
+	height=&#34;139&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684650129674_hucae45be9ae605ee21a469444ed126234_7038_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684650129674_hucae45be9ae605ee21a469444ed126234_7038_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;类图中的类的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;102&#34;
+		data-flex-basis=&#34;245px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;接口&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684570786524.png&#34;
+	width=&#34;135&#34;
+	height=&#34;74&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684570786524_hu5845e575cae00345fed5de09da321787_3491_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684570786524_hu5845e575cae00345fed5de09da321787_3491_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;类图接口的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;182&#34;
+		data-flex-basis=&#34;437px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;协作&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684570820946.png&#34;
+	width=&#34;107&#34;
+	height=&#34;67&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684570820946_huaaba4fad0440f7f5bf987a2dd4b8f107_2415_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684570820946_huaaba4fad0440f7f5bf987a2dd4b8f107_2415_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;协作的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;159&#34;
+		data-flex-basis=&#34;383px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;依赖&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057108089.png&#34;
+	width=&#34;200&#34;
+	height=&#34;48&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057108089_hufef657bed6e876bd373e5f4bb9f34af6_1059_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057108089_hufef657bed6e876bd373e5f4bb9f34af6_1059_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;依赖的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;416&#34;
+		data-flex-basis=&#34;1000px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;泛化&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057764410.png&#34;
+	width=&#34;162&#34;
+	height=&#34;53&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057764410_huaf9267ff556daac18150e46c6cbbde24_1023_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057764410_huaf9267ff556daac18150e46c6cbbde24_1023_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;泛化的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;305&#34;
+		data-flex-basis=&#34;733px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;关联&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682057458153.png&#34;
+	width=&#34;408&#34;
+	height=&#34;101&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682057458153_hu37f2bf65b423a501f386d9709f6e6bc4_8075_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682057458153_hu37f2bf65b423a501f386d9709f6e6bc4_8075_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;关联图形化表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;403&#34;
+		data-flex-basis=&#34;969px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;用例图成分总结：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;名称&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;图示&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;用例&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684574449513.png&#34;
+	width=&#34;114&#34;
+	height=&#34;73&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684574449513_hu50f432d3b590de151e3190057472158d_3109_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684574449513_hu50f432d3b590de151e3190057472158d_3109_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;用例的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;156&#34;
+		data-flex-basis=&#34;374px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;包含关系&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684578078948.png&#34;
+	width=&#34;613&#34;
+	height=&#34;182&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684578078948_hubb51fa3891e688e7291daaa781680867_10772_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684578078948_hubb51fa3891e688e7291daaa781680867_10772_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;用例之间的包含关系&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;336&#34;
+		data-flex-basis=&#34;808px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;扩展关系&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684578542547.png&#34;
+	width=&#34;607&#34;
+	height=&#34;136&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684578542547_hu0236ed30d2e6f19ac3b3e55246e9489d_7977_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684578542547_hu0236ed30d2e6f19ac3b3e55246e9489d_7977_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;用例之间的扩展关系&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;446&#34;
+		data-flex-basis=&#34;1071px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;泛化关系&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057764410.png&#34;
+	width=&#34;162&#34;
+	height=&#34;53&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057764410_huaf9267ff556daac18150e46c6cbbde24_1023_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057764410_huaf9267ff556daac18150e46c6cbbde24_1023_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;用例与用例以及参与者与参与者之间的泛化关系&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;305&#34;
+		data-flex-basis=&#34;733px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;交互图中，顺序图和通信图是同构的，它们之间可以相互转换。它们的差异如下：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;差异&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;center&gt;序列图&lt;/center&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;center&gt;通信图&lt;/center&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;强调&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;center&gt;消息时间顺序&lt;/center&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;center&gt;收发消息的对象的结构组织&lt;/center&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;不同的特性&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;ul&gt;&lt;li&gt;有对象生命线：对象存在的时间段&lt;/li&gt;&lt;li&gt;有控制焦点：对象执行动作所经历的时间段&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;ul&gt;&lt;li&gt;有路径：表示对象之间有交互&lt;/li&gt;&lt;li&gt;有序号：表示消息的时间顺序，可嵌套表示&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;活动图是一种特殊的状态图，它们的差异如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;相同点：状态中都有初态和终态。&lt;/li&gt;
+&lt;li&gt;主要差异：
+&lt;ul&gt;
+&lt;li&gt;活动图的转换称为流；&lt;/li&gt;
+&lt;li&gt;活动图有分支、并发分岔和并发汇合。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以下是UML图的总结：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;类图&lt;/strong&gt;：展现一组&lt;u&gt;对象（类）&lt;/u&gt;、&lt;u&gt;接口&lt;/u&gt;、&lt;u&gt;协作&lt;/u&gt;和它们之间的&lt;u&gt;关系&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682061210921.png&#34;
+	width=&#34;619&#34;
+	height=&#34;467&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682061210921_hub4b131b7f109e06635ca875a61e12a0b_45450_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682061210921_hub4b131b7f109e06635ca875a61e12a0b_45450_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;类图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;132&#34;
+		data-flex-basis=&#34;318px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;对象图&lt;/strong&gt;：展现某一时刻的一组&lt;u&gt;对象&lt;/u&gt;以及它们之间的&lt;u&gt;关系&lt;/u&gt;，描述了在类图中所建立事物的实例的静态快照&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682061786263.png&#34;
+	width=&#34;713&#34;
+	height=&#34;312&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682061786263_hua46f494b700cf1a0ac17d6d1520c7d36_50579_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682061786263_hua46f494b700cf1a0ac17d6d1520c7d36_50579_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;对象图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;228&#34;
+		data-flex-basis=&#34;548px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;用例图&lt;/strong&gt;：展现了一组&lt;u&gt;用例&lt;/u&gt;、&lt;u&gt;参与者&lt;/u&gt;以及它们之间的&lt;u&gt;关系（包含、扩展、关联和泛化）&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682062071630.png&#34;
+	width=&#34;756&#34;
+	height=&#34;382&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682062071630_hue8ceb70c383d5b84d539f99bc1fa6287_66549_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682062071630_hue8ceb70c383d5b84d539f99bc1fa6287_66549_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;用例图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;197&#34;
+		data-flex-basis=&#34;474px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;序列图（顺序图，时序图）&lt;/strong&gt;：描述了以&lt;u&gt;时间顺序&lt;/u&gt;组织的&lt;u&gt;对象&lt;/u&gt;之间的&lt;u&gt;交互活动&lt;/u&gt;，强调&lt;u&gt;消息时间顺序&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682064874751.png&#34;
+	width=&#34;691&#34;
+	height=&#34;471&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682064874751_hu9f8f021651236d17904ea27f843ab916_52872_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682064874751_hu9f8f021651236d17904ea27f843ab916_52872_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;序列图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;146&#34;
+		data-flex-basis=&#34;352px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;通信图（协作图）&lt;/strong&gt;：强调&lt;u&gt;收发消息的对象的结构组织&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682065157645.png&#34;
+	width=&#34;719&#34;
+	height=&#34;314&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682065157645_hu479fbd97a58f555006937d3c577e3006_30791_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682065157645_hu479fbd97a58f555006937d3c577e3006_30791_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;通信图&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;228&#34;
+		data-flex-basis=&#34;549px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;状态图（状态转换图）&lt;/strong&gt;：展现了一个状态机，强调&lt;u&gt;对象行为的事件顺序&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682066287326.png&#34;
+	width=&#34;831&#34;
+	height=&#34;431&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682066287326_hu94ea09022f5bcd63fe669c1e18a4beb2_47522_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682066287326_hu94ea09022f5bcd63fe669c1e18a4beb2_47522_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;状态图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;192&#34;
+		data-flex-basis=&#34;462px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;活动图&lt;/strong&gt;：一种特殊的状态图，展现了在&lt;u&gt;系统内从一个活动到另一个活动的流程&lt;/u&gt;，强调&lt;u&gt;对象间的控制流程&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682067363114.png&#34;
+	width=&#34;654&#34;
+	height=&#34;744&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682067363114_hua57a5009862c06a77af06a14b99cf391_95291_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682067363114_hua57a5009862c06a77af06a14b99cf391_95291_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;活动图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;87&#34;
+		data-flex-basis=&#34;210px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;构件图（组件图)&lt;/strong&gt;：展现了一组&lt;u&gt;构件之间的组织和依赖&lt;/u&gt;，将构件映射为类、接口或协作&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682068370459.png&#34;
+	width=&#34;638&#34;
+	height=&#34;332&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682068370459_hue00d8420ae8e9d060383db5e372a8f97_47534_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682068370459_hue00d8420ae8e9d060383db5e372a8f97_47534_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;构件图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;192&#34;
+		data-flex-basis=&#34;461px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;部署图&lt;/strong&gt;：对物理建模，展现了&lt;u&gt;运行时处理结点以及其中构件（制品）的配置&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682073176388.png&#34;
+	width=&#34;491&#34;
+	height=&#34;327&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682073176388_hu28a5a922204a8226fa8f8a21e50bdfbf_36398_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682073176388_hu28a5a922204a8226fa8f8a21e50bdfbf_36398_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;部署图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;360px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;软件工程&#34;&gt;软件工程&lt;/h1&gt;
+&lt;h2 id=&#34;沟通路径&#34;&gt;沟通路径&lt;/h2&gt;
+&lt;p&gt;沟通图是指项目中人员或部门之间的沟通用一条无向边连接起来，所构成图即为沟通图。沟通图中的路径称为沟通路径。&lt;/p&gt;
+&lt;p&gt;软件项目中沟通路径$m$的计算公式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;沟通图中无主程序员时：&lt;/p&gt;
+&lt;p&gt;$$
+m = \sum_{i=1}^{n} i-1 = \cfrac{(n-1)n}{2}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;沟通图中有主程序员时：&lt;/p&gt;
+&lt;p&gt;$$
+m = n - 1
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;gantt图&#34;&gt;Gantt图&lt;/h2&gt;
+&lt;p&gt;Gantt图：一种&lt;u&gt;简单的水平条形图&lt;/u&gt;，它&lt;u&gt;以日历为基准&lt;/u&gt;描述项目任务。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;垂直轴：表示&lt;u&gt;多个不同的任务&lt;/u&gt;，每个任务按照左侧任务名称垂直排列。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;水平轴：表示&lt;u&gt;日历时间线&lt;/u&gt;（如时、天、周、月和年等）。&lt;/p&gt;
+&lt;p&gt;每个水平条表示一个任务：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每一水平条的&lt;u&gt;起点&lt;/u&gt;：表示该任务的&lt;u&gt;开始时间&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;每一水平条的&lt;u&gt;终点&lt;/u&gt;：表示该任务的&lt;u&gt;结束时间&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;每一水平条的&lt;u&gt;长度&lt;/u&gt;：表示&lt;u&gt;完成该任务的持续时间&lt;/u&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当日历中同一时段存在多个水平条时，表示任务之间的并发。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/uTools_1683683731050.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Gantt图示例&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Gantt图优点：&lt;/p&gt;
+&lt;p&gt;能清晰地描述：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每个任务的开始时间；&lt;/li&gt;
+&lt;li&gt;每个任务的结束时间；&lt;/li&gt;
+&lt;li&gt;任务的进展情况；&lt;/li&gt;
+&lt;li&gt;各个任务之间的并行性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Gantt图缺点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不能清晰地反映各任务之间的&lt;u&gt;依赖关系&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;难以确定&lt;u&gt;整个项目的关键所在&lt;/u&gt;，即不能清晰地确定影响进度的&lt;u&gt;关键任务&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;不能反映&lt;u&gt;计划中有潜力的部分&lt;/u&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;pert图&#34;&gt;PERT图&lt;/h2&gt;
+&lt;p&gt;PERT图是一个&lt;u&gt;有向图&lt;/u&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;弧&lt;/strong&gt;：表示&lt;strong&gt;任务&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;任务包含以下成分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;u&gt;完成该任务所需的时间&lt;/u&gt;（任务持续时间）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;u&gt;松弛时间&lt;/u&gt;（Slack Time）：表示在&lt;u&gt;不影响整个工期的前提下完成该任务有多少机动余地&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;即松弛时间指当前任务的工期可以推迟的时间。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;空任务：用虚线箭头表示，表示任务间的关系所添加。完成空任务的所需时间为0。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;结点&lt;/strong&gt;：表示&lt;strong&gt;事件&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;事件是流入结点的任务的结束，或流出结点的任务的开始。事件&lt;u&gt;表示某个时间点&lt;/u&gt;，本身不消耗时间和资源。&lt;/p&gt;
+&lt;p&gt;事件包含以下成分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;事件号。&lt;/li&gt;
+&lt;li&gt;出现该事件的&lt;strong&gt;最早时刻&lt;/strong&gt;：表示在此时刻之前从该事件出发的任务不可能开始。&lt;/li&gt;
+&lt;li&gt;出现该事件的&lt;strong&gt;最迟时刻&lt;/strong&gt;：表示从该事件出发的任务最迟在此时刻开始，否则整个工程就不能如期完成。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;u&gt;只有当流入该结点的所有任务都结束时，结点所表示的事件才出现，流出结点的任务才可以开始。&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;特殊的事件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;开始事件：没有任何任务流向该事件；&lt;/li&gt;
+&lt;li&gt;结束事件：没有任务任务从该事件流出。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一个项目是从开始事件开始到结束事件结束。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/uTools_1683684995281.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;PERT图示例&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;设：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$T(e)$：完成任务$e$的所需时间；&lt;/li&gt;
+&lt;li&gt;$T_s(e)$：完成任务$e$的松弛时间；&lt;/li&gt;
+&lt;li&gt;$T_e(v)$：事件$v$的最早时刻；&lt;/li&gt;
+&lt;li&gt;$T_l(v)$：事件$v$的最迟时刻。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;PERT图各成分取值（不一定需要满足下面的关系，但是可以用下面的式子推出）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;事件$V_{in}$的&lt;u&gt;最早时刻&lt;/u&gt;$T_e(V_{in})$：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;只有一个任务流入时，设该任务的流出事件为$V_{out}$，则该任务为$&amp;lt;V_{out}, V_{in}&amp;gt;$：&lt;/p&gt;
+&lt;p&gt;$$
+T_e(V_{in}) = T_e(V_{out}) + T
+$$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里将$T(&amp;lt;V_{out}, V_{in}&amp;gt;)$简写为了$T$。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;即：&lt;u&gt;该流入任务的流出事件的最早时刻&lt;/u&gt; + &lt;u&gt;完成该流入任务的所需时间&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多个任务流入时，设与每个任务相对应的流出事件为$V_{out}[ \ i \ ]$，则这些任务为$&amp;lt;V_{out}[ \ i \ ], V_{in}&amp;gt;$：&lt;/p&gt;
+&lt;p&gt;$$
+T_e(V_{in}) = Max(T_e(V_{out}[ \ i \ ]) + T_i)
+$$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里将$T(&amp;lt;V_{out}[ \ i \ ], V_{in}&amp;gt;)$简写为了$T_i$。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;即&lt;u&gt;流入该事件的每个任务计算出的最早时刻的最大值&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;开始事件$V_{start}$：&lt;/p&gt;
+&lt;p&gt;$$
+T_e(V_{start}) = 0
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;事件$V_{out}$的&lt;u&gt;最迟时刻&lt;/u&gt;$T_l(V_{out})$：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;只有一个任务流出时，设该任务的流入事件为$V_{in}$，则该任务为$&amp;lt;V_{out}, V_{in}&amp;gt;$：&lt;/p&gt;
+&lt;p&gt;$$
+T_l(V_{out}) = T_l(V_{in}) - (T + T_s)
+$$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里将$T_s(&amp;lt;V_{out}, V_{in}&amp;gt;)$简写为$T_s$。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;即：&lt;u&gt;该流出任务的流入事件的最迟时刻&lt;/u&gt; -（&lt;u&gt;该流出任务的所需时间&lt;/u&gt; + &lt;u&gt;松弛时间&lt;/u&gt;）。&lt;/p&gt;
+&lt;p&gt;如果松弛时间未知或为0：&lt;/p&gt;
+&lt;p&gt;$$
+T_l(V_{out}) = T_l(V_{in}) - T
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多个任务流出时，设与每个任务相对应的流入事件为$V_{in}[ \ i \ ]$，则这些任务为$&amp;lt;V_{out}, V_{in}[ \ i \ ]&amp;gt;$：&lt;/p&gt;
+&lt;p&gt;$$
+T_l(V_{out}) = Min(T_l(V_{in}[ \ i \ ]) - (T_i + S_i))
+$$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里把$T(&amp;lt;V_{out}, V_{in}[ \ i \ ]&amp;gt;)$简写为$T_i$，把$T_s(&amp;lt;V_{out}, V_{in}[ \ i \ ]&amp;gt;)$简写为$S_i$。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;即&lt;u&gt;流出该事件的每个任务计算出的最晚时刻的最大值&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;如果松弛时间未知或为0：&lt;/p&gt;
+&lt;p&gt;$$
+T_l(V_{out}) = Min(T_l(V_{in}[ \ i \ ]) - T_i)
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;结束事件$V_{end}$：&lt;/p&gt;
+&lt;p&gt;$$
+T_l(V_{end}) = T_e(V_{end})
+$$&lt;/p&gt;
+&lt;p&gt;即&lt;u&gt;结束事件的最早时刻与最迟时刻相等&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设某任务的流入事件为$V_{in}$，流出事件为$V_{out}$，则该任务$&amp;lt;V_{out}, V_{in}&amp;gt;$的&lt;u&gt;松弛时间&lt;/u&gt;$T_s(&amp;lt;V_{out}, V_{in}&amp;gt;)$。&lt;/p&gt;
+&lt;p&gt;$$
+T_s = T_l(V_{in}) - T - T_e(V_{out})
+$$&lt;/p&gt;
+&lt;p&gt;即，该任务的流入事件的最迟时刻 - 该任务的所需时间 - 该任务的流出事件的最早时刻&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/uTools_1683719224977.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;PERT图公式参照图&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;PERT图的路径：从开始事件到结束事件的一条通路。&lt;/p&gt;
+&lt;p&gt;PERT图的&lt;strong&gt;关键路径&lt;/strong&gt;：指&lt;u&gt;所有的任务的松弛时间都为0的路径&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;关键路径的长度：指结束事件的最早（或最晚）时刻。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/uTools_1683706944555.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;PERT图的关键路径示例&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;关键路径的特点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;所有任务的松弛时间都为0。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;每个事件的最早时刻和最迟时刻都是相等的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;所有任务持续时间的和，是PERT图所有路径中最大的，并且与结束事件的最早时刻（或最晚时刻）相等。&lt;/p&gt;
+&lt;p&gt;设关键路径中所有事件为$V_i$（$i = 1, 2, \cdots, n$），且该路径下的任务为$&amp;lt;V_j, V_{j+1}&amp;gt;$（$1 \le j \le n-1$）（表示$V_1$是开始事件，$V_2$是$V_1$往下的一个事件，以此类推，$V_n$是结束事件），那么该关键路径结束事件的最早时刻（或最晚时刻）为：&lt;/p&gt;
+&lt;p&gt;$$
+T_e(V_n) = \sum_{i = 1}^{n-1} T_i
+$$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里$T_i$代表$T(&amp;lt;V_i, V_{i+1}&amp;gt;)$。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最迟时刻的另一种求法（PERT图存在关键路径的情况下）：&lt;/p&gt;
+&lt;p&gt;已知某PERT图结束事件的最晚时刻（最早时刻），该PERT图中某一条路径（假设该路径没有分支）中所有事件为$V_j$（$j = 1, 2, \cdots, n$），且该路径下的任务为$&amp;lt;V_k, V_{k+1}&amp;gt;$（$1 \le k \le n-1$），该路径下任务的持续时间$T(&amp;lt;V_{k-1}, V_k&amp;gt;)$已知，（即$V_1$是开始事件，按照次序往下，$V_n$是结束事件），计算某一事件的最迟时刻$T_l(V_i)$（$1 \le i &amp;lt; n$）：&lt;/p&gt;
+&lt;p&gt;$$
+T_l(V_i) = T_l(V_n) - \sum_{j = i}^{n - 1} T_j
+$$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里$T_j$代表$T(&amp;lt;V_j, V_{j + 1}&amp;gt;)$。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;即：&lt;u&gt;结束事件的最晚时刻&lt;/u&gt; - &lt;u&gt;该事件到结束事件之间所有的任务的持续时间总和&lt;/u&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意：如果事件$V_i$到结束事件之间存在多条路径，应该选择那条任务持续时间总和最大的路径。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;PERT图的优点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;给出了每个任务的开始时间、结束时间和完成该任务所需的时间；&lt;/li&gt;
+&lt;li&gt;给出了任务之间的关系（依赖关系）。即任务之间的执行顺序。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;PERT图不能清晰地描述任务之间的并行情况。&lt;/p&gt;
+&lt;h2 id=&#34;项目活动图&#34;&gt;项目活动图&lt;/h2&gt;
+&lt;p&gt;项目活动图是一种有向图（与PERT图十分类似）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;弧：表示活动。弧的权值表示活动的持续时间。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;顶点：表示项目里程碑。&lt;/p&gt;
+&lt;p&gt;特殊的里程碑：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;开始里程碑：没有任何活动指向该里程碑；&lt;/li&gt;
+&lt;li&gt;结束里程碑：没有任何活动从该里程碑指出。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;项目活动图的关键路径：按照PERT图的方法求出松弛时间为0的、从开始里程碑到结束里程碑的路径。&lt;/p&gt;
+&lt;p&gt;关键路径的长度：为结束里程碑的最早时刻（或最晚时刻）。它可以用来表示项目完成的最少时间。&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>数据库篇</title>
+        <link>https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/</link>
+        <pubDate>Sat, 22 Apr 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/</guid>
+        <description>&lt;h1 id=&#34;数据库体系结构&#34;&gt;数据库体系结构&lt;/h1&gt;
+&lt;p&gt;数据描述有两种形式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;逻辑描述：指程序员或用户用以操作的数据形式，是抽象的概念化数据。&lt;/li&gt;
+&lt;li&gt;物理描述：指数据在存储设备上的存储方式，物理数据是实际存放在存储设备上的数据。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;三级模式结构&#34;&gt;三级模式结构&lt;/h2&gt;
+&lt;p&gt;实际上有许多不同的数据库产品，但它们的体系结构基本上都具有相同的特征，采用“三级模式和两级映像”：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681373319410.png&#34;
+	width=&#34;486&#34;
+	height=&#34;377&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681373319410_hu9b9f67605df5247fa6ccd5bd0d000f11_51804_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681373319410_hu9b9f67605df5247fa6ccd5bd0d000f11_51804_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;三级模式两级映像&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;128&#34;
+		data-flex-basis=&#34;309px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;三级结构有3类数据模型：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;外模型&lt;/strong&gt;：用户使用的&lt;strong&gt;数据视图&lt;/strong&gt;，是一种局部的逻辑数据视图，表示用户所理解的实体、实体属性和实体关系。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;概念模型&lt;/strong&gt;：全局的&lt;strong&gt;逻辑数据视图&lt;/strong&gt;，是数据库管理员所看到的实体、实体属性和实体之间的联系。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;内模型&lt;/strong&gt;：数据的物理&lt;strong&gt;存储模型&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;三个物理模型分别对应数据库系统的3层结构：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;外模式（子模式、用户模式）&lt;/strong&gt;：数据库用户的数据视图，是与某一应用程序有关的数据的逻辑表示。&lt;/p&gt;
+&lt;p&gt;外模式用DBMS的外模式描述语言（外模式DDL)来定义。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;概念模式（模式）&lt;/strong&gt;：所有用户的公共数据视图，与具体的应用程序和应用程序开发工具无关。&lt;/p&gt;
+&lt;p&gt;概念模式用DBMS的模式描述语言（模式DDL)来定义。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;内模式（物理模式、存储模式）&lt;/strong&gt;：是数据在数据库内部的表示方式。&lt;/p&gt;
+&lt;p&gt;内模式由DBMS的内模式描述语言（内模式DDL)来描述，由设备介质语言来定义。&lt;/p&gt;
+&lt;p&gt;定义&lt;u&gt;所有的&lt;strong&gt;内部记录类型&lt;/strong&gt;、&lt;strong&gt;索引&lt;/strong&gt;和&lt;strong&gt;文件&lt;/strong&gt;的组织方式&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;两级模式映象&#34;&gt;两级模式映象&lt;/h2&gt;
+&lt;p&gt;数据库系统在三级模式之间提供了两级映像：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;模式——内模式映像存在于&lt;u&gt;概念级和内部级&lt;/u&gt;之间，实现&lt;u&gt;概念模式和内模式&lt;/u&gt;间的相互转换。&lt;/li&gt;
+&lt;li&gt;外模式——模式映像：存在于&lt;u&gt;外部级和概念级&lt;/u&gt;之间，实现了&lt;u&gt;外模式和概念模式&lt;/u&gt;之间的相互转换。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;数据的独立性（指数据与程序独立）是由DBMS的二级映像功能来保证的。数据的独立性包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;物理独立性&lt;/strong&gt;：指当数据库的&lt;u&gt;内模式发生改变时，数据的逻辑结构不变&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;物理独立性可以保证，当数据的物理结构改变时，应用程序不用改变。&lt;/p&gt;
+&lt;p&gt;但是，为了保证应用程序能够正确执行，&lt;u&gt;需要修改概念模式和内模式之间的映像&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;逻辑独立性&lt;/strong&gt;：指用户的&lt;u&gt;应用程序与数据库的逻辑结构是相互独立的&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;数据的逻辑结构发生变化后，用户程序也可以不修改。&lt;/p&gt;
+&lt;p&gt;但是，为了保证应用程序能够正确执行，&lt;u&gt;需要修改外模式和概念模式之间的映像&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;数据模型&#34;&gt;数据模型&lt;/h1&gt;
+&lt;p&gt;在数据库技术中，表示实体类型及实体类型间联系的模型称为数据模型。&lt;/p&gt;
+&lt;p&gt;数据模型有以下类型：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;概念数据模型：从信息世界中抽象的数据模型；&lt;/li&gt;
+&lt;li&gt;结构数据模型：从计算机世界中抽象出的DBMS支持的数据模型。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;概念数据模型&#34;&gt;概念数据模型&lt;/h2&gt;
+&lt;p&gt;概念数据模型用于信息世界建模，一般采用实体-联系方法（E-R方法）。概念数据模型的常用术语有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;实体&lt;/strong&gt;：客观存在并可以相互区别的事物称为实体。&lt;/p&gt;
+&lt;p&gt;如一个单位、一个职工、一个部门或一个项目等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;属性&lt;/strong&gt;：描述实体的特性称为属性，一个实体可以由若干个属性来刻画。&lt;/p&gt;
+&lt;p&gt;属性的具体取值称为属性值，用以表示一个具体实体。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;码&lt;/strong&gt;：&lt;u&gt;唯一标识&lt;/u&gt;实体的属性集称为码。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;域&lt;/strong&gt;：属性的&lt;u&gt;取值范围&lt;/u&gt;称为该属性的域。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;实体型&lt;/strong&gt;：具有相同属性的实体必然具有共同的特征和性质，用实体名及其属性名集合来抽象和刻画同类实体，称为实体型。&lt;/p&gt;
+&lt;p&gt;例如，学生（学号，姓名，性别，班号）就是一个实体型。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;实体集&lt;/strong&gt;：同型实体的集合称为实体集。&lt;/p&gt;
+&lt;p&gt;例如，全体学生就是一个实体集。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;联系&lt;/strong&gt;：实体（型）之间的对应关系称为联系。联系分为两种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;实体内部各属性之间的联系；&lt;/li&gt;
+&lt;li&gt;实体之间的联系。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;两个实体型之间的联系有3种类型：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一对一联系(1:1)；&lt;/li&gt;
+&lt;li&gt;一对多联系(1:n)；&lt;/li&gt;
+&lt;li&gt;多对多联系(m:n)。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;实体-联系方法表示的概念数据模型称为E-R图。E-R图是抽象和描述现实世界的有力工具：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;实体型&lt;/strong&gt;：用&lt;strong&gt;矩形&lt;/strong&gt;表示，矩形框内写明实体名；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;属性&lt;/strong&gt;：用&lt;strong&gt;椭圆形&lt;/strong&gt;表示，并用无向边将其与相应的实体连接起来；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;联系&lt;/strong&gt;：用&lt;strong&gt;菱形&lt;/strong&gt;表示，菱形框内写明联系名，并用无向边将其分别与有关实体连接起来，同时在无向边旁标上联系的类型。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681289395117.png&#34;
+	width=&#34;240&#34;
+	height=&#34;242&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681289395117_hube981d9754c37a567c83a04aad71de33_18088_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681289395117_hube981d9754c37a567c83a04aad71de33_18088_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;E-R图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;99&#34;
+		data-flex-basis=&#34;238px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;结构数据模型&#34;&gt;结构数据模型&lt;/h2&gt;
+&lt;p&gt;结构数据模型是直接面向数据库的逻辑结构。这类模型涉及到计算机系统和数据库管理系统，所以称为结构数据模型。任何一个DBMS都以某个结构数据模型为基础，或者说支持某个结构数据模型。&lt;/p&gt;
+&lt;p&gt;常用术语：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;数据项&lt;/strong&gt;：又称&lt;strong&gt;字段&lt;/strong&gt;，是数据库中可以命名的最小逻辑数据单位。可以是一个数或个字符串，用它描述属性的数据。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;记录&lt;/strong&gt;：是数据项的有序集，即一个记录是由若干个数据项或字段组成，用它描述实体。&lt;/p&gt;
+&lt;p&gt;一般来说，数据只有被组成记录的形式才有实际意义。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;文件&lt;/strong&gt;：文件是一个具有符号名的一组同类记录的集合。文件包含记录的结构和记录的值。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;结构数据模型主要包括：层次、网状、关系和面向对象模型。&lt;/p&gt;
+&lt;p&gt;关系模型是一种用二维表格结构快表示实体以及实体之间联系的数据模型。每个二维表由行、列组成，又可称为关系，关系模式是对关系的描述。因此可以说，关系模型是由关系模式组成的集合。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;目前大多数数据库管理系统都是关系型的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;关系模型&#34;&gt;关系模型&lt;/h1&gt;
+&lt;h2 id=&#34;术语&#34;&gt;术语&lt;/h2&gt;
+&lt;p&gt;有关关系模型的术语：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;关系&lt;/strong&gt;：一个关系就是一张&lt;strong&gt;二维表&lt;/strong&gt;，每个关系有一个关系名&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;元组&lt;/strong&gt;：表中的一行即为一个&lt;strong&gt;元组&lt;/strong&gt;，对应存储文件中的一个&lt;strong&gt;记录值&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;属性&lt;/strong&gt;：表中的&lt;strong&gt;列&lt;/strong&gt;称为属性，每一列有一个属性名。&lt;/p&gt;
+&lt;p&gt;属性值相当于记录中的数据项或者字段值。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;域&lt;/strong&gt;：属性的&lt;strong&gt;取值范围&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;关系模式&lt;/strong&gt;：对关系的&lt;strong&gt;描述&lt;/strong&gt;称为关系模式，由关系名和其属性集合构成，关系模式的格式为：关系名（属性名1，属性名2，…，属性名n）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;候选码&lt;/strong&gt;（候选健）：属性或属性组合其值能够&lt;strong&gt;唯一地标识&lt;/strong&gt;一个元组。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;主码&lt;/strong&gt;（主键）：在一个关系中可能有&lt;u&gt;多个候选码，从中选择一个&lt;/u&gt;作为主码。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;主属性&lt;/strong&gt;：所有候选键都称为主属性，其他的属性都称为&lt;strong&gt;非码属性&lt;/strong&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;外码&lt;/strong&gt;（或外键）：如果一个关系中的属性或属性组并非该关系（二维表）的码，但它们是&lt;u&gt;另外一个关系（二维表）的码&lt;/u&gt;，则称其为该关系的外码。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;全码&lt;/strong&gt;：关系模式的&lt;u&gt;所有属性组是这个关系模式的候选码&lt;/u&gt;，称为全码。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;超码&lt;/strong&gt;（超键）：一个&lt;u&gt;包含码的属性集称为超码&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;例如学号是码，则（学号，姓名）就是一个超码。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;完整性约束&#34;&gt;完整性约束&lt;/h2&gt;
+&lt;p&gt;完整性规则保证用户对数据库做修改时不会破坏数据的一致性。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;实体完整性&lt;/strong&gt;（Entity Integrity，引用完整性）：规定基本关系R的主属性A不能取空值。&lt;/p&gt;
+&lt;p&gt;即&lt;u&gt;主属性不能为空&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;参照完整性&lt;/strong&gt;（Referential Integrity）：若F是基本关系R的外码，它与基本关系S的主码K&lt;sub&gt;s&lt;/sub&gt;相对应（基本关系R和S不一定是不同的关系），则对于R中每个元组在F上的值可以取：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;空值（F的每个属性值均为空值）；&lt;/li&gt;
+&lt;li&gt;S中某个元组的主码值。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;即实体之间的关联可以变现为：关系R用外码F与关系S关联，外码F的值可以为空也可以为关系S中某个元组（记录）的主码值。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;用户定义完整性&lt;/strong&gt;（User Defined Integrity）：针对某一具体的关系数据库的约束条件，反映某一具体应用所涉及的数据必须满足的语义要求，由应用的环境决定。&lt;/p&gt;
+&lt;p&gt;例如，银行的用户账户规定必须大于等于100000、小于999999。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;关系代数运算符&#34;&gt;关系代数运算符&lt;/h2&gt;
+&lt;p&gt;关系操作的特点是操作对象和操作结果都是集合，而非关系数据模型的数据操作方式则为一次一个记录的方式。&lt;/p&gt;
+&lt;p&gt;关系数据语言分为三类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;关系代数语言；&lt;/li&gt;
+&lt;li&gt;关系演算语言；&lt;/li&gt;
+&lt;li&gt;具有关系代数和关系演算双重特点的语言。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;关系演算语言包含：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;元组关系演算语言；&lt;/li&gt;
+&lt;li&gt;域关系演算语言。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;关系代数运算符有4类：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681431891302.png&#34;
+	width=&#34;735&#34;
+	height=&#34;301&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681431891302_hu474e5e1683bfce1832772e13dcf3cc90_42174_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681431891302_hu474e5e1683bfce1832772e13dcf3cc90_42174_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;关系代数运算符&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;244&#34;
+		data-flex-basis=&#34;586px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;基本关系代数运算是对两个具有&lt;u&gt;相同的关系模式&lt;/u&gt;的关系进行运算。关系$R$与$S$具有&lt;u&gt;相同的关系模式&lt;/u&gt;，即$R$与$S$的元数相同（结构相同）。&lt;/p&gt;
+&lt;p&gt;基本关系代数运算包含：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;并&lt;/strong&gt;（Union）：关系$R$与$S$的并是由属于$R$或属于$S$的元组构成的集合，记作$R \cup S$，其形式定义如下：&lt;/p&gt;
+&lt;p&gt;$$
+R \cup S = \{ t | (t \in R) \vee (t \in S) \}
+$$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;式中$t$为元组变量。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;差&lt;/strong&gt;（Difference）：关系$R$与$S$的差是由&lt;u&gt;属于$R$但不属于$S$&lt;/u&gt;的元组构成的集合，记作$R-S$，其形式定义如下：&lt;/p&gt;
+&lt;p&gt;$$
+R-S = \{ t| (t \in R) \wedge (t \not\in S) \}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;交&lt;/strong&gt;（Intersection）：关系$R$与$S$的交是由属于$R$同时又属于$S$的元组构成的集合，记作$R \cap S$,其形式定义如下：&lt;/p&gt;
+&lt;p&gt;$$
+R \cap S = \{ t| (t \in R) \wedge (t \in S) \}
+$$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$R \cap S = R-(R-S)$，或者$R \cap S = S-(S-R)$。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;扩展的关系代数运算可以从基本的关系运算中导出，包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;广义笛卡儿积&lt;/strong&gt;（Extended Cartesian Product）：两个元组分别为$n$目和$m$目的关系$R$和$S$的广义笛卡儿积是一个$(n+m)$列的元组的集合。&lt;/p&gt;
+&lt;p&gt;元组的前$n$列是关系$R$的一个元组，后$m$列是关系$S$的一个元组，记作$R \times S$，其形式定义如下：&lt;/p&gt;
+&lt;p&gt;$$
+R \times S = \{ t| (t \ = \ &amp;lt;t^n, t^m&amp;gt;) \wedge (t^n \in R) \wedge (t^m \in S) \}
+$$&lt;/p&gt;
+&lt;p&gt;如果$R$和$S$中有相同的属性名，可在属性名前加关系名作为限定，以示区别。若$R$有$K_1$,个元组，$S$有$K_2$个元组，则$R$和$S$的广义笛卡儿积有$K_1 \times K2$个元组。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;$&amp;lt;t^n, t^m&amp;gt;$是一个元组$t^n$和$t^m$拼接成的一个元组。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;投影&lt;/strong&gt;（Projection）：投影运算是从关系的&lt;u&gt;垂直方向&lt;/u&gt;进行运算，在关系$R$中选出若干属性列$A$组成新的关系，记作$\pi_A (R)$，其形式定义如下：&lt;/p&gt;
+&lt;p&gt;$$
+\pi_A (R) = \{ t[A]|t \in R \}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;选择&lt;/strong&gt;（Selection）：选择运算是从关系的&lt;u&gt;水平方向&lt;/u&gt;进行运算，是从关系$R$中选择满足给定条件的诸元组，记作$\sigma_F (R)$其形式定义如下：&lt;/p&gt;
+&lt;p&gt;$$
+\sigma_A (R) = \{ t| (t \in R) \wedge F(t) = True \}
+$$&lt;/p&gt;
+&lt;p&gt;其中，$F(t)$中的运算对象可以是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;属性名（或列的序号）；&lt;/li&gt;
+&lt;li&gt;常数；&lt;/li&gt;
+&lt;li&gt;运算符；&lt;/li&gt;
+&lt;li&gt;算术比较符（$&amp;lt;, \le, &amp;gt;, \ge, \neq$）；&lt;/li&gt;
+&lt;li&gt;逻辑运算符（$\wedge, \vee, \neg$）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;连接&lt;/strong&gt;（Join）：连接运算是从两个关系$R$和$S$的笛卡儿积中选取满足条件的元组。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;可以认为笛卡儿积是无条件连接，其他的连接操作认为是有条件连接。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;$\theta$连接&lt;/strong&gt;：从$R$与$S$的笛卡儿积中选取属性间满足一定条件的元组。记作：&lt;/p&gt;
+&lt;p&gt;$$
+R \mathop{\Join}\limits_{X \theta Y} S = \{ t| (t=&amp;lt;t^n,t^m&amp;gt;) \wedge (t^n \in R) \wedge (t^m \in S) \wedge (t^n[X] \ \theta \ t^m[Y]) \}
+$$&lt;/p&gt;
+&lt;p&gt;其中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$X \theta Y$：连接的条件；&lt;/li&gt;
+&lt;li&gt;$\theta$：比较运算符；&lt;/li&gt;
+&lt;li&gt;$X$和$Y$分别为$R$和$S$上度数相等且可比的属性组；&lt;/li&gt;
+&lt;li&gt;$t^n\left[ X \right]$表示$R$中$t^n$元组的对应于属性$X$的一个分量；&lt;/li&gt;
+&lt;li&gt;$t^m[Y]$表示$S$中$t^m$元组的对应于属性$Y$的一个分量。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$\theta$连接也可以表示为：&lt;/p&gt;
+&lt;p&gt;$$
+R \mathop{\Join}\limits_{i \theta j} S = \{ t| (t=&amp;lt;t^n,t^m&amp;gt;) \wedge (t^n \in R) \wedge (t^m \in S) \wedge (t^n[i] \ \theta \ t^m[j]) \}
+$$&lt;/p&gt;
+&lt;p&gt;其中，&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$i=1,2,3,\cdots,n$；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$j=1,2,3,\cdots,m$；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$i \theta j$：&lt;/p&gt;
+&lt;p&gt;从两个关系$R$和$S$中选取$R$的第$i$列和$S$的第$j$列之间满足$\theta$运算的元组进行连接。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$\theta$连接可以由基本的关系运算笛卡儿积和选取运算导出。因此，$\theta$连接可表示为：&lt;/p&gt;
+&lt;p&gt;$$
+R \mathop{\Join}\limits_{X \theta Y} S = \sigma_{X \theta Y}(R \times S)
+$$&lt;/p&gt;
+&lt;p&gt;或：&lt;/p&gt;
+&lt;p&gt;$$
+R \mathop{\Join}\limits_{i \theta j} S = \sigma_{i \theta j}(R \times S)
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;等值连接&lt;/strong&gt;：当$\theta$为“=”时，称之为等值连接，记为$R \mathop{\Join}\limits_{i = j} S$，其形式定义如下：&lt;/p&gt;
+&lt;p&gt;$$
+R \mathop{\Join}\limits_{i = j} S = \{ t| (t=&amp;lt;t^n,t^m&amp;gt;) \wedge (t^n \in R) \wedge (t^m \in S) \wedge (t^n[i] = t^m[j]) \}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$F$连接：从关系$R$和$S$的笛卡尔积中选取属性值满足某一公式$F$的元组，记为$\mathop{\Join}\limits_{F}$。&lt;/p&gt;
+&lt;p&gt;$F$是形为$F_1 \wedge F_2 \wedge \cdots \wedge F_n$的公式，每个$F_p$是形为$i \theta j$的式子。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;自然连接&lt;/strong&gt;：自然连接是一种特殊的等值连接，它要求两个关系中&lt;u&gt;进行比较的分量必须是相同的属性组&lt;/u&gt;，并且在结果集中&lt;u&gt;将重复属性列去掉&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;若：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$t^n \in R$，$t^m \in S$；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$R$和$S$具有相同的属性组$B$，且$B=(B_1,B_2,,B_k)$；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;假定$R$关系的属性：&lt;/p&gt;
+&lt;p&gt;$$
+A_1,A_2,\cdots,A_{n-k},B_1,B_2,\cdots,B_k
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$S$关系的属性：&lt;/p&gt;
+&lt;p&gt;$$
+B_1,B2,\cdots,B_k,B_{k+1},B_{k+2},\cdots,B_m
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;自然连接可以记为$R \Join S$,其形式定义如下：&lt;/p&gt;
+&lt;p&gt;$$
+R \Join S = \{ t| (t = &amp;lt;t^n, t^m&amp;gt;) \wedge (t^n \in R) \wedge (t^m \in S) \wedge (R.B_1 = S.B_1) \wedge (R.B_2 = S.B_2) \wedge \cdots \wedge (R.B_k = S.B_k) \}
+$$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一般连接是从关系的水平方向运算，而自然连接&lt;u&gt;不仅要从关系的水平方向运算，而且要从关系的垂直方向运算&lt;/u&gt;（去掉重复属性）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;外连接&lt;/strong&gt;（Outer Jion）：外连接运算是连接运算的扩展，可以处理由于连接运算而缺失的信息。&lt;/p&gt;
+&lt;p&gt;外连接运算有3种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;左外连接&lt;/strong&gt;（Left Outer Jion，⟕）：取出左侧关系中所有与右侧关系中任一元组都不匹配的元组，用空值$null$充填所有来自右侧关系的属性，构成新的元组，将其加入自然连接的结果中。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;右外连接&lt;/strong&gt;（Right Outer Jion，⟖）：取出右侧关系中所有与左侧关系中任一元组都不匹配的元组，用空值$null$填充所有来自左侧关系的属性，构成新的元组，将其加入自然连接的结果中。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;全外连接&lt;/strong&gt;（Full Outer Jion，⟗）。完成左外连接和右外连接的操作。即填充左侧关系中所有与右侧关系中任一元组都不匹配的元组，并填充右侧关系中所有与左侧关系中任一元组都不匹配的元组，将产生的新元组加入自然连接的结果中。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681454087063.png&#34;
+	width=&#34;762&#34;
+	height=&#34;575&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681454087063_hud13edc09469e2a4b2eff4fd4a8bf7c0a_99173_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681454087063_hud13edc09469e2a4b2eff4fd4a8bf7c0a_99173_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;132&#34;
+		data-flex-basis=&#34;318px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;除&lt;/strong&gt;（Division）：给定关系$R(X,Y)$和$S(Y,Z)$，$X、Y、Z$为属性组。$R \div S$应当满足元组在$X$上的分量值$x$的象集$Y_x$包含关系$S$在属性组$Y$上投影的集合。其形式定义如下：&lt;/p&gt;
+&lt;p&gt;$$
+R \div S = \{ t^n[X] | (t^n \in R) \wedge (\pi_y (S) \subseteq Y_x) \}
+$$&lt;/p&gt;
+&lt;p&gt;其中，$Y_x$为$x$在$R$中的象集，$x=t^n[X]$，且$R \div S$的结果集的属性组为$X$。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;除运算是同时从关系的水平方向和垂直方向进行运算。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;sql-语句&#34;&gt;SQL 语句&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;SQL&lt;/strong&gt;（&lt;strong&gt;Structured Query Language&lt;/strong&gt;，发音为 sequal）是一种专门用来与数据库沟通的语言。通过 SQL，用户可以对数据库进行各种操作。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;标准 SQL 由 ANSI 标准委员会管理，从而称为 ANSISQL。&lt;/p&gt;
+&lt;p&gt;查看更多 &lt;a class=&#34;link&#34; href=&#34;../sql-%e8%af%ad%e5%8f%a5&#34; &gt;SQL语句&lt;/a&gt; 相关内容。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;分类&#34;&gt;分类&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;DDL&lt;/strong&gt;（&lt;strong&gt;Data Definition Language&lt;/strong&gt;，&lt;strong&gt;数据定义语言&lt;/strong&gt;）：用来定义数据库对象：数据库，表，列等。&lt;/p&gt;
+&lt;p&gt;关键字：&lt;code&gt;CREATE&lt;/code&gt;、&lt;code&gt;DROP&lt;/code&gt;、&lt;code&gt;ALTER&lt;/code&gt; 等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;DML&lt;/strong&gt;（&lt;strong&gt;Data Manipulation Language&lt;/strong&gt;，&lt;strong&gt;数据操作语言&lt;/strong&gt;）：用来对数据库中表的数据进行增删改。&lt;/p&gt;
+&lt;p&gt;关键字：&lt;code&gt;INSERT&lt;/code&gt;、&lt;code&gt;DELETE&lt;/code&gt;、&lt;code&gt;UPDATE&lt;/code&gt; 等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;DQL&lt;/strong&gt;（&lt;strong&gt;Data Query Language&lt;/strong&gt;，&lt;strong&gt;数据查询语言&lt;/strong&gt;）：用来查询数据库中表的记录。&lt;/p&gt;
+&lt;p&gt;关键字：&lt;code&gt;SELECT&lt;/code&gt;等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;DCL&lt;/strong&gt;（&lt;strong&gt;Data Control Language&lt;/strong&gt;，&lt;strong&gt;数据控制语言&lt;/strong&gt;）：用来定义数据库的访问权限和安全级别，及创建用户。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;数据定义语言ddl&#34;&gt;数据定义语言（DDL）&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;CREATE&lt;/code&gt;——创建：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;建立数据库：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DATABASE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;数据库名&lt;/span&gt;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;建立基本表：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; tab_name
+(
+    &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt;    &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;数据类型&lt;/span&gt; [&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列级完整性约束条件&lt;/span&gt;],
+    ...
+    &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表级完整性约束条件&lt;/span&gt;,
+    ...
+);
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;完整性约束有3种子句：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;PRIMARY KEY&lt;/code&gt;：主键约束；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CHECK&lt;/code&gt;：检查约束；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;FOREIGN KEY&lt;/code&gt;：外键约束；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;NOT NULL&lt;/code&gt;：非空约束；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;UNIQUE&lt;/code&gt;：唯一约束；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DEFAULT&lt;/code&gt;：默认约束。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;定义列时使用的基本数据类型如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;NTEGER&lt;/code&gt;：整数（也可写成&lt;code&gt;INT&lt;/code&gt;）。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;FLOAT(n)&lt;/code&gt;：浮点数，精度至少为n位数字。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;NUMERIC(p,d)&lt;/code&gt;：定点数，由p位数字（不包括符号、小数点）组成，小数点后面有d位数字（也可写成&lt;code&gt;DECIMAL(p,d)&lt;/code&gt;或&lt;code&gt;DEC(p,d)&lt;/code&gt;）。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;CHAR(n)&lt;/code&gt;：长度为n的定长字符串。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;DATETIME&lt;/code&gt;：日期时间型。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;ALTER TABLE&lt;/code&gt;——修改表结构：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;增加新列：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表名&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ADD&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;类型&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;修改列的定义：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表名&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;COLUMN&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;新类型&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;删除列：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表名&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DROP&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;COLUMN&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;DROP TABLE&lt;/code&gt;——删除基本表：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;DROP&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表名&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;数据操纵语言dml&#34;&gt;数据操纵语言（DML）&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;INSERT INTO&lt;/code&gt;——插入：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;直接插入元组值：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;INTO&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表名（列名序列）&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;元组值&lt;/span&gt;)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;或者：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;INTO&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表名&lt;/span&gt; (&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;序列&lt;/span&gt;) (&lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; (&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;元组值&lt;/span&gt;), (&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;元组值&lt;/span&gt;), ...)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;插入一个查询的结果值：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;INTO&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表名&lt;/span&gt; (&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名序列&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;查询语句&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;DELETE FROM&lt;/code&gt;——删除：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;DELETE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表名&lt;/span&gt; [&lt;span style=&#34;color:#66d9ef&#34;&gt;WHERE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;条件表达式&lt;/span&gt;]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;UPDATE&lt;/code&gt;——修改：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;UPDATE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表名&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;SET&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;值表达式&lt;/span&gt;[, &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;值表达式&lt;/span&gt;...]
+[WHERE条件表达式]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;数据查询语言dql&#34;&gt;数据查询语言（DQL）&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;SELECT&lt;/code&gt;——查询：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;目标表的列名或列表达式序列&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;关系名表序列&lt;/span&gt;
+[&lt;span style=&#34;color:#66d9ef&#34;&gt;WHERE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;行条件表达式&lt;/span&gt;]
+[&lt;span style=&#34;color:#66d9ef&#34;&gt;GROUP&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;BY&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名序列&lt;/span&gt;
+[&lt;span style=&#34;color:#66d9ef&#34;&gt;HAVING&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;组条件表达式&lt;/span&gt;]]
+[&lt;span style=&#34;color:#66d9ef&#34;&gt;ORDER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;BY&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt;[&lt;span style=&#34;color:#66d9ef&#34;&gt;ASC&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;DESC&lt;/span&gt;]...]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;where-条件查询&#34;&gt;WHERE 条件查询&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;目标表的列名或列表达式序列&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;关系名表序列&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;WHERE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;行条件表达式&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;运算符：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;strong&gt;运算符&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;运算符&lt;/strong&gt;&lt;/th&gt;
+&lt;th&gt;&lt;strong&gt;说明&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;=&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;等于&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;大于&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;&amp;lt;&amp;gt;&lt;/code&gt; 或 &lt;code&gt;!=&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;不等于&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;&amp;gt;=&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;大于等于&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;&amp;lt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;小于&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;!&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;不大于&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;&amp;lt;=&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;小于等于&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;BETWEEN&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;范围在指定的两个值之间&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;!&amp;lt;&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;不小于&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;IS NULL&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;为 NULL 的值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;IS NOT NULL&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;不为 NULL 的值&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;AND&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;逻辑与&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;OR&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;逻辑或&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;NOT&lt;/code&gt;逻辑非&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;IN&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;匹配包含在集合中的值&lt;/td&gt;
+&lt;td&gt;&lt;code&gt;NOT IN&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;指定不包含在集合中的值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;code&gt;LIKE&lt;/code&gt;&lt;/td&gt;
+&lt;td&gt;字符模糊配对&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;code&gt;LIKE&lt;/code&gt;字符模糊配对包含以下通配符：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;目标表的列名或列表达式序列&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;关系名表序列&lt;/span&gt;
+WHRER &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;LIKE&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;_ABC%&amp;#39;&lt;/span&gt;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;%&lt;/code&gt;：表示任何字符出现任意次数。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;_&lt;/code&gt;：表示匹配单个任意字符。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;order-by-排序数据&#34;&gt;ORDER BY 排序数据&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;ORDER BY&lt;/code&gt;可以指定多个列来排序，排序规则有：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;关键字&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;规则说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;ASC&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;升序排序&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;DESC&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;降序排序&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;目标表的列名或列表达式序列&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;关系名表序列&lt;/span&gt;
+[...]
+[&lt;span style=&#34;color:#66d9ef&#34;&gt;ORDER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;BY&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt; [&lt;span style=&#34;color:#66d9ef&#34;&gt;ASC&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;DESC&lt;/span&gt;] ...]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;ORDER BY子句必须是SELECT命令中的最后一个子句。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;group-by-分组数据&#34;&gt;GROUP BY 分组数据&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;目标表的列名或列表达式序列&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;关系名表序列&lt;/span&gt;
+[&lt;span style=&#34;color:#66d9ef&#34;&gt;GROUP&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;BY&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名序列&lt;/span&gt;
+[&lt;span style=&#34;color:#66d9ef&#34;&gt;HAVING&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;组条件表达式&lt;/span&gt;]]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;HAVING&lt;/code&gt;是&lt;code&gt;GROUP BY&lt;/code&gt;的分组条件控制语句。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;HAVING&lt;/code&gt;的操作符和&lt;code&gt;WHERE&lt;/code&gt;相同。&lt;/li&gt;
+&lt;li&gt;被&lt;code&gt;WHERE&lt;/code&gt;过滤掉的记录并不会出现在分组中。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;聚合函数&#34;&gt;聚合函数&lt;/h3&gt;
+&lt;p&gt;聚合函数实现数据统计等功能。&lt;/p&gt;
+&lt;p&gt;函数名|功能
+&lt;code&gt;AVG&lt;/code&gt;|计算一个数值型表达式的平均值
+&lt;code&gt;COUNT&lt;/code&gt;|计算指定表达式中选择的项数，&lt;code&gt;COUNT(*)&lt;/code&gt;统计查询输出的行数
+&lt;code&gt;MIN&lt;/code&gt;|计算指定表达式中的最小值
+&lt;code&gt;MAX&lt;/code&gt;|计算指定表达式中的最大值
+&lt;code&gt;SUM&lt;/code&gt;|计算指定表达式中的数值总和
+&lt;code&gt;STDEV&lt;/code&gt;|计算指定表达式中所有数据的标准差
+&lt;code&gt;STDEVP&lt;/code&gt;|计算总体标准差&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;目标表的列名或列表达式序列&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;关系名表序列&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;WHERE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;使用了聚合函数的条件判断&lt;/span&gt;
+[ ... ]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;或：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;聚合函数&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;关系名表序列&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;聚合函数可以使用算数运算符。&lt;/p&gt;
+&lt;p&gt;聚合函数常与&lt;code&gt;GROUP BY&lt;/code&gt;子句一起使用。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;连接&#34;&gt;连接&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;连接符号&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;说明&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;INNER JOIN&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;内连接（默认）。&lt;br&gt;内连接又包括等值连接、非等值连接和自连接。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;OUTER JOIN&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;外连接。&lt;br&gt;又包括：&lt;br&gt;&lt;code&gt;LEFT OUTER JOIN&lt;/code&gt;（左外连接）；&lt;br&gt;&lt;code&gt;RIGHT OUTER JOIN&lt;/code&gt;（右外连接）；&lt;br&gt;&lt;code&gt;FULL OUTER JOIN&lt;/code&gt;（全外连接）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;子查询&#34;&gt;子查询&lt;/h3&gt;
+&lt;p&gt;子查询是指将&lt;code&gt;SELECT&lt;/code&gt;作为其它语句的子句使用。例如在&lt;code&gt;WHERE&lt;/code&gt;、&lt;code&gt;FROM&lt;/code&gt;中使用&lt;code&gt;SELECT&lt;/code&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;数据控制语言dcl&#34;&gt;数据控制语言（DCL）&lt;/h2&gt;
+&lt;p&gt;数据控制控制的是&lt;strong&gt;用户对数据的存储访问权力&lt;/strong&gt;，是由DBA决定的。但是，某个用户对某类数据具有何种权利，是个&lt;strong&gt;政策问题&lt;/strong&gt;而不是技术问题。&lt;/p&gt;
+&lt;p&gt;授权语句格式（&lt;code&gt;GRANT&lt;/code&gt;）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;GRANT&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;权限&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;[, &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;权限&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;] ...
+[&lt;span style=&#34;color:#66d9ef&#34;&gt;ON&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;对象类型&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;对象名&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;]
+&lt;span style=&#34;color:#66d9ef&#34;&gt;TO&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;用户&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;[, &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;用户&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;]...
+[&lt;span style=&#34;color:#66d9ef&#34;&gt;WITH&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;GRANT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;OPTION&lt;/span&gt;];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;不同类型的操作对象有不同的操作权限，常见的操作权限如下：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;对象&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;对象类型&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;操作权限&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;属性列&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;TABLE&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;SELECT&lt;/code&gt;、&lt;br&gt;&lt;code&gt;INSERT&lt;/code&gt;、&lt;br&gt;&lt;code&gt;UPDATE&lt;/code&gt;、&lt;br&gt;&lt;code&gt;DELETE&lt;/code&gt;、&lt;br&gt;&lt;code&gt;ALL PRIVILEGES&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;视图&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;TABLE&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;SELECT&lt;/code&gt;、&lt;br&gt;&lt;code&gt;INSERT&lt;/code&gt;、&lt;br&gt;&lt;code&gt;UPDATE&lt;/code&gt;、&lt;br&gt;&lt;code&gt;DELETE&lt;/code&gt;、&lt;br&gt;&lt;code&gt;ALL PRIVILEGES&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;基本表&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;TABLE&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;SELECT&lt;/code&gt;、&lt;br&gt;&lt;code&gt;INSERT&lt;/code&gt;、&lt;br&gt;&lt;code&gt;UPDATE&lt;/code&gt;、&lt;br&gt;&lt;code&gt;DELETE&lt;/code&gt;、&lt;br&gt;&lt;code&gt;ALTER&lt;/code&gt;、&lt;br&gt;&lt;code&gt;INDEX&lt;/code&gt;、&lt;br&gt;&lt;code&gt;ALL PRIVILEGES&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;数据库&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;DATABASE&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;CREATETAB&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;建立表的权限，可由DBA授予普通用户；&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;WITH GRANT OPTION&lt;/code&gt;：表示获得了这些权限的用户还可以将权限赋给其他用户。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;收回权限语句格式（&lt;code&gt;REVOKE&lt;/code&gt;）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;REVOKE&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;权限&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;[, &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;权限&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;]...
+[&lt;span style=&#34;color:#66d9ef&#34;&gt;ON&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;对象类型&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;对象名&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;]
+&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;用户&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;[, &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;用户&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;视图&#34;&gt;视图&lt;/h2&gt;
+&lt;p&gt;视图是从一个或者多个基本表或视图中导出的虚拟表。&lt;/p&gt;
+&lt;p&gt;创建视图：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;VIEW&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;视图名&lt;/span&gt; (&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列表名&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;AS&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;查询子句&lt;/span&gt;
+[&lt;span style=&#34;color:#66d9ef&#34;&gt;WITH&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;CHECK&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;OPTION&lt;/span&gt;];
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;子查询可以是任意复杂的&lt;code&gt;SELECT&lt;/code&gt;语句，但通常不允许含有&lt;code&gt;ORDER BY&lt;/code&gt;子句和&lt;code&gt;DISTINCT&lt;/code&gt;短语。&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;WITH CHECK OPTION&lt;/code&gt;：表示对&lt;code&gt;UPDATE&lt;/code&gt;、&lt;code&gt;INSERT&lt;/code&gt;、&lt;code&gt;DELETE&lt;/code&gt;操作时保证更新、插入或删除的行满足视图定义中的谓词条件（即子查询中的条件表达式）。&lt;/li&gt;
+&lt;li&gt;组成视图的属性列名或者全部省略或者全部指定。如果省略属性列名，则隐含该视图由&lt;code&gt;SELECT&lt;/code&gt;子查询目标列的主属性组成。&lt;/li&gt;
+&lt;li&gt;对视图进行的增改操作实际上是对基本表进行操作。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;删除视图：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;DROP&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;VIEW&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;视图名&lt;/span&gt;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;索引&#34;&gt;索引&lt;/h2&gt;
+&lt;p&gt;数据库中的索引是&lt;u&gt;某个表中一列或者若干列值的集合&lt;/u&gt;和&lt;u&gt;相应的指向表中物理标识这些值的数据页的逻辑指针清单&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;索引分为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;聚集索引：指索引表中索引项的顺序与表中记录的物理顺序一致的索引；&lt;/li&gt;
+&lt;li&gt;非聚集索引。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;对数据库表创建和删除索引，修改的是数据库的内模式。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;关系数据库的规范化&#34;&gt;关系数据库的规范化&lt;/h1&gt;
+&lt;h2 id=&#34;关系模式&#34;&gt;关系模式&lt;/h2&gt;
+&lt;p&gt;一个关系模式应当是一个五元组（含关系名）：$R&amp;lt;U,D,dom,F&amp;gt;$。&lt;/p&gt;
+&lt;p&gt;其中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$R$：&lt;u&gt;关系名，是符号化的元祖语义；&lt;/u&gt;&lt;/li&gt;
+&lt;li&gt;$U$：&lt;u&gt;一组属性名；&lt;/u&gt;&lt;/li&gt;
+&lt;li&gt;$D$：属性组$U$中的属性来自域$D$；&lt;/li&gt;
+&lt;li&gt;$dom$：属性到域的映射；&lt;/li&gt;
+&lt;li&gt;$F$：&lt;u&gt;属性组$U$上的一组数据依赖（函数依赖）。&lt;/u&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;$D$和$dom$对模式设计关系不大，通常将关系模式看作是一个三元组：$R&amp;lt;U,F&amp;gt;$。&lt;/p&gt;
+&lt;p&gt;当且仅当$U$上的一个关系$r$满足$F$时，称$r$为关系模式$R&amp;lt;U,F&amp;gt;$的一个关系。&lt;/p&gt;
+&lt;h2 id=&#34;函数依赖&#34;&gt;函数依赖&lt;/h2&gt;
+&lt;p&gt;数据依赖是&lt;u&gt;通过一个关系中属性间值的相等与否&lt;/u&gt;体现出来的&lt;u&gt;数据间的相互关系&lt;/u&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;函数依赖&lt;/strong&gt;：设$R(U)$是属性集U上的关系模式，&lt;u&gt;$X$、$Y$是$U$的子集&lt;/u&gt;。若对$R(U)$的任何一个可能的关系$r$，$r$中不可能存在两个元组在$X$上的属性值相等，而在$Y$上的属性值不等（即，&lt;u&gt;在关系$r$中，元组在$X$上的属性值相等，那么在$Y$上的属性值也相等&lt;/u&gt;），则称&lt;strong&gt;X函数决定Y&lt;/strong&gt;或&lt;strong&gt;Y函数依赖于X&lt;/strong&gt;，记作$X \rightarrow Y$。&lt;/p&gt;
+&lt;p&gt;如，学生表中，$学号 \rightarrow 姓名$。&lt;/p&gt;
+&lt;p&gt;属性之间有3种关系，但并不是每一种都存在函数依赖。如果$X$和$Y$之间的对应关系是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$1-1$：存在函数依赖$X \rightarrow Y$和$Y \rightarrow Y$；&lt;/li&gt;
+&lt;li&gt;$n:1$：存在函数依赖$X \rightarrow Y$；&lt;/li&gt;
+&lt;li&gt;$n:m$：不存在函数依赖。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;非平凡的函数依赖&lt;/strong&gt;：$X \rightarrow Y$，但$Y \not\subseteq X$，则称$X \rightarrow Y$是非平凡的函数依赖。&lt;/p&gt;
+&lt;p&gt;例如，$姓名 \not\subseteq 学号$，则$学号 \rightarrow 姓名$是一个非平凡的函数依赖。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;平凡的函数依赖&lt;/strong&gt;：如果$X \rightarrow Y$，但$Y \subseteq X$，则称$X \rightarrow Y$是平凡的函数依赖。&lt;/p&gt;
+&lt;p&gt;例如，$学号 \subset (学号,课程号)$，则$(学号,课程号) \rightarrow 学号$是一个平凡的函数依赖。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;完全函数依赖&lt;/strong&gt;：在R(U)中，如果$X \rightarrow Y$，并且对于X的任何一个真子集$X&#39;$都有**$X&#39;$不能决定$Y$**，则称$Y$对$X$完全函数依赖，记作$X \stackrel{f}{\longrightarrow} Y$。&lt;/p&gt;
+&lt;p&gt;即需要由$X$的所有属性才能决定$Y$的，才能称为完全函数依赖。&lt;/p&gt;
+&lt;p&gt;如，$(学号,课程号) \rightarrow 成绩$。&lt;/p&gt;
+&lt;p&gt;如果$X$仅包含一个属性，那么此时必为完全函数依赖。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;部分函数依赖&lt;/strong&gt;：如果$X \rightarrow Y$，但&lt;strong&gt;Y不完全函数依赖于X&lt;/strong&gt;，则称Y对X部分函数依赖，记作$X \stackrel{P}{\longrightarrow} Y$。部分函数依赖也称为局部函数依赖。&lt;/p&gt;
+&lt;p&gt;如，（学号，班级代号） $\rightarrow$ 姓名，因为学号 $\rightarrow$ 姓名，所以（学号，班级代号） $\stackrel{P}{\longrightarrow}$ 姓名。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;传递依赖&lt;/strong&gt;：在$R(U,F)$中（F是U上的一组函数依赖），如果$X \rightarrow Y,\ Y \not\subseteq X,\ Y \rightarrow Z$，则称&lt;strong&gt;Z对X传递依赖&lt;/strong&gt;（$X \rightarrow Z$）。&lt;/p&gt;
+&lt;p&gt;即$X \stackrel{f}{\longrightarrow} Y$，且$Y \rightarrow Z$，则$X \rightarrow Z$。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;码&lt;/strong&gt;：设$K$为$R(U,F)$中属性的组合，若$K \rightarrow U$，且对于$K$的任何一个真子集$K&#39;$都有$K&#39;$不能决定$U$，则$K$为$R$的候选码。&lt;/p&gt;
+&lt;p&gt;即$K \stackrel{f}{\rightarrow} U$，那么K是R的候选码。&lt;/p&gt;
+&lt;p&gt;若有多个候选码，则选一个作为主码（主键，主关键字）。候选码通常也称为&lt;strong&gt;候选关键字&lt;/strong&gt;（候选键，键）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;主属性&lt;/strong&gt;和&lt;strong&gt;非主属性&lt;/strong&gt;：&lt;strong&gt;包含在任何一个候选码中&lt;/strong&gt;的属性称为主属性，否则称为非主属性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;外码&lt;/strong&gt;：若$R(U)$中的属性或属性组&lt;u&gt;$X$非$R$的码，但$X$是另一个关系的码&lt;/u&gt;，则称$X$为外码。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;函数依赖的公理系统&lt;/strong&gt;（Armstrong公理系统）：&lt;/p&gt;
+&lt;p&gt;设关系模式$R(U,F)$，其中$U$为属性集，$F是$U$上的一组函数依赖，那么有以下推理规则：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;自反律&lt;/strong&gt;（A1）：若$Y \subseteq X \subseteq U$，则$X \rightarrow Y$为$F$所蕴涵（蕴含）。&lt;/p&gt;
+&lt;p&gt;如，（学号，姓名） $\rightarrow$ 姓名是函数依赖所蕴涵的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;增广律&lt;/strong&gt;（A2）：若$X \rightarrow Y$为F所蕴涵，且$Z \subseteq U$,则$XZ \rightarrow YZ$为$F$所蕴涵。&lt;/p&gt;
+&lt;p&gt;如，学号 $\rightarrow$ 姓名，班级 $\subseteq$ 学生表，那么（学号，班级） $\rightarrow$ （姓名，班级）是函数依赖所蕴涵的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;传递律&lt;/strong&gt;（A3）：若$X \rightarrow Y,\ Y \rightarrow Z$为$F$所蕴涵，则$X \rightarrow Z$为$F$所蕴涵。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;根据上述3条推理规则又可推出下述3条推理规则：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;合并规则&lt;/strong&gt;：若$X \rightarrow Y,\ X \rightarrow Z$，则$X \rightarrow YZ$为F所蕴涵。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;伪传递律&lt;/strong&gt;：若$X \rightarrow Y,\ WY \rightarrow Z$，则$XW \rightarrow Z$为F所蕴涵。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;分解规则&lt;/strong&gt;：若$X \rightarrow Y,\ Z \subseteq Y$，则$X \rightarrow Z$为F所蕴涵。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;合并规则和分解规则是两个互逆的规则。即$X \rightarrow Y,\ X \rightarrow Z$，可得$X \rightarrow YZ$；那么$X \rightarrow YZ$，也可得$X \rightarrow Y,\ X \rightarrow Z$（因为$Y,Z \sub YZ$）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;总结：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;名称&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;条件&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;结论&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;函数依赖&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;元组在$X$上的属性值相等，那么在$Y$上的属性值也相等&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$X$函数决定$Y$或$Y$函数依赖于$X$，记作$X \rightarrow Y$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;非平凡的函数依赖&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$X \rightarrow Y$，$Y \not\subseteq X$&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$X \rightarrow Y$是非平凡的函数依赖&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;平凡的函数依赖&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$X \rightarrow Y$，$Y \subseteq X$&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$X \rightarrow Y$是平凡的函数依赖&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;完全函数依赖&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$X \rightarrow Y$，$X&#39; \subset X$，$X&#39; \not\rightarrow Y$&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$Y$对$X$完全函数依赖，记作$X \stackrel{f}{\longrightarrow} Y$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;部分函数依赖（局部函数依赖）&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$X \rightarrow Y$，$X \stackrel{f}{\not\longrightarrow} Y$&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$Y$对$X$部分函数依赖，记作$X \stackrel{P}{\longrightarrow} Y$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;传递依赖&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$X \rightarrow Y$，$Y \not\subseteq X$，$Y \rightarrow Z$&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$Z$对$X$传递依赖&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;名称&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;定义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;码（候选码，候选关键字）&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;若$K \stackrel{f}{\rightarrow} U$，则$K$为$R$的候选码&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;主属性&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;包含在任何一个候选码中的属性&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;非主属性&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;不包含在任何一个候选码中的属性&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;外码&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$X$非$R$的码，但$X$是另一个关系的码，则称$X$为外码&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Armstrong公理系统：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;定律&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;条件&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;F蕴含&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;自反律&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$Y \subseteq X \subseteq U$&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$X \rightarrow Y$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;增广律&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$X \rightarrow Y$，$Z \subseteq U$&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$XZ \rightarrow XZ$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;传递律&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$X \rightarrow Y,\ Y \rightarrow Z$&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$X \rightarrow Z$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;规则&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;条件&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;F蕴含&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;合并规则&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$X \rightarrow Y,\ X \rightarrow Z$&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$X \rightarrow YZ$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;伪传递律&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$X \rightarrow Y,\ WY \rightarrow Z$&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$XW \rightarrow Z$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;分解规则&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$X \rightarrow Y,\ Z \subseteq Y$&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$X \rightarrow Z$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;闭包计算&#34;&gt;闭包计算&lt;/h2&gt;
+&lt;p&gt;设关系模式$R&amp;lt;U,F&amp;gt;$，其中$U$为属性集，$F$是$U$上的一组函数依赖。称所有用Armstrong公理从F推出的函数依赖$X \rightarrow A_i$中，$A_i(X,A_i \subseteq U)$的属性集合为$X$的属性闭包，记为$X^{+}_{F}$或$X^{+}$。&lt;/p&gt;
+&lt;p&gt;定理：&lt;/p&gt;
+&lt;p&gt;设关系模式$R&amp;lt;U,F&amp;gt;$，其中$F$为函数依赖集，$X,Y \subseteq U$，则从$F$推出$X \rightarrow Y$的充要条件是$Y \subseteq X^{+}$。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;属性的闭包计算用于求主键。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;例如，给定关系$R(U,F)$，其中$U={A,B,C,D,E,H}$，$F={A \rightarrow B, B \rightarrow DH, A \rightarrow H, C \rightarrow E }$。&lt;/p&gt;
+&lt;p&gt;先根据$F$选取仅在$\rightarrow$左边出现的属性集（例如，$A$、$C$和$AC$）。根据选取的属性集进行闭包运算（先对$A$进行运算）：&lt;/p&gt;
+&lt;p&gt;$$
+(A)^{+} \rightarrow (A \ BH)^{+} \rightarrow (AB \ D \ H)^{+} \rightarrow (ABDH)
+$$&lt;/p&gt;
+&lt;p&gt;此时，$(ABDH)^{+}$无论再怎么推，结果都是$(ABDH)$，说明对$A$的闭包计算已经结束了，结果就是$(ABDH)$。&lt;/p&gt;
+&lt;p&gt;而$(ABDH) \neq U$，说明$A$并不是关系$R$的主键。&lt;/p&gt;
+&lt;p&gt;而对于$C$的函数依赖仅有$C \rightarrow E$，所以此时应该对$(AC)$进行闭包运算：&lt;/p&gt;
+&lt;p&gt;$$
+(AC)^{+} \rightarrow (ABDH \ CE)^{+} \rightarrow (ABCDEH)
+$$&lt;/p&gt;
+&lt;p&gt;此时对$(AC)$的闭包计算结果$(ABCDEH) = U$，说明$(AC)$是关系$R$的主键。&lt;/p&gt;
+&lt;h2 id=&#34;关系模式的分解&#34;&gt;关系模式的分解&lt;/h2&gt;
+&lt;p&gt;对存在&lt;strong&gt;数据冗余&lt;/strong&gt;、&lt;strong&gt;插入异常&lt;/strong&gt;、&lt;strong&gt;删除异常&lt;/strong&gt;问题的关系模式，应采取&lt;u&gt;将一个关系模式分解为多个关系模式的方法进行处理&lt;/u&gt;（原来存储在一个二维表内的数据就要分散到多个二维表中）。要求是分解后的二维表不能丢失分解前二维表的信息。&lt;/p&gt;
+&lt;p&gt;为使分解后的模式保持原模式所满足的特性，其基本要求是模式分解具有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;无损连接性；&lt;/li&gt;
+&lt;li&gt;保持函数依赖性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;无损连接&#34;&gt;无损连接&lt;/h3&gt;
+&lt;p&gt;无损连接性指的是对关系模式分解时，原关系模式下，任一合法的关系实例，在&lt;u&gt;分解之后应能通过&lt;strong&gt;自然连接&lt;/strong&gt;运算恢复&lt;/u&gt;起来。&lt;/p&gt;
+&lt;p&gt;设$\rho = \{ R_1&amp;lt;U_1,F_1&amp;gt;,\ R_2&amp;lt;U_2,F_2&amp;gt;,\ \cdots,\ R_k&amp;lt;U_k,F_k&amp;gt; \}$是关系模式$R&amp;lt;U,F&amp;gt;$的一个分解，如果对于$R$的任一满足$F$的关系$r$都有：&lt;/p&gt;
+&lt;p&gt;$$
+r = \pi_{R1}(r) \Join \pi_{R2}(r) \Join \cdots \Join \pi_{Rk}(r)
+$$&lt;/p&gt;
+&lt;p&gt;则称这个分解$\rho$是满足依赖集$F$的无损连接。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$\pi()$运算是投影运算。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;例如$\pi_{R1}(r)$，表示关系$r$在$R_1$上的投影。
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$\Join$运算是自然连接运算。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;个人理解：&lt;/p&gt;
+&lt;p&gt;无损连接性就是指，关系模式拆分后（分成若干个小的关系模式，即$\rho$），$\rho$中的关系模式从总体上看，保持着与$R$一致的连接。$\rho$中的关系模式通过自然连接保持着原本的关系模式。&lt;u&gt;重要的是$rho$中的关系模式可以通过&lt;strong&gt;自然连接&lt;/strong&gt;恢复到原关系模式。&lt;/u&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;验证无损连接的充要条件：&lt;/p&gt;
+&lt;p&gt;如果$R$的分解为$\rho = \{R_1,R_2\}$，$F$为$R$所满足的函数依赖集合，则分解$\rho$具有无损连接性的充分必要条件为：&lt;/p&gt;
+&lt;p&gt;$$
+R_1 \cap R_2 \rightarrow (R_1 - R_2) \\
+或 \\
+R_1 \cap R_2 \rightarrow (R_2 - R_1)
+$$&lt;/p&gt;
+&lt;p&gt;无损连接的判定算法：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;构造一个$k$行$n$列的表：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每一列对应一个属性$A_j$；&lt;/li&gt;
+&lt;li&gt;每一行对应分解$rho$中的一个关系模式$R_i&amp;lt;U_i, F_i&amp;gt;$。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;若属性$A_j$属于$U_i$，则在第$i$行第$j$列上放符号$a_j$，否则放符号$b_{ij}$。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;逐个检查$F$中的每一个函数依赖$FD_i$，并修改表中的元素：&lt;/p&gt;
+&lt;p&gt;取$F$中一个函数依赖$X_i \rightarrow A_j$（$X_i$要属于$rho$中的任一关系），考虑这些行中第$j$列元素：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;若其中有$a_j$，则全部改为$a_j$；&lt;/li&gt;
+&lt;li&gt;否则全部改为$b_{mj}$，$m$为这些行的行号最小值。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;若某一行变成了$(a_1, a_2, \cdots, a_n)$，则分解$rho$具有无损连接性，算法终止。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;比较扫描前后，表有无变化。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如有变化，则返回第2步；&lt;/li&gt;
+&lt;li&gt;否则算法终止，分解$rho$是有损连接。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;例如，关系模式$R&amp;lt;U,F&amp;gt;$，其中，$U = \{ A, B, C \}$，$F = \{ A \rightarrow B, C \rightarrow B \}$。&lt;/p&gt;
+&lt;p&gt;判断$\rho = \{ AC, BC \}$是否具有无损连接性：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;构造初始表：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$R_i$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$A$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$B$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$C$&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;AC&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$a_1$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$b_{12}$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$a_3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;BC&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$b_{21}$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$a_2$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$a_3$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;考察$A \rightarrow B$，将$AC$行的$B$列改为$a_2$：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$R_i$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$A$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$B$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$C$&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;AC&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$a_1$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$a_2$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$a_3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;BC&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$b_{21}$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$a_2$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$a_3$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;从上表中看出$AC$行为${a_1, a_2, a_3}$，所以判断该关系模式具有无损连接性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;保持函数依赖&#34;&gt;保持函数依赖&lt;/h3&gt;
+&lt;p&gt;设有关系模式$R$，$F$是$R$的函数依赖集，$Z$是$R$的一个属性集合，则称$Z$所涉及到的$F^+$中所有函数依赖为$F$在$Z$上的投影，即为$\pi_Z(F)$，有：&lt;/p&gt;
+&lt;p&gt;$$
+\pi_Z(F) = \{ x \rightarrow y | (x \rightarrow y) \in F^+ 且 xy \subseteq z \}
+$$&lt;/p&gt;
+&lt;p&gt;设关系模式$R$的一个分解$\rho = \{ R_1&amp;lt;U_1,F_1&amp;gt;,\ R_2&amp;lt;U_2,F_2&amp;gt;,\ \cdots,\ R_k&amp;lt;U_k,F_k&amp;gt; \}$，$F$是$R$的依赖集，如果$F$等价于$\pi_{R1}(F) \cup \pi_{R2}(F) \cup \cdots \cup \pi_{Rk}(F)$，则称分解$\rho$具有依赖保持性。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;该定义中的&amp;quot;等价&amp;quot;并不代表相等，而是$F$中所包含的函数依赖在分解的函数依赖中也被包含，或者在分解的函数依赖中能被推出。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;一个无损连接分解不一定具有依赖保持性；&lt;/li&gt;
+&lt;li&gt;一个依赖保持性分解不一定具有无损连接性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;范式&#34;&gt;范式&lt;/h2&gt;
+&lt;p&gt;关系数据库中的&lt;u&gt;关系必须满足一定的规范化要求&lt;/u&gt;，对于不同的规范化程度可用范式来衡量。&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;范式是符合某一种级别的关系模式的集合&lt;/u&gt;，是衡量关系模式规范化程度的标准，达到范式的关系才是规范化的。&lt;/p&gt;
+&lt;p&gt;一个低一级范式的关系模式，通过模式分解可以转换为若干个高一级范式的关系模式的集合，这个过程称为规范化。&lt;/p&gt;
+&lt;p&gt;主要有6种范式，高一级范式是在低一级范式的基础上进一步满足一些要求，按要求从低到高分为：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;第一范式（1NF）：若关系模式R的&lt;u&gt;每一个分量是不可再分的数据项&lt;/u&gt;，则关系模式R属于第一范式。&lt;/p&gt;
+&lt;p&gt;如，关系模式$R&amp;lt;U,F&amp;gt;$：&lt;/p&gt;
+&lt;p&gt;$$
+U = \{ 学号,姓名,学院,院长,课程号,课程名,成绩 \} \\
+F = \{ 学号 \rightarrow 姓名,学号 \rightarrow 学院,学院 \rightarrow 院长,课程号 \rightarrow 课程名,(学号,课程号) \rightarrow 成绩 \}
+$$&lt;/p&gt;
+&lt;p&gt;1NF可能存在的问题：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;数据冗余&lt;/strong&gt;：数据的冗余度大，R中可能出现多个元组在多个属性集中值相同；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;修改异常&lt;/strong&gt;：引起修改操作的不一致性，修改一条记录可能需要修改其他多条记录才能保持数据一致性（由数据冗余引起）；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;插入异常&lt;/strong&gt;：主码不能取空值或部分空值，会出现插入异常；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;删除异常&lt;/strong&gt;：本该删除但又客观存在的元组，会出现删除异常。&lt;/p&gt;
+&lt;p&gt;即，删除掉的数据可能包含着其他本不该被删除的属性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;问题的原因是1NF中可能存在&lt;u&gt;部分函数依赖&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第二范式（2NF）：若关系模式$R \in 1NF$，且&lt;u&gt;每一个非主属性完全依赖于码&lt;/u&gt;，则关系模式$R \in 2NF$。&lt;/p&gt;
+&lt;p&gt;即当&lt;u&gt;1NF消除了对主键的部分函数依赖后就能满足2NF&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;例如，$学号 \rightarrow 学院$，即$(学号,课程号) \stackrel{P}{\rightarrow} 学院$（部分依赖于码），所以$R \not\in 2NF$。&lt;/p&gt;
+&lt;p&gt;&lt;u&gt;模式的分解需要保持函数依赖。&lt;/u&gt;根据$F$，将$R$分解为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$R_1&amp;lt;U_1,F_1&amp;gt;$：&lt;/p&gt;
+&lt;p&gt;$$
+U_1 = \{ 学号,姓名,学院,院长 \} \\
+F_1 = \{ 学号 \rightarrow 姓名,学号 \rightarrow 学院,学院 \rightarrow 院长 \}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$R_2&amp;lt;U_2,F_2&amp;gt;$：&lt;/p&gt;
+&lt;p&gt;$$
+U_2 = \{ 课程号,课程名 \} \\
+F_2 = \{ 课程号 \rightarrow 课程名 \}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$R_3&amp;lt;U_3,F_3&amp;gt;$：&lt;/p&gt;
+&lt;p&gt;$$
+U_3 = \{ 学号,课程号,成绩 \} \\
+F_3 = \{ (学号,课程号) \rightarrow 成绩 \}&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;则，$R1 \in 2NF$，$R2 \in 2NF$，$R3 \in 2NF$。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;2NF可能依然会存在数据冗余、修改异常、插入异常删除异常等问题。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第三范式（3NF）：若关系模式$R(R \in 2NF)$中&lt;u&gt;任何一个非主属性都不传递函数依赖于码&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;若关系模式$R&amp;lt;U,F&amp;gt;$（$U$为关系集，$F$为函数依赖集）中不存在这样的码$X$，使得：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$X \rightarrow Y(Y \not\rightarrow X)$，&lt;/li&gt;
+&lt;li&gt;$Y \rightarrow Z$，&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;则关系模式$R \in 3NF$，其中：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$Y$为属性组，&lt;/li&gt;
+&lt;li&gt;$Z(Z \not\subseteq Y)$为非主属性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;即当&lt;u&gt;2NF消除了非主属性对主键的传递函数依赖&lt;/u&gt;，则称为3NF。&lt;/p&gt;
+&lt;p&gt;如，$R_1$中有$学号 \rightarrow 学院$，$学院 \rightarrow 院长$（非主属性&amp;quot;院长&amp;quot;传递依赖于主键&amp;quot;学号&amp;quot;）。可将$R_1$分解为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$R_{11}&amp;lt;U_{11},F_{11}&amp;gt;$：&lt;/p&gt;
+&lt;p&gt;$$
+U_{11} = \{ 学号,姓名,学院 \} \\
+F_{11} = \{ 学号 \rightarrow 姓名, 学号 \rightarrow 学院 \}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$R_{12}&amp;lt;U_{12},F_{12}&amp;gt;$：&lt;/p&gt;
+&lt;p&gt;$$
+U_{12} = \{ 学院,院长 \} \\
+F_{12} = \{ 学院 \rightarrow 院长 \}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;BC范式（BCNF）：关系模式$R&amp;lt;U,F&amp;gt;$属于BCNF（$R$首先得满足3NF），当且仅当其$F$中&lt;u&gt;每个依赖的决定因素必定包含R的某个候选码&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;由BCNF的定义可以得到结论，一个满足BCNF的关系模式有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;满足3NF。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;所有&lt;u&gt;非主属性&lt;/u&gt;对每一个&lt;u&gt;码&lt;/u&gt;都是&lt;u&gt;完全函数依赖&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;$$
+码 \stackrel{f}{\longrightarrow} 非主属性
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;所有的&lt;u&gt;主属性对每一个&lt;/u&gt;不包含它的码&lt;/u&gt;，也是&lt;u&gt;完全函数依赖&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;没有任何属性完全函数依赖于非码的任何一组属性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一个满足BCNF的关系模式R己&lt;u&gt;消除了&lt;strong&gt;插入&lt;/strong&gt;和&lt;strong&gt;删除异常&lt;/strong&gt;&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第四范式（4NF）：&lt;/p&gt;
+&lt;p&gt;多值依赖：&lt;/p&gt;
+&lt;p&gt;给定的关系模式$R(U,F)$：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$X,Y,Z \subseteq U$，&lt;/li&gt;
+&lt;li&gt;$Z=U-X-Y$（$Z$是$X \cup Y$的差集）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当且仅当对$R$的任一关系$r$，给定的一对$(x,z)$值，有一组$Y$的值，这组值仅仅决定于$x$值而与$z$值无关。则关系模式$R$中的多值依赖$X \rightarrow\rightarrow Y$成立。&lt;/p&gt;
+&lt;p&gt;平凡的多值依赖：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$X \rightarrow\rightarrow Y$成立，&lt;/li&gt;
+&lt;li&gt;$Z = \Phi$，&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;则$X \rightarrow\rightarrow Y$为平凡的多值依赖。&lt;/p&gt;
+&lt;p&gt;例如，课程$\rightarrow\rightarrow$任课老师，课程$\rightarrow\rightarrow$参考书。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681986736869.png&#34;
+	width=&#34;401&#34;
+	height=&#34;168&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681986736869_hub94b74037a183c6a89e4bcd8421bb42f_31992_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681986736869_hub94b74037a183c6a89e4bcd8421bb42f_31992_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;多值依赖表示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;238&#34;
+		data-flex-basis=&#34;572px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;4NF定义：&lt;/p&gt;
+&lt;p&gt;设有一关系模式$R(U,F)$是1NF，如果对于$R$的每个&lt;u&gt;非平凡多值依赖&lt;/u&gt;$X \rightarrow\rightarrow Y(Y \not\subseteq X)$，&lt;u&gt;$X$都包含了$R$的一个候选码&lt;/u&gt;，则称$R$是第四范式，记为4NF。&lt;/p&gt;
+&lt;p&gt;例如，课程$\rightarrow\rightarrow$任课老师，课程$\rightarrow\rightarrow$参考书都是非平凡多值依赖，而课程不是码，所以不属于4NF。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;第五范式（5NF）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;范式之间的关系：&lt;/p&gt;
+&lt;p&gt;$$
+5NF \sub 4NF \sub BCNF \sub 3NF \sub 2NF \sub 1NF
+$$&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681894653450.png&#34;
+	width=&#34;564&#34;
+	height=&#34;309&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681894653450_hufd0c331a204cb2191b602cbf89c9254e_19807_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681894653450_hufd0c331a204cb2191b602cbf89c9254e_19807_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;规范化范式的包含关系&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;182&#34;
+		data-flex-basis=&#34;438px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;3NF和BCNE它们是进行规范化的主要目标。&lt;/p&gt;
+&lt;p&gt;1NF到4NF之间的转换关系：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;范式&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;转换关系&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;1NF&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;每一个分量是不可再分的数据项&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;2NF&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;1NF消除了部分函数依赖后满足2NF&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3NF&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;2NF消除了非主属性对码的传递函数依赖后满足3NF&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;BCNF&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;3NF消除了主属性对码的部分和传递函数依赖后满足BCNF&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4NF&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;BCNF消除非平凡且非函数依赖的多值依赖后满足4NF&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681988070233.png&#34;
+	width=&#34;288&#34;
+	height=&#34;303&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681988070233_huc82f8c088bb0c067181a613d8b65e62c_36441_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681988070233_huc82f8c088bb0c067181a613d8b65e62c_36441_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;规范化步骤&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;95&#34;
+		data-flex-basis=&#34;228px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;几种范式及其分解的性质：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;性质&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;3NF&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;BCNF&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;4NF&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;消除函数依赖带来冗余&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;消除多值函数依赖带来冗余&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;保持函数依赖&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;保持多值函数依赖&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;否&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;数据库设计&#34;&gt;数据库设计&lt;/h1&gt;
+&lt;p&gt;新奥尔良（New Orleans）法式目前公认的数据库设计方法，它将数据库设计分为以下几个阶段：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;用户需求分析&lt;/li&gt;
+&lt;li&gt;概念结构设计&lt;/li&gt;
+&lt;li&gt;逻辑结构设计&lt;/li&gt;
+&lt;li&gt;物理结构设计&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这几个阶段之后是与数据库建立和运行有关的阶段：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;数据库实施&lt;/li&gt;
+&lt;li&gt;数据库运行和维护&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682505975157.png&#34;
+	width=&#34;382&#34;
+	height=&#34;711&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682505975157_hu7950d0a7bbf6248186699719c01d30ad_79693_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682505975157_hu7950d0a7bbf6248186699719c01d30ad_79693_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;数据库设计步骤&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;53&#34;
+		data-flex-basis=&#34;128px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;需求分析&#34;&gt;需求分析&lt;/h2&gt;
+&lt;p&gt;需求分析是项目确定后，对数据库应用系统所要设计的&lt;u&gt;内容（数据）&lt;/u&gt;和&lt;u&gt;功能（行为）&lt;/u&gt;的整理和描述，是以用户的角度来认识系统。&lt;/p&gt;
+&lt;p&gt;需求分析是后面几个阶段，&lt;u&gt;逻辑结构设计&lt;/u&gt;、&lt;u&gt;物理结构设计&lt;/u&gt;以及&lt;u&gt;应用程序设计&lt;/u&gt;的依据。&lt;/p&gt;
+&lt;p&gt;需求分析将收集到的零碎的、局部的数据分析整理后，建立&lt;u&gt;需求说明文档&lt;/u&gt;、&lt;u&gt;数据字典&lt;/u&gt;和&lt;u&gt;数据流程图&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;需求分析还包含：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;数据流分析：是对事务处理所需的原始数据的收集，及经过处理后所得数据及其流向。&lt;/p&gt;
+&lt;p&gt;使用数据流图（DFD）表示。DFD能指出数据的流向和需要进行的事物处理（不涉及如何处理）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据字典：是关于数据库中数据的描述，即元数据（不是数据本身）。&lt;/p&gt;
+&lt;p&gt;数据字典包括5个部分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据项；&lt;/li&gt;
+&lt;li&gt;数据结构；&lt;/li&gt;
+&lt;li&gt;数据流；&lt;/li&gt;
+&lt;li&gt;数据存储；&lt;/li&gt;
+&lt;li&gt;加工。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;u&gt;系统需求说明书是需求分析阶段的成果&lt;/u&gt;，主要包括&lt;u&gt;数据流图&lt;/u&gt;、&lt;u&gt;数据字典&lt;/u&gt;、&lt;u&gt;各种说明性表格&lt;/u&gt;、&lt;u&gt;统计输出表和系统功能结构图&lt;/u&gt;等。&lt;/p&gt;
+&lt;p&gt;需求分析阶段的工作：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682560887456.png&#34;
+	width=&#34;646&#34;
+	height=&#34;291&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682560887456_hub24d924f6ecdb59b0c05cde9f6a94c8c_58795_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682560887456_hub24d924f6ecdb59b0c05cde9f6a94c8c_58795_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;需求分析阶段的工作步骤&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;221&#34;
+		data-flex-basis=&#34;532px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;概念结构设计&#34;&gt;概念结构设计&lt;/h2&gt;
+&lt;p&gt;概念设计阶段的目标是产生整体数据库概念结构，即概念模型，它是与DBMS无关的。&lt;/p&gt;
+&lt;p&gt;概念结构设计的方法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;自顶向下&lt;/li&gt;
+&lt;li&gt;自底向上&lt;/li&gt;
+&lt;li&gt;逐步扩张&lt;/li&gt;
+&lt;li&gt;混合策略（自顶向下和自底向上相结合）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;概念结构是对现实世界的一种抽象，从数据库设计角度看，主要是数据抽象，一般有如下3种数据抽象：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;分类&lt;/li&gt;
+&lt;li&gt;聚集&lt;/li&gt;
+&lt;li&gt;概括&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;局部视图设计就是对某个局部应用设计其分一R图，也称局部E-R图。其基本步骤如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682560993863.png&#34;
+	width=&#34;717&#34;
+	height=&#34;341&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682560993863_huf62446c235f8abd7d4a5d741b96b438b_65906_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682560993863_huf62446c235f8abd7d4a5d741b96b438b_65906_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;概念结构设计的工作步骤&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;210&#34;
+		data-flex-basis=&#34;504px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;确定局部结构范围；&lt;/li&gt;
+&lt;li&gt;定义实体；&lt;/li&gt;
+&lt;li&gt;联系定义；&lt;/li&gt;
+&lt;li&gt;属性分配。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;概念模型的建立采用E-R模型。&lt;/p&gt;
+&lt;h3 id=&#34;e-r-模型&#34;&gt;E-R 模型&lt;/h3&gt;
+&lt;p&gt;E-R模型用E-R图（ERD）表示，E-R图有以下几个成分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;实体&lt;/strong&gt;：用&lt;strong&gt;矩形&lt;/strong&gt;表示。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;联系&lt;/strong&gt;：用&lt;strong&gt;棱形&lt;/strong&gt;表示，并用无向边分别与有关实体连接起来，同时在无向边标注联系的类型（$1:1$，$1:n$ 或 $m:n$）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;属性&lt;/strong&gt;：用&lt;strong&gt;椭圆形&lt;/strong&gt;表示，并用无向边将其与相应的实体连接起来&lt;/p&gt;
+&lt;p&gt;E-R模型中的属性有以下分类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;简单属性和复合属性：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;简单属性是原子的、不可再分的；&lt;/li&gt;
+&lt;li&gt;复合属性可以细分为更小的部分。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;单值属性和多值属性：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;单值属性是一个属性对应一个值；&lt;/li&gt;
+&lt;li&gt;多值属性是一个属性对应一组值。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;NULL属性：实体在某个属性上没有值或属性值未知时，使用NULL值表示。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;派生属性：派生属性可以从其他属性得来（通过运算等方式求出）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;扩充的E-R模型（用来表达更多具有特殊语义的成分）有以下成分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;弱实体&lt;/strong&gt;：使用&lt;strong&gt;双线矩形框&lt;/strong&gt;表示。将需要依赖其他实体存在的实体。&lt;/p&gt;
+&lt;p&gt;实体间的所有（Ownership，拥有）关系代表一个实体对另一些实体具有很强的依赖关系，即一个实体的存在必须以另一个实体为前提。&lt;/p&gt;
+&lt;p&gt;例如职工与家属的联系，家属总是属于某职工的（在关系模式中需要依赖职工而存在），所以家属是弱实体。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;特殊化&lt;/strong&gt;：将一个实体集&lt;u&gt;按照某些特性区分为几个&lt;strong&gt;子实体&lt;/strong&gt;&lt;/u&gt;。这种从普遍到特殊的过程即为特殊化。&lt;/p&gt;
+&lt;p&gt;子实体的图形表示如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1684564987147.png&#34;
+	width=&#34;256&#34;
+	height=&#34;145&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1684564987147_huad14f3e1152e9df0e94e04c64131c1cf_1087_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1684564987147_huad14f3e1152e9df0e94e04c64131c1cf_1087_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;子实体&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;176&#34;
+		data-flex-basis=&#34;423px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;子实体由称为子类，它会有一个超类，并且能继承超类的属性，超类的属性是实体集中所有子实体的相同属性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;E-R图中的主要构件（包含扩充的E-R模型成分）：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682508598814.png&#34;
+	width=&#34;1035&#34;
+	height=&#34;391&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682508598814_hub0bc3034b48557bb84109435ab8e458e_191424_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682508598814_hub0bc3034b48557bb84109435ab8e458e_191424_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;E-R图中的主要构件&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;264&#34;
+		data-flex-basis=&#34;635px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;建立概念结构模型&#34;&gt;建立概念结构模型&lt;/h3&gt;
+&lt;p&gt;建立概念结构模型的步骤如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;选择局部应用：&lt;/p&gt;
+&lt;p&gt;需求分析阶段得到的大量数据分散杂乱，许多数据会应用于不同的处理，数据与数据之间关联关系也较为复杂。要最终&lt;u&gt;确定实体、属性和联系，必须根据数据流图这一线索理清数据&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;数据流图是对业务处理过程从高层到底层的一级抽象：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;高层抽象流图一般反映系统的概貌，对数据的引用较为笼统；&lt;/li&gt;
+&lt;li&gt;底层又可能过于细致，不能体现数据的关联关系。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;因此要&lt;u&gt;选择适当层次的数据流图，让这一层的每一部分对应一个局部应用，实现某一项功能。从这一层入手，就能很好地设计&lt;strong&gt;分E-R图&lt;/strong&gt;&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;逐一设计分E-R图。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;E-R图合并：&lt;/p&gt;
+&lt;p&gt;根据局部应用设计好各局部E-R图之后，就可以对各分E-R图进行合并。&lt;/p&gt;
+&lt;p&gt;合并的目的在于，在合并过程中解决分E-R图中相互存在的冲突。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;分E-R图之间的冲突主要有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;属性冲突&lt;/strong&gt;：同一属性在不同的分E-R图上的属性类型、取值范围和数据单位等可能会不一致。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;命名冲突&lt;/strong&gt;：相同意义的属性在不同的分E-R图上可能会有不同的命名。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;结构冲突&lt;/strong&gt;：同一实体在不同的分E-R图中可能会有不同的属性；同一对象在某一分E-R图中被抽象为实体，而在另一分E-R图中又可能被抽象为属性，反之亦然。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;逻辑结构设计&#34;&gt;逻辑结构设计&lt;/h2&gt;
+&lt;p&gt;逻辑结构设计就是在概念结构设计的基础上进行数据模型设计，可以是层次模型、网状模型和关系模型。&lt;/p&gt;
+&lt;p&gt;通常是把概念模型转换成为&lt;u&gt;某个具体的数据库管理系统所支持的结构数据模型&lt;/u&gt;（与DBMS有关）。即，将概念结构设计所得的E-R模型转换成关系模式。&lt;/p&gt;
+&lt;p&gt;逻辑结构设计的工作步骤：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682577339219.png&#34;
+	width=&#34;581&#34;
+	height=&#34;296&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682577339219_hu0e28af6a5a7453a0a5eb6666d48c94c7_44563_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682577339219_hu0e28af6a5a7453a0a5eb6666d48c94c7_44563_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;逻辑结构设计的工作步骤&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;196&#34;
+		data-flex-basis=&#34;471px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;e-r-模型转换关系模式&#34;&gt;E-R 模型转换关系模式&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;实体向关系模式的转换：&lt;/p&gt;
+&lt;p&gt;将E-R图中的实体逐一转换成为一个关系模式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;实体名：对应关系模式的名称；&lt;/li&gt;
+&lt;li&gt;实体的属性：转换成关系模式的属性；&lt;/li&gt;
+&lt;li&gt;实体标识符：关系的码（键）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;超类和子类的转换：超类和子类定义为两个关系模式，将超类的主键加到子类中。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;联系向关系模式的转换：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;一对一联系的转换：&lt;/p&gt;
+&lt;p&gt;有两种方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;方式1：将联系转换成一个独立的关系模式，关系模式的名称取联系的名称，关系模式的属性包括该联系所关联的两个实体的码及联系的属性，关系的码取自任一方实体的码。&lt;/p&gt;
+&lt;p&gt;那么一个一对一联系需要转换成三个关系模式。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方式2（一般使用该方式）：将联系归并到关联的两个实体的任一方，给待归并的一方实体属性集中增加另一方实体的码和该联系的属性即可，归并后的实体码保持不变。&lt;/p&gt;
+&lt;p&gt;一个一对一联系仅需转换成两个关系模式。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682562445900.png&#34;
+	width=&#34;304&#34;
+	height=&#34;358&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682562445900_hu39b33fe28157809884f3b45df834a34e_28041_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682562445900_hu39b33fe28157809884f3b45df834a34e_28041_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;联系向关系模式的转换示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;84&#34;
+		data-flex-basis=&#34;203px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;方式1：&lt;/p&gt;
+&lt;p&gt;厂长（&lt;strong&gt;姓名&lt;/strong&gt;，性别，年龄）&lt;/p&gt;
+&lt;p&gt;工厂（&lt;strong&gt;厂号&lt;/strong&gt;，厂名，地点）&lt;/p&gt;
+&lt;p&gt;管理（（厂长）&lt;strong&gt;姓名&lt;/strong&gt;，厂号，任期）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;粗体代表该关系模式的码。管理的码可以为姓名或厂号。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方式2：&lt;/p&gt;
+&lt;p&gt;厂长（姓名，性别，年龄）&lt;/p&gt;
+&lt;p&gt;工厂（厂号，厂名，地点，（厂长）姓名，任期）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一对多联系的转换：&lt;/p&gt;
+&lt;p&gt;两种方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;方式1：将联系转换成一个独立的关系模式，关系模式的名称取联系的名称，关系模式的属性取该联系所关联的两个实体的码及联系的属性，&lt;u&gt;关系的码是多方实体的码&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;方式2（一般使用该方式）：将联系&lt;u&gt;归并到关联的两个实体的多方&lt;/u&gt;，给待归并的多方实体属性集中增加一方实体的码和该联系的属性即可，归并后的多方实体码保持不变。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682563544291.png&#34;
+	width=&#34;315&#34;
+	height=&#34;361&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682563544291_hue1cce8af0395e2bd704f6df0a3e3321e_30915_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682563544291_hue1cce8af0395e2bd704f6df0a3e3321e_30915_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;一对多联系转换的例子&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;87&#34;
+		data-flex-basis=&#34;209px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;方式1:&lt;/p&gt;
+&lt;p&gt;仓库（&lt;strong&gt;仓库号&lt;/strong&gt;，地点，面积）&lt;/p&gt;
+&lt;p&gt;商品（&lt;strong&gt;货号&lt;/strong&gt;，商品名，价格）&lt;/p&gt;
+&lt;p&gt;仓储（&lt;strong&gt;货号&lt;/strong&gt;，仓库号，数量）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方式2：&lt;/p&gt;
+&lt;p&gt;仓库（&lt;strong&gt;仓库号&lt;/strong&gt;，地点，面积）&lt;/p&gt;
+&lt;p&gt;商品（&lt;strong&gt;货号&lt;/strong&gt;，商品名，价格，仓库号，数量）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多对多联系的转换：&lt;/p&gt;
+&lt;p&gt;多对多联系只能转换成一个独立的关系模式，关系模式的名称取联系的名称，关系模式的属性取该联系所关联的两个多方实体的码及联系的属性，关系的码是多方实体的码构成的属性组。&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682564018777.png&#34;
+	width=&#34;327&#34;
+	height=&#34;373&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682564018777_hu8cf40dc2a076405a9cb5ca4646519d5e_36334_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682564018777_hu8cf40dc2a076405a9cb5ca4646519d5e_36334_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;多对多联系转换的示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;87&#34;
+		data-flex-basis=&#34;210px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;转换成：&lt;/p&gt;
+&lt;p&gt;学生（&lt;strong&gt;学号&lt;/strong&gt;，姓名，性别，年龄）&lt;/p&gt;
+&lt;p&gt;课程（&lt;strong&gt;课程号&lt;/strong&gt;，课程名，学时）&lt;/p&gt;
+&lt;p&gt;选修（&lt;strong&gt;（学号，课程号）&lt;/strong&gt;，成绩）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;关系模式的规范化&#34;&gt;关系模式的规范化&lt;/h3&gt;
+&lt;p&gt;转换后的关系模式可能存在数据冗余、更新异常等问题，所以需要进一步的规范化处理。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;根据语义确定各关系模式的数据依赖（函数依赖）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;根据数据依赖确定关系模式的范式。判定关系模式是否达到了3NF或4NF。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果关系模式不符合要求，要根据关系模式的分解算法对其进行分解，达到3NF、BCNF或4NF。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关系模式的评价及修正。&lt;/p&gt;
+&lt;p&gt;根据规范化理论对关系模式分解之后，就可以在理论上消除冗余和更新异常。但根据处理要求，可能还需要增加部分冗余以满足处理要求，这就需要做部分关系模式的处理，分解、合并或增加冗余属性，提高存储效率和处理效率。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;事务管理&#34;&gt;事务管理&lt;/h1&gt;
+&lt;p&gt;事务是一个操作序列，这些操作“要么都做，要么都不做”。&lt;/p&gt;
+&lt;p&gt;事务和程序是两个不同的概念，一般一个程序可包含多个事务。&lt;/p&gt;
+&lt;p&gt;在SQL语言中，事务定义的语句有以下三条。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;BEGIN TRANSACTION&lt;/code&gt;：事务开始。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;COMMIT&lt;/code&gt;：事务提交。&lt;/p&gt;
+&lt;p&gt;该操作表示事务成功地结束，它将通知事务管理器该事务的&lt;u&gt;所有更新操作现在可以被提交或永久地保留&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ROLLBACK&lt;/code&gt;：事务回滚。&lt;/p&gt;
+&lt;p&gt;该操作表示事务非成功地结束，它将通知事务管理器&lt;u&gt;出故障&lt;/u&gt;了，数据库可能处于不一致状态，该事务的&lt;u&gt;所有更新操作必须回滚或撤销&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;事务的ACID性质：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;原子性&lt;/strong&gt;（Atomicity）：事务是原子的，要么都做，要么都不做。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;一致性&lt;/strong&gt;（Consistency）：事务执行的结果必须保证数据库从一个一致性状态变到另一个一致性状态。&lt;/p&gt;
+&lt;p&gt;因此，当数据库只包含成功事务提交的结果时，称数据库处于一致性状态。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;隔离性&lt;/strong&gt;（Isolation）：事务相互隔离。&lt;/p&gt;
+&lt;p&gt;当多个事务并发执行时，任一事务的更新操作直到其成功提交的整个过程，对其他事务都是不可见的&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;持久性&lt;/strong&gt;（Durability）：一旦事务成功提交，即使数据库崩溃，其对数据库的更新操作也将永久有效。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;数据库故障&#34;&gt;数据库故障&lt;/h1&gt;
+&lt;p&gt;在数据库的运行过程中，难免会出现计算机系统的软、硬件故障，这些故障会影响数据库中数据的正确性，甚至破坏数据库，使数据库中的全部或部分数据丢失。因此，数据库的关键技术在于建立冗余数据，即备份数据。如何在系统出现故障后能够及时地使数据库恢复到故障前的正确状态，就是数据库恢复技术。&lt;/p&gt;
+&lt;p&gt;故障类型：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;事务内部故障&lt;/strong&gt;：有的可以通过事务程序本身发现；有的是非预期的，不能由事务程序处理。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;系统故障&lt;/strong&gt;（软故障）：是指造成系统停止运行的任何事件，使得系统要重新启动，例如CPU故障、操作系统故障和突然停电等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;介质故障&lt;/strong&gt;（硬故障）：如磁盘损坏、磁头碰撞和瞬时强磁干扰。此类故障发生的几率小，但破坏性最大。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;计算机病毒&lt;/strong&gt;：计算机病毒是一种人为的故障和破坏，是在计算机程序中插入的破坏，计算机功能或者数据可以繁殖和传播的一组计算机指令或程序代码。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;备份方法&#34;&gt;备份方法&lt;/h2&gt;
+&lt;p&gt;恢复的基本原理是“建立数据冗余”（重复存储）。建立冗余数据的方法是进行&lt;u&gt;数据转储&lt;/u&gt;和&lt;u&gt;登记日志文件&lt;/u&gt;，分为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;静态转储和动态转储：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;静态转储&lt;/strong&gt;：在转储期间不允许对数据库进行任何存取、修改操作；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;动态转储&lt;/strong&gt;：在转储期间允许对数据库进行存取、修改操作。&lt;/p&gt;
+&lt;p&gt;动态转储和用户事务可并发执行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;海量转储和增量转储：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;海量转储&lt;/strong&gt;：指每次转储全部数据；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;增量转储&lt;/strong&gt;：指每次只转储上次转储后更新过的数据。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;日志文件&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;在事务处理的过程中，DBMS把以下操作写入日志文件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;事务开始、事务结束；&lt;/li&gt;
+&lt;li&gt;对数据库的插入、删除和修改。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一旦发生故障，DBMS的恢复子系统利用日志文件撤销事务对数据库的改变，回退到事务的初始状态。因此，DBMS利用日志文件来进行事务故障恢复和系统故障恢复，并可协助后备副本进行介质故障恢复。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;恢复&#34;&gt;恢复&lt;/h2&gt;
+&lt;p&gt;事务恢复有以下3个步骤：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;反向扫描文件日志（即从最后向前扫描日志文件），查找该事务的更新操作。&lt;/li&gt;
+&lt;li&gt;对事务的更新操作执行逆操作。&lt;/li&gt;
+&lt;li&gt;继续反向扫描日志文件，查找该事务的其他更新操作，并做同样的处理，直到事务的开始标志。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;并发控制&#34;&gt;并发控制&lt;/h1&gt;
+&lt;p&gt;所谓并发操作，是指在多用户共享的系统中许多用户可能同时对同一数据进行操作。并发操作带来的问题是数据的不一致性，主要有三类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;丢失更新&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;不可重复读&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;读脏数据&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其主要原因是事务的并发操作破坏了事务的隔离性。DBMS的并发控制子系统负责协调并发事务的执行，保证数据库的完整性不受破坏，避免用户得到不正确的数据。&lt;/p&gt;
+&lt;h2 id=&#34;封锁&#34;&gt;封锁&lt;/h2&gt;
+&lt;p&gt;并发控制的主要技术是封锁。基本封锁的类型有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;排它锁（X锁或写锁）：若事务T对数据对象A加上X锁，则&lt;u&gt;只允许T读取和修改A，其他事务都不能再对A加任何类型的锁&lt;/u&gt;，直到T释放A上的锁。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;共享锁（S锁或读锁）：若事务T对数据对象A加上S锁，则&lt;u&gt;只允许T读取A，但不能修改A，其他事务只能再对A加S锁&lt;/u&gt;，直到T释放A上的S锁。&lt;/p&gt;
+&lt;p&gt;这就保证了其他事务可以读A，但在T释放A上的S锁之前不能对A进行任何修改。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;分布式数据库&#34;&gt;分布式数据库&lt;/h1&gt;
+&lt;p&gt;分布式数据库系统是指数据存放在计算机网络的不同场地的计算机中，每一场地都有自治处理能力并能完成局部应用；而每一场地也参与（至少一种）全局应用程序的执行，全局应用程序可通过网络通信访问系统中多个场地的数据。其定义强调分布性和逻辑整体性两点。&lt;/p&gt;
+&lt;p&gt;分布式数据库中有以下基本概念：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;分片透明&lt;/strong&gt;：指用户或应用程序不需要知道逻辑上访问的表具体是怎么分块存储的。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;复制透明&lt;/strong&gt;：指采用复制技术的分布方法，用户不需要知道数据是复制到哪些节点，如何复制的。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;位置透明&lt;/strong&gt;：指用户无须知道数据存放的物理位置。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;逻辑透明&lt;/strong&gt;：指用户或应用程序无需知道局部场地使用的是哪种数据模型。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;具有以下性质：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;共享性&lt;/strong&gt;：数据存储在不同的结点数据共享。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;自治性&lt;/strong&gt;：指每结点对本地数据都能独立管理。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;可用性&lt;/strong&gt;：指当某一场地故障时，系统可以使用其他场地上的副本而不至于使整个系统瘫痪。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;分布性&lt;/strong&gt;：指数据在不同场地上的存储。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;存储过程&#34;&gt;存储过程&lt;/h1&gt;
+&lt;p&gt;存储过程（Stored Procedure）是在大型数据库系统中，一组为了完成特定功能的SQL语句集，它存储在数据库中，一次编译后永久有效，用户通过指定存储过程的名字并给出参数（如果该存储过程带有参数）来执行它。&lt;/p&gt;
+&lt;p&gt;存储过程是数据库所提供的一种数据库对象，通过存储过程定义一段代码，提供给应用程序调用来执行。从安全性的角度考虑，更新数据时，通过提供存储过程正第三方调用，将需要更新的数据传入存储过程，而在存储过程内部用代码分别对需要的多个表进行更新，从而避免了向第三方提供系统的表结构，保证了系统的数据安全。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

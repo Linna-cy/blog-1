@@ -1,0 +1,1086 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>IPv4 on Linner&#39;s Blog</title>
+        <link>https://blog.linner.asia/tags/ipv4/</link>
+        <description>Recent content in IPv4 on Linner&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh</language>
+        <lastBuildDate>Fri, 12 May 2023 06:01:08 +0000</lastBuildDate><atom:link href="https://blog.linner.asia/tags/ipv4/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>计算机网络篇</title>
+        <link>https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/</link>
+        <pubDate>Fri, 12 May 2023 06:01:08 +0000</pubDate>
+        
+        <guid>https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/</guid>
+        <description>&lt;h1 id=&#34;网络概述&#34;&gt;网络概述&lt;/h1&gt;
+&lt;p&gt;计算机网络是计算机技术与通信技术相结合的产物，它实现了远程通信、远程信息处理和资源共享。现代计算机网络已具有统一的网络体系结构。&lt;/p&gt;
+&lt;p&gt;计算机网络提供的主要功能有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据通信&lt;/li&gt;
+&lt;li&gt;资源共享&lt;/li&gt;
+&lt;li&gt;负载均衡&lt;/li&gt;
+&lt;li&gt;高可共享性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;计算机网络分类&#34;&gt;计算机网络分类&lt;/h2&gt;
+&lt;p&gt;按通信距离分类：&lt;/p&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th style=&#34;text-align:center&#34;&gt;
+            网络分类
+            &lt;/th&gt;
+        &lt;th style=&#34;text-align:center&#34;&gt;
+            分布距离
+        &lt;/th&gt;
+        &lt;th style=&#34;text-align:center&#34;&gt;
+            计算机分布范围
+        &lt;/th&gt;
+        &lt;th style=&#34;text-align:center&#34;&gt;
+            传输速率
+        &lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style=&#34;text-align:center&#34; rowspan=&#34;4&#34;&gt;
+            &lt;b&gt;
+                局域网
+                &lt;br&gt;
+                MAN
+            &lt;/b&gt;
+        &lt;/td&gt;
+        &lt;tr&gt;
+            &lt;td&gt;10m左右&lt;/td&gt;
+            &lt;td&gt;房间&lt;/td&gt;
+            &lt;td rowspan=&#34;3&#34;&gt;
+                4Mbps ~ 1Gbps
+            &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;100m左右&lt;/td&gt;
+            &lt;td&gt;楼寓&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;1000m左右&lt;/td&gt;
+            &lt;td&gt;校园&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style=&#34;text-align:center&#34;&gt;
+            &lt;b&gt;
+                城域网
+                &lt;br&gt;
+                WAN
+            &lt;/b&gt;
+        &lt;/td&gt;
+        &lt;td&gt;10km&lt;/td&gt;
+        &lt;td&gt;城市&lt;/td&gt;
+        &lt;td&gt;50Kbps ~ 100 Mbps&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style=&#34;text-align:center&#34;&gt;
+            &lt;b&gt;
+                广域网
+                &lt;br&gt;
+                LAN
+            &lt;/b&gt;
+        &lt;/td&gt;
+        &lt;td&gt;100km以上&lt;/td&gt;
+        &lt;td&gt;国家或全球&lt;/td&gt;
+        &lt;td&gt;9.6Kbps ~ 45Mbps&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;其它分类方式与其分类如：&lt;/p&gt;
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th style=&#34;text-align: center;&#34;&gt;
+            分类方式
+        &lt;/th&gt;
+        &lt;th&gt;
+            分类内容
+        &lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style=&#34;text-align: center;&#34; rowspan=&#34;4&#34;&gt;
+            信息交换方式
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;电路交换网&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;分组交换网&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;综合交换网&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style=&#34;text-align: center;&#34; rowspan=&#34;5&#34;&gt;
+            网络拓扑结构
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;星型网&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;树型网&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;环型网&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;总线网&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style=&#34;text-align: center;&#34; rowspan=&#34;5&#34;&gt;
+            通信介质
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;双绞线网&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;同轴电缆网&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;光纤网&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;卫星网&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style=&#34;text-align: center;&#34; rowspan=&#34;3&#34;&gt;
+            传输带宽
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;基带网&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;宽带网&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style=&#34;text-align: center;&#34; rowspan=&#34;3&#34;&gt;
+            使用范围
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;公用网&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;专用网&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style=&#34;text-align: center;&#34; rowspan=&#34;4&#34;&gt;
+            速率
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;高速网&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;中速网&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;低速网&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td style=&#34;text-align: center;&#34; rowspan=&#34;3&#34;&gt;
+            通信传播方式
+        &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;广播式&lt;/td&gt;&lt;/tr&gt;
+    &lt;tr&gt;&lt;td&gt;点到点式&lt;/td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;isoosi-网络体系结构&#34;&gt;ISO/OSI 网络体系结构&lt;/h2&gt;
+&lt;p&gt;ISO/OSI的参考模型共有7层：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875696461.png&#34;
+	width=&#34;390&#34;
+	height=&#34;339&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875696461_hu39205de4aab8f3d4638771bbe2a09e98_32206_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875696461_hu39205de4aab8f3d4638771bbe2a09e98_32206_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;OSI 参考模型&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;115&#34;
+		data-flex-basis=&#34;276px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;计算机网络按照数据通信和数据处理的功能可分为两层：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;内层通信子网（通信子网）：由计算机和高速通信线路组成独立的数据系统，承担全网的通信工作（解决数据传输和通信控制问题）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;外层资源子网（资源子网）：包括计算机、终端、通信子网接口设备、外部设备、软件资源等，它负责全网的数据处理和提供网络资源及网络服务。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;这两个网络层符合国际标准化组织所制定的开放式系统互连参考模型（OSI）的思想：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通信子网对应于OSI中的低三层：
+&lt;ul&gt;
+&lt;li&gt;物理层&lt;/li&gt;
+&lt;li&gt;数据链路层&lt;/li&gt;
+&lt;li&gt;网络层&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;资源子网对应于OSI中的高三层：
+&lt;ul&gt;
+&lt;li&gt;会话层&lt;/li&gt;
+&lt;li&gt;表示层&lt;/li&gt;
+&lt;li&gt;应用层&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;服务端要向用户端传送数据（信息流向）：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;服务端将数据送入应用层，然后数据逐层向物理层传递。&lt;/p&gt;
+&lt;p&gt;在传递过程中，每一层对数据做相应处理（附加控制信息、数据变换、报文分段、报文分组、变换为帧等）。&lt;/p&gt;
+&lt;p&gt;最后，经由物理层将数据发送至用户端。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用户端接受信息，按照与服务端相反顺序的动作，从物理层开始层层剥去控制信息。&lt;/p&gt;
+&lt;p&gt;最后把原数据展示给用户。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683877150679.png&#34;
+	width=&#34;724&#34;
+	height=&#34;404&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683877150679_hu64c4f9fea840087facedf4dd79f952ea_77141_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683877150679_hu64c4f9fea840087facedf4dd79f952ea_77141_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;ISO/OSI RM 内信息流动&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;179&#34;
+		data-flex-basis=&#34;430px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;只有物理层是实通信（有物理连接），其余各层均为虚通信（无连线）。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;网络的拓扑结构&#34;&gt;网络的拓扑结构&lt;/h2&gt;
+&lt;p&gt;网络拓扑结构是指网络中通信线路和结点的几何排序，用于表示整个网络的结构外貌，反映各结点之间的结构关系。&lt;/p&gt;
+&lt;p&gt;常用的网络拓扑结构有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;总线型结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875429976.png&#34;
+	width=&#34;223&#34;
+	height=&#34;139&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875429976_hu5b093505ed802d7d1a1c5817591c0eaa_1389_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875429976_hu5b093505ed802d7d1a1c5817591c0eaa_1389_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;总线型结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;160&#34;
+		data-flex-basis=&#34;385px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;星型结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875460651.png&#34;
+	width=&#34;198&#34;
+	height=&#34;164&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875460651_hu8efe65f8b46b3e28417b2693def45240_4232_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875460651_hu8efe65f8b46b3e28417b2693def45240_4232_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;星型结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;120&#34;
+		data-flex-basis=&#34;289px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;环型结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875485913.png&#34;
+	width=&#34;166&#34;
+	height=&#34;157&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875485913_huac7b91d4a6d672465402bf6e2160e44f_4244_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875485913_huac7b91d4a6d672465402bf6e2160e44f_4244_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;环型结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;105&#34;
+		data-flex-basis=&#34;253px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;树型结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875508387.png&#34;
+	width=&#34;184&#34;
+	height=&#34;141&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875508387_hua92772052d44a07e8f2401ed8c07dfa6_1740_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875508387_hua92772052d44a07e8f2401ed8c07dfa6_1740_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;树型结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;130&#34;
+		data-flex-basis=&#34;313px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;分布式结构：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875530047.png&#34;
+	width=&#34;164&#34;
+	height=&#34;138&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875530047_hu4467481de8ae2f8fd02cecbf5efa7b7b_5249_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875530047_hu4467481de8ae2f8fd02cecbf5efa7b7b_5249_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;分布式结构&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;118&#34;
+		data-flex-basis=&#34;285px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;网络互连设备&#34;&gt;网络互连设备&lt;/h1&gt;
+&lt;p&gt;构建一个实际的网络需要网络的传输介质、网络互连设备作为支持。&lt;/p&gt;
+&lt;h2 id=&#34;网络设备&#34;&gt;网络设备&lt;/h2&gt;
+&lt;p&gt;按照ISO/OSI的分层将互连设备分类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;物理层设备：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;中继器（Repeater）&lt;/li&gt;
+&lt;li&gt;集线器（Hub）：一种多端口的中继器。集线器不能自动寻址，但可以检测发送冲突。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据链路层设备：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;网桥（Bridge）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;交换机（Switch）：一种多端口的网桥。&lt;/p&gt;
+&lt;p&gt;交换技术：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;端口交换&lt;/li&gt;
+&lt;li&gt;帧交换&lt;/li&gt;
+&lt;li&gt;信元交换&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;网络层设备：路由器（Router）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683956321797.png&#34;
+	width=&#34;554&#34;
+	height=&#34;235&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683956321797_hu561f5310d4335c386da88596021542b0_86791_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683956321797_hu561f5310d4335c386da88596021542b0_86791_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;路由器类型&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;235&#34;
+		data-flex-basis=&#34;565px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683956407885.png&#34;
+	width=&#34;554&#34;
+	height=&#34;163&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683956407885_hu10ca2431c18c804496582fc4c7f1a0a5_39421_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683956407885_hu10ca2431c18c804496582fc4c7f1a0a5_39421_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;各种路由来源的管理距离&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;339&#34;
+		data-flex-basis=&#34;815px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;应用层设备：网关（Gateway）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;网络传输介质&#34;&gt;网络传输介质&lt;/h2&gt;
+&lt;p&gt;传输介质是信号传输的媒体，常用的介质分为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;有线介质：
+&lt;ul&gt;
+&lt;li&gt;双绞线（Twisted-Pair）&lt;/li&gt;
+&lt;li&gt;同轴电缆（Coaxial）&lt;/li&gt;
+&lt;li&gt;光纤（Fiber Optic）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;无线介质：
+&lt;ul&gt;
+&lt;li&gt;微波&lt;/li&gt;
+&lt;li&gt;红外线和激光&lt;/li&gt;
+&lt;li&gt;卫星通信&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;网络组件&#34;&gt;网络组件&lt;/h2&gt;
+&lt;p&gt;在一个局域网中，其基本组成部件为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;服务器（Server）&lt;/li&gt;
+&lt;li&gt;客户端（Client）&lt;/li&gt;
+&lt;li&gt;网络设备&lt;/li&gt;
+&lt;li&gt;通信介质&lt;/li&gt;
+&lt;li&gt;网络软件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;网络协议与标准&#34;&gt;网络协议与标准&lt;/h1&gt;
+&lt;p&gt;计算机网络中的两个实体，想要成功通信，必须具有相同的语言，在计算机网络中称为协议（规程）。&lt;/p&gt;
+&lt;p&gt;网络协议指的是网络中的计算机与计算机进行通信时，为了能够实现数据的正常发送与接收必须要遵循的一些事先约定好的规则（标准或约定），在这些规程中明确规定了通信时的数据格式、数据传送时序以及相应的控制信息和应答信号等内容。&lt;/p&gt;
+&lt;h2 id=&#34;网络标准&#34;&gt;网络标准&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;电信标准：由国际电信联盟（International Telecommunication Union，ITU）发布的标准，有ITU-T的V系列、X系列等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;国际标准：由国际标准化组织（ISO）负责制定。&lt;/p&gt;
+&lt;p&gt;其他标准化组织：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ANSI：美国国家标准研究所，ISO的美国代表。&lt;/li&gt;
+&lt;li&gt;NIST：美国国家标准和技术研究所，美国商业部的标准化机构。&lt;/li&gt;
+&lt;li&gt;IEEE：电气和电子工程师协会（Institute of Electrical and Electronics Engineers）。&lt;/li&gt;
+&lt;li&gt;ElA：电子工业协会（Electronic Industries Association）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Internet标准：特点是自发而非政府干预的，管理松散。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;有民间性质的协会ISOC（Internet Society）进行必要的协调与管理。&lt;/li&gt;
+&lt;li&gt;有网络信息中心（NIC）来管理IP地址，保证注册地址的唯一性。&lt;/li&gt;
+&lt;li&gt;ISOC设有nternet总体管理机构结构（IAB）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;局域网协议&#34;&gt;局域网协议&lt;/h2&gt;
+&lt;p&gt;IEEE 802系列标准己被ISO采纳为国际标准。&lt;/p&gt;
+&lt;p&gt;局域网的基本组成主要有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;网络服务器&lt;/li&gt;
+&lt;li&gt;网络工作站&lt;/li&gt;
+&lt;li&gt;网络适配器&lt;/li&gt;
+&lt;li&gt;传输介质&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;决定局域网特性的主要技术有3个方面：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用于传输数据的传输介质；&lt;/li&gt;
+&lt;li&gt;用于连接各种设备的拓扑结构；&lt;/li&gt;
+&lt;li&gt;用于共享资源的介质访问控制方法。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;lan-模型&#34;&gt;LAN 模型&lt;/h3&gt;
+&lt;p&gt;在IEEE 802局域网（LAN）标准中只定义了两层：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;物理层&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据链路层：&lt;/p&gt;
+&lt;p&gt;根据LAN的特点把数据链路层分成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;逻辑链路控制（Logical Link Control，LLC）子层：&lt;/p&gt;
+&lt;p&gt;实现网络层中的寻址、排序、流控和差错控制等功能&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;介质访问控制（Medium Access Control，MAC）子层&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683879193227.png&#34;
+	width=&#34;397&#34;
+	height=&#34;252&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683879193227_hu88c8e8da15a4cc0b1b209d5e372c6435_32953_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683879193227_hu88c8e8da15a4cc0b1b209d5e372c6435_32953_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;LAN 层次与 ISO/OSI RM 的对应关系&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;157&#34;
+		data-flex-basis=&#34;378px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;以太网&#34;&gt;以太网&lt;/h3&gt;
+&lt;p&gt;以太网技术采用的“存取方法”是带冲突检测的载波监听多路访问协议（Carrier-Sense Multiple Access with Collision Detection，CSMA/CD）技术。&lt;/p&gt;
+&lt;p&gt;以太网主要包括3中类型：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IEEE 802.3中定义的标准局域网，速度为10Mbps，传输介质为细同轴电缆；&lt;/li&gt;
+&lt;li&gt;IEEE 802.3u中定义的快速以太网，速度为100Mbps，传输介质为双绞线；&lt;/li&gt;
+&lt;li&gt;IEEE 802.3z中定义的千兆以太网，速度为1000Mbps，传输介质为光纤或双绞线。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;令牌环网&#34;&gt;令牌环网&lt;/h3&gt;
+&lt;p&gt;IEEE 802.5的介质访问使用的是令牌环控制技术。&lt;/p&gt;
+&lt;h3 id=&#34;fddi&#34;&gt;FDDI&lt;/h3&gt;
+&lt;p&gt;FDDI（Fiber Distributed Data Interface,光纤分布式数据接口）类似令牌环网的协议：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;用光纤作为传输介质；&lt;/li&gt;
+&lt;li&gt;采用一种新的编码技术，称为4B/5B编码。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;无线局域网&#34;&gt;无线局域网&lt;/h3&gt;
+&lt;p&gt;无线局域网（WLAN）使用的是带冲突避免的载波侦听多路访问方法（CSMA/CA）。&lt;/p&gt;
+&lt;h2 id=&#34;广域网协议&#34;&gt;广域网协议&lt;/h2&gt;
+&lt;p&gt;用于广域网的主要协议有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;点对点协议（PPP）&lt;/li&gt;
+&lt;li&gt;数字用户线（xDSL）&lt;/li&gt;
+&lt;li&gt;数字专线&lt;/li&gt;
+&lt;li&gt;帧中继&lt;/li&gt;
+&lt;li&gt;异步传输模式&lt;/li&gt;
+&lt;li&gt;X.25 协议&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;tcpip-协议族&#34;&gt;TCP/IP 协议族&lt;/h2&gt;
+&lt;p&gt;TCP/IP作为Internet的核心协议，被广泛应用于局域网和广域网中，成为事实上的国际标准。&lt;/p&gt;
+&lt;p&gt;TCP/IP基本特性的5个表现方面：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;逻辑编制：&lt;/p&gt;
+&lt;p&gt;每台连入Internet的计算机都会被分配一个逻辑地址，即IP地址。&lt;/p&gt;
+&lt;p&gt;IP地址包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;网络ID号：用来标识网络；&lt;/li&gt;
+&lt;li&gt;子网ID号：用来标识网络上的一个子网；&lt;/li&gt;
+&lt;li&gt;主机ID号：用来标识子网上的一台计算机。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;路由选择：定义路由器如何选择网络路径的协议，即IP数据包的路由选择。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;域名解析：&lt;/p&gt;
+&lt;p&gt;域名：一种易记的字母式地址结构，也称为DNS（域名服务）名。&lt;/p&gt;
+&lt;p&gt;将域名映射为IP地址的操作即为域名解析。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;域名较稳定，而IP地址较易发生变化。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;错误检测：TPC/IP具有分组交换确保数据信息在网络上可靠传递的特性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;流量控制：检测网络系统信息中的信息流量，防止出现网络拥塞，也属于分组交换确保数据信息在网络上可靠传递。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;tcpip-分层模型&#34;&gt;TCP/IP 分层模型&lt;/h3&gt;
+&lt;p&gt;TCP/IP分层模型由4个层次构成：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;应用层&lt;/li&gt;
+&lt;li&gt;传输层&lt;/li&gt;
+&lt;li&gt;网际层&lt;/li&gt;
+&lt;li&gt;网络接口层&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683880948768.png&#34;
+	width=&#34;697&#34;
+	height=&#34;339&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683880948768_huf85223c878afcabc7c687de01d9badd5_93199_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683880948768_huf85223c878afcabc7c687de01d9badd5_93199_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;TCP/IP 模型于 OSI 模型的对比&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;205&#34;
+		data-flex-basis=&#34;493px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;传输层协议-tcp-和-udp&#34;&gt;传输层协议 TCP 和 UDP&lt;/h3&gt;
+&lt;p&gt;TCP和UDP都是应用于传输层的网络协议：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;TCP（Transmission Control Protocol，传输控制协议）：&lt;/p&gt;
+&lt;p&gt;在IP提供的不可靠数据服务的基础上为应用程序提供了可靠的、面向连接的、全双工的数据传输服务。&lt;/p&gt;
+&lt;p&gt;采用三次握手来确认建立和关闭连接是否成功。&lt;/p&gt;
+&lt;p&gt;TCP的功能或服务有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可靠传输&lt;/li&gt;
+&lt;li&gt;连接管理&lt;/li&gt;
+&lt;li&gt;差错校验和重传&lt;/li&gt;
+&lt;li&gt;流量控制：采用可变大小的滑动窗口协议&lt;/li&gt;
+&lt;li&gt;拥塞控制&lt;/li&gt;
+&lt;li&gt;端口寻址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;UDP（User Datagram Protocol，用户数据报协议）：&lt;/p&gt;
+&lt;p&gt;是一种不可靠的、无连接的协议，可以保证应用程序进程间的通信。&lt;/p&gt;
+&lt;p&gt;UDP上的应用有VoIP等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;UDP的首部8B，TCP的首部20B，UDP相比TCP来说，开销较小。&lt;/p&gt;
+&lt;p&gt;TCP和UDP均提供了端口寻址功能。&lt;/p&gt;
+&lt;h3 id=&#34;电子邮件协议-smtp-和-pop3&#34;&gt;电子邮件协议 SMTP 和 POP3&lt;/h3&gt;
+&lt;p&gt;SMTP和POP3都使用TCP端口传输和接收邮件。&lt;/p&gt;
+&lt;p&gt;SMTP：邮件发送协议；常用端口号：25。&lt;/p&gt;
+&lt;p&gt;SMTP只能传输SACII码文本和文字附件，可以使用MIME邮件扩充协议，添加其他类型的附件。&lt;/p&gt;
+&lt;p&gt;POP3：邮件接收协议；常用端口号：110。&lt;/p&gt;
+&lt;p&gt;POP3基于C/S模式（Client/Server模式，客户端/服务器模式）。&lt;/p&gt;
+&lt;h3 id=&#34;arp-和-rarp-协议&#34;&gt;ARP 和 RARP 协议&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;ARP（Address Resolution Protocol，地址解析协议）：将IP地址转换为MAC地址（物理地址）。&lt;/p&gt;
+&lt;p&gt;IP到MAC地址的转换过程：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;查询ARP高速缓存中是否有该IP地址&lt;/li&gt;
+&lt;li&gt;如果该IP地址在ARP高速缓存中，便使用与它对应的MAC地址，将数据报发送给所需的物理网卡&lt;/li&gt;
+&lt;li&gt;如果ARP高速缓存中没有该IP地址，ARP便在局域网上&lt;u&gt;以广播方式发送一个ARP请求包&lt;/u&gt;&lt;/li&gt;
+&lt;li&gt;如果局域网上IP地址与某台计算机中的IP地址相一致，那么该计算机便生成一个ARP应答信息，信息中包含对应的MAC地址&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;RARP（反地址解析协议）：将MAC地址转换为IP地址，主要用于无盘工作站。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;动态主机配置协议-dhcp&#34;&gt;动态主机配置协议 DHCP&lt;/h3&gt;
+&lt;p&gt;DHCP协议的功能和作用是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;集中的管理、分配IP地址；&lt;/li&gt;
+&lt;li&gt;使网络环境中的主机动态地获得IP地址、Gateway地址、DNS服务器地址等信息；&lt;/li&gt;
+&lt;li&gt;提升地址的使用率。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;DHCP客户端可以从DHCP服务器获得以下内容：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;本机IP地址&lt;/li&gt;
+&lt;li&gt;DNS服务器地址&lt;/li&gt;
+&lt;li&gt;DHCP服务器地址&lt;/li&gt;
+&lt;li&gt;默认网关的地址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;无效地址：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Windows无效地址：169.254.X.X&lt;/p&gt;
+&lt;p&gt;169.254.X.X是Windows系统在DHCP信息租用失败时自动给客户机分配的IP地址。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Linux无效地址：0.0.0.0&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;icmp&#34;&gt;ICMP&lt;/h3&gt;
+&lt;p&gt;ICMP（Internet Control Message Protocol，Internet控制信息协议）是一种用于发送差错报文的协议。IP传送的数据报可能丢失、重复、延迟或乱序，而ICMP就是这样一种避免差错并在发生差错时报告的机制。&lt;/p&gt;
+&lt;p&gt;ICMP定义了5种差错报文：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;源抑制&lt;/li&gt;
+&lt;li&gt;超时&lt;/li&gt;
+&lt;li&gt;目的不可达&lt;/li&gt;
+&lt;li&gt;重定向&lt;/li&gt;
+&lt;li&gt;要求分段&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;还定义了4种信息报文：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;回应请求&lt;/li&gt;
+&lt;li&gt;回应应答&lt;/li&gt;
+&lt;li&gt;地址屏蔽码请求&lt;/li&gt;
+&lt;li&gt;地址屏蔽码应答&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;IP在需要一个差错报文时要使用ICMP，而ICMP也是利用IP来传送报文。&lt;/p&gt;
+&lt;p&gt;ICMP可以用于测试因特网，如ping工具就是利用ICMP报文进行目标是否可达测试。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;internet-地址&#34;&gt;Internet 地址&lt;/h1&gt;
+&lt;p&gt;Internet地址格式主要有两种书写形式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;域名&lt;/li&gt;
+&lt;li&gt;IP地址&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;域名&#34;&gt;域名&lt;/h2&gt;
+&lt;p&gt;域名（Domain Name）：通常是用户所用主机的名字或地址。&lt;/p&gt;
+&lt;p&gt;域名格式由若干部分组成，每个部分又称子域名（用&lt;code&gt;.&lt;/code&gt;分开，最少由两个字母或数字组成）。&lt;/p&gt;
+&lt;p&gt;通常，一个完整、通用的层次型主机域名由以下4个部分组成：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;主机名.本地名.组名.最高层域名
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;也可以理解为：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;主机名.域名.域名后缀.域名分类
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683894526429.png&#34;
+	width=&#34;554&#34;
+	height=&#34;180&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683894526429_hu6282ff5faa954c949385bb63ae9b2c04_25931_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683894526429_hu6282ff5faa954c949385bb63ae9b2c04_25931_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;域名分类及其含义&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;307&#34;
+		data-flex-basis=&#34;738px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;如果一个主机所在的网络级别较高，它可能拥有的域名仅包含3部分：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;本地名.组名.最高层域名
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;url&#34;&gt;URL&lt;/h2&gt;
+&lt;p&gt;URL即统一资源定位器（统一资源定位符），它的形式如下：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;协议名://主机名.域名.域名后缀.域名分类/目录/网页文件
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;ip-地址&#34;&gt;IP 地址&lt;/h2&gt;
+&lt;p&gt;IP地址：Internet中的主机地址实际上是用IP地址来唯一标识的。&lt;/p&gt;
+&lt;p&gt;IP地址有两种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;IPv4&lt;/li&gt;
+&lt;li&gt;IPv6&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;通常IP地址是指IPv4。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;ipv4&#34;&gt;IPv4&lt;/h3&gt;
+&lt;p&gt;每个IPv4地址都由4个小于256的数字组成（每个数字8位，共32位），数字之间用&lt;code&gt;.&lt;/code&gt;分开，可分为5类：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683896541328.png&#34;
+	width=&#34;484&#34;
+	height=&#34;412&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683896541328_hu1b653364ebbdf1e76eb9cf18be092964_53037_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683896541328_hu1b653364ebbdf1e76eb9cf18be092964_53037_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;IPv4各类地址分配方案&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;117&#34;
+		data-flex-basis=&#34;281px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;在IPv4中，全&lt;code&gt;0&lt;/code&gt;代表的是网络，全&lt;code&gt;1&lt;/code&gt;代表的是广播。&lt;/p&gt;
+&lt;p&gt;由于IPv4能表示的地址个数为：&lt;/p&gt;
+&lt;p&gt;$$
+2^{32} \approx 40亿
+$$&lt;/p&gt;
+&lt;h3 id=&#34;子网掩码&#34;&gt;子网掩码&lt;/h3&gt;
+&lt;p&gt;网络软件和路由器使用&lt;strong&gt;子网掩码&lt;/strong&gt;（Subnet Mask）来识别报文是仅存放在网络内部还是被路由转发到其他地方。&lt;/p&gt;
+&lt;p&gt;子网掩码是用来指明特定的IP地址中的网络号和主机号部分。子网掩码的格式与IP地址相同：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;所有对应网络号的部分用&lt;code&gt;1&lt;/code&gt;填上；&lt;/li&gt;
+&lt;li&gt;所有对应主机号的部分用&lt;code&gt;0&lt;/code&gt;填上。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683897195900.png&#34;
+	width=&#34;912&#34;
+	height=&#34;144&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683897195900_hue345962bd6503581635d067a0b6e714b_38818_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683897195900_hue345962bd6503581635d067a0b6e714b_38818_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;IP地址类默认的子网掩码&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;633&#34;
+		data-flex-basis=&#34;1520px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;ipv6&#34;&gt;IPv6&lt;/h3&gt;
+&lt;p&gt;IPv6具有长达128位的地址空间，可以彻底解决IPv4地址不足的问题。&lt;/p&gt;
+&lt;p&gt;IPv6理论上能表示的地址个数：&lt;/p&gt;
+&lt;p&gt;$$
+2^{128} = 3.4 \times 10^{38}
+$$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在想象得到的将来，IPv6的地址空间是不可能用完的。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;dns-域名解析&#34;&gt;DNS 域名解析&lt;/h2&gt;
+&lt;p&gt;Internet中的域名地址和IP地址是等价的，它们之间是通过域名服务（DNS域名解析）来完成映射变换的。&lt;/p&gt;
+&lt;p&gt;DNS是一种分布式地址信息数据库系统，服务器中包含整个数据库的某部分信息，并供客户查询。DNS允许局部控制整个数据库的某些部分，但数据库的每一部分都可通过全网查询得到。&lt;/p&gt;
+&lt;p&gt;域名系统采用的是客户端/服务器模式，整个系统由以下两部分组成：&lt;/p&gt;
+&lt;p&gt;解析器和域名服务器组成。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;解析器（客户端）：&lt;/p&gt;
+&lt;p&gt;负责：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;查询域名服务器&lt;/li&gt;
+&lt;li&gt;解释从服务器返回来的应答&lt;/li&gt;
+&lt;li&gt;将信息返回给请求方&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;域名服务器（服务器）：通常保存着一部分域名空间的全部信息，这部分域名空间称为区（Zone）。&lt;/p&gt;
+&lt;p&gt;一个域名服务器可以管理一个或多个区。&lt;/p&gt;
+&lt;p&gt;域名服务器可以分为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;主服务器&lt;/li&gt;
+&lt;li&gt;Caching Only服务器&lt;/li&gt;
+&lt;li&gt;转发服务器（Forwarding Server）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;主域名服务器在接收到域名请求后，查询顺序如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;本地缓存：缓存在该服务器中的域名信息。如果先前有多个用户对该域名进行访问，域名服务器会根据需要对该域名的信息进行缓存，以便加快后续用户访问的速度。&lt;/li&gt;
+&lt;li&gt;本地&lt;code&gt;hosts&lt;/code&gt;文件：存储在服务器中的一种记录域名与其对应IP的文件。在PC中也有这样的文件存在。&lt;/li&gt;
+&lt;li&gt;本地数据库：存储域名信息的数据库。&lt;/li&gt;
+&lt;li&gt;转发域名服务器：如果用户访问的域名在以上内容中都不存在时，域名服务器会根据访问的域名，到对应的其他域名服务器中查询。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;用户A查找用户B时，域名系统工作过程如：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;解析器向本地域名服务器发出请求查阅用户B的域名。&lt;/li&gt;
+&lt;li&gt;本地域名服务器向最高层域名服务器发出查询地址的请求。&lt;/li&gt;
+&lt;li&gt;最高层域名服务器返回给本地域名服务器一个IP地址。&lt;/li&gt;
+&lt;li&gt;本地域名服务器向组域名服务器发出查询地址的请求。&lt;/li&gt;
+&lt;li&gt;组域名服务器返回给本地域名服务器一个IP地址。&lt;/li&gt;
+&lt;li&gt;本地服务器向刚返回的域名服务器发出查询域名地址请求。&lt;/li&gt;
+&lt;li&gt;P地址返回给本地域名服务器。&lt;/li&gt;
+&lt;li&gt;本地域名服务器将该地址返回给解析器。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;因此，在访问主机的时候只需要知道域名，通过DNS服务器将域名变换为IP地址。&lt;/p&gt;
+&lt;p&gt;DNS所用的是UDP端口，端口号为53。&lt;/p&gt;
+&lt;p&gt;在浏览器中访问网站时，通常是使用服务方的域名进行访问。在计算机上使用域名访问内容，本地计算机并不会直接去DNS服务器查询，而是会先在本地查询该域名。计算机使用域名访问时，域名查询的顺序是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;本地&lt;code&gt;hosts&lt;/code&gt;文件：存储在计算机电脑中的一个文件，例如&lt;code&gt;localhost&lt;/code&gt;就是在本地&lt;code&gt;hosts&lt;/code&gt;文件中与本地IP&lt;code&gt;127.0.0.1&lt;/code&gt;对应。&lt;/li&gt;
+&lt;li&gt;本地DNS缓存：先前访问的域名与其对应的IP等信息会被计算机缓存在本地中，如果本地中有该域名的缓存，那便无须访问DNS服务器。&lt;/li&gt;
+&lt;li&gt;本地DNS服务器。&lt;/li&gt;
+&lt;li&gt;根域名服务器。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;当在Wb浏览器的地址栏中输入某URL并按下回车，则处理过程如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;对URL进行DNS域名解析，得到对应的IP地址；&lt;/li&gt;
+&lt;li&gt;根据这个IP，找到对应的服务器，发起TCP连接，进行三次握手：&lt;/li&gt;
+&lt;li&gt;建立TCP连接后发起HTTP请求；&lt;/li&gt;
+&lt;li&gt;服务器响应HTTP请求，浏览器得到HTML代码；&lt;/li&gt;
+&lt;li&gt;通信完成，断开TCP连接；&lt;/li&gt;
+&lt;li&gt;浏览器解析HTML代码，并请求HTML代码中的资源（如s、css图片等）；&lt;/li&gt;
+&lt;li&gt;浏览器将页面呈现给用户。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;无线通信技术&#34;&gt;无线通信技术&lt;/h1&gt;
+&lt;p&gt;流行的无线通信技术有WiFi、蓝牙等。&lt;/p&gt;
+&lt;p&gt;其中，蓝牙覆盖范围最小、通信距离最短。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;ipconfig-命令&#34;&gt;ipconfig 命令&lt;/h1&gt;
+&lt;p&gt;ipconfig是Windows中，调试计算机网络常用的命令（软件），类似于Linux中的ifconfig。&lt;/p&gt;
+&lt;p&gt;ipconfig命令的用法如下：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;参数&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;说明&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;示例&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;无参数&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;显示所有网络适配器的IP地址、子网掩码和缺省网关值&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;ipconfig&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;/all&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;显示所有网络适配器的完整TCP/IP配置信息，包括DHCP服务是否已启动&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;ipconfig /all&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;/displaydns&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;显示本地DNS内容&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;ipconfig /displaydns&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;/flushdns&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;清除本地DNS缓存内容&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;ipconfig /flushdns&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;/registerdns&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;DNS客户端手工向服务器进行注册&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;ipconfig /registerdns&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;/release&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;DHCP客户端手工释放IP地址&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;ipconfig /release&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;/renew&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;DHCP客户端手工向服务器刷新请求（重新申请IP地址）&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;ipconfig /renew&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;网络信息安全&#34;&gt;网络信息安全&lt;/h1&gt;
+&lt;p&gt;网络存在的威胁主要表现在以下5方面：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;非授权访问&lt;/li&gt;
+&lt;li&gt;信息泄露或丢失&lt;/li&gt;
+&lt;li&gt;破坏数据完整性&lt;/li&gt;
+&lt;li&gt;拒绝服务攻击&lt;/li&gt;
+&lt;li&gt;利用网络传播病毒&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;网络安全控制技术主要有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;防火墙技术&lt;/li&gt;
+&lt;li&gt;加密技术&lt;/li&gt;
+&lt;li&gt;用户识别技术&lt;/li&gt;
+&lt;li&gt;访问控制技术&lt;/li&gt;
+&lt;li&gt;网络反病毒技术&lt;/li&gt;
+&lt;li&gt;网络安全漏洞扫描技术&lt;/li&gt;
+&lt;li&gt;入侵检测技术&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;要保护网络安全除了网络安全措施（使用网络安全控制技术）之外，还有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;物理线路安全措施：例如设备防雷。&lt;/li&gt;
+&lt;li&gt;系统安全措施：例如漏洞发现与补丁管理。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;防火墙技术&#34;&gt;防火墙技术&lt;/h2&gt;
+&lt;p&gt;防火墙（Firewall）是&lt;u&gt;建立在内外网络边界上的过滤封锁机制&lt;/u&gt;，它认为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;u&gt;内部网络是安全和可信赖的&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;&lt;u&gt;外部网络是不安全和不可信赖的&lt;/u&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;防火墙是网络安全体系的基础和核心控制设施，同时也承担着繁重的通信任务。&lt;/p&gt;
+&lt;p&gt;防火墙的作用：&lt;u&gt;防止不希望的、未经授权地进出被保护的内部网络。&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;防火墙对通过受控干线的任何通信行为进行安全处理，如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;控制&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;审计&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;报警&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;反应&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;防火墙技术经历了三个发展阶段：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;包过滤防火墙&lt;/li&gt;
+&lt;li&gt;应用代理网关防火墙&lt;/li&gt;
+&lt;li&gt;状态检测技术防火墙&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;包过滤防火墙&#34;&gt;包过滤防火墙&lt;/h3&gt;
+&lt;p&gt;包过滤防火墙一般有一个包检查块（通常称为包过滤器），数据包过滤可以根据数据包头中的各项信息来控制以下内容之间的相互访问：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;站点与站点&lt;/li&gt;
+&lt;li&gt;站点与网络&lt;/li&gt;
+&lt;li&gt;网络与网络&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;包过滤防火墙无法控制传输数据的内容，因为内容是应用层数据，而&lt;u&gt;包过滤器处在网络层和数据链路层（即TCP和P层）之间&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;通过检查模块，防火墙能够拦截和检查所有出站和进站的数据，其过程如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打开包&lt;/li&gt;
+&lt;li&gt;取出包头&lt;/li&gt;
+&lt;li&gt;根据包头的信息确定该包是否符合包过滤规则&lt;/li&gt;
+&lt;li&gt;对过滤进行记录&lt;/li&gt;
+&lt;li&gt;对于不符合规则的包，进行报警并丢弃该包&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;过滤型防火墙的&lt;strong&gt;优点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;u&gt;对用户完全透明，速度较快&lt;/u&gt;（通常直接转发报文）；&lt;/li&gt;
+&lt;li&gt;对每条传入和传出网络的包&lt;u&gt;实行低水平控制&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;&lt;u&gt;每个IP包的字段都被检查&lt;/u&gt;，例如：
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;源地址，&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;目的IP地址，&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;协议，&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;端口；&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;可以识别和丢弃带欺骗性源IP地址的包；&lt;/li&gt;
+&lt;li&gt;包过滤防火墙是两个网络之间访问的唯一来源；&lt;/li&gt;
+&lt;li&gt;包过滤通常被包含在路由器数据包中，所以不需要额外的系统来处理这个特征。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;过滤型防火墙的&lt;strong&gt;缺点&lt;/strong&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;u&gt;不能防范黑客攻击&lt;/u&gt;，因为网管不可能区分出可信网络与不可信网络的界限；&lt;/li&gt;
+&lt;li&gt;&lt;u&gt;不支持应用层协议&lt;/u&gt;，因为它不识别数据包中的应用层协议，访问控制粒度太粗糙；&lt;/li&gt;
+&lt;li&gt;&lt;u&gt;不能处理新的安全威胁。&lt;/u&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;应用代理网关防火墙&#34;&gt;应用代理网关防火墙&lt;/h3&gt;
+&lt;p&gt;应用代理网关防火墙&lt;u&gt;彻底隔断内网与外网的直接通信&lt;/u&gt;：&lt;u&gt;内网用户对外网的访问变成防火墙对外网的访问&lt;/u&gt;，然后再由防火墙转发给内网用户。&lt;u&gt;所有通信都必须经应用层代理软件转发，访问者任何时候都不能与服务器建立直接的TCP连接&lt;/u&gt;，应用层的协议会话过程必须符合代理的安全策略要求。&lt;/p&gt;
+&lt;p&gt;应用代理网关的优点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以检查应用层、传输层和网络层的协议特征；&lt;/li&gt;
+&lt;li&gt;对数据包的检测能力比较强。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;应用代理网关的缺点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;难以配置；&lt;/li&gt;
+&lt;li&gt;处理速度非常慢。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;状态检测技术防火墙&#34;&gt;状态检测技术防火墙&lt;/h3&gt;
+&lt;p&gt;状态检测技术防火墙&lt;u&gt;结合了代理防火墙的安全性和包过滤防火墙的高速度等优点&lt;/u&gt;，在不损失安全性的基础上，提高了代理防火墙的性能。&lt;/p&gt;
+&lt;h2 id=&#34;入侵检测与防御&#34;&gt;入侵检测与防御&lt;/h2&gt;
+&lt;p&gt;入侵检测系统（Intrusion Detection System，DS）作为防火墙之后的第二道安全屏障，通过从计算机系统或网络中的若干关键点收集网络的安全日志、用户的行为、网络数据包和审计记录等信息并对其进行分析，从中检查是否有违反安全策略的行为和遭到入侵攻击的迹象。入侵检测系统根据检测结果，自动做出响应。&lt;/p&gt;
+&lt;p&gt;入侵检测系统有效的弥补了防火墙系统对网络上的入侵行为无法识别和检测的不足。&lt;/p&gt;
+&lt;p&gt;入侵防御系统（IPS）是在入侵检测系统的基础上发展起来的，入侵防御系统不仅能够检测到网络中的攻击行为，同时主动的对攻击行为能够发出响应，对攻击进行防御。两者相较，主要存在以下区别：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在网络中的部署位置的不同；&lt;/li&gt;
+&lt;li&gt;入侵响应能力的不同。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;网络攻击&#34;&gt;网络攻击&lt;/h2&gt;
+&lt;p&gt;网络攻击是攻击者针对特定目标实施的有特定目的的活动，攻击目标对于攻击者是个黑盒子。&lt;/p&gt;
+&lt;p&gt;常见的网络攻击手段有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;拒绝服务攻击（Dos攻击）：目的是使计算机或网络无法提供正常的服务。&lt;/p&gt;
+&lt;p&gt;拒绝服务攻击是不断向计算机发起请求来实现的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重放攻击：攻击者发送一个目的主机已经接受过的报文来达到攻击目的。&lt;/p&gt;
+&lt;p&gt;攻击者利用网络监听或者其他方式盗取认证凭据，之后再重新发送给认证服务器。&lt;/p&gt;
+&lt;p&gt;重放攻击主要用于身份认证过程，目的是破坏认证的正确性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;口令入侵攻击：使用某些合法用户的账号和口令登录到目的主机，然后再实施攻击活动。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;特洛伊木马：被伪装成程序或游戏，当用户下载了带有木马的软件或附件时，这个程序就会向黑客发起连接请求，建立连接后黑客就实施攻击活动。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;端口欺骗攻击：采用端口扫描找到系统漏洞从而实施攻击。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;网络监听：攻击者可以接收某一网段在同一条物理通道上传输的所有信息，使用网络监听可以轻松截取包括账号和口令在内的信息资料。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;IP欺骗攻击：产生的IP数据包为伪造的源IP地址，以便冒充其他系统或发件人的身份。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SQL注入攻击：是黑客对数据库进行攻击的常用手段之一。&lt;/p&gt;
+&lt;p&gt;SQL注入产生的原因：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;没有对用户输入数据的合法性进行判断，使应用程序存在安全隐患。&lt;/li&gt;
+&lt;li&gt;攻击者可以提交一段数据库查询代码，根据程序返回的结果，获得某些他想得知的数据，&lt;/li&gt;
+&lt;li&gt;获取数据库的权限，就可获取用户账号和口令信息，以及对某些数据修改等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;入侵检测技术：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;专家系统&lt;/li&gt;
+&lt;li&gt;模型检测&lt;/li&gt;
+&lt;li&gt;简单匹配&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;病毒&#34;&gt;病毒&lt;/h2&gt;
+&lt;p&gt;计算机病毒（Computer Virus）是指编制者在计算机程序中插入的&lt;u&gt;破坏计算机功能或者数据的代码&lt;/u&gt;，能影响计算机使用，&lt;u&gt;能自我复制&lt;/u&gt;的一组计算机&lt;u&gt;指令或者程序代码&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;计算机病毒的特征包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;传播性&lt;/li&gt;
+&lt;li&gt;隐蔽性&lt;/li&gt;
+&lt;li&gt;感染性&lt;/li&gt;
+&lt;li&gt;潜伏性&lt;/li&gt;
+&lt;li&gt;触发性&lt;/li&gt;
+&lt;li&gt;破坏性&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;常见的病毒类型有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Worm（蠕虫病毒）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;欢乐时光，&lt;/li&gt;
+&lt;li&gt;熊猫烧香，&lt;/li&gt;
+&lt;li&gt;红色代码，&lt;/li&gt;
+&lt;li&gt;爱虫病毒，&lt;/li&gt;
+&lt;li&gt;震网。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Trojan（特洛伊木马）：通过内部发起连接与外部主机建立联系，由外部主机控制并盗取用户信息。&lt;/p&gt;
+&lt;p&gt;计算机感染特洛伊木马后的典型线型是&lt;u&gt;有未知程序试图建立网络连接&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;常见的木马如冰河。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Backdoor（后门病毒）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Macro（宏病毒）：&lt;/p&gt;
+&lt;p&gt;宏病毒感染的对象主要是&lt;u&gt;文本文档&lt;/u&gt;、&lt;u&gt;电子表格&lt;/u&gt;等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;网络安全&#34;&gt;网络安全&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;SSL（Secure Socket Layer，安全套接层）：传输层安全协议，用于实现Web安全通信。&lt;/p&gt;
+&lt;p&gt;SSL常用端口号为443。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;TLS（Transport Layer Security，传输层安全协议：建立在SSL3.0协议规范之上，是SSL3.0的后续版本。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SSH（Secure Shell）：终端设备与远程站点之间建立安全连接的协议，是建立在应用层和传输层基础上的安全协议。&lt;/p&gt;
+&lt;p&gt;SSH是专为远程登录会话和其他网络服务提供安全性的协议。利用SSH协议可以有效防止远程管理过程中的信息泄露问题。&lt;/p&gt;
+&lt;p&gt;SSH最初是UNIX上的程序，后来又迅速扩展到其他操作平台（如Linux、Windows）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HTTPS（Hyper Text Transfer Protocol over Secure Socket Layer）：是以安全为目标的HTTP通道，即使用SSL加密算法的HTTP。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MME（Multipurpose Internet Mail Extensions，多用途互联网邮件扩展类型）：是一个互联网标准，扩展了电子邮件标准。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;PGP（Pretty Good Privacy，优良保密协议）：是一个基于RSA公匙加密体系的邮件加密软件。&lt;/p&gt;
+&lt;p&gt;可以用它对邮件保密以防止非授权者阅读，还能对邮件加上数字签名从而使收信人可以确认邮件的发送方。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>校验码 on Linner&#39;s Blog</title>
+        <link>https://blog.linner.asia/tags/%E6%A0%A1%E9%AA%8C%E7%A0%81/</link>
+        <description>Recent content in 校验码 on Linner&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh</language>
+        <lastBuildDate>Fri, 24 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.linner.asia/tags/%E6%A0%A1%E9%AA%8C%E7%A0%81/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>计算机系统篇</title>
+        <link>https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/</link>
+        <pubDate>Fri, 24 Mar 2023 00:00:00 +0000</pubDate>
+        
+        <guid>https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/</guid>
+        <description>&lt;h1 id=&#34;计算机的基本单位&#34;&gt;计算机的基本单位&lt;/h1&gt;
+&lt;table&gt;
+&lt;tr&gt;
+    &lt;td&gt;位（比特）&lt;/td&gt;
+    &lt;td&gt;&lt;b&gt;bit、b&lt;/b&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+    &lt;td&gt;最小数据单位/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;字节&lt;/td&gt;
+    &lt;td&gt;byte、B&lt;/td&gt;
+    &lt;td&gt;1B = 8b&lt;/td&gt;
+    &lt;td&gt;最小存储单位&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;千字节&lt;/td&gt;
+    &lt;td&gt;KB&lt;/td&gt;
+    &lt;td&gt;1KB = 1024B&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;兆字节&lt;/td&gt;
+    &lt;td&gt;MB&lt;/td&gt;
+    &lt;td&gt;1MB = 1024KB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;吉字节&lt;/td&gt;
+    &lt;td&gt;GB&lt;/td&gt;
+    &lt;td&gt;1GB = 1024MB&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+    &lt;td&gt;太字节&lt;/td&gt;
+    &lt;td&gt;TB&lt;/td&gt;
+    &lt;td&gt;1TB = 1024GB&lt;/td&gt;
+    &lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;计算机系统&#34;&gt;计算机系统&lt;/h1&gt;
+&lt;p&gt;计算机系统由&lt;u&gt;硬件&lt;/u&gt;和&lt;u&gt;软件&lt;/u&gt;组成。&lt;/p&gt;
+&lt;p&gt;计算机基本硬件系统：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;运算器&lt;/li&gt;
+&lt;li&gt;控制器&lt;/li&gt;
+&lt;li&gt;存储器&lt;/li&gt;
+&lt;li&gt;输入设备&lt;/li&gt;
+&lt;li&gt;输出设备&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;中央处理单元&#34;&gt;中央处理单元&lt;/h1&gt;
+&lt;p&gt;运算器、控制器等部件被集成在一起统称中央处理单元（CPU）。CPU是硬件系统的核心，用于数据的加工处理，能完成各种算术、逻辑运算及控制功能。&lt;/p&gt;
+&lt;p&gt;中央处理单元（CPU）负责获取程序指令、对指令进行译码并加以执行。&lt;/p&gt;
+&lt;p&gt;CPU的功能：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;程序控制：通过执行指令来控制程序的执行顺序&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;操作控制：CPU产生每条指令的（若干）操作信号并将操作信号送往对应的部件，控制相应的部件按指令的功能要求进行操作。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;时间控制：对各种操作进行时间上的控制，即指令执行过程中操作信号的出现时间、持续时间及出现的时间顺序都需要进行严格控制。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据处理：通过对数据进行算术运算及逻辑运算等方式进行加工处理，数据加工处理的结果被人们所利用。&lt;/p&gt;
+&lt;p&gt;对数据的加工处理也是CPU最根本的任务。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对系统内部和外部的中断（异常）做出响应，进行相应的处理。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;CPU的组成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;运算器&lt;/li&gt;
+&lt;li&gt;控制器&lt;/li&gt;
+&lt;li&gt;寄存器组&lt;/li&gt;
+&lt;li&gt;内部总线&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;运算器&#34;&gt;运算器&lt;/h2&gt;
+&lt;p&gt;运算器组成部件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;算术逻辑单元（ALU）：重要组成部件。负责处理数据，实现对数据的算术运算和逻辑运算。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;累加寄存器（AC，累加器）：是一个通用寄存器。存放操作数或者结果。&lt;/p&gt;
+&lt;p&gt;其功能是当运算器的算术逻辑单元执行算术或逻辑运算时，为ALU提供一个工作区。例如，在执行一个减法运算前，先将被减数取出暂存在AC中，再从内存储器中取出减数，然后同AC的内容相减，将所得的结果送回AC中。
+运算的结果是放在累加器中的，运算器中至少要有一个累加寄存器。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据缓冲寄存器（DR）：暂存由内存读/写的一条指令或一个数据字，将不同时间段内读/写的数据隔离开来。&lt;/p&gt;
+&lt;p&gt;DR的主要作用为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;作为CPU和内存、外部设备之间数据传送的中转站；&lt;/li&gt;
+&lt;li&gt;作为CPU和内存、外围设备之间在操作速度上的缓冲；&lt;/li&gt;
+&lt;li&gt;在单累加器结构的运算器中，数据缓冲寄存器还可兼作为操作数寄存器。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;状态条件寄存器（PSW）：保存了当前指令执行完成之后的状态（标志通常分别由1位触发器保存）。通常，一个算术操作产生一个运算结果，而一个逻辑操作产生一个判决。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;控制器&#34;&gt;控制器&lt;/h2&gt;
+&lt;p&gt;控制器用于控制整个CPU的工作，它决定了计算机运行过程的
+自动化。它不仅要保证程序的正确执行，而且要能够处理异常事件。&lt;/p&gt;
+&lt;p&gt;指令控制逻辑要完&lt;u&gt;取指令&lt;/u&gt;、&lt;u&gt;分析指令&lt;/u&gt;和&lt;u&gt;执行指令&lt;/u&gt;的操作，其过程分为&lt;u&gt;取指令&lt;/u&gt;、&lt;u&gt;指令译码&lt;/u&gt;、&lt;u&gt;按指令操作码执行&lt;/u&gt;、&lt;u&gt;形成下一条指令地址&lt;/u&gt;等步骤。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;指令寄存器（IR）：暂存要执行的指令，该指令从内存中获取（通过缓冲寄存器）。&lt;/p&gt;
+&lt;p&gt;当CPU执行一条指令时：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;把指令从内存储器取到缓冲寄存器中。&lt;/li&gt;
+&lt;li&gt;送入IR暂存。&lt;/li&gt;
+&lt;li&gt;指令译码器根据IR的内容产生各种微操作指令，控制其他的组成部件工作，完成所需的功能。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;程序计数器（PC，指令计数器）：具有寄存信息和计数两种&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;在程序开始执行前，将程序的起始地址送入PC。
+该地址在程序加载到内存时确定，因此PC的内容即是程序第一条指令的地址。&lt;/li&gt;
+&lt;li&gt;执行指令时，CPU自动修改PC的内容，以便使其保持的总是将要执行的下一条指令的地址。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;由于大多数指令都是按顺序来执行的，所以修改的过程通常只是简单地对PC加1。&lt;/p&gt;
+&lt;p&gt;执行转移指令时，后继指令的地址根据当前指令的地址加上一个向前或向后转移的位移量得到，或者根据转移指令给出的直接转移的地址得到。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;地址寄存器（AR）：保存当前CPU所访问的内存单元的地址。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;指令译码器(ID)。指令包含操作码和地址码两部分，而指令译码器就是对指令中的操作码字段进行分析解释，识别该指令规定的操作，向操作控制器发出具体的控制信号，控制各部件工作，完成所需的功能。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;数据表示&#34;&gt;数据表示&lt;/h1&gt;
+&lt;h2 id=&#34;原码&#34;&gt;原码&lt;/h2&gt;
+&lt;p&gt;原码表示法又叫符号加绝对值表示法。最高位为符号位，0表示正号，1表示负号，其余的n-1位表示数值的绝对值。&lt;/p&gt;
+&lt;p&gt;原码特点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;0的表示不唯一（有正负0）；&lt;/li&gt;
+&lt;li&gt;加、减运算方式不统一；&lt;/li&gt;
+&lt;li&gt;需额外对符号位进行处理，不利于硬件设计；&lt;/li&gt;
+&lt;li&gt;当 $a &amp;lt; b$ 时，实现 $a-b$ 比较困难。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;反码&#34;&gt;反码&lt;/h2&gt;
+&lt;p&gt;最高位为符号位，0表示正号，1表示负号，其余的n-1位表示数值的绝对值。正数的反码与原码相同，负数的反码则是除符号位以外其余各位按位取反。&lt;/p&gt;
+&lt;h2 id=&#34;补码&#34;&gt;补码&lt;/h2&gt;
+&lt;p&gt;计算机中的补码是模2补码&lt;/p&gt;
+&lt;p&gt;概念：在一个模运算（Moduler Arithmetic）系统中，同余（Congruence Modulo）的数等价。&lt;/p&gt;
+&lt;p&gt;补码的定义：有 $n$ 位时，$[X]_补=(2^n+X)\mod{2^n}\quad (-2^{n-1}\leq X&amp;lt;2^{n-1})$。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;当 $X&amp;lt;0$ 时，补码有两种求法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;各位取反，末位加 1。&lt;/li&gt;
+&lt;li&gt;从第 2 个 1 开始往右各位取反。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;当 $X&amp;gt;0$ 时，补码与原码相同。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;补码的减法：$Y-X=Y+[-X]_补$。&lt;/p&gt;
+&lt;p&gt;特殊的补码：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;$[-2^{n-1}]_补=(2^n-2^{n-1})\mod{2^n}=(10\ldots0)_2\ (n-1 个0)$。&lt;/p&gt;
+&lt;p&gt;这个数的最高位（符号位）即表示符号，又表示数值。如，-128。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$[-1]_补=2^n-1=(11\ldots1)_2\ (n个1)$。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$[+0]_补=[-0]_补=(00\ldots0)\ (n个0)$。
+补码的0表示唯一。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;移码&#34;&gt;移码&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;移码就是将每个数值加上一个偏置常数（Excess/Bias）。&lt;/li&gt;
+&lt;li&gt;通常，当编码位数为 $n$ 时，bias 取 $2^{n-1}$ 或 $2^{n-1}-1$。&lt;/li&gt;
+&lt;li&gt;移码可以方便地进行大小的比较。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;移码可以看成是在其补码的基础上对符号位取反。移码的0表示唯一。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;其实（个人认为）根据补码和移码的定义，可以将补码当作特殊的移码。其bias为$2^n$。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;各种码制带符号数的范围&#34;&gt;各种码制带符号数的范围&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/%E5%B8%A6%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E8%8C%83%E5%9B%B4.png&#34;
+	width=&#34;1174&#34;
+	height=&#34;273&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/%E5%B8%A6%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E8%8C%83%E5%9B%B4_huf86084d3b2fa3b4510a57d1d605f45ba_75716_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/%E5%B8%A6%E7%AC%A6%E5%8F%B7%E6%95%B0%E7%9A%84%E8%8C%83%E5%9B%B4_huf86084d3b2fa3b4510a57d1d605f45ba_75716_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;430&#34;
+		data-flex-basis=&#34;1032px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;浮点数&#34;&gt;浮点数&lt;/h2&gt;
+&lt;p&gt;浮点数使用两个定点数来分别表示实数的尾数（F）和阶码（E）。其一般形式为：$N=2^E \times F$。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个数的浮点表示不是唯一的。小数点位置改变，阶码也随着相应改变。&lt;/li&gt;
+&lt;li&gt;浮点数所能表示的数值范围主要由阶码决定，所表示数值的精度则由尾数决定。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;规格化浮点数：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;尾数$M \ge 0$，其规格化尾数形式为$M=0.\times\times\times$，$\times$可为0也可为1。即$M$限定在了$[0.5,1]$。&lt;/li&gt;
+&lt;li&gt;尾数$M \le 0$，其规格化尾数形式为$M=1.\times\times\times$，$\times$可为0也可为1。即$M$限定在了$[-1,-0.5]$。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一般浮点数阶码用R位的移码表示，尾数用M位的补码表示。这种表示的数值范围为：&lt;/p&gt;
+&lt;p&gt;$$
+-1 \times 2^{(2^{R-1}-1)} \sim +(1-2^{-M+1}) \times 2^{(2^{R-1}-1)}
+$$&lt;/p&gt;
+&lt;p&gt;现在所有通用计算机都采用 IEEE 754 来表示浮点数。IEEE 754 的尾数用原码表示，阶码还是用移码表示。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;寻址方式&#34;&gt;寻址方式&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;立即寻址：操作数就包含在指令中。&lt;/li&gt;
+&lt;li&gt;直接寻址：操作数在内存，指令给出操作数的地址。&lt;/li&gt;
+&lt;li&gt;寄存器寻址：操作数在寄存器，指令给出操作数的寄存器名（地址）。&lt;/li&gt;
+&lt;li&gt;寄存器间接寻址：操作数在内存，寄存器存放操作数的地址，指令给出存放操作数地址的寄存器地址。&lt;/li&gt;
+&lt;li&gt;间接寻址：指令中给出操作数地址（操作数地址在内存中）的地址。&lt;/li&gt;
+&lt;li&gt;相对寻址：指令地址码给出的是一个偏移量（可正可负），操作数地址等于本条指令的地址加上该偏移量。&lt;/li&gt;
+&lt;li&gt;变址寻址：操作数地址等于变址寄存器的内容加偏移量。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;校验码&#34;&gt;校验码&lt;/h1&gt;
+&lt;p&gt;码距，是指一个编码系统中任意两个合法编码之间至少有多少个二进制位不同。码距为n的编码方案，在该编码方案中任意两个合法编码之间至少有n个二进制位不同。例如值1和2的编码分别为&lt;code&gt;0000 0001&lt;/code&gt;和&lt;code&gt;0000 0010&lt;/code&gt;他们最后两位不同，所以，码距为2。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个编码系统的码距$\ge 2$时，该编码系统具有&lt;u&gt;检错能力&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;一个编码系统的码距$\ge 3$时，该编码系统才&lt;u&gt;可能有纠错能力&lt;/u&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;即，一个校验码要想能够检错和纠错那么它的码距至少是3。&lt;/p&gt;
+&lt;h2 id=&#34;奇偶校验码&#34;&gt;奇偶校验码&lt;/h2&gt;
+&lt;p&gt;奇偶校验（Parity Codes）是通过在编码中增加一位校验位来&lt;u&gt;使编码中1的个数为奇数（奇校验）或者为偶数（偶校验）&lt;/u&gt;。但该编码只能检错，但不能纠错。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;奇偶校验码码距为2。&lt;/li&gt;
+&lt;li&gt;奇校验：仅检测出代码中奇数位数（奇数个0或1发生错误），不能发现偶数位数出错。偶校验反之。&lt;/li&gt;
+&lt;li&gt;常用的奇偶校验码有3种：水平奇偶校验码、垂直奇偶校验码和水平垂直校验码。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;海明码&#34;&gt;海明码&lt;/h2&gt;
+&lt;p&gt;海明码（Hamming Code）是一种利用奇偶性来&lt;u&gt;检错和纠错&lt;/u&gt;的校验方法。海明码是在数据位之间的特定位置上插入k个校验位，通过扩大码距来实现检错和纠错。设数据位是$n$位，校验位是$k$位，则$n$和$k$必须满足以下关系：&lt;/p&gt;
+&lt;p&gt;$$
+2^k-1 \ge n+k
+$$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;该公式的字面意思为，$k$个校验位的最大值（$k$个校验位都为1），要比海明码的位数（$n+k$）要大。
+海明码的码距为3。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;海明码的编码规则如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;$k$个校验位：$P_k, P_{k-1}, \cdots, P_1$。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;$n$个数据位：$D_{n-1}, D_{n-2}, \cdots, D_1, D_0$。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对应的海明码：$H_{n+k}, H_{n+k-1}, \cdots, H_1$。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$H_j = P_i, j=2^{i-1}$。&lt;/li&gt;
+&lt;li&gt;数据位依序插入到海明码中剩下的位置。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;海明码中任一位都是由若干个校验位来检验：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;校验数据位时：被校验的海明位的下标等于所有参与校验该位的校验位的下标之和。&lt;/li&gt;
+&lt;li&gt;校验位由自身校验。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Example：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1679983905932.png&#34;
+	width=&#34;1023&#34;
+	height=&#34;1049&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1679983905932_hu8233f94300cd2978c7262586b5e1abdc_350868_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1679983905932_hu8233f94300cd2978c7262586b5e1abdc_350868_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;97&#34;
+		data-flex-basis=&#34;234px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;偶校验：$G_4G_3G_2G_1={(0000)}_{2}$则表示数据无错误，否则表示接收到的数据有错误。&lt;/p&gt;
+&lt;p&gt;若出错，$G_4G_3G_2G_1$的十进制值指出来出错位置。如$G_4G_3G_2G_1=1010$，说明$H_{10}(D_5)$出错，将其取反即可纠错。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;奇校验：$G_4G_3G_2G_1=(1111)_2$则表示数据无错误，否则表示接收到的数据有错误。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;循环冗余码&#34;&gt;循环冗余码&lt;/h2&gt;
+&lt;p&gt;循环冗余校验码（Cyclic Redundancy Check，CRC）广泛应用于数据通信领域和磁介质存储系统中。它利用生成多项式为k个数据位产生个校验位来进行编码，其编码长度为k+r。CRC的代码格式为：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1679825785079.png&#34;
+	width=&#34;613&#34;
+	height=&#34;92&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1679825785079_hue59488e391052e21a77b5920f121b7a3_12188_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1679825785079_hue59488e391052e21a77b5920f121b7a3_12188_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;666&#34;
+		data-flex-basis=&#34;1599px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;若CRC码的字长为n，又可称其为（n,k）码，则：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;左边为信息码（数据），占k位；&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;右边为校验码，占n-k位。&lt;/p&gt;
+&lt;p&gt;校验码是由信息码产生的，校验码位数越多，该代码的校验能力就越强。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在求CRC编码时，采用的是模2运算。模2加减运算的规则是按位运算，不发生借位和进位。&lt;/p&gt;
+&lt;p&gt;CRC码距为2，可以检错不能纠错。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;计算机指令集&#34;&gt;计算机指令集&lt;/h1&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;RISC&lt;br&gt;精简指令集（计算机）&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;CISC&lt;br&gt;复杂指令集（计算机）&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;指令种类&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;少、精简&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;多、复杂&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;指令复杂度&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;低（简单）&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;高（复杂）&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;指令长度&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;固定&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;变化&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;寻址方式&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;少&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;复杂多样&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;实现（译码方式）&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;硬布线控制逻辑（组合逻辑控制器）&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;微程序控制技术&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;通用寄存器数量&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;多、大量&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;一般&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;流水线技术&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;支持&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;不支持&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;流水线技术&#34;&gt;流水线技术&lt;/h1&gt;
+&lt;p&gt;计算机中的流水线技术（Pipelining）是把一个重复的过程分解为若干个子过程，每个子过程与其他子过程并行进行。&lt;/p&gt;
+&lt;p&gt;若要执行$n$条指令：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;顺序执行总时间：&lt;/p&gt;
+&lt;p&gt;$$
+顺序执行总时间=单条指令执行的时间\times n
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;流水线执行总时间：&lt;/p&gt;
+&lt;p&gt;$$
+流水线执行总时间=一条指令执行的时间+流水线周期 \times (n-1)
+$$&lt;/p&gt;
+&lt;p&gt;流水线（操作）周期为执行时间最长的一段操作的时间。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;连续输入$n$条指令的吞吐率：&lt;/p&gt;
+&lt;p&gt;$$
+吞吐率=\cfrac {n}{总执行时间}
+$$&lt;/p&gt;
+&lt;p&gt;如果是流水线的吞吐率，则总执行时间为流水线执行总时间。
+流水线的吞吐率是最长流水段操作时间的倒数。即：&lt;/p&gt;
+&lt;p&gt;$$
+最长流水段操作时间=\cfrac {流水线执行总时间}{n}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;加速比：&lt;/p&gt;
+&lt;p&gt;$$
+加速比 = \cfrac{顺序执行总时间}{流水线执行总时间}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;存储器&#34;&gt;存储器&lt;/h1&gt;
+&lt;p&gt;按存储器所处位置可分为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;内存（主存）：在主机内或主板上，存放机器当前运行所需的程序和数据，以便向CPU提供信息。（相对外存）容量小、速度快。&lt;/li&gt;
+&lt;li&gt;外存（辅存）：存放当前不参加运行的大量信息，在需要时调入内存。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;按存储器的构成材料分类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;磁存储器&lt;/li&gt;
+&lt;li&gt;半导体存储器&lt;/li&gt;
+&lt;li&gt;光存储器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;按存储器工作方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;读/写存储器（RAM）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;只读存储器：ROM、PROM、EPROM、EEPROM等。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;固定只读存储器（ROM）：厂家生产时就写好数据在其中。只能读（用户）不能写。一般用于存放BIOS和微程序控制。&lt;/li&gt;
+&lt;li&gt;可编程读只读存储器（PROM）：其内容可以由用户一次性地写入，写入后不能再修改。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;按访问方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;按地址访问：&lt;/p&gt;
+&lt;p&gt;可分为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;随机存储器&lt;/li&gt;
+&lt;li&gt;顺序存储器&lt;/li&gt;
+&lt;li&gt;直接存储器&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;按内容访问：例如相联存储器。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;虚拟存储器由主存与辅存组成。&lt;/p&gt;
+&lt;p&gt;DRAM（动态随机存储器）构成主存 DRAM需要周期性地刷新保持信息。&lt;/p&gt;
+&lt;p&gt;SRAM（静态随机存储器）构成Cache（缓存）。&lt;/p&gt;
+&lt;p&gt;闪存类似U盘，掉电后信息不会丢失。以块为单位进行删除。闪存是EPROM的一种类型，可以代替ROM存储器。闪存不可以代替主存。&lt;/p&gt;
+&lt;h2 id=&#34;缓存&#34;&gt;缓存&lt;/h2&gt;
+&lt;p&gt;高速缓存用来存放当前最活跃的程序和数据，其特点是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;位于CPU与主存之间；容量一般在几千字节到几兆字节之间；&lt;/li&gt;
+&lt;li&gt;速度一般比主存快5~10倍，由快速半导体存储器构成；&lt;/li&gt;
+&lt;li&gt;其内容是主存局部域的副本，对程序员来说是透明的（看不到或可以忽略）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Cache存储器部分用来存放主存的部分拷贝（副本）信息。控制部分的功能是判断CPU要访问的信息是否在Cache存储器中，若在即为命中，若不在则没有命中。命中时直接对Cache存储器寻址；未命中时，要按照替换原则决定主存的一块信息放到Cache存储器的哪一块里。&lt;/p&gt;
+&lt;h2 id=&#34;缓存地址映射&#34;&gt;缓存地址映射&lt;/h2&gt;
+&lt;p&gt;CPU工作时，送出的是主存单元的地址。为从Cache存储器中读/写信息，就需要将主存地址转成Cache存储器的地址，这种地址转换即为地址映像。&lt;/p&gt;
+&lt;p&gt;高速缓存中的地址映像方法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;直接映像：主存的块与Cache块的对应关系是固定的。冲突多、关系固定。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1679884025087.png&#34;
+	width=&#34;825&#34;
+	height=&#34;526&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1679884025087_hu5b011bac95c34a4b59523b3fc3e9bdf5_66159_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1679884025087_hu5b011bac95c34a4b59523b3fc3e9bdf5_66159_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;156&#34;
+		data-flex-basis=&#34;376px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;全相联映像：允许主存的任一块调入Cache存储器的任一块。冲突少、关系不固定。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1679884252415.png&#34;
+	width=&#34;730&#34;
+	height=&#34;538&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1679884252415_hu0e33dbcf5fa3fed2f738b321711ef11e_91734_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1679884252415_hu0e33dbcf5fa3fed2f738b321711ef11e_91734_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;135&#34;
+		data-flex-basis=&#34;325px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;组相联映像：将缓存和主存先分为组，组下再分为块。组与组采用直接映像，组内的块采用全相联映像。冲突较少，是直接映像与全相联映像的折中。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;发生块冲突从多到少的顺序：直接映像 &amp;gt; 组相联映像 &amp;gt; 全相联映像。
+地址映像都是由硬件自动完成。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;中断&#34;&gt;中断&lt;/h1&gt;
+&lt;p&gt;计算机在执行程序过程中，当遇到急需处理的事件时，暂停当前正在运行的程序，转去执行有关服务程序，处理完后自动返回源程序，这个过程称为中断。&lt;/p&gt;
+&lt;p&gt;中断是一种非常重要的技术，&lt;u&gt;输入输出&lt;/u&gt;设备和&lt;u&gt;主机交换数据&lt;/u&gt;、&lt;u&gt;分时操作&lt;/u&gt;、&lt;u&gt;实时系统&lt;/u&gt;、&lt;u&gt;计算机网络&lt;/u&gt;和&lt;u&gt;分布式计算机系统&lt;/u&gt;中都要用到这种技术。为了提高响应中断的速度，通常把所有中断服务程序的入口地址（或称为中断向量）汇集为中断向量表。&lt;/p&gt;
+&lt;h2 id=&#34;输入输出控制方式&#34;&gt;输入输出控制方式&lt;/h2&gt;
+&lt;p&gt;程序查询方式（程序直接控制方式）：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1679888001780.png&#34;
+	width=&#34;754&#34;
+	height=&#34;1174&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1679888001780_hud6ebe6012cde16108d1ee611e4248e31_240258_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1679888001780_hud6ebe6012cde16108d1ee611e4248e31_240258_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;64&#34;
+		data-flex-basis=&#34;154px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CPU和I/O只能串行工作。CPU需要一直轮询检查，长期处于忙等状态，CPU利用率低。&lt;/li&gt;
+&lt;li&gt;一次只能读/写一个字。&lt;/li&gt;
+&lt;li&gt;由CPU将数放入内存。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;中断驱动方式：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1679888578058.png&#34;
+	width=&#34;787&#34;
+	height=&#34;1134&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1679888578058_huafad4d8f462045fe6ed8d3f6574e2433_264777_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1679888578058_huafad4d8f462045fe6ed8d3f6574e2433_264777_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;69&#34;
+		data-flex-basis=&#34;166px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I/O设备通过中断信号主动向CPU报告I/O操作已完成。&lt;/li&gt;
+&lt;li&gt;CPU和I/O可并行工作。&lt;/li&gt;
+&lt;li&gt;CPU利用率得到提升。&lt;/li&gt;
+&lt;li&gt;一次只能读/写一个字。&lt;/li&gt;
+&lt;li&gt;由CPU将数据放入内存。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;DMA方式（直接存储器存储方式）：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1679888972074.png&#34;
+	width=&#34;816&#34;
+	height=&#34;723&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1679888972074_hu524534b10c6d25022b5676913927ee92_146843_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/uTools_1679888972074_hu524534b10c6d25022b5676913927ee92_146843_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;112&#34;
+		data-flex-basis=&#34;270px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;CPU和I/O可并行工作。&lt;/li&gt;
+&lt;li&gt;仅在传送数据块多开始和结束时才需要CPU的干预。&lt;/li&gt;
+&lt;li&gt;由外设直接将数据放入内存。&lt;/li&gt;
+&lt;li&gt;一次读写的单位为&amp;quot;块&amp;quot;而不是字。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;DMA传输数据比中断驱动方式传输数据要快一点。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;总线&#34;&gt;总线&lt;/h1&gt;
+&lt;p&gt;总线是连接计算机有关部件的一组信号线，是计算机中用来传送信息代码的公共通道。&lt;/p&gt;
+&lt;p&gt;采用总线结构主要有以下优点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;简化系统结构，便于系统设计制造；&lt;/li&gt;
+&lt;li&gt;大大减少了连线数目，便于布线，减小体积，提高系统的可靠性；&lt;/li&gt;
+&lt;li&gt;便于接口设计，所有与总线连接的设备均采用类似的接口；&lt;/li&gt;
+&lt;li&gt;便于系统的扩充、更新与灵活配置，易于实现系统的模块化；&lt;/li&gt;
+&lt;li&gt;便于设备的软件设计；&lt;/li&gt;
+&lt;li&gt;便于故障诊断和维修，同时也降低了成本。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在计算机系统中采用总线结构，便于实现系统的积木化构造，同时可以减少信息传输线的数量。&lt;/p&gt;
+&lt;p&gt;微机中的总线分为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据总线&lt;/li&gt;
+&lt;li&gt;地址总线&lt;/li&gt;
+&lt;li&gt;控制总线&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;常见总线：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ISA总线。&lt;/li&gt;
+&lt;li&gt;EISA总线。&lt;/li&gt;
+&lt;li&gt;PCI总线：PCI总线是目前微型机上广泛采用的内总线，采用并行传输方式。&lt;/li&gt;
+&lt;li&gt;PCI Express 总线。&lt;/li&gt;
+&lt;li&gt;前端总线。&lt;/li&gt;
+&lt;li&gt;RS-232C。&lt;/li&gt;
+&lt;li&gt;SCSI总线：小型计算机系统接口（SCSI）是一条并行外总线。&lt;/li&gt;
+&lt;li&gt;SATA。&lt;/li&gt;
+&lt;li&gt;USB。&lt;/li&gt;
+&lt;li&gt;IEEE-1394。&lt;/li&gt;
+&lt;li&gt;IEEE-488总线。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;地址总线宽度：例如，内存容量4GB，$4GB=2^{2+10+10+10}B=2^32B$。所以内存单元的地址宽度为32位，即地址总线宽度为32位。&lt;/p&gt;
+&lt;p&gt;数据总线宽度：例如字长为32的机器，那么其数据总线的宽度要为32。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;加密技术与认证技术&#34;&gt;加密技术与认证技术&lt;/h1&gt;
+&lt;h2 id=&#34;加密技术&#34;&gt;加密技术&lt;/h2&gt;
+&lt;p&gt;加密技术用于防止第三方窃听。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;对称加密：只有一把密钥。加密和解密用同一把密钥。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;密钥分发有缺陷。&lt;/li&gt;
+&lt;li&gt;加密解密速度很快。&lt;/li&gt;
+&lt;li&gt;适合加量大量明文数据。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;非对称加密：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;加密和解密不是同一把密钥。&lt;/li&gt;
+&lt;li&gt;一共有两把密钥，分别是公钥和私钥。&lt;/li&gt;
+&lt;li&gt;用公钥加密只能用私钥解密，用私钥加密只能用公钥解密。&lt;/li&gt;
+&lt;li&gt;不能通过一把密钥推出另一把密钥。&lt;/li&gt;
+&lt;li&gt;用接收方的公钥加密明文可以实现防止窃听的效果。&lt;/li&gt;
+&lt;li&gt;密钥分发没有缺陷。&lt;/li&gt;
+&lt;li&gt;加密解密速度很慢。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;认证技术&#34;&gt;认证技术&lt;/h2&gt;
+&lt;p&gt;认证技术用于防止篡改、假冒和否认。&lt;/p&gt;
+&lt;p&gt;摘要（防止篡改）：将发送的明文进行Hash算法后得到摘要放在密文后一起发送过去，与接收方解密后的明文进行相同的Hash算法得到的摘要进行对比如果一致，侧没有篡改，否则有篡改。&lt;/p&gt;
+&lt;p&gt;数字签名（防止假冒和否认）：&lt;/p&gt;
+&lt;p&gt;发送方用自己的&lt;u&gt;私钥对摘要进行签名&lt;/u&gt;（加密）。得到数字签名放在密文后一起发送过去。&lt;/p&gt;
+&lt;p&gt;接收方用发送方的&lt;u&gt;公钥对数字签名进行验证&lt;/u&gt;（解密）。如果验证成功则该消息没有被假冒且不能否认，否则该消息的真实性为假冒发送。&lt;/p&gt;
+&lt;h2 id=&#34;数字证书&#34;&gt;数字证书&lt;/h2&gt;
+&lt;p&gt;数字证书是用第三方CA机构使用自己的私钥对用户的公钥签名（加密），来保证这个公钥不被篡改。然后接收方用CA的公钥验证（解密），从而得到用户的公钥。&lt;/p&gt;
+&lt;h2 id=&#34;加密算法&#34;&gt;加密算法&lt;/h2&gt;
+&lt;p&gt;对称密钥（私钥、私有密钥加密）算法（共享密钥加密算法）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;DES&lt;/li&gt;
+&lt;li&gt;3DES&lt;/li&gt;
+&lt;li&gt;RC-5&lt;/li&gt;
+&lt;li&gt;IDEA&lt;/li&gt;
+&lt;li&gt;AES&lt;/li&gt;
+&lt;li&gt;RC4&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;非对称密钥（公钥、公开密钥加密）算法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;RSA&lt;/li&gt;
+&lt;li&gt;ECC&lt;/li&gt;
+&lt;li&gt;DSA&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其他加密算法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Hash函数&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;SHA-1安全散列算法&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;MD5摘要算法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;输出结果为128位&lt;/li&gt;
+&lt;li&gt;摘要算法防止发送的报文被篡改&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;加密可以阻止被动攻击，认证可以阻止主动攻击（不可以处理被动攻击）。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;系统可靠度&#34;&gt;系统可靠度&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/%E4%B8%B2%E8%81%94%E7%B3%BB%E7%BB%9F.png&#34;
+	width=&#34;1157&#34;
+	height=&#34;400&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/%E4%B8%B2%E8%81%94%E7%B3%BB%E7%BB%9F_huc533c9ebe7073a641e0c4f0ca26fe76d_129377_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/%E4%B8%B2%E8%81%94%E7%B3%BB%E7%BB%9F_huc533c9ebe7073a641e0c4f0ca26fe76d_129377_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;289&#34;
+		data-flex-basis=&#34;694px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/%E5%B9%B6%E8%81%94%E7%B3%BB%E7%BB%9F.png&#34;
+	width=&#34;1133&#34;
+	height=&#34;376&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/%E5%B9%B6%E8%81%94%E7%B3%BB%E7%BB%9F_hu0151f1bd7a524d241456bee3273c718e_125234_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E7%AF%87/%E5%B9%B6%E8%81%94%E7%B3%BB%E7%BB%9F_hu0151f1bd7a524d241456bee3273c718e_125234_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;301&#34;
+		data-flex-basis=&#34;723px&#34;
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

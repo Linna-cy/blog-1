@@ -1,0 +1,2033 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>甘特图 on Linner&#39;s Blog</title>
+        <link>https://blog.linner.asia/tags/%E7%94%98%E7%89%B9%E5%9B%BE/</link>
+        <description>Recent content in 甘特图 on Linner&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh</language>
+        <lastBuildDate>Sat, 20 May 2023 13:29:14 +0800</lastBuildDate><atom:link href="https://blog.linner.asia/tags/%E7%94%98%E7%89%B9%E5%9B%BE/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>软考图类汇总篇</title>
+        <link>https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/</link>
+        <pubDate>Sat, 20 May 2023 13:29:14 +0800</pubDate>
+        
+        <guid>https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/</guid>
+        <description>&lt;h1 id=&#34;数据流图dfd&#34;&gt;数据流图（DFD）&lt;/h1&gt;
+&lt;p&gt;数据流图是在逻辑上描述系统的功能、输入、输出和数据存储等。&lt;/p&gt;
+&lt;p&gt;数据流图中的基本图形元素包括：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;基本元素&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;图形表示&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;数据流&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683518468182.png&#34;
+	width=&#34;193&#34;
+	height=&#34;71&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683518468182_hu1fccd0f4bc92c1a7ca6417a3c5762d95_691_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683518468182_hu1fccd0f4bc92c1a7ca6417a3c5762d95_691_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;数据流&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;271&#34;
+		data-flex-basis=&#34;652px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;加工&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1683518239889.png&#34;
+	width=&#34;282&#34;
+	height=&#34;105&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1683518239889_hua1275ed5909c87bf24a2f46b2412656d_4453_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1683518239889_hua1275ed5909c87bf24a2f46b2412656d_4453_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;加工&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;268&#34;
+		data-flex-basis=&#34;644px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;数据存储&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683517944926.png&#34;
+	width=&#34;350&#34;
+	height=&#34;79&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683517944926_hu07d5f627c7e21f9ad8b48cfa71d5e47e_1735_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683517944926_hu07d5f627c7e21f9ad8b48cfa71d5e47e_1735_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;数据存储&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;443&#34;
+		data-flex-basis=&#34;1063px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;外部实体&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683517896893.png&#34;
+	width=&#34;118&#34;
+	height=&#34;79&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683517896893_hu053e7e7f1170dc0aa7a02a640e921728_501_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683517896893_hu053e7e7f1170dc0aa7a02a640e921728_501_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;外部实体&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;358px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;软件系统内部的&lt;strong&gt;数据处理模型&lt;/strong&gt;，使用&lt;u&gt;数据流&lt;/u&gt;、&lt;u&gt;加工&lt;/u&gt;和&lt;u&gt;数据存储&lt;/u&gt;构建。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;数据流&lt;/strong&gt;（Data Flow）：由一组固定成分的数据组成，表示数据的流向。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683518468182.png&#34;
+	width=&#34;193&#34;
+	height=&#34;71&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683518468182_hu1fccd0f4bc92c1a7ca6417a3c5762d95_691_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683518468182_hu1fccd0f4bc92c1a7ca6417a3c5762d95_691_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;数据流&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;271&#34;
+		data-flex-basis=&#34;652px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;在DFD种，数据流的流向由以下几种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;从&lt;u&gt;加工&lt;/u&gt;流向另一个&lt;u&gt;加工&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;从&lt;u&gt;加工&lt;/u&gt;流向&lt;u&gt;数据存储&lt;/u&gt;（写）；&lt;/li&gt;
+&lt;li&gt;从&lt;u&gt;数据存储&lt;/u&gt;流向&lt;u&gt;加工&lt;/u&gt;（读）；&lt;/li&gt;
+&lt;li&gt;从&lt;u&gt;外部实体&lt;/u&gt;流向&lt;u&gt;加工&lt;/u&gt;（输入）；&lt;/li&gt;
+&lt;li&gt;从&lt;u&gt;加工&lt;/u&gt;流向&lt;u&gt;外部实体&lt;/u&gt;（输出）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;即数据流的&lt;u&gt;起点或终点必须至少有一个是加工&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;除了与数据存储有关的数据流（流向数据存储或从数据存储流出），DFD中的每个数据流都必须用一个定义明确的名字表示。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;加工&lt;/strong&gt;（Process）：加工描述了输入数据流到输出数据流之间的变换，也就是&lt;u&gt;输入数据流经过什么处理后变成了输出数据流&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1683518239889.png&#34;
+	width=&#34;282&#34;
+	height=&#34;105&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1683518239889_hua1275ed5909c87bf24a2f46b2412656d_4453_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1683518239889_hua1275ed5909c87bf24a2f46b2412656d_4453_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;加工&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;268&#34;
+		data-flex-basis=&#34;644px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;每个加工都有一个名字和编号。&lt;/p&gt;
+&lt;p&gt;一个加工可以有多个输入数据流和多个输出数据流，但&lt;u&gt;至少有一个输入数据流和一个输出数据流&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;数据流图中常见的3种错误如下所示：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;黑洞&lt;/strong&gt;：加工只有输入，没有输出。&lt;/p&gt;
+&lt;p&gt;如下图加工1。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;白洞&lt;/strong&gt;：加工只有输出但没有输入。&lt;/p&gt;
+&lt;p&gt;如下图加工2。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;灰洞&lt;/strong&gt;：加工中输入数据不足以产生输出数据。&lt;/p&gt;
+&lt;p&gt;有几种可能的原因：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;一个错误的命名过程；&lt;/li&gt;
+&lt;li&gt;错误命名的输入或输出；&lt;/li&gt;
+&lt;li&gt;不完全的事实。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如下图加工3。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1683528176745.png&#34;
+	width=&#34;793&#34;
+	height=&#34;542&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1683528176745_hu5869eb4ddb2b6e895b99cd504e3e35d8_119530_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1683528176745_hu5869eb4ddb2b6e895b99cd504e3e35d8_119530_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;数据流图中常见错误&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;146&#34;
+		data-flex-basis=&#34;351px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;数据存储&lt;/strong&gt;（Data Store）：存储和提供数据。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683517944926.png&#34;
+	width=&#34;350&#34;
+	height=&#34;79&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683517944926_hu07d5f627c7e21f9ad8b48cfa71d5e47e_1735_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683517944926_hu07d5f627c7e21f9ad8b48cfa71d5e47e_1735_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;数据存储&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;443&#34;
+		data-flex-basis=&#34;1063px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;每个数据存储都有一个定义明确的名字标识。&lt;/p&gt;
+&lt;p&gt;数据存储可以：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;存储加工的输出数据：数据流流入数据存储，表示数据的写入操作；&lt;/li&gt;
+&lt;li&gt;提供加工的输入数据：数据流从数据存储流出，表示数据的读操作。&lt;/li&gt;
+&lt;li&gt;双向箭头的数据流指向数据存储，表示对数据的修改。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;DFD中的数据存储在具体实现时可以用以下方式实现：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;文件系统实现；&lt;/li&gt;
+&lt;li&gt;数据库系统实现。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;数据存储的存储介质可以是：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;磁盘、&lt;/li&gt;
+&lt;li&gt;磁带、&lt;/li&gt;
+&lt;li&gt;其他存储介质。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;外部实体&lt;/strong&gt;（External Agent，外部主体）：指&lt;u&gt;存在于软件系统之外的人员、组织、物体或外部系统&lt;/u&gt;，它指出系统所需数据的&lt;u&gt;发源地（源）&lt;/u&gt;和&lt;u&gt;系统所产生的数据的归宿地（宿）&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683517896893.png&#34;
+	width=&#34;118&#34;
+	height=&#34;79&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683517896893_hu053e7e7f1170dc0aa7a02a640e921728_501_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1683517896893_hu053e7e7f1170dc0aa7a02a640e921728_501_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;外部实体&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;149&#34;
+		data-flex-basis=&#34;358px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;人员：学生、老师、员工、主观、医生、客户……&lt;/li&gt;
+&lt;li&gt;组织：供应商、采购部门……&lt;/li&gt;
+&lt;li&gt;物体：传感器、控制器、单车、车辆……&lt;/li&gt;
+&lt;li&gt;外部系统：支付系统、车辆交易系统、库存管理系统、道闸控制系统……&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在许多系统中，某个源和某个宿可以是同一个人员、组织、物体或外部系统，此时，在DFD中可以用同一个符号表示：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当数据流从该符号流出时，表示它是源；&lt;/li&gt;
+&lt;li&gt;当数据流流向该符号时，表示它是宿；&lt;/li&gt;
+&lt;li&gt;当两者皆有时，表示它既是源又是宿。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;外部实体表示存在于系统之外的对象，用来帮助用户理解系统数据的来源和去向。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;数据流图必须确保：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数据流的起点或终点必须至少有一个是加工。&lt;/li&gt;
+&lt;li&gt;加工至少有一个输入数据流和一个输出数据流。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;分层数据流图：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;顶层图：描述系统的输入和输出。&lt;/p&gt;
+&lt;p&gt;即描述系统从哪些外部实体接受数据流，以及系统发送数据流到哪些外部实体。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;顶层图只有一个加工，即待开发的软件系统。&lt;/li&gt;
+&lt;li&gt;顶层图中的数据流就是系统的输入/输出信息。&lt;/li&gt;
+&lt;li&gt;顶层图中通常没有数据存储。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;0层图：分解顶层图的加工。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;再分解：将DFD中某些比较复杂的加工再次分解成一张DFD子图。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;实体联系图e-r-图erd&#34;&gt;实体联系图（E-R 图，ERD）&lt;/h1&gt;
+&lt;p&gt;E-R图有以下几个成分（包含扩充的E-R模型成分）：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682508598814.png&#34;
+	width=&#34;1035&#34;
+	height=&#34;391&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682508598814_hub0bc3034b48557bb84109435ab8e458e_191424_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682508598814_hub0bc3034b48557bb84109435ab8e458e_191424_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;E-R图中的主要构件&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;264&#34;
+		data-flex-basis=&#34;635px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;实体&lt;/strong&gt;：用&lt;strong&gt;矩形&lt;/strong&gt;表示。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;弱实体&lt;/strong&gt;：使用&lt;strong&gt;双线矩形框&lt;/strong&gt;表示。将需要依赖其他实体存在的实体。&lt;/p&gt;
+&lt;p&gt;实体间的所有（Ownership，拥有）关系代表一个实体对另一些实体具有很强的依赖关系，即一个实体的存在必须以另一个实体为前提。&lt;/p&gt;
+&lt;p&gt;例如职工与家属的联系，家属总是属于某职工的（在关系模式中需要依赖职工而存在），所以家属是弱实体。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;特殊化&lt;/strong&gt;：将一个实体集&lt;u&gt;按照某些特性区分为几个&lt;strong&gt;子实体&lt;/strong&gt;&lt;/u&gt;。这种从普遍到特殊的过程即为特殊化。&lt;/p&gt;
+&lt;p&gt;子实体的图形表示如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684564987147.png&#34;
+	width=&#34;256&#34;
+	height=&#34;145&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684564987147_huad14f3e1152e9df0e94e04c64131c1cf_1087_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684564987147_huad14f3e1152e9df0e94e04c64131c1cf_1087_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;子实体&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;176&#34;
+		data-flex-basis=&#34;423px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;子实体由称为子类，它会有一个超类，并且能继承超类的属性，超类的属性是实体集中所有子实体的相同属性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;联系&lt;/strong&gt;：用&lt;strong&gt;棱形&lt;/strong&gt;表示，并用无向边分别与有关实体连接起来，同时在无向边标注联系的类型。&lt;/p&gt;
+&lt;p&gt;联系的类型有两种：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;两个实体间的联系：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$1:1$：一对一联系；&lt;/li&gt;
+&lt;li&gt;$1:n$：一对多联系；&lt;/li&gt;
+&lt;li&gt;$m:n$：多对多联系。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;两个以上实体间的联系：&lt;/p&gt;
+&lt;p&gt;例如3个实体间的联系有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$1:1:1$&lt;/li&gt;
+&lt;li&gt;$1:1:n$&lt;/li&gt;
+&lt;li&gt;$1:m:n$&lt;/li&gt;
+&lt;li&gt;$r:m:n$&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;属性&lt;/strong&gt;：用&lt;strong&gt;椭圆形&lt;/strong&gt;表示，并用无向边将其与相应的实体连接起来&lt;/p&gt;
+&lt;p&gt;E-R模型中的属性有以下分类：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;简单属性：是原子的、不可再分的。&lt;/li&gt;
+&lt;li&gt;复合属性：可以细分为更小的部分。&lt;/li&gt;
+&lt;li&gt;单值属性：一个属性对应一个值。&lt;/li&gt;
+&lt;li&gt;多值属性：一个属性对应一组值。&lt;/li&gt;
+&lt;li&gt;NULL属性：实体在某个属性上没有值或属性值未知时，使用NULL值表示。&lt;/li&gt;
+&lt;li&gt;派生属性：派生属性可以从其他属性得来（通过运算等方式求出）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;概念结构模型合并分-e-r-图&#34;&gt;概念结构模型（合并分 E-R 图）&lt;/h2&gt;
+&lt;p&gt;建立概念结构模型的步骤如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;选择局部应用：选择适当层次的数据流图，让这一层的每一部分对应一个局部应用，实现某一项功能。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;逐一设计分E-R图。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;E-R图合并：&lt;/p&gt;
+&lt;p&gt;合并时需要考虑各分E-R图之间的冲突：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;属性冲突&lt;/strong&gt;：同一属性在不同的分E-R图上的属性类型、取值范围和数据单位等可能会不一致。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;命名冲突&lt;/strong&gt;：相同意义的属性在不同的分E-R图上可能会有不同的命名。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;结构冲突&lt;/strong&gt;：同一实体在不同的分E-R图中可能会有不同的属性；同一对象在某一分E-R图中被抽象为实体，而在另一分E-R图中又可能被抽象为属性，反之亦然。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;转换关系模式&#34;&gt;转换关系模式&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;实体向关系模式的转换：&lt;/p&gt;
+&lt;p&gt;将E-R图中的实体逐一转换成为一个关系模式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;实体名：对应关系模式的名称；&lt;/li&gt;
+&lt;li&gt;实体的属性：转换成关系模式的属性；&lt;/li&gt;
+&lt;li&gt;实体标识符：关系的码（键）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;超类和子类的转换：超类和子类定义为两个关系模式，将超类的主键加到子类中。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;联系向关系模式的转换：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;一对一联系的转换：&lt;/p&gt;
+&lt;p&gt;有两种方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;方式1：将联系转换成一个独立的关系模式，关系模式的名称取联系的名称，关系模式的属性包括该联系所关联的两个实体的码及联系的属性，关系的码取自任一方实体的码。&lt;/p&gt;
+&lt;p&gt;那么一个一对一联系需要转换成三个关系模式。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方式2（一般使用该方式）：将联系归并到关联的两个实体的任一方，给待归并的一方实体属性集中增加另一方实体的码和该联系的属性即可，归并后的实体码保持不变。&lt;/p&gt;
+&lt;p&gt;一个一对一联系仅需转换成两个关系模式。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682562445900.png&#34;
+	width=&#34;304&#34;
+	height=&#34;358&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682562445900_hu39b33fe28157809884f3b45df834a34e_28041_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682562445900_hu39b33fe28157809884f3b45df834a34e_28041_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;联系向关系模式的转换示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;84&#34;
+		data-flex-basis=&#34;203px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;方式1：&lt;/p&gt;
+&lt;p&gt;厂长（&lt;strong&gt;姓名&lt;/strong&gt;，性别，年龄）&lt;/p&gt;
+&lt;p&gt;工厂（&lt;strong&gt;厂号&lt;/strong&gt;，厂名，地点）&lt;/p&gt;
+&lt;p&gt;管理（（厂长）&lt;strong&gt;姓名&lt;/strong&gt;，厂号，任期）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;粗体代表该关系模式的码。管理的码可以为姓名或厂号。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方式2：&lt;/p&gt;
+&lt;p&gt;厂长（姓名，性别，年龄）&lt;/p&gt;
+&lt;p&gt;工厂（厂号，厂名，地点，（厂长）姓名，任期）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;一对多联系的转换：&lt;/p&gt;
+&lt;p&gt;两种方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;方式1：将联系转换成一个独立的关系模式，关系模式的名称取联系的名称，关系模式的属性取该联系所关联的两个实体的码及联系的属性，&lt;u&gt;关系的码是多方实体的码&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;方式2（一般使用该方式）：将联系&lt;u&gt;归并到关联的两个实体的多方&lt;/u&gt;，给待归并的多方实体属性集中增加一方实体的码和该联系的属性即可，归并后的多方实体码保持不变。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682563544291.png&#34;
+	width=&#34;315&#34;
+	height=&#34;361&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682563544291_hue1cce8af0395e2bd704f6df0a3e3321e_30915_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682563544291_hue1cce8af0395e2bd704f6df0a3e3321e_30915_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;一对多联系转换的例子&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;87&#34;
+		data-flex-basis=&#34;209px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;方式1:&lt;/p&gt;
+&lt;p&gt;仓库（&lt;strong&gt;仓库号&lt;/strong&gt;，地点，面积）&lt;/p&gt;
+&lt;p&gt;商品（&lt;strong&gt;货号&lt;/strong&gt;，商品名，价格）&lt;/p&gt;
+&lt;p&gt;仓储（&lt;strong&gt;货号&lt;/strong&gt;，仓库号，数量）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;方式2：&lt;/p&gt;
+&lt;p&gt;仓库（&lt;strong&gt;仓库号&lt;/strong&gt;，地点，面积）&lt;/p&gt;
+&lt;p&gt;商品（&lt;strong&gt;货号&lt;/strong&gt;，商品名，价格，仓库号，数量）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多对多联系的转换：&lt;/p&gt;
+&lt;p&gt;多对多联系只能转换成一个独立的关系模式，关系模式的名称取联系的名称，关系模式的属性取该联系所关联的两个多方实体的码及联系的属性，关系的码是多方实体的码构成的属性组。&lt;/p&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682564018777.png&#34;
+	width=&#34;327&#34;
+	height=&#34;373&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682564018777_hu8cf40dc2a076405a9cb5ca4646519d5e_36334_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682564018777_hu8cf40dc2a076405a9cb5ca4646519d5e_36334_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;多对多联系转换的示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;87&#34;
+		data-flex-basis=&#34;210px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;转换成：&lt;/p&gt;
+&lt;p&gt;学生（&lt;strong&gt;学号&lt;/strong&gt;，姓名，性别，年龄）&lt;/p&gt;
+&lt;p&gt;课程（&lt;strong&gt;课程号&lt;/strong&gt;，课程名，学时）&lt;/p&gt;
+&lt;p&gt;选修（&lt;strong&gt;（学号，课程号）&lt;/strong&gt;，成绩）&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;uml&#34;&gt;UML&lt;/h1&gt;
+&lt;p&gt;UML（Unified Modeling Language，统一建模语言）是面向对象软件的标准化建模语言。&lt;/p&gt;
+&lt;p&gt;UML中包含3种基本构造块：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;事物；&lt;/li&gt;
+&lt;li&gt;关系；&lt;/li&gt;
+&lt;li&gt;图。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;事物&#34;&gt;事物&lt;/h2&gt;
+&lt;p&gt;UML中有4种事物：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;结构事物&lt;/strong&gt;（Structural Thing）：模型的&lt;u&gt;静态部分&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682055522161.png&#34;
+	width=&#34;708&#34;
+	height=&#34;294&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682055522161_hu872254ba18803fa50bd84092332d0d27_39442_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682055522161_hu872254ba18803fa50bd84092332d0d27_39442_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;结构事物的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;240&#34;
+		data-flex-basis=&#34;577px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;行为事物&lt;/strong&gt;（Behavior Thing）：模型的&lt;u&gt;动态部分&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682055712246.png&#34;
+	width=&#34;621&#34;
+	height=&#34;133&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682055712246_hu926c842303194b37bd3d84d241da7490_18166_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682055712246_hu926c842303194b37bd3d84d241da7490_18166_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;行为事物的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;466&#34;
+		data-flex-basis=&#34;1120px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;分组事物（Grouping Thing）：模型的&lt;u&gt;组织部分&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;注释事物（Annotational Thing）：模型的&lt;u&gt;解释部分&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;关系&#34;&gt;关系&lt;/h2&gt;
+&lt;p&gt;UML中有4种关系，这4种关系是UML模型中可以包含的基本关系事物：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;依赖&lt;/strong&gt;（Dependency）：是&lt;u&gt;两个事物间的语义关系，其中一个事物（&lt;strong&gt;独立事物&lt;/strong&gt;）发生变化会影响另一个事物（&lt;strong&gt;依赖事物&lt;/strong&gt;）的语义&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;在图形上，把一个依赖画成一条&lt;u&gt;可能有方向的虚线&lt;/u&gt;，如图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057108089.png&#34;
+	width=&#34;200&#34;
+	height=&#34;48&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057108089_hufef657bed6e876bd373e5f4bb9f34af6_1059_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057108089_hufef657bed6e876bd373e5f4bb9f34af6_1059_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;依赖的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;416&#34;
+		data-flex-basis=&#34;1000px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;依赖有偶然性和临时性，即需要的时候依赖，不需要的时候不依赖。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;关联&lt;/strong&gt;（Association）：是一种&lt;u&gt;结构关系&lt;/u&gt;，它描述了一组链，&lt;u&gt;链是对象之间的连接&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;关联使用&lt;u&gt;实线&lt;/u&gt;表示，在关联上可以标注重复度（Multiplicity）和角色（Role）。&lt;/p&gt;
+&lt;p&gt;描述了&lt;u&gt;整体和部分&lt;/u&gt;间的结构关系的特殊类型的关联：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;聚集&lt;/strong&gt;（Aggregation，聚合）：&lt;u&gt;部分和整体的生命周期不一致&lt;/u&gt;，整体消失了，部分仍然存在，&lt;u&gt;部分可以脱离整体存在&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;使用一端带&lt;u&gt;空心菱形&lt;/u&gt;的实线表示。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;组合&lt;/strong&gt;：&lt;u&gt;部分和整体的生命周期一致&lt;/u&gt;，整体消失了，部分也消失了，&lt;u&gt;部分不可以脱离整体而存在&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;使用一端带&lt;u&gt;实心菱形&lt;/u&gt;的实线表示。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682057458153.png&#34;
+	width=&#34;408&#34;
+	height=&#34;101&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682057458153_hu37f2bf65b423a501f386d9709f6e6bc4_8075_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682057458153_hu37f2bf65b423a501f386d9709f6e6bc4_8075_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;关联和聚集的图形化表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;403&#34;
+		data-flex-basis=&#34;969px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;聚合和组合中，带菱形的一端指向整体，另一端指向部分。&lt;/p&gt;
+&lt;p&gt;关联的关系强度比依赖的关系强度要强一点。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;单向关联：用&lt;u&gt;带箭头实线&lt;/u&gt;表示。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多重度：&lt;/p&gt;
+&lt;p&gt;进行面向对象设计时，类图中可以展现类之间的关联关系，还可以在类图中图示&lt;u&gt;关联中的数量关系&lt;/u&gt;，即多重度。表示数量关系时，&lt;u&gt;用多重度说明数量或数量范围&lt;/u&gt;，&lt;u&gt;表示有多少个实例（对象）能被连接起来&lt;/u&gt;，即&lt;u&gt;一个类的实例能够与另一个类的多少个实例相关联&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关联类：&lt;/p&gt;
+&lt;p&gt;当两个类之间的关联的重复度是多对多时，需要借助额外的属性来帮助表达它们之间的关系，而这个属性就需要定义在一个新的关联类中。关联类记录了这两个类之间的关联信息。关联中这些额外的属性用一条&lt;u&gt;垂直于关联的实线&lt;/u&gt;表示，实线的一段连接接到关联的实线上，另一端指向这些属性。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;泛化&lt;/strong&gt;（Generalization）：是一种特殊/一般关系，&lt;u&gt;特殊元素（子元素）的对象可替代一般元素（父元素）的对象&lt;/u&gt;。用这种方法，&lt;u&gt;子元素共享了父元素的结构和行为&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;在图形上，把一个泛化关系画成一条&lt;u&gt;带有空心箭头的实线&lt;/u&gt;，它指向父元素：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057764410.png&#34;
+	width=&#34;162&#34;
+	height=&#34;53&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057764410_huaf9267ff556daac18150e46c6cbbde24_1023_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057764410_huaf9267ff556daac18150e46c6cbbde24_1023_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;泛化的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;305&#34;
+		data-flex-basis=&#34;733px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;实现&lt;/strong&gt;（Realization）：是&lt;u&gt;类元之间的语义关系，其中一个类元指定了由另一个类元保证执行的契约&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;在图形上，把一个实现关系画成一条&lt;u&gt;带有空心箭头的虚线&lt;/u&gt;，箭头指向模板类，另一端于实现类连接。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682058026631.png&#34;
+	width=&#34;167&#34;
+	height=&#34;61&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682058026631_hu09469114d42fa29e39948f21a9a04633_1340_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682058026631_hu09469114d42fa29e39948f21a9a04633_1340_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;实现的图形化表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;273&#34;
+		data-flex-basis=&#34;657px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;uml图&#34;&gt;UML图&lt;/h2&gt;
+&lt;h3 id=&#34;类图&#34;&gt;类图&lt;/h3&gt;
+&lt;p&gt;类图（Class Diagram）&lt;u&gt;展现了一组对象、接口、协作和它们之间的关系&lt;/u&gt;。在面向对象系统的建模中&lt;u&gt;最常见的图就是类图&lt;/u&gt;。类图给出&lt;u&gt;系统的静态设计视图&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;类图中通常包括下述内容：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;类：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684650129674.png&#34;
+	width=&#34;142&#34;
+	height=&#34;139&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684650129674_hucae45be9ae605ee21a469444ed126234_7038_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684650129674_hucae45be9ae605ee21a469444ed126234_7038_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;类的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;102&#34;
+		data-flex-basis=&#34;245px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;类中的方法和属性前面有以下三种修饰符：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;修饰符&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;+&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;public&lt;/code&gt; 公有的&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;-&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;private&lt;/code&gt; 私有的&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;#&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;protected&lt;/code&gt; 受保护的&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;~&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;package&lt;/code&gt; 包的&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;例如：&lt;/p&gt;
+  &lt;table style=&#34;width: 200px; margin: auto;&#34;&gt;
+      &lt;tr&gt;&lt;th&gt;Student&lt;/th&gt;&lt;/tr&gt;
+      &lt;tr&gt;
+      &lt;td&gt;
+      &lt;p&gt;
+          &lt;code&gt;- id&amp;nbsp;&amp;nbsp;&amp;nbsp;:&amp;nbsp;int&lt;/code&gt;
+          &lt;br&gt;
+          &lt;code&gt;+ name&amp;nbsp;:&amp;nbsp;String&lt;/code&gt;
+          &lt;br&gt;
+          &lt;code&gt;+ age&amp;nbsp;&amp;nbsp;:&amp;nbsp;int&lt;/code&gt;
+      &lt;/p&gt;
+      &lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+      &lt;td&gt;
+      &lt;p&gt;
+          &lt;code&gt;+ getId()&amp;nbsp;:&amp;nbsp;int&lt;/code&gt;
+      &lt;/p&gt;
+      &lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;接口：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684570786524.png&#34;
+	width=&#34;135&#34;
+	height=&#34;74&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684570786524_hu5845e575cae00345fed5de09da321787_3491_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684570786524_hu5845e575cae00345fed5de09da321787_3491_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;接口的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;182&#34;
+		data-flex-basis=&#34;437px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;协作：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684570820946.png&#34;
+	width=&#34;107&#34;
+	height=&#34;67&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684570820946_huaaba4fad0440f7f5bf987a2dd4b8f107_2415_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684570820946_huaaba4fad0440f7f5bf987a2dd4b8f107_2415_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;协作的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;159&#34;
+		data-flex-basis=&#34;383px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关系：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057108089.png&#34;
+	width=&#34;200&#34;
+	height=&#34;48&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057108089_hufef657bed6e876bd373e5f4bb9f34af6_1059_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057108089_hufef657bed6e876bd373e5f4bb9f34af6_1059_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;依赖的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;416&#34;
+		data-flex-basis=&#34;1000px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682057458153.png&#34;
+	width=&#34;408&#34;
+	height=&#34;101&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682057458153_hu37f2bf65b423a501f386d9709f6e6bc4_8075_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682057458153_hu37f2bf65b423a501f386d9709f6e6bc4_8075_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;关联图形化表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;403&#34;
+		data-flex-basis=&#34;969px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057764410.png&#34;
+	width=&#34;162&#34;
+	height=&#34;53&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057764410_huaf9267ff556daac18150e46c6cbbde24_1023_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057764410_huaf9267ff556daac18150e46c6cbbde24_1023_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;泛化的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;305&#34;
+		data-flex-basis=&#34;733px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682061210921.png&#34;
+	width=&#34;619&#34;
+	height=&#34;467&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682061210921_hub4b131b7f109e06635ca875a61e12a0b_45450_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682061210921_hub4b131b7f109e06635ca875a61e12a0b_45450_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;类图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;132&#34;
+		data-flex-basis=&#34;318px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;对象图&#34;&gt;对象图&lt;/h3&gt;
+&lt;p&gt;对象图（Object Diagram）展现了&lt;u&gt;某一时刻一组对象以及它们之间的关系&lt;/u&gt;，&lt;u&gt;描述了在类图中所建立的事物的实例的静态快照&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;对象图一般包括对象和链，如图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682061786263.png&#34;
+	width=&#34;713&#34;
+	height=&#34;312&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682061786263_hua46f494b700cf1a0ac17d6d1520c7d36_50579_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682061786263_hua46f494b700cf1a0ac17d6d1520c7d36_50579_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;对象图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;228&#34;
+		data-flex-basis=&#34;548px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;对象：对象图中的对象包含了类名、对象名和属性。&lt;/p&gt;
+&lt;p&gt;其图形化如下：&lt;/p&gt;
+&lt;table style=&#34;width: 150px; text-align: center;&#34;&gt;
+    &lt;tr&gt;
+    &lt;th style=&#34;text-align: center;&#34;&gt;
+        对象名 : 类名
+    &lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;
+    &lt;p&gt;
+        &lt;code&gt;属性1 = 值1&lt;/code&gt;
+        &lt;br&gt;
+        &lt;code&gt;属性2 = 值2&lt;/code&gt;
+        &lt;br&gt;
+        ......
+    &lt;/p&gt;
+    &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;匿名对象（没有对象名）：&lt;/p&gt;
+&lt;table style=&#34;width: 150px;&#34;&gt;
+    &lt;tr&gt;
+    &lt;th style=&#34;text-align: center;&#34;&gt;
+        : 类名
+    &lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+    &lt;td style=&#34;text-align: center;&#34;&gt;
+    &lt;p&gt;
+        &lt;code&gt;属性1 = 值1&lt;/code&gt;
+        &lt;br&gt;
+        &lt;code&gt;属性2 = 值2&lt;/code&gt;
+        &lt;br&gt;
+        ......
+    &lt;/p&gt;
+    &lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+&lt;p&gt;和类图一样，对象图给出&lt;u&gt;系统的静态设计视图&lt;/u&gt;或&lt;u&gt;静态进程视图&lt;/u&gt;，但它们是&lt;u&gt;从真实的或原型实例的角度建立的&lt;/u&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;用例图&#34;&gt;用例图&lt;/h3&gt;
+&lt;p&gt;用例图（Use Case Diagram）通常包括以下内容：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;用例：是从&lt;strong&gt;用户角度&lt;/strong&gt;描述&lt;strong&gt;系统的行为&lt;/strong&gt;，它将&lt;strong&gt;系统的一个功能&lt;/strong&gt;描述成一系列的事件，这些事件最终对操作者产生有价值的观测结果。&lt;/p&gt;
+&lt;p&gt;用例是一个类，它代表&lt;strong&gt;一类功能&lt;/strong&gt;而不是使用该功能的某一具体实例。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684574449513.png&#34;
+	width=&#34;114&#34;
+	height=&#34;73&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684574449513_hu50f432d3b590de151e3190057472158d_3109_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684574449513_hu50f432d3b590de151e3190057472158d_3109_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;用例的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;156&#34;
+		data-flex-basis=&#34;374px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;参与者：是与系统交互的&lt;strong&gt;外部实体&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;参与者用一个&lt;u&gt;人形图标&lt;/u&gt;表示。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;关系：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;用例之间的关系：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;包含关系：用带&lt;code&gt;&amp;lt;&amp;lt;include&amp;gt;&amp;gt;&lt;/code&gt;的虚线箭头表示，如：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684578078948.png&#34;
+	width=&#34;613&#34;
+	height=&#34;182&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684578078948_hubb51fa3891e688e7291daaa781680867_10772_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684578078948_hubb51fa3891e688e7291daaa781680867_10772_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;包含关系&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;336&#34;
+		data-flex-basis=&#34;808px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;扩展关系：用带&lt;code&gt;&amp;lt;&amp;lt;extend&amp;gt;&amp;gt;&lt;/code&gt;的虚线箭头表示，如：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684578542547.png&#34;
+	width=&#34;607&#34;
+	height=&#34;136&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684578542547_hu0236ed30d2e6f19ac3b3e55246e9489d_7977_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684578542547_hu0236ed30d2e6f19ac3b3e55246e9489d_7977_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;扩展关系&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;446&#34;
+		data-flex-basis=&#34;1071px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;扩展用例是指，一个用例中，符合某些特定情况才会触发的另一个用例。&lt;/p&gt;
+&lt;p&gt;即一个用例执行的时候，可能会发生一些特殊情况或可选情况，这种情况就是这个用例的扩展用例。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;参与者和用例之间的关联关系。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用例与用例以及参与者与参与者之间的泛化关系。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682062071630.png&#34;
+	width=&#34;756&#34;
+	height=&#34;382&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682062071630_hue8ceb70c383d5b84d539f99bc1fa6287_66549_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682062071630_hue8ceb70c383d5b84d539f99bc1fa6287_66549_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;用例图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;197&#34;
+		data-flex-basis=&#34;474px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;h3 id=&#34;序列图&#34;&gt;序列图&lt;/h3&gt;
+&lt;p&gt;序列图（Sequence Diagram，&lt;strong&gt;顺序图&lt;/strong&gt;）&lt;u&gt;描述了以时间顺序组织的对象之间的交互活动&lt;/u&gt;，&lt;u&gt;强调消息时间顺序&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;序列图的组成：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;把参加交互的对象放在图的上方，沿水平方向排列。&lt;/p&gt;
+&lt;p&gt;通常把发起交互的对象放在左边，下级对象依次放在右边。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;把这些对象发送和接收的消息，沿垂直方向，按时间顺序从上到下放置。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682064874751.png&#34;
+	width=&#34;691&#34;
+	height=&#34;471&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682064874751_hu9f8f021651236d17904ea27f843ab916_52872_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682064874751_hu9f8f021651236d17904ea27f843ab916_52872_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;序列图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;146&#34;
+		data-flex-basis=&#34;352px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;序列图的组成部分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;对象：用方框框起来的&lt;code&gt;对象名:类名&lt;/code&gt;，没有属性和方法等成分。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;对象生命线&lt;/strong&gt;：表示&lt;u&gt;一个对象存在的时间段&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;如上图中对象下方垂直的虚线。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对象可以在交互过程中创建：生命线从接收到构造型&lt;code&gt;create&lt;/code&gt;消息开始；&lt;/li&gt;
+&lt;li&gt;也可以在交互过程中撤销：生命线从接收到构造型&lt;code&gt;destroy&lt;/code&gt;消息结束，并且给出一个大$\times$的标记表明生命线的结束。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;控制焦点&lt;/strong&gt;：控制焦点表示&lt;u&gt;一个对象执行一个动作所经历的时间段&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;如上图中对象下方的空表矩形条框。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;消息&lt;/strong&gt;：&lt;/p&gt;
+&lt;p&gt;普通的消息用&lt;u&gt;带箭头的实线&lt;/u&gt;表示。所有消息的箭头都是指向接收对象。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;返回消息：用&lt;u&gt;带箭头的虚线&lt;/u&gt;表示。&lt;/li&gt;
+&lt;li&gt;同步消息（调用消息）：指消息发送给接收对象后，需要等待接收对象返回后才可进行下一步操作。&lt;/li&gt;
+&lt;li&gt;异步消息：指消息发送给接收对象后，无需等待接收对象返回即可进行下一步操作。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;序列图有两个不同于通信图的特性：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;序列图有对象生命线；&lt;/li&gt;
+&lt;li&gt;序列图有控制焦点。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;通信图&#34;&gt;通信图&lt;/h3&gt;
+&lt;p&gt;&lt;u&gt;通信图&lt;/u&gt;（Communication Diagram，&lt;strong&gt;协作图&lt;/strong&gt;）&lt;u&gt;强调收发消息的对象的结构组织&lt;/u&gt;。通信图&lt;u&gt;强调参加交互的对象的组织&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;通信图的组成：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;将参加交互的&lt;u&gt;对象&lt;/u&gt;作为图的&lt;u&gt;顶点&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;把连接这些对象的&lt;u&gt;链&lt;/u&gt;表示为图的&lt;u&gt;弧&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;用对象发送和接收的&lt;u&gt;消息&lt;/u&gt;来&lt;u&gt;修饰这些链&lt;/u&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682065157645.png&#34;
+	width=&#34;719&#34;
+	height=&#34;314&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682065157645_hu479fbd97a58f555006937d3c577e3006_30791_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682065157645_hu479fbd97a58f555006937d3c577e3006_30791_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;通信图&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;228&#34;
+		data-flex-basis=&#34;549px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;通信图有以下成分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;对象：与序列图一样，是用一个方框框起来的&lt;code&gt;对象名:类名&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;路径（链接）：用实线表示，可以在链的末端附上一个路径构造型。&lt;/p&gt;
+&lt;p&gt;通常仅需显式地表示以下几种链的路径：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;构造型&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;&amp;lt;&amp;lt;local&amp;gt;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;局部&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;&amp;lt;&amp;lt;parameter&amp;gt;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;参数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;&amp;lt;&amp;lt;global&amp;gt;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;全局&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;&amp;lt;&amp;lt;self&amp;gt;&amp;gt;&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;自身&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;不必表示&lt;code&gt;association&lt;/code&gt;（关联）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;序号：用来表示消息的时间顺序。是消息前的一个数字前缀，可使用带小数点的号码表示嵌套消息，嵌套可为任意深度。&lt;/p&gt;
+&lt;p&gt;如2表示第2个消息，2.1表示嵌套在消息2中的第1个消息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;消息：沿同一个链可以显示许多消息（可能发自不同方向），并且每个消息都有唯一的序号。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;通信图有两个不同于序列图的特性：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;通信图有路径；&lt;/li&gt;
+&lt;li&gt;通信图有序号。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;状态图&#34;&gt;状态图&lt;/h3&gt;
+&lt;p&gt;状态图（State Diagram，状态转换图）关注&lt;u&gt;系统的动态视图&lt;/u&gt;，&lt;u&gt;强调对象行为的事件顺序&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;状态图由以下组成：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;状态&lt;/strong&gt;：指对象的生命周期中某个条件或者状态，是&lt;u&gt;任何可以被观察到的系统行为模式&lt;/u&gt;，&lt;u&gt;一个状态代表系统的一种行为模式&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;状态规定了系统内对事件的响应方式。&lt;/p&gt;
+&lt;p&gt;系统对事件的响应：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以是&lt;u&gt;做一个（或一系列）动作&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;可以是仅仅&lt;u&gt;改变系统本身的状态&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;可以是&lt;u&gt;即改变状态，又做动作&lt;/u&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;状态转换图中定义的状态主要有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;初态&lt;/strong&gt;（初始状态）：用一个&lt;u&gt;实心圆点&lt;/u&gt;表示。一张状态图&lt;u&gt;只能有一个初态&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;终态&lt;/strong&gt;（最终状态）：用一个&lt;u&gt;实心圆点外加一个圆圈&lt;/u&gt;表示。一张状态图&lt;u&gt;可以没有终态，也可以有多个&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;中间状态&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;状态图中的状态用一个&lt;u&gt;圆角矩形&lt;/u&gt;表示，可以用两条水平横线将其分为上中下3个部分：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;上面部分（必须）：状态的名称；&lt;/li&gt;
+&lt;li&gt;中间部分（可选）：状态变量的名称和值；&lt;/li&gt;
+&lt;li&gt;下面部分（可选）：活动表。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;状态还可分为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;简单状态。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;组合状态：含有子状态的状态，这个状态也称为其子状态的超状态。&lt;/p&gt;
+&lt;p&gt;子状态：嵌套在另外一个状态中的状态。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;转换&lt;/strong&gt;（迁移）：是两个状态之间的一种关系，表示对象将在源状态中执行一定的动作，并在某个特定事件发生，而且某个特定的警界（监护）条件满足时进入目标状态。&lt;/p&gt;
+&lt;p&gt;状态转换用一条&lt;u&gt;带箭头的实线&lt;/u&gt;表示。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;事件&lt;/strong&gt;：是在某个特定时刻发生的事情，&lt;u&gt;它是对引起系统做动作或（和）从一个状态转换到另个状态的外界事件的抽象&lt;/u&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;u&gt;事件触发&lt;/u&gt;状态转换：&lt;u&gt;状态变迁通常是由事件触发的。&lt;/u&gt;状态之间带箭头实线上的事件发生时，状态转换开始（还可称之为状态“点火”或状态被“触发”）。&lt;/p&gt;
+&lt;p&gt;这种情况下应在表达状态转换的箭头线上标出触发转换的&lt;u&gt;事件表达式&lt;/u&gt;：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;事件说明 [守卫条件] / 动作表达式
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;事件说明的语法为：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;事件名 (参数表)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;守卫条件（监护条件）：一个布尔表达式。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;当且仅当事件发生且守卫条件为真时，状态转换才发生；&lt;/li&gt;
+&lt;li&gt;只有守卫条件没有事件说明时，只要守卫条件为真，状态转换就发生。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;动作表达式是一个过程表达式，当状态转换（事件）开始时执行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;u&gt;自动触发&lt;/u&gt;状态转换：如果箭头线上未标明事件，则表示&lt;u&gt;在源状态的内部活动执行完之后自动触发转换&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684587930655.png&#34;
+	width=&#34;717&#34;
+	height=&#34;135&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684587930655_hub194f1dce76ed4c99298044c9667a40d_7727_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684587930655_hub194f1dce76ed4c99298044c9667a40d_7727_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;状态图中的事件和转换&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;531&#34;
+		data-flex-basis=&#34;1274px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;活动&lt;/strong&gt;：指状态中的活动表中的活动。&lt;/p&gt;
+&lt;p&gt;语法如下：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;事件名 (参数表) /动作表达式
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;事件名：可以是任何事件的名称。&lt;/p&gt;
+&lt;p&gt;在活动表中经常使用以下3中标准事件：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;事件名&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;含义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;entry&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;u&gt;入口动作&lt;/u&gt;，指定&lt;u&gt;进入该状态&lt;/u&gt;的动作，立即执行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;exit&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;u&gt;出口动作&lt;/u&gt;，指定&lt;u&gt;退出该状态&lt;/u&gt;的动作，立即执行&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;code&gt;do&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;u&gt;内部活动&lt;/u&gt;，指定&lt;u&gt;在该状态下&lt;/u&gt;的动作，占有有限时间，并可中断地工作&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;活动（动作）可以在状态内执行，也可以在状态转换（迁移）时执行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682066287326.png&#34;
+	width=&#34;831&#34;
+	height=&#34;431&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682066287326_hu94ea09022f5bcd63fe669c1e18a4beb2_47522_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682066287326_hu94ea09022f5bcd63fe669c1e18a4beb2_47522_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;状态图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;192&#34;
+		data-flex-basis=&#34;462px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;当状态图对系统、类或用例的动态方面建模时，通常是对反应型对象建模。&lt;/p&gt;
+&lt;h3 id=&#34;活动图&#34;&gt;活动图&lt;/h3&gt;
+&lt;p&gt;活动图（Activity Diagram）是一种特殊的状态图，它&lt;u&gt;展现了在系统内从一个活动到另一个活动的流程&lt;/u&gt;。活动图&lt;u&gt;专注于系统的动态视图&lt;/u&gt;，&lt;u&gt;强调对象间的控制流程&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682067363114.png&#34;
+	width=&#34;654&#34;
+	height=&#34;744&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682067363114_hua57a5009862c06a77af06a14b99cf391_95291_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682067363114_hua57a5009862c06a77af06a14b99cf391_95291_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;活动图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;87&#34;
+		data-flex-basis=&#34;210px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;活动图一般包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;状态：&lt;/p&gt;
+&lt;p&gt;活动图的状态也包含初态和终态。其余的状态还可分为：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;动作状态：不能被分解，动作不能被中断。&lt;/li&gt;
+&lt;li&gt;活动状态：能够被进一步分解，可以被中断，其活动由其它的活动图来表示。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;流（转换）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;对象。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;活动图可以表示：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;分支（判断）：分支的流上用&lt;code&gt;[]&lt;/code&gt;标记的是监护表达式；&lt;/li&gt;
+&lt;li&gt;（并发）分岔：将一个流分为多个可并发执行的流；&lt;/li&gt;
+&lt;li&gt;（并发）汇合：将分岔出去的多个流合并为同一个流。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当对一个系统的动态方面建模时，有以下几种使用活动图的方式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;对工作流建模；&lt;/li&gt;
+&lt;li&gt;对操作建模；&lt;/li&gt;
+&lt;li&gt;对业务的复杂流程建模。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;构件图&#34;&gt;构件图&lt;/h3&gt;
+&lt;p&gt;构件图（Component Diagram，&lt;strong&gt;组件图&lt;/strong&gt;）展现了&lt;u&gt;一组构件之间的组织和依赖&lt;/u&gt;。构件图&lt;u&gt;专注于系统的静态实现视图&lt;/u&gt;，它&lt;u&gt;与类图相关，通常把构件映射为一个或多个类、接口或协作&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682068370459.png&#34;
+	width=&#34;638&#34;
+	height=&#34;332&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682068370459_hue00d8420ae8e9d060383db5e372a8f97_47534_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682068370459_hue00d8420ae8e9d060383db5e372a8f97_47534_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;构件图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;192&#34;
+		data-flex-basis=&#34;461px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;构件图的成分有：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;构件：用&lt;u&gt;矩形&lt;/u&gt;表示，在矩形&lt;u&gt;右上方有一个小标记&lt;/u&gt;。&lt;/li&gt;
+&lt;li&gt;供接口：用一个&lt;u&gt;&lt;strong&gt;圆圈&lt;/strong&gt;和连接到构件上的实线&lt;/u&gt;表示。构件提供接口给其它构件使用。&lt;/li&gt;
+&lt;li&gt;需接口：用一个&lt;u&gt;&lt;strong&gt;半圆&lt;/strong&gt;和连接到构件上的实线&lt;/u&gt;表示。构件使用需接口表示需要调用其它构件提供接口。&lt;/li&gt;
+&lt;li&gt;依赖：将供接口（圆圈）和虚接口（半圆）连接到一起，表示两个构件通过这个接口相依赖。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;部署图&#34;&gt;部署图&lt;/h3&gt;
+&lt;p&gt;部署图（Deployment Diagram）是用来&lt;u&gt;对面向对象系统的&lt;strong&gt;物理方面&lt;/strong&gt;建模&lt;/u&gt;的方法，展现了运行时处理结点以及其中构件（制品）的配置。部署图&lt;u&gt;对系统的静态部署视图进行建模&lt;/u&gt;，它与构件图相关。&lt;/p&gt;
+&lt;p&gt;部署图&lt;u&gt;展现了系统的软件和硬件之间的关系，在实施阶段使用&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682073176388.png&#34;
+	width=&#34;491&#34;
+	height=&#34;327&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682073176388_hu28a5a922204a8226fa8f8a21e50bdfbf_36398_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682073176388_hu28a5a922204a8226fa8f8a21e50bdfbf_36398_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;部署图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;360px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;&amp;lt;&amp;lt;artifact&amp;gt;&amp;gt;&lt;/code&gt;表示制品。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;总结&#34;&gt;总结&lt;/h3&gt;
+&lt;p&gt;UML图分类：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;UML图&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;静态建模&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;动态建模&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;物理建模&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;类图&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\checkmark$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;对象图&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\checkmark$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;用例图&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\checkmark$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;构件图（组件图)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\checkmark$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\checkmark$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;部署图&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\checkmark$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\checkmark$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;序列图（顺序图，时序图）&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\checkmark$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;通信图（协作图）&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\checkmark$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;状态图&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\checkmark$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;活动图&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\checkmark$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$\times$&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;类图成分总结：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;名称&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;图示&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;类&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684650129674.png&#34;
+	width=&#34;142&#34;
+	height=&#34;139&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684650129674_hucae45be9ae605ee21a469444ed126234_7038_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684650129674_hucae45be9ae605ee21a469444ed126234_7038_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;类图中的类的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;102&#34;
+		data-flex-basis=&#34;245px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;接口&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684570786524.png&#34;
+	width=&#34;135&#34;
+	height=&#34;74&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684570786524_hu5845e575cae00345fed5de09da321787_3491_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684570786524_hu5845e575cae00345fed5de09da321787_3491_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;类图接口的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;182&#34;
+		data-flex-basis=&#34;437px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;协作&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684570820946.png&#34;
+	width=&#34;107&#34;
+	height=&#34;67&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684570820946_huaaba4fad0440f7f5bf987a2dd4b8f107_2415_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684570820946_huaaba4fad0440f7f5bf987a2dd4b8f107_2415_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;协作的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;159&#34;
+		data-flex-basis=&#34;383px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;依赖&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057108089.png&#34;
+	width=&#34;200&#34;
+	height=&#34;48&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057108089_hufef657bed6e876bd373e5f4bb9f34af6_1059_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057108089_hufef657bed6e876bd373e5f4bb9f34af6_1059_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;依赖的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;416&#34;
+		data-flex-basis=&#34;1000px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;泛化&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057764410.png&#34;
+	width=&#34;162&#34;
+	height=&#34;53&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057764410_huaf9267ff556daac18150e46c6cbbde24_1023_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057764410_huaf9267ff556daac18150e46c6cbbde24_1023_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;泛化的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;305&#34;
+		data-flex-basis=&#34;733px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;关联&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682057458153.png&#34;
+	width=&#34;408&#34;
+	height=&#34;101&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682057458153_hu37f2bf65b423a501f386d9709f6e6bc4_8075_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682057458153_hu37f2bf65b423a501f386d9709f6e6bc4_8075_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;关联图形化表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;403&#34;
+		data-flex-basis=&#34;969px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;用例图成分总结：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;名称&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;图示&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;用例&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684574449513.png&#34;
+	width=&#34;114&#34;
+	height=&#34;73&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684574449513_hu50f432d3b590de151e3190057472158d_3109_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684574449513_hu50f432d3b590de151e3190057472158d_3109_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;用例的图形表示&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;156&#34;
+		data-flex-basis=&#34;374px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;包含关系&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684578078948.png&#34;
+	width=&#34;613&#34;
+	height=&#34;182&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684578078948_hubb51fa3891e688e7291daaa781680867_10772_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684578078948_hubb51fa3891e688e7291daaa781680867_10772_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;用例之间的包含关系&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;336&#34;
+		data-flex-basis=&#34;808px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;扩展关系&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684578542547.png&#34;
+	width=&#34;607&#34;
+	height=&#34;136&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684578542547_hu0236ed30d2e6f19ac3b3e55246e9489d_7977_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1684578542547_hu0236ed30d2e6f19ac3b3e55246e9489d_7977_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;用例之间的扩展关系&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;446&#34;
+		data-flex-basis=&#34;1071px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;泛化关系&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057764410.png&#34;
+	width=&#34;162&#34;
+	height=&#34;53&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057764410_huaf9267ff556daac18150e46c6cbbde24_1023_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682057764410_huaf9267ff556daac18150e46c6cbbde24_1023_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;用例与用例以及参与者与参与者之间的泛化关系&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;305&#34;
+		data-flex-basis=&#34;733px&#34;
+	
+&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;交互图中，顺序图和通信图是同构的，它们之间可以相互转换。它们的差异如下：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;差异&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;center&gt;序列图&lt;/center&gt;&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;&lt;center&gt;通信图&lt;/center&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;强调&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;center&gt;消息时间顺序&lt;/center&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;center&gt;收发消息的对象的结构组织&lt;/center&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;strong&gt;不同的特性&lt;/strong&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;ul&gt;&lt;li&gt;有对象生命线：对象存在的时间段&lt;/li&gt;&lt;li&gt;有控制焦点：对象执行动作所经历的时间段&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;ul&gt;&lt;li&gt;有路径：表示对象之间有交互&lt;/li&gt;&lt;li&gt;有序号：表示消息的时间顺序，可嵌套表示&lt;/li&gt;&lt;/ul&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;活动图是一种特殊的状态图，它们的差异如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;相同点：状态中都有初态和终态。&lt;/li&gt;
+&lt;li&gt;主要差异：
+&lt;ul&gt;
+&lt;li&gt;活动图的转换称为流；&lt;/li&gt;
+&lt;li&gt;活动图有分支、并发分岔和并发汇合。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;以下是UML图的总结：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;类图&lt;/strong&gt;：展现一组&lt;u&gt;对象（类）&lt;/u&gt;、&lt;u&gt;接口&lt;/u&gt;、&lt;u&gt;协作&lt;/u&gt;和它们之间的&lt;u&gt;关系&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682061210921.png&#34;
+	width=&#34;619&#34;
+	height=&#34;467&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682061210921_hub4b131b7f109e06635ca875a61e12a0b_45450_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682061210921_hub4b131b7f109e06635ca875a61e12a0b_45450_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;类图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;132&#34;
+		data-flex-basis=&#34;318px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;对象图&lt;/strong&gt;：展现某一时刻的一组&lt;u&gt;对象&lt;/u&gt;以及它们之间的&lt;u&gt;关系&lt;/u&gt;，描述了在类图中所建立事物的实例的静态快照&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682061786263.png&#34;
+	width=&#34;713&#34;
+	height=&#34;312&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682061786263_hua46f494b700cf1a0ac17d6d1520c7d36_50579_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682061786263_hua46f494b700cf1a0ac17d6d1520c7d36_50579_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;对象图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;228&#34;
+		data-flex-basis=&#34;548px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;用例图&lt;/strong&gt;：展现了一组&lt;u&gt;用例&lt;/u&gt;、&lt;u&gt;参与者&lt;/u&gt;以及它们之间的&lt;u&gt;关系（包含、扩展、关联和泛化）&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682062071630.png&#34;
+	width=&#34;756&#34;
+	height=&#34;382&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682062071630_hue8ceb70c383d5b84d539f99bc1fa6287_66549_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682062071630_hue8ceb70c383d5b84d539f99bc1fa6287_66549_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;用例图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;197&#34;
+		data-flex-basis=&#34;474px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;序列图（顺序图，时序图）&lt;/strong&gt;：描述了以&lt;u&gt;时间顺序&lt;/u&gt;组织的&lt;u&gt;对象&lt;/u&gt;之间的&lt;u&gt;交互活动&lt;/u&gt;，强调&lt;u&gt;消息时间顺序&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682064874751.png&#34;
+	width=&#34;691&#34;
+	height=&#34;471&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682064874751_hu9f8f021651236d17904ea27f843ab916_52872_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682064874751_hu9f8f021651236d17904ea27f843ab916_52872_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;序列图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;146&#34;
+		data-flex-basis=&#34;352px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;通信图（协作图）&lt;/strong&gt;：强调&lt;u&gt;收发消息的对象的结构组织&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682065157645.png&#34;
+	width=&#34;719&#34;
+	height=&#34;314&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682065157645_hu479fbd97a58f555006937d3c577e3006_30791_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682065157645_hu479fbd97a58f555006937d3c577e3006_30791_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;通信图&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;228&#34;
+		data-flex-basis=&#34;549px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;状态图（状态转换图）&lt;/strong&gt;：展现了一个状态机，强调&lt;u&gt;对象行为的事件顺序&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682066287326.png&#34;
+	width=&#34;831&#34;
+	height=&#34;431&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682066287326_hu94ea09022f5bcd63fe669c1e18a4beb2_47522_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682066287326_hu94ea09022f5bcd63fe669c1e18a4beb2_47522_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;状态图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;192&#34;
+		data-flex-basis=&#34;462px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;活动图&lt;/strong&gt;：一种特殊的状态图，展现了在&lt;u&gt;系统内从一个活动到另一个活动的流程&lt;/u&gt;，强调&lt;u&gt;对象间的控制流程&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682067363114.png&#34;
+	width=&#34;654&#34;
+	height=&#34;744&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682067363114_hua57a5009862c06a77af06a14b99cf391_95291_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/1682067363114_hua57a5009862c06a77af06a14b99cf391_95291_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;活动图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;87&#34;
+		data-flex-basis=&#34;210px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;构件图（组件图)&lt;/strong&gt;：展现了一组&lt;u&gt;构件之间的组织和依赖&lt;/u&gt;，将构件映射为类、接口或协作&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682068370459.png&#34;
+	width=&#34;638&#34;
+	height=&#34;332&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682068370459_hue00d8420ae8e9d060383db5e372a8f97_47534_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682068370459_hue00d8420ae8e9d060383db5e372a8f97_47534_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;构件图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;192&#34;
+		data-flex-basis=&#34;461px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;部署图&lt;/strong&gt;：对物理建模，展现了&lt;u&gt;运行时处理结点以及其中构件（制品）的配置&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682073176388.png&#34;
+	width=&#34;491&#34;
+	height=&#34;327&#34;
+	srcset=&#34;https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682073176388_hu28a5a922204a8226fa8f8a21e50bdfbf_36398_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%BD%AF%E8%80%83%E5%9B%BE%E7%B1%BB%E6%B1%87%E6%80%BB%E7%AF%87/uTools_1682073176388_hu28a5a922204a8226fa8f8a21e50bdfbf_36398_1024x0_resize_box_3.png 1024w&#34;
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;部署图示例&#34;
+	
+	
+		class=&#34;gallery-image&#34; 
+		data-flex-grow=&#34;150&#34;
+		data-flex-basis=&#34;360px&#34;
+	
+&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h1 id=&#34;软件工程&#34;&gt;软件工程&lt;/h1&gt;
+&lt;h2 id=&#34;沟通路径&#34;&gt;沟通路径&lt;/h2&gt;
+&lt;p&gt;沟通图是指项目中人员或部门之间的沟通用一条无向边连接起来，所构成图即为沟通图。沟通图中的路径称为沟通路径。&lt;/p&gt;
+&lt;p&gt;软件项目中沟通路径$m$的计算公式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;沟通图中无主程序员时：&lt;/p&gt;
+&lt;p&gt;$$
+m = \sum_{i=1}^{n} i-1 = \cfrac{(n-1)n}{2}
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;沟通图中有主程序员时：&lt;/p&gt;
+&lt;p&gt;$$
+m = n - 1
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;gantt图&#34;&gt;Gantt图&lt;/h2&gt;
+&lt;p&gt;Gantt图：一种&lt;u&gt;简单的水平条形图&lt;/u&gt;，它&lt;u&gt;以日历为基准&lt;/u&gt;描述项目任务。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;垂直轴：表示&lt;u&gt;多个不同的任务&lt;/u&gt;，每个任务按照左侧任务名称垂直排列。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;水平轴：表示&lt;u&gt;日历时间线&lt;/u&gt;（如时、天、周、月和年等）。&lt;/p&gt;
+&lt;p&gt;每个水平条表示一个任务：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每一水平条的&lt;u&gt;起点&lt;/u&gt;：表示该任务的&lt;u&gt;开始时间&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;每一水平条的&lt;u&gt;终点&lt;/u&gt;：表示该任务的&lt;u&gt;结束时间&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;每一水平条的&lt;u&gt;长度&lt;/u&gt;：表示&lt;u&gt;完成该任务的持续时间&lt;/u&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;当日历中同一时段存在多个水平条时，表示任务之间的并发。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/uTools_1683683731050.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Gantt图示例&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Gantt图优点：&lt;/p&gt;
+&lt;p&gt;能清晰地描述：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;每个任务的开始时间；&lt;/li&gt;
+&lt;li&gt;每个任务的结束时间；&lt;/li&gt;
+&lt;li&gt;任务的进展情况；&lt;/li&gt;
+&lt;li&gt;各个任务之间的并行性。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Gantt图缺点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;不能清晰地反映各任务之间的&lt;u&gt;依赖关系&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;难以确定&lt;u&gt;整个项目的关键所在&lt;/u&gt;，即不能清晰地确定影响进度的&lt;u&gt;关键任务&lt;/u&gt;；&lt;/li&gt;
+&lt;li&gt;不能反映&lt;u&gt;计划中有潜力的部分&lt;/u&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;pert图&#34;&gt;PERT图&lt;/h2&gt;
+&lt;p&gt;PERT图是一个&lt;u&gt;有向图&lt;/u&gt;：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;弧&lt;/strong&gt;：表示&lt;strong&gt;任务&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;任务包含以下成分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;u&gt;完成该任务所需的时间&lt;/u&gt;（任务持续时间）。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;u&gt;松弛时间&lt;/u&gt;（Slack Time）：表示在&lt;u&gt;不影响整个工期的前提下完成该任务有多少机动余地&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;即松弛时间指当前任务的工期可以推迟的时间。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;空任务：用虚线箭头表示，表示任务间的关系所添加。完成空任务的所需时间为0。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;结点&lt;/strong&gt;：表示&lt;strong&gt;事件&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;事件是流入结点的任务的结束，或流出结点的任务的开始。事件&lt;u&gt;表示某个时间点&lt;/u&gt;，本身不消耗时间和资源。&lt;/p&gt;
+&lt;p&gt;事件包含以下成分：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;事件号。&lt;/li&gt;
+&lt;li&gt;出现该事件的&lt;strong&gt;最早时刻&lt;/strong&gt;：表示在此时刻之前从该事件出发的任务不可能开始。&lt;/li&gt;
+&lt;li&gt;出现该事件的&lt;strong&gt;最迟时刻&lt;/strong&gt;：表示从该事件出发的任务最迟在此时刻开始，否则整个工程就不能如期完成。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;u&gt;只有当流入该结点的所有任务都结束时，结点所表示的事件才出现，流出结点的任务才可以开始。&lt;/u&gt;&lt;/p&gt;
+&lt;p&gt;特殊的事件：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;开始事件：没有任何任务流向该事件；&lt;/li&gt;
+&lt;li&gt;结束事件：没有任务任务从该事件流出。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;一个项目是从开始事件开始到结束事件结束。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/uTools_1683684995281.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;PERT图示例&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;设：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;$T(e)$：完成任务$e$的所需时间；&lt;/li&gt;
+&lt;li&gt;$T_s(e)$：完成任务$e$的松弛时间；&lt;/li&gt;
+&lt;li&gt;$T_e(v)$：事件$v$的最早时刻；&lt;/li&gt;
+&lt;li&gt;$T_l(v)$：事件$v$的最迟时刻。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;PERT图各成分取值（不一定需要满足下面的关系，但是可以用下面的式子推出）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;事件$V_{in}$的&lt;u&gt;最早时刻&lt;/u&gt;$T_e(V_{in})$：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;只有一个任务流入时，设该任务的流出事件为$V_{out}$，则该任务为$&amp;lt;V_{out}, V_{in}&amp;gt;$：&lt;/p&gt;
+&lt;p&gt;$$
+T_e(V_{in}) = T_e(V_{out}) + T
+$$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里将$T(&amp;lt;V_{out}, V_{in}&amp;gt;)$简写为了$T$。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;即：&lt;u&gt;该流入任务的流出事件的最早时刻&lt;/u&gt; + &lt;u&gt;完成该流入任务的所需时间&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多个任务流入时，设与每个任务相对应的流出事件为$V_{out}[ \ i \ ]$，则这些任务为$&amp;lt;V_{out}[ \ i \ ], V_{in}&amp;gt;$：&lt;/p&gt;
+&lt;p&gt;$$
+T_e(V_{in}) = Max(T_e(V_{out}[ \ i \ ]) + T_i)
+$$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里将$T(&amp;lt;V_{out}[ \ i \ ], V_{in}&amp;gt;)$简写为了$T_i$。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;即&lt;u&gt;流入该事件的每个任务计算出的最早时刻的最大值&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;开始事件$V_{start}$：&lt;/p&gt;
+&lt;p&gt;$$
+T_e(V_{start}) = 0
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;事件$V_{out}$的&lt;u&gt;最迟时刻&lt;/u&gt;$T_l(V_{out})$：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;只有一个任务流出时，设该任务的流入事件为$V_{in}$，则该任务为$&amp;lt;V_{out}, V_{in}&amp;gt;$：&lt;/p&gt;
+&lt;p&gt;$$
+T_l(V_{out}) = T_l(V_{in}) - (T + T_s)
+$$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里将$T_s(&amp;lt;V_{out}, V_{in}&amp;gt;)$简写为$T_s$。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;即：&lt;u&gt;该流出任务的流入事件的最迟时刻&lt;/u&gt; -（&lt;u&gt;该流出任务的所需时间&lt;/u&gt; + &lt;u&gt;松弛时间&lt;/u&gt;）。&lt;/p&gt;
+&lt;p&gt;如果松弛时间未知或为0：&lt;/p&gt;
+&lt;p&gt;$$
+T_l(V_{out}) = T_l(V_{in}) - T
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;多个任务流出时，设与每个任务相对应的流入事件为$V_{in}[ \ i \ ]$，则这些任务为$&amp;lt;V_{out}, V_{in}[ \ i \ ]&amp;gt;$：&lt;/p&gt;
+&lt;p&gt;$$
+T_l(V_{out}) = Min(T_l(V_{in}[ \ i \ ]) - (T_i + S_i))
+$$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里把$T(&amp;lt;V_{out}, V_{in}[ \ i \ ]&amp;gt;)$简写为$T_i$，把$T_s(&amp;lt;V_{out}, V_{in}[ \ i \ ]&amp;gt;)$简写为$S_i$。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;即&lt;u&gt;流出该事件的每个任务计算出的最晚时刻的最大值&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;如果松弛时间未知或为0：&lt;/p&gt;
+&lt;p&gt;$$
+T_l(V_{out}) = Min(T_l(V_{in}[ \ i \ ]) - T_i)
+$$&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;结束事件$V_{end}$：&lt;/p&gt;
+&lt;p&gt;$$
+T_l(V_{end}) = T_e(V_{end})
+$$&lt;/p&gt;
+&lt;p&gt;即&lt;u&gt;结束事件的最早时刻与最迟时刻相等&lt;/u&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;设某任务的流入事件为$V_{in}$，流出事件为$V_{out}$，则该任务$&amp;lt;V_{out}, V_{in}&amp;gt;$的&lt;u&gt;松弛时间&lt;/u&gt;$T_s(&amp;lt;V_{out}, V_{in}&amp;gt;)$。&lt;/p&gt;
+&lt;p&gt;$$
+T_s = T_l(V_{in}) - T - T_e(V_{out})
+$$&lt;/p&gt;
+&lt;p&gt;即，该任务的流入事件的最迟时刻 - 该任务的所需时间 - 该任务的流出事件的最早时刻&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/uTools_1683719224977.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;PERT图公式参照图&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;PERT图的路径：从开始事件到结束事件的一条通路。&lt;/p&gt;
+&lt;p&gt;PERT图的&lt;strong&gt;关键路径&lt;/strong&gt;：指&lt;u&gt;所有的任务的松弛时间都为0的路径&lt;/u&gt;。&lt;/p&gt;
+&lt;p&gt;关键路径的长度：指结束事件的最早（或最晚）时刻。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/uTools_1683706944555.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;PERT图的关键路径示例&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;关键路径的特点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;所有任务的松弛时间都为0。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;每个事件的最早时刻和最迟时刻都是相等的。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;所有任务持续时间的和，是PERT图所有路径中最大的，并且与结束事件的最早时刻（或最晚时刻）相等。&lt;/p&gt;
+&lt;p&gt;设关键路径中所有事件为$V_i$（$i = 1, 2, \cdots, n$），且该路径下的任务为$&amp;lt;V_j, V_{j+1}&amp;gt;$（$1 \le j \le n-1$）（表示$V_1$是开始事件，$V_2$是$V_1$往下的一个事件，以此类推，$V_n$是结束事件），那么该关键路径结束事件的最早时刻（或最晚时刻）为：&lt;/p&gt;
+&lt;p&gt;$$
+T_e(V_n) = \sum_{i = 1}^{n-1} T_i
+$$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里$T_i$代表$T(&amp;lt;V_i, V_{i+1}&amp;gt;)$。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;最迟时刻的另一种求法（PERT图存在关键路径的情况下）：&lt;/p&gt;
+&lt;p&gt;已知某PERT图结束事件的最晚时刻（最早时刻），该PERT图中某一条路径（假设该路径没有分支）中所有事件为$V_j$（$j = 1, 2, \cdots, n$），且该路径下的任务为$&amp;lt;V_k, V_{k+1}&amp;gt;$（$1 \le k \le n-1$），该路径下任务的持续时间$T(&amp;lt;V_{k-1}, V_k&amp;gt;)$已知，（即$V_1$是开始事件，按照次序往下，$V_n$是结束事件），计算某一事件的最迟时刻$T_l(V_i)$（$1 \le i &amp;lt; n$）：&lt;/p&gt;
+&lt;p&gt;$$
+T_l(V_i) = T_l(V_n) - \sum_{j = i}^{n - 1} T_j
+$$&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这里$T_j$代表$T(&amp;lt;V_j, V_{j + 1}&amp;gt;)$。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;即：&lt;u&gt;结束事件的最晚时刻&lt;/u&gt; - &lt;u&gt;该事件到结束事件之间所有的任务的持续时间总和&lt;/u&gt;。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意：如果事件$V_i$到结束事件之间存在多条路径，应该选择那条任务持续时间总和最大的路径。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;PERT图的优点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;给出了每个任务的开始时间、结束时间和完成该任务所需的时间；&lt;/li&gt;
+&lt;li&gt;给出了任务之间的关系（依赖关系）。即任务之间的执行顺序。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;PERT图不能清晰地描述任务之间的并行情况。&lt;/p&gt;
+&lt;h2 id=&#34;项目活动图&#34;&gt;项目活动图&lt;/h2&gt;
+&lt;p&gt;项目活动图是一种有向图（与PERT图十分类似）：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;弧：表示活动。弧的权值表示活动的持续时间。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;顶点：表示项目里程碑。&lt;/p&gt;
+&lt;p&gt;特殊的里程碑：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;开始里程碑：没有任何活动指向该里程碑；&lt;/li&gt;
+&lt;li&gt;结束里程碑：没有任何活动从该里程碑指出。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;项目活动图的关键路径：按照PERT图的方法求出松弛时间为0的、从开始里程碑到结束里程碑的路径。&lt;/p&gt;
+&lt;p&gt;关键路径的长度：为结束里程碑的最早时刻（或最晚时刻）。它可以用来表示项目完成的最少时间。&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
