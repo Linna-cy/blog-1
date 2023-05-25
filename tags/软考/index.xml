@@ -15183,10 +15183,22 @@ $$&lt;/p&gt;
 &lt;li&gt;若序列的上一个进程为$P_5$，序列的第3个进程为$P_2$。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;此时，无论当前序列为$&amp;lt;P_4, P_2, P_5&amp;gt;$还是$&amp;lt;P_4, P_5, P_2&amp;gt;$，它们执行完序列的第3个进程后，系统可用资源数都为：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; $R_1$|$R_2$|$R_3$
- :---:|:---:|:---:
- 5    |5    |3
-&lt;/code&gt;&lt;/pre&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$R_1$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$R_2$&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;$R_3$&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;5&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;5&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;3&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;根据上一步的系统可用资源数，上一步所得的两个序列的第4个进程都为$P_1$。&lt;/p&gt;
