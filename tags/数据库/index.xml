@@ -3038,8 +3038,6 @@ $$&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;$\pi()$运算是投影运算。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;例如$\pi_{R1}(r)$，表示关系$r$在$R_1$上的投影。
-&lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;$\Join$运算是自然连接运算。&lt;/p&gt;
