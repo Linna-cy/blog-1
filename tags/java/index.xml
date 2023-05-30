@@ -1259,7 +1259,11 @@ URL。&lt;/li&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;扩展配置：&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;web.xml&lt;/code&gt;中的配置还可以定义在其它文件中，例如在&lt;code&gt;resourece&lt;/code&gt;下创建新的配置文件&lt;code&gt;springMVC.xml&lt;/code&gt;。然后在&lt;code&gt;web.xml&lt;/code&gt;添加新配置：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;webapp&amp;gt;&lt;/span&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;    配置SpringMVC的前端控制器
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;    对浏览器发送的请求统一进行处理
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; --&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;webapp&amp;gt;&lt;/span&gt;
     &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;servlet&amp;gt;&lt;/span&gt;
         &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;servlet-name&amp;gt;&lt;/span&gt;springMVC&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/servlet-name&amp;gt;&lt;/span&gt;
         &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;servlet-class&amp;gt;&lt;/span&gt;org.springframework.web.servlet.DispatcherServlet&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/servlet-class&amp;gt;&lt;/span&gt;
@@ -1286,7 +1290,55 @@ URL。&lt;/li&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;在&lt;code&gt;spring.mvc&lt;/code&gt;中配置：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 自动扫描包 --&amp;gt;&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;context:component-scan&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;base-package=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;com.linner.controller&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;SpringMVC编码过滤器（必须在&lt;code&gt;web.xml&lt;/code&gt;中进行注册）：&lt;/p&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 配置Thymeleaf视图解析器 --&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;bean&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;id=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;viewResolver&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;class=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;org.thymeleaf.spring5.view.ThymeleafViewResolver&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;property&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;order&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;1&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;property&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;characterEncoding&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;UTF-8&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;property&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;templateEngine&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;bean&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;class=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;org.thymeleaf.spring5.SpringTemplateEngine&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;property&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;templateResolver&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+                &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;bean&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;class=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+    
+                    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 视图前缀 --&amp;gt;&lt;/span&gt;
+                    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;property&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;prefix&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/WEB-INF/templates/&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+    
+                    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 视图后缀 --&amp;gt;&lt;/span&gt;
+                    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;property&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;suffix&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.html&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+                    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;property&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;templateMode&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;HTML5&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+                    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;property&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;characterEncoding&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;UTF-8&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+                &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/bean&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/property&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/bean&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/property&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/bean&amp;gt;&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;   处理静态资源，例如html、js、css、jpg
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;   若只设置该标签，则只能访问静态资源，其他请求则无法访问
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;   此时必须设置&amp;lt;mvc:annotation-driven/&amp;gt;解决问题
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; --&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;mvc:default-servlet-handler/&amp;gt;&lt;/span&gt;
+
+&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 开启mvc注解驱动 --&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;mvc:annotation-driven&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;mvc:message-converters&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 处理响应中文内容乱码 --&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;bean&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;class=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;org.springframework.http.converter.StringHttpMessageConverter&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;property&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;defaultCharset&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;value=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;UTF-8&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;/&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;property&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;name=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;supportedMediaTypes&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
+                &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;list&amp;gt;&lt;/span&gt;
+                    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;value&amp;gt;&lt;/span&gt;text/html&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/value&amp;gt;&lt;/span&gt;
+                    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;value&amp;gt;&lt;/span&gt;application/json&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/value&amp;gt;&lt;/span&gt;
+                &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/list&amp;gt;&lt;/span&gt;
+            &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/property&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/bean&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/mvc:message-converters&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/mvc:annotation-driven&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;在视图解析器中设置了视图前缀&lt;code&gt;&amp;lt;property name=&amp;quot;prefix&amp;quot; ...&amp;gt;&lt;/code&gt;和视图后缀&lt;code&gt;&amp;lt;property name=&amp;quot;suffix&amp;quot; ...&amp;gt;&lt;/code&gt;，那么在Controller的方法中，想要跳转到视图时，只需返回对应的视图文件名称，并去掉其后缀。例如访问&lt;code&gt;hello.html&lt;/code&gt;只需返回&lt;code&gt;&amp;quot;hello&amp;quot;&lt;/code&gt;，但&lt;code&gt;hello.html&lt;/code&gt;必须要在对应的前缀路径中。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;SpringMVC编码过滤器（必须在&lt;code&gt;web.xml&lt;/code&gt;中进行注册）：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;webapp&amp;gt;&lt;/span&gt;
     &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 配置 SpringMVC 的编码过滤器 --&amp;gt;&lt;/span&gt;
     &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;filter&amp;gt;&lt;/span&gt;
@@ -1305,6 +1357,10 @@ URL。&lt;/li&gt;
         &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;filter-name&amp;gt;&lt;/span&gt;CharacterEncodingFilter&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/filter-name&amp;gt;&lt;/span&gt;
         &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;url-pattern&amp;gt;&lt;/span&gt;/*&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/url-pattern&amp;gt;&lt;/span&gt;
     &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/filter-mapping&amp;gt;&lt;/span&gt;
+
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;servlet&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- ... --&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/servlet&amp;gt;&lt;/span&gt;
 
     &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- ... --&amp;gt;&lt;/span&gt;
     
@@ -1981,7 +2037,30 @@ jdbc.password=root
 &lt;p&gt;获取&lt;code&gt;response&lt;/code&gt;也是类似的方法。在参数列表中指定一个&lt;code&gt;ServletResponse&lt;/code&gt;或&lt;code&gt;HttpServletResponse&lt;/code&gt;对象参数。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;modelandview&#34;&gt;ModelAndView&lt;/h2&gt;
-&lt;hr&gt;
+&lt;p&gt;&lt;code&gt;ModelAndView&lt;/code&gt;是SpringMVC提供的用于共享域对象数据和视图解析跳转的API。&lt;/p&gt;
+&lt;p&gt;无论使用何种方式共享域对象数据，最终SpringMVC都会将模型数据和视图封装到&lt;code&gt;ModelAndView&lt;/code&gt;中。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@RequestMapping&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/testModelAndView&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
+&lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; ModelAndView &lt;span style=&#34;color:#a6e22e&#34;&gt;testModelAndView&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    ModelAndView mav &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; ModelAndView&lt;span style=&#34;color:#f92672&#34;&gt;();&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;// 处理模型数据，即向请求域request共享数据
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    mav&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;addObject&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;testRequestScope&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello ModelAndView!&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;// 设置视图名称（返回视图需要有对应的页面）
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    mav&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;setViewName&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;success&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; mav&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;success.html&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;lang&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;en&amp;#34;&lt;/span&gt;&amp;gt;
+    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
+        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;meta&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;charset&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;UTF-8&amp;#34;&lt;/span&gt;&amp;gt;
+        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;&amp;gt;Success!&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;title&lt;/span&gt;&amp;gt;
+    &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;head&lt;/span&gt;&amp;gt;
+    &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
+        &amp;lt;&lt;span style=&#34;color:#f92672&#34;&gt;h1&lt;/span&gt;&amp;gt;Success!&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;h1&lt;/span&gt;&amp;gt;
+    &amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;body&lt;/span&gt;&amp;gt;
+&amp;lt;/&lt;span style=&#34;color:#f92672&#34;&gt;html&lt;/span&gt;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
 &lt;h1 id=&#34;拦截器&#34;&gt;拦截器&lt;/h1&gt;
 &lt;p&gt;拦截器（Interceptor）是一种动态拦截方法调用的机制，在SpringMVC中动态拦截控制器方法的执行。拦截器可以在指定的发那个发调用前后执行预先设定的代码，可以阻止原始方法的执行。拦截器和过滤器在作用和执行顺序上很相似。它们的关系如下图所示：&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/springmvc-%E5%9F%BA%E7%A1%80/1630676903190.png&#34;
