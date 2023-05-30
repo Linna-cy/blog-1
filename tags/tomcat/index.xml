@@ -516,7 +516,7 @@ xhttp&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34
 </description>
         </item>
         <item>
-        <title>会话跟踪技术 —— Cookie 和 Session</title>
+        <title>会话跟踪技术 Cookie 和 Session</title>
         <link>https://blog.linner.asia/p/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF-cookie-%E5%92%8C-session/</link>
         <pubDate>Fri, 23 Sep 2022 00:00:00 +0000</pubDate>
         
@@ -821,8 +821,10 @@ Session是存储在服务器端。&lt;/li&gt;
     &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;session-的钝化与活化&#34;&gt;Session 的钝化与活化&lt;/h2&gt;
-&lt;p&gt;正常来说，Session是存储在内存中的，只要服务器关闭，那么所有会话的Session都会失效。但是Tomcat在正常关闭的情况下，Session并不会失效，这是因为Session的钝化：在服务器正常关闭后，Tomcat会自动将Session数据写入硬盘的文件中。钝化的数据路径为：&lt;code&gt;项目目录\target\tomcat\work\Tomcat\localhost\项目名称\SESSIONS.ser&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;再次启动服务器后，从文件中加载数据到Session中，这就是Session的活化。而数据加载到Session中后，路径中的SESSIONS.ser文件会被删除掉。&lt;/p&gt;
+&lt;p&gt;正常来说，Session是存储在内存中的，只要服务器关闭，那么所有会话的Session都会失效。但是Tomcat在正常关闭的情况下，Session并不会失效，这是因为Session的&lt;strong&gt;钝化&lt;/strong&gt;：在服务器正常关闭后，Tomcat会&lt;u&gt;自动将Session数据写入硬盘的文件&lt;/u&gt;中。钝化的数据路径为：&lt;code&gt;项目目录\target\tomcat\work\Tomcat\localhost\项目名称\SESSIONS.ser&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;再次启动服务器后，从文件中加载数据到Session中，这就是Session的&lt;strong&gt;活化&lt;/strong&gt;。而数据加载到Session中后，路径中的&lt;code&gt;SESSIONS.ser&lt;/code&gt;文件会被删除掉。&lt;/p&gt;
+&lt;p&gt;所以说只要浏览器中记录&lt;code&gt;SessionID&lt;/code&gt;的Cookie还存在，那么这个对应的Session也就存在，并且唯一。&lt;/p&gt;
+&lt;p&gt;而Cookie的存在是与浏览器的关闭密切相关的。在无人为销毁Cookie和没有为Cookie设置存活时间的情况下，当浏览器关闭时，其记录的Cookie也会自动销毁。所以当浏览器关闭时，对应的Session可能会消失。&lt;/p&gt;
 &lt;h2 id=&#34;session-的销毁&#34;&gt;Session 的销毁&lt;/h2&gt;
 &lt;p&gt;默认情况下，无操作，30分钟后自动销毁Session。对于这个失效时间，是可以通过在项目的&lt;code&gt;web.xml&lt;/code&gt;中配置进行修改：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34;?&amp;gt;&lt;/span&gt;
@@ -886,6 +888,7 @@ Session是存储在服务器端。&lt;/li&gt;
 &lt;li&gt;存储时间：Cookie可以通过setMaxAge()长期存储，Session默认30分钟。&lt;/li&gt;
 &lt;li&gt;服务器性能：Cookie不占服务器资源，Session占用服务器资源。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;Session是基于Cookie实现的。&lt;/p&gt;
 </description>
         </item>
         <item>

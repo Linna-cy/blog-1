@@ -342,13 +342,13 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 15 分钟
+                    阅读时长: 19 分钟
                 </time>
                 |
             </div>
         
 
-        <div class="article-time--reading">共7261字</div>
+        <div class="article-time--reading">共9409字</div>
     </footer>
     
 
@@ -554,7 +554,97 @@ URL。</li>
     <span style="color:#f92672">&lt;version&gt;</span>1.3.0<span style="color:#f92672">&lt;/version&gt;</span>
 <span style="color:#f92672">&lt;/dependency&gt;</span>
 </code></pre></div><hr>
-<h1 id="配置类">配置类</h1>
+<h1 id="配置">配置</h1>
+<p>配置SpringMVC有两种方式：</p>
+<ul>
+<li><code>web.xml</code>配置文件</li>
+<li>配置类</li>
+</ul>
+<h2 id="webxml">web.xml</h2>
+<p>在<code>web.xml</code>中注册SpringMVC的前端控制器<code>DispatcherServlet</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;!DOCTYPE web-app PUBLIC
+</span><span style="color:#75715e"> &#34;-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN&#34;
+</span><span style="color:#75715e"> &#34;http://java.sun.com/dtd/web-app_2_3.dtd&#34; &gt;</span>
+
+<span style="color:#f92672">&lt;web-app&gt;</span>
+    <span style="color:#f92672">&lt;servlet&gt;</span>
+        <span style="color:#f92672">&lt;servlet-name&gt;</span>springMVC<span style="color:#f92672">&lt;/servlet-name&gt;</span>
+        <span style="color:#75715e">&lt;!-- 指定SpringMVC前端控制器： --&gt;</span>
+        <span style="color:#f92672">&lt;servlet-class&gt;</span>org.springframework.web.servlet.DispatcherServlet<span style="color:#f92672">&lt;/servlet-class&gt;</span>
+    <span style="color:#f92672">&lt;/servlet&gt;</span>
+    <span style="color:#f92672">&lt;servlet-mapping&gt;</span>
+        <span style="color:#f92672">&lt;servlet-name&gt;</span>springMVC<span style="color:#f92672">&lt;/servlet-name&gt;</span>
+        <span style="color:#75715e">&lt;!-- 
+</span><span style="color:#75715e">            配对路径
+</span><span style="color:#75715e">            / 表示处理所有不包括.jsp的请求
+</span><span style="color:#75715e">            因为.jsp有自己的servlet，如果在DispatcherServlet中处理.jsp，会导致找不到相应页面，从而导致渲染失败
+</span><span style="color:#75715e">        --&gt;</span>
+        <span style="color:#f92672">&lt;url-pattern&gt;</span>/<span style="color:#f92672">&lt;/url-pattern&gt;</span>
+    <span style="color:#f92672">&lt;/servlet-mapping&gt;</span>
+<span style="color:#f92672">&lt;/webapp&gt;</span>
+</code></pre></div><blockquote>
+<p><code>&lt;url-pattern&gt;</code>：</p>
+<ul>
+<li><code>/</code>：表示匹配所有不包括<code>.jsp</code>的请求；</li>
+<li><code>/*</code>：能够匹配所有请求，包括<code>.jsp</code>。</li>
+</ul>
+</blockquote>
+<p>扩展配置：</p>
+<p><code>web.xml</code>中的配置还可以定义在其它文件中，例如在<code>resourece</code>下创建新的配置文件<code>springMVC.xml</code>。然后在<code>web.xml</code>添加新配置：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;webapp&gt;</span>
+    <span style="color:#f92672">&lt;servlet&gt;</span>
+        <span style="color:#f92672">&lt;servlet-name&gt;</span>springMVC<span style="color:#f92672">&lt;/servlet-name&gt;</span>
+        <span style="color:#f92672">&lt;servlet-class&gt;</span>org.springframework.web.servlet.DispatcherServlet<span style="color:#f92672">&lt;/servlet-class&gt;</span>
+        <span style="color:#75715e">&lt;!-- 
+</span><span style="color:#75715e">            通过初始化参数指定SpringMVC配置文件的位置和名称
+</span><span style="color:#75715e">         --&gt;</span>
+        <span style="color:#f92672">&lt;init-param&gt;</span>
+            <span style="color:#75715e">&lt;!-- contextConfigLocation为固定值 --&gt;</span>
+            <span style="color:#f92672">&lt;param-name&gt;</span>contextConfigLocation<span style="color:#f92672">&lt;/param-name&gt;</span>
+            <span style="color:#75715e">&lt;!-- 
+</span><span style="color:#75715e">                使用 classpath: 表示从类路径查找配置文件，例如maven工程中的src/main/resources
+</span><span style="color:#75715e">             --&gt;</span>
+            <span style="color:#f92672">&lt;param-value&gt;</span>classpath:springMVC.xml<span style="color:#f92672">&lt;/param-value&gt;</span>
+        <span style="color:#f92672">&lt;/init-param&gt;</span>
+        <span style="color:#75715e">&lt;!-- 
+</span><span style="color:#75715e">            将启动控制DispatcherServlet的初始化时间提前到服务器启动时：
+</span><span style="color:#75715e">        --&gt;</span>
+        <span style="color:#f92672">&lt;load-on-startup&gt;</span>1<span style="color:#f92672">&lt;/load-on-startup&gt;</span>
+    <span style="color:#f92672">&lt;/servlet&gt;</span>
+
+    <span style="color:#75715e">&lt;!-- ... --&gt;</span>
+
+<span style="color:#f92672">&lt;/webapp&gt;</span>
+</code></pre></div><p>在<code>spring.mvc</code>中配置：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;!-- 自动扫描包 --&gt;</span>
+<span style="color:#f92672">&lt;context:component-scan</span> <span style="color:#a6e22e">base-package=</span><span style="color:#e6db74">&#34;com.linner.controller&#34;</span><span style="color:#f92672">/&gt;</span>
+</code></pre></div><p>SpringMVC编码过滤器（必须在<code>web.xml</code>中进行注册）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;webapp&gt;</span>
+    <span style="color:#75715e">&lt;!-- 配置 SpringMVC 的编码过滤器 --&gt;</span>
+    <span style="color:#f92672">&lt;filter&gt;</span>
+        <span style="color:#f92672">&lt;filter-name&gt;</span>CharacterEncodingFilter<span style="color:#f92672">&lt;/filter-name&gt;</span>
+        <span style="color:#f92672">&lt;filter-class&gt;</span>org.springframework.web.filter.CharacterEncodingFilter<span style="color:#f92672">&lt;/filter-class&gt;</span>
+        <span style="color:#f92672">&lt;init-param&gt;</span>
+            <span style="color:#f92672">&lt;param-name&gt;</span>encoding<span style="color:#f92672">&lt;/param-name&gt;</span>
+            <span style="color:#f92672">&lt;param-value&gt;</span>UTF-8<span style="color:#f92672">&lt;/param-value&gt;</span>
+        <span style="color:#f92672">&lt;/init-param&gt;</span>
+        <span style="color:#f92672">&lt;init-param&gt;</span>
+            <span style="color:#f92672">&lt;param-name&gt;</span>forceResponseEncoding<span style="color:#f92672">&lt;/param-name&gt;</span>
+            <span style="color:#f92672">&lt;param-value&gt;</span>true<span style="color:#f92672">&lt;/param-value&gt;</span>
+        <span style="color:#f92672">&lt;/init-param&gt;</span>
+    <span style="color:#f92672">&lt;/filter&gt;</span>
+    <span style="color:#f92672">&lt;filter-mapping&gt;</span>
+        <span style="color:#f92672">&lt;filter-name&gt;</span>CharacterEncodingFilter<span style="color:#f92672">&lt;/filter-name&gt;</span>
+        <span style="color:#f92672">&lt;url-pattern&gt;</span>/*<span style="color:#f92672">&lt;/url-pattern&gt;</span>
+    <span style="color:#f92672">&lt;/filter-mapping&gt;</span>
+
+    <span style="color:#75715e">&lt;!-- ... --&gt;</span>
+    
+<span style="color:#f92672">&lt;/webapp&gt;</span>
+</code></pre></div><blockquote>
+<p>SpringMVC中处理编码的过滤器一定要配置到其他过滤器之前，否则无效。</p>
+</blockquote>
+<h2 id="配置类">配置类</h2>
 <p><code>jdbc.properties</code>（数据库配置，放在项目中<code>resources</code>目录下）：</p>
 <pre tabindex="0"><code class="language-properties" data-lang="properties">jdbc.driver=com.mysql.jdbc.Driver
 jdbc.url=jdbc:mysql:///spring_db?useSSL=false&amp;characterEncoding=utf-8
@@ -710,10 +800,41 @@ jdbc.password=root
 <h1 id="请求与响应">请求与响应</h1>
 <p>SpringMVC是Web层的框架，主要作用是接收请求、接收数据、响应结果。</p>
 <p>编写Controller只需要在Controller类上使用<code>@Controller</code>注解即可。</p>
-<h2 id="接收-url-参数">接收 URL 参数</h2>
+<h2 id="请求路径映射-requestmapping">请求路径映射 RequestMapping</h2>
+<p>映射请求路径使用<code>@RequestMapping</code>注解。注解中的使用<code>value</code>属性指定映射的请求路径（由于是<code>value</code>属性，所以当注解中无需指定其它参数时，可以省略）。</p>
+<p><code>@RequestMapping</code>可以分别作用在类和方法上：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Controller</span>
+<span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/user&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserController</span> <span style="color:#f92672">{</span>
+    <span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span>value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/helloSpring&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#a6e22e">@ResponseBody</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">helloSpring</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Hello Spring!&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/helloWorld&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#a6e22e">@ResponseBody</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">helloWorld</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Hello World!&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ul>
+<li>
+<p>方法上定义的<code>@RequestMapping</code>是具体的请求路径。</p>
+<p>即，如果在方法上使用了<code>@RequestMapping</code>并且没有在类上使用<code>@RequestMapping</code>，那么该方法的请求路径即为方法上<code>@RequestMapping</code>中的值。</p>
+</li>
+<li>
+<p>类上定义的<code>@RequestMapping</code>是请求目录。</p>
+<p>即，如果在方法和类上均使用了<code>@RequestMapping</code>，那么该方法的请求路径需要加上类<code>@RequestMapping</code>注解中定义的目录。例如上方代码中的请求路径为<code>/user/helloSpring</code>和<code>/user/helloWorld</code>。</p>
+</li>
+</ul>
+<p><code>value</code>属性是一个字符串数组，可以通过以下方式来指定多个请求路径：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">({</span><span style="color:#e6db74">&#34;hello&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;helloWorld&#34;</span><span style="color:#f92672">})</span>
+</code></pre></div><h2 id="接收-url-参数">接收 URL 参数</h2>
 <blockquote>
-<p>接收URL参数，GET和POST请求的编写方式一致。
-如果要使用不同的方式接收请求，可以修改<code>@RequestMapping</code>注解：</p>
+<p>接收URL参数，GET和POST请求的编写方式一致。</p>
+<p>如果要使用不同的方式接收请求，可以修改<code>@RequestMapping</code>注解：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span>value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/save&#34;</span><span style="color:#f92672">,</span> method <span style="color:#f92672">=</span> RequestMethod<span style="color:#f92672">.</span><span style="color:#a6e22e">GET</span><span style="color:#f92672">)</span>
 </code></pre></div></blockquote>
 <h3 id="普通参数">普通参数</h3>
@@ -741,17 +862,10 @@ jdbc.password=root
 <span style="color:#f92672">}</span>
 </code></pre></div><ul>
 <li>
-<p>请求路径（<code>@RequestMapping</code>）：</p>
-<p>请求路径使用<code>@RequestMapping</code>注解。注解中的值为请求路径。
-<code>@RequestMapping</code>可以作用在类和方法上。</p>
-<p>方法上定义的<code>@RequestMapping</code>是具体的请求路径。即，如果在方法上使用了<code>@RequestMapping</code>并且没有在类上使用<code>@RequestMapping</code>，那么该方法的请求路径即为方法上<code>@RequestMapping</code>中的值。</p>
-<p>类上定义的<code>@RequestMapping</code>是请求目录。即，如果在方法和类上均使用了<code>@RequestMapping</code>，那么该方法的请求路径需要加上类<code>@RequestMapping</code>注解中定义的目录。例如上方代码中的请求路径为<code>/user/hello</code>和。</p>
-</li>
-<li>
 <p>请求参数：</p>
 <p>普通参数即URL地址传参。</p>
-<p><strong>定义相同的地址参数名与方法形参变量名即可接收参数。</strong></p>
-<p><strong>如果想要形参名与地址参数名不同则可使用<code>@RequestParam</code>注解定义地址参数名</strong>（如<code>login()</code>）。</p>
+<p><u>定义相同的地址参数名与方法形参变量名即可接收参数。</u></p>
+<p><u>如果想要形参名与地址参数名不同则可使用<code>@RequestParam</code>注解定义地址参数名。</u></p>
 <p>如果有多个请求参数则定义多个方法参数。</p>
 </li>
 <li>
@@ -765,6 +879,7 @@ jdbc.password=root
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Address</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">private</span> String province<span style="color:#f92672">;</span>
     <span style="color:#66d9ef">private</span> String city<span style="color:#f92672">;</span>
+
     <span style="color:#75715e">// setter、getter and toString...
 </span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
 </code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">{</span>
@@ -772,6 +887,7 @@ jdbc.password=root
     <span style="color:#66d9ef">private</span> String name<span style="color:#f92672">;</span>
     <span style="color:#66d9ef">private</span> String password<span style="color:#f92672">;</span>
     <span style="color:#66d9ef">private</span> Address address<span style="color:#f92672">;</span>
+
     <span style="color:#75715e">// setter、getter and toString...
 </span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
 </code></pre></div><p>Controller：</p>
@@ -959,6 +1075,13 @@ jdbc.password=root
 }
 </code></pre></div></li>
 </ul>
+<h2 id="ant-风格路径">Ant 风格路径</h2>
+<p>在Ant风格中，定义了以下几种符号：</p>
+<ul>
+<li><code>?</code>：表示匹配请求资源目录中的<u>任意单个字符</u>。</li>
+<li><code>*</code>：表示匹配请求资源目录中的<u>任意0个或多个字符</u>。</li>
+<li><code>/**/</code>：表示匹配请求路径中任意一层或多层目录。例如<code>/**/user</code>可以匹配<code>/abc/user</code>、<code>/abc/def/user</code>等等。</li>
+</ul>
 <h2 id="rest-风格">REST 风格</h2>
 <p>REST（Representational State Transfer，表现形式状态转换），是一种软件架构风格。REST的优点有：</p>
 <ul>
@@ -1116,7 +1239,81 @@ jdbc.password=root
     <span style="color:#f92672">}</span>
 
 <span style="color:#f92672">}</span>
-</code></pre></div><hr>
+</code></pre></div><h2 id="params-请求参数映射匹配">params 请求参数映射匹配</h2>
+<p><code>params</code>是<code>@RequestMapping</code>中的一个属性，该属性通过请求的请求参数匹配请求映射。</p>
+<p>用法如下：</p>
+<ul>
+<li>
+<p><code>&quot;param&quot;</code>：请求映射所匹配的请求必须携带<code>param</code>这个请求参数。</p>
+<p>例如：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span>value <span style="color:#f92672">=</span> <span style="color:#f92672">{</span><span style="color:#e6db74">&#34;login&#34;</span><span style="color:#f92672">},</span> params <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;username&#34;</span><span style="color:#f92672">)</span>
+</code></pre></div><p>请求路径示例：</p>
+<pre tabindex="0"><code>http://localhost/login?username=zhangsan
+</code></pre></li>
+<li>
+<p><code>&quot;!param&quot;</code>：否定匹配，请求映射所匹配的请求必须不能携带<code>param</code>请求参数。</p>
+<p>例如：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span>value <span style="color:#f92672">=</span> <span style="color:#f92672">{</span><span style="color:#e6db74">&#34;login&#34;</span><span style="color:#f92672">},</span> params <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;!username&#34;</span><span style="color:#f92672">)</span>
+</code></pre></div><p>如果请求路径中包含参数<code>username</code>将不会匹配到该<code>@RequestMapping</code>。</p>
+</li>
+<li>
+<p><code>&quot;param=value&quot;</code>：等值匹配，请求映射所匹配的请求必须携带<code>param</code>请求参数，且<code>param</code>参数的值必须为<code>value</code>。</p>
+<p>例如：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span>value <span style="color:#f92672">=</span> <span style="color:#f92672">{</span><span style="color:#e6db74">&#34;login&#34;</span><span style="color:#f92672">},</span> params <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;username=admin&#34;</span><span style="color:#f92672">)</span>
+</code></pre></div><p>请求路径为：</p>
+<pre tabindex="0"><code>http://localhost/login?username=admin
+</code></pre></li>
+<li>
+<p><code>&quot;param!=value&quot;</code>：非值匹配，请求映射所匹配的请求必须携带<code>param</code>请求参数，但<code>param</code>的值不能为<code>value</code>。</p>
+<p>例如：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span>value <span style="color:#f92672">=</span> <span style="color:#f92672">{</span><span style="color:#e6db74">&#34;login&#34;</span><span style="color:#f92672">},</span> params <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;username!=admin&#34;</span><span style="color:#f92672">)</span>
+</code></pre></div><p>如果请求路径携带参数<code>username</code>且值为<code>admin</code>则匹配失败。</p>
+</li>
+<li>
+<p><code>{expression1[, expression2[, ...]]}</code>：</p>
+<p><code>params</code>是字符串数组类型，可以指定多个参数规则，其中<code>expression</code>可以是以上任何类型的字符串表达式中的任何一种。</p>
+</li>
+</ul>
+<p><code>params</code>只对其指定的参数有要求，没有被其指定的参数并没有任何限制。</p>
+<p>如果请求的路径和方式都满足<code>@RequestMapping</code>，但是与<code>params</code>指定的规则不付，如果此时没有其它映射来匹配这个请求，服务器会返回给浏览器<code>400</code>错误。</p>
+<h2 id="headers-请求头匹配">headers 请求头匹配</h2>
+<p><code>headers</code>是<code>@RequestMapping</code>的属性，它指定请求的请求头信息匹配规则。</p>
+<p><code>headers</code>的字符串表达式语法与<code>params</code>十分相似：</p>
+<ul>
+<li>
+<p><code>&quot;header&quot;</code>：请求映射所匹配的请求必须携带<code>header</code>请求头信息。</p>
+</li>
+<li>
+<p><code>&quot;!header&quot;</code>：请求映射所匹配的请求必须不能携带<code>header</code>请求头信息。</p>
+</li>
+<li>
+<p><code>&quot;header=value&quot;</code>：请求映射所匹配的请求必须携带<code>header</code>请求头信息且<code>header=value</code>。</p>
+<p>请求头中使用的是<code>:</code>分隔开的键值对，<code>:</code>左边是键（即上述中的<code>header</code>），右边是值（即上述中的<code>value</code>）。只需要将<code>:</code>替换为<code>=</code>即是对应的<code>headers</code>字符串表达式。</p>
+</li>
+<li>
+<p><code>&quot;header!=value&quot;</code>：要求请求映射所匹配的请求必须携带<code>header</code>请求头信息且<code>header!=value</code>。</p>
+</li>
+<li>
+<p><code>{expression1[, expression2[, ...]]}</code>：<code>headers</code>属性同样是字符串数组类型，可以在<code>{}</code>中使用上述任何表达式。</p>
+</li>
+</ul>
+<p>当<code>@RequestMapping</code>其它条件都满足，除了<code>headers</code>时，服务器会返回<code>404</code>错误。</p>
+<hr>
+<h1 id="域对象共享数据">域对象共享数据</h1>
+<h2 id="servletapi">ServletAPI</h2>
+<p>获取<code>request</code>域对象共享数据的方式之一就是使用<code>ServletAPI</code>。即，在Controller对象中的映射方法中，添加一个<code>ServletRequest</code>或<code>HttpServletRequest</code>对象参数。</p>
+<p>例如：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/testServletAPI&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#a6e22e">@ResponseBody</span>
+<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">testServletAPI</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    request<span style="color:#f92672">.</span><span style="color:#a6e22e">setAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testScope&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Hello ServletAPI!&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;OK&#34;</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><blockquote>
+<p>获取<code>response</code>也是类似的方法。在参数列表中指定一个<code>ServletResponse</code>或<code>HttpServletResponse</code>对象参数。</p>
+</blockquote>
+<h2 id="modelandview">ModelAndView</h2>
+<hr>
 <h1 id="拦截器">拦截器</h1>
 <p>拦截器（Interceptor）是一种动态拦截方法调用的机制，在SpringMVC中动态拦截控制器方法的执行。拦截器可以在指定的发那个发调用前后执行预先设定的代码，可以阻止原始方法的执行。拦截器和过滤器在作用和执行顺序上很相似。它们的关系如下图所示：</p>
 <p><img src="/p/springmvc-%E5%9F%BA%E7%A1%80/1630676903190.png"
@@ -1124,6 +1321,8 @@ jdbc.password=root
 	height="390"
 	srcset="/p/springmvc-%E5%9F%BA%E7%A1%80/1630676903190_hu919979d0f5abd4d5e98bfc64e1b718cb_118908_480x0_resize_box_3.png 480w, /p/springmvc-%E5%9F%BA%E7%A1%80/1630676903190_hu919979d0f5abd4d5e98bfc64e1b718cb_118908_1024x0_resize_box_3.png 1024w"
 	loading="lazy"
+	
+		alt="拦截器和过滤器的关系"
 	
 	
 		class="gallery-image" 

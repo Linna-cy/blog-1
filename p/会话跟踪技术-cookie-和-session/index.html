@@ -4,7 +4,7 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='会话跟踪技术 会话是指一个终端用户与交互系统进行通讯的过程，例如从浏览器发出请求到服务端响应数据给前端这个过程即为一个会话。 会话跟踪指的是一种'>
 
 
-<title>会话跟踪技术 —— Cookie 和 Session</title>
+<title>会话跟踪技术 Cookie 和 Session</title>
 
 <link rel='canonical' href='https://blog.linner.asia/p/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF-cookie-%E5%92%8C-session/'>
 
@@ -12,12 +12,12 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
 
-<meta property='og:title' content='会话跟踪技术 —— Cookie 和 Session'>
+<meta property='og:title' content='会话跟踪技术 Cookie 和 Session'>
 <meta property='og:description' content='会话跟踪技术 会话是指一个终端用户与交互系统进行通讯的过程，例如从浏览器发出请求到服务端响应数据给前端这个过程即为一个会话。 会话跟踪指的是一种'>
 <meta property='og:url' content='https://blog.linner.asia/p/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF-cookie-%E5%92%8C-session/'>
 <meta property='og:site_name' content='Linner&#39;s Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='JavaWeb' /><meta property='article:tag' content='Tomcat' /><meta property='article:published_time' content='2022-09-23T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-09-23T00:00:00&#43;00:00'/>
-<meta name="twitter:title" content="会话跟踪技术 —— Cookie 和 Session">
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='JavaWeb' /><meta property='article:tag' content='Tomcat' /><meta property='article:tag' content='Cookie' /><meta property='article:tag' content='Session' /><meta property='article:tag' content='会话跟踪' /><meta property='article:published_time' content='2022-09-23T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2022-09-23T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="会话跟踪技术 Cookie 和 Session">
 <meta name="twitter:description" content="会话跟踪技术 会话是指一个终端用户与交互系统进行通讯的过程，例如从浏览器发出请求到服务端响应数据给前端这个过程即为一个会话。 会话跟踪指的是一种">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
@@ -292,7 +292,7 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF-cookie-%E5%92%8C-session/">会话跟踪技术 —— Cookie 和 Session</a>
+            <a href="/p/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF-cookie-%E5%92%8C-session/">会话跟踪技术 Cookie 和 Session</a>
         </h2>
     
         
@@ -336,7 +336,7 @@
             </div>
         
 
-        <div class="article-time--reading">共3527字</div>
+        <div class="article-time--reading">共3710字</div>
     </footer>
     
 
@@ -648,8 +648,10 @@ Session是存储在服务器端。</li>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><h2 id="session-的钝化与活化">Session 的钝化与活化</h2>
-<p>正常来说，Session是存储在内存中的，只要服务器关闭，那么所有会话的Session都会失效。但是Tomcat在正常关闭的情况下，Session并不会失效，这是因为Session的钝化：在服务器正常关闭后，Tomcat会自动将Session数据写入硬盘的文件中。钝化的数据路径为：<code>项目目录\target\tomcat\work\Tomcat\localhost\项目名称\SESSIONS.ser</code>。</p>
-<p>再次启动服务器后，从文件中加载数据到Session中，这就是Session的活化。而数据加载到Session中后，路径中的SESSIONS.ser文件会被删除掉。</p>
+<p>正常来说，Session是存储在内存中的，只要服务器关闭，那么所有会话的Session都会失效。但是Tomcat在正常关闭的情况下，Session并不会失效，这是因为Session的<strong>钝化</strong>：在服务器正常关闭后，Tomcat会<u>自动将Session数据写入硬盘的文件</u>中。钝化的数据路径为：<code>项目目录\target\tomcat\work\Tomcat\localhost\项目名称\SESSIONS.ser</code>。</p>
+<p>再次启动服务器后，从文件中加载数据到Session中，这就是Session的<strong>活化</strong>。而数据加载到Session中后，路径中的<code>SESSIONS.ser</code>文件会被删除掉。</p>
+<p>所以说只要浏览器中记录<code>SessionID</code>的Cookie还存在，那么这个对应的Session也就存在，并且唯一。</p>
+<p>而Cookie的存在是与浏览器的关闭密切相关的。在无人为销毁Cookie和没有为Cookie设置存活时间的情况下，当浏览器关闭时，其记录的Cookie也会自动销毁。所以当浏览器关闭时，对应的Session可能会消失。</p>
 <h2 id="session-的销毁">Session 的销毁</h2>
 <p>默认情况下，无操作，30分钟后自动销毁Session。对于这个失效时间，是可以通过在项目的<code>web.xml</code>中配置进行修改：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
@@ -713,6 +715,7 @@ Session是存储在服务器端。</li>
 <li>存储时间：Cookie可以通过setMaxAge()长期存储，Session默认30分钟。</li>
 <li>服务器性能：Cookie不占服务器资源，Session占用服务器资源。</li>
 </ul>
+<p>Session是基于Cookie实现的。</p>
 
 </section>
 
@@ -726,6 +729,12 @@ Session是存储在服务器端。</li>
             <a href="/tags/javaweb/">JavaWeb</a>
         
             <a href="/tags/tomcat/">Tomcat</a>
+        
+            <a href="/tags/cookie/">Cookie</a>
+        
+            <a href="/tags/session/">Session</a>
+        
+            <a href="/tags/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA/">会话跟踪</a>
         
     </section>
 
