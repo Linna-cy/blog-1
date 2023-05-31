@@ -2,7 +2,7 @@
 <html lang="zh" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='简介 SpringMVC是Spring下的一个用于Web表现层开发的技术。相比Servlet，SpringMVC更加高效快捷。 SpringMV'>
-<meta name="keywords" content="Java, JavaWeb, Spring, Maven">
+<meta name="keywords" content="SpringMVC, 请求与相应, JSON, REST, 域对象, 拦截器">
 
 <title>SpringMVC 基础</title>
 
@@ -342,13 +342,13 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 20 分钟
+                    阅读时长: 23 分钟
                 </time>
                 |
             </div>
         
 
-        <div class="article-time--reading">共10004字</div>
+        <div class="article-time--reading">共11486字</div>
     </footer>
     
 
@@ -1356,6 +1356,14 @@ jdbc.password=root
 <p>当<code>@RequestMapping</code>其它条件都满足，除了<code>headers</code>时，服务器会返回<code>404</code>错误。</p>
 <hr>
 <h1 id="域对象共享数据">域对象共享数据</h1>
+<p><code>request</code>域对象共享数据的常用方式大致有5种：</p>
+<ol>
+<li>通过<code>ServletAPI</code>获取（不建议使用）。即通过<code>ServletRequest</code>或<code>HttpServletRequest</code>对象获取<code>request</code>域。</li>
+<li>通过<code>ModelAndView</code>获取。</li>
+<li>通过<code>Model</code>获取。</li>
+<li>通过<code>Map&lt;String, Object&gt;</code>获取。</li>
+<li>通过<code>ModelMap</code>获取。</li>
+</ol>
 <h2 id="servletapi">ServletAPI</h2>
 <p>获取<code>request</code>域对象共享数据的方式之一就是使用<code>ServletAPI</code>。即，在Controller对象中的映射方法中，添加一个<code>ServletRequest</code>或<code>HttpServletRequest</code>对象参数。</p>
 <p>例如：</p>
@@ -1368,18 +1376,17 @@ jdbc.password=root
 </code></pre></div><blockquote>
 <p>获取<code>response</code>也是类似的方法。在参数列表中指定一个<code>ServletResponse</code>或<code>HttpServletResponse</code>对象参数。</p>
 </blockquote>
-<h2 id="modelandview">ModelAndView</h2>
-<p><code>ModelAndView</code>是SpringMVC提供的用于共享域对象数据和视图解析跳转的API。</p>
-<p>无论使用何种方式共享域对象数据，最终SpringMVC都会将模型数据和视图封装到<code>ModelAndView</code>中。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/testModelAndView&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#66d9ef">public</span> ModelAndView <span style="color:#a6e22e">testModelAndView</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-    ModelAndView mav <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ModelAndView<span style="color:#f92672">();</span>
-    <span style="color:#75715e">// 处理模型数据，即向请求域request共享数据
-</span><span style="color:#75715e"></span>    mav<span style="color:#f92672">.</span><span style="color:#a6e22e">addObject</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testRequestScope&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Hello ModelAndView!&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#75715e">// 设置视图名称（返回视图需要有对应的页面）
-</span><span style="color:#75715e"></span>    mav<span style="color:#f92672">.</span><span style="color:#a6e22e">setViewName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;success&#34;</span><span style="color:#f92672">);</span>
-
-    <span style="color:#66d9ef">return</span> mav<span style="color:#f92672">;</span>
+<h2 id="model">Model</h2>
+<p><code>Model</code>是SpringMVC提供的专用于共享<code>request</code>域对象数据。</p>
+<p>使用<code>Model</code>的方式与使用<code>ServletAPI</code>类似，在形参列表中指定一个<code>Model</code>类型的参数即可。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/testModel&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">testModel</span><span style="color:#f92672">(</span>Model model<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// 写入
+</span><span style="color:#75715e"></span>    model<span style="color:#f92672">.</span><span style="color:#a6e22e">addAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testRequestScope&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Hello Model!&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#75715e">// 读取
+</span><span style="color:#75715e"></span>    String testRequestScope <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span> model<span style="color:#f92672">.</span><span style="color:#a6e22e">getAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testRequestScope&#34;</span><span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>testRequestScope<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;success&#34;</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p><code>success.html</code>：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
@@ -1392,7 +1399,92 @@ jdbc.password=root
         &lt;<span style="color:#f92672">h1</span>&gt;Success!&lt;/<span style="color:#f92672">h1</span>&gt;
     &lt;/<span style="color:#f92672">body</span>&gt;
 &lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div><hr>
+</code></pre></div><h2 id="map-string-object">Map String Object</h2>
+<p>使用<code>Map&lt;String, Object&gt;</code>共享<code>request</code>域对象数据，使用方式也是在形参列表中定义一个<code>Map&lt;String, Object&gt;</code>类型形参。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/testMap&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">testMap</span><span style="color:#f92672">(</span>Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> map<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// 写入
+</span><span style="color:#75715e"></span>    map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testRequestScope&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Hello Map!&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#75715e">// 读取
+</span><span style="color:#75715e"></span>    String testRequestScope <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span> map<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testRequestScope&#34;</span><span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>testRequestScope<span style="color:#f92672">);</span>
+
+    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;success&#34;</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="modelmap">ModelMap</h2>
+<p><code>ModelMap</code>的用法与<code>Map</code>十分类似。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/testModelMap&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">testModelMap</span><span style="color:#f92672">(</span>ModelMap modelMap<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// 写入
+</span><span style="color:#75715e"></span>    modelMap<span style="color:#f92672">.</span><span style="color:#a6e22e">addAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testRequestScope&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Hello ModelMap!&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#75715e">// 读取
+</span><span style="color:#75715e"></span>    String testRequestScope <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span> modelMap<span style="color:#f92672">.</span><span style="color:#a6e22e">getAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testRequestScope&#34;</span><span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>testRequestScope<span style="color:#f92672">);</span>
+
+    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;success&#34;</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="modelandview">ModelAndView</h2>
+<p><code>ModelAndView</code>是SpringMVC提供的用于共享<code>request</code>域对象数据和视图解析跳转的API。</p>
+<p>通过<code>ModelAndView</code>共享<code>request</code>域数据，无需在形参中指定该类型参数，只需在方法中<code>new</code>一个即可。但是使用<code>ModelAndView</code>需要将该类型对象作为返回值返回。</p>
+<p>除了使用原生<code>ServletAPI</code>之外，使用其它方法（如上<code>Map</code>、<code>Model</code>、<code>ModelMap</code>等）共享<code>request</code>域数据，最终SpringMVC都会将模型数据和视图封装到<code>ModelAndView</code>中。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/testModelAndView&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#66d9ef">public</span> ModelAndView <span style="color:#a6e22e">testModelAndView</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    ModelAndView mav <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ModelAndView<span style="color:#f92672">();</span>
+    <span style="color:#75715e">// 处理模型数据，即向请求域request共享数据
+</span><span style="color:#75715e"></span>    mav<span style="color:#f92672">.</span><span style="color:#a6e22e">addObject</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testRequestScope&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Hello ModelAndView!&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#75715e">// 设置视图名称（返回视图需要有对应的页面）
+</span><span style="color:#75715e"></span>    mav<span style="color:#f92672">.</span><span style="color:#a6e22e">setViewName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;success&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#75715e">// 读取数据（第一次写入后可能读取失败，因为只有在方法执行完毕后才能真正写入）
+</span><span style="color:#75715e"></span>    String testRequestScope <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span> mav<span style="color:#f92672">.</span><span style="color:#a6e22e">getModel</span><span style="color:#f92672">().</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testRequestScope&#34;</span><span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>testRequestScope<span style="color:#f92672">);</span>
+
+    <span style="color:#66d9ef">return</span> mav<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><blockquote>
+<p>其实<code>ModelAndView</code>也可以作为Controller方法的参数使用。</p>
+</blockquote>
+<h2 id="mapmodel-和-modelmap">Map、Model 和 ModelMap</h2>
+<p>在使用<code>Map&lt;String, Object&gt;</code>、<code>Model</code>和<code>ModelMap</code>时SpringMVC传入的都是<code>BindingAwareModelMap</code>类型对象。</p>
+<ul>
+<li>
+<p><code>Model</code>是一个接口，它定义了<code>addAllAttributes()</code>、<code>getAttribute()</code>等接口方法。</p>
+</li>
+<li>
+<p><code>ModelMap</code>继承了<code>LinkedHashMap&lt;String, Object&gt;</code>，所以它也是属于<code>Map</code>的子类。<code>ModelMap</code>给出了<code>addAllAttributes()</code>、<code>getAttribute()</code>等接口的实现。</p>
+</li>
+<li>
+<p><code>BindingAwareModelMap</code>继承自<code>ExtendedModelMap</code>类，而<code>ExtendedModelMap</code>又是<code>ModelMap</code>的子类和<code>Model</code>接口的实现。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ExtendedModelMap</span> <span style="color:#66d9ef">extends</span> ModelMap <span style="color:#66d9ef">implements</span> Model <span style="color:#f92672">{</span> 
+    <span style="color:#75715e">/* ... */</span> 
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>BindingAwareModelMap</code>重写了<code>Map</code>的<code>put()</code>和<code>putAll()</code>，使得它能作为<code>Map</code>来读写<code>request</code>域。</p>
+</li>
+</ul>
+<p>综上，<code>BindingAwareModelMap</code>可以作为<code>Model</code>、<code>Map&lt;String, Object&gt;</code>和<code>ModelMap</code>传入Controller方法中。</p>
+<p>在浏览器发送请求后，实际上调用Controller中对应方法的是<code>DispatcherServlet</code>中的<code>doDispatch()</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doDispatch</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+
+    <span style="color:#75715e">/* ... */</span>
+
+    <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+        ModelAndView mv <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+        <span style="color:#75715e">/* ... */</span>
+
+        <span style="color:#75715e">// Actually invoke the handler.（实际的请求处理者）
+</span><span style="color:#75715e"></span>        mv <span style="color:#f92672">=</span> ha<span style="color:#f92672">.</span><span style="color:#a6e22e">handle</span><span style="color:#f92672">(</span>processedRequest<span style="color:#f92672">,</span> response<span style="color:#f92672">,</span> mappedHandler<span style="color:#f92672">.</span><span style="color:#a6e22e">getHandler</span><span style="color:#f92672">());</span>
+        <span style="color:#75715e">// 最后返回一个封装好的ModelAndView对象
+</span><span style="color:#75715e"></span>        
+        <span style="color:#75715e">/* ... */</span>
+
+    <span style="color:#f92672">}</span><span style="color:#75715e">/* ... */</span>
+
+    <span style="color:#75715e">/* ... */</span>
+
+<span style="color:#f92672">}</span>
+</code></pre></div><blockquote>
+<p>通过断点调试最后发现，无论是<code>Map</code>、<code>Model</code>、<code>ModelMap</code>还是<code>ModelAndView</code>，它们最后都会被封装为<code>ModelAndView</code>（即使Controller方法返回的是<code>ModelAndView</code>，Controller方法中的<code>ModelAndView</code>和<code>DispatcherServlet</code>对象的<code>doDispatch()</code>中的<code>ModelAndView</code>地址也并不相同）。</p>
+</blockquote>
+<hr>
 <h1 id="拦截器">拦截器</h1>
 <p>拦截器（Interceptor）是一种动态拦截方法调用的机制，在SpringMVC中动态拦截控制器方法的执行。拦截器可以在指定的发那个发调用前后执行预先设定的代码，可以阻止原始方法的执行。拦截器和过滤器在作用和执行顺序上很相似。它们的关系如下图所示：</p>
 <p><img src="/p/springmvc-%E5%9F%BA%E7%A1%80/1630676903190.png"
