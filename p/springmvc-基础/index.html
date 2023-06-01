@@ -342,13 +342,13 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 27 分钟
+                    阅读时长: 30 分钟
                 </time>
                 |
             </div>
         
 
-        <div class="article-time--reading">共13225字</div>
+        <div class="article-time--reading">共14996字</div>
     </footer>
     
 
@@ -1719,7 +1719,12 @@ is<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><s
         System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;afterCompletion...&#34;</span><span style="color:#f92672">);</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><p>配置拦截器类：</p>
+</code></pre></div><h2 id="拦截器配置类">拦截器配置类</h2>
+<p>编写拦截器配置类有两种方式：</p>
+<ul>
+<li>实现<code>WebMvcConfigurer</code>接口；</li>
+<li>继承<code>WebMvcConfigurationSupport</code>类并重写方法（推荐）。</li>
+</ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Configuration</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringMvcSupport</span> <span style="color:#66d9ef">extends</span> WebMvcConfigurationSupport <span style="color:#f92672">{</span>
     <span style="color:#a6e22e">@Autowired</span>  <span style="color:#75715e">// 自动装配
@@ -1727,9 +1732,12 @@ is<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><s
 
     <span style="color:#a6e22e">@Override</span>
     <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addInterceptors</span><span style="color:#f92672">(</span>InterceptorRegistry registry<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#75715e">// 添加（声明）拦截器并配置拦截规则
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">// 可以同时配置多个规则
-</span><span style="color:#75715e"></span>        registry<span style="color:#f92672">.</span><span style="color:#a6e22e">addInterceptor</span><span style="color:#f92672">(</span>bookInterceptor<span style="color:#f92672">).</span><span style="color:#a6e22e">addPathPatterns</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/books&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;/books/*&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#75715e">/*
+</span><span style="color:#75715e">            添加（声明）拦截器并配置拦截规则
+</span><span style="color:#75715e">            可以同时配置多个规则
+</span><span style="color:#75715e">            如果不添加拦截规则，默认拦截所有请求
+</span><span style="color:#75715e">        */</span>
+        registry<span style="color:#f92672">.</span><span style="color:#a6e22e">addInterceptor</span><span style="color:#f92672">(</span>bookInterceptor<span style="color:#f92672">).</span><span style="color:#a6e22e">addPathPatterns</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/books&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;/books/*&#34;</span><span style="color:#f92672">);</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>让SpringMVC扫描到拦截器的配置类：</p>
@@ -1737,7 +1745,21 @@ is<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><s
 <span style="color:#a6e22e">@ComponentScan</span><span style="color:#f92672">({</span><span style="color:#e6db74">&#34;com.linner.controller&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;com.linner.config&#34;</span><span style="color:#f92672">})</span>
 <span style="color:#a6e22e">@EnableWebMvc</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringMvcConfig</span> <span style="color:#f92672">{}</span>
-</code></pre></div><p>运行程序，发送<code>books</code>开头的请求（如<code>http://localhost/books</code>），终端会有如下输出：</p>
+</code></pre></div><p>拦截器的配置类<code>SpingMvcSupport</code>可以书写在<code>SpringMvcConfig</code>中，以简化书写（并演示继承<code>WebMvcConfigurer</code>编写拦截器配置类）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Configuration</span>
+<span style="color:#a6e22e">@ComponentScan</span><span style="color:#f92672">({</span><span style="color:#e6db74">&#34;com.linner.controller&#34;</span><span style="color:#f92672">})</span>
+<span style="color:#a6e22e">@EnableWebMvc</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringMvcConfig</span> <span style="color:#66d9ef">implements</span> WebMvcConfigurer <span style="color:#f92672">{</span>
+    <span style="color:#a6e22e">@Autowired</span>
+    <span style="color:#66d9ef">private</span> BookInterceptor bookInterceptor<span style="color:#f92672">;</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addInterceptors</span><span style="color:#f92672">(</span>InterceptorRegistry registry<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        registry<span style="color:#f92672">.</span><span style="color:#a6e22e">addInterceptor</span><span style="color:#f92672">(</span>bookInterceptor<span style="color:#f92672">).</span><span style="color:#a6e22e">addPathPatterns</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/books&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;/books/*&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="拦截器执行过程">拦截器执行过程</h2>
+<p>运行程序，发送<code>books</code>开头的请求（如<code>http://localhost/books</code>），终端会有如下输出：</p>
 <pre tabindex="0"><code>preHandle...
 getAll...
 postHandle...
@@ -1763,28 +1785,152 @@ afterCompletion...
 </li>
 <li>结束。</li>
 </ol>
-<p>当配置多个拦截器时，形成拦截器链。多个<code>preHandle()</code>按照Interceptor被声明顺序执行；多个<code>postHandle()</code>按照Interceptor被声明顺序逆序执行。即，拦截器链的运行顺序参照拦截器添加顺序为准。</p>
+<p>当配置多个拦截器时，形成拦截器链。多个<code>preHandle()</code>按照Interceptor被声明顺序执行；多个<code>postHandle()</code>按照Interceptor被声明顺序逆序执行。即，<u>拦截器链的运行顺序以拦截器添加顺序为准</u>。</p>
 <p>当拦截器中出现对原始处理器的拦截，后面的拦截器均终止运行。当拦截器运行中断，仅运行配置在前面的拦截器的<code>afterCompletion()</code>操作（<code>afterCompletion()</code>代表当前拦截器执行完成，与后续拦截器链中<code>preHandle()</code>的返回值和Controller是否被执行无关）。</p>
-<h2 id="拦截器配置书写简化">拦截器配置书写简化</h2>
-<p>Interceptor的配置类<code>SpingMvcSupport</code>可以书写在<code>SpringMvcConfig</code>中：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Configuration</span>
-<span style="color:#a6e22e">@ComponentScan</span><span style="color:#f92672">({</span><span style="color:#e6db74">&#34;com.linner.controller&#34;</span><span style="color:#f92672">})</span>
-<span style="color:#a6e22e">@EnableWebMvc</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringMvcConfig</span> <span style="color:#66d9ef">implements</span> WebMvcConfigurer <span style="color:#f92672">{</span>
-    <span style="color:#a6e22e">@Autowired</span>
-    <span style="color:#66d9ef">private</span> BookInterceptor bookInterceptor<span style="color:#f92672">;</span>
+<p>假设现在有如下两个拦截器：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Component</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FirstInterceptor</span> <span style="color:#66d9ef">implements</span> HandlerInterceptor <span style="color:#f92672">{</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">preHandle</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">,</span> Object handler<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;FirstInterceptor preHandle...&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 
     <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addInterceptors</span><span style="color:#f92672">(</span>InterceptorRegistry registry<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        registry<span style="color:#f92672">.</span><span style="color:#a6e22e">addInterceptor</span><span style="color:#f92672">(</span>bookInterceptor<span style="color:#f92672">).</span><span style="color:#a6e22e">addPathPatterns</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/books&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;/books/*&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">postHandle</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">,</span> Object handler<span style="color:#f92672">,</span> ModelAndView modelAndView<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;FirstInterceptor postHandle...&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">afterCompletion</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">,</span> Object handler<span style="color:#f92672">,</span> Exception ex<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;FirstInterceptor afterCompletion...&#34;</span><span style="color:#f92672">);</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><h2 id="静态资源">静态资源</h2>
+</code></pre></div><br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Component</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LaterInterceptor</span> <span style="color:#66d9ef">implements</span> HandlerInterceptor <span style="color:#f92672">{</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">preHandle</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">,</span> Object handler<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;LaterInterceptor preHandle...&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">postHandle</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">,</span> Object handler<span style="color:#f92672">,</span> ModelAndView modelAndView<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;LaterInterceptor postHandle...&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">afterCompletion</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">,</span> Object handler<span style="color:#f92672">,</span> Exception ex<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;LaterInterceptor afterCompletion...&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>它们在拦截器类中的添加顺序为：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Autowired</span>
+<span style="color:#66d9ef">private</span> FirstInterceptor firstInterceptor<span style="color:#f92672">;</span>
+<span style="color:#a6e22e">@Autowired</span>
+<span style="color:#66d9ef">private</span> LaterInterceptor laterInterceptor<span style="color:#f92672">;</span>
+
+<span style="color:#a6e22e">@Override</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addInterceptors</span><span style="color:#f92672">(</span>InterceptorRegistry registry<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// 如果没有配置拦截路径，则默认拦截所有请求
+</span><span style="color:#75715e"></span>    registry<span style="color:#f92672">.</span><span style="color:#a6e22e">addInterceptor</span><span style="color:#f92672">(</span>firstInterceptor<span style="color:#f92672">);</span>
+    regisrty<span style="color:#f92672">.</span><span style="color:#a6e22e">addInterceptor</span><span style="color:#f92672">(</span>laterInterceptor<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>访问任意资源后，终端输出：</p>
+<pre tabindex="0"><code>FirstInterceptor preHandle...
+LaterInterceptor preHandle...
+LaterInterceptor postHandle...
+FirstInterceptor postHandle...
+LaterInterceptor afterCompletion...
+FirstInterceptor afterCompletion...
+</code></pre><p>实际上在<code>DispatcherServlet</code>的<code>doDispatch()</code>方法中，在执行<code>mv = ha.handle(processedRequest, response, mappedHandler.getHandler())</code>之前有这么一个条件判断：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">/* ... */</span>
+
+    <span style="color:#75715e">// 执行相应Interceptor的preHandle
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>mappedHandler<span style="color:#f92672">.</span><span style="color:#a6e22e">applyPreHandle</span><span style="color:#f92672">(</span>processedRequest<span style="color:#f92672">,</span> response<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#75715e">// Actually invoke the handler.
+</span><span style="color:#75715e"></span>    mv <span style="color:#f92672">=</span> ha<span style="color:#f92672">.</span><span style="color:#a6e22e">handle</span><span style="color:#f92672">(</span>processedRequest<span style="color:#f92672">,</span> response<span style="color:#f92672">,</span> mappedHandler<span style="color:#f92672">.</span><span style="color:#a6e22e">getHandler</span><span style="color:#f92672">());</span>
+
+    <span style="color:#75715e">/* ... */</span>
+
+    <span style="color:#75715e">// 执行相应Interceptor的postHandle
+</span><span style="color:#75715e"></span>    mappedHandler<span style="color:#f92672">.</span><span style="color:#a6e22e">applyPostHandle</span><span style="color:#f92672">(</span>processedRequest<span style="color:#f92672">,</span> response<span style="color:#f92672">,</span> mv<span style="color:#f92672">);</span>
+
+    <span style="color:#75715e">/* ... */</span>
+<span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#75715e">/* ... */</span>
+
+<span style="color:#75715e">// 处理调度结果
+</span><span style="color:#75715e">// 包含了ModelAndView的进一步处理、还有Interceptor的afterCompletion()调用等等
+</span><span style="color:#75715e"></span>processDispatchResult<span style="color:#f92672">(</span>processedRequest<span style="color:#f92672">,</span> response<span style="color:#f92672">,</span> mappedHandler<span style="color:#f92672">,</span> mv<span style="color:#f92672">,</span> dispatchException<span style="color:#f92672">);</span>
+
+<span style="color:#75715e">/* ... */</span>
+</code></pre></div><p>即<code>HandlerExecutionChain</code>对象的<code>applyPreHandle()</code>方法：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">applyPreHandle</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// 读取interceptorList中的interceptor，并逐个执行它们的preHandle方法
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">interceptorList</span><span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">();</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 获取interceptor
+</span><span style="color:#75715e"></span>        HandlerInterceptor interceptor <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">interceptorList</span><span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>i<span style="color:#f92672">);</span>
+        <span style="color:#75715e">// 执行interceptor.preHandle
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// 如果有一个interceptor返回了false，则立即执行triggerAfterCompletion()并返回false
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>interceptor<span style="color:#f92672">.</span><span style="color:#a6e22e">preHandle</span><span style="color:#f92672">(</span>request<span style="color:#f92672">,</span> response<span style="color:#f92672">,</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">handler</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+            triggerAfterCompletion<span style="color:#f92672">(</span>request<span style="color:#f92672">,</span> response<span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>
+            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span><span style="color:#f92672">;</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#75715e">// 记录拦截器链中返回false的前一个拦截器下标
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">interceptorIndex</span> <span style="color:#f92672">=</span> i<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>applyPostHandle()</code>方法：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">applyPostHandle</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">,</span> <span style="color:#a6e22e">@Nullable</span> ModelAndView mv<span style="color:#f92672">)</span>
+        <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// 按照倒序，逐个执行interceptor.postHandle()
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">interceptorList</span><span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&gt;=</span> 0<span style="color:#f92672">;</span> i<span style="color:#f92672">--)</span> <span style="color:#f92672">{</span>
+        HandlerInterceptor interceptor <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">interceptorList</span><span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>i<span style="color:#f92672">);</span>
+        interceptor<span style="color:#f92672">.</span><span style="color:#a6e22e">postHandle</span><span style="color:#f92672">(</span>request<span style="color:#f92672">,</span> response<span style="color:#f92672">,</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">handler</span><span style="color:#f92672">,</span> mv<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>triggerAfterCompletion()</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">triggerAfterCompletion</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">,</span> <span style="color:#a6e22e">@Nullable</span> Exception ex<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// 从interceptorIndex开始，倒序执行interceptor.afterCompletion()
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 即triggerAfterCompletion()只会执行那些返回true的interceptor的afterCompletion()
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">interceptorIndex</span><span style="color:#f92672">;</span> i <span style="color:#f92672">&gt;=</span> 0<span style="color:#f92672">;</span> i<span style="color:#f92672">--)</span> <span style="color:#f92672">{</span>
+        HandlerInterceptor interceptor <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">interceptorList</span><span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>i<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+            interceptor<span style="color:#f92672">.</span><span style="color:#a6e22e">afterCompletion</span><span style="color:#f92672">(</span>request<span style="color:#f92672">,</span> response<span style="color:#f92672">,</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">handler</span><span style="color:#f92672">,</span> ex<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>Throwable ex2<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            logger<span style="color:#f92672">.</span><span style="color:#a6e22e">error</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;HandlerInterceptor.afterCompletion threw exception&#34;</span><span style="color:#f92672">,</span> ex2<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>在一切正常运行完成后，调用Interceptor的<code>afterCompletion()</code>的情况有点复杂（<code>DispatcherServlet</code>中的<code>processDispatchResult()</code>）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">processDispatchResult</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">,</span>
+        <span style="color:#a6e22e">@Nullable</span> HandlerExecutionChain mappedHandler<span style="color:#f92672">,</span> <span style="color:#a6e22e">@Nullable</span> ModelAndView mv<span style="color:#f92672">,</span>
+        <span style="color:#a6e22e">@Nullable</span> Exception exception<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+
+    <span style="color:#75715e">/* ... */</span>
+        
+    <span style="color:#75715e">// 在处理完其它调度结果后，通过mappedHandler.triggerAfterCompletion()来调用interceptor.afterCompletion()
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>mappedHandler <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// Exception (if any) is already handled..
+</span><span style="color:#75715e"></span>        mappedHandler<span style="color:#f92672">.</span><span style="color:#a6e22e">triggerAfterCompletion</span><span style="color:#f92672">(</span>request<span style="color:#f92672">,</span> response<span style="color:#f92672">,</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><blockquote>
+<p>在<code>DispatcherServlet</code>的<code>doDispatch()</code>方法中还有许多<code>try ... catch</code>，当捕捉到异常时，<code>doDispatch()</code>也会通过<code>triggerAfterCompletion()</code>方法来调用<code>mappedHandler.triggerAfterCompletion()</code>。</p>
+</blockquote>
+<h2 id="拦截静态资源">拦截静态资源</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Configuration</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringMvcSupport</span> <span style="color:#66d9ef">extends</span> WebMvcConfigurationSupport <span style="color:#f92672">{</span>
     <span style="color:#a6e22e">@Override</span>
     <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addResourceHandlers</span><span style="color:#f92672">(</span>ResourceHandlerRegistry registry<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#75715e">// 配置单个目录（Webapp目录下）
+        <span style="color:#75715e">// 放行单个目录（Webapp目录下）
 </span><span style="color:#75715e"></span>        registry<span style="color:#f92672">.</span><span style="color:#a6e22e">addResourceHandler</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/pages/**&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">addResourceLocations</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/pages/&#34;</span><span style="color:#f92672">);</span>
         <span style="color:#75715e">// 也可以将Webapp整个目录都添加：
 </span><span style="color:#75715e"></span>        <span style="color:#75715e">// registry.addResourceHandler(&#34;/**&#34;).addResourceLocations(&#34;classpath:/&#34;);
@@ -1794,7 +1940,27 @@ afterCompletion...
 <li><code>addResourceHandler()</code>：定义访问资源路径。</li>
 <li><code>addResourceLocations()</code>：定义访问路径时的静态资源目录。</li>
 </ul>
-
+<h2 id="配置文件配置拦截器">配置文件配置拦截器</h2>
+<p>除了使用配置类外，也可以使用配置文件的方式来配置拦截器。</p>
+<p>使用<code>&lt;mvc:interceptors&gt;</code>来配置拦截器。添加拦截器的方式有两种，一种是使用<u><code>&lt;bean class=&quot;...&quot;/&gt;</code></u>，另一种是使用<u><code>&lt;ref bean=&quot;...&quot;/&gt;</code></u>，这两种方式本质上没有什么区别。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;mvc:interceptors&gt;</span>
+    <span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;asia.linner.interceptor.FirstInterceptor&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#75715e">&lt;!-- bean中指定的是Bean的默认id，即首字母小写的类名 --&gt;</span>
+    <span style="color:#f92672">&lt;ref</span> <span style="color:#a6e22e">bean=</span><span style="color:#e6db74">&#34;laterInterceptor&#34;</span><span style="color:#f92672">/&gt;</span>
+<span style="color:#f92672">&lt;/mvc:interceptors&gt;</span>
+</code></pre></div><p>在<code>&lt;mvc:interceptors&gt;</code>中可以使用<code>&lt;mvc:interceptor&gt;</code>来配置具体的拦截规则：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;mvc:interceptors&gt;</span>
+    <span style="color:#f92672">&lt;mvc:interceptor&gt;</span>
+        <span style="color:#75715e">&lt;!-- &lt;mvc:mapping&gt;: 拦截路径 --&gt;</span>
+        <span style="color:#f92672">&lt;mvc:mapping</span> <span style="color:#a6e22e">path=</span><span style="color:#e6db74">&#34;/**&#34;</span><span style="color:#f92672">/&gt;</span>
+        <span style="color:#75715e">&lt;!-- &lt;mvc:exclude-mapping&gt;: 排除路径（不拦截） --&gt;</span>
+        <span style="color:#f92672">&lt;mvc:exclude-mapping</span> <span style="color:#a6e22e">path=</span><span style="color:#e6db74">&#34;/users&#34;</span><span style="color:#f92672">/&gt;</span>
+        <span style="color:#f92672">&lt;mvc:exclude-mapping</span> <span style="color:#a6e22e">path=</span><span style="color:#e6db74">&#34;/users/**&#34;</span><span style="color:#f92672">/&gt;</span>
+        <span style="color:#75715e">&lt;!-- 假设只有users和books这两个请求 --&gt;</span>
+        <span style="color:#f92672">&lt;ref</span> <span style="color:#a6e22e">bean=</span><span style="color:#e6db74">&#34;bookInterceptor&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;/mvc:interceptor&gt;</span>
+<span style="color:#f92672">&lt;/mvc:interceptors&gt;</span>
+</code></pre></div>
 </section>
 
 
