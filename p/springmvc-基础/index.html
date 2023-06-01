@@ -342,13 +342,13 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 23 分钟
+                    阅读时长: 27 分钟
                 </time>
                 |
             </div>
         
 
-        <div class="article-time--reading">共11486字</div>
+        <div class="article-time--reading">共13225字</div>
     </footer>
     
 
@@ -620,53 +620,63 @@ URL。</li>
 
 <span style="color:#f92672">&lt;/webapp&gt;</span>
 </code></pre></div><p>在<code>spring.mvc</code>中配置：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;!-- 自动扫描包 --&gt;</span>
-<span style="color:#f92672">&lt;context:component-scan</span> <span style="color:#a6e22e">base-package=</span><span style="color:#e6db74">&#34;com.linner.controller&#34;</span><span style="color:#f92672">/&gt;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+<span style="color:#f92672">&lt;beans</span> <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://www.springframework.org/schema/beans&#34;</span>
+       <span style="color:#a6e22e">xmlns:xsi=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
+       <span style="color:#a6e22e">xmlns:context=</span><span style="color:#e6db74">&#34;http://www.springframework.org/schema/context&#34;</span> <span style="color:#a6e22e">xmlns:mvc=</span><span style="color:#e6db74">&#34;http://www.springframework.org/schema/mvc&#34;</span>
+       <span style="color:#a6e22e">xsi:schemaLocation=</span><span style="color:#e6db74">&#34;http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd&#34;</span><span style="color:#f92672">&gt;</span>
 
-<span style="color:#75715e">&lt;!-- 配置Thymeleaf视图解析器 --&gt;</span>
-<span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;viewResolver&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;org.thymeleaf.spring5.view.ThymeleafViewResolver&#34;</span><span style="color:#f92672">&gt;</span>
-    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;order&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">/&gt;</span>
-    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;characterEncoding&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span><span style="color:#f92672">/&gt;</span>
-    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;templateEngine&#34;</span><span style="color:#f92672">&gt;</span>
-        <span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;org.thymeleaf.spring5.SpringTemplateEngine&#34;</span><span style="color:#f92672">&gt;</span>
-            <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;templateResolver&#34;</span><span style="color:#f92672">&gt;</span>
-                <span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver&#34;</span><span style="color:#f92672">&gt;</span>
-    
-                    <span style="color:#75715e">&lt;!-- 视图前缀 --&gt;</span>
-                    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;prefix&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/WEB-INF/templates/&#34;</span><span style="color:#f92672">/&gt;</span>
-    
-                    <span style="color:#75715e">&lt;!-- 视图后缀 --&gt;</span>
-                    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;suffix&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;.html&#34;</span><span style="color:#f92672">/&gt;</span>
-                    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;templateMode&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;HTML5&#34;</span><span style="color:#f92672">/&gt;</span>
-                    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;characterEncoding&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span> <span style="color:#f92672">/&gt;</span>
-                <span style="color:#f92672">&lt;/bean&gt;</span>
-            <span style="color:#f92672">&lt;/property&gt;</span>
-        <span style="color:#f92672">&lt;/bean&gt;</span>
-    <span style="color:#f92672">&lt;/property&gt;</span>
-<span style="color:#f92672">&lt;/bean&gt;</span>
+    <span style="color:#75715e">&lt;!-- 自动扫描包 --&gt;</span>
+    <span style="color:#f92672">&lt;context:component-scan</span> <span style="color:#a6e22e">base-package=</span><span style="color:#e6db74">&#34;com.linner.controller&#34;</span><span style="color:#f92672">/&gt;</span>
 
-<span style="color:#75715e">&lt;!-- 
-</span><span style="color:#75715e">   处理静态资源，例如html、js、css、jpg
-</span><span style="color:#75715e">   若只设置该标签，则只能访问静态资源，其他请求则无法访问
-</span><span style="color:#75715e">   此时必须设置&lt;mvc:annotation-driven/&gt;解决问题
-</span><span style="color:#75715e"> --&gt;</span>
-<span style="color:#f92672">&lt;mvc:default-servlet-handler/&gt;</span>
+    <span style="color:#75715e">&lt;!-- 配置Thymeleaf视图解析器 --&gt;</span>
+    <span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;viewResolver&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;org.thymeleaf.spring5.view.ThymeleafViewResolver&#34;</span><span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;order&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">/&gt;</span>
+        <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;characterEncoding&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span><span style="color:#f92672">/&gt;</span>
+        <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;templateEngine&#34;</span><span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;org.thymeleaf.spring5.SpringTemplateEngine&#34;</span><span style="color:#f92672">&gt;</span>
+                <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;templateResolver&#34;</span><span style="color:#f92672">&gt;</span>
+                    <span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver&#34;</span><span style="color:#f92672">&gt;</span>
+        
+                        <span style="color:#75715e">&lt;!-- 视图前缀 --&gt;</span>
+                        <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;prefix&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/WEB-INF/templates/&#34;</span><span style="color:#f92672">/&gt;</span>
+        
+                        <span style="color:#75715e">&lt;!-- 视图后缀 --&gt;</span>
+                        <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;suffix&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;.html&#34;</span><span style="color:#f92672">/&gt;</span>
+                        <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;templateMode&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;HTML5&#34;</span><span style="color:#f92672">/&gt;</span>
+                        <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;characterEncoding&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span> <span style="color:#f92672">/&gt;</span>
+                    <span style="color:#f92672">&lt;/bean&gt;</span>
+                <span style="color:#f92672">&lt;/property&gt;</span>
+            <span style="color:#f92672">&lt;/bean&gt;</span>
+        <span style="color:#f92672">&lt;/property&gt;</span>
+    <span style="color:#f92672">&lt;/bean&gt;</span>
 
-<span style="color:#75715e">&lt;!-- 开启mvc注解驱动 --&gt;</span>
-<span style="color:#f92672">&lt;mvc:annotation-driven&gt;</span>
-    <span style="color:#f92672">&lt;mvc:message-converters&gt;</span>
-        <span style="color:#75715e">&lt;!-- 处理响应中文内容乱码 --&gt;</span>
-        <span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;org.springframework.http.converter.StringHttpMessageConverter&#34;</span><span style="color:#f92672">&gt;</span>
-            <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;defaultCharset&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span> <span style="color:#f92672">/&gt;</span>
-            <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;supportedMediaTypes&#34;</span><span style="color:#f92672">&gt;</span>
-                <span style="color:#f92672">&lt;list&gt;</span>
-                    <span style="color:#f92672">&lt;value&gt;</span>text/html<span style="color:#f92672">&lt;/value&gt;</span>
-                    <span style="color:#f92672">&lt;value&gt;</span>application/json<span style="color:#f92672">&lt;/value&gt;</span>
-                <span style="color:#f92672">&lt;/list&gt;</span>
-            <span style="color:#f92672">&lt;/property&gt;</span>
-        <span style="color:#f92672">&lt;/bean&gt;</span>
-    <span style="color:#f92672">&lt;/mvc:message-converters&gt;</span>
-<span style="color:#f92672">&lt;/mvc:annotation-driven&gt;</span>
+    <span style="color:#75715e">&lt;!-- 静态资源访问 --&gt;</span>
+    <span style="color:#f92672">&lt;mvc:view-controller</span> <span style="color:#a6e22e">path=</span><span style="color:#e6db74">&#34;/&#34;</span> <span style="color:#a6e22e">view-name=</span><span style="color:#e6db74">&#34;index&#34;</span> <span style="color:#f92672">/&gt;</span>
+
+    <span style="color:#75715e">&lt;!-- 
+</span><span style="color:#75715e">        处理静态资源，例如html、js、css、jpg
+</span><span style="color:#75715e">        若只设置该标签，则只能访问静态资源，其他请求则无法访问
+</span><span style="color:#75715e">        此时必须设置&lt;mvc:annotation-driven/&gt;解决问题
+</span><span style="color:#75715e">    --&gt;</span>
+    <span style="color:#f92672">&lt;mvc:default-servlet-handler/&gt;</span>
+
+    <span style="color:#75715e">&lt;!-- 开启mvc注解驱动 --&gt;</span>
+    <span style="color:#f92672">&lt;mvc:annotation-driven&gt;</span>
+        <span style="color:#f92672">&lt;mvc:message-converters&gt;</span>
+            <span style="color:#75715e">&lt;!-- 处理响应中文内容乱码 --&gt;</span>
+            <span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;org.springframework.http.converter.StringHttpMessageConverter&#34;</span><span style="color:#f92672">&gt;</span>
+                <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;defaultCharset&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span> <span style="color:#f92672">/&gt;</span>
+                <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;supportedMediaTypes&#34;</span><span style="color:#f92672">&gt;</span>
+                    <span style="color:#f92672">&lt;list&gt;</span>
+                        <span style="color:#f92672">&lt;value&gt;</span>text/html<span style="color:#f92672">&lt;/value&gt;</span>
+                        <span style="color:#f92672">&lt;value&gt;</span>application/json<span style="color:#f92672">&lt;/value&gt;</span>
+                    <span style="color:#f92672">&lt;/list&gt;</span>
+                <span style="color:#f92672">&lt;/property&gt;</span>
+            <span style="color:#f92672">&lt;/bean&gt;</span>
+        <span style="color:#f92672">&lt;/mvc:message-converters&gt;</span>
+    <span style="color:#f92672">&lt;/mvc:annotation-driven&gt;</span>
+<span style="color:#f92672">&lt;/beans&gt;</span>
 </code></pre></div><blockquote>
 <p>在视图解析器中设置了视图前缀<code>&lt;property name=&quot;prefix&quot; ...&gt;</code>和视图后缀<code>&lt;property name=&quot;suffix&quot; ...&gt;</code>，那么在Controller的方法中，想要跳转到视图时，只需返回对应的视图文件名称，并去掉其后缀。例如访问<code>hello.html</code>只需返回<code>&quot;hello&quot;</code>，但<code>hello.html</code>必须要在对应的前缀路径中。</p>
 </blockquote>
@@ -1371,7 +1381,7 @@ jdbc.password=root
 <span style="color:#a6e22e">@ResponseBody</span>
 <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">testServletAPI</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     request<span style="color:#f92672">.</span><span style="color:#a6e22e">setAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testScope&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Hello ServletAPI!&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;OK&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">return</span> testRequestScope<span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><blockquote>
 <p>获取<code>response</code>也是类似的方法。在参数列表中指定一个<code>ServletResponse</code>或<code>HttpServletResponse</code>对象参数。</p>
@@ -1380,48 +1390,41 @@ jdbc.password=root
 <p><code>Model</code>是SpringMVC提供的专用于共享<code>request</code>域对象数据。</p>
 <p>使用<code>Model</code>的方式与使用<code>ServletAPI</code>类似，在形参列表中指定一个<code>Model</code>类型的参数即可。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/testModel&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#a6e22e">@ResponseBody</span>
 <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">testModel</span><span style="color:#f92672">(</span>Model model<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     <span style="color:#75715e">// 写入
 </span><span style="color:#75715e"></span>    model<span style="color:#f92672">.</span><span style="color:#a6e22e">addAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testRequestScope&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Hello Model!&#34;</span><span style="color:#f92672">);</span>
     <span style="color:#75715e">// 读取
 </span><span style="color:#75715e"></span>    String testRequestScope <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span> model<span style="color:#f92672">.</span><span style="color:#a6e22e">getAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testRequestScope&#34;</span><span style="color:#f92672">);</span>
     System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>testRequestScope<span style="color:#f92672">);</span>
-    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;success&#34;</span><span style="color:#f92672">;</span>
+
+    <span style="color:#66d9ef">return</span> testRequestScope<span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><p><code>success.html</code>：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
-&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
-    &lt;<span style="color:#f92672">head</span>&gt;
-        &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
-        &lt;<span style="color:#f92672">title</span>&gt;Success!&lt;/<span style="color:#f92672">title</span>&gt;
-    &lt;/<span style="color:#f92672">head</span>&gt;
-    &lt;<span style="color:#f92672">body</span>&gt;
-        &lt;<span style="color:#f92672">h1</span>&gt;Success!&lt;/<span style="color:#f92672">h1</span>&gt;
-    &lt;/<span style="color:#f92672">body</span>&gt;
-&lt;/<span style="color:#f92672">html</span>&gt;
 </code></pre></div><h2 id="map-string-object">Map String Object</h2>
 <p>使用<code>Map&lt;String, Object&gt;</code>共享<code>request</code>域对象数据，使用方式也是在形参列表中定义一个<code>Map&lt;String, Object&gt;</code>类型形参。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/testMap&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#a6e22e">@ResponseBody</span>
 <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">testMap</span><span style="color:#f92672">(</span>Map<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> map<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     <span style="color:#75715e">// 写入
 </span><span style="color:#75715e"></span>    map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testRequestScope&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Hello Map!&#34;</span><span style="color:#f92672">);</span>
     <span style="color:#75715e">// 读取
 </span><span style="color:#75715e"></span>    String testRequestScope <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span> map<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testRequestScope&#34;</span><span style="color:#f92672">);</span>
     System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>testRequestScope<span style="color:#f92672">);</span>
-
-    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;success&#34;</span><span style="color:#f92672">;</span>
+    
+    <span style="color:#66d9ef">return</span> testRequestScope<span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><h2 id="modelmap">ModelMap</h2>
 <p><code>ModelMap</code>的用法与<code>Map</code>十分类似。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/testModelMap&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#a6e22e">@ResponseBody</span>
 <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">testModelMap</span><span style="color:#f92672">(</span>ModelMap modelMap<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     <span style="color:#75715e">// 写入
 </span><span style="color:#75715e"></span>    modelMap<span style="color:#f92672">.</span><span style="color:#a6e22e">addAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testRequestScope&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Hello ModelMap!&#34;</span><span style="color:#f92672">);</span>
     <span style="color:#75715e">// 读取
 </span><span style="color:#75715e"></span>    String testRequestScope <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span> modelMap<span style="color:#f92672">.</span><span style="color:#a6e22e">getAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testRequestScope&#34;</span><span style="color:#f92672">);</span>
     System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>testRequestScope<span style="color:#f92672">);</span>
-
-    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;success&#34;</span><span style="color:#f92672">;</span>
+    
+    <span style="color:#66d9ef">return</span> testRequestScope<span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><h2 id="modelandview">ModelAndView</h2>
 <p><code>ModelAndView</code>是SpringMVC提供的用于共享<code>request</code>域对象数据和视图解析跳转的API。</p>
@@ -1440,8 +1443,20 @@ jdbc.password=root
 
     <span style="color:#66d9ef">return</span> mav<span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
+</code></pre></div><p><code>success.html</code>（在<code>Webapp/WEB-INF/templates/</code>下创建）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;zh&#34;</span>&gt;
+    &lt;<span style="color:#f92672">head</span>&gt;
+        &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+        &lt;<span style="color:#f92672">title</span>&gt;Success!&lt;/<span style="color:#f92672">title</span>&gt;
+    &lt;/<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">body</span>&gt;
+        &lt;<span style="color:#f92672">h1</span>&gt;Success!&lt;/<span style="color:#f92672">h1</span>&gt;
+    &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
 </code></pre></div><blockquote>
 <p>其实<code>ModelAndView</code>也可以作为Controller方法的参数使用。</p>
+<p>需要注意的是，使用<code>ModelAndView</code>设置视图对象无论是否使用<code>@ResponseBody</code>，返回的始终是视图。</p>
 </blockquote>
 <h2 id="mapmodel-和-modelmap">Map、Model 和 ModelMap</h2>
 <p>在使用<code>Map&lt;String, Object&gt;</code>、<code>Model</code>和<code>ModelMap</code>时SpringMVC传入的都是<code>BindingAwareModelMap</code>类型对象。</p>
@@ -1484,7 +1499,191 @@ jdbc.password=root
 </code></pre></div><blockquote>
 <p>通过断点调试最后发现，无论是<code>Map</code>、<code>Model</code>、<code>ModelMap</code>还是<code>ModelAndView</code>，它们最后都会被封装为<code>ModelAndView</code>（即使Controller方法返回的是<code>ModelAndView</code>，Controller方法中的<code>ModelAndView</code>和<code>DispatcherServlet</code>对象的<code>doDispatch()</code>中的<code>ModelAndView</code>地址也并不相同）。</p>
 </blockquote>
-<hr>
+<h2 id="向-session-域共享数据">向 Session 域共享数据</h2>
+<p>使用原生<code>ServletAPI</code>共享：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/testSession&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#a6e22e">@ResponseBody</span>
+<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">testSession</span><span style="color:#f92672">(</span>HttpSession session<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// 写入
+</span><span style="color:#75715e"></span>    session<span style="color:#f92672">.</span><span style="color:#a6e22e">setAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testSessionScope&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Hello Session!&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#75715e">// 读取
+</span><span style="color:#75715e"></span>    String testSessionScope <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span> session<span style="color:#f92672">.</span><span style="color:#a6e22e">getAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testSessionScope&#34;</span><span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>testSessionScope<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">return</span> testSessionScope<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>Session可以从Request域中获取：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/testSessionInServlet&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#a6e22e">@ResponseBody</span>
+<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">testSession</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// 从Request域中获取Session
+</span><span style="color:#75715e"></span>    HttpSession session <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span><span style="color:#a6e22e">getSession</span><span style="color:#f92672">();</span>
+    <span style="color:#75715e">// 写入
+</span><span style="color:#75715e"></span>    session<span style="color:#f92672">.</span><span style="color:#a6e22e">setAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testSessionScope&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Hello Session In Servlet!&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#75715e">// 读取
+</span><span style="color:#75715e"></span>    String testSessionScope <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span> session<span style="color:#f92672">.</span><span style="color:#a6e22e">getAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testSessionScope&#34;</span><span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>testSessionScope<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">return</span> testSessionScope<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h2 id="向-application-域共享数据">向 Application 域共享数据</h2>
+<p>通过Session域获取<code>ServletContext</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/testApplication&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#a6e22e">@ResponseBody</span>
+<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">testApplication</span><span style="color:#f92672">(</span>HttpSession session<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// 从Session域中获取ServletContext
+</span><span style="color:#75715e"></span>    ServletContext application <span style="color:#f92672">=</span> session<span style="color:#f92672">.</span><span style="color:#a6e22e">getServletContext</span><span style="color:#f92672">();</span>
+    <span style="color:#75715e">// 写入
+</span><span style="color:#75715e"></span>    application<span style="color:#f92672">.</span><span style="color:#a6e22e">setAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testSessionScope&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Hello Application!&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#75715e">// 读取
+</span><span style="color:#75715e"></span>    String testSessionScope <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span> application<span style="color:#f92672">.</span><span style="color:#a6e22e">getAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testSessionScope&#34;</span><span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>testSessionScope<span style="color:#f92672">);</span>
+
+    <span style="color:#66d9ef">return</span> testSessionScope<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>通过Request域获取<code>ServletContext</code>（不推荐）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/testApplicationInServlet&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#a6e22e">@ResponseBody</span>
+<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">testApplication</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// 从Request域中获取ServletContext
+</span><span style="color:#75715e"></span>    ServletContext application <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span><span style="color:#a6e22e">getServletContext</span><span style="color:#f92672">();</span>
+    <span style="color:#75715e">// 写入
+</span><span style="color:#75715e"></span>    application<span style="color:#f92672">.</span><span style="color:#a6e22e">setAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testSessionScope&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Hello Application In Servlet !&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#75715e">// 读取
+</span><span style="color:#75715e"></span>    String testSessionScope <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span> application<span style="color:#f92672">.</span><span style="color:#a6e22e">getAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;testSessionScope&#34;</span><span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>testSessionScope<span style="color:#f92672">);</span>
+
+    <span style="color:#66d9ef">return</span> testSessionScope<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><hr>
+<h1 id="请求报文转换">请求报文转换</h1>
+<p><code>HttpMessageConverter</code>即报文信息转换器，能将请求报文转换为Java对象，或将Java对象转换为响应报文</p>
+<p><code>HttpMessageConverter</code>提供了两个注解和两个类型：</p>
+<ul>
+<li>
+<p><code>@ResponseBody</code>：即上方Controller方法中使用的将返回值（Java对象）作为响应体发送给浏览器的注解。</p>
+</li>
+<li>
+<p><code>ResponseEntity</code>：可以作为Controller方法的返回值返回，并响应给浏览器。</p>
+</li>
+<li>
+<p><code>@RequestBody</code>：将Controller方法形参指定为请求体，并接收从浏览器发送过来的请求体。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@PostMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/testRequestBody&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#a6e22e">@ResponseBody</span>
+<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">testRequestBody</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@RequestBody</span> String requestBody<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    requestBody <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;RequestBody{&#39;&#34;</span> <span style="color:#f92672">+</span> requestBody <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;}&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">return</span> requestBody<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div></li>
+<li>
+<p><code>RequestEntity</code>：是封装请求报文的一种类型，在Controller方法形参中使用，它获得的是<u>整个请求报文</u>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/testRequestEntity&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#a6e22e">@ResponseBody</span>
+<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">testRequestEntity</span><span style="color:#f92672">(</span>RequestEntity<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> requestEntity<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    HttpHeaders headers <span style="color:#f92672">=</span> requestEntity<span style="color:#f92672">.</span><span style="color:#a6e22e">getHeaders</span><span style="color:#f92672">();</span>
+    String body <span style="color:#f92672">=</span> requestEntity<span style="color:#f92672">.</span><span style="color:#a6e22e">getBody</span><span style="color:#f92672">();</span>
+    String response <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;RequestEntity{&#34;</span> <span style="color:#f92672">+</span> headers <span style="color:#f92672">+</span>
+            <span style="color:#e6db74">&#34;}\nRequestBody{&#39;&#34;</span> <span style="color:#f92672">+</span> body <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;}&#34;</span><span style="color:#f92672">;</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>response<span style="color:#f92672">);</span>
+
+    <span style="color:#66d9ef">return</span> response<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div></li>
+</ul>
+<p>往响应体写入信息还有一个方法，就是使用原生<code>ServletAPI</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/testResponse&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testResponse</span><span style="color:#f92672">(</span>HttpServletResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
+    response<span style="color:#f92672">.</span><span style="color:#a6e22e">getWriter</span><span style="color:#f92672">().</span><span style="color:#a6e22e">print</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello Response!&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><hr>
+<h1 id="文件上传下载">文件上传下载</h1>
+<h2 id="responseentity-实现下载">ResponseEntity 实现下载</h2>
+<p>将<code>ResponseEntity&lt;byte[]&gt;</code>作为返回值，在其中设置好对应的响应头、响应体和状态码。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/testDown&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#66d9ef">public</span> ResponseEntity<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[]&gt;</span> <span style="color:#a6e22e">testResponseEntity</span><span style="color:#f92672">(</span>HttpSession session<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// 获取ServletContext对象
+</span><span style="color:#75715e"></span>    ServletContext servletContext <span style="color:#f92672">=</span> session<span style="color:#f92672">.</span><span style="color:#a6e22e">getServletContext</span><span style="color:#f92672">();</span>
+    <span style="color:#75715e">// 获取服务器中文件的真实路径 getRealPath()如果不带参数的话获取的是服务器的部署路径
+</span><span style="color:#75715e"></span>    String realPath <span style="color:#f92672">=</span> servletContext<span style="color:#f92672">.</span><span style="color:#a6e22e">getRealPath</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/static/img/test.png&#34;</span><span style="color:#f92672">);</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;RealPath: &#34;</span> <span style="color:#f92672">+</span> realPath<span style="color:#f92672">);</span>
+    <span style="color:#75715e">// 创建输入流
+</span><span style="color:#75715e"></span>    FileInputStream is <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileInputStream<span style="color:#f92672">(</span>realPath<span style="color:#f92672">);</span>
+    <span style="color:#75715e">// 创建字节数组
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> bytes <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span>is<span style="color:#f92672">.</span><span style="color:#a6e22e">available</span><span style="color:#f92672">()];</span>
+    <span style="color:#75715e">// 将流写到字节数组中
+</span><span style="color:#75715e"></span>    is<span style="color:#f92672">.</span><span style="color:#a6e22e">read</span><span style="color:#f92672">(</span>bytes<span style="color:#f92672">);</span>
+    <span style="color:#75715e">// 创建HttpHeaders对象设置响应头信息
+</span><span style="color:#75715e"></span>    MultiValueMap<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;</span> headers <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HttpHeaders<span style="color:#f92672">();</span>
+    <span style="color:#75715e">// 设置下载方式以及下载文件的名字
+</span><span style="color:#75715e"></span>    headers<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Content-Disposition&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;attachment;filename=test.png&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#75715e">// 设置响应状态码
+</span><span style="color:#75715e"></span>    HttpStatus statusCode <span style="color:#f92672">=</span> HttpStatus<span style="color:#f92672">.</span><span style="color:#a6e22e">OK</span><span style="color:#f92672">;</span>
+    <span style="color:#75715e">// 创建ResponseEntity对象
+</span><span style="color:#75715e"></span>    ResponseEntity<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[]&gt;</span> responseEntity <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ResponseEntity<span style="color:#f92672">&lt;&gt;(</span>bytes<span style="color:#f92672">,</span> headers<span style="color:#f92672">,</span> statusCode<span style="color:#f92672">);</span>
+    <span style="color:#75715e">// 关闭输入流
+</span><span style="color:#75715e"></span>    is<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+
+    <span style="color:#66d9ef">return</span> responseEntity<span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>在下载文件之前，需要通过Session获取当前要下载文件的真实路径：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ServletContext servletContext <span style="color:#f92672">=</span> session<span style="color:#f92672">.</span><span style="color:#a6e22e">getServletContext</span><span style="color:#f92672">();</span>
+String realPath <span style="color:#f92672">=</span> servletContext<span style="color:#f92672">.</span><span style="color:#a6e22e">getRealPath</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/static/img/test.png&#34;</span><span style="color:#f92672">);</span>
+</code></pre></div><p>获取了真实路径后，通过<code>FileInputStream</code>将文件读取并写入字节数组<code>byte[]</code>中：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">FileInputStream is <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> FileInputStream<span style="color:#f92672">(</span>realPath<span style="color:#f92672">);</span>
+<span style="color:#66d9ef">byte</span><span style="color:#f92672">[]</span> bytes <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">byte</span><span style="color:#f92672">[</span>is<span style="color:#f92672">.</span><span style="color:#a6e22e">available</span><span style="color:#f92672">()];</span>
+is<span style="color:#f92672">.</span><span style="color:#a6e22e">read</span><span style="color:#f92672">(</span>bytes<span style="color:#f92672">);</span>
+is<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</code></pre></div><p>下载文件时，需要在响应头中设置下载方式以及文件名：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">MultiValueMap<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">,</span> String<span style="color:#f92672">&gt;</span> headers <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HttpHeaders<span style="color:#f92672">();</span>
+<span style="color:#75715e">// 以附件方式下载文件，并且默认文件名为test.png
+</span><span style="color:#75715e"></span>headers<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Content-Disposition&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;attachment;filename=test.png&#34;</span><span style="color:#f92672">);</span>
+</code></pre></div><p>最后将字节数组作为响应体，再加上响应头和状态码等信息，创建<code>ResponseEntity</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ResponseEntity<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[]&gt;</span> responseEntity <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ResponseEntity<span style="color:#f92672">&lt;&gt;(</span>bytes<span style="color:#f92672">,</span> headers<span style="color:#f92672">,</span> statusCode<span style="color:#f92672">);</span>
+<span style="color:#66d9ef">return</span> responseEntity<span style="color:#f92672">;</span>
+</code></pre></div><h2 id="文件上传">文件上传</h2>
+<p>文件上传依赖：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency&gt;</span>
+    <span style="color:#f92672">&lt;groupId&gt;</span>commons-fileupload<span style="color:#f92672">&lt;/groupId&gt;</span>
+    <span style="color:#f92672">&lt;artifactId&gt;</span>commons-fileupload<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;version&gt;</span>1.3.1<span style="color:#f92672">&lt;/version&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
+</code></pre></div><p>在<code>springMVC.xml</code>中配置文件上传解析器：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;!-- 配置文件上传解析器，将上传的文件封装为MultipartFile --&gt;</span>
+<span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;multipartResolver&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;org.springframework.web.multipart.commons.CommonsMultipartResolver&#34;</span><span style="color:#f92672">/&gt;</span>
+</code></pre></div><p>文件上传实现：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@PostMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/testUp&#34;</span><span style="color:#f92672">)</span>
+<span style="color:#a6e22e">@ResponseBody</span>
+<span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">testUp</span><span style="color:#f92672">(</span>MultipartFile photo<span style="color:#f92672">,</span> HttpSession session<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// 获取上传文件的文件名
+</span><span style="color:#75715e"></span>    String fileName <span style="color:#f92672">=</span> photo<span style="color:#f92672">.</span><span style="color:#a6e22e">getOriginalFilename</span><span style="color:#f92672">();</span>
+    <span style="color:#75715e">// 获取上传文件的后缀名
+</span><span style="color:#75715e"></span>    String suffixName <span style="color:#f92672">=</span> fileName<span style="color:#f92672">.</span><span style="color:#a6e22e">substring</span><span style="color:#f92672">(</span>fileName<span style="color:#f92672">.</span><span style="color:#a6e22e">lastIndexOf</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;.&#34;</span><span style="color:#f92672">));</span>
+    <span style="color:#75715e">// 将UUID作为文件名
+</span><span style="color:#75715e"></span>    String uuid <span style="color:#f92672">=</span> UUID<span style="color:#f92672">.</span><span style="color:#a6e22e">randomUUID</span><span style="color:#f92672">().</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">();</span>
+    <span style="color:#75715e">// 将UUID和后缀名拼接后的结果作为最终的文件名
+</span><span style="color:#75715e"></span>    fileName <span style="color:#f92672">=</span> uuid <span style="color:#f92672">+</span> suffixName<span style="color:#f92672">;</span>
+    <span style="color:#75715e">// 需要通过 ServletContext 获取服务器中 photo 目录的路径
+</span><span style="color:#75715e"></span>    ServletContext servletContext <span style="color:#f92672">=</span> session<span style="color:#f92672">.</span><span style="color:#a6e22e">getServletContext</span><span style="color:#f92672">();</span>
+    <span style="color:#75715e">// photo 其实也可以用 photo.getName() 替代
+</span><span style="color:#75715e"></span>    String photoPath <span style="color:#f92672">=</span> servletContext<span style="color:#f92672">.</span><span style="color:#a6e22e">getRealPath</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;photo&#34;</span><span style="color:#f92672">);</span>
+    File file <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span>photoPath<span style="color:#f92672">);</span>
+    <span style="color:#75715e">// 判断photoPath所对应路径是否存在
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(!</span>file<span style="color:#f92672">.</span><span style="color:#a6e22e">exists</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 若不存在，则创建目录
+</span><span style="color:#75715e"></span>        file<span style="color:#f92672">.</span><span style="color:#a6e22e">mkdir</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+    String finalPath <span style="color:#f92672">=</span> photoPath <span style="color:#f92672">+</span> File<span style="color:#f92672">.</span><span style="color:#a6e22e">separator</span> <span style="color:#f92672">+</span> fileName<span style="color:#f92672">;</span>
+    photo<span style="color:#f92672">.</span><span style="color:#a6e22e">transferTo</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> File<span style="color:#f92672">(</span>finalPath<span style="color:#f92672">));</span>
+    <span style="color:#66d9ef">return</span> fileName <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; OK!&#34;</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>在上传文件时，需要考虑文件之间文件名的冲突问题，可以通过将文件名改为UUID解决：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// 获取上传文件的文件名
+</span><span style="color:#75715e"></span>String fileName <span style="color:#f92672">=</span> photo<span style="color:#f92672">.</span><span style="color:#a6e22e">getOriginalFilename</span><span style="color:#f92672">();</span>
+<span style="color:#75715e">// 获取上传文件的后缀名
+</span><span style="color:#75715e"></span>String suffixName <span style="color:#f92672">=</span> fileName<span style="color:#f92672">.</span><span style="color:#a6e22e">substring</span><span style="color:#f92672">(</span>fileName<span style="color:#f92672">.</span><span style="color:#a6e22e">lastIndexOf</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;.&#34;</span><span style="color:#f92672">));</span>
+<span style="color:#75715e">// 将UUID作为文件名
+</span><span style="color:#75715e"></span>String uuid <span style="color:#f92672">=</span> UUID<span style="color:#f92672">.</span><span style="color:#a6e22e">randomUUID</span><span style="color:#f92672">().</span><span style="color:#a6e22e">toString</span><span style="color:#f92672">();</span>
+<span style="color:#75715e">// 将UUID和后缀名拼接后的结果作为最终的文件名
+</span><span style="color:#75715e"></span>fileName <span style="color:#f92672">=</span> uuid <span style="color:#f92672">+</span> suffixName<span style="color:#f92672">;</span>
+</code></pre></div><hr>
 <h1 id="拦截器">拦截器</h1>
 <p>拦截器（Interceptor）是一种动态拦截方法调用的机制，在SpringMVC中动态拦截控制器方法的执行。拦截器可以在指定的发那个发调用前后执行预先设定的代码，可以阻止原始方法的执行。拦截器和过滤器在作用和执行顺序上很相似。它们的关系如下图所示：</p>
 <p><img src="/p/springmvc-%E5%9F%BA%E7%A1%80/1630676903190.png"
@@ -1537,8 +1736,7 @@ jdbc.password=root
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Configuration</span>
 <span style="color:#a6e22e">@ComponentScan</span><span style="color:#f92672">({</span><span style="color:#e6db74">&#34;com.linner.controller&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;com.linner.config&#34;</span><span style="color:#f92672">})</span>
 <span style="color:#a6e22e">@EnableWebMvc</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringMvcConfig</span> <span style="color:#f92672">{</span>
-<span style="color:#f92672">}</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringMvcConfig</span> <span style="color:#f92672">{}</span>
 </code></pre></div><p>运行程序，发送<code>books</code>开头的请求（如<code>http://localhost/books</code>），终端会有如下输出：</p>
 <pre tabindex="0"><code>preHandle...
 getAll...
@@ -1586,8 +1784,11 @@ afterCompletion...
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringMvcSupport</span> <span style="color:#66d9ef">extends</span> WebMvcConfigurationSupport <span style="color:#f92672">{</span>
     <span style="color:#a6e22e">@Override</span>
     <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addResourceHandlers</span><span style="color:#f92672">(</span>ResourceHandlerRegistry registry<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        registry<span style="color:#f92672">.</span><span style="color:#a6e22e">addResourceHandler</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/pages/**&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">addResourceLocations</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/pages/&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
+        <span style="color:#75715e">// 配置单个目录（Webapp目录下）
+</span><span style="color:#75715e"></span>        registry<span style="color:#f92672">.</span><span style="color:#a6e22e">addResourceHandler</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/pages/**&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">addResourceLocations</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/pages/&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#75715e">// 也可以将Webapp整个目录都添加：
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// registry.addResourceHandler(&#34;/**&#34;).addResourceLocations(&#34;classpath:/&#34;);
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><ul>
 <li><code>addResourceHandler()</code>：定义访问资源路径。</li>
