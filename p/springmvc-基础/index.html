@@ -342,13 +342,13 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 30 分钟
+                    阅读时长: 31 分钟
                 </time>
                 |
             </div>
         
 
-        <div class="article-time--reading">共14996字</div>
+        <div class="article-time--reading">共15499字</div>
     </footer>
     
 
@@ -1865,12 +1865,15 @@ FirstInterceptor afterCompletion...
 <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#75715e">/* ... */</span>
 
 <span style="color:#75715e">// 处理调度结果
-</span><span style="color:#75715e">// 包含了ModelAndView的进一步处理、还有Interceptor的afterCompletion()调用等等
+</span><span style="color:#75715e">// 包含了ModelAndView的进一步处理（渲染视图、处理模型）、还有Interceptor的afterCompletion()调用等等
 </span><span style="color:#75715e"></span>processDispatchResult<span style="color:#f92672">(</span>processedRequest<span style="color:#f92672">,</span> response<span style="color:#f92672">,</span> mappedHandler<span style="color:#f92672">,</span> mv<span style="color:#f92672">,</span> dispatchException<span style="color:#f92672">);</span>
 
 <span style="color:#75715e">/* ... */</span>
-</code></pre></div><p>即<code>HandlerExecutionChain</code>对象的<code>applyPreHandle()</code>方法：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">applyPreHandle</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+</code></pre></div><p>即<code>HandlerExecutionChain</code>（控制器执行链）对象的<code>applyPreHandle()</code>方法：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * preHandle执行链
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">applyPreHandle</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
     <span style="color:#75715e">// 读取interceptorList中的interceptor，并逐个执行它们的preHandle方法
 </span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">interceptorList</span><span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">();</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
         <span style="color:#75715e">// 获取interceptor
@@ -1887,7 +1890,10 @@ FirstInterceptor afterCompletion...
     <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p><code>applyPostHandle()</code>方法：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">applyPostHandle</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">,</span> <span style="color:#a6e22e">@Nullable</span> ModelAndView mv<span style="color:#f92672">)</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * postHandle执行链
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">applyPostHandle</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">,</span> <span style="color:#a6e22e">@Nullable</span> ModelAndView mv<span style="color:#f92672">)</span>
         <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
     <span style="color:#75715e">// 按照倒序，逐个执行interceptor.postHandle()
 </span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">interceptorList</span><span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">()</span> <span style="color:#f92672">-</span> 1<span style="color:#f92672">;</span> i <span style="color:#f92672">&gt;=</span> 0<span style="color:#f92672">;</span> i<span style="color:#f92672">--)</span> <span style="color:#f92672">{</span>
@@ -1895,8 +1901,11 @@ FirstInterceptor afterCompletion...
         interceptor<span style="color:#f92672">.</span><span style="color:#a6e22e">postHandle</span><span style="color:#f92672">(</span>request<span style="color:#f92672">,</span> response<span style="color:#f92672">,</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">handler</span><span style="color:#f92672">,</span> mv<span style="color:#f92672">);</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><p><code>triggerAfterCompletion()</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">triggerAfterCompletion</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">,</span> <span style="color:#a6e22e">@Nullable</span> Exception ex<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</code></pre></div><p><code>triggerAfterCompletion()</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * afterCompletion执行链
+</span><span style="color:#75715e"> */</span>
+<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">triggerAfterCompletion</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">,</span> <span style="color:#a6e22e">@Nullable</span> Exception ex<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
     <span style="color:#75715e">// 从interceptorIndex开始，倒序执行interceptor.afterCompletion()
 </span><span style="color:#75715e"></span>    <span style="color:#75715e">// 即triggerAfterCompletion()只会执行那些返回true的interceptor的afterCompletion()
 </span><span style="color:#75715e"></span>    <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">interceptorIndex</span><span style="color:#f92672">;</span> i <span style="color:#f92672">&gt;=</span> 0<span style="color:#f92672">;</span> i<span style="color:#f92672">--)</span> <span style="color:#f92672">{</span>
@@ -1915,6 +1924,15 @@ FirstInterceptor afterCompletion...
         <span style="color:#a6e22e">@Nullable</span> Exception exception<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
 
     <span style="color:#75715e">/* ... */</span>
+
+    <span style="color:#75715e">// Did the handler return a view to render?
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>mv <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">!</span>mv<span style="color:#f92672">.</span><span style="color:#a6e22e">wasCleared</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 渲染视图
+</span><span style="color:#75715e"></span>        render<span style="color:#f92672">(</span>mv<span style="color:#f92672">,</span> request<span style="color:#f92672">,</span> response<span style="color:#f92672">);</span>
+        <span style="color:#75715e">/* ... */</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#75715e">/* ... */</span>
         
     <span style="color:#75715e">// 在处理完其它调度结果后，通过mappedHandler.triggerAfterCompletion()来调用interceptor.afterCompletion()
 </span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>mappedHandler <span style="color:#f92672">!=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
@@ -1925,6 +1943,24 @@ FirstInterceptor afterCompletion...
 </code></pre></div><blockquote>
 <p>在<code>DispatcherServlet</code>的<code>doDispatch()</code>方法中还有许多<code>try ... catch</code>，当捕捉到异常时，<code>doDispatch()</code>也会通过<code>triggerAfterCompletion()</code>方法来调用<code>mappedHandler.triggerAfterCompletion()</code>。</p>
 </blockquote>
+<p>更具上述代码总结出<code>HandlerExecutionChain</code>中的执行情况：</p>
+<ul>
+<li>
+<p><code>applyPreHandle()</code>：在执行Controller方法之前执行。</p>
+</li>
+<li>
+<p><code>applyPostHandle()</code>：执行了Controller方法之后执行。</p>
+</li>
+<li>
+<p><code>triggerAfterCompletion()</code>：</p>
+<p>两种执行情况：</p>
+<ul>
+<li>执行<code>applyPreHandle()</code>时，有一个拦截器返回了<code>false</code>；</li>
+<li>执行完<code>applyPostHandle()</code>之后，且无错误时执行（即<code>processDispatchResult()</code>中的<code>triggerAfterCompletion()</code>）；</li>
+<li>执行<code>applyPreHandle()</code>、<code>applyPostHandle()</code>和Controller方法过程中，出现异常时执行（出现异常时是在<code>DispatcherServlet</code>的<code>triggerAfterCompletion()</code>中调用）。</li>
+</ul>
+</li>
+</ul>
 <h2 id="拦截静态资源">拦截静态资源</h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Configuration</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringMvcSupport</span> <span style="color:#66d9ef">extends</span> WebMvcConfigurationSupport <span style="color:#f92672">{</span>
