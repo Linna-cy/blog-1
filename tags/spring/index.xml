@@ -100,12 +100,30 @@
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;parent&amp;gt;&lt;/span&gt;
     &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
     &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;spring-boot-starter-parent&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;3.0.3&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;2.4.5&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- 这里的版本被修改过，按照上方创建的工程版本应该是 3.0.3 --&amp;gt;&lt;/span&gt;
     &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;relativePath/&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- lookup parent from repository --&amp;gt;&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/parent&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;该代码指定了一个父工程，父工程中的东西在该工程中可以继承过来使用。&lt;/p&gt;
 &lt;p&gt;并且使用Spring Initializr创建的项目会自动在&lt;code&gt;pom.xml&lt;/code&gt;中导入所需的起步依赖（包含&lt;code&gt;starter&lt;/code&gt;的依赖）。&lt;/p&gt;
-&lt;h2 id=&#34;引导类&#34;&gt;引导类&lt;/h2&gt;
+&lt;p&gt;在&lt;code&gt;pom.xml&lt;/code&gt;中还有如下起步依赖：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependencies&amp;gt;&lt;/span&gt;
+
+    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- Springboot Web 开发所需的起步依赖 --&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;spring-boot-starter-web&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+
+    &lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;!-- Springboot 整合Junit的起步依赖 --&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;spring-boot-starter-test&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+        &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;scope&amp;gt;&lt;/span&gt;test&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/scope&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependencies&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;引导类&#34;&gt;引导类&lt;/h2&gt;
 &lt;p&gt;创建的每个SpringBoot项目都包含一个引导类，如：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@SpringBootApplication&lt;/span&gt;
 &lt;span style=&#34;color:#66d9ef&#34;&gt;public&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;SpringbootDemoApplication&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
@@ -398,7 +416,13 @@ server.servlet.context-path=/
 &lt;/blockquote&gt;
 &lt;h1 id=&#34;第三方资源整合&#34;&gt;第三方资源整合&lt;/h1&gt;
 &lt;h2 id=&#34;整合-junit&#34;&gt;整合 Junit&lt;/h2&gt;
-&lt;p&gt;SpringBoot整合Junit分为三步：&lt;/p&gt;
+&lt;p&gt;SpringBoot整合了Junit并可将其作为起步依赖整合到项目中：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-xml&#34; data-lang=&#34;xml&#34;&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;dependency&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;spring-boot-starter-test&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
+    &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;scope&amp;gt;&lt;/span&gt;test&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/scope&amp;gt;&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;/dependency&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;SpringBoot整合Junit分为三步：&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;在测试类上添加 &lt;code&gt;@SpringBootTest&lt;/code&gt; 注解。&lt;/li&gt;
 &lt;li&gt;使用 &lt;code&gt;@Autowired&lt;/code&gt; 注入要测试的资源。&lt;/li&gt;
@@ -412,9 +436,10 @@ server.servlet.context-path=/
         System&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;out&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;println&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Book save ...&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
     &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;编写Test类：&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;测试&lt;code&gt;BookService&lt;/code&gt;：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@SpringBootTest&lt;/span&gt;
 &lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;SpringbootDemoApplicationTests&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+
     &lt;span style=&#34;color:#a6e22e&#34;&gt;@Autowired&lt;/span&gt;
     &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; BookService bookService&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
 
@@ -425,7 +450,7 @@ server.servlet.context-path=/
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;由于引导类默认扫描当前包下的类和包，所以测试类（或者测试类的包）和引导类要在同个包下。&lt;/p&gt;
-&lt;p&gt;否则，可以使用&lt;code&gt;@SpringBootTest&lt;/code&gt;注解的&lt;code&gt;classes&lt;/code&gt;属性指定引导类的字节码对象。如：&lt;code&gt;@SpringBootTest(classes = SpringbootDemoApplication.class)&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;否则，可以使用&lt;code&gt;@SpringBootTest&lt;/code&gt;注解的&lt;code&gt;classes&lt;/code&gt;属性指定引导类的字节码对象。如：&lt;code&gt;@SpringBootTest(classes = {SpringbootDemoApplication.class})&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;整合-mybatis&#34;&gt;整合 MyBatis&lt;/h2&gt;
 &lt;p&gt;在整合MyBatis前先建一个用于测试的数据库：&lt;/p&gt;
