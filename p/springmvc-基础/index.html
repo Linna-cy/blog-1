@@ -2,7 +2,7 @@
 <html lang="zh" dir="ltr">
     <head><meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='简介 SpringMVC是Spring下的一个用于Web表现层开发的技术。相比Servlet，SpringMVC更加高效快捷。 SpringMV'>
-<meta name="keywords" content="SpringMVC, 请求与相应, JSON, REST, 域对象, 拦截器, 文件上传下载, 异常处理, 配置类">
+<meta name="keywords" content="SpringMVC, 请求与相应, JSON, REST, 域对象, 拦截器, 文件上传下载, 异常处理, 配置类, 转发, 重定向">
 
 <title>SpringMVC 基础</title>
 
@@ -370,7 +370,7 @@
             </div>
         
 
-        <div class="article-time--reading">共18265字</div>
+        <div class="article-time--reading">共18521字</div>
     </footer>
     
 
@@ -2348,7 +2348,45 @@ FirstInterceptor afterCompletion...
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><p>在<code>ExceptionController</code>中用<code>@ExceptionHandler</code>标注的方法，在它的参数列表中定义一个<code>Exception</code>类型的参数，可用于获取当前处理的实际的异常。</p>
+<hr>
+<h1 id="重定向">重定向</h1>
+<p>Spring MVC默认的方式是<code>forward</code>（即转发），而要使用<code>redirect</code>需要在视图名称中添加<code>redirect:</code>说明。Spring MVC重定向有以下几种方式：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Controller</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TestController</span> <span style="color:#f92672">{</span>
 
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 通过返回类型为String的方法，返回一个&#34;redirect:...&#34;的字符串进行重定向
+</span><span style="color:#75715e">     * @return 重定向的路径
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/test1&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">test1</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;redirect:/index.html&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 通过ModelAndView设置视图名称为&#34;redirect:...&#34;
+</span><span style="color:#75715e">     * @return
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/test2&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">public</span> ModelAndView <span style="color:#a6e22e">test2</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> ModelAndView<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;redirect:/test1&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#75715e">// 相当于：
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">/*
+</span><span style="color:#75715e">        ModelAndView mav = new ModelAndView();
+</span><span style="color:#75715e">        mav.setViewName(&#34;redirect:/index&#34;);
+</span><span style="color:#75715e">        return mav;
+</span><span style="color:#75715e">        */</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 通过原生ServletAPI
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/test3&#34;</span><span style="color:#f92672">)</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">test3</span><span style="color:#f92672">(</span>HttpServletResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
+        response<span style="color:#f92672">.</span><span style="color:#a6e22e">sendRedirect</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/test1&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
 </section>
 
 
