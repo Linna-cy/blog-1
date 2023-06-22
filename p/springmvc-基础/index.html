@@ -364,13 +364,13 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 31 分钟
+                    阅读时长: 37 分钟
                 </time>
                 |
             </div>
         
 
-        <div class="article-time--reading">共15502字</div>
+        <div class="article-time--reading">共18265字</div>
     </footer>
     
 
@@ -420,7 +420,9 @@ URL。</li>
 <li>初始化SpringMVC环境（同Spring环境），设定SpringMVC加载对应的<code>Bean</code>。</li>
 <li>初始化Servlet容器，加载SpringMVC环境，并设置SpringMVC技术处理的请求。</li>
 </ol>
-<h2 id="项目结构及基础环境配置">项目结构及基础环境配置</h2>
+<hr>
+<h1 id="项目环境及结构">项目环境及结构</h1>
+<h2 id="项目结构">项目结构</h2>
 <p>使用SpringMVC开发的项目结构如下：</p>
 <ul>
 <li>📁<code>project-file-name</code>
@@ -493,12 +495,10 @@ URL。</li>
 <li>
 <p>修改<code>pom.xml</code>文件：</p>
 <p>将多余的内容删除，然后添加SpringMVC所需的依赖。如：</p>
-</li>
-</ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
 
 <span style="color:#f92672">&lt;project</span> <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://maven.apache.org/POM/4.0.0&#34;</span> <span style="color:#a6e22e">xmlns:xsi=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
-  <span style="color:#a6e22e">xsi:schemaLocation=</span><span style="color:#e6db74">&#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&#34;</span><span style="color:#f92672">&gt;</span>
+<span style="color:#a6e22e">xsi:schemaLocation=</span><span style="color:#e6db74">&#34;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&#34;</span><span style="color:#f92672">&gt;</span>
   <span style="color:#f92672">&lt;modelVersion&gt;</span>4.0.0<span style="color:#f92672">&lt;/modelVersion&gt;</span>
 
   <span style="color:#f92672">&lt;groupId&gt;</span>com.linner<span style="color:#f92672">&lt;/groupId&gt;</span>
@@ -513,67 +513,118 @@ URL。</li>
   <span style="color:#f92672">&lt;/properties&gt;</span>
 
   <span style="color:#f92672">&lt;dependencies&gt;</span>
-    <span style="color:#75715e">&lt;!-- SpringMVC所需依赖的坐标： --&gt;</span>
-    <span style="color:#75715e">&lt;!-- Servlet坐标： --&gt;</span>
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>javax.servlet<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>javax.servlet-api<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;version&gt;</span>3.1.0<span style="color:#f92672">&lt;/version&gt;</span>
-      <span style="color:#75715e">&lt;!-- Servlet需要修改作用范围，否则会与Tomcat中的servlet-api包发生冲突 --&gt;</span>
-      <span style="color:#75715e">&lt;!-- provided代表的是该包只在编译和测试的时候用 --&gt;</span>
-      <span style="color:#f92672">&lt;scope&gt;</span>provided<span style="color:#f92672">&lt;/scope&gt;</span>
-    <span style="color:#f92672">&lt;/dependency&gt;</span>
-    <span style="color:#75715e">&lt;!-- SpringMVC坐标： --&gt;</span>
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-      <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework<span style="color:#f92672">&lt;/groupId&gt;</span>
-      <span style="color:#f92672">&lt;artifactId&gt;</span>spring-webmvc<span style="color:#f92672">&lt;/artifactId&gt;</span>
-      <span style="color:#f92672">&lt;version&gt;</span>5.2.10.RELEASE<span style="color:#f92672">&lt;/version&gt;</span>
-    <span style="color:#f92672">&lt;/dependency&gt;</span>
+
+    <span style="color:#75715e">&lt;!-- ... --&gt;</span>
+
   <span style="color:#f92672">&lt;/dependencies&gt;</span>
 
   <span style="color:#f92672">&lt;build&gt;</span>
     <span style="color:#f92672">&lt;plugins&gt;</span>
-      <span style="color:#f92672">&lt;plugin&gt;</span>
-        <span style="color:#f92672">&lt;groupId&gt;</span>org.apache.tomcat.maven<span style="color:#f92672">&lt;/groupId&gt;</span>
-        <span style="color:#f92672">&lt;artifactId&gt;</span>tomcat7-maven-plugin<span style="color:#f92672">&lt;/artifactId&gt;</span>
-        <span style="color:#f92672">&lt;version&gt;</span>2.1<span style="color:#f92672">&lt;/version&gt;</span>
-        <span style="color:#f92672">&lt;configuration&gt;</span>
-          <span style="color:#f92672">&lt;port&gt;</span>80<span style="color:#f92672">&lt;/port&gt;</span>
-          <span style="color:#f92672">&lt;path&gt;</span>/<span style="color:#f92672">&lt;/path&gt;</span>
-          <span style="color:#f92672">&lt;uriEncoding&gt;</span>UTF-8<span style="color:#f92672">&lt;/uriEncoding&gt;</span>
-        <span style="color:#f92672">&lt;/configuration&gt;</span>
-      <span style="color:#f92672">&lt;/plugin&gt;</span>
+
+      <span style="color:#75715e">&lt;!-- ... --&gt;</span>
+
     <span style="color:#f92672">&lt;/plugins&gt;</span>
   <span style="color:#f92672">&lt;/build&gt;</span>
 <span style="color:#f92672">&lt;/project&gt;</span>
-</code></pre></div><hr>
-<h1 id="项目环境">项目环境</h1>
-<p>使用SpringMVC构建Web项目，除了以上基础配置外，还需要导入其他配置。</p>
-<p>DAO相关的坐标：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency&gt;</span>
-    <span style="color:#f92672">&lt;groupId&gt;</span>com.alibaba<span style="color:#f92672">&lt;/groupId&gt;</span>
-    <span style="color:#f92672">&lt;artifactId&gt;</span>druid<span style="color:#f92672">&lt;/artifactId&gt;</span>
-    <span style="color:#f92672">&lt;version&gt;</span>1.1.16<span style="color:#f92672">&lt;/version&gt;</span>
-<span style="color:#f92672">&lt;/dependency&gt;</span>
+</code></pre></div></li>
+</ol>
+<h2 id="基础环境">基础环境</h2>
+<p>Tomcat7 Maven插件：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;plugin&gt;</span>
+  <span style="color:#f92672">&lt;groupId&gt;</span>org.apache.tomcat.maven<span style="color:#f92672">&lt;/groupId&gt;</span>
+  <span style="color:#f92672">&lt;artifactId&gt;</span>tomcat7-maven-plugin<span style="color:#f92672">&lt;/artifactId&gt;</span>
+  <span style="color:#f92672">&lt;version&gt;</span>2.1<span style="color:#f92672">&lt;/version&gt;</span>
+  <span style="color:#f92672">&lt;configuration&gt;</span>
+    <span style="color:#f92672">&lt;port&gt;</span>80<span style="color:#f92672">&lt;/port&gt;</span>
+    <span style="color:#f92672">&lt;path&gt;</span>/<span style="color:#f92672">&lt;/path&gt;</span>
+    <span style="color:#f92672">&lt;uriEncoding&gt;</span>UTF-8<span style="color:#f92672">&lt;/uriEncoding&gt;</span>
+  <span style="color:#f92672">&lt;/configuration&gt;</span>
+<span style="color:#f92672">&lt;/plugin&gt;</span>
+</code></pre></div><p>基础依赖：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;!-- Servlet --&gt;</span>
 <span style="color:#f92672">&lt;dependency&gt;</span>
-    <span style="color:#f92672">&lt;groupId&gt;</span>org.mybatis<span style="color:#f92672">&lt;/groupId&gt;</span>
-    <span style="color:#f92672">&lt;artifactId&gt;</span>mybatis<span style="color:#f92672">&lt;/artifactId&gt;</span>
-    <span style="color:#f92672">&lt;version&gt;</span>3.5.6<span style="color:#f92672">&lt;/version&gt;</span>
+    <span style="color:#f92672">&lt;groupId&gt;</span>javax.servlet<span style="color:#f92672">&lt;/groupId&gt;</span>
+    <span style="color:#f92672">&lt;artifactId&gt;</span>javax.servlet-api<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;version&gt;</span>3.1.0<span style="color:#f92672">&lt;/version&gt;</span>
+    <span style="color:#75715e">&lt;!-- Servlet需要修改作用范围，否则会与Tomcat中的servlet-api包发生冲突 --&gt;</span>
+    <span style="color:#75715e">&lt;!-- provided代表的是该包只在编译和测试的时候用 --&gt;</span>
+    <span style="color:#f92672">&lt;scope&gt;</span>provided<span style="color:#f92672">&lt;/scope&gt;</span>
 <span style="color:#f92672">&lt;/dependency&gt;</span>
-<span style="color:#f92672">&lt;dependency&gt;</span>
-    <span style="color:#f92672">&lt;groupId&gt;</span>mysql<span style="color:#f92672">&lt;/groupId&gt;</span>
-    <span style="color:#f92672">&lt;artifactId&gt;</span>mysql-connector-java<span style="color:#f92672">&lt;/artifactId&gt;</span>
-    <span style="color:#f92672">&lt;version&gt;</span>5.1.47<span style="color:#f92672">&lt;/version&gt;</span>
-<span style="color:#f92672">&lt;/dependency&gt;</span>
+<span style="color:#75715e">&lt;!-- SpringMVC --&gt;</span>
 <span style="color:#f92672">&lt;dependency&gt;</span>
     <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework<span style="color:#f92672">&lt;/groupId&gt;</span>
-    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-jdbc<span style="color:#f92672">&lt;/artifactId&gt;</span>
+    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-webmvc<span style="color:#f92672">&lt;/artifactId&gt;</span>
     <span style="color:#f92672">&lt;version&gt;</span>5.2.10.RELEASE<span style="color:#f92672">&lt;/version&gt;</span>
 <span style="color:#f92672">&lt;/dependency&gt;</span>
+</code></pre></div><h2 id="dao-相关依赖环境">DAO 相关依赖环境</h2>
+<p>使用SpringMVC构建Web项目，除了以上基础配置外，还需要导入其他配置。</p>
+<p>DAO相关的坐标：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;!-- Spring JDBC --&gt;</span>
 <span style="color:#f92672">&lt;dependency&gt;</span>
-    <span style="color:#f92672">&lt;groupId&gt;</span>org.mybatis<span style="color:#f92672">&lt;/groupId&gt;</span>
-    <span style="color:#f92672">&lt;artifactId&gt;</span>mybatis-spring<span style="color:#f92672">&lt;/artifactId&gt;</span>
-    <span style="color:#f92672">&lt;version&gt;</span>1.3.0<span style="color:#f92672">&lt;/version&gt;</span>
+  <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework<span style="color:#f92672">&lt;/groupId&gt;</span>
+  <span style="color:#f92672">&lt;artifactId&gt;</span>spring-jdbc<span style="color:#f92672">&lt;/artifactId&gt;</span>
+  <span style="color:#f92672">&lt;version&gt;</span>5.2.10.RELEASE<span style="color:#f92672">&lt;/version&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
+<span style="color:#75715e">&lt;!-- MySQL --&gt;</span>
+<span style="color:#f92672">&lt;dependency&gt;</span>
+  <span style="color:#f92672">&lt;groupId&gt;</span>mysql<span style="color:#f92672">&lt;/groupId&gt;</span>
+  <span style="color:#f92672">&lt;artifactId&gt;</span>mysql-connector-java<span style="color:#f92672">&lt;/artifactId&gt;</span>
+  <span style="color:#f92672">&lt;version&gt;</span>5.1.47<span style="color:#f92672">&lt;/version&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
+<span style="color:#75715e">&lt;!-- MyBatis --&gt;</span>
+<span style="color:#f92672">&lt;dependency&gt;</span>
+  <span style="color:#f92672">&lt;groupId&gt;</span>org.mybatis<span style="color:#f92672">&lt;/groupId&gt;</span>
+  <span style="color:#f92672">&lt;artifactId&gt;</span>mybatis<span style="color:#f92672">&lt;/artifactId&gt;</span>
+  <span style="color:#f92672">&lt;version&gt;</span>3.5.6<span style="color:#f92672">&lt;/version&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
+<span style="color:#75715e">&lt;!-- MyBatis Spring依赖 --&gt;</span>
+<span style="color:#f92672">&lt;dependency&gt;</span>
+  <span style="color:#f92672">&lt;groupId&gt;</span>org.mybatis<span style="color:#f92672">&lt;/groupId&gt;</span>
+  <span style="color:#f92672">&lt;artifactId&gt;</span>mybatis-spring<span style="color:#f92672">&lt;/artifactId&gt;</span>
+  <span style="color:#f92672">&lt;version&gt;</span>1.3.0<span style="color:#f92672">&lt;/version&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
+<span style="color:#75715e">&lt;!-- Druid 数据库连接池 --&gt;</span>
+<span style="color:#f92672">&lt;dependency&gt;</span>
+  <span style="color:#f92672">&lt;groupId&gt;</span>com.alibaba<span style="color:#f92672">&lt;/groupId&gt;</span>
+  <span style="color:#f92672">&lt;artifactId&gt;</span>druid<span style="color:#f92672">&lt;/artifactId&gt;</span>
+  <span style="color:#f92672">&lt;version&gt;</span>1.1.16<span style="color:#f92672">&lt;/version&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
+</code></pre></div><h2 id="其它依赖环境">其它依赖环境</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;!-- Jackson --&gt;</span>
+<span style="color:#f92672">&lt;dependency&gt;</span>
+  <span style="color:#f92672">&lt;groupId&gt;</span>com.fasterxml.jackson.core<span style="color:#f92672">&lt;/groupId&gt;</span>
+  <span style="color:#f92672">&lt;artifactId&gt;</span>jackson-databind<span style="color:#f92672">&lt;/artifactId&gt;</span>
+  <span style="color:#f92672">&lt;version&gt;</span>2.9.0<span style="color:#f92672">&lt;/version&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
+
+<span style="color:#75715e">&lt;!-- 日志 --&gt;</span>
+<span style="color:#f92672">&lt;dependency&gt;</span>
+  <span style="color:#f92672">&lt;groupId&gt;</span>ch.qos.logback<span style="color:#f92672">&lt;/groupId&gt;</span>
+  <span style="color:#f92672">&lt;artifactId&gt;</span>logback-classic<span style="color:#f92672">&lt;/artifactId&gt;</span>
+  <span style="color:#f92672">&lt;version&gt;</span>1.2.3<span style="color:#f92672">&lt;/version&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
+
+<span style="color:#75715e">&lt;!-- Thymeleaf（不常用） --&gt;</span>
+<span style="color:#f92672">&lt;dependency&gt;</span>
+  <span style="color:#f92672">&lt;groupId&gt;</span>org.thymeleaf<span style="color:#f92672">&lt;/groupId&gt;</span>
+  <span style="color:#f92672">&lt;artifactId&gt;</span>thymeleaf-spring5<span style="color:#f92672">&lt;/artifactId&gt;</span>
+  <span style="color:#f92672">&lt;version&gt;</span>3.0.12.RELEASE<span style="color:#f92672">&lt;/version&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
+
+<span style="color:#75715e">&lt;!-- 文件上传依赖 --&gt;</span>
+<span style="color:#f92672">&lt;dependency&gt;</span>
+  <span style="color:#f92672">&lt;groupId&gt;</span>commons-fileupload<span style="color:#f92672">&lt;/groupId&gt;</span>
+  <span style="color:#f92672">&lt;artifactId&gt;</span>commons-fileupload<span style="color:#f92672">&lt;/artifactId&gt;</span>
+  <span style="color:#f92672">&lt;version&gt;</span>1.3.1<span style="color:#f92672">&lt;/version&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
+
+<span style="color:#75715e">&lt;!-- Test --&gt;</span>
+<span style="color:#75715e">&lt;!-- Junit 单元测试 --&gt;</span>
+<span style="color:#f92672">&lt;dependency&gt;</span>
+  <span style="color:#f92672">&lt;groupId&gt;</span>junit<span style="color:#f92672">&lt;/groupId&gt;</span>
+  <span style="color:#f92672">&lt;artifactId&gt;</span>junit<span style="color:#f92672">&lt;/artifactId&gt;</span>
+  <span style="color:#f92672">&lt;version&gt;</span>3.8.1<span style="color:#f92672">&lt;/version&gt;</span>
+  <span style="color:#f92672">&lt;scope&gt;</span>test<span style="color:#f92672">&lt;/scope&gt;</span>
 <span style="color:#f92672">&lt;/dependency&gt;</span>
 </code></pre></div><hr>
 <h1 id="配置">配置</h1>
@@ -582,7 +633,7 @@ URL。</li>
 <li><code>web.xml</code>配置文件</li>
 <li>配置类</li>
 </ul>
-<h2 id="webxml">web.xml</h2>
+<h2 id="配置文件方式">配置文件方式</h2>
 <p>在<code>web.xml</code>中注册SpringMVC的前端控制器<code>DispatcherServlet</code>：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;!DOCTYPE web-app PUBLIC
 </span><span style="color:#75715e"> &#34;-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN&#34;
@@ -651,9 +702,10 @@ URL。</li>
     <span style="color:#75715e">&lt;!-- 自动扫描包 --&gt;</span>
     <span style="color:#f92672">&lt;context:component-scan</span> <span style="color:#a6e22e">base-package=</span><span style="color:#e6db74">&#34;com.linner.controller&#34;</span><span style="color:#f92672">/&gt;</span>
 
-    <span style="color:#75715e">&lt;!-- 配置Thymeleaf视图解析器 --&gt;</span>
+    <span style="color:#75715e">&lt;!-- 配置Thymeleaf视图解析器（不常用） --&gt;</span>
     <span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;viewResolver&#34;</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;org.thymeleaf.spring5.view.ThymeleafViewResolver&#34;</span><span style="color:#f92672">&gt;</span>
         <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;order&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">/&gt;</span>
+        <span style="color:#75715e">&lt;!-- 设置编码，将编码都转为 UTF-8 --&gt;</span>
         <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;characterEncoding&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span><span style="color:#f92672">/&gt;</span>
         <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;templateEngine&#34;</span><span style="color:#f92672">&gt;</span>
             <span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;org.thymeleaf.spring5.SpringTemplateEngine&#34;</span><span style="color:#f92672">&gt;</span>
@@ -732,24 +784,54 @@ URL。</li>
 </code></pre></div><blockquote>
 <p>SpringMVC中处理编码的过滤器一定要配置到其他过滤器之前，否则无效。</p>
 </blockquote>
-<h2 id="配置类">配置类</h2>
-<p><code>jdbc.properties</code>（数据库配置，放在项目中<code>resources</code>目录下）：</p>
-<pre tabindex="0"><code class="language-properties" data-lang="properties">jdbc.driver=com.mysql.jdbc.Driver
-jdbc.url=jdbc:mysql:///spring_db?useSSL=false&amp;characterEncoding=utf-8
-jdbc.username=root
-jdbc.password=root
-</code></pre><p>SpringMVC项目至少需要<code>SpringConfig</code>和<code>SpringMvcConfig</code>这两个配置类。</p>
+<h2 id="配置类方式">配置类方式</h2>
+<p>使用配置类则无需在<code>webapp/WEB-INF</code>中添加<code>web.xml</code>文件（当然也可以选择添加）。</p>
+<p>SpringMVC项目至少需要<code>ServletConfig</code>、<code>SpringConfig</code>和<code>SpringMvcConfig</code>这三个配置类。</p>
 <ul>
-<li>Spring：控制业务（Service）和功能（DataSource、SqlSessionFactoryBean、 MapperScannerConfigurer等）相关的Bean。</li>
-<li>SpringMVC：加载表现层Bean（Controller）。</li>
+<li>ServletConfig：Spring MVC项目初始化类，也是项目的入口，作用与<code>web.xml类似</code>。</li>
+<li>SpringConfig：控制业务（Service）和功能（如DataSource、SqlSessionFactoryBean、 MapperScannerConfigurer等）相关的Bean。</li>
+<li>SpringMvcConfig（WebConfig）：加载表现层Bean（Controller）。</li>
 </ul>
+<p><code>ServletConfig</code>（Web项目入口配置类）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ServletConfig</span> <span style="color:#66d9ef">extends</span> AbstractAnnotationConfigDispatcherServletInitializer <span style="color:#f92672">{</span>
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 指定Spring的配置类
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">protected</span> Class<span style="color:#f92672">&lt;?&gt;[]</span> getRootConfigClasses<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Class<span style="color:#f92672">[]{</span>SpringConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">};</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 指定Spring MVC的配置类
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">protected</span> Class<span style="color:#f92672">&lt;?&gt;[]</span> getServletConfigClasses<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Class<span style="color:#f92672">[]{</span>SpringMvcConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">};</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 指定DispatcherServlet的映射路径，即url-pattern
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">protected</span> String<span style="color:#f92672">[]</span> <span style="color:#a6e22e">getServletMappings</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> String<span style="color:#f92672">[]{</span><span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">};</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><blockquote>
+<p><code>ServletConfig</code>最重要的是继承<code>AbstractAnnotationConfigDispatcherServletInitializer</code>这个类，并反别重写它的三个方法。</p>
+<p>在Servlet3.0环境中，容器会在类路径中查找实现<code>javax.servlet.ServletContainerlnitializer</code>接口的类，如果找到的话就用它来配置Servlet容器。</p>
+<p>Spring提供了这个接口的实现，名为<code>SpringServletContainerlnitializer</code>，这个类反过来又会查找实现<code>WebApplicationInitializer</code>的类并将配置的任务交给它们来完成。</p>
+<p>Spring3.2引l入了一个便利的<code>WebApplicationInitializer</code>基础实现，名为<code>AbstractAnnotationConfigDispatcherServletlnitializer</code>，当我们的类扩展了<code>AbstractAnnotationConfigDispatcherServletInitializer</code>，并将其部署到Servlet3.O容器的时候，容器会自动发现它，并用它来配置<code>Servlet</code>上下文。</p>
+</blockquote>
 <p><code>SpringConfig</code>（启动Tomcat服务器时加载Spring配置类）：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Configuration</span>
 <span style="color:#a6e22e">@ComponentScan</span><span style="color:#f92672">({</span><span style="color:#e6db74">&#34;com.linner.service&#34;</span><span style="color:#f92672">})</span>
 <span style="color:#a6e22e">@PropertySource</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;classpath:jdbc.properties&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#a6e22e">@Import</span><span style="color:#f92672">({</span>JdbcConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">,</span>MyBatisConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">})</span>
-<span style="color:#a6e22e">@EnableTransactionManagement</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringConfig</span> <span style="color:#f92672">{</span>
+<span style="color:#a6e22e">@Import</span><span style="color:#f92672">({</span>JdbcConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">,</span> MyBatisConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">})</span> <span style="color:#75715e">// 引入其它配置
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">@EnableTransactionManagement</span>    <span style="color:#75715e">// 开启事务管理
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringConfig</span> <span style="color:#f92672">{</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><blockquote>
 <p>Spring需要管理的是<code>service</code>包和<code>dao</code>包。但<code>dao</code>包最终是交给<code>MapperScannerConfigurer</code>对象来进行扫描处理的。所以<code>SpringConfig</code>只需要扫描到<code>service</code>包即可。</p>
@@ -776,12 +858,112 @@ jdbc.password=root
 </blockquote>
 <p><code>SpringMvcConfig</code></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Configuration</span>
-<span style="color:#a6e22e">@ComponentScan</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.linner.controller&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringMvcConfig</span> <span style="color:#f92672">{</span>
+<span style="color:#a6e22e">@ComponentScan</span><span style="color:#f92672">({</span><span style="color:#e6db74">&#34;com.linner.controller&#34;</span><span style="color:#f92672">})</span>
+<span style="color:#a6e22e">@EnableWebMvc</span>   <span style="color:#75715e">// MVC注解驱动
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">WebConfig</span> <span style="color:#66d9ef">implements</span> WebMvcConfigurer <span style="color:#f92672">{</span>
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 相当于 default-servlet-handler
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">configureDefaultServletHandling</span><span style="color:#f92672">(</span>DefaultServletHandlerConfigurer configurer<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        configurer<span style="color:#f92672">.</span><span style="color:#a6e22e">enable</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 视图控制器 view-controller
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addViewControllers</span><span style="color:#f92672">(</span>ViewControllerRegistry registry<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        registry<span style="color:#f92672">.</span><span style="color:#a6e22e">addViewController</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/hello&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">setViewName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;hello&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 文件上传解析器
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">@Bean</span>
+    <span style="color:#66d9ef">public</span> MultipartResolver <span style="color:#a6e22e">getMultipartResolver</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        CommonsMultipartResolver commonsMultipartResolver <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> CommonsMultipartResolver<span style="color:#f92672">();</span>
+        <span style="color:#66d9ef">return</span> commonsMultipartResolver<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 异常处理解析器
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">configureHandlerExceptionResolvers</span><span style="color:#f92672">(</span>List<span style="color:#f92672">&lt;</span>HandlerExceptionResolver<span style="color:#f92672">&gt;</span> exceptionResolvers<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        SimpleMappingExceptionResolver exceptionResolver <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SimpleMappingExceptionResolver<span style="color:#f92672">();</span>
+        Properties prop <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Properties<span style="color:#f92672">();</span>
+        prop<span style="color:#f92672">.</span><span style="color:#a6e22e">setProperty</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;java.lang.ArithmeticException&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;error&#34;</span><span style="color:#f92672">);</span>
+        exceptionResolver<span style="color:#f92672">.</span><span style="color:#a6e22e">setExceptionMappings</span><span style="color:#f92672">(</span>prop<span style="color:#f92672">);</span>
+        <span style="color:#75715e">// 可以不设置，默认键即为 exception
+</span><span style="color:#75715e"></span>        exceptionResolver<span style="color:#f92672">.</span><span style="color:#a6e22e">setExceptionAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;exception&#34;</span><span style="color:#f92672">);</span>
+        exceptionResolvers<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>exceptionResolver<span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 模板解析器
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">@Bean</span>
+    <span style="color:#66d9ef">public</span> ITemplateResolver <span style="color:#a6e22e">getTemplateResolver</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+
+        <span style="color:#75715e">// 获取当前的 WebApplicationContext
+</span><span style="color:#75715e"></span>        WebApplicationContext webApplicationContext <span style="color:#f92672">=</span> ContextLoader<span style="color:#f92672">.</span><span style="color:#a6e22e">getCurrentWebApplicationContext</span><span style="color:#f92672">();</span>
+        <span style="color:#75715e">// 使用WebApplicationContext获取ServletContext，并构造ServletContextTemplateResolver
+</span><span style="color:#75715e"></span>        ServletContextTemplateResolver templateResolver <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ServletContextTemplateResolver<span style="color:#f92672">(</span>
+                webApplicationContext<span style="color:#f92672">.</span><span style="color:#a6e22e">getServletContext</span><span style="color:#f92672">());</span>
+
+        <span style="color:#75715e">// 设置视图前缀
+</span><span style="color:#75715e"></span>        templateResolver<span style="color:#f92672">.</span><span style="color:#a6e22e">setPrefix</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/WEB-INF/templates/&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#75715e">// 设置视图后缀
+</span><span style="color:#75715e"></span>        templateResolver<span style="color:#f92672">.</span><span style="color:#a6e22e">setSuffix</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;.html&#34;</span><span style="color:#f92672">);</span>
+
+        templateResolver<span style="color:#f92672">.</span><span style="color:#a6e22e">setCharacterEncoding</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;UTF-8&#34;</span><span style="color:#f92672">);</span>
+        templateResolver<span style="color:#f92672">.</span><span style="color:#a6e22e">setTemplateMode</span><span style="color:#f92672">(</span>TemplateMode<span style="color:#f92672">.</span><span style="color:#a6e22e">HTML</span><span style="color:#f92672">);</span>
+
+        <span style="color:#66d9ef">return</span> templateResolver<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 模板引擎
+</span><span style="color:#75715e">     * @param templateResolver 模板解析器（自动装配，@Autowired可忽略不写）
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">@Bean</span>
+    <span style="color:#66d9ef">public</span> SpringTemplateEngine <span style="color:#a6e22e">getTemplateEngine</span><span style="color:#f92672">(</span>ITemplateResolver templateResolver<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+
+        SpringTemplateEngine templateEngine <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SpringTemplateEngine<span style="color:#f92672">();</span>
+        templateEngine<span style="color:#f92672">.</span><span style="color:#a6e22e">setTemplateResolver</span><span style="color:#f92672">(</span>templateResolver<span style="color:#f92672">);</span>
+
+        <span style="color:#66d9ef">return</span> templateEngine<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+
+    <span style="color:#75715e">/**
+</span><span style="color:#75715e">     * 设置视图解析器
+</span><span style="color:#75715e">     * @param templateEngine 模板引擎（自动装配）
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">@Bean</span>
+    <span style="color:#66d9ef">public</span> ViewResolver <span style="color:#a6e22e">getViewResolver</span><span style="color:#f92672">(</span>SpringTemplateEngine templateEngine<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+
+        ThymeleafViewResolver viewResolver <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ThymeleafViewResolver<span style="color:#f92672">();</span>
+        viewResolver<span style="color:#f92672">.</span><span style="color:#a6e22e">setCharacterEncoding</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;UTF-8&#34;</span><span style="color:#f92672">);</span>
+        viewResolver<span style="color:#f92672">.</span><span style="color:#a6e22e">setTemplateEngine</span><span style="color:#f92672">(</span>templateEngine<span style="color:#f92672">);</span>
+
+        <span style="color:#66d9ef">return</span> viewResolver<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><p>DAO相关配置类：</p>
-<p><code>JdbcConfig</code>：</p>
+</code></pre></div><blockquote>
+<p>关于Spring MVC的配置类，除了扫描组件和配置模板解析器外，Spring提供了两种方式来配置，一种是实现<code>WebMvcConfigurer</code>接口，另一种是继承<code>WebMvcConfigurationSupport</code>。由于Java 8的接口中提供了<code>default</code>关键字来修饰接口方法，使得接口可以存在默认的实现，所以使用<code>WebMvcConfigurer</code>接口也不必实现所有接口。而在SpringBoot 2中使用<code>WebMvcConfigurationSupport</code>有可能会导致SpringBoot的自动配置不生效，并且在Spring MVC中使用<code>WebMvcConfigurationSupport</code>也可能导致配置类不生效，所以我个人<b><u>推荐使用<code>WebMvcConfigurer</code></u></b>。</p>
+<p>如果你使用<code>WebMvcConfigurationSupport</code>后发现拦截器等配置不生效，那么可以尝试实现<code>WebMvcConfigurer</code>接口来解决问题。</p>
+</blockquote>
+<p>DAO相关配置类：</p>
+<p><code>jdbc.properties</code>（数据库配置，放在项目中<code>resources</code>目录下）：</p>
+<pre tabindex="0"><code class="language-properties" data-lang="properties">jdbc.driver=com.mysql.jdbc.Driver
+jdbc.url=jdbc:mysql:///spring_db?useSSL=false&amp;characterEncoding=utf-8
+jdbc.username=root
+jdbc.password=123456
+</code></pre><p><code>JdbcConfig</code>：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">JdbcConfig</span> <span style="color:#f92672">{</span>
+    
     <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${jdbc.driver}&#34;</span><span style="color:#f92672">)</span>
     <span style="color:#66d9ef">private</span> String driver<span style="color:#f92672">;</span>
     <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${jdbc.url}&#34;</span><span style="color:#f92672">)</span>
@@ -825,20 +1007,23 @@ jdbc.password=root
         <span style="color:#66d9ef">return</span> msc<span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><p><code>ServletConfig</code>（Web项目入口配置类）：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ServletConfig</span> <span style="color:#66d9ef">extends</span> AbstractAnnotationConfigDispatcherServletInitializer <span style="color:#f92672">{</span>
+</code></pre></div><hr>
+<h1 id="过滤器">过滤器</h1>
+<p>在<code>ServletConfig</code>中重写<code>AbstractAnnotationConfigDispatcherServletInitializer</code>的<code>getServletFilters()</code>来注册过滤器：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/**
+</span><span style="color:#75715e"> * 注册过滤器
+</span><span style="color:#75715e"> */</span>
+<span style="color:#a6e22e">@Override</span>
+<span style="color:#66d9ef">protected</span> Filter<span style="color:#f92672">[]</span> <span style="color:#a6e22e">getServletFilters</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+    
+    <span style="color:#75715e">// 设置编码，将编码都转为 UTF-8
+</span><span style="color:#75715e"></span>    CharacterEncodingFilter characterEncodingFilter <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> CharacterEncodingFilter<span style="color:#f92672">();</span>
+    characterEncodingFilter<span style="color:#f92672">.</span><span style="color:#a6e22e">setEncoding</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;UTF-8&#34;</span><span style="color:#f92672">);</span>
+    characterEncodingFilter<span style="color:#f92672">.</span><span style="color:#a6e22e">setForceEncoding</span><span style="color:#f92672">(</span><span style="color:#66d9ef">true</span><span style="color:#f92672">);</span>
 
-    <span style="color:#66d9ef">protected</span> Class<span style="color:#f92672">&lt;?&gt;[]</span> getRootConfigClasses<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Class<span style="color:#f92672">[]{</span>SpringConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">};</span>
-    <span style="color:#f92672">}</span>
+    HiddenHttpMethodFilter hiddenHttpMethodFilter <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> HiddenHttpMethodFilter<span style="color:#f92672">();</span>
 
-    <span style="color:#66d9ef">protected</span> Class<span style="color:#f92672">&lt;?&gt;[]</span> getServletConfigClasses<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Class<span style="color:#f92672">[]{</span>SpringMvcConfig<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">};</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">protected</span> String<span style="color:#f92672">[]</span> <span style="color:#a6e22e">getServletMappings</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> String<span style="color:#f92672">[]{</span><span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">};</span>
-    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Filter<span style="color:#f92672">[]{</span>characterEncodingFilter<span style="color:#f92672">,</span> hiddenHttpMethodFilter<span style="color:#f92672">};</span>
 <span style="color:#f92672">}</span>
 </code></pre></div><hr>
 <h1 id="springmvc-工作流程">SpringMVC 工作流程</h1>
@@ -1128,7 +1313,7 @@ jdbc.password=root
 </code></pre></div><ul>
 <li>
 <p><code>searchName()</code>：</p>
-<p>URL：http://localhost/books/searchName?name=SpringMVC
+<p>URL：<code>http://localhost/books/searchName?name=SpringMVC</code>
 返回JOSN：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">[
     {
@@ -1155,7 +1340,7 @@ jdbc.password=root
 </code></pre></div></li>
 <li>
 <p><code>search()</code>：</p>
-<p>URL：http://localhost/books/search?id=123
+<p>URL：<code>http://localhost/books/search?id=123</code>
 返回JSON：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
     <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#ae81ff">123</span>,
@@ -1186,20 +1371,20 @@ jdbc.password=root
 <p>如：</p>
 <ul>
 <li>
-<p><code>http://localhost/users</code>——GET：</p>
+<p><code>http://localhost/users</code> —— GET：</p>
 <p>查询全部用户信息（查询）。</p>
 </li>
 <li>
-<p><code>http://localhost/users/1</code>——GET：查询指定用户（id为1）信息（查询）。</p>
+<p><code>http://localhost/users/1</code> —— GET：查询指定用户（id为1）信息（查询）。</p>
 </li>
 <li>
-<p><code>http://localhost/users</code>——POST：添加用户信息（新增/保存）。</p>
+<p><code>http://localhost/users</code> —— POST：添加用户信息（新增/保存）。</p>
 </li>
 <li>
-<p><code>http://localhost/users</code>——PUT：修改用户信息（修改/更新）。</p>
+<p><code>http://localhost/users</code> —— PUT：修改用户信息（修改/更新）。</p>
 </li>
 <li>
-<p><code>http://localhost/users/1</code>——DELETE：删除用户信息（删除）。</p>
+<p><code>http://localhost/users/1</code> —— DELETE：删除用户信息（删除）。</p>
 </li>
 </ul>
 <blockquote>
@@ -1617,7 +1802,12 @@ jdbc.password=root
 <span style="color:#f92672">}</span>
 </code></pre></div><hr>
 <h1 id="文件上传下载">文件上传下载</h1>
-<h2 id="responseentity-实现下载">ResponseEntity 实现下载</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency&gt;</span>
+  <span style="color:#f92672">&lt;groupId&gt;</span>commons-fileupload<span style="color:#f92672">&lt;/groupId&gt;</span>
+  <span style="color:#f92672">&lt;artifactId&gt;</span>commons-fileupload<span style="color:#f92672">&lt;/artifactId&gt;</span>
+  <span style="color:#f92672">&lt;version&gt;</span>1.3.1<span style="color:#f92672">&lt;/version&gt;</span>
+<span style="color:#f92672">&lt;/dependency&gt;</span>
+</code></pre></div><h2 id="responseentity-实现下载">ResponseEntity 实现下载</h2>
 <p>将<code>ResponseEntity&lt;byte[]&gt;</code>作为返回值，在其中设置好对应的响应头、响应体和状态码。</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/testDown&#34;</span><span style="color:#f92672">)</span>
 <span style="color:#66d9ef">public</span> ResponseEntity<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">byte</span><span style="color:#f92672">[]&gt;</span> <span style="color:#a6e22e">testResponseEntity</span><span style="color:#f92672">(</span>HttpSession session<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
@@ -1745,9 +1935,11 @@ is<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><s
 <p>编写拦截器配置类有两种方式：</p>
 <ul>
 <li>实现<code>WebMvcConfigurer</code>接口；</li>
-<li>继承<code>WebMvcConfigurationSupport</code>类并重写方法（推荐）。</li>
+<li>继承<code>WebMvcConfigurationSupport</code>类并重写方法。</li>
 </ul>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Configuration</span>
+<span style="color:#75715e">// 扫描interceptor包
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">@ComponentScan</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.linner.interceptor&#34;</span><span style="color:#f92672">)</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringMvcSupport</span> <span style="color:#66d9ef">extends</span> WebMvcConfigurationSupport <span style="color:#f92672">{</span>
     <span style="color:#a6e22e">@Autowired</span>  <span style="color:#75715e">// 自动装配
 </span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> BookInterceptor bookInterceptor<span style="color:#f92672">;</span>
@@ -1769,7 +1961,7 @@ is<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><s
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringMvcConfig</span> <span style="color:#f92672">{}</span>
 </code></pre></div><p>拦截器的配置类<code>SpingMvcSupport</code>可以书写在<code>SpringMvcConfig</code>中，以简化书写（并演示继承<code>WebMvcConfigurer</code>编写拦截器配置类）：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Configuration</span>
-<span style="color:#a6e22e">@ComponentScan</span><span style="color:#f92672">({</span><span style="color:#e6db74">&#34;com.linner.controller&#34;</span><span style="color:#f92672">})</span>
+<span style="color:#a6e22e">@ComponentScan</span><span style="color:#f92672">({</span><span style="color:#e6db74">&#34;com.linner.controller&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;com.linner.interceptor&#34;</span><span style="color:#f92672">})</span>
 <span style="color:#a6e22e">@EnableWebMvc</span>
 <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringMvcConfig</span> <span style="color:#66d9ef">implements</span> WebMvcConfigurer <span style="color:#f92672">{</span>
     <span style="color:#a6e22e">@Autowired</span>
@@ -1983,21 +2175,6 @@ FirstInterceptor afterCompletion...
 </ul>
 </li>
 </ul>
-<h2 id="拦截静态资源">拦截静态资源</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Configuration</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringMvcSupport</span> <span style="color:#66d9ef">extends</span> WebMvcConfigurationSupport <span style="color:#f92672">{</span>
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addResourceHandlers</span><span style="color:#f92672">(</span>ResourceHandlerRegistry registry<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#75715e">// 放行单个目录（Webapp目录下）
-</span><span style="color:#75715e"></span>        registry<span style="color:#f92672">.</span><span style="color:#a6e22e">addResourceHandler</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/pages/**&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">addResourceLocations</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/pages/&#34;</span><span style="color:#f92672">);</span>
-        <span style="color:#75715e">// 也可以将Webapp整个目录都添加：
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">// registry.addResourceHandler(&#34;/**&#34;).addResourceLocations(&#34;classpath:/&#34;);
-</span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><ul>
-<li><code>addResourceHandler()</code>：定义访问资源路径。</li>
-<li><code>addResourceLocations()</code>：定义访问路径时的静态资源目录。</li>
-</ul>
 <h2 id="配置文件配置拦截器">配置文件配置拦截器</h2>
 <p>除了使用配置类外，也可以使用配置文件的方式来配置拦截器。</p>
 <p>使用<code>&lt;mvc:interceptors&gt;</code>来配置拦截器。添加拦截器的方式有两种，一种是使用<u><code>&lt;bean class=&quot;...&quot;/&gt;</code></u>，另一种是使用<u><code>&lt;ref bean=&quot;...&quot;/&gt;</code></u>，这两种方式本质上没有什么区别。</p>
@@ -2018,7 +2195,160 @@ FirstInterceptor afterCompletion...
         <span style="color:#f92672">&lt;ref</span> <span style="color:#a6e22e">bean=</span><span style="color:#e6db74">&#34;bookInterceptor&#34;</span><span style="color:#f92672">/&gt;</span>
     <span style="color:#f92672">&lt;/mvc:interceptor&gt;</span>
 <span style="color:#f92672">&lt;/mvc:interceptors&gt;</span>
-</code></pre></div>
+</code></pre></div><hr>
+<h1 id="静态资源处理器">静态资源处理器</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Configuration</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringMvcSupport</span> <span style="color:#66d9ef">extends</span> WebMvcConfigurationSupport <span style="color:#f92672">{</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">addResourceHandlers</span><span style="color:#f92672">(</span>ResourceHandlerRegistry registry<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 放行单个目录（Webapp目录下）
+</span><span style="color:#75715e"></span>        registry<span style="color:#f92672">.</span><span style="color:#a6e22e">addResourceHandler</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/pages/**&#34;</span><span style="color:#f92672">).</span><span style="color:#a6e22e">addResourceLocations</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/pages/&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#75715e">// 也可以将Webapp整个目录都添加：
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// registry.addResourceHandler(&#34;/**&#34;).addResourceLocations(&#34;classpath:/&#34;);
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><ul>
+<li><code>addResourceHandler()</code>：定义访问资源路径。</li>
+<li><code>addResourceLocations()</code>：定义访问路径时的静态资源目录。</li>
+</ul>
+<hr>
+<h1 id="异常处理">异常处理</h1>
+<p>Spring MVC 自带了两个异常处理器分别是<code>SimpleMappingExceptionResolver</code>和<code>DefaultHandlerExceptionResolver</code>。</p>
+<p>其中<code>DefaultHandlerExceptionResolver</code>是由Spring MVC定义的默认异常处理器，它的<code>doResolveException()</code>定义了一些常见的异常处理：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">protected</span> ModelAndView <span style="color:#a6e22e">doResolveException</span><span style="color:#f92672">(</span>
+        HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">,</span> <span style="color:#a6e22e">@Nullable</span> Object handler<span style="color:#f92672">,</span> Exception ex<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+
+    <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>ex <span style="color:#66d9ef">instanceof</span> HttpRequestMethodNotSupportedException<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> handleHttpRequestMethodNotSupported<span style="color:#f92672">(</span>
+                    <span style="color:#f92672">(</span>HttpRequestMethodNotSupportedException<span style="color:#f92672">)</span> ex<span style="color:#f92672">,</span> request<span style="color:#f92672">,</span> response<span style="color:#f92672">,</span> handler<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>ex <span style="color:#66d9ef">instanceof</span> HttpMediaTypeNotSupportedException<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> handleHttpMediaTypeNotSupported<span style="color:#f92672">(</span>
+                    <span style="color:#f92672">(</span>HttpMediaTypeNotSupportedException<span style="color:#f92672">)</span> ex<span style="color:#f92672">,</span> request<span style="color:#f92672">,</span> response<span style="color:#f92672">,</span> handler<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>ex <span style="color:#66d9ef">instanceof</span> HttpMediaTypeNotAcceptableException<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> handleHttpMediaTypeNotAcceptable<span style="color:#f92672">(</span>
+                    <span style="color:#f92672">(</span>HttpMediaTypeNotAcceptableException<span style="color:#f92672">)</span> ex<span style="color:#f92672">,</span> request<span style="color:#f92672">,</span> response<span style="color:#f92672">,</span> handler<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>ex <span style="color:#66d9ef">instanceof</span> MissingPathVariableException<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> handleMissingPathVariable<span style="color:#f92672">(</span>
+                    <span style="color:#f92672">(</span>MissingPathVariableException<span style="color:#f92672">)</span> ex<span style="color:#f92672">,</span> request<span style="color:#f92672">,</span> response<span style="color:#f92672">,</span> handler<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>ex <span style="color:#66d9ef">instanceof</span> MissingServletRequestParameterException<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> handleMissingServletRequestParameter<span style="color:#f92672">(</span>
+                    <span style="color:#f92672">(</span>MissingServletRequestParameterException<span style="color:#f92672">)</span> ex<span style="color:#f92672">,</span> request<span style="color:#f92672">,</span> response<span style="color:#f92672">,</span> handler<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>ex <span style="color:#66d9ef">instanceof</span> ServletRequestBindingException<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> handleServletRequestBindingException<span style="color:#f92672">(</span>
+                    <span style="color:#f92672">(</span>ServletRequestBindingException<span style="color:#f92672">)</span> ex<span style="color:#f92672">,</span> request<span style="color:#f92672">,</span> response<span style="color:#f92672">,</span> handler<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>ex <span style="color:#66d9ef">instanceof</span> ConversionNotSupportedException<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> handleConversionNotSupported<span style="color:#f92672">(</span>
+                    <span style="color:#f92672">(</span>ConversionNotSupportedException<span style="color:#f92672">)</span> ex<span style="color:#f92672">,</span> request<span style="color:#f92672">,</span> response<span style="color:#f92672">,</span> handler<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>ex <span style="color:#66d9ef">instanceof</span> TypeMismatchException<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> handleTypeMismatch<span style="color:#f92672">(</span>
+                    <span style="color:#f92672">(</span>TypeMismatchException<span style="color:#f92672">)</span> ex<span style="color:#f92672">,</span> request<span style="color:#f92672">,</span> response<span style="color:#f92672">,</span> handler<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>ex <span style="color:#66d9ef">instanceof</span> HttpMessageNotReadableException<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> handleHttpMessageNotReadable<span style="color:#f92672">(</span>
+                    <span style="color:#f92672">(</span>HttpMessageNotReadableException<span style="color:#f92672">)</span> ex<span style="color:#f92672">,</span> request<span style="color:#f92672">,</span> response<span style="color:#f92672">,</span> handler<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>ex <span style="color:#66d9ef">instanceof</span> HttpMessageNotWritableException<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> handleHttpMessageNotWritable<span style="color:#f92672">(</span>
+                    <span style="color:#f92672">(</span>HttpMessageNotWritableException<span style="color:#f92672">)</span> ex<span style="color:#f92672">,</span> request<span style="color:#f92672">,</span> response<span style="color:#f92672">,</span> handler<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>ex <span style="color:#66d9ef">instanceof</span> MethodArgumentNotValidException<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> handleMethodArgumentNotValidException<span style="color:#f92672">(</span>
+                    <span style="color:#f92672">(</span>MethodArgumentNotValidException<span style="color:#f92672">)</span> ex<span style="color:#f92672">,</span> request<span style="color:#f92672">,</span> response<span style="color:#f92672">,</span> handler<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>ex <span style="color:#66d9ef">instanceof</span> MissingServletRequestPartException<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> handleMissingServletRequestPartException<span style="color:#f92672">(</span>
+                    <span style="color:#f92672">(</span>MissingServletRequestPartException<span style="color:#f92672">)</span> ex<span style="color:#f92672">,</span> request<span style="color:#f92672">,</span> response<span style="color:#f92672">,</span> handler<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>ex <span style="color:#66d9ef">instanceof</span> BindException<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> handleBindException<span style="color:#f92672">((</span>BindException<span style="color:#f92672">)</span> ex<span style="color:#f92672">,</span> request<span style="color:#f92672">,</span> response<span style="color:#f92672">,</span> handler<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>ex <span style="color:#66d9ef">instanceof</span> NoHandlerFoundException<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> handleNoHandlerFoundException<span style="color:#f92672">(</span>
+                    <span style="color:#f92672">(</span>NoHandlerFoundException<span style="color:#f92672">)</span> ex<span style="color:#f92672">,</span> request<span style="color:#f92672">,</span> response<span style="color:#f92672">,</span> handler<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>ex <span style="color:#66d9ef">instanceof</span> AsyncRequestTimeoutException<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+            <span style="color:#66d9ef">return</span> handleAsyncRequestTimeoutException<span style="color:#f92672">(</span>
+                    <span style="color:#f92672">(</span>AsyncRequestTimeoutException<span style="color:#f92672">)</span> ex<span style="color:#f92672">,</span> request<span style="color:#f92672">,</span> response<span style="color:#f92672">,</span> handler<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>Exception handlerEx<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>logger<span style="color:#f92672">.</span><span style="color:#a6e22e">isWarnEnabled</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+            logger<span style="color:#f92672">.</span><span style="color:#a6e22e">warn</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Failure while trying to resolve exception [&#34;</span> <span style="color:#f92672">+</span> ex<span style="color:#f92672">.</span><span style="color:#a6e22e">getClass</span><span style="color:#f92672">().</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">()</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;]&#34;</span><span style="color:#f92672">,</span> handlerEx<span style="color:#f92672">);</span>
+        <span style="color:#f92672">}</span>
+    <span style="color:#f92672">}</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p><code>SimpleMappingExceptionResolver</code>是Spring MVC提供的自定义异常处理器。</p>
+<h2 id="基于配置的异常处理">基于配置的异常处理</h2>
+<p>在<code>springMVC.xml</code>中配置异常处理器：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+<span style="color:#f92672">&lt;beans&gt;</span>
+
+    <span style="color:#75715e">&lt;!-- ... --&gt;</span>
+
+    <span style="color:#75715e">&lt;!-- 配置异常处理 --&gt;</span>
+    <span style="color:#f92672">&lt;bean</span> <span style="color:#a6e22e">class=</span><span style="color:#e6db74">&#34;org.springframework.web.servlet.handler.SimpleMappingExceptionResolver&#34;</span><span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;exceptionMappings&#34;</span><span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;props&gt;</span>
+                <span style="color:#75715e">&lt;!--
+</span><span style="color:#75715e">                    设置要处理的异常和返回的视图
+</span><span style="color:#75715e">                    prop的key：表示处理器方法执行过程中出现的异常
+</span><span style="color:#75715e">                    prop的值：表示若出现指定异常时，设置一个新的视图名称，跳转到指定页面
+</span><span style="color:#75715e">                 --&gt;</span>
+                <span style="color:#f92672">&lt;prop</span> <span style="color:#a6e22e">key=</span><span style="color:#e6db74">&#34;java.lang.ArithmeticException&#34;</span><span style="color:#f92672">&gt;</span>error<span style="color:#f92672">&lt;/prop&gt;</span>
+            <span style="color:#f92672">&lt;/props&gt;</span>
+        <span style="color:#f92672">&lt;/property&gt;</span>
+        <span style="color:#75715e">&lt;!-- 
+</span><span style="color:#75715e">            将异常信息共享在请求域中的键
+</span><span style="color:#75715e">            exceptionAttribute设置一个属性名，将出现的异常信息在请求域中进行共享
+</span><span style="color:#75715e">         --&gt;</span>
+        <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;exceptionAttribute&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;ex&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;/bean&gt;</span>
+
+<span style="color:#f92672">&lt;/beans&gt;</span>
+</code></pre></div><p>在相应路径（如<code>/WEB-INF/templates/</code>）下创建异常视图（如<code>error.html</code>）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;zh&#34;</span> <span style="color:#a6e22e">xmlns:th</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://www.thymeleaf.org&#34;</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+    &lt;<span style="color:#f92672">title</span>&gt;Error&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">h1</span>&gt;出现异常&lt;/<span style="color:#f92672">h1</span>&gt;
+    &lt;<span style="color:#f92672">p</span> <span style="color:#a6e22e">th:text</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;${ex}&#34;</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><blockquote>
+<p>注：使用Thymeleaf管理Html视图，需要在<code>&lt;html&gt;</code>标签中声明<code>xmlns:th=&quot;http://www.thymeleaf.org&quot;</code>。</p>
+</blockquote>
+<h2 id="基于注解的异常处理">基于注解的异常处理</h2>
+<p>使用<code>@ControllerAdvice</code>标注在异常处理类上，这样的异常处理类与Controller类似。在类的方法上用<code>@ExceptionHandler</code>指定要处理的异常，<code>@ExceptionHandler</code>的<code>value</code>属性接收一个Class类型的数组，意味着可以同时处理多个异常。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@ControllerAdvice</span>
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ExceptionController</span> <span style="color:#f92672">{</span>
+
+    <span style="color:#a6e22e">@ExceptionHandler</span><span style="color:#f92672">({</span>
+            ArithmeticException<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">,</span>
+            NullPointerException<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span>
+    <span style="color:#f92672">})</span>
+    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">testException</span><span style="color:#f92672">(</span>
+            Exception ex <span style="color:#75715e">/* 当前出现的异常 */</span><span style="color:#f92672">,</span>
+            Model model<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+
+        <span style="color:#75715e">// 用Model设置属性，将异常信息返回
+</span><span style="color:#75715e"></span>        model<span style="color:#f92672">.</span><span style="color:#a6e22e">addAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;exception&#34;</span><span style="color:#f92672">,</span> ex<span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;error&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><p>在<code>ExceptionController</code>中用<code>@ExceptionHandler</code>标注的方法，在它的参数列表中定义一个<code>Exception</code>类型的参数，可用于获取当前处理的实际的异常。</p>
+
 </section>
 
 
