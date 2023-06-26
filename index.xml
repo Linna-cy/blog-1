@@ -24654,7 +24654,7 @@ jdbc.password=123456
     &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h1 id=&#34;过滤器&#34;&gt;过滤器&lt;/h1&gt;
+&lt;h1 id=&#34;使用过滤器转换编码&#34;&gt;使用过滤器转换编码&lt;/h1&gt;
 &lt;p&gt;在&lt;code&gt;ServletConfig&lt;/code&gt;中重写&lt;code&gt;AbstractAnnotationConfigDispatcherServletInitializer&lt;/code&gt;的&lt;code&gt;getServletFilters()&lt;/code&gt;来注册过滤器：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#75715e&#34;&gt;/**
 &lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt; * 注册过滤器
