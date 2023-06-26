@@ -616,6 +616,49 @@ URL。&lt;/li&gt;
 &lt;li&gt;初始化SpringMVC环境（同Spring环境），设定SpringMVC加载对应的&lt;code&gt;Bean&lt;/code&gt;。&lt;/li&gt;
 &lt;li&gt;初始化Servlet容器，加载SpringMVC环境，并设置SpringMVC技术处理的请求。&lt;/li&gt;
 &lt;/ol&gt;
+&lt;h2 id=&#34;spring-mvc-工作流程&#34;&gt;Spring MVC 工作流程&lt;/h2&gt;
+&lt;p&gt;SpringMVC的使用过程共分两个阶段：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;启动服务器初始化过程；&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;服务器启动，执行&lt;code&gt;ServletConfig&lt;/code&gt;类，初始化Web容器。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;根据&lt;code&gt;getServletConfigClasses&lt;/code&gt;获取所需的SpringMVC配置类（这里是&lt;code&gt;SpringMvcConfig&lt;/code&gt;）来初始化SpringMVC的容器。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;加载&lt;code&gt;SpringMvcConfig&lt;/code&gt;配置类。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;执行&lt;code&gt;@ComponentScan&lt;/code&gt;加载对应的&lt;code&gt;Bean&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;扫描指定包下所有类上的注解，将所有的Controller类（如有&lt;code&gt;@Controller&lt;/code&gt;、&lt;code&gt;@RestController&lt;/code&gt;等注解的类）加载到容器中。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;加载每一个&lt;code&gt;Controler&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;使用&lt;code&gt;@RequestMapping&lt;/code&gt;建立请求路径与&lt;code&gt;Controler&lt;/code&gt;中的方法的对应关系。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;执行&lt;code&gt;getServletMappings&lt;/code&gt;方法，定义所有的请求都通过SpringMVC。如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;protected&lt;/span&gt; Spring&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;getServletMappings&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
+    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Spring&lt;span style=&#34;color:#f92672&#34;&gt;[]{&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;};&lt;/span&gt;
+&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;    
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;/&lt;/code&gt;代表所拦截请求的路径规则，只有被拦截后才能交给SpringMVC来处理请求。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;单次请求过程。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;根据请求路径发送请求。&lt;/li&gt;
+&lt;li&gt;Web容器将符合设置的请求路径的请求交给SpringMVC处理。&lt;/li&gt;
+&lt;li&gt;解析请求路径。&lt;/li&gt;
+&lt;li&gt;执行匹配对应请求路径的方法。&lt;/li&gt;
+&lt;li&gt;将有&lt;code&gt;@ResponseBody&lt;/code&gt;方法的返回值作为响应体返回给请求方。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;项目环境及结构&#34;&gt;项目环境及结构&lt;/h1&gt;
 &lt;h2 id=&#34;项目结构&#34;&gt;项目结构&lt;/h2&gt;
@@ -1222,50 +1265,6 @@ jdbc.password=123456
     &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Filter&lt;span style=&#34;color:#f92672&#34;&gt;[]{&lt;/span&gt;characterEncodingFilter&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; hiddenHttpMethodFilter&lt;span style=&#34;color:#f92672&#34;&gt;};&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h1 id=&#34;springmvc-工作流程&#34;&gt;SpringMVC 工作流程&lt;/h1&gt;
-&lt;p&gt;SpringMVC的使用过程共分两个阶段：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;启动服务器初始化过程；&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;服务器启动，执行&lt;code&gt;ServletConfig&lt;/code&gt;类，初始化Web容器。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;根据&lt;code&gt;getServletConfigClasses&lt;/code&gt;获取所需的SpringMVC配置类（这里是&lt;code&gt;SpringMvcConfig&lt;/code&gt;）来初始化SpringMVC的容器。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;加载&lt;code&gt;SpringMvcConfig&lt;/code&gt;配置类。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;执行&lt;code&gt;@ComponentScan&lt;/code&gt;加载对应的&lt;code&gt;Bean&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;扫描指定包下所有类上的注解，将所有的Controller类（如有&lt;code&gt;@Controller&lt;/code&gt;、&lt;code&gt;@RestController&lt;/code&gt;等注解的类）加载到容器中。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;加载每一个&lt;code&gt;Controler&lt;/code&gt;。&lt;/p&gt;
-&lt;p&gt;使用&lt;code&gt;@RequestMapping&lt;/code&gt;建立请求路径与&lt;code&gt;Controler&lt;/code&gt;中的方法的对应关系。&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;执行&lt;code&gt;getServletMappings&lt;/code&gt;方法，定义所有的请求都通过SpringMVC。如：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;protected&lt;/span&gt; Spring&lt;span style=&#34;color:#f92672&#34;&gt;[]&lt;/span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;getServletMappings&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;()&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; Spring&lt;span style=&#34;color:#f92672&#34;&gt;[]{&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;};&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;    
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;/&lt;/code&gt;代表所拦截请求的路径规则，只有被拦截后才能交给SpringMVC来处理请求。&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;单次请求过程。&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;根据请求路径发送请求。&lt;/li&gt;
-&lt;li&gt;Web容器将符合设置的请求路径的请求交给SpringMVC处理。&lt;/li&gt;
-&lt;li&gt;解析请求路径。&lt;/li&gt;
-&lt;li&gt;执行匹配对应请求路径的方法。&lt;/li&gt;
-&lt;li&gt;将有&lt;code&gt;@ResponseBody&lt;/code&gt;方法的返回值作为响应体返回给请求方。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;hr&gt;
 &lt;h1 id=&#34;请求与响应&#34;&gt;请求与响应&lt;/h1&gt;
 &lt;p&gt;SpringMVC是Web层的框架，主要作用是接收请求、接收数据、响应结果。&lt;/p&gt;
 &lt;p&gt;编写Controller只需要在Controller类上使用&lt;code&gt;@Controller&lt;/code&gt;注解即可。&lt;/p&gt;
@@ -3019,8 +3018,14 @@ FirstInterceptor afterCompletion...
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;doDispatch()&lt;/code&gt;：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;protected&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;void&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;doDispatch&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;HttpServletRequest request&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; HttpServletResponse response&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;throws&lt;/span&gt; Exception &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
     HttpServletRequest processedRequest &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; request&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
-    &lt;span style=&#34;color:#75715e&#34;&gt;// 拦截器链
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;    HandlerExecutionChain mappedHandler &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
+    &lt;span style=&#34;color:#75715e&#34;&gt;/*
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;        执行链
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;        HandlerExecutionChain包含以下三个部分：
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;        - handler：与请求所匹配的控制器方法
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;        - interceptorList：处理控制器方法的所有拦截器集合，即拦截器链
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;        - interceptorIndex：拦截器索引，控制拦截器afterCompletion()的执行
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;     */&lt;/span&gt;
+    HandlerExecutionChain mappedHandler &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
     &lt;span style=&#34;color:#66d9ef&#34;&gt;boolean&lt;/span&gt; multipartRequestParsed &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
 
     WebAsyncManager asyncManager &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; WebAsyncUtils&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;getAsyncManager&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;request&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
@@ -3034,14 +3039,8 @@ FirstInterceptor afterCompletion...
             multipartRequestParsed &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;processedRequest &lt;span style=&#34;color:#f92672&#34;&gt;!=&lt;/span&gt; request&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
 
             &lt;span style=&#34;color:#75715e&#34;&gt;// Determine handler for the current request.
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#75715e&#34;&gt;/*
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;                获取当前请求的拦截器链
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;                HandlerExecutionChain包含以下三个部分：
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;                - handler：与请求所匹配的控制器方法
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;                - interceptorList：处理控制器方法的所有拦截器集合
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;                - interceptorIndex：拦截器索引，控制拦截器afterCompletion()的执行
-&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;             */&lt;/span&gt;
-            mappedHandler &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; getHandler&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;processedRequest&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            &lt;span style=&#34;color:#75715e&#34;&gt;// 获取当前请求的执行链
+&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;            mappedHandler &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; getHandler&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;processedRequest&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
             &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;mappedHandler &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;null&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;
                 noHandlerFound&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;processedRequest&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; response&lt;span style=&#34;color:#f92672&#34;&gt;);&lt;/span&gt;
                 &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
@@ -3118,6 +3117,80 @@ FirstInterceptor afterCompletion...
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h2 id=&#34;mvc-执行流程&#34;&gt;MVC 执行流程&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;用户向服务器发送请求，请求被SpringMVC前端控制器&lt;code&gt;DispatcherServlet&lt;/code&gt;捕获。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;DispatcherServlet&lt;/code&gt;对请求URL进行解析，得到请求资源标识符（URI），判断请求URI对应的映射：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;如果没有对应的映射：&lt;/p&gt;
+&lt;p&gt;判断是否配置了&lt;code&gt;mvc:default-servlet-handler&lt;/code&gt;。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;如果没配置，则控制台报映射查找不到，向客户端展示404错误。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果有配置，则访问目标资源（一般为静态资源，如JS、CSS、HTML等等）。&lt;/p&gt;
+&lt;p&gt;如果找不到客户端也会展示404错误。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果存在对应的映射则接着执行下面的流程。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;根据该URI，调用&lt;code&gt;HandlerMapping&lt;/code&gt;获得该&lt;code&gt;Handler&lt;/code&gt;配置的所有相关的对象（包括&lt;code&gt;Handler&lt;/code&gt;对象以及&lt;code&gt;Handler&lt;/code&gt;对象对应的拦截器），最后以&lt;code&gt;HandlerExecutionChain&lt;/code&gt;执行链对象的形式返回。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;DispatcherServlet&lt;/code&gt;根据获得的&lt;code&gt;Handler&lt;/code&gt;，选择一个合适的&lt;code&gt;HandlerAdapter&lt;/code&gt;。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果成功获得&lt;code&gt;HandlerAdapter&lt;/code&gt;，此时将开始执行拦截器的&lt;code&gt;preHandler()&lt;/code&gt;方法。&lt;/p&gt;
+&lt;p&gt;根据拦截器链的顺序，正序执行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;提取&lt;code&gt;Request&lt;/code&gt;中的模型数据，填充&lt;code&gt;Handler&lt;/code&gt;入参，开始执行&lt;code&gt;Handler&lt;/code&gt;（&lt;code&gt;Controller&lt;/code&gt;)方法，处理请求。&lt;/p&gt;
+&lt;p&gt;在填充Handler的入参过程中，根据你的配置，Spring将帮你做一些额外的工作：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;HttpMessageConveter&lt;/code&gt;： 将请求消息（如JSON、XML等数据）转换成一个对象，或将对象转换为指定的响应信息。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据转换：对请求消息进行数据转换。&lt;/p&gt;
+&lt;p&gt;如&lt;code&gt;String&lt;/code&gt;转换成&lt;code&gt;Integer&lt;/code&gt;、&lt;code&gt;Double&lt;/code&gt;等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据格式化：对请求消息进行数据格式化。&lt;/p&gt;
+&lt;p&gt;如将字符串转换成格式化数字或格式化日期等。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;数据验证：验证数据的有效性（长度、格式等），验证结果存储到&lt;code&gt;BindingResult&lt;/code&gt;或&lt;code&gt;Error&lt;/code&gt;中。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;Handler&lt;/code&gt;执行完成后，向&lt;code&gt;DispatcherServlet&lt;/code&gt;返回一个&lt;code&gt;ModelAndView&lt;/code&gt;对象。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果&lt;code&gt;Handler&lt;/code&gt;被成功执行，则开始执行拦截器的&lt;code&gt;postHandle()&lt;/code&gt;方法。&lt;/p&gt;
+&lt;p&gt;根据拦截器链的顺序，倒序执行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;根据返回的&lt;code&gt;ModelAndView&lt;/code&gt;（此时会判断是否存在异常：如果存在异常，则执行&lt;code&gt;HandlerExceptionResolver&lt;/code&gt;进行异常处理）选择一个适合的&lt;code&gt;ViewResolver&lt;/code&gt;进行视图解析，根据&lt;code&gt;Model&lt;/code&gt;和&lt;code&gt;View&lt;/code&gt;，来渲染视图。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;渲染视图完毕执行拦截器的&lt;code&gt;afterCompletion()&lt;/code&gt;方法。&lt;/p&gt;
+&lt;p&gt;根据拦截器链的顺序，倒序执行。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;将渲染结果返回给客户端。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
 </description>
         </item>
         <item>
