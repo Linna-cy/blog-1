@@ -370,7 +370,7 @@
             </div>
         
 
-        <div class="article-time--reading">共24347字</div>
+        <div class="article-time--reading">共24538字</div>
     </footer>
     
 
@@ -1072,7 +1072,7 @@ jdbc.password=123456
 <h1 id="请求与响应">请求与响应</h1>
 <p>SpringMVC是Web层的框架，主要作用是接收请求、接收数据、响应结果。</p>
 <p>编写Controller只需要在Controller类上使用<code>@Controller</code>注解即可。</p>
-<h2 id="请求路径映射-requestmapping">请求路径映射 RequestMapping</h2>
+<h2 id="请求映射-requestmapping">请求映射 RequestMapping</h2>
 <p>映射请求路径使用<code>@RequestMapping</code>注解。注解中的使用<code>value</code>属性指定映射的请求路径（由于是<code>value</code>属性，所以当注解中无需指定其它参数时，可以省略）。</p>
 <p><code>@RequestMapping</code>可以分别作用在类和方法上：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Controller</span>
@@ -1090,10 +1090,9 @@ jdbc.password=123456
         <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Hello World!&#34;</span><span style="color:#f92672">;</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
 </code></pre></div><ul>
 <li>
-<p>方法上定义的<code>@RequestMapping</code>是具体的请求路径。</p>
+<p>方法上定义的<code>@RequestMapping</code>是具体的请求方式，包括请求路径和请求方式。</p>
 <p>即，如果在方法上使用了<code>@RequestMapping</code>并且没有在类上使用<code>@RequestMapping</code>，那么该方法的请求路径即为方法上<code>@RequestMapping</code>中的值。</p>
 </li>
 <li>
@@ -1103,7 +1102,11 @@ jdbc.password=123456
 </ul>
 <p><code>value</code>属性是一个字符串数组，可以通过以下方式来指定多个请求路径：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RequestMapping</span><span style="color:#f92672">({</span><span style="color:#e6db74">&#34;hello&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;helloWorld&#34;</span><span style="color:#f92672">})</span>
-</code></pre></div><h2 id="接收-url-参数">接收 URL 参数</h2>
+</code></pre></div><p><code>@RequestMapping</code>除了<code>value</code>属性外，还有<code>method</code>属性。<code>method</code>属性是用来指定请求方式的，如：<code>@RequestMapping(method = RequestMethod.POST)</code>（匹配POST请求方式）。</p>
+<blockquote>
+<p>在客户端向服务器发送请求时，<code>DispatcherServlet</code>会首先根据<code>@RequestMapping</code>获取对应的控制器方法。</p>
+</blockquote>
+<h2 id="接收-url-参数">接收 URL 参数</h2>
 <blockquote>
 <p>接收URL参数，GET和POST请求的编写方式一致。</p>
 <p>如果要使用不同的方式接收请求，可以修改<code>@RequestMapping</code>注解：</p>
@@ -2931,7 +2934,7 @@ FirstInterceptor afterCompletion...
 <ul>
 <li>
 <p>如果没有对应的映射：</p>
-<p>判断是否配置了<code>mvc:default-servlet-handler</code>。</p>
+<p>判断是否配置了<code>mvc:default-servlet-handler</code>（默认处理器）。</p>
 <ul>
 <li>
 <p>如果没配置，则控制台报映射查找不到，向客户端展示404错误。</p>

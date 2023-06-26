@@ -1679,7 +1679,7 @@ jdbc.password=123456
 &lt;h1 id=&#34;请求与响应&#34;&gt;请求与响应&lt;/h1&gt;
 &lt;p&gt;SpringMVC是Web层的框架，主要作用是接收请求、接收数据、响应结果。&lt;/p&gt;
 &lt;p&gt;编写Controller只需要在Controller类上使用&lt;code&gt;@Controller&lt;/code&gt;注解即可。&lt;/p&gt;
-&lt;h2 id=&#34;请求路径映射-requestmapping&#34;&gt;请求路径映射 RequestMapping&lt;/h2&gt;
+&lt;h2 id=&#34;请求映射-requestmapping&#34;&gt;请求映射 RequestMapping&lt;/h2&gt;
 &lt;p&gt;映射请求路径使用&lt;code&gt;@RequestMapping&lt;/code&gt;注解。注解中的使用&lt;code&gt;value&lt;/code&gt;属性指定映射的请求路径（由于是&lt;code&gt;value&lt;/code&gt;属性，所以当注解中无需指定其它参数时，可以省略）。&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;@RequestMapping&lt;/code&gt;可以分别作用在类和方法上：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@Controller&lt;/span&gt;
@@ -1697,10 +1697,9 @@ jdbc.password=123456
         &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello World!&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;;&lt;/span&gt;
     &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
-&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;
-&lt;p&gt;方法上定义的&lt;code&gt;@RequestMapping&lt;/code&gt;是具体的请求路径。&lt;/p&gt;
+&lt;p&gt;方法上定义的&lt;code&gt;@RequestMapping&lt;/code&gt;是具体的请求方式，包括请求路径和请求方式。&lt;/p&gt;
 &lt;p&gt;即，如果在方法上使用了&lt;code&gt;@RequestMapping&lt;/code&gt;并且没有在类上使用&lt;code&gt;@RequestMapping&lt;/code&gt;，那么该方法的请求路径即为方法上&lt;code&gt;@RequestMapping&lt;/code&gt;中的值。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -1710,7 +1709,11 @@ jdbc.password=123456
 &lt;/ul&gt;
 &lt;p&gt;&lt;code&gt;value&lt;/code&gt;属性是一个字符串数组，可以通过以下方式来指定多个请求路径：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-java&#34; data-lang=&#34;java&#34;&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@RequestMapping&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;({&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;hello&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;helloWorld&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;})&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;接收-url-参数&#34;&gt;接收 URL 参数&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;@RequestMapping&lt;/code&gt;除了&lt;code&gt;value&lt;/code&gt;属性外，还有&lt;code&gt;method&lt;/code&gt;属性。&lt;code&gt;method&lt;/code&gt;属性是用来指定请求方式的，如：&lt;code&gt;@RequestMapping(method = RequestMethod.POST)&lt;/code&gt;（匹配POST请求方式）。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在客户端向服务器发送请求时，&lt;code&gt;DispatcherServlet&lt;/code&gt;会首先根据&lt;code&gt;@RequestMapping&lt;/code&gt;获取对应的控制器方法。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;接收-url-参数&#34;&gt;接收 URL 参数&lt;/h2&gt;
 &lt;blockquote&gt;
 &lt;p&gt;接收URL参数，GET和POST请求的编写方式一致。&lt;/p&gt;
 &lt;p&gt;如果要使用不同的方式接收请求，可以修改&lt;code&gt;@RequestMapping&lt;/code&gt;注解：&lt;/p&gt;
@@ -3538,7 +3541,7 @@ FirstInterceptor afterCompletion...
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;如果没有对应的映射：&lt;/p&gt;
-&lt;p&gt;判断是否配置了&lt;code&gt;mvc:default-servlet-handler&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;判断是否配置了&lt;code&gt;mvc:default-servlet-handler&lt;/code&gt;（默认处理器）。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;如果没配置，则控制台报映射查找不到，向客户端展示404错误。&lt;/p&gt;
