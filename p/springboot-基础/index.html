@@ -370,7 +370,7 @@
             </div>
         
 
-        <div class="article-time--reading">共3439字</div>
+        <div class="article-time--reading">共3499字</div>
     </footer>
     
 
@@ -390,6 +390,11 @@
 <li>选择当前模块需要使用的技术集。</li>
 <li>开发控制器类。</li>
 <li>运行自动生成的Application类。</li>
+</ul>
+<p>SpringBoot有两个机制：</p>
+<ul>
+<li>依赖管理机制。</li>
+<li>自动配置机制。</li>
 </ul>
 <h1 id="项目创建及配置">项目创建及配置</h1>
 <h2 id="创建项目">创建项目</h2>
@@ -490,6 +495,7 @@
 <p>Spring Initializr默认软件包名为项目组名.项目名（此处为<code>com.linner.springbootdemo</code>）。此处创建的项目将其修改为项目组名（<code>com.linner</code>）。</p>
 </li>
 </ol>
+<p><code>SpringApplication.run(...)</code> 的返回值是当前项目的<code>ApplicationContext</code>。</p>
 </blockquote>
 <h2 id="切换-web-服务器">切换 Web 服务器</h2>
 <p>如果要使用Jetty服务器，我们需要先在<code>pom.xml</code>中使用<code>&lt;exclusion&gt;</code>标签排除默认的Tomcat服务器，然后再导入使用Jetty服务器所需的坐标：</p>

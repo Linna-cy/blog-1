@@ -542,6 +542,11 @@ jdbc.password=root
 &lt;li&gt;开发控制器类。&lt;/li&gt;
 &lt;li&gt;运行自动生成的Application类。&lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;SpringBoot有两个机制：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;依赖管理机制。&lt;/li&gt;
+&lt;li&gt;自动配置机制。&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h1 id=&#34;项目创建及配置&#34;&gt;项目创建及配置&lt;/h1&gt;
 &lt;h2 id=&#34;创建项目&#34;&gt;创建项目&lt;/h2&gt;
 &lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/1677287557076.png&#34;
@@ -641,6 +646,7 @@ jdbc.password=root
 &lt;p&gt;Spring Initializr默认软件包名为项目组名.项目名（此处为&lt;code&gt;com.linner.springbootdemo&lt;/code&gt;）。此处创建的项目将其修改为项目组名（&lt;code&gt;com.linner&lt;/code&gt;）。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
+&lt;p&gt;&lt;code&gt;SpringApplication.run(...)&lt;/code&gt; 的返回值是当前项目的&lt;code&gt;ApplicationContext&lt;/code&gt;。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;切换-web-服务器&#34;&gt;切换 Web 服务器&lt;/h2&gt;
 &lt;p&gt;如果要使用Jetty服务器，我们需要先在&lt;code&gt;pom.xml&lt;/code&gt;中使用&lt;code&gt;&amp;lt;exclusion&amp;gt;&lt;/code&gt;标签排除默认的Tomcat服务器，然后再导入使用Jetty服务器所需的坐标：&lt;/p&gt;
