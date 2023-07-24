@@ -7,11 +7,11 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
         <lastBuildDate>Mon, 24 Jul 2023 02:58:36 +0800</lastBuildDate><atom:link href="https://blog.linner.asia/tags/docker/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Nacos 部署</title>
-        <link>https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2/</link>
+        <title>Nacos 部署方式</title>
+        <link>https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F/</link>
         <pubDate>Mon, 24 Jul 2023 02:58:36 +0800</pubDate>
         
-        <guid>https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2/</guid>
+        <guid>https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F/</guid>
         <description>&lt;h1 id=&#34;本地部署&#34;&gt;本地部署&lt;/h1&gt;
 &lt;p&gt;Nacos是一个开源项目，已经在Github上开源。在本地搭建Nacos需要访问&lt;a class=&#34;link&#34; href=&#34;https://github.com/alibaba/nacos&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Nacos项目仓库&lt;/a&gt;，你可以选择将该项目&lt;code&gt;clone&lt;/code&gt;到本地自己打包后部署，也可以选择直接访问&lt;a class=&#34;link&#34; href=&#34;https://github.com/alibaba/nacos/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -25,10 +25,10 @@
 &lt;li&gt;
 &lt;p&gt;访问&lt;a class=&#34;link&#34; href=&#34;https://github.com/alibaba/nacos/releases&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Nacos的Releases页面&lt;/a&gt;：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2/uTools_1690139609912.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F/uTools_1690139609912.png&#34;
 	width=&#34;1715&#34;
 	height=&#34;946&#34;
-	srcset=&#34;https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2/uTools_1690139609912_hu86e6ea65c0f914ccbc11f612a283b7c3_105804_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2/uTools_1690139609912_hu86e6ea65c0f914ccbc11f612a283b7c3_105804_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F/uTools_1690139609912_hu86e6ea65c0f914ccbc11f612a283b7c3_105804_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F/uTools_1690139609912_hu86e6ea65c0f914ccbc11f612a283b7c3_105804_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Nacos的Releases页面&#34;
@@ -40,10 +40,10 @@
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;选择自己想要的版本（如&lt;code&gt;2.2.3&lt;/code&gt;）进行下载：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2/uTools_1690139697680.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F/uTools_1690139697680.png&#34;
 	width=&#34;1021&#34;
 	height=&#34;252&#34;
-	srcset=&#34;https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2/uTools_1690139697680_hu238209dbd7e7edea6cbefc72c75697e4_16456_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2/uTools_1690139697680_hu238209dbd7e7edea6cbefc72c75697e4_16456_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F/uTools_1690139697680_hu238209dbd7e7edea6cbefc72c75697e4_16456_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F/uTools_1690139697680_hu238209dbd7e7edea6cbefc72c75697e4_16456_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -58,10 +58,10 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;将下载好的压缩包解压到任意非中文目录下。解压好的目录结构大致如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2/uTools_1690140191883.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F/uTools_1690140191883.png&#34;
 	width=&#34;116&#34;
 	height=&#34;198&#34;
-	srcset=&#34;https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2/uTools_1690140191883_huac34f4d75264a53499ebd21b42fc33c6_3510_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2/uTools_1690140191883_huac34f4d75264a53499ebd21b42fc33c6_3510_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F/uTools_1690140191883_huac34f4d75264a53499ebd21b42fc33c6_3510_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F/uTools_1690140191883_huac34f4d75264a53499ebd21b42fc33c6_3510_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Nacos目录结构&#34;
@@ -100,10 +100,10 @@
 &lt;p&gt;访问&lt;a class=&#34;link&#34; href=&#34;http://localhsot:8848/nacos&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;http://localhsot:8848/nacos&lt;/a&gt;即可。默认的用户名和密码均为&lt;code&gt;nacos&lt;/code&gt;。&lt;/p&gt;
 &lt;p&gt;启动成功后的Nacos大概长这样子：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2/uTools_1690143487422.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F/uTools_1690143487422.png&#34;
 	width=&#34;1919&#34;
 	height=&#34;682&#34;
-	srcset=&#34;https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2/uTools_1690143487422_huf4bff7825cff8f337a67d731239778ec_48987_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2/uTools_1690143487422_huf4bff7825cff8f337a67d731239778ec_48987_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F/uTools_1690143487422_huf4bff7825cff8f337a67d731239778ec_48987_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F/uTools_1690143487422_huf4bff7825cff8f337a67d731239778ec_48987_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Nacos 页面&#34;
@@ -125,10 +125,10 @@
 USE nacos;
 &lt;span style=&#34;color:#66d9ef&#34;&gt;source&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Nacos的路径/bin/mysql-schema.sql&amp;#34;&lt;/span&gt;;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;创建成功后的Nacos数据库如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2/uTools_1690142171755.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F/uTools_1690142171755.png&#34;
 	width=&#34;184&#34;
 	height=&#34;290&#34;
-	srcset=&#34;https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2/uTools_1690142171755_hu81e38a67256d0926adb373d5d724b666_6212_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2/uTools_1690142171755_hu81e38a67256d0926adb373d5d724b666_6212_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F/uTools_1690142171755_hu81e38a67256d0926adb373d5d724b666_6212_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/nacos-%E9%83%A8%E7%BD%B2%E6%96%B9%E5%BC%8F/uTools_1690142171755_hu81e38a67256d0926adb373d5d724b666_6212_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;Nacos数据库的表&#34;
