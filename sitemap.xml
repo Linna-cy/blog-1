@@ -260,6 +260,12 @@
     <loc>https://blog.linner.asia/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/</loc>
     <lastmod>2023-02-27T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://blog.linner.asia/categories/springboot/</loc>
+    <lastmod>2023-02-20T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.linner.asia/tags/springboot/</loc>
+    <lastmod>2023-02-20T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://blog.linner.asia/p/springboot-%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2023-02-20T00:00:00+00:00</lastmod>
   </url><url>
@@ -406,6 +412,8 @@
   </url><url>
     <loc>https://blog.linner.asia/p/sql-%E8%AF%AD%E5%8F%A5/</loc>
     <lastmod>2022-01-11T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.linner.asia/categories/springcloud/</loc>
   </url><url>
     <loc>https://blog.linner.asia/archives/</loc>
   </url><url>
