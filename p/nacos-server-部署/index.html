@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='本地部署 Nacos是一个开源项目，已经在Github上开源。在本地搭建Nacos需要访问Nacos项目仓库，你可以选择将该项目clone到本'>
+
+
+<title>Nacos Server 部署</title>
+
+<link rel='canonical' href='https://blog.linner.asia/p/nacos-server-%E9%83%A8%E7%BD%B2/'>
+
+<link rel="stylesheet" href="/scss/style.min.7a68e2beb371039eca9f5e8f87aa11bdb1fdc96a55744700a091f658cd1e66a7.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.11.1/tocbot.min.js"></script>
+
+<meta property='og:title' content='Nacos Server 部署'>
+<meta property='og:description' content='本地部署 Nacos是一个开源项目，已经在Github上开源。在本地搭建Nacos需要访问Nacos项目仓库，你可以选择将该项目clone到本'>
+<meta property='og:url' content='https://blog.linner.asia/p/nacos-server-%E9%83%A8%E7%BD%B2/'>
+<meta property='og:site_name' content='Linner&#39;s Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='Java' /><meta property='article:tag' content='JavaWeb' /><meta property='article:tag' content='Spring' /><meta property='article:tag' content='Maven' /><meta property='article:tag' content='Nacos' /><meta property='article:tag' content='Docker' /><meta property='article:published_time' content='2023-07-24T02:58:36&#43;08:00'/><meta property='article:modified_time' content='2023-07-24T02:58:36&#43;08:00'/>
+<meta name="twitter:title" content="Nacos Server 部署">
+<meta name="twitter:description" content="本地部署 Nacos是一个开源项目，已经在Github上开源。在本地搭建Nacos需要访问Nacos项目仓库，你可以选择将该项目clone到本">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+<style>
+    .article-content {
+        position: relative;
+    }
+    .article-content table, 
+    .article-content tbody {
+        white-space: normal;
+        word-break: keep-all;
+    }
+    .article-content u {
+        text-decoration-line: none;
+        border-bottom: 1.5px solid;
+        padding-bottom: 1.5px;
+    }
+    .article-content li {
+        margin-top: 0.8em;
+        margin-bottom: 0.8em;
+    }
+    .article-content ul:last-child, 
+    .article-content ol:last-child {
+        margin-bottom: 0;
+    }
+    .article-content td * {
+         
+    }
+    .article-content td ol, 
+    .article-content td ul {
+        padding-left: 1.2em;
+    }
+    .article-content td {
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    .article-content td li:first-child,
+    .article-content td ol:first-child, 
+    .article-content td ul:first-child {
+        margin-top: 0;
+    }
+    .article-content td ul:last-child,
+    .article-content td ol:last-child,
+    .article-content td ul:first-child {
+        margin-bottom: 0;
+    }
+</style>
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="切换菜单">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu0c2331fe09320137a3bd1d4b5cc68791_142496_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🍥</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Linner&#39;s Blog</a></h1>
+            <h2 class="site-description">随便看看就行，副标题暂时还没想好</h2>
+        </div>
+    </header><ol class="social-menu">
+            
+                <li>
+                    <a 
+                        href='https://github.com/Linna-cy'
+                        target="_blank"
+                        title="GitHub"
+                        rel="me"
+                    >
+                        
+                        
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+  <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+</svg>
+
+                        
+                    </a>
+                </li>
+            
+        </ol><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <polyline points="5 12 3 12 12 3 21 12 19 12" />
+  <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+  <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+</svg>
+
+
+
+                
+                <span>主页</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/archives/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-archive" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <rect x="3" y="4" width="18" height="4" rx="2" />
+  <path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" />
+  <line x1="10" y1="12" x2="14" y2="12" />
+</svg>
+
+
+
+                
+                <span>归档</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/search/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="10" cy="10" r="7" />
+  <line x1="21" y1="21" x2="15" y2="15" />
+</svg>
+
+
+
+                
+                <span>搜索</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E5%85%B3%E4%BA%8E/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-user" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="7" r="4" />
+  <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+</svg>
+
+
+
+                
+                <span>关于</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/%E9%93%BE%E6%8E%A5/' >
+                
+                
+                
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-link" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M10 14a3.5 3.5 0 0 0 5 0l4 -4a3.5 3.5 0 0 0 -5 -5l-.5 .5" />
+  <path d="M14 10a3.5 3.5 0 0 0 -5 0l-4 4a3.5 3.5 0 0 0 5 5l.5 -.5" />
+</svg>
+
+
+
+                
+                <span>链接</span>
+            </a>
+        </li>
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>暗色模式</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/spring/" >
+                Spring
+            </a>
+        
+            <a href="/categories/javaweb/" >
+                JavaWeb
+            </a>
+        
+            <a href="/categories/springboot/" >
+                Spring Boot
+            </a>
+        
+            <a href="/categories/springcloud/" >
+                Spring 微服务
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/p/nacos-server-%E9%83%A8%E7%BD%B2/">Nacos Server 部署</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jul 24, 2023</time>
+                |
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    阅读时长: 8 分钟
+                </time>
+                |
+            </div>
+        
+
+        <div class="article-time--reading">共3646字</div>
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="本地部署">本地部署</h1>
+<p>Nacos是一个开源项目，已经在Github上开源。在本地搭建Nacos需要访问<a class="link" href="https://github.com/alibaba/nacos"  target="_blank" rel="noopener"
+    >Nacos项目仓库</a>，你可以选择将该项目<code>clone</code>到本地自己打包后部署，也可以选择直接访问<a class="link" href="https://github.com/alibaba/nacos/releases"  target="_blank" rel="noopener"
+    >Nacos的Releases页面</a>下载已经打包好的项目压缩文件进行部署。你也可以访问<a class="link" href="https://nacos.io/zh-cn/"  target="_blank" rel="noopener"
+    >Nacos官网</a>查看如何部署。</p>
+<ul>
+<li>
+<p><code>clone</code>到本地：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://github.com/alibaba/naco
+</code></pre></div></li>
+<li>
+<p>访问<a class="link" href="https://github.com/alibaba/nacos/releases"  target="_blank" rel="noopener"
+    >Nacos的Releases页面</a>：</p>
+<p><img src="/p/nacos-server-%E9%83%A8%E7%BD%B2/uTools_1690139609912.png"
+	width="1715"
+	height="946"
+	srcset="/p/nacos-server-%E9%83%A8%E7%BD%B2/uTools_1690139609912_hu86e6ea65c0f914ccbc11f612a283b7c3_105804_480x0_resize_box_3.png 480w, /p/nacos-server-%E9%83%A8%E7%BD%B2/uTools_1690139609912_hu86e6ea65c0f914ccbc11f612a283b7c3_105804_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Nacos的Releases页面"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="181"
+		data-flex-basis="435px"
+	
+></p>
+<p>选择自己想要的版本（如<code>2.2.3</code>）进行下载：</p>
+<p><img src="/p/nacos-server-%E9%83%A8%E7%BD%B2/uTools_1690139697680.png"
+	width="1021"
+	height="252"
+	srcset="/p/nacos-server-%E9%83%A8%E7%BD%B2/uTools_1690139697680_hu238209dbd7e7edea6cbefc72c75697e4_16456_480x0_resize_box_3.png 480w, /p/nacos-server-%E9%83%A8%E7%BD%B2/uTools_1690139697680_hu238209dbd7e7edea6cbefc72c75697e4_16456_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="405"
+		data-flex-basis="972px"
+	
+></p>
+<p>无论是选择下载<code>.zip</code>还是<code>.tar.gz</code>后缀的压缩包都可以。但是在Linux环境下选择下载<code>.tar.gz</code>为佳。</p>
+<p>Linux中解压<code>.tar.gz</code>的命令如：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">tar -zxvf 压缩包文件名.tar.gz
+</code></pre></div></li>
+</ul>
+<p>将下载好的压缩包解压到任意非中文目录下。解压好的目录结构大致如下：</p>
+<p><img src="/p/nacos-server-%E9%83%A8%E7%BD%B2/uTools_1690140191883.png"
+	width="116"
+	height="198"
+	srcset="/p/nacos-server-%E9%83%A8%E7%BD%B2/uTools_1690140191883_huac34f4d75264a53499ebd21b42fc33c6_3510_480x0_resize_box_3.png 480w, /p/nacos-server-%E9%83%A8%E7%BD%B2/uTools_1690140191883_huac34f4d75264a53499ebd21b42fc33c6_3510_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Nacos目录结构"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="58"
+		data-flex-basis="140px"
+	
+></p>
+<ul>
+<li>
+<p><code>target</code>：存放Nacos<code>jar</code>包的目录。</p>
+</li>
+<li>
+<p><code>logs</code>：存放日志文件。</p>
+</li>
+<li>
+<p><code>conf</code>：存放项目的配置文件（如<code>application.properties</code>等）以及搭建存放Nacos配置信息的数据库的<code>.sql</code>脚本文件（如<code>nacos-mysql.sql</code>等）。</p>
+</li>
+<li>
+<p><code>bin</code>：存放启动和关闭Nacos Server的脚本文件以及一些其它的文件。</p>
+<p>在Windows系统中启动和关闭Nacos使用的是<code>.cmd</code>文件，即<code>startup.cmd</code>和<code>shutdown.cmd</code>，分别对应启动和关闭。在Linux系统中使用的是<code>.sh</code>文件，<code>startup.sh</code>启动，<code>shutdown.sh</code>关闭。</p>
+<p>使用<code>startup.cmd</code>或<code>startup.sh</code>默认为集群模式，可以添加参数<code>-m standalone</code>使用单机模式启动。</p>
+<p>Windows系统：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat"><span style="color:#66d9ef">cd</span> Nacos的路径\bin
+.\startup.cmd -m standalone
+</code></pre></div><p>Linux系统：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd Nacos的路径/bin
+./startup.sh -m standalone
+</code></pre></div></li>
+</ul>
+<blockquote>
+<p>在Windows系统和Linux系统上进行本地简单地部署Nacos并没有区别，这里不再分别进行赘述。</p>
+</blockquote>
+<p>访问<a class="link" href="http://localhsot:8848/nacos"  target="_blank" rel="noopener"
+    >http://localhsot:8848/nacos</a>即可。默认的用户名和密码均为<code>nacos</code>。</p>
+<p>启动成功后的Nacos大概长这样子：</p>
+<p><img src="/p/nacos-server-%E9%83%A8%E7%BD%B2/uTools_1690143487422.png"
+	width="1919"
+	height="682"
+	srcset="/p/nacos-server-%E9%83%A8%E7%BD%B2/uTools_1690143487422_huf4bff7825cff8f337a67d731239778ec_48987_480x0_resize_box_3.png 480w, /p/nacos-server-%E9%83%A8%E7%BD%B2/uTools_1690143487422_huf4bff7825cff8f337a67d731239778ec_48987_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Nacos 页面"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="281"
+		data-flex-basis="675px"
+	
+></p>
+<hr>
+<h1 id="基于-mysql-数据库部署">基于 MySQL 数据库部署</h1>
+<p>Nacos可以使用MySQL数据库存放配置信息。首先需要确保你的电脑上有MySQL。</p>
+<blockquote>
+<p>注意：使用MySQL搭建Nacos的数据库，推荐使用MySQL 5，因为Nacos的MySQL驱动版本可以不支持MySQL 8。如果非要使用MySQL 8，可以在Nacos中升级MySQL的驱动。</p>
+</blockquote>
+<p>首先在MySQL中新建一个数据库：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> nacos;
+USE nacos;
+<span style="color:#66d9ef">source</span> <span style="color:#e6db74">&#34;Nacos的路径/bin/mysql-schema.sql&#34;</span>;
+</code></pre></div><p>创建成功后的Nacos数据库如下：</p>
+<p><img src="/p/nacos-server-%E9%83%A8%E7%BD%B2/uTools_1690142171755.png"
+	width="184"
+	height="290"
+	srcset="/p/nacos-server-%E9%83%A8%E7%BD%B2/uTools_1690142171755_hu81e38a67256d0926adb373d5d724b666_6212_480x0_resize_box_3.png 480w, /p/nacos-server-%E9%83%A8%E7%BD%B2/uTools_1690142171755_hu81e38a67256d0926adb373d5d724b666_6212_1024x0_resize_box_3.png 1024w"
+	loading="lazy"
+	
+		alt="Nacos数据库的表"
+	
+	
+		class="gallery-image" 
+		data-flex-grow="63"
+		data-flex-basis="152px"
+	
+></p>
+<p>接着修改在<code>conf</code>目录里的<code>application.properties</code>文件（如果没有，就将<code>application.properties.example</code>文件复制一份，改名为<code>application.properties</code>）。需要修改的配置如下：</p>
+<pre tabindex="0"><code class="language-properties" data-lang="properties"># 数据源
+spring.datasource.platform=mysql
+# 数据库数量
+db.num=1
+# 连接第1个数据库的url（替换成自己的）
+db.url.0=jdbc:mysql://127.0.0.1:3306/nacos?characterEncoding=utf8&amp;connectTimeout=1000&amp;socketTimeout=3000&amp;autoReconnect=true&amp;useUnicode=true&amp;useSSL=false&amp;serverTimezone=UTC
+# 连接第1个数据库的用户和密码（替换成自己的）
+db.user.0=root
+db.password.0=root
+
+# 数据库驱动（如果其它配置正确，但无法启动时，修改该配置）
+# db.driver-class-name=com.mysql.cj.jdbc.Driver
+</code></pre><p>接下来重启Nacos即可：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">./shutdown.sh <span style="color:#75715e"># 也可以直接 CTRL+C 结束</span>
+./startup.sh -m standalone
+</code></pre></div><hr>
+<h1 id="部署-nacos-集群">部署 Nacos 集群</h1>
+<p>在本地部署Nacos集群首先将Nacos整个应用目录复制，要在集群中部署几个Nacos就复制几份。接着再分别修改它们的配置文件<code>application.properties</code>。</p>
+<p>例如要部署两个Nacos，做负载均衡：</p>
+<p>第一个Nacos的配置文件可以如下：</p>
+<pre tabindex="0"><code class="language-properties" data-lang="properties"># 服务端口
+server.port=8841
+
+# 数据库配置
+spring.datasource.platform=mysql
+db.num=1
+db.url.0=jdbc:mysql://localhost:3306/nacos?characterEncoding=utf8&amp;connectTimeout=1000&amp;socketTimeout=3000&amp;autoReconnect=true&amp;useUnicode=true&amp;useSSL=false&amp;serverTimezone=UTC
+db.user.0=root
+db.password.0=root
+</code></pre><p>第二个Nacos的配置文件可以如下：</p>
+<pre tabindex="0"><code class="language-properties" data-lang="properties"># 服务端口
+server.port=8842
+
+# 数据库配置
+spring.datasource.platform=mysql
+db.num=1
+db.url.0=jdbc:mysql://127.0.0.1:3306/nacos?characterEncoding=utf8&amp;connectTimeout=1000&amp;socketTimeout=3000&amp;autoReconnect=true&amp;useUnicode=true&amp;useSSL=false&amp;serverTimezone=UTC
+db.user.0=root
+db.password.0=root
+</code></pre><blockquote>
+<p>因为是部署在本地（即一台机器上），所以两个Nacos的端口不能相同（否则会发生冲突）。</p>
+</blockquote>
+<p>接着使用<code>startup.cmd</code>或<code>startup.sh</code>分别启动这两个Nacos（这里要使用集群模式启动，Nacos默认使用集群模式启动，所以不能加上<code>-m standalone</code>参数）。</p>
+<p>此时分别访问这两个服务（例如使用<a class="link" href="http://localhost:8841/nacos"  target="_blank" rel="noopener"
+    >http://localhost:8841/nacos</a>和<a class="link" href="http://localhost:8842/nacos"  target="_blank" rel="noopener"
+    >http://localhost:8842/nacos</a>访问），都能正常使用。</p>
+<p>最后需要给这个Nacos集群加个路由（例如使用Nginx）。Nginx的配置如下：</p>
+<pre tabindex="0"><code># Nacos 集群
+upstream nacos-cluster {
+    server nacos-cluster-test-1:8848;
+    server nacos-cluster-test-2:8848;
+}
+
+# Nacos 服务
+server {
+    listen 8849;
+
+    server_name localhost;
+
+    location /nacos {
+        proxy_pass http://nacos-cluster;
+    }
+}
+</code></pre><p>添加完配置后重启Nginx即可，这里不做赘述。</p>
+<p>配置完后访问<a class="link" href="http://localhsot:8848/nacos"  target="_blank" rel="noopener"
+    >http://localhsot:8849/nacos</a>即可。</p>
+<hr>
+<h1 id="基于-docker-部署">基于 Docker 部署</h1>
+<p>使用Docker部署，首先需要下载Nacos的镜像。Nacos官方提供了对应的镜像<code>nacos/nacos-server</code>。使用下方命令下载该容器：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker pull nacos/nacos-server
+</code></pre></div><blockquote>
+<p>上方的命令拉取（下载）的是版本为<code>latest</code>。要拉取对应版本的镜像，可以查看Docker官方提供的网站<a class="link" href="https://hub.docker.com/"  target="_blank" rel="noopener"
+    >hub.docker.com</a>，在其中搜索<code>nacos-server</code>并点击<code>tags</code>查找对应的版本（<a class="link" href="https://hub.docker.com/r/nacos/nacos-server/tags"  target="_blank" rel="noopener"
+    >点击快速查找Nacos Server版本</a>。</p>
+<p>例如拉取<code>v1.4.6</code>版本的<code>nacos/nacos-server</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker pull nacos/nacos-server:v1.4.6
+</code></pre></div></blockquote>
+<p><code>nacos/nacos-server</code>拉取完成后就可以创建对应容器：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run -d <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --name nacos-server <span style="color:#ae81ff">\ </span><span style="color:#75715e"># 容器名称</span>
+    -p 8848:8848 <span style="color:#ae81ff">\ </span><span style="color:#75715e"># 端口映射，分号左边为本地端口，分号右边为容器的内部端口</span>
+    --privileged<span style="color:#f92672">=</span>true <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -e MODE<span style="color:#f92672">=</span>standalone <span style="color:#ae81ff">\ </span><span style="color:#75715e"># 指定为单机模式（使用Docker创建的Docker容器默认也为集群模式，所以需要指定单机模式）</span>
+    -e PREFER_HOST_MODE<span style="color:#f92672">=</span>hostname <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -v /home/nacos/nacos-server/logs:/home/nacos/logs <span style="color:#ae81ff">\ </span><span style="color:#75715e"># 文件挂载，分号左边为本地目录，分号右边为容器内部的目录，这里是进行日志文件目录映射</span>
+    -v /home/nacos/nacos-server/conf/:/home/nacos/conf/ <span style="color:#ae81ff">\ </span><span style="color:#75715e"># 配置文件映射</span>
+    -e JVM_XMS<span style="color:#f92672">=</span>256m -e JVM_XMX<span style="color:#f92672">=</span>256m <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    nacos/nacos-server <span style="color:#ae81ff">\ </span><span style="color:#75715e"># 创建容器所使用的镜像</span>
+    /usr/sbin/init
+</code></pre></div><p>访问<a class="link" href="http://localhsot:8848/nacos"  target="_blank" rel="noopener"
+    >http://localhsot:8848/nacos</a>即可。默认的用户名和密码均为<code>nacos</code>。</p>
+<p>如果是在Windows中使用Docker Desktop部署，目录映射的路径应该这样写：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">docker run -d \
+    --name nacos-server \
+    -p 8848:8848 \
+    --privileged=true \
+    -e MODE=standalone \
+    -e PREFER_HOST_MODE=hostname \
+    -v /d/docker-volume/nacos/nacos-server/logs:/home/nacos/logs \
+    -v /d/docker-volume/nacos/nacos-server/conf/:/home/nacos/conf/ \
+    -e JVM_XMS=256m -e JVM_XMX=256m \
+    nacos/nacos-server \
+    /usr/sbin/init
+</code></pre></div><hr>
+<h1 id="基于-docker-使用-mysql-部署">基于 Docker 使用 MySQL 部署</h1>
+<p>根据如上方法创建Nacos容器，然后修改映射到本地的配置文件。例如修改<code>/home/nacos/nacos-server/conf</code>下的<code>application.properties</code>：</p>
+<pre tabindex="0"><code class="language-properties" data-lang="properties"># 数据库配置（根据你的配置环境修改）
+spring.datasource.platform=mysql
+db.num=1
+db.url.0=jdbc:mysql://localhost:3306/nacos?characterEncoding=utf8&amp;connectTimeout=1000&amp;socketTimeout=3000&amp;autoReconnect=true&amp;useUnicode=true&amp;useSSL=false&amp;serverTimezone=UTC
+db.user.0=root
+db.password.0=root
+</code></pre><blockquote>
+<p>注：这个MySQL需要使用<code>mysql-schema.sql</code>创建<code>nacos</code>数据库。</p>
+</blockquote>
+<p>如果MySQL也是使用Docker创建的，可以给Nacos容器和MySQL容器添加一个Docker Network，并将它们都加入这个Network中：</p>
+<ol>
+<li>
+<p>创建Docker Network：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker network create nacos-network
+</code></pre></div></li>
+<li>
+<p>分别将Nacos容器和MySQL容器加入Docker Network（假设MySQL的容器名为<code>mysql</code>）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker network connect nacos-network nacos-server
+docker network connect nacos-network mysql
+</code></pre></div></li>
+</ol>
+<p>之后在加入这个Network的容器中，可以将它们的容器名当作IP地址来使用。所以在<code>nacos-server</code>中可以将<code>db.url</code>修改为如下：</p>
+<pre tabindex="0"><code class="language-properties" data-lang="properties">db.url.0=jdbc:mysql://mysql:3306/nacos?characterEncoding=utf8&amp;connectTimeout=1000&amp;socketTimeout=3000&amp;autoReconnect=true&amp;useUnicode=true&amp;useSSL=false&amp;serverTimezone=UTC
+</code></pre><blockquote>
+<p>使用Docker创建的MySQL容器同样需要创建<code>nacos</code>数据库。可以通过文件挂载的方式将<code>mysql-schema.sql</code>挂载到容器中，或者通过其它文件传输方式传输到容器中。
+在容器中创建数据库可以在本机输入命令（假设<code>mysql-schema.sql</code>导入到了容器的<code>root</code>目录中）：</p>
+</blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker exec -ti mysql mysql -uroot -proot -e <span style="color:#e6db74">&#34;CREATE DATABASE nacos; USE nacos; SOURCE /root/mysql-schema.sql;&#34;</span>
+</code></pre></div><p>上方命令第一个<code>mysql</code>是指容器名称，第二个是指容器中的<code>mysql</code>命令。</p>
+<p>或者是在本地使用Docker登录MySQL后进行操作：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker exec -ti mysql mysql -uroot -p
+<span style="color:#75715e"># 然后输入你的密码，回车</span>
+mysql&gt; CREATE DATABASE nacos;
+mysql&gt; USE nacos;
+mysql&gt; SOURCE /root/mysql-schema.sql;
+</code></pre></div><blockquote>
+<p>注：使用Docker部署Nacos，并使用MySQL数据库，按照上述方法直接修改配置文件可能不生效（可能会导致Nacos容器无法启动）。其实使用Docker部署并使用MySQL数据库还有一个简便的方法（见下方）。</p>
+</blockquote>
+<p>如果上述方式无法生效，可以先删除该容器后通过在创建容器的Docker命令中直接指定MySQL服务的配置信息：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run -d <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --name nacos-server <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -p 8848:8848 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --network nacos-network<span style="color:#ae81ff">\ </span><span style="color:#75715e"># 在创建容器时指定Network</span>
+    --privileged<span style="color:#f92672">=</span>true <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -e SPRING_DATASOURCE_PLATFORM<span style="color:#f92672">=</span>mysql <span style="color:#ae81ff">\ </span><span style="color:#75715e"># 指定数据源类型为MySQL</span>
+    -e MYSQL_SERVICE_HOST<span style="color:#f92672">=</span>mysql <span style="color:#ae81ff">\ </span><span style="color:#75715e"># MySQL服务器的地址（这里加入了Network所以可以直接使用容器名称来当Host）</span>
+    -e MYSQL_SERVICE_PORT<span style="color:#f92672">=</span><span style="color:#ae81ff">3306</span> <span style="color:#ae81ff">\ </span><span style="color:#75715e"># MySQL服务端口</span>
+    -e MYSQL_SERVICE_USER<span style="color:#f92672">=</span>root <span style="color:#ae81ff">\ </span><span style="color:#75715e"># MySQL用户名</span>
+    -e MYSQL_SERVICE_PASSWORD<span style="color:#f92672">=</span>root <span style="color:#ae81ff">\ </span><span style="color:#75715e"># MySQL密码</span>
+    -e MYSQL_SERVICE_DB_NAME<span style="color:#f92672">=</span>nacos <span style="color:#ae81ff">\ </span><span style="color:#75715e"># MySQL的数据库名称</span>
+    -e PREFER_HOST_MODE<span style="color:#f92672">=</span>hostname <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -v /d/27120/docker-volume/nacos/%name%/logs:/home/nacos/logs <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -v /d/27120/docker-volume/nacos/%name%/conf/:/home/nacos/conf/ <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -e JVM_XMS<span style="color:#f92672">=</span>256m -e JVM_XMX<span style="color:#f92672">=</span>256m <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    nacos/nacos-server <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    /usr/sbin/init
+</code></pre></div><hr>
+<h1 id="基于-docker-搭建-nacos-集群">基于 Docker 搭建 Nacos 集群</h1>
+<p>基于Docker搭建Nacos集群，首先可以创建一个用于创建集群模式Nacos的脚本<code>create_nacos.sh</code>（使用MySQL）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">name<span style="color:#f92672">=</span>$1
+port<span style="color:#f92672">=</span>$2
+
+docker run -d <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --name $name <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -p $port:8848 <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --network nacos-network <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    --privileged<span style="color:#f92672">=</span>true <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -e SPRING_DATASOURCE_PLATFORM<span style="color:#f92672">=</span>mysql <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -e MYSQL_SERVICE_HOST<span style="color:#f92672">=</span>mysql <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -e MYSQL_SERVICE_PORT<span style="color:#f92672">=</span><span style="color:#ae81ff">3306</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -e MYSQL_SERVICE_USER<span style="color:#f92672">=</span>root <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -e MYSQL_SERVICE_PASSWORD<span style="color:#f92672">=</span><span style="color:#ae81ff">123456</span> <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -e MYSQL_SERVICE_DB_NAME<span style="color:#f92672">=</span>nacos_config <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -e PREFER_HOST_MODE<span style="color:#f92672">=</span>hostname <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -v /home/nacos/$name/logs:/home/nacos/logs <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -v /home/nacos/$name/conf/:/home/nacos/conf/ <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    -e JVM_XMS<span style="color:#f92672">=</span>256m -e JVM_XMX<span style="color:#f92672">=</span>256m <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    nacos/nacos-server <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>    /usr/sbin/init
+</code></pre></div><p>例如创建两个Nacos容器（在本地创建两个容器，端口不能重复）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">./create_nacos.sh nacos1 <span style="color:#ae81ff">8841</span>
+./create_nacos.sh nacos2 <span style="color:#ae81ff">8842</span>
+</code></pre></div><p>接着将它们加入<code>nacos-network</code>后重启（如果这两个Nacos容器没有停止运行的话，可以忽略）：</p>
+<pre tabindex="0"><code>docker restart nacos1
+docker restart nacos2
+</code></pre><p>接着配置Nginx的方法和之前描述的方式类似。如果Nginx是使用Docker创建的，也可以将该Nginx容器加入<code>nacos-network</code>，然后直接使用容器的名称作为Host即可。</p>
+<p>最后访问Nginx即可。</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/java/">Java</a>
+        
+            <a href="/tags/javaweb/">JavaWeb</a>
+        
+            <a href="/tags/spring/">Spring</a>
+        
+            <a href="/tags/maven/">Maven</a>
+        
+            <a href="/tags/nacos/">Nacos</a>
+        
+            <a href="/tags/docker/">Docker</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.css"integrity="sha256-J&#43;iAE0sgH8QSz9hpcDxXIftnj65JEZgNhGcgReTTK9s="crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/katex.min.js"integrity="sha256-InsNdER1b2xUewP&#43;pKCUJpkhiqwHgqiPXDlIk7GzBu4="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.15.6/dist/contrib/auto-render.min.js"integrity="sha256-y39Mpg7V3D4lhBX4x6O0bUqTV4pSrfgwEfGKfxkOdgI="crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+        renderMathInElement(document.querySelector(`.article-content`), {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+       
+</article>
+
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">相关文章</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/springboot-%E5%9F%BA%E7%A1%80/">
+        
+        
+
+        SpringBoot 基础</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/springmvc-%E5%9F%BA%E7%A1%80/">
+        
+        
+
+        SpringMVC 基础</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/spring-framework/">
+        
+        
+
+        Spring Framework</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/%E7%91%9E%E5%90%89%E5%A4%96%E5%8D%96%E9%A1%B9%E7%9B%AE%E5%AE%9E%E6%88%98/">
+        
+        
+
+        瑞吉外卖项目实战</a>
+</div>
+</section>
+
+            
+                
+
+<section class="tagCloud" style="margin-right: 10px;">
+<div class="tagCloud-tags">
+    <a href="/p/maven/">
+        
+        
+
+        Maven</a>
+</div>
+</section>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2022 - 
+        
+        2023 Linner&#39;s Blog
+
+        <span style="padding-left: 5px;padding-right: 5px;">|</span>
+
+        <a href="https://beian.miit.gov.cn/" target="_blank" >粤ICP备2022125602号-1</a>
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        主题 <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.16.0">Stack</a></b> 由 <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a> 设计
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
