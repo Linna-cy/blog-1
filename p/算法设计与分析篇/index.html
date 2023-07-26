@@ -1323,39 +1323,38 @@ $$</p>
 <blockquote>
 <p>归位：在排序过程中，能确定某些元素的最终排序位置。</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">selectionSort</span>(<span style="color:#66d9ef">int</span> arr[], <span style="color:#66d9ef">int</span> len)
-{
-    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> ; i <span style="color:#f92672">&lt;</span> len <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> ; i<span style="color:#f92672">++</span>)
-    {
-        <span style="color:#66d9ef">int</span> min <span style="color:#f92672">=</span> i;
-        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; j <span style="color:#f92672">&lt;</span> len; j<span style="color:#f92672">++</span>)     <span style="color:#75715e">// 走访未排序的元素
-</span><span style="color:#75715e"></span>            <span style="color:#75715e">// 找到最小值
-</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> (arr[j] <span style="color:#f92672">&lt;</span> arr[min])
-                min <span style="color:#f92672">=</span> j;
-        <span style="color:#75715e">// i 不是最小数时，将 i 和最小数进行交换
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (i <span style="color:#f92672">!=</span> min)
-        {
-            <span style="color:#66d9ef">int</span> tmp <span style="color:#f92672">=</span> arr[i];
-            arr[i] <span style="color:#f92672">=</span> arr[min];
-            arr[min] <span style="color:#f92672">=</span> tmp; 
-        }
-    }
-}
-
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>)
-{
-    <span style="color:#66d9ef">int</span> arr[] <span style="color:#f92672">=</span> { 
-        <span style="color:#ae81ff">22</span>, <span style="color:#ae81ff">34</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">32</span>, <span style="color:#ae81ff">82</span>, <span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">89</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">37</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">64</span>, <span style="color:#ae81ff">35</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">70</span> };
-    <span style="color:#66d9ef">int</span> len <span style="color:#f92672">=</span> (<span style="color:#66d9ef">int</span>)<span style="color:#66d9ef">sizeof</span>(arr) <span style="color:#f92672">/</span> <span style="color:#66d9ef">sizeof</span>(<span style="color:#f92672">*</span>arr);
-    selectionSort(arr, len);
-    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> len; i<span style="color:#f92672">++</span>)
-        printf(<span style="color:#e6db74">&#34;%d &#34;</span>, arr[i]);
-    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-}
-
-</code></pre></div><h2 id="冒泡排序">冒泡排序</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">selectionSort</span>(<span style="color:#66d9ef">int</span> arr[], <span style="color:#66d9ef">int</span> len)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> ; i <span style="color:#f92672">&lt;</span> len <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> ; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> min <span style="color:#f92672">=</span> i;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>; j <span style="color:#f92672">&lt;</span> len; j<span style="color:#f92672">++</span>)     <span style="color:#75715e">// 走访未排序的元素
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#75715e">// 找到最小值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> (arr[j] <span style="color:#f92672">&lt;</span> arr[min])
+</span></span><span style="display:flex;"><span>                min <span style="color:#f92672">=</span> j;
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// i 不是最小数时，将 i 和最小数进行交换
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (i <span style="color:#f92672">!=</span> min)
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">int</span> tmp <span style="color:#f92672">=</span> arr[i];
+</span></span><span style="display:flex;"><span>            arr[i] <span style="color:#f92672">=</span> arr[min];
+</span></span><span style="display:flex;"><span>            arr[min] <span style="color:#f92672">=</span> tmp; 
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> arr[] <span style="color:#f92672">=</span> { 
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">22</span>, <span style="color:#ae81ff">34</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">32</span>, <span style="color:#ae81ff">82</span>, <span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">89</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">37</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">64</span>, <span style="color:#ae81ff">35</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">70</span> };
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> len <span style="color:#f92672">=</span> (<span style="color:#66d9ef">int</span>)<span style="color:#66d9ef">sizeof</span>(arr) <span style="color:#f92672">/</span> <span style="color:#66d9ef">sizeof</span>(<span style="color:#f92672">*</span>arr);
+</span></span><span style="display:flex;"><span>    selectionSort(arr, len);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> len; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;%d &#34;</span>, arr[i]);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="冒泡排序">冒泡排序</h2>
 <p>冒泡排序（Bubble Sort）是一种简单直观的排序算法。</p>
 <p>这个算法的名字由来是因为越小的元素会经由交换慢慢“浮”到数列的顶端。</p>
 <p>算法步骤：</p>
@@ -1375,31 +1374,31 @@ $$</p>
 <blockquote>
 <p>归位：在排序过程中，能确定某些元素的最终排序位置。</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">void</span> <span style="color:#a6e22e">bubbleSort</span>(<span style="color:#66d9ef">int</span> arr[], <span style="color:#66d9ef">int</span> len)
-{
-    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> len <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; i<span style="color:#f92672">++</span>)
-        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> len <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> i; j<span style="color:#f92672">++</span>)
-            <span style="color:#66d9ef">if</span> (arr[j] <span style="color:#f92672">&gt;</span> arr[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>])
-            {
-                <span style="color:#66d9ef">int</span> tmp <span style="color:#f92672">=</span> arr[j];
-                arr[j] <span style="color:#f92672">=</span> arr[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>];
-                arr[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> tmp;
-            }
-}
-
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>)
-{
-    <span style="color:#66d9ef">int</span> arr[] <span style="color:#f92672">=</span> { 
-        <span style="color:#ae81ff">22</span>, <span style="color:#ae81ff">34</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">32</span>, <span style="color:#ae81ff">82</span>, <span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">89</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">37</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">64</span>, <span style="color:#ae81ff">35</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">70</span> };
-    <span style="color:#66d9ef">int</span> len <span style="color:#f92672">=</span> (<span style="color:#66d9ef">int</span>)<span style="color:#66d9ef">sizeof</span>(arr) <span style="color:#f92672">/</span> <span style="color:#66d9ef">sizeof</span>(<span style="color:#f92672">*</span>arr);
-    bubbleSort(arr, len);
-    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> len; i<span style="color:#f92672">++</span>)
-        printf(<span style="color:#e6db74">&#34;%d &#34;</span>, arr[i]);
-    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-}
-</code></pre></div><h2 id="直接插入排序">直接插入排序</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">bubbleSort</span>(<span style="color:#66d9ef">int</span> arr[], <span style="color:#66d9ef">int</span> len)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> len <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> len <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">-</span> i; j<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (arr[j] <span style="color:#f92672">&gt;</span> arr[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>])
+</span></span><span style="display:flex;"><span>            {
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">int</span> tmp <span style="color:#f92672">=</span> arr[j];
+</span></span><span style="display:flex;"><span>                arr[j] <span style="color:#f92672">=</span> arr[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>];
+</span></span><span style="display:flex;"><span>                arr[j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>] <span style="color:#f92672">=</span> tmp;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> arr[] <span style="color:#f92672">=</span> { 
+</span></span><span style="display:flex;"><span>        <span style="color:#ae81ff">22</span>, <span style="color:#ae81ff">34</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">32</span>, <span style="color:#ae81ff">82</span>, <span style="color:#ae81ff">55</span>, <span style="color:#ae81ff">89</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">37</span>, <span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">64</span>, <span style="color:#ae81ff">35</span>, <span style="color:#ae81ff">9</span>, <span style="color:#ae81ff">70</span> };
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> len <span style="color:#f92672">=</span> (<span style="color:#66d9ef">int</span>)<span style="color:#66d9ef">sizeof</span>(arr) <span style="color:#f92672">/</span> <span style="color:#66d9ef">sizeof</span>(<span style="color:#f92672">*</span>arr);
+</span></span><span style="display:flex;"><span>    bubbleSort(arr, len);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> len; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;%d &#34;</span>, arr[i]);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="直接插入排序">直接插入排序</h2>
 <p>直接插入排序的做法是：在插入第$i$个记录（$R_i$）时，序列中的前$i-1$个记录$R_1,R_2,\cdots,R_{i-1}$已排好序。将$R_i$与前面的有序序列做比较，找到应该插入的位置将$R_i$插入，并将插入位置后的记录依序向后移动。</p>
 <blockquote>
 <p>如果待插入的元素与有序序列中的某个元素相等，则将待插入元素插入到相等元素的后面。</p>

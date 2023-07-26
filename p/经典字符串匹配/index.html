@@ -384,103 +384,100 @@
 <h2 id="代码实现">代码实现</h2>
 <h3 id="python实现">Python实现</h3>
 <p>实现1：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">BFMatch</span>(s, p):
-    <span style="color:#66d9ef">if</span> len(s) <span style="color:#f92672">&lt;</span> len(p):
-        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
-    i, j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>
-    <span style="color:#75715e"># 匹配阶段</span>
-    <span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> len(s) <span style="color:#f92672">and</span> j <span style="color:#f92672">&lt;</span> len(p):
-        <span style="color:#75715e"># 匹配，s和p的指针均向前一步</span>
-        <span style="color:#66d9ef">if</span> s[i] <span style="color:#f92672">==</span> p[j]:
-            i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-            j <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-        <span style="color:#75715e"># 不匹配，i后退到下一个要匹配的位置，j后头到p开头</span>
-        <span style="color:#66d9ef">else</span>:
-            i <span style="color:#f92672">=</span> i <span style="color:#f92672">-</span> j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
-            j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-    <span style="color:#66d9ef">if</span> j <span style="color:#f92672">==</span> len(p):
-        <span style="color:#66d9ef">return</span> i <span style="color:#f92672">-</span> j
-    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
-
-<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
-    s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abcdefghijkl&#34;</span>
-    p <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ijk&#34;</span>
-    result <span style="color:#f92672">=</span> BFMatch(s, p)
-    <span style="color:#66d9ef">if</span> result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
-        print(<span style="color:#e6db74">&#34;False&#34;</span>)
-    <span style="color:#66d9ef">else</span>:
-        print(result)
-
-
-</code></pre></div><p>实现2：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">BFMatch</span>(s, p):
-    <span style="color:#66d9ef">if</span> len(s) <span style="color:#f92672">&lt;</span> len(p):
-        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
-    <span style="color:#75715e"># 最多移动len(s)-len(p)+1次</span>
-    <span style="color:#75715e"># 如果s的前len(s)-len(p)+1个与p均没有匹配</span>
-    <span style="color:#75715e"># 那么直接判断为不匹配，无需比较后len(p)-1个</span>
-    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(s)<span style="color:#f92672">-</span>len(p)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
-        index <span style="color:#f92672">=</span> i           <span style="color:#75715e"># 当前比较的字符</span>
-        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(len(p)):
-            <span style="color:#75715e"># 相等继续比较下一个</span>
-            <span style="color:#66d9ef">if</span> s[index] <span style="color:#f92672">==</span> p[j]:
-                index <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-            <span style="color:#75715e"># 不相等停止比较</span>
-            <span style="color:#66d9ef">else</span>:
-                <span style="color:#66d9ef">break</span>
-        <span style="color:#75715e"># 如果完全相等，返回当前位置</span>
-        <span style="color:#66d9ef">if</span> index <span style="color:#f92672">-</span> i <span style="color:#f92672">==</span> len(p):
-            <span style="color:#66d9ef">return</span> i
-    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
-
-<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
-    s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abcdefghijkl&#34;</span>
-    p <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ijk&#34;</span>
-    result <span style="color:#f92672">=</span> BFMatch(s, p)
-    <span style="color:#66d9ef">if</span> result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
-        print(<span style="color:#e6db74">&#34;False&#34;</span>)
-    <span style="color:#66d9ef">else</span>:
-        print(result)
-
-</code></pre></div><h3 id="c实现">C实现</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">BFMatch</span>(<span style="color:#66d9ef">char</span> s[], <span style="color:#66d9ef">int</span> len_s, <span style="color:#66d9ef">char</span> p[], <span style="color:#66d9ef">int</span> len_p) {
-    <span style="color:#66d9ef">if</span> (len_s <span style="color:#f92672">&lt;</span> len_p)
-        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
-    <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-    <span style="color:#75715e">// 之匹配s的前len_s-len_p+1个
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 如果s[len(s)-len(p)] != p[0]
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 那么就不用继续匹配
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">// i-j代表s与p对齐的位置
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">while</span> (i<span style="color:#f92672">-</span>j <span style="color:#f92672">&lt;=</span> len_s<span style="color:#f92672">-</span>len_p) {
-        <span style="color:#66d9ef">if</span> (s[i] <span style="color:#f92672">==</span> p[j]) {
-            i<span style="color:#f92672">++</span>;
-            j<span style="color:#f92672">++</span>;
-            <span style="color:#66d9ef">if</span> (j <span style="color:#f92672">==</span> len_p)
-                <span style="color:#66d9ef">return</span> i <span style="color:#f92672">-</span> j;
-            <span style="color:#66d9ef">continue</span>;
-        }
-        i <span style="color:#f92672">=</span> i <span style="color:#f92672">-</span> j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
-        j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-    }
-    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
-}
-
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>) {
-<span style="color:#75715e">#define S &#34;abcdefghijkl&#34;
-</span><span style="color:#75715e">#define P &#34;ijk&#34;
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">char</span> s[<span style="color:#66d9ef">sizeof</span>(S)] <span style="color:#f92672">=</span> S;
-    <span style="color:#66d9ef">char</span> p[<span style="color:#66d9ef">sizeof</span>(P)] <span style="color:#f92672">=</span> P;
-    <span style="color:#66d9ef">int</span> result <span style="color:#f92672">=</span> BFMatch(s, <span style="color:#66d9ef">sizeof</span>(S)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, 
-            p, <span style="color:#66d9ef">sizeof</span>(P)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);
-    <span style="color:#66d9ef">if</span> (result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
-        printf(<span style="color:#e6db74">&#34;False</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
-    <span style="color:#66d9ef">else</span>
-        printf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, result);
-    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-}
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">BFMatch</span>(s, p):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(s) <span style="color:#f92672">&lt;</span> len(p):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    i, j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 匹配阶段</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> len(s) <span style="color:#f92672">and</span> j <span style="color:#f92672">&lt;</span> len(p):
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 匹配，s和p的指针均向前一步</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> s[i] <span style="color:#f92672">==</span> p[j]:
+</span></span><span style="display:flex;"><span>            i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            j <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 不匹配，i后退到下一个要匹配的位置，j后头到p开头</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            i <span style="color:#f92672">=</span> i <span style="color:#f92672">-</span> j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> j <span style="color:#f92672">==</span> len(p):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> i <span style="color:#f92672">-</span> j
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abcdefghijkl&#34;</span>
+</span></span><span style="display:flex;"><span>    p <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ijk&#34;</span>
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> BFMatch(s, p)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;False&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        print(result)
+</span></span></code></pre></div><p>实现2：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">BFMatch</span>(s, p):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(s) <span style="color:#f92672">&lt;</span> len(p):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 最多移动len(s)-len(p)+1次</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 如果s的前len(s)-len(p)+1个与p均没有匹配</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 那么直接判断为不匹配，无需比较后len(p)-1个</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(s)<span style="color:#f92672">-</span>len(p)<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>):
+</span></span><span style="display:flex;"><span>        index <span style="color:#f92672">=</span> i           <span style="color:#75715e"># 当前比较的字符</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(len(p)):
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 相等继续比较下一个</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> s[index] <span style="color:#f92672">==</span> p[j]:
+</span></span><span style="display:flex;"><span>                index <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># 不相等停止比较</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 如果完全相等，返回当前位置</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> index <span style="color:#f92672">-</span> i <span style="color:#f92672">==</span> len(p):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> i
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abcdefghijkl&#34;</span>
+</span></span><span style="display:flex;"><span>    p <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ijk&#34;</span>
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> BFMatch(s, p)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;False&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        print(result)
+</span></span></code></pre></div><h3 id="c实现">C实现</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">BFMatch</span>(<span style="color:#66d9ef">char</span> s[], <span style="color:#66d9ef">int</span> len_s, <span style="color:#66d9ef">char</span> p[], <span style="color:#66d9ef">int</span> len_p) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (len_s <span style="color:#f92672">&lt;</span> len_p)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 之匹配s的前len_s-len_p+1个
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// 如果s[len(s)-len(p)] != p[0]
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// 那么就不用继续匹配
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// i-j代表s与p对齐的位置
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">while</span> (i<span style="color:#f92672">-</span>j <span style="color:#f92672">&lt;=</span> len_s<span style="color:#f92672">-</span>len_p) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (s[i] <span style="color:#f92672">==</span> p[j]) {
+</span></span><span style="display:flex;"><span>            i<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>            j<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (j <span style="color:#f92672">==</span> len_p)
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> i <span style="color:#f92672">-</span> j;
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">continue</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        i <span style="color:#f92672">=</span> i <span style="color:#f92672">-</span> j <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>        j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>) {
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#define S &#34;abcdefghijkl&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define P &#34;ijk&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">char</span> s[<span style="color:#66d9ef">sizeof</span>(S)] <span style="color:#f92672">=</span> S;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">char</span> p[<span style="color:#66d9ef">sizeof</span>(P)] <span style="color:#f92672">=</span> P;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> result <span style="color:#f92672">=</span> BFMatch(s, <span style="color:#66d9ef">sizeof</span>(S)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, 
+</span></span><span style="display:flex;"><span>            p, <span style="color:#66d9ef">sizeof</span>(P)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;False</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, result);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><hr>
 <h1 id="kmp快速匹配算法">KMP快速匹配算法</h1>
 <p>快速模式匹配算法，即Knuth Morris Pratt（简称KMP）算法，是解决字符串匹配问题的经典算法。</p>
 <p>KMP算法是在 BF 算法基础上改进得到的算法。BF算法的实现过程是用子串与主串中的字符一一配对，算法执行效率不高。对于主串S和子串P，BF算法如果遇到了不匹配的情况，主串S和子串P的指针都会回退，而且子串会回退到子串首部。KMP算法的实现过程接近人为进行模式匹配的过程。它只需回退子串，并且是根据情况回退，并不一定要回退到子串首部。</p>
@@ -528,214 +525,210 @@ $$</p>
 </li>
 </ul>
 <p>过程代码演示：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_next_process</span>(p, i, j, next_val):
-    print(<span style="color:#e6db74">&#34;第&#34;</span>, i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#34;趟：&#34;</span>)
-    print(p)
-    <span style="color:#66d9ef">if</span> j <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
-        <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> range(i <span style="color:#f92672">-</span> j):
-            print(<span style="color:#e6db74">&#34; &#34;</span>, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
-        print(p)
-        <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> range(i):
-            print(<span style="color:#e6db74">&#34; &#34;</span>, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
-        print(<span style="color:#e6db74">&#34;^&#34;</span>)
-    <span style="color:#66d9ef">if</span> i <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
-        print(<span style="color:#e6db74">&#34;初始化&#34;</span>)
-    print(next_val)
-
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_next</span>(p):
-    <span style="color:#e6db74">&#34;&#34;&#34;求部分匹配表（失配指针）&#34;&#34;&#34;</span>
-    i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>    <span style="color:#75715e"># 指向主串的指针</span>
-    j <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>   <span style="color:#75715e"># 指向模式串的指针，一开始</span>
-    next_val <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">*</span> len(p)    <span style="color:#75715e"># 要返回的next数组</span>
-    get_next_process(p, i, j, next_val)
-    <span style="color:#75715e"># next[0]==-1，只需要求后面的len(p)-1个值即可</span>
-    <span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> len(p)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
-        <span style="color:#75715e"># 匹配成功，相同前缀长度增加1</span>
-        <span style="color:#66d9ef">if</span> j <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">or</span> p[i] <span style="color:#f92672">==</span> p[j]:    
-            i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-            j <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-            next_val[i] <span style="color:#f92672">=</span> j
-            get_next_process(p, i, j, next_val)
-        <span style="color:#75715e"># 匹配不成功则在前面的子串中继续搜索，直至找不到</span>
-        <span style="color:#66d9ef">else</span>:
-            j <span style="color:#f92672">=</span> next_val[j]
-    <span style="color:#66d9ef">return</span> next_val
-
-<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
-    p <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abababc&#34;</span>
-    get_next(p)
-
-</code></pre></div><p>输出：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">第 1 趟：
-abababc
-初始化
-[-1, -1, -1, -1, -1, -1, -1]
-第 2 趟：
-abababc
- abababc
- ^
-[-1, 0, -1, -1, -1, -1, -1]
-第 3 趟：
-abababc
-  abababc
-  ^
-[-1, 0, 0, -1, -1, -1, -1]
-第 4 趟：
-abababc
-  abababc
-   ^
-[-1, 0, 0, 1, -1, -1, -1]
-第 5 趟：
-abababc
-  abababc
-    ^
-[-1, 0, 0, 1, 2, -1, -1]
-第 6 趟：
-abababc
-  abababc
-     ^
-[-1, 0, 0, 1, 2, 3, -1]
-第 7 趟：
-abababc
-  abababc
-      ^
-[-1, 0, 0, 1, 2, 3, 4]
-</code></pre></div><h2 id="代码实现-1">代码实现</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_next_process</span>(p, i, j, next_val):
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;第&#34;</span>, i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#34;趟：&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(p)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> j <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> range(i <span style="color:#f92672">-</span> j):
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34; &#34;</span>, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>        print(p)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> range(i):
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34; &#34;</span>, end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;^&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> i <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;初始化&#34;</span>)
+</span></span><span style="display:flex;"><span>    print(next_val)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_next</span>(p):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;求部分匹配表（失配指针）&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>    <span style="color:#75715e"># 指向主串的指针</span>
+</span></span><span style="display:flex;"><span>    j <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>   <span style="color:#75715e"># 指向模式串的指针，一开始</span>
+</span></span><span style="display:flex;"><span>    next_val <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">*</span> len(p)    <span style="color:#75715e"># 要返回的next数组</span>
+</span></span><span style="display:flex;"><span>    get_next_process(p, i, j, next_val)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># next[0]==-1，只需要求后面的len(p)-1个值即可</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> len(p)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 匹配成功，相同前缀长度增加1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> j <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">or</span> p[i] <span style="color:#f92672">==</span> p[j]:    
+</span></span><span style="display:flex;"><span>            i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            j <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            next_val[i] <span style="color:#f92672">=</span> j
+</span></span><span style="display:flex;"><span>            get_next_process(p, i, j, next_val)
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 匹配不成功则在前面的子串中继续搜索，直至找不到</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            j <span style="color:#f92672">=</span> next_val[j]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> next_val
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    p <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abababc&#34;</span>
+</span></span><span style="display:flex;"><span>    get_next(p)
+</span></span></code></pre></div><p>输出：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>第 1 趟：
+</span></span><span style="display:flex;"><span>abababc
+</span></span><span style="display:flex;"><span>初始化
+</span></span><span style="display:flex;"><span>[-1, -1, -1, -1, -1, -1, -1]
+</span></span><span style="display:flex;"><span>第 2 趟：
+</span></span><span style="display:flex;"><span>abababc
+</span></span><span style="display:flex;"><span> abababc
+</span></span><span style="display:flex;"><span> ^
+</span></span><span style="display:flex;"><span>[-1, 0, -1, -1, -1, -1, -1]
+</span></span><span style="display:flex;"><span>第 3 趟：
+</span></span><span style="display:flex;"><span>abababc
+</span></span><span style="display:flex;"><span>  abababc
+</span></span><span style="display:flex;"><span>  ^
+</span></span><span style="display:flex;"><span>[-1, 0, 0, -1, -1, -1, -1]
+</span></span><span style="display:flex;"><span>第 4 趟：
+</span></span><span style="display:flex;"><span>abababc
+</span></span><span style="display:flex;"><span>  abababc
+</span></span><span style="display:flex;"><span>   ^
+</span></span><span style="display:flex;"><span>[-1, 0, 0, 1, -1, -1, -1]
+</span></span><span style="display:flex;"><span>第 5 趟：
+</span></span><span style="display:flex;"><span>abababc
+</span></span><span style="display:flex;"><span>  abababc
+</span></span><span style="display:flex;"><span>    ^
+</span></span><span style="display:flex;"><span>[-1, 0, 0, 1, 2, -1, -1]
+</span></span><span style="display:flex;"><span>第 6 趟：
+</span></span><span style="display:flex;"><span>abababc
+</span></span><span style="display:flex;"><span>  abababc
+</span></span><span style="display:flex;"><span>     ^
+</span></span><span style="display:flex;"><span>[-1, 0, 0, 1, 2, 3, -1]
+</span></span><span style="display:flex;"><span>第 7 趟：
+</span></span><span style="display:flex;"><span>abababc
+</span></span><span style="display:flex;"><span>  abababc
+</span></span><span style="display:flex;"><span>      ^
+</span></span><span style="display:flex;"><span>[-1, 0, 0, 1, 2, 3, 4]
+</span></span></code></pre></div><h2 id="代码实现-1">代码实现</h2>
 <h3 id="python实现-1">Python实现</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_next</span>(p):
-    <span style="color:#e6db74">&#34;&#34;&#34;求部分匹配表（失配指针）&#34;&#34;&#34;</span>
-    i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>    <span style="color:#75715e"># 指向主串的指针</span>
-    j <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>   <span style="color:#75715e"># 指向模式串的指针</span>
-    next_val <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">*</span> len(p)    <span style="color:#75715e"># 要返回的next数组</span>
-    <span style="color:#75715e"># next[0]==-1，只需要求后面的len(p)-1个值即可</span>
-    <span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> len(p)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">and</span> j <span style="color:#f92672">&lt;</span> len(p)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
-        <span style="color:#75715e"># 匹配成功，相同前缀长度增加1</span>
-        <span style="color:#66d9ef">if</span> j <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">or</span> p[i] <span style="color:#f92672">==</span> p[j]:    
-            i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-            j <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-            next_val[i] <span style="color:#f92672">=</span> j
-        <span style="color:#75715e"># 匹配不成功则在前面的子串中继续搜索，直至找不到</span>
-        <span style="color:#66d9ef">else</span>:
-            j <span style="color:#f92672">=</span> next_val[j]
-    <span style="color:#66d9ef">return</span> next_val
-
-<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">KMP</span>(s, p):
-    <span style="color:#66d9ef">if</span> len(s) <span style="color:#f92672">&lt;</span> len(p):
-        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
-    i, j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>
-    <span style="color:#75715e"># 求next数组</span>
-    next <span style="color:#f92672">=</span> get_next(p)
-    <span style="color:#75715e"># 匹配阶段</span>
-    <span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> len(s) <span style="color:#f92672">and</span> j <span style="color:#f92672">&lt;</span> len(p):
-        <span style="color:#66d9ef">if</span> j <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">or</span> s[i] <span style="color:#f92672">==</span> p[j]:
-            i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-            j <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-        <span style="color:#66d9ef">else</span>:
-            j <span style="color:#f92672">=</span> next[j]
-    <span style="color:#66d9ef">if</span> j <span style="color:#f92672">==</span> len(p):
-        <span style="color:#66d9ef">return</span> i <span style="color:#f92672">-</span> j
-    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
-
-<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
-    s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ababababca&#34;</span>
-    p <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abababc&#34;</span>
-    result <span style="color:#f92672">=</span> KMP(s, p)
-    <span style="color:#66d9ef">if</span> result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
-        print(<span style="color:#e6db74">&#34;False&#34;</span>)
-    <span style="color:#66d9ef">else</span>:
-        print(result)
-
-
-</code></pre></div><p>优化代码：去除<code>get_next()</code>，边匹配边计算部分匹配表</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">KMP</span>(s, p):
-    <span style="color:#66d9ef">if</span> len(s) <span style="color:#f92672">&lt;</span> len(p):
-        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
-    i, j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>
-    p_i, p_j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
-    next <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">*</span> len(p)
-    <span style="color:#75715e"># 边计算部分匹配表，边匹配</span>
-    <span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> len(s) <span style="color:#f92672">and</span> j <span style="color:#f92672">&lt;</span> len(p):
-        <span style="color:#75715e"># 求部分匹配表</span>
-        <span style="color:#66d9ef">if</span> p_i <span style="color:#f92672">&lt;</span> len(p)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
-            <span style="color:#66d9ef">if</span> p_j <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">or</span> p[p_i] <span style="color:#f92672">==</span> p[p_j]:
-                p_i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-                p_j <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-                next[p_i] <span style="color:#f92672">=</span> p_j
-            <span style="color:#66d9ef">else</span>:
-                p_j <span style="color:#f92672">=</span> next[p_j]
-        <span style="color:#75715e"># 匹配阶段</span>
-        <span style="color:#66d9ef">if</span> j <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">or</span> s[i] <span style="color:#f92672">==</span> p[j]:
-            i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-            j <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
-        <span style="color:#66d9ef">else</span>:
-            j <span style="color:#f92672">=</span> next[j]
-    <span style="color:#66d9ef">if</span> j <span style="color:#f92672">==</span> len(p):
-        <span style="color:#66d9ef">return</span> i <span style="color:#f92672">-</span> j
-    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
-
-<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
-    s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ababababca&#34;</span>
-    p <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abababc&#34;</span>
-    result <span style="color:#f92672">=</span> KMP(s, p)
-    <span style="color:#66d9ef">if</span> result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
-        print(<span style="color:#e6db74">&#34;False&#34;</span>)
-    <span style="color:#66d9ef">else</span>:
-        print(result)
-
-</code></pre></div><h3 id="c语言">C语言</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">KMP</span>(<span style="color:#66d9ef">char</span> s[], <span style="color:#66d9ef">int</span> len_s, <span style="color:#66d9ef">char</span> p[], <span style="color:#66d9ef">int</span> len_p) {
-    <span style="color:#66d9ef">if</span> (len_s <span style="color:#f92672">&lt;</span> len_p)
-        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
-    <span style="color:#75715e">// 创建和初始化部分匹配表
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> next <span style="color:#f92672">=</span> (<span style="color:#66d9ef">int</span><span style="color:#f92672">*</span>)malloc(len_p<span style="color:#f92672">*</span><span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">int</span>));
-    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> len_p; i<span style="color:#f92672">++</span>)
-        next[i] <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
-    <span style="color:#75715e">// 边计算部分匹配表，边匹配
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, p_i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, p_j <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
-    <span style="color:#66d9ef">while</span> (i <span style="color:#f92672">&lt;</span> len_s <span style="color:#f92672">&amp;&amp;</span> j <span style="color:#f92672">&lt;</span> len_p) {
-        <span style="color:#75715e">// 求部分匹配表
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (p_i <span style="color:#f92672">&lt;</span> len_p<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) {
-            <span style="color:#66d9ef">if</span> (p_j <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">||</span> p[p_i] <span style="color:#f92672">==</span> p[p_j]) {
-                p_i<span style="color:#f92672">++</span>;
-                p_j<span style="color:#f92672">++</span>;
-                next[p_i] <span style="color:#f92672">=</span> p_j;
-            }
-            <span style="color:#66d9ef">else</span>
-                p_j <span style="color:#f92672">=</span> next[p_j];
-        }
-        <span style="color:#75715e">// 匹配阶段
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (j <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">||</span> s[i] <span style="color:#f92672">==</span> p[j]) {
-            i<span style="color:#f92672">++</span>;
-            j<span style="color:#f92672">++</span>;
-        }
-        <span style="color:#66d9ef">else</span>
-            j <span style="color:#f92672">=</span> next[j];
-    }
-    free(next);
-    <span style="color:#66d9ef">if</span> (j <span style="color:#f92672">==</span> len_p)
-        <span style="color:#66d9ef">return</span> i <span style="color:#f92672">-</span> j;
-    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
-}
-
-<span style="color:#75715e">#define LEN(S) sizeof(S)-1
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>)
-{
-<span style="color:#75715e">#define S &#34;ababababca&#34;
-</span><span style="color:#75715e">#define P &#34;abababc&#34;
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">char</span> s[<span style="color:#66d9ef">sizeof</span>(S)] <span style="color:#f92672">=</span> S;
-    <span style="color:#66d9ef">char</span> p[<span style="color:#66d9ef">sizeof</span>(P)] <span style="color:#f92672">=</span> P;
-    <span style="color:#66d9ef">int</span> result <span style="color:#f92672">=</span> KMP(s, LEN(s), p, LEN(p));
-    <span style="color:#66d9ef">if</span> (result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
-        printf(<span style="color:#e6db74">&#34;False</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
-    <span style="color:#66d9ef">else</span>
-        printf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, result);
-    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-}
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_next</span>(p):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;求部分匹配表（失配指针）&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>    <span style="color:#75715e"># 指向主串的指针</span>
+</span></span><span style="display:flex;"><span>    j <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>   <span style="color:#75715e"># 指向模式串的指针</span>
+</span></span><span style="display:flex;"><span>    next_val <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">*</span> len(p)    <span style="color:#75715e"># 要返回的next数组</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># next[0]==-1，只需要求后面的len(p)-1个值即可</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> len(p)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">and</span> j <span style="color:#f92672">&lt;</span> len(p)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 匹配成功，相同前缀长度增加1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> j <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">or</span> p[i] <span style="color:#f92672">==</span> p[j]:    
+</span></span><span style="display:flex;"><span>            i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            j <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            next_val[i] <span style="color:#f92672">=</span> j
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 匹配不成功则在前面的子串中继续搜索，直至找不到</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            j <span style="color:#f92672">=</span> next_val[j]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> next_val
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">KMP</span>(s, p):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(s) <span style="color:#f92672">&lt;</span> len(p):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    i, j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 求next数组</span>
+</span></span><span style="display:flex;"><span>    next <span style="color:#f92672">=</span> get_next(p)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 匹配阶段</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> len(s) <span style="color:#f92672">and</span> j <span style="color:#f92672">&lt;</span> len(p):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> j <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">or</span> s[i] <span style="color:#f92672">==</span> p[j]:
+</span></span><span style="display:flex;"><span>            i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            j <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            j <span style="color:#f92672">=</span> next[j]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> j <span style="color:#f92672">==</span> len(p):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> i <span style="color:#f92672">-</span> j
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ababababca&#34;</span>
+</span></span><span style="display:flex;"><span>    p <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abababc&#34;</span>
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> KMP(s, p)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;False&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        print(result)
+</span></span></code></pre></div><p>优化代码：去除<code>get_next()</code>，边匹配边计算部分匹配表</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">KMP</span>(s, p):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(s) <span style="color:#f92672">&lt;</span> len(p):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    i, j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    p_i, p_j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    next <span style="color:#f92672">=</span> [<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>] <span style="color:#f92672">*</span> len(p)
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 边计算部分匹配表，边匹配</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> i <span style="color:#f92672">&lt;</span> len(s) <span style="color:#f92672">and</span> j <span style="color:#f92672">&lt;</span> len(p):
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 求部分匹配表</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> p_i <span style="color:#f92672">&lt;</span> len(p)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> p_j <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">or</span> p[p_i] <span style="color:#f92672">==</span> p[p_j]:
+</span></span><span style="display:flex;"><span>                p_i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                p_j <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>                next[p_i] <span style="color:#f92672">=</span> p_j
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>                p_j <span style="color:#f92672">=</span> next[p_j]
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 匹配阶段</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> j <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">or</span> s[i] <span style="color:#f92672">==</span> p[j]:
+</span></span><span style="display:flex;"><span>            i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>            j <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            j <span style="color:#f92672">=</span> next[j]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> j <span style="color:#f92672">==</span> len(p):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> i <span style="color:#f92672">-</span> j
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ababababca&#34;</span>
+</span></span><span style="display:flex;"><span>    p <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abababc&#34;</span>
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> KMP(s, p)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;False&#34;</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        print(result)
+</span></span></code></pre></div><h3 id="c语言">C语言</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdlib.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">KMP</span>(<span style="color:#66d9ef">char</span> s[], <span style="color:#66d9ef">int</span> len_s, <span style="color:#66d9ef">char</span> p[], <span style="color:#66d9ef">int</span> len_p) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (len_s <span style="color:#f92672">&lt;</span> len_p)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 创建和初始化部分匹配表
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> next <span style="color:#f92672">=</span> (<span style="color:#66d9ef">int</span><span style="color:#f92672">*</span>)malloc(len_p<span style="color:#f92672">*</span><span style="color:#66d9ef">sizeof</span>(<span style="color:#66d9ef">int</span>));
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> len_p; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        next[i] <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 边计算部分匹配表，边匹配
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, p_i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, p_j <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (i <span style="color:#f92672">&lt;</span> len_s <span style="color:#f92672">&amp;&amp;</span> j <span style="color:#f92672">&lt;</span> len_p) {
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 求部分匹配表
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (p_i <span style="color:#f92672">&lt;</span> len_p<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) {
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> (p_j <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">||</span> p[p_i] <span style="color:#f92672">==</span> p[p_j]) {
+</span></span><span style="display:flex;"><span>                p_i<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>                p_j<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>                next[p_i] <span style="color:#f92672">=</span> p_j;
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>                p_j <span style="color:#f92672">=</span> next[p_j];
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 匹配阶段
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (j <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> <span style="color:#f92672">||</span> s[i] <span style="color:#f92672">==</span> p[j]) {
+</span></span><span style="display:flex;"><span>            i<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>            j<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>            j <span style="color:#f92672">=</span> next[j];
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    free(next);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (j <span style="color:#f92672">==</span> len_p)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> i <span style="color:#f92672">-</span> j;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#define LEN(S) sizeof(S)-1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#define S &#34;ababababca&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define P &#34;abababc&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">char</span> s[<span style="color:#66d9ef">sizeof</span>(S)] <span style="color:#f92672">=</span> S;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">char</span> p[<span style="color:#66d9ef">sizeof</span>(P)] <span style="color:#f92672">=</span> P;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> result <span style="color:#f92672">=</span> KMP(s, LEN(s), p, LEN(p));
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;False</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, result);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>
 </section>
 
 

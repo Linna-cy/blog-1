@@ -567,230 +567,230 @@ OK
 <h1 id="spring-data-redis">Spring Data Redis</h1>
 <h2 id="配置">配置</h2>
 <p><code>application.yml</code>：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">spring</span>:
-  <span style="color:#f92672">application</span>:
-    <span style="color:#f92672">name</span>: <span style="color:#ae81ff">springdataredis-demo</span>
-  <span style="color:#75715e"># Redis相关配置</span>
-  <span style="color:#f92672">data</span>:
-    <span style="color:#f92672">redis</span>:
-      <span style="color:#f92672">host</span>: <span style="color:#ae81ff">localhost</span>
-      <span style="color:#f92672">port</span>: <span style="color:#ae81ff">6379</span>
-      <span style="color:#f92672">password</span>: <span style="color:#ae81ff">123456</span>
-      <span style="color:#f92672">database</span>: <span style="color:#ae81ff">0</span>       <span style="color:#75715e"># 操作0号数据库</span>
-      <span style="color:#f92672">jedis</span>:
-        <span style="color:#75715e"># Redis连接池配置</span>
-        <span style="color:#f92672">pool</span>:
-          <span style="color:#f92672">max-active</span>: <span style="color:#ae81ff">8</span> <span style="color:#75715e"># 最大连接数</span>
-          <span style="color:#f92672">max-wait</span>: <span style="color:#ae81ff">1ms</span> <span style="color:#75715e"># 连接池最大阻塞等待时间</span>
-          <span style="color:#f92672">max-idle</span>: <span style="color:#ae81ff">4</span>   <span style="color:#75715e"># 连接池中的最大空闲连接</span>
-          <span style="color:#f92672">min-idle</span>: <span style="color:#ae81ff">0</span>   <span style="color:#75715e"># 连接池中的最小空闲连接</span>
-</code></pre></div><p>配置类（修改默认序列化器，防止因序列化在Redis上产生乱码，但并不妨碍读值。因为读取时会自动反序列化）：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Configuration</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RedisConfig</span> <span style="color:#66d9ef">extends</span> CachingConfigurerSupport <span style="color:#f92672">{</span>
-
-    <span style="color:#a6e22e">@Bean</span>
-    <span style="color:#66d9ef">public</span> RedisTemplate<span style="color:#f92672">&lt;</span>Object<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">redisTemplate</span><span style="color:#f92672">(</span>RedisConnectionFactory connectionFactory<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-
-        RedisTemplate<span style="color:#f92672">&lt;</span>Object<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> redisTemplate <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> RedisTemplate<span style="color:#f92672">&lt;&gt;();</span>
-
-        <span style="color:#75715e">// 默认的Key序列化器为：JdkSerializationRedisSerializer
-</span><span style="color:#75715e"></span>        redisTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">setKeySerializer</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> StringRedisSerializer<span style="color:#f92672">());</span>
-        redisTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">setHashKeySerializer</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> StringRedisSerializer<span style="color:#f92672">());</span>
-
-        redisTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">setConnectionFactory</span><span style="color:#f92672">(</span>connectionFactory<span style="color:#f92672">);</span>
-
-        <span style="color:#66d9ef">return</span> redisTemplate<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-<span style="color:#f92672">}</span>
-</code></pre></div><h2 id="测试">测试</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@SpringBootTest</span>
-<span style="color:#a6e22e">@RunWith</span><span style="color:#f92672">(</span>SpringRunner<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringDataRedisTest</span> <span style="color:#f92672">{</span>
-    <span style="color:#a6e22e">@Autowired</span>
-    <span style="color:#66d9ef">private</span> RedisTemplate redisTemplate<span style="color:#f92672">;</span>
-
-    <span style="color:#75715e">/**
-</span><span style="color:#75715e">     * 操作字符串类型数据
-</span><span style="color:#75715e">     */</span>
-    <span style="color:#a6e22e">@Test</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#75715e">// 获得String类型数据操作对象
-</span><span style="color:#75715e"></span>        ValueOperations valueOperations <span style="color:#f92672">=</span> redisTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">opsForValue</span><span style="color:#f92672">();</span>
-
-        valueOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;city&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;guangzhou&#34;</span><span style="color:#f92672">);</span>
-
-        String city <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span> valueOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;city&#34;</span><span style="color:#f92672">);</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>city<span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// 设置超时
-</span><span style="color:#75715e"></span>        valueOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;key1&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;value1&#34;</span><span style="color:#f92672">,</span> 10L<span style="color:#f92672">,</span> TimeUnit<span style="color:#f92672">.</span><span style="color:#a6e22e">SECONDS</span><span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// 不存在才设置
-</span><span style="color:#75715e"></span>        Boolean setIfAbsent1 <span style="color:#f92672">=</span> valueOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">setIfAbsent</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;city&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;foshang&#34;</span><span style="color:#f92672">);</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>Boolean<span style="color:#f92672">.</span><span style="color:#a6e22e">TRUE</span><span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>setIfAbsent1<span style="color:#f92672">)</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;city设置成功&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;city已存在&#34;</span><span style="color:#f92672">);</span>
-        Boolean setIfAbsent2 <span style="color:#f92672">=</span> valueOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">setIfAbsent</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;city_name&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;foshang&#34;</span><span style="color:#f92672">,</span>
-                                                   10L<span style="color:#f92672">,</span> TimeUnit<span style="color:#f92672">.</span><span style="color:#a6e22e">SECONDS</span><span style="color:#f92672">);</span>
-        Object cityName <span style="color:#f92672">=</span> valueOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;city_name&#34;</span><span style="color:#f92672">);</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>setIfAbsent2 <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;city_name设置成功:&#34;</span> <span style="color:#f92672">+</span> cityName
-                                        <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;city_name已存在&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#75715e">/**
-</span><span style="color:#75715e">     * 操作哈希类型数据
-</span><span style="color:#75715e">     */</span>
-    <span style="color:#a6e22e">@Test</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testHash</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        HashOperations hashOperations <span style="color:#f92672">=</span> redisTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">opsForHash</span><span style="color:#f92672">();</span>
-
-        String id <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;002&#34;</span><span style="color:#f92672">;</span>
-        <span style="color:#75715e">// 存值
-</span><span style="color:#75715e"></span>        hashOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>id<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;xiaoming&#34;</span><span style="color:#f92672">);</span>
-        hashOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>id<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;age&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;20&#34;</span><span style="color:#f92672">);</span>
-        hashOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>id<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;address&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;guangzhou&#34;</span><span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// 取值
-</span><span style="color:#75715e"></span>        String name <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span> hashOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>id<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">);</span>
-        String age <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span> hashOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>id<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;age&#34;</span><span style="color:#f92672">);</span>
-        String address <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span> hashOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>id<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;address&#34;</span><span style="color:#f92672">);</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;name:&#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;,age:&#34;</span> <span style="color:#f92672">+</span> age <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;,address:&#34;</span> <span style="color:#f92672">+</span> address<span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// 获取hash结构中的所有字段
-</span><span style="color:#75715e"></span>        Set keys <span style="color:#f92672">=</span> hashOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">keys</span><span style="color:#f92672">(</span>id<span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Object key <span style="color:#f92672">:</span> keys<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>key<span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span>
-
-        <span style="color:#75715e">// 删除
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">//hashOperations.delete(keys, &#34;address&#34;, &#34;age&#34;);
-</span><span style="color:#75715e"></span>
-        <span style="color:#75715e">// 获得hash结构中的所有值
-</span><span style="color:#75715e"></span>        List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> values <span style="color:#f92672">=</span> hashOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">values</span><span style="color:#f92672">(</span>id<span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>String value <span style="color:#f92672">:</span> values<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#75715e">/**
-</span><span style="color:#75715e">     * 操作列表类型数据
-</span><span style="color:#75715e">     */</span>
-    <span style="color:#a6e22e">@Test</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testList</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        ListOperations listOperations <span style="color:#f92672">=</span> redisTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">opsForList</span><span style="color:#f92672">();</span>
-
-        String key <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;mylist&#34;</span><span style="color:#f92672">;</span>
-        <span style="color:#75715e">// 存储
-</span><span style="color:#75715e"></span>        listOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">leftPush</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">);</span>
-        listOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">leftPushAll</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;d&#34;</span><span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// 取值
-</span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printf</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;入队：&#34;</span><span style="color:#f92672">);</span>
-        List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> myList <span style="color:#f92672">=</span> listOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">range</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>String s <span style="color:#f92672">:</span> myList<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printf</span><span style="color:#f92672">(</span>s <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">();</span>
-
-        <span style="color:#75715e">// 获得列表长度 llen
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> size <span style="color:#f92672">=</span> listOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">(</span>key<span style="color:#f92672">).</span><span style="color:#a6e22e">intValue</span><span style="color:#f92672">();</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printf</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;出队：&#34;</span><span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> size<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
-            <span style="color:#75715e">// 出队列
-</span><span style="color:#75715e"></span>            String element <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span> listOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">rightPop</span><span style="color:#f92672">(</span>key<span style="color:#f92672">);</span>
-            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printf</span><span style="color:#f92672">(</span>element <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">();</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#75715e">/**
-</span><span style="color:#75715e">     * 操作集合类型数据
-</span><span style="color:#75715e">     */</span>
-    <span style="color:#a6e22e">@Test</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testSet</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        SetOperations setOperations <span style="color:#f92672">=</span> redisTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">opsForSet</span><span style="color:#f92672">();</span>
-
-        String key <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;myset&#34;</span><span style="color:#f92672">;</span>
-        <span style="color:#75715e">// 存值
-</span><span style="color:#75715e"></span>        setOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;d&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// 取值
-</span><span style="color:#75715e"></span>        Set<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> myset <span style="color:#f92672">=</span> setOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">members</span><span style="color:#f92672">(</span>key<span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>String s <span style="color:#f92672">:</span> myset<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printf</span><span style="color:#f92672">(</span>s <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">();</span>
-
-        <span style="color:#75715e">// 删除成员
-</span><span style="color:#75715e"></span>        setOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// 取值
-</span><span style="color:#75715e"></span>        myset <span style="color:#f92672">=</span> setOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">members</span><span style="color:#f92672">(</span>key<span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>String s <span style="color:#f92672">:</span> myset<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printf</span><span style="color:#f92672">(</span>s <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">();</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#75715e">/**
-</span><span style="color:#75715e">     * 操作有序集合类型数据
-</span><span style="color:#75715e">     */</span>
-    <span style="color:#a6e22e">@Test</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testZset</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        ZSetOperations zSetOperations <span style="color:#f92672">=</span> redisTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">opsForZSet</span><span style="color:#f92672">();</span>
-
-        String key <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;myZset&#34;</span><span style="color:#f92672">;</span>
-        <span style="color:#75715e">// 存储
-</span><span style="color:#75715e"></span>        zSetOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> 10<span style="color:#f92672">.);</span>
-        zSetOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">,</span> 11<span style="color:#f92672">.);</span>
-        zSetOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">,</span> 12<span style="color:#f92672">.);</span>
-        zSetOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;d&#34;</span><span style="color:#f92672">,</span> 13<span style="color:#f92672">.);</span>
-        zSetOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> 14<span style="color:#f92672">.);</span>
-
-        <span style="color:#75715e">// 取值
-</span><span style="color:#75715e"></span>        Set<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> range <span style="color:#f92672">=</span> zSetOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">range</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>String s <span style="color:#f92672">:</span> range<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printf</span><span style="color:#f92672">(</span>s <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">();</span>
-
-        <span style="color:#75715e">// 修改分数
-</span><span style="color:#75715e"></span>        zSetOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">incrementScore</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">,</span> 20<span style="color:#f92672">.);</span>
-
-        <span style="color:#75715e">// 删除成员
-</span><span style="color:#75715e"></span>        zSetOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// 取值
-</span><span style="color:#75715e"></span>        range <span style="color:#f92672">=</span> zSetOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">range</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>String s <span style="color:#f92672">:</span> range<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printf</span><span style="color:#f92672">(</span>s <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">();</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#75715e">/**
-</span><span style="color:#75715e">     * 通用操作
-</span><span style="color:#75715e">     */</span>
-    <span style="color:#a6e22e">@Test</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testCommon</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#75715e">// 获取Redis中所有key
-</span><span style="color:#75715e"></span>        Set<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> keys <span style="color:#f92672">=</span> redisTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">keys</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;*&#34;</span><span style="color:#f92672">);</span>
-        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>String key <span style="color:#f92672">:</span> keys<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>key<span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span>
-
-        <span style="color:#75715e">// 判断m某个key是否存在
-</span><span style="color:#75715e"></span>        Boolean hasKey <span style="color:#f92672">=</span> redisTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">hasKey</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;linner&#34;</span><span style="color:#f92672">);</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>hasKey <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;linner存在&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;linner不存在&#34;</span><span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// 删除指定key
-</span><span style="color:#75715e"></span>        redisTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">delete</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;myZset&#34;</span><span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// 获取指定key对应的value的数据类型
-</span><span style="color:#75715e"></span>        DataType dataType <span style="color:#f92672">=</span> redisTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">type</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;myset&#34;</span><span style="color:#f92672">);</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>dataType<span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">());</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">spring</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">application</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">name</span>: <span style="color:#ae81ff">springdataredis-demo</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Redis相关配置</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">data</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">redis</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">host</span>: <span style="color:#ae81ff">localhost</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">port</span>: <span style="color:#ae81ff">6379</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">password</span>: <span style="color:#ae81ff">123456</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">database</span>: <span style="color:#ae81ff">0</span>       <span style="color:#75715e"># 操作0号数据库</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">jedis</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Redis连接池配置</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">pool</span>:
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">max-active</span>: <span style="color:#ae81ff">8</span> <span style="color:#75715e"># 最大连接数</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">max-wait</span>: <span style="color:#ae81ff">1ms</span> <span style="color:#75715e"># 连接池最大阻塞等待时间</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">max-idle</span>: <span style="color:#ae81ff">4</span>   <span style="color:#75715e"># 连接池中的最大空闲连接</span>
+</span></span><span style="display:flex;"><span>          <span style="color:#f92672">min-idle</span>: <span style="color:#ae81ff">0</span>   <span style="color:#75715e"># 连接池中的最小空闲连接</span>
+</span></span></code></pre></div><p>配置类（修改默认序列化器，防止因序列化在Redis上产生乱码，但并不妨碍读值。因为读取时会自动反序列化）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Configuration</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">RedisConfig</span> <span style="color:#66d9ef">extends</span> CachingConfigurerSupport <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Bean</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> RedisTemplate<span style="color:#f92672">&lt;</span>Object<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">redisTemplate</span><span style="color:#f92672">(</span>RedisConnectionFactory connectionFactory<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        RedisTemplate<span style="color:#f92672">&lt;</span>Object<span style="color:#f92672">,</span> Object<span style="color:#f92672">&gt;</span> redisTemplate <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> RedisTemplate<span style="color:#f92672">&lt;&gt;();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 默认的Key序列化器为：JdkSerializationRedisSerializer
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        redisTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">setKeySerializer</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> StringRedisSerializer<span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>        redisTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">setHashKeySerializer</span><span style="color:#f92672">(</span><span style="color:#66d9ef">new</span> StringRedisSerializer<span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        redisTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">setConnectionFactory</span><span style="color:#f92672">(</span>connectionFactory<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> redisTemplate<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><h2 id="测试">测试</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@SpringBootTest</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@RunWith</span><span style="color:#f92672">(</span>SpringRunner<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringDataRedisTest</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Autowired</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> RedisTemplate redisTemplate<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * 操作字符串类型数据
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Test</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 获得String类型数据操作对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        ValueOperations valueOperations <span style="color:#f92672">=</span> redisTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">opsForValue</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        valueOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;city&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;guangzhou&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        String city <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span> valueOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;city&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>city<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 设置超时
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        valueOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">set</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;key1&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;value1&#34;</span><span style="color:#f92672">,</span> 10L<span style="color:#f92672">,</span> TimeUnit<span style="color:#f92672">.</span><span style="color:#a6e22e">SECONDS</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 不存在才设置
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        Boolean setIfAbsent1 <span style="color:#f92672">=</span> valueOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">setIfAbsent</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;city&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;foshang&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>Boolean<span style="color:#f92672">.</span><span style="color:#a6e22e">TRUE</span><span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>setIfAbsent1<span style="color:#f92672">)</span> <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;city设置成功&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;city已存在&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        Boolean setIfAbsent2 <span style="color:#f92672">=</span> valueOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">setIfAbsent</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;city_name&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;foshang&#34;</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>                                                   10L<span style="color:#f92672">,</span> TimeUnit<span style="color:#f92672">.</span><span style="color:#a6e22e">SECONDS</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        Object cityName <span style="color:#f92672">=</span> valueOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;city_name&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>setIfAbsent2 <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;city_name设置成功:&#34;</span> <span style="color:#f92672">+</span> cityName
+</span></span><span style="display:flex;"><span>                                        <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;city_name已存在&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * 操作哈希类型数据
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Test</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testHash</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        HashOperations hashOperations <span style="color:#f92672">=</span> redisTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">opsForHash</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        String id <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;002&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 存值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        hashOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>id<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;xiaoming&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        hashOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>id<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;age&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;20&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        hashOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span>id<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;address&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;guangzhou&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 取值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        String name <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span> hashOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>id<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        String age <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span> hashOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>id<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;age&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        String address <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span> hashOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">get</span><span style="color:#f92672">(</span>id<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;address&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;name:&#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;,age:&#34;</span> <span style="color:#f92672">+</span> age <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;,address:&#34;</span> <span style="color:#f92672">+</span> address<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 获取hash结构中的所有字段
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        Set keys <span style="color:#f92672">=</span> hashOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">keys</span><span style="color:#f92672">(</span>id<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Object key <span style="color:#f92672">:</span> keys<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>key<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 删除
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//hashOperations.delete(keys, &#34;address&#34;, &#34;age&#34;);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 获得hash结构中的所有值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> values <span style="color:#f92672">=</span> hashOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">values</span><span style="color:#f92672">(</span>id<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>String value <span style="color:#f92672">:</span> values<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>value<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * 操作列表类型数据
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Test</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testList</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        ListOperations listOperations <span style="color:#f92672">=</span> redisTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">opsForList</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        String key <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;mylist&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 存储
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        listOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">leftPush</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        listOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">leftPushAll</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;d&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 取值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printf</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;入队：&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        List<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> myList <span style="color:#f92672">=</span> listOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">range</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>String s <span style="color:#f92672">:</span> myList<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printf</span><span style="color:#f92672">(</span>s <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 获得列表长度 llen
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> size <span style="color:#f92672">=</span> listOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">size</span><span style="color:#f92672">(</span>key<span style="color:#f92672">).</span><span style="color:#a6e22e">intValue</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printf</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;出队：&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> size<span style="color:#f92672">;</span> i<span style="color:#f92672">++)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// 出队列
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            String element <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>String<span style="color:#f92672">)</span> listOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">rightPop</span><span style="color:#f92672">(</span>key<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printf</span><span style="color:#f92672">(</span>element <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * 操作集合类型数据
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Test</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testSet</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        SetOperations setOperations <span style="color:#f92672">=</span> redisTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">opsForSet</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        String key <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;myset&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 存值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        setOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;d&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 取值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        Set<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> myset <span style="color:#f92672">=</span> setOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">members</span><span style="color:#f92672">(</span>key<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>String s <span style="color:#f92672">:</span> myset<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printf</span><span style="color:#f92672">(</span>s <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 删除成员
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        setOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 取值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        myset <span style="color:#f92672">=</span> setOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">members</span><span style="color:#f92672">(</span>key<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>String s <span style="color:#f92672">:</span> myset<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printf</span><span style="color:#f92672">(</span>s <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * 操作有序集合类型数据
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Test</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testZset</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        ZSetOperations zSetOperations <span style="color:#f92672">=</span> redisTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">opsForZSet</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        String key <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;myZset&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 存储
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        zSetOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> 10<span style="color:#f92672">.);</span>
+</span></span><span style="display:flex;"><span>        zSetOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">,</span> 11<span style="color:#f92672">.);</span>
+</span></span><span style="display:flex;"><span>        zSetOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">,</span> 12<span style="color:#f92672">.);</span>
+</span></span><span style="display:flex;"><span>        zSetOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;d&#34;</span><span style="color:#f92672">,</span> 13<span style="color:#f92672">.);</span>
+</span></span><span style="display:flex;"><span>        zSetOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> 14<span style="color:#f92672">.);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 取值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        Set<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> range <span style="color:#f92672">=</span> zSetOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">range</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>String s <span style="color:#f92672">:</span> range<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printf</span><span style="color:#f92672">(</span>s <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 修改分数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        zSetOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">incrementScore</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;b&#34;</span><span style="color:#f92672">,</span> 20<span style="color:#f92672">.);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 删除成员
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        zSetOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">remove</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;c&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 取值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        range <span style="color:#f92672">=</span> zSetOperations<span style="color:#f92672">.</span><span style="color:#a6e22e">range</span><span style="color:#f92672">(</span>key<span style="color:#f92672">,</span> 0<span style="color:#f92672">,</span> <span style="color:#f92672">-</span>1<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>String s <span style="color:#f92672">:</span> range<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">printf</span><span style="color:#f92672">(</span>s <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; &#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * 通用操作
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Test</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testCommon</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 获取Redis中所有key
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        Set<span style="color:#f92672">&lt;</span>String<span style="color:#f92672">&gt;</span> keys <span style="color:#f92672">=</span> redisTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">keys</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;*&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>String key <span style="color:#f92672">:</span> keys<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>key<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 判断m某个key是否存在
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        Boolean hasKey <span style="color:#f92672">=</span> redisTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">hasKey</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;linner&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>hasKey <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;linner存在&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;linner不存在&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 删除指定key
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        redisTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">delete</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;myZset&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 获取指定key对应的value的数据类型
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        DataType dataType <span style="color:#f92672">=</span> redisTemplate<span style="color:#f92672">.</span><span style="color:#a6e22e">type</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;myset&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>dataType<span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">());</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div>
 </section>
 
 

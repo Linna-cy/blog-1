@@ -468,18 +468,18 @@ $$&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;建立数据库：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DATABASE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;数据库名&lt;/span&gt;;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DATABASE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;数据库名&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;建立基本表：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; tab_name
-(
-    &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt;    &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;数据类型&lt;/span&gt; [&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列级完整性约束条件&lt;/span&gt;],
-    ...
-    &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表级完整性约束条件&lt;/span&gt;,
-    ...
-);
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;完整性约束有3种子句：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; tab_name
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt;    &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;数据类型&lt;/span&gt; [&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列级完整性约束条件&lt;/span&gt;],
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表级完整性约束条件&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;完整性约束有3种子句：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;PRIMARY KEY&lt;/code&gt;：主键约束；&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;CHECK&lt;/code&gt;：检查约束；&lt;/li&gt;
@@ -502,52 +502,52 @@ $$&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;增加新列：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表名&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ADD&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;类型&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表名&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ADD&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;类型&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;修改列的定义：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表名&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;COLUMN&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;新类型&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表名&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;COLUMN&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;新类型&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;删除列：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表名&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DROP&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;COLUMN&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表名&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DROP&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;COLUMN&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;code&gt;DROP TABLE&lt;/code&gt;——删除基本表：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;DROP&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表名&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;数据操纵语言dml&#34;&gt;数据操纵语言（DML）&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;DROP&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表名&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;数据操纵语言dml&#34;&gt;数据操纵语言（DML）&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;INSERT INTO&lt;/code&gt;——插入：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;直接插入元组值：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;INTO&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表名（列名序列）&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;元组值&lt;/span&gt;)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;或者：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;INTO&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表名&lt;/span&gt; (&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;序列&lt;/span&gt;) (&lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; (&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;元组值&lt;/span&gt;), (&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;元组值&lt;/span&gt;), ...)
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;INTO&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表名（列名序列）&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;VALUES&lt;/span&gt; (&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;元组值&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;或者：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;INTO&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表名&lt;/span&gt; (&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;序列&lt;/span&gt;) (&lt;span style=&#34;color:#66d9ef&#34;&gt;TABLE&lt;/span&gt; (&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;元组值&lt;/span&gt;), (&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;元组值&lt;/span&gt;), ...)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;插入一个查询的结果值：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;INTO&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表名&lt;/span&gt; (&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名序列&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;查询语句&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;INSERT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;INTO&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表名&lt;/span&gt; (&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名序列&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;查询语句&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;code&gt;DELETE FROM&lt;/code&gt;——删除：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;DELETE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表名&lt;/span&gt; [&lt;span style=&#34;color:#66d9ef&#34;&gt;WHERE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;条件表达式&lt;/span&gt;]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;UPDATE&lt;/code&gt;——修改：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;UPDATE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表名&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;SET&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;值表达式&lt;/span&gt;[, &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;值表达式&lt;/span&gt;...]
-[WHERE条件表达式]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;数据查询语言dql&#34;&gt;数据查询语言（DQL）&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;DELETE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表名&lt;/span&gt; [&lt;span style=&#34;color:#66d9ef&#34;&gt;WHERE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;条件表达式&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;code&gt;UPDATE&lt;/code&gt;——修改：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;UPDATE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;表名&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SET&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;值表达式&lt;/span&gt;[, &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;值表达式&lt;/span&gt;...]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[WHERE条件表达式]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;数据查询语言dql&#34;&gt;数据查询语言（DQL）&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;SELECT&lt;/code&gt;——查询：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;目标表的列名或列表达式序列&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;关系名表序列&lt;/span&gt;
-[&lt;span style=&#34;color:#66d9ef&#34;&gt;WHERE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;行条件表达式&lt;/span&gt;]
-[&lt;span style=&#34;color:#66d9ef&#34;&gt;GROUP&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;BY&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名序列&lt;/span&gt;
-[&lt;span style=&#34;color:#66d9ef&#34;&gt;HAVING&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;组条件表达式&lt;/span&gt;]]
-[&lt;span style=&#34;color:#66d9ef&#34;&gt;ORDER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;BY&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt;[&lt;span style=&#34;color:#66d9ef&#34;&gt;ASC&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;DESC&lt;/span&gt;]...]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;where-条件查询&#34;&gt;WHERE 条件查询&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;目标表的列名或列表达式序列&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;关系名表序列&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;WHERE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;行条件表达式&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;运算符：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;目标表的列名或列表达式序列&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;关系名表序列&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#66d9ef&#34;&gt;WHERE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;行条件表达式&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#66d9ef&#34;&gt;GROUP&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;BY&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名序列&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#66d9ef&#34;&gt;HAVING&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;组条件表达式&lt;/span&gt;]]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#66d9ef&#34;&gt;ORDER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;BY&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt;[&lt;span style=&#34;color:#66d9ef&#34;&gt;ASC&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;DESC&lt;/span&gt;]...]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;where-条件查询&#34;&gt;WHERE 条件查询&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;目标表的列名或列表达式序列&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;关系名表序列&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;WHERE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;行条件表达式&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;运算符：&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -615,10 +615,10 @@ $$&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;&lt;code&gt;LIKE&lt;/code&gt;字符模糊配对包含以下通配符：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;目标表的列名或列表达式序列&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;关系名表序列&lt;/span&gt;
-WHRER &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;LIKE&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;_ABC%&amp;#39;&lt;/span&gt;;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;目标表的列名或列表达式序列&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;关系名表序列&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;WHRER &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;LIKE&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;_ABC%&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;%&lt;/code&gt;：表示任何字符出现任意次数。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;_&lt;/code&gt;：表示匹配单个任意字符。&lt;/li&gt;
 &lt;/ul&gt;
@@ -642,19 +642,19 @@ WHRER &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;目标表的列名或列表达式序列&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;关系名表序列&lt;/span&gt;
-[...]
-[&lt;span style=&#34;color:#66d9ef&#34;&gt;ORDER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;BY&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt; [&lt;span style=&#34;color:#66d9ef&#34;&gt;ASC&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;DESC&lt;/span&gt;] ...]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;目标表的列名或列表达式序列&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;关系名表序列&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[...]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#66d9ef&#34;&gt;ORDER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;BY&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&lt;/span&gt; [&lt;span style=&#34;color:#66d9ef&#34;&gt;ASC&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;DESC&lt;/span&gt;] ...]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;ORDER BY子句必须是SELECT命令中的最后一个子句。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;group-by-分组数据&#34;&gt;GROUP BY 分组数据&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;目标表的列名或列表达式序列&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;关系名表序列&lt;/span&gt;
-[&lt;span style=&#34;color:#66d9ef&#34;&gt;GROUP&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;BY&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名序列&lt;/span&gt;
-[&lt;span style=&#34;color:#66d9ef&#34;&gt;HAVING&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;组条件表达式&lt;/span&gt;]]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;目标表的列名或列表达式序列&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;关系名表序列&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#66d9ef&#34;&gt;GROUP&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;BY&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名序列&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#66d9ef&#34;&gt;HAVING&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;组条件表达式&lt;/span&gt;]]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;HAVING&lt;/code&gt;是&lt;code&gt;GROUP BY&lt;/code&gt;的分组条件控制语句。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;HAVING&lt;/code&gt;的操作符和&lt;code&gt;WHERE&lt;/code&gt;相同。&lt;/li&gt;
 &lt;li&gt;被&lt;code&gt;WHERE&lt;/code&gt;过滤掉的记录并不会出现在分组中。&lt;/li&gt;
@@ -669,15 +669,14 @@ WHRER &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&
 &lt;code&gt;SUM&lt;/code&gt;|计算指定表达式中的数值总和
 &lt;code&gt;STDEV&lt;/code&gt;|计算指定表达式中所有数据的标准差
 &lt;code&gt;STDEVP&lt;/code&gt;|计算总体标准差&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;目标表的列名或列表达式序列&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;关系名表序列&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;WHERE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;使用了聚合函数的条件判断&lt;/span&gt;
-[ ... ]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;或：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;聚合函数&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;关系名表序列&lt;/span&gt;
-
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;目标表的列名或列表达式序列&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;关系名表序列&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;WHERE&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;使用了聚合函数的条件判断&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[ ... ]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;或：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;聚合函数&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;关系名表序列&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;聚合函数可以使用算数运算符。&lt;/p&gt;
 &lt;p&gt;聚合函数常与&lt;code&gt;GROUP BY&lt;/code&gt;子句一起使用。&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -705,11 +704,11 @@ WHRER &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&
 &lt;h2 id=&#34;数据控制语言dcl&#34;&gt;数据控制语言（DCL）&lt;/h2&gt;
 &lt;p&gt;数据控制控制的是&lt;strong&gt;用户对数据的存储访问权力&lt;/strong&gt;，是由DBA决定的。但是，某个用户对某类数据具有何种权利，是个&lt;strong&gt;政策问题&lt;/strong&gt;而不是技术问题。&lt;/p&gt;
 &lt;p&gt;授权语句格式（&lt;code&gt;GRANT&lt;/code&gt;）：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;GRANT&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;权限&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;[, &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;权限&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;] ...
-[&lt;span style=&#34;color:#66d9ef&#34;&gt;ON&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;对象类型&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;对象名&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;]
-&lt;span style=&#34;color:#66d9ef&#34;&gt;TO&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;用户&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;[, &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;用户&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;]...
-[&lt;span style=&#34;color:#66d9ef&#34;&gt;WITH&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;GRANT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;OPTION&lt;/span&gt;];
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;不同类型的操作对象有不同的操作权限，常见的操作权限如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;GRANT&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;权限&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;[, &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;权限&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;] ...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#66d9ef&#34;&gt;ON&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;对象类型&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;对象名&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;TO&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;用户&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;[, &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;用户&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;]...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#66d9ef&#34;&gt;WITH&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;GRANT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;OPTION&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;不同类型的操作对象有不同的操作权限，常见的操作权限如下：&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -746,24 +745,24 @@ WHRER &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&
 &lt;li&gt;&lt;code&gt;WITH GRANT OPTION&lt;/code&gt;：表示获得了这些权限的用户还可以将权限赋给其他用户。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;收回权限语句格式（&lt;code&gt;REVOKE&lt;/code&gt;）：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;REVOKE&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;权限&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;[, &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;权限&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;]...
-[&lt;span style=&#34;color:#66d9ef&#34;&gt;ON&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;对象类型&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;对象名&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;]
-&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;用户&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;[, &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;用户&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;];
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;视图&#34;&gt;视图&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;REVOKE&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;权限&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;[, &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;权限&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;]...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#66d9ef&#34;&gt;ON&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;对象类型&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;对象名&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;用户&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;[, &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;用户&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;视图&#34;&gt;视图&lt;/h2&gt;
 &lt;p&gt;视图是从一个或者多个基本表或视图中导出的虚拟表。&lt;/p&gt;
 &lt;p&gt;创建视图：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;VIEW&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;视图名&lt;/span&gt; (&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列表名&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;AS&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;查询子句&lt;/span&gt;
-[&lt;span style=&#34;color:#66d9ef&#34;&gt;WITH&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;CHECK&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;OPTION&lt;/span&gt;];
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;VIEW&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;视图名&lt;/span&gt; (&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列表名&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;AS&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;SELECT&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;查询子句&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#66d9ef&#34;&gt;WITH&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;CHECK&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;OPTION&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;子查询可以是任意复杂的&lt;code&gt;SELECT&lt;/code&gt;语句，但通常不允许含有&lt;code&gt;ORDER BY&lt;/code&gt;子句和&lt;code&gt;DISTINCT&lt;/code&gt;短语。&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;WITH CHECK OPTION&lt;/code&gt;：表示对&lt;code&gt;UPDATE&lt;/code&gt;、&lt;code&gt;INSERT&lt;/code&gt;、&lt;code&gt;DELETE&lt;/code&gt;操作时保证更新、插入或删除的行满足视图定义中的谓词条件（即子查询中的条件表达式）。&lt;/li&gt;
 &lt;li&gt;组成视图的属性列名或者全部省略或者全部指定。如果省略属性列名，则隐含该视图由&lt;code&gt;SELECT&lt;/code&gt;子查询目标列的主属性组成。&lt;/li&gt;
 &lt;li&gt;对视图进行的增改操作实际上是对基本表进行操作。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;删除视图：&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;DROP&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;VIEW&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;视图名&lt;/span&gt;;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;索引&#34;&gt;索引&lt;/h2&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;DROP&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;VIEW&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;视图名&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;索引&#34;&gt;索引&lt;/h2&gt;
 &lt;p&gt;数据库中的索引是&lt;u&gt;某个表中一列或者若干列值的集合&lt;/u&gt;和&lt;u&gt;相应的指向表中物理标识这些值的数据页的逻辑指针清单&lt;/u&gt;。&lt;/p&gt;
 &lt;p&gt;索引分为：&lt;/p&gt;
 &lt;ul&gt;
@@ -809,7 +808,7 @@ WHRER &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&
 &lt;p&gt;例如，$学号 \subset (学号,课程号)$，则$(学号,课程号) \rightarrow 学号$是一个平凡的函数依赖。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;完全函数依赖&lt;/strong&gt;：在R(U)中，如果$X \rightarrow Y$，并且对于X的任何一个真子集$X&#39;$都有**$X&#39;$不能决定$Y$**，则称$Y$对$X$完全函数依赖，记作$X \stackrel{f}{\longrightarrow} Y$。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;完全函数依赖&lt;/strong&gt;：在R(U)中，如果$X \rightarrow Y$，并且对于X的任何一个真子集$X&amp;rsquo;$都有**$X&amp;rsquo;$不能决定$Y$**，则称$Y$对$X$完全函数依赖，记作$X \stackrel{f}{\longrightarrow} Y$。&lt;/p&gt;
 &lt;p&gt;即需要由$X$的所有属性才能决定$Y$的，才能称为完全函数依赖。&lt;/p&gt;
 &lt;p&gt;如，$(学号,课程号) \rightarrow 成绩$。&lt;/p&gt;
 &lt;p&gt;如果$X$仅包含一个属性，那么此时必为完全函数依赖。&lt;/p&gt;
@@ -823,7 +822,7 @@ WHRER &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&
 &lt;p&gt;即$X \stackrel{f}{\longrightarrow} Y$，且$Y \rightarrow Z$，则$X \rightarrow Z$。&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
-&lt;p&gt;&lt;strong&gt;码&lt;/strong&gt;：设$K$为$R(U,F)$中属性的组合，若$K \rightarrow U$，且对于$K$的任何一个真子集$K&#39;$都有$K&#39;$不能决定$U$，则$K$为$R$的候选码。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;码&lt;/strong&gt;：设$K$为$R(U,F)$中属性的组合，若$K \rightarrow U$，且对于$K$的任何一个真子集$K&amp;rsquo;$都有$K&amp;rsquo;$不能决定$U$，则$K$为$R$的候选码。&lt;/p&gt;
 &lt;p&gt;即$K \stackrel{f}{\rightarrow} U$，那么K是R的候选码。&lt;/p&gt;
 &lt;p&gt;若有多个候选码，则选一个作为主码（主键，主关键字）。候选码通常也称为&lt;strong&gt;候选关键字&lt;/strong&gt;（候选键，键）。&lt;/p&gt;
 &lt;/li&gt;
@@ -885,7 +884,7 @@ WHRER &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;列名&
 &lt;/tr&gt;
 &lt;tr&gt;
 &lt;td style=&#34;text-align:center&#34;&gt;完全函数依赖&lt;/td&gt;
-&lt;td style=&#34;text-align:left&#34;&gt;$X \rightarrow Y$，$X&#39; \subset X$，$X&#39; \not\rightarrow Y$&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;$X \rightarrow Y$，$X&amp;rsquo; \subset X$，$X&amp;rsquo; \not\rightarrow Y$&lt;/td&gt;
 &lt;td style=&#34;text-align:left&#34;&gt;$Y$对$X$完全函数依赖，记作$X \stackrel{f}{\longrightarrow} Y$&lt;/td&gt;
 &lt;/tr&gt;
 &lt;tr&gt;

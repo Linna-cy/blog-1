@@ -342,11 +342,11 @@
     
     
     <p>创建<code>.ssh</code>目录并生成公钥:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh-keygen -t rsa
-</code></pre></div><p>所有选项全部回车, 使用默认选项即可.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -t rsa
+</span></span></code></pre></div><p>所有选项全部回车, 使用默认选项即可.</p>
 <p>然后切换到用户目录下的<code>.ssh</code>目录:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cd ~/.ssh
-</code></pre></div><p>该目录下默认有三个文件:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd ~/.ssh
+</span></span></code></pre></div><p>该目录下默认有三个文件:</p>
 <ul>
 <li><code>id_rsa</code>: 用户私钥, 不要复制发送给任何人.</li>
 <li><code>id_rsa.pub</code>: 公钥, 将里面内容发送给客户端.</li>
@@ -354,8 +354,8 @@
 </ul>
 <p>只需要将<code>id_rsa.pub</code>里的内容以 (<code>ssh-rsa</code>开头的一行内容) 复制到客户端的<code>authorized_keys</code>的目录下即可.</p>
 <p>接着在客户端使用:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ssh username@ip -p port
-</code></pre></div><p>即可连接到服务器.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh username@ip -p port
+</span></span></code></pre></div><p>即可连接到服务器.</p>
 
 </section>
 

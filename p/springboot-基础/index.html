@@ -447,43 +447,43 @@
 </blockquote>
 <h2 id="项目依赖">项目依赖</h2>
 <p>在项目中的<code>pom.xml</code>中有如下代码：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;parent&gt;</span>
-    <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-parent<span style="color:#f92672">&lt;/artifactId&gt;</span>
-    <span style="color:#f92672">&lt;version&gt;</span>2.4.5<span style="color:#f92672">&lt;/version&gt;</span>
-    <span style="color:#75715e">&lt;!-- 这里的版本被修改过，按照上方创建的工程版本应该是 3.0.3 --&gt;</span>
-    <span style="color:#f92672">&lt;relativePath/&gt;</span> <span style="color:#75715e">&lt;!-- lookup parent from repository --&gt;</span>
-<span style="color:#f92672">&lt;/parent&gt;</span>
-</code></pre></div><p>该代码指定了一个父工程，父工程中的东西在该工程中可以继承过来使用。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;parent&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-parent<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;version&gt;</span>2.4.5<span style="color:#f92672">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- 这里的版本被修改过，按照上方创建的工程版本应该是 3.0.3 --&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;relativePath/&gt;</span> <span style="color:#75715e">&lt;!-- lookup parent from repository --&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/parent&gt;</span>
+</span></span></code></pre></div><p>该代码指定了一个父工程，父工程中的东西在该工程中可以继承过来使用。</p>
 <p>并且使用Spring Initializr创建的项目会自动在<code>pom.xml</code>中导入所需的起步依赖（包含<code>starter</code>的依赖）。</p>
 <p>在<code>pom.xml</code>中还有如下起步依赖：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependencies&gt;</span>
-
-    <span style="color:#75715e">&lt;!-- Springboot Web 开发所需的起步依赖 --&gt;</span>
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-        <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-        <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-web<span style="color:#f92672">&lt;/artifactId&gt;</span>
-    <span style="color:#f92672">&lt;/dependency&gt;</span>
-
-    <span style="color:#75715e">&lt;!-- Springboot 整合Junit的起步依赖 --&gt;</span>
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-        <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-        <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-test<span style="color:#f92672">&lt;/artifactId&gt;</span>
-        <span style="color:#f92672">&lt;scope&gt;</span>test<span style="color:#f92672">&lt;/scope&gt;</span>
-    <span style="color:#f92672">&lt;/dependency&gt;</span>
-
-<span style="color:#f92672">&lt;/dependencies&gt;</span>
-</code></pre></div><h2 id="引导类">引导类</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;dependencies&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- Springboot Web 开发所需的起步依赖 --&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-web<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- Springboot 整合Junit的起步依赖 --&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-test<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;scope&gt;</span>test<span style="color:#f92672">&lt;/scope&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependencies&gt;</span>
+</span></span></code></pre></div><h2 id="引导类">引导类</h2>
 <p>创建的每个SpringBoot项目都包含一个引导类，如：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@SpringBootApplication</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringbootDemoApplication</span> <span style="color:#f92672">{</span>
-
-	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-		SpringApplication<span style="color:#f92672">.</span><span style="color:#a6e22e">run</span><span style="color:#f92672">(</span>SpringbootDemoApplication<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">,</span> args<span style="color:#f92672">);</span>
-	<span style="color:#f92672">}</span>
-
-<span style="color:#f92672">}</span>
-</code></pre></div><p>引导类是项目的入口，运行<code>main()</code>就可以启动项目。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@SpringBootApplication</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringbootDemoApplication</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>		SpringApplication<span style="color:#f92672">.</span><span style="color:#a6e22e">run</span><span style="color:#f92672">(</span>SpringbootDemoApplication<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">,</span> args<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>引导类是项目的入口，运行<code>main()</code>就可以启动项目。</p>
 <blockquote>
 <p>引导类默认只会扫描当前包下同级的类和包（包下的的类）。</p>
 <p>如果Controller包与引导类的包同级（例如<code>com.linner.controller</code>与<code>com.linner.springbootdemo</code>），此时引导类可以正常启动，但是由于扫描不到Cotroller包，接口无法访问。有三种解决方法：</p>
@@ -503,21 +503,21 @@
 </blockquote>
 <h2 id="切换-web-服务器">切换 Web 服务器</h2>
 <p>如果要使用Jetty服务器，我们需要先在<code>pom.xml</code>中使用<code>&lt;exclusion&gt;</code>标签排除默认的Tomcat服务器，然后再导入使用Jetty服务器所需的坐标：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency&gt;</span>
-    <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-web<span style="color:#f92672">&lt;/artifactId&gt;</span>
-    <span style="color:#f92672">&lt;exclusions&gt;</span>
-        <span style="color:#f92672">&lt;exclusion&gt;</span>
-            <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-            <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-tomcat<span style="color:#f92672">&lt;/artifactId&gt;</span>
-        <span style="color:#f92672">&lt;/exclusion&gt;</span>
-    <span style="color:#f92672">&lt;/exclusions&gt;</span>
-<span style="color:#f92672">&lt;/dependency&gt;</span>
-<span style="color:#f92672">&lt;dependency&gt;</span>
-    <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-jetty<span style="color:#f92672">&lt;/artifactId&gt;</span>
-<span style="color:#f92672">&lt;/dependency&gt;</span>
-</code></pre></div><h2 id="配置文件">配置文件</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-web<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;exclusions&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;exclusion&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-tomcat<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/exclusion&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/exclusions&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-jetty<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span></code></pre></div><h2 id="配置文件">配置文件</h2>
 <p>SpringBoot有两种配置文件格式，它们都在<code>resources</code>目录下：</p>
 <ul>
 <li>
@@ -531,13 +531,13 @@ server.servlet.context-path=/
 <li>
 <p><code>yaml</code>格式：</p>
 <p>文件名为<code>application.yml</code>或<code>application.yaml</code>，格式如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">server</span>:
-    <span style="color:#75715e"># 端口</span>
-    <span style="color:#f92672">port</span>: <span style="color:#ae81ff">80</span>
-    <span style="color:#f92672">servlet</span>:
-        <span style="color:#75715e"># 访问路径</span>
-        <span style="color:#f92672">context-path</span>: <span style="color:#ae81ff">/</span>
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">server</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># 端口</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">port</span>: <span style="color:#ae81ff">80</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">servlet</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 访问路径</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">context-path</span>: <span style="color:#ae81ff">/</span>
+</span></span></code></pre></div><blockquote>
 <p>yaml格式的键值对中，键后面的冒号后（值的前面）一定要加空格。</p>
 </blockquote>
 </li>
@@ -599,37 +599,37 @@ server.servlet.context-path=/
 </li>
 </ul>
 <p>数组数据在数据书写位置的下方使用减号作为数据开始符号，每行书写一个数据，减号与数据间空格分隔。如：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">list</span>:
-    - <span style="color:#ae81ff">Java</span>
-    - <span style="color:#ae81ff">Spring</span>
-</code></pre></div><h3 id="读取配置数据">读取配置数据</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">list</span>:
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">Java</span>
+</span></span><span style="display:flex;"><span>    - <span style="color:#ae81ff">Spring</span>
+</span></span></code></pre></div><h3 id="读取配置数据">读取配置数据</h3>
 <p>使用<code>@Value(&quot;表达式&quot;)</code>可以从配置文件中读取数据，注解中用于读取属性名引用方式是：<code>${一级属性名.二级属性名……}</code>。如：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RestController</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyController</span> <span style="color:#f92672">{</span>
-    <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${server.port}&#34;</span><span style="color:#f92672">)</span>
-    <span style="color:#66d9ef">private</span> Integer port<span style="color:#f92672">;</span>
-    <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${list[0]}&#34;</span><span style="color:#f92672">)</span>
-    <span style="color:#66d9ef">private</span> String java<span style="color:#f92672">;</span>
-
-    <span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/config&#34;</span><span style="color:#f92672">)</span>
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">gerConfig</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;port=&#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">port</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\n&#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">java</span><span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>SpringBoot还可以使用 <code>@Autowired</code> 注解注入 <code>Environment</code> 对象的方式读取数据。这种方式 <code>SpringBoot</code> 会将配置文件中所有的数据封装到 <code>Environment</code> 对象中，如果需要使用哪个数据只需要通过调用 <code>Environment</code> 对象的 <code>getProperty(String name)</code> 方法获取。如：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RestController</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyController</span> <span style="color:#f92672">{</span>
-    
-    <span style="color:#a6e22e">@Autowired</span>
-    <span style="color:#66d9ef">private</span> Environment env<span style="color:#f92672">;</span>
-
-    <span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/config&#34;</span><span style="color:#f92672">)</span>
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">gerConfig</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;port=&#34;</span> <span style="color:#f92672">+</span> env<span style="color:#f92672">.</span><span style="color:#a6e22e">getProperty</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;server.port&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-
-<span style="color:#f92672">}</span>
-</code></pre></div><h3 id="自定义对象">自定义对象</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@RestController</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyController</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${server.port}&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Integer port<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Value</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;${list[0]}&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String java<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/config&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">gerConfig</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;port=&#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">port</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;\n&#34;</span> <span style="color:#f92672">+</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">java</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>SpringBoot还可以使用 <code>@Autowired</code> 注解注入 <code>Environment</code> 对象的方式读取数据。这种方式 <code>SpringBoot</code> 会将配置文件中所有的数据封装到 <code>Environment</code> 对象中，如果需要使用哪个数据只需要通过调用 <code>Environment</code> 对象的 <code>getProperty(String name)</code> 方法获取。如：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@RestController</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyController</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Autowired</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Environment env<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/config&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">gerConfig</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;port=&#34;</span> <span style="color:#f92672">+</span> env<span style="color:#f92672">.</span><span style="color:#a6e22e">getProperty</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;server.port&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><h3 id="自定义对象">自定义对象</h3>
 <p>SpringBoot提供了将配置文件中的数据封装到我们自定义的实体类对象中的方式。具体操作如下：</p>
 <ol>
 <li>
@@ -646,72 +646,72 @@ server.servlet.context-path=/
 </ol>
 <p>Example：</p>
 <p>添加依赖：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency&gt;</span>
-    <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-configuration-processor<span style="color:#f92672">&lt;/artifactId&gt;</span>
-    <span style="color:#f92672">&lt;optional&gt;</span>true<span style="color:#f92672">&lt;/optional&gt;</span>
-<span style="color:#f92672">&lt;/dependency&gt;</span>
-</code></pre></div><p>在配置文件中添加：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">myconfig</span>:
-  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">SpringBoot</span>
-  <span style="color:#f92672">port</span>: <span style="color:#ae81ff">80</span>
-  <span style="color:#f92672">id</span>: <span style="color:#ae81ff">666</span>
-</code></pre></div><p>实体类：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Component</span>
-<span style="color:#a6e22e">@ConfigurationProperties</span><span style="color:#f92672">(</span>prefix <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;myconfig&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyConfig</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">private</span> String name<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> Integer id<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> Integer port<span style="color:#f92672">;</span>
-    <span style="color:#75715e">// getter and setter...
-</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</code></pre></div><p>Controller：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@RestController</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyController</span> <span style="color:#f92672">{</span>
-    <span style="color:#a6e22e">@Autowired</span>
-    <span style="color:#66d9ef">private</span> MyConfig myConfig<span style="color:#f92672">;</span>
-
-    <span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/myconfig&#34;</span><span style="color:#f92672">)</span>
-    <span style="color:#66d9ef">public</span> MyConfig <span style="color:#a6e22e">getMyConfig</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">myConfig</span><span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><h3 id="多环境配置">多环境配置</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-configuration-processor<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;optional&gt;</span>true<span style="color:#f92672">&lt;/optional&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span></code></pre></div><p>在配置文件中添加：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">myconfig</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#ae81ff">SpringBoot</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">port</span>: <span style="color:#ae81ff">80</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">id</span>: <span style="color:#ae81ff">666</span>
+</span></span></code></pre></div><p>实体类：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Component</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@ConfigurationProperties</span><span style="color:#f92672">(</span>prefix <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;myconfig&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyConfig</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String name<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Integer id<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Integer port<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// getter and setter...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>Controller：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@RestController</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyController</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Autowired</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> MyConfig myConfig<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@GetMapping</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/myconfig&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> MyConfig <span style="color:#a6e22e">getMyConfig</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">myConfig</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><h3 id="多环境配置">多环境配置</h3>
 <p>由于开发环境、测试环境、生产环境的配置都不相同。所以SpringBoot给开发者提供了多环境的快捷配置，需要切换环境时只需要改一个配置即可。</p>
 <ul>
 <li>
 <p><code>yaml</code>格式：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#75715e"># 开发</span>
-<span style="color:#f92672">spring</span>:
-  <span style="color:#f92672">config</span>:
-    <span style="color:#f92672">activate</span>:
-      <span style="color:#75715e"># 配置环境名</span>
-      <span style="color:#f92672">on-profile</span>: <span style="color:#ae81ff">dev</span>
-<span style="color:#75715e"># spring.profiles 配置已弃用</span>
-<span style="color:#f92672">server</span>:
-  <span style="color:#f92672">port</span>: <span style="color:#ae81ff">80</span>
----
-<span style="color:#75715e"># 生产</span>
-<span style="color:#f92672">spring</span>:
-  <span style="color:#f92672">config</span>:
-    <span style="color:#f92672">activate</span>:
-      <span style="color:#f92672">on-profile</span>: <span style="color:#ae81ff">pro</span> <span style="color:#75715e">#给生产环境起的名字</span>
-<span style="color:#f92672">server</span>:
-  <span style="color:#f92672">port</span>: <span style="color:#ae81ff">81</span>
----
-<span style="color:#75715e"># 测试</span>
-<span style="color:#f92672">spring</span>:
-  <span style="color:#f92672">config</span>:
-    <span style="color:#f92672">activate</span>:
-      <span style="color:#f92672">on-profile</span>: <span style="color:#ae81ff">test</span> <span style="color:#75715e">#给测试环境起的名字</span>
-<span style="color:#f92672">server</span>:
-  <span style="color:#f92672">port</span>: <span style="color:#ae81ff">82</span>
----
-<span style="color:#75715e"># 设置启用的环境</span>
-<span style="color:#f92672">spring</span>:
-  <span style="color:#f92672">profiles</span>:
-    <span style="color:#f92672">active</span>: <span style="color:#ae81ff">test </span> <span style="color:#75715e">#表示使用的是开发环境的配置</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#75715e"># 开发</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spring</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">config</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">activate</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e"># 配置环境名</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">on-profile</span>: <span style="color:#ae81ff">dev</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># spring.profiles 配置已弃用</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">server</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">port</span>: <span style="color:#ae81ff">80</span>
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 生产</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spring</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">config</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">activate</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">on-profile</span>: <span style="color:#ae81ff">pro</span> <span style="color:#75715e">#给生产环境起的名字</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">server</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">port</span>: <span style="color:#ae81ff">81</span>
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 测试</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spring</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">config</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">activate</span>:
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">on-profile</span>: <span style="color:#ae81ff">test</span> <span style="color:#75715e">#给测试环境起的名字</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">server</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">port</span>: <span style="color:#ae81ff">82</span>
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 设置启用的环境</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">spring</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">profiles</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">active</span>: <span style="color:#ae81ff">test </span> <span style="color:#75715e">#表示使用的是开发环境的配置</span>
+</span></span></code></pre></div></li>
 <li>
 <p><code>properties</code>格式：</p>
 <p>使用多文件方式，文件名以<code>application-</code>开头。如：</p>
@@ -734,10 +734,10 @@ server.servlet.context-path=/
 </code></pre></li>
 </ul>
 <p>SpringBoot提供了在运行<code>jar</code>时设置开启指定的环境的方式。如：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">java –jar springbootdemo.jar –-spring.profiles.active<span style="color:#f92672">=</span>test
-</code></pre></div><p>临时修改端口号：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">java –jar springbootdemo.jar –-server.port<span style="color:#f92672">=</span><span style="color:#ae81ff">88</span>
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>java –jar springbootdemo.jar –-spring.profiles.active<span style="color:#f92672">=</span>test
+</span></span></code></pre></div><p>临时修改端口号：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>java –jar springbootdemo.jar –-server.port<span style="color:#f92672">=</span><span style="color:#ae81ff">88</span>
+</span></span></code></pre></div><blockquote>
 <p>命令行设置的端口号优先级高于配置文件。
 <a class="link" href="https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config"  target="_blank" rel="noopener"
     >SpringBoot官网</a>已经对配置的优先级进行了说明：
@@ -768,12 +768,12 @@ server.servlet.context-path=/
 <h1 id="第三方资源整合">第三方资源整合</h1>
 <h2 id="整合-junit">整合 Junit</h2>
 <p>SpringBoot整合了Junit并可将其作为起步依赖整合到项目中：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency&gt;</span>
-    <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-test<span style="color:#f92672">&lt;/artifactId&gt;</span>
-    <span style="color:#f92672">&lt;scope&gt;</span>test<span style="color:#f92672">&lt;/scope&gt;</span>
-<span style="color:#f92672">&lt;/dependency&gt;</span>
-</code></pre></div><p>SpringBoot整合Junit分为三步：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;groupId&gt;</span>org.springframework.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;artifactId&gt;</span>spring-boot-starter-test<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;scope&gt;</span>test<span style="color:#f92672">&lt;/scope&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span></code></pre></div><p>SpringBoot整合Junit分为三步：</p>
 <ol>
 <li>在测试类上添加 <code>@SpringBootTest</code> 注解。</li>
 <li>使用 <code>@Autowired</code> 注入要测试的资源。</li>
@@ -781,51 +781,51 @@ server.servlet.context-path=/
 </ol>
 <p>Example：</p>
 <p>编写Service：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Service</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BookService</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">save</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Book save ...&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>测试<code>BookService</code>：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@SpringBootTest</span>
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringbootDemoApplicationTests</span> <span style="color:#f92672">{</span>
-
-    <span style="color:#a6e22e">@Autowired</span>
-    <span style="color:#66d9ef">private</span> BookService bookService<span style="color:#f92672">;</span>
-
-    <span style="color:#a6e22e">@Test</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testSave</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        bookService<span style="color:#f92672">.</span><span style="color:#a6e22e">save</span><span style="color:#f92672">();</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Service</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">BookService</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">save</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Book save ...&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>测试<code>BookService</code>：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@SpringBootTest</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringbootDemoApplicationTests</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Autowired</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> BookService bookService<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Test</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testSave</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        bookService<span style="color:#f92672">.</span><span style="color:#a6e22e">save</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><blockquote>
 <p>由于引导类默认扫描当前包下的类和包，所以测试类（或者测试类的包）和引导类要在同个包下。</p>
 <p>否则，可以使用<code>@SpringBootTest</code>注解的<code>classes</code>属性指定引导类的字节码对象。如：<code>@SpringBootTest(classes = {SpringbootDemoApplication.class})</code></p>
 </blockquote>
 <h2 id="整合-mybatis">整合 MyBatis</h2>
 <p>在整合MyBatis前先建一个用于测试的数据库：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SET</span> <span style="color:#66d9ef">NAMES</span> utf8mb4;
-<span style="color:#66d9ef">SET</span> FOREIGN_KEY_CHECKS <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-
-<span style="color:#75715e">-- Table structure for book_tb
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">EXISTS</span> <span style="color:#f92672">`</span>book_tb<span style="color:#f92672">`</span>;
-<span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#f92672">`</span>book_tb<span style="color:#f92672">`</span>  (
-  <span style="color:#f92672">`</span>id<span style="color:#f92672">`</span> int <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
-  <span style="color:#f92672">`</span>name<span style="color:#f92672">`</span> varchar(<span style="color:#ae81ff">255</span>) CHARACTER <span style="color:#66d9ef">SET</span> utf8mb3 <span style="color:#66d9ef">COLLATE</span> utf8mb3_bin <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
-  <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (<span style="color:#f92672">`</span>id<span style="color:#f92672">`</span>) <span style="color:#66d9ef">USING</span> BTREE
-) ENGINE <span style="color:#f92672">=</span> InnoDB CHARACTER <span style="color:#66d9ef">SET</span> <span style="color:#f92672">=</span> utf8mb3 <span style="color:#66d9ef">COLLATE</span> <span style="color:#f92672">=</span> utf8mb3_bin ROW_FORMAT <span style="color:#f92672">=</span> <span style="color:#66d9ef">Dynamic</span>;
-
-<span style="color:#75715e">-- Records of book_tb
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#f92672">`</span>book_tb<span style="color:#f92672">`</span> <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;郑嘉伦&#39;</span>);
-<span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#f92672">`</span>book_tb<span style="color:#f92672">`</span> <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;钱璐&#39;</span>);
-<span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#f92672">`</span>book_tb<span style="color:#f92672">`</span> <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;黄安琪&#39;</span>);
-<span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#f92672">`</span>book_tb<span style="color:#f92672">`</span> <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#39;龙宇宁&#39;</span>);
-<span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#f92672">`</span>book_tb<span style="color:#f92672">`</span> <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">5</span>, <span style="color:#e6db74">&#39;姜宇宁&#39;</span>);
-<span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#f92672">`</span>book_tb<span style="color:#f92672">`</span> <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">6</span>, <span style="color:#e6db74">&#39;赵嘉伦&#39;</span>);
-
-<span style="color:#66d9ef">SET</span> FOREIGN_KEY_CHECKS <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SET</span> <span style="color:#66d9ef">NAMES</span> utf8mb4;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SET</span> FOREIGN_KEY_CHECKS <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Table structure for book_tb
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">EXISTS</span> <span style="color:#f92672">`</span>book_tb<span style="color:#f92672">`</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#f92672">`</span>book_tb<span style="color:#f92672">`</span>  (
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">`</span>id<span style="color:#f92672">`</span> int <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">`</span>name<span style="color:#f92672">`</span> varchar(<span style="color:#ae81ff">255</span>) CHARACTER <span style="color:#66d9ef">SET</span> utf8mb3 <span style="color:#66d9ef">COLLATE</span> utf8mb3_bin <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (<span style="color:#f92672">`</span>id<span style="color:#f92672">`</span>) <span style="color:#66d9ef">USING</span> BTREE
+</span></span><span style="display:flex;"><span>) ENGINE <span style="color:#f92672">=</span> InnoDB CHARACTER <span style="color:#66d9ef">SET</span> <span style="color:#f92672">=</span> utf8mb3 <span style="color:#66d9ef">COLLATE</span> <span style="color:#f92672">=</span> utf8mb3_bin ROW_FORMAT <span style="color:#f92672">=</span> <span style="color:#66d9ef">Dynamic</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- Records of book_tb
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#f92672">`</span>book_tb<span style="color:#f92672">`</span> <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">&#39;郑嘉伦&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#f92672">`</span>book_tb<span style="color:#f92672">`</span> <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#39;钱璐&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#f92672">`</span>book_tb<span style="color:#f92672">`</span> <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#39;黄安琪&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#f92672">`</span>book_tb<span style="color:#f92672">`</span> <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">4</span>, <span style="color:#e6db74">&#39;龙宇宁&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#f92672">`</span>book_tb<span style="color:#f92672">`</span> <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">5</span>, <span style="color:#e6db74">&#39;姜宇宁&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#f92672">`</span>book_tb<span style="color:#f92672">`</span> <span style="color:#66d9ef">VALUES</span> (<span style="color:#ae81ff">6</span>, <span style="color:#e6db74">&#39;赵嘉伦&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SET</span> FOREIGN_KEY_CHECKS <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</span></span></code></pre></div><ul>
 <li>
 <p>导入依赖：</p>
 <ol>
@@ -844,82 +844,82 @@ server.servlet.context-path=/
 ></li>
 <li>在<code>pom.xml</code>中导入坐标：</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency&gt;</span>
-    <span style="color:#f92672">&lt;groupId&gt;</span>org.mybatis.spring.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
-    <span style="color:#f92672">&lt;artifactId&gt;</span>mybatis-spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
-    <span style="color:#f92672">&lt;version&gt;</span>3.0.0<span style="color:#f92672">&lt;/version&gt;</span>
-<span style="color:#f92672">&lt;/dependency&gt;</span>
-
-<span style="color:#f92672">&lt;dependency&gt;</span>
-    <span style="color:#f92672">&lt;groupId&gt;</span>com.mysql<span style="color:#f92672">&lt;/groupId&gt;</span>
-    <span style="color:#f92672">&lt;artifactId&gt;</span>mysql-connector-j<span style="color:#f92672">&lt;/artifactId&gt;</span>
-    <span style="color:#f92672">&lt;scope&gt;</span>runtime<span style="color:#f92672">&lt;/scope&gt;</span>
-<span style="color:#f92672">&lt;/dependency&gt;</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;groupId&gt;</span>org.mybatis.spring.boot<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;artifactId&gt;</span>mybatis-spring-boot-starter<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;version&gt;</span>3.0.0<span style="color:#f92672">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;groupId&gt;</span>com.mysql<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;artifactId&gt;</span>mysql-connector-j<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;scope&gt;</span>runtime<span style="color:#f92672">&lt;/scope&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span></code></pre></div></li>
 <li>
 <p>编写数据库配置：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">spring</span>:
-  <span style="color:#f92672">datasource</span>:
-    <span style="color:#f92672">driver-class-name</span>: <span style="color:#ae81ff">com.mysql.jdbc.Driver</span>
-    <span style="color:#f92672">url</span>: <span style="color:#ae81ff">jdbc:mysql://localhost:3306/spring_db</span>
-    <span style="color:#f92672">username</span>: <span style="color:#ae81ff">root</span>
-    <span style="color:#f92672">password</span>: <span style="color:#ae81ff">123456</span>
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">spring</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">datasource</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">driver-class-name</span>: <span style="color:#ae81ff">com.mysql.jdbc.Driver</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">url</span>: <span style="color:#ae81ff">jdbc:mysql://localhost:3306/spring_db</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">username</span>: <span style="color:#ae81ff">root</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">password</span>: <span style="color:#ae81ff">123456</span>
+</span></span></code></pre></div><blockquote>
 <p>SpringBoot版本低于2.4.3（不含），Mysql驱动版本大于8.0时，需要在url连接串中配置时区 <code>jdbc:mysql://localhost:3306/spring_db?serverTimezone=UTC</code>，或在MySQL数据库端配置时区解决此问题。</p>
 </blockquote>
 </li>
 <li>
 <p>定义实体类：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Book</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">private</span> Integer id<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> String name<span style="color:#f92672">;</span>
-    <span style="color:#75715e">// getter、setter and toString
-</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Book</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Integer id<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String name<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// getter、setter and toString
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</span></span></code></pre></div></li>
 <li>
 <p>定义DAO接口：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Mapper</span> <span style="color:#75715e">// SpringBoot定义DAO接口类
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">BookDao</span> <span style="color:#f92672">{</span>
-    <span style="color:#a6e22e">@Select</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;SELECT * FROM book_tb WHERE id = #{id}&#34;</span><span style="color:#f92672">)</span>
-    <span style="color:#66d9ef">public</span> Book <span style="color:#a6e22e">getById</span><span style="color:#f92672">(</span>Integer id<span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Mapper</span> <span style="color:#75715e">// SpringBoot定义DAO接口类
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">BookDao</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Select</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;SELECT * FROM book_tb WHERE id = #{id}&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Book <span style="color:#a6e22e">getById</span><span style="color:#f92672">(</span>Integer id<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div></li>
 <li>
 <p>定义Test类：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@SpringBootTest</span>
-<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringbootMybatisApplicationTests</span> <span style="color:#f92672">{</span>
-    <span style="color:#a6e22e">@Autowired</span>
-    <span style="color:#66d9ef">private</span> BookDao bookDao<span style="color:#f92672">;</span>
-
-    <span style="color:#a6e22e">@Test</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testGetById</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        Book book <span style="color:#f92672">=</span> bookDao<span style="color:#f92672">.</span><span style="color:#a6e22e">getById</span><span style="color:#f92672">(</span>1<span style="color:#f92672">);</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>book<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@SpringBootTest</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SpringbootMybatisApplicationTests</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Autowired</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> BookDao bookDao<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Test</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testGetById</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        Book book <span style="color:#f92672">=</span> bookDao<span style="color:#f92672">.</span><span style="color:#a6e22e">getById</span><span style="color:#f92672">(</span>1<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>book<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div></li>
 </ul>
 <h3 id="使用-druid-数据源">使用 Druid 数据源</h3>
 <p>SpringBoot有默认的数据源，但是也可以指定使用Druid数据源。</p>
 <ul>
 <li>
 <p>导入Druid依赖：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency&gt;</span>
-    <span style="color:#f92672">&lt;groupId&gt;</span>com.alibaba<span style="color:#f92672">&lt;/groupId&gt;</span>
-    <span style="color:#f92672">&lt;artifactId&gt;</span>druid<span style="color:#f92672">&lt;/artifactId&gt;</span>
-    <span style="color:#f92672">&lt;version&gt;</span>1.1.16<span style="color:#f92672">&lt;/version&gt;</span>
-<span style="color:#f92672">&lt;/dependency&gt;</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;groupId&gt;</span>com.alibaba<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;artifactId&gt;</span>druid<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;version&gt;</span>1.1.16<span style="color:#f92672">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span></code></pre></div></li>
 <li>
 <p>在<code>application.yml</code>配置文件配置：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">spring</span>:
-  <span style="color:#f92672">datasource</span>:
-    <span style="color:#f92672">driver-class-name</span>: <span style="color:#ae81ff">com.mysql.cj.jdbc.Driver</span>
-    <span style="color:#f92672">url</span>: <span style="color:#ae81ff">jdbc:mysql://localhost:3306/spring_db?serverTimezone=UTC</span>
-    <span style="color:#f92672">username</span>: <span style="color:#ae81ff">root</span>
-    <span style="color:#f92672">password</span>: <span style="color:#ae81ff">123456</span>
-    <span style="color:#f92672">type</span>: <span style="color:#ae81ff">com.alibaba.druid.pool.DruidDataSource</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">spring</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">datasource</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">driver-class-name</span>: <span style="color:#ae81ff">com.mysql.cj.jdbc.Driver</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">url</span>: <span style="color:#ae81ff">jdbc:mysql://localhost:3306/spring_db?serverTimezone=UTC</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">username</span>: <span style="color:#ae81ff">root</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">password</span>: <span style="color:#ae81ff">123456</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">type</span>: <span style="color:#ae81ff">com.alibaba.druid.pool.DruidDataSource</span>
+</span></span></code></pre></div></li>
 </ul>
 
 </section>

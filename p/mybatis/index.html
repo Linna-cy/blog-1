@@ -420,80 +420,80 @@
 <ol>
 <li>
 <p>在 <code>pom.xml</code> 配置文件中导入坐标：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependencies&gt;</span>
-    <span style="color:#75715e">&lt;!--mybatis 依赖--&gt;</span>
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-        <span style="color:#f92672">&lt;groupId&gt;</span>org.mybatis<span style="color:#f92672">&lt;/groupId&gt;</span>
-        <span style="color:#f92672">&lt;artifactId&gt;</span>mybatis<span style="color:#f92672">&lt;/artifactId&gt;</span>
-        <span style="color:#f92672">&lt;version&gt;</span>3.5.5<span style="color:#f92672">&lt;/version&gt;</span>
-    <span style="color:#f92672">&lt;/dependency&gt;</span>
-
-    <span style="color:#75715e">&lt;!--mysql 驱动--&gt;</span>
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-        <span style="color:#f92672">&lt;groupId&gt;</span>mysql<span style="color:#f92672">&lt;/groupId&gt;</span>
-        <span style="color:#f92672">&lt;artifactId&gt;</span>mysql-connector-java<span style="color:#f92672">&lt;/artifactId&gt;</span>
-        <span style="color:#f92672">&lt;version&gt;</span>5.1.46<span style="color:#f92672">&lt;/version&gt;</span>
-    <span style="color:#f92672">&lt;/dependency&gt;</span>
-<span style="color:#f92672">&lt;/dependencies&gt;</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;dependencies&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!--mybatis 依赖--&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;groupId&gt;</span>org.mybatis<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;artifactId&gt;</span>mybatis<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;version&gt;</span>3.5.5<span style="color:#f92672">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!--mysql 驱动--&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;groupId&gt;</span>mysql<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;artifactId&gt;</span>mysql-connector-java<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;version&gt;</span>5.1.46<span style="color:#f92672">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependencies&gt;</span>
+</span></span></code></pre></div></li>
 <li>
 <p>编写 <code>mybatis-config.xml</code> 文件：</p>
 <p>在模块下的 <code>resources</code> 目录下创建Mybatis的配置文件 <code>mybatis-config.xml</code>：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;</span>
-<span style="color:#75715e">&lt;!DOCTYPE configuration
-</span><span style="color:#75715e">        PUBLIC &#34;-//mybatis.org//DTD Config 3.0//EN&#34;
-</span><span style="color:#75715e">        &#34;http://mybatis.org/dtd/mybatis-3-config.dtd&#34;&gt;</span>
-<span style="color:#f92672">&lt;configuration&gt;</span>
-  <span style="color:#75715e">&lt;!-- 需要注意配置标签的前后顺序(按照MyBatis官方文档目录中的顺序去定义) --&gt;</span>
-  <span style="color:#75715e">&lt;!-- 别名或包扫描 --&gt;</span>
-  <span style="color:#f92672">&lt;typeAliases&gt;</span>
-    <span style="color:#75715e">&lt;!-- name属性的值是实体类所在包 --&gt;</span>
-    <span style="color:#75715e">&lt;!-- 包扫描后,别名默认为类名(不区分大小写) --&gt;</span>
-    <span style="color:#75715e">&lt;!-- 使用别名可以简化映射配置文件中 resultType 属性值的编写 --&gt;</span>
-    <span style="color:#f92672">&lt;package</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;package.name.pojo&#34;</span><span style="color:#f92672">/&gt;</span>
-  <span style="color:#f92672">&lt;/typeAliases&gt;</span>
-
-  <span style="color:#75715e">&lt;!--
-</span><span style="color:#75715e">    environments:配置数据库的连接环境信息,
-</span><span style="color:#75715e">      可以配置多个environment信息,
-</span><span style="color:#75715e">      通过对应的default属性切换不同的environment
-</span><span style="color:#75715e">  --&gt;</span>
-  <span style="color:#f92672">&lt;environments</span> <span style="color:#a6e22e">default=</span><span style="color:#e6db74">&#34;development&#34;</span><span style="color:#f92672">&gt;</span>
-    <span style="color:#75715e">&lt;!-- 可以配置多个&lt;environment&gt; --&gt;</span>
-    <span style="color:#75715e">&lt;!-- 使用 id 给每段环境起名 --&gt;</span>
-    <span style="color:#75715e">&lt;!-- 在 &lt;environments&gt; 中使用 default=&#39;environment-id&#39; 来指定使用哪儿段配置 --&gt;</span>
-    <span style="color:#f92672">&lt;environment</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;development&#34;</span><span style="color:#f92672">&gt;</span>
-      <span style="color:#f92672">&lt;transactionManager</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;JDBC&#34;</span><span style="color:#f92672">/&gt;</span>
-      <span style="color:#f92672">&lt;dataSource</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;POOLED&#34;</span><span style="color:#f92672">&gt;</span>
-        <span style="color:#75715e">&lt;!-- 
-</span><span style="color:#75715e">          数据库连接信息
-</span><span style="color:#75715e">          注意url、username和password
-</span><span style="color:#75715e">        --&gt;</span>
-        <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;driver&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;com.mysql.jdbc.Driver&#34;</span><span style="color:#f92672">/&gt;</span>
-        <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;url&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;jdbc:mysql:///mybatis1?useSSL=false&#34;</span><span style="color:#f92672">/&gt;</span>
-        <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;username&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;root&#34;</span><span style="color:#f92672">/&gt;</span>
-        <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;1234&#34;</span><span style="color:#f92672">/&gt;</span>
-      <span style="color:#f92672">&lt;/dataSource&gt;</span>
-    <span style="color:#f92672">&lt;/environment&gt;</span>
-
-    <span style="color:#f92672">&lt;environment</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;test&#34;</span><span style="color:#f92672">&gt;</span>
-      <span style="color:#f92672">&lt;transactionManager</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;JDBC&#34;</span><span style="color:#f92672">/&gt;</span>
-      <span style="color:#f92672">&lt;dataSource</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;POOLED&#34;</span><span style="color:#f92672">&gt;</span>
-        <span style="color:#75715e">&lt;!-- 数据库连接信息 --&gt;</span>
-        <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;driver&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;com.mysql.jdbc.Driver&#34;</span><span style="color:#f92672">/&gt;</span>
-        <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;url&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;jdbc:mysql:///mybatis2?useSSL=false&#34;</span><span style="color:#f92672">/&gt;</span>
-        <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;username&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;root&#34;</span><span style="color:#f92672">/&gt;</span>
-        <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;1234&#34;</span><span style="color:#f92672">/&gt;</span>
-      <span style="color:#f92672">&lt;/dataSource&gt;</span>
-    <span style="color:#f92672">&lt;/environment&gt;</span>
-  <span style="color:#f92672">&lt;/environments&gt;</span>
-  <span style="color:#f92672">&lt;mappers&gt;</span>
-    <span style="color:#75715e">&lt;!-- 加载映射文件 --&gt;</span>
-    <span style="color:#75715e">&lt;!-- ...... --&gt;</span>
-    <span style="color:#75715e">&lt;!-- 在下节中讲解 --&gt;</span>
-  <span style="color:#f92672">&lt;/mappers&gt;</span>
-<span style="color:#f92672">&lt;/configuration&gt;</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE configuration
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        PUBLIC &#34;-//mybatis.org//DTD Config 3.0//EN&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        &#34;http://mybatis.org/dtd/mybatis-3-config.dtd&#34;&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;configuration&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">&lt;!-- 需要注意配置标签的前后顺序(按照MyBatis官方文档目录中的顺序去定义) --&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">&lt;!-- 别名或包扫描 --&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;typeAliases&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- name属性的值是实体类所在包 --&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- 包扫描后,别名默认为类名(不区分大小写) --&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- 使用别名可以简化映射配置文件中 resultType 属性值的编写 --&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;package</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;package.name.pojo&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/typeAliases&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">&lt;!--
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    environments:配置数据库的连接环境信息,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">      可以配置多个environment信息,
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">      通过对应的default属性切换不同的environment
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  --&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;environments</span> <span style="color:#a6e22e">default=</span><span style="color:#e6db74">&#34;development&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- 可以配置多个&lt;environment&gt; --&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- 使用 id 给每段环境起名 --&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- 在 &lt;environments&gt; 中使用 default=&#39;environment-id&#39; 来指定使用哪儿段配置 --&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;environment</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;development&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;transactionManager</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;JDBC&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;dataSource</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;POOLED&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&lt;!-- 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">          数据库连接信息
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">          注意url、username和password
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        --&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;driver&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;com.mysql.jdbc.Driver&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;url&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;jdbc:mysql:///mybatis1?useSSL=false&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;username&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;root&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;1234&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;/dataSource&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/environment&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;environment</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;test&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;transactionManager</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;JDBC&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;dataSource</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;POOLED&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&lt;!-- 数据库连接信息 --&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;driver&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;com.mysql.jdbc.Driver&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;url&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;jdbc:mysql:///mybatis2?useSSL=false&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;username&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;root&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;1234&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>      <span style="color:#f92672">&lt;/dataSource&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/environment&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/environments&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;mappers&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- 加载映射文件 --&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- ...... --&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- 在下节中讲解 --&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;/mappers&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/configuration&gt;</span>
+</span></span></code></pre></div></li>
 </ol>
 <blockquote>
 <p>更多MyBatis配置请查看官方文档：<a class="link" href="https://mybatis.net.cn/configuration.html"  target="_blank" rel="noopener"
@@ -505,38 +505,38 @@
 <li>
 <p>编写 <code>Mapper</code>类</p>
 <p>在 <code>java</code> 目录下创建与 <code>pojo</code> 对应的 <code>Mapper</code>接口 <code>ClassNameMapper.java</code>：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">ClassNameMapper</span> <span style="color:#f92672">{</span>
-    <span style="color:#75715e">// 方法
-</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">ClassNameMapper</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 方法
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</span></span></code></pre></div></li>
 <li>
 <p>编写 SQL 映射文件</p>
 <p>在模块的 <code>resources</code> 目录下创建与 <code>pojo</code> 对应的映射配置文件 <code>ClassNameMapper.xml</code>：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;</span>
-<span style="color:#75715e">&lt;!DOCTYPE mapper PUBLIC &#34;-//mybatis.org//DTD Mapper 3.0//EN&#34; &#34;http://mybatis.org/dtd/mybatis-3-mapper.dtd&#34;&gt;</span>
-<span style="color:#75715e">&lt;!-- namespace:名称空间 --&gt;</span>
-<span style="color:#f92672">&lt;mapper</span> <span style="color:#a6e22e">namespace=</span><span style="color:#e6db74">&#34;package.name.mapper&#34;</span><span style="color:#f92672">&gt;</span>
-  <span style="color:#75715e">&lt;!-- 相应的SQL语句（XML映射） --&gt;</span>
-<span style="color:#f92672">&lt;/mapper&gt;</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE mapper PUBLIC &#34;-//mybatis.org//DTD Mapper 3.0//EN&#34; &#34;http://mybatis.org/dtd/mybatis-3-mapper.dtd&#34;&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- namespace:名称空间 --&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;mapper</span> <span style="color:#a6e22e">namespace=</span><span style="color:#e6db74">&#34;package.name.mapper&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">&lt;!-- 相应的SQL语句（XML映射） --&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/mapper&gt;</span>
+</span></span></code></pre></div></li>
 <li>
 <p>在Myb
 atis的配置文件 <code>mybatis-config.xml</code> 中加载映射文件：</p>
 <ol>
 <li>直接加载映射文件：</li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;mappers&gt;</span>
-  <span style="color:#f92672">&lt;mapper</span> <span style="color:#a6e22e">resource=</span><span style="color:#e6db74">&#34;com/abc/mapper/ClassNameMapper.xml&#34;</span><span style="color:#f92672">/&gt;</span>
-<span style="color:#f92672">&lt;/mappers&gt;</span>
-</code></pre></div><p>使用这种方式加载映射文件，多个映射文件需要定义多个 <code>&lt;mapper&gt;</code>，过于繁琐。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;mappers&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;mapper</span> <span style="color:#a6e22e">resource=</span><span style="color:#e6db74">&#34;com/abc/mapper/ClassNameMapper.xml&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/mappers&gt;</span>
+</span></span></code></pre></div><p>使用这种方式加载映射文件，多个映射文件需要定义多个 <code>&lt;mapper&gt;</code>，过于繁琐。</p>
 <ol start="2">
 <li>Mapper代理方式（推荐）：</li>
 </ol>
 <p>如果 <code>Mapper</code>接口名称和SQL映射文件名称相同，并在同一目录下，则可以使用包扫描的方式简化SQL映射文件的加载。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;mappers&gt;</span>
-  <span style="color:#f92672">&lt;package</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;com.abc.mapper&#34;</span><span style="color:#f92672">/&gt;</span>
-<span style="color:#f92672">&lt;/mappers&gt;</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;mappers&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;package</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;com.abc.mapper&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/mappers&gt;</span>
+</span></span></code></pre></div></li>
 </ul>
 <blockquote>
 <p>注意：使用Mapper代理方式加载映射文件，<code>Mapper</code>接口与其对应的配置文件，它们的路径（包名）要相同。</p>
@@ -551,228 +551,228 @@ atis的配置文件 <code>mybatis-config.xml</code> 中加载映射文件：</p>
 <ul>
 <li>
 <p>创建 <code>User</code>表:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> mybatis;
-USE mybatis;
-
-<span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">table</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">EXISTS</span> tb_user;
-
-<span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">table</span> tb_user (
-    id INT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> AUTO_INCREMENT,
-    username VARCHAR(<span style="color:#ae81ff">20</span>),
-    password VARCHAR(<span style="color:#ae81ff">20</span>),
-    gender CHAR(<span style="color:#ae81ff">1</span>),
-    addr VARCHAR(<span style="color:#ae81ff">30</span>)
-);
-
-<span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> tb_user <span style="color:#66d9ef">VALUES</span> (<span style="color:#66d9ef">NULL</span>, <span style="color:#e6db74">&#39;zhangsan&#39;</span>, <span style="color:#e6db74">&#39;123&#39;</span>, <span style="color:#e6db74">&#39;男&#39;</span>, <span style="color:#e6db74">&#39;北京&#39;</span>);
-<span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> tb_user <span style="color:#66d9ef">VALUES</span> (<span style="color:#66d9ef">NULL</span>, <span style="color:#e6db74">&#39;李四&#39;</span>, <span style="color:#e6db74">&#39;234&#39;</span>, <span style="color:#e6db74">&#39;女&#39;</span>, <span style="color:#e6db74">&#39;天津&#39;</span>);
-<span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> tb_user <span style="color:#66d9ef">VALUES</span> (<span style="color:#66d9ef">NULL</span>, <span style="color:#e6db74">&#39;王五&#39;</span>, <span style="color:#e6db74">&#39;11&#39;</span>, <span style="color:#e6db74">&#39;男&#39;</span>, <span style="color:#e6db74">&#39;西安&#39;</span>);
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> mybatis;
+</span></span><span style="display:flex;"><span>USE mybatis;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">table</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">EXISTS</span> tb_user;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">table</span> tb_user (
+</span></span><span style="display:flex;"><span>    id INT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> AUTO_INCREMENT,
+</span></span><span style="display:flex;"><span>    username VARCHAR(<span style="color:#ae81ff">20</span>),
+</span></span><span style="display:flex;"><span>    password VARCHAR(<span style="color:#ae81ff">20</span>),
+</span></span><span style="display:flex;"><span>    gender CHAR(<span style="color:#ae81ff">1</span>),
+</span></span><span style="display:flex;"><span>    addr VARCHAR(<span style="color:#ae81ff">30</span>)
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> tb_user <span style="color:#66d9ef">VALUES</span> (<span style="color:#66d9ef">NULL</span>, <span style="color:#e6db74">&#39;zhangsan&#39;</span>, <span style="color:#e6db74">&#39;123&#39;</span>, <span style="color:#e6db74">&#39;男&#39;</span>, <span style="color:#e6db74">&#39;北京&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> tb_user <span style="color:#66d9ef">VALUES</span> (<span style="color:#66d9ef">NULL</span>, <span style="color:#e6db74">&#39;李四&#39;</span>, <span style="color:#e6db74">&#39;234&#39;</span>, <span style="color:#e6db74">&#39;女&#39;</span>, <span style="color:#e6db74">&#39;天津&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> tb_user <span style="color:#66d9ef">VALUES</span> (<span style="color:#66d9ef">NULL</span>, <span style="color:#e6db74">&#39;王五&#39;</span>, <span style="color:#e6db74">&#39;11&#39;</span>, <span style="color:#e6db74">&#39;男&#39;</span>, <span style="color:#e6db74">&#39;西安&#39;</span>);
+</span></span></code></pre></div></li>
 <li>
 <p><code>pojo</code>包下定义 <code>User</code>实体类:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.linner.pojo<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">private</span> Integer id<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> String username<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> String password<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> String gender<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> String addr<span style="color:#f92672">;</span>
-
-    <span style="color:#66d9ef">public</span> Integer <span style="color:#a6e22e">getId</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> id<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setId</span><span style="color:#f92672">(</span>Integer id<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> id<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getUsername</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> username<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setUsername</span><span style="color:#f92672">(</span>String username<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">username</span> <span style="color:#f92672">=</span> username<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getPassword</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> password<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setPassword</span><span style="color:#f92672">(</span>String password<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">password</span> <span style="color:#f92672">=</span> password<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getGender</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> gender<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setGender</span><span style="color:#f92672">(</span>String gender<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">gender</span> <span style="color:#f92672">=</span> gender<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getAddr</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> addr<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setAddr</span><span style="color:#f92672">(</span>String addr<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">addr</span> <span style="color:#f92672">=</span> addr<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;User{&#34;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34;id=&#34;</span> <span style="color:#f92672">+</span> id <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34;, username=&#39;&#34;</span> <span style="color:#f92672">+</span> username <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;&#39;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34;, password=&#39;&#34;</span> <span style="color:#f92672">+</span> password <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;&#39;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34;, gender=&#39;&#34;</span> <span style="color:#f92672">+</span> gender <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;&#39;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34;, addr=&#39;&#34;</span> <span style="color:#f92672">+</span> addr <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;&#39;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#39;}&#39;</span><span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> com.linner.pojo<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Integer id<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String username<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String password<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String gender<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String addr<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Integer <span style="color:#a6e22e">getId</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> id<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setId</span><span style="color:#f92672">(</span>Integer id<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> id<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getUsername</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> username<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setUsername</span><span style="color:#f92672">(</span>String username<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">username</span> <span style="color:#f92672">=</span> username<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getPassword</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> password<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setPassword</span><span style="color:#f92672">(</span>String password<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">password</span> <span style="color:#f92672">=</span> password<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getGender</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> gender<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setGender</span><span style="color:#f92672">(</span>String gender<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">gender</span> <span style="color:#f92672">=</span> gender<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getAddr</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> addr<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setAddr</span><span style="color:#f92672">(</span>String addr<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">addr</span> <span style="color:#f92672">=</span> addr<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;User{&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;id=&#34;</span> <span style="color:#f92672">+</span> id <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;, username=&#39;&#34;</span> <span style="color:#f92672">+</span> username <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;&#39;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;, password=&#39;&#34;</span> <span style="color:#f92672">+</span> password <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;&#39;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;, gender=&#39;&#34;</span> <span style="color:#f92672">+</span> gender <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;&#39;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;, addr=&#39;&#34;</span> <span style="color:#f92672">+</span> addr <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;&#39;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;}&#39;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div></li>
 <li>
 <p><code>mapper</code>包下定义 <code>UserMapper</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.linner.pojo<span style="color:#f92672">;</span>
-
-<span style="color:#f92672">import</span> com.linner.pojo.User<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.apache.ibatis.annotations.Select<span style="color:#f92672">;</span>
-
-<span style="color:#f92672">import</span> java.util.List<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">UserMapper</span> <span style="color:#f92672">{</span>
-    List<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">selectAll</span><span style="color:#f92672">();</span>
-    User <span style="color:#a6e22e">selectById</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> id<span style="color:#f92672">);</span>
-    <span style="color:#75715e">// 更多操作接口
-</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> com.linner.pojo<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.linner.pojo.User<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.apache.ibatis.annotations.Select<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.List<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">UserMapper</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    List<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">selectAll</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    User <span style="color:#a6e22e">selectById</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> id<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 更多操作接口
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</span></span></code></pre></div></li>
 <li>
 <p>在 <code>resources</code>目录下创建与 <code>UserMapper</code>包名对应的路径，并添加 <code>UserMapper.xml</code>映射配置文件:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;</span>
-<span style="color:#75715e">&lt;!DOCTYPE mapper
-</span><span style="color:#75715e">        PUBLIC &#34;-//mybatis.org//DTD Mapper 3.0//EN&#34;
-</span><span style="color:#75715e">        &#34;http://mybatis.org/dtd/mybatis-3-mapper.dtd&#34;&gt;</span>
-
-<span style="color:#f92672">&lt;mapper</span> <span style="color:#a6e22e">namespace=</span><span style="color:#e6db74">&#34;com.linner.mapper.UserMapper&#34;</span><span style="color:#f92672">&gt;</span>
-    <span style="color:#75715e">&lt;!-- 
-</span><span style="color:#75715e">      select语句使用&lt;select&gt;
-</span><span style="color:#75715e">        id          为对应Mapper类中的方法名
-</span><span style="color:#75715e">        resultType  为对应的实体类, 使用了&lt;typeAliases&gt;包扫描, 省略了包名
-</span><span style="color:#75715e">     --&gt;</span>
-    <span style="color:#f92672">&lt;select</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;selectAll&#34;</span> <span style="color:#a6e22e">resultType=</span><span style="color:#e6db74">&#34;user&#34;</span><span style="color:#f92672">&gt;</span>
-        SELECT *
-        FROM tb_user;
-    <span style="color:#f92672">&lt;/select&gt;</span>
-
-    <span style="color:#f92672">&lt;select</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;selectById&#34;</span> <span style="color:#a6e22e">resultType=</span><span style="color:#e6db74">&#34;user&#34;</span><span style="color:#f92672">&gt;</span>
-        SELECT *
-        FROM tb_user
-        WHERE id = #{id};
-    <span style="color:#f92672">&lt;/select&gt;</span>
-
-    <span style="color:#75715e">&lt;!-- 更多XML映射 --&gt;</span>
-<span style="color:#f92672">&lt;/mapper&gt;</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE mapper
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        PUBLIC &#34;-//mybatis.org//DTD Mapper 3.0//EN&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        &#34;http://mybatis.org/dtd/mybatis-3-mapper.dtd&#34;&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;mapper</span> <span style="color:#a6e22e">namespace=</span><span style="color:#e6db74">&#34;com.linner.mapper.UserMapper&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- 
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">      select语句使用&lt;select&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        id          为对应Mapper类中的方法名
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        resultType  为对应的实体类, 使用了&lt;typeAliases&gt;包扫描, 省略了包名
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     --&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;select</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;selectAll&#34;</span> <span style="color:#a6e22e">resultType=</span><span style="color:#e6db74">&#34;user&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        SELECT *
+</span></span><span style="display:flex;"><span>        FROM tb_user;
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/select&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;select</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;selectById&#34;</span> <span style="color:#a6e22e">resultType=</span><span style="color:#e6db74">&#34;user&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        SELECT *
+</span></span><span style="display:flex;"><span>        FROM tb_user
+</span></span><span style="display:flex;"><span>        WHERE id = #{id};
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/select&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- 更多XML映射 --&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/mapper&gt;</span>
+</span></span></code></pre></div></li>
 <li>
 <p><code>resources</code>目录下，配置 <code>mybatis-config.xml</code>文件:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;</span>
-<span style="color:#75715e">&lt;!DOCTYPE configuration
-</span><span style="color:#75715e">        PUBLIC &#34;-//mybatis.org//DTD Config 3.0//EN&#34;
-</span><span style="color:#75715e">        &#34;http://mybatis.org/dtd/mybatis-3-config.dtd&#34;&gt;</span>
-<span style="color:#f92672">&lt;configuration&gt;</span>
-    <span style="color:#75715e">&lt;!-- 别名或包扫描 --&gt;</span>
-    <span style="color:#75715e">&lt;!-- 使用别名可以简化映射配置文件中 resultType 属性值的编写 --&gt;</span>
-    <span style="color:#f92672">&lt;typeAliases&gt;</span>
-        <span style="color:#f92672">&lt;package</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;com.linner.pojo&#34;</span><span style="color:#f92672">/&gt;</span>
-    <span style="color:#f92672">&lt;/typeAliases&gt;</span>
-    <span style="color:#f92672">&lt;environments</span> <span style="color:#a6e22e">default=</span><span style="color:#e6db74">&#34;development&#34;</span><span style="color:#f92672">&gt;</span>
-        <span style="color:#f92672">&lt;environment</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;development&#34;</span><span style="color:#f92672">&gt;</span>
-            <span style="color:#f92672">&lt;transactionManager</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;JDBC&#34;</span><span style="color:#f92672">/&gt;</span>
-            <span style="color:#f92672">&lt;dataSource</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;POOLED&#34;</span><span style="color:#f92672">&gt;</span>
-                <span style="color:#75715e">&lt;!-- 数据库连接信息 --&gt;</span>
-                <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;driver&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;com.mysql.jdbc.Driver&#34;</span><span style="color:#f92672">/&gt;</span>
-                <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;url&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;jdbc:mysql:///mybatis?useSSL=false&amp;useServerPerpStmts=true&amp;characterEncoding=UTF-8&#34;</span><span style="color:#f92672">/&gt;</span>
-                <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;username&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;root&#34;</span><span style="color:#f92672">/&gt;</span>
-                <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;1234&#34;</span><span style="color:#f92672">/&gt;</span>
-            <span style="color:#f92672">&lt;/dataSource&gt;</span>
-        <span style="color:#f92672">&lt;/environment&gt;</span>
-    <span style="color:#f92672">&lt;/environments&gt;</span>
-    <span style="color:#f92672">&lt;mappers&gt;</span>
-        <span style="color:#75715e">&lt;!-- Mapper代理方式--&gt;</span>
-        <span style="color:#f92672">&lt;package</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;com.linner.mapper&#34;</span><span style="color:#f92672">/&gt;</span>
-    <span style="color:#f92672">&lt;/mappers&gt;</span>
-<span style="color:#f92672">&lt;/configuration&gt;</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; ?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE configuration
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        PUBLIC &#34;-//mybatis.org//DTD Config 3.0//EN&#34;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        &#34;http://mybatis.org/dtd/mybatis-3-config.dtd&#34;&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;configuration&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- 别名或包扫描 --&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- 使用别名可以简化映射配置文件中 resultType 属性值的编写 --&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;typeAliases&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;package</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;com.linner.pojo&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/typeAliases&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;environments</span> <span style="color:#a6e22e">default=</span><span style="color:#e6db74">&#34;development&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;environment</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;development&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;transactionManager</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;JDBC&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;dataSource</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;POOLED&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">&lt;!-- 数据库连接信息 --&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;driver&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;com.mysql.jdbc.Driver&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;url&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;jdbc:mysql:///mybatis?useSSL=false&amp;useServerPerpStmts=true&amp;characterEncoding=UTF-8&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;username&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;root&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;1234&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/dataSource&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/environment&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/environments&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;mappers&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&lt;!-- Mapper代理方式--&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;package</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;com.linner.mapper&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/mappers&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/configuration&gt;</span>
+</span></span></code></pre></div></li>
 <li>
 <p>编写测试类:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.linner.test<span style="color:#f92672">;</span>
-
-<span style="color:#f92672">import</span> com.linner.mapper.UserMapper<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> com.linner.pojo.User<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.apache.ibatis.io.Resources<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.apache.ibatis.session.SqlSession<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.apache.ibatis.session.SqlSessionFactory<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.apache.ibatis.session.SqlSessionFactoryBuilder<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> org.junit.Test<span style="color:#f92672">;</span>
-
-<span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.io.InputStream<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.util.List<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserMapperTest</span> <span style="color:#f92672">{</span>
-
-    <span style="color:#a6e22e">@Test</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testSelectAll</span><span style="color:#f92672">()</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
-        <span style="color:#75715e">// 1. 加载mybatis的核心配置文件,获取SqlSessionFactory
-</span><span style="color:#75715e"></span>        String resource <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;./mybatis-config.xml&#34;</span><span style="color:#f92672">;</span>
-        InputStream inputStream <span style="color:#f92672">=</span> Resources<span style="color:#f92672">.</span><span style="color:#a6e22e">getResourceAsStream</span><span style="color:#f92672">(</span>resource<span style="color:#f92672">);</span>
-        SqlSessionFactory sqlSessionFactory <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SqlSessionFactoryBuilder<span style="color:#f92672">().</span><span style="color:#a6e22e">build</span><span style="color:#f92672">(</span>inputStream<span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// 2. 获取SqlSession对象,用它来执行SQL
-</span><span style="color:#75715e"></span>        SqlSession sqlSession <span style="color:#f92672">=</span> sqlSessionFactory<span style="color:#f92672">.</span><span style="color:#a6e22e">openSession</span><span style="color:#f92672">();</span>
-
-        <span style="color:#75715e">// 3. 执行sql语句
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">// 3.1 方式一:
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">// List&lt;User&gt; users = sqlSession.selectList(&#34;com.linner.mapper.UserMapper.selectAll&#34;);
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">// 3.2 方式二:
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">// 3.2.1 获取UserMapper接口的代理对象
-</span><span style="color:#75715e"></span>        UserMapper userMapper <span style="color:#f92672">=</span> sqlSession<span style="color:#f92672">.</span><span style="color:#a6e22e">getMapper</span><span style="color:#f92672">(</span>UserMapper<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
-        <span style="color:#75715e">// 3.2.2 执行对应Mapper对象的方法
-</span><span style="color:#75715e"></span>        List<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> users <span style="color:#f92672">=</span> userMapper<span style="color:#f92672">.</span><span style="color:#a6e22e">selectAll</span><span style="color:#f92672">();</span>
-
-        <span style="color:#75715e">// 4. 处理数据(模拟)
-</span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>users<span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// 5. 释放资源(仅需释放SqlSession对象)
-</span><span style="color:#75715e"></span>        sqlSession<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#a6e22e">@Test</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testSelectById</span><span style="color:#f92672">()</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
-        <span style="color:#75715e">// 模拟接收参数
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> id <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
-
-        <span style="color:#75715e">// 1. 获取sqlSessionFactory
-</span><span style="color:#75715e"></span>        String resource <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;./mybatis-config.xml&#34;</span><span style="color:#f92672">;</span>
-        InputStream inputStream <span style="color:#f92672">=</span> Resources<span style="color:#f92672">.</span><span style="color:#a6e22e">getResourceAsStream</span><span style="color:#f92672">(</span>resource<span style="color:#f92672">);</span>
-        SqlSessionFactory sqlSessionFactory <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SqlSessionFactoryBuilder<span style="color:#f92672">().</span><span style="color:#a6e22e">build</span><span style="color:#f92672">(</span>inputStream<span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// 2. 获取SqlSession对象
-</span><span style="color:#75715e"></span>        SqlSession sqlSession <span style="color:#f92672">=</span> sqlSessionFactory<span style="color:#f92672">.</span><span style="color:#a6e22e">openSession</span><span style="color:#f92672">();</span>
-
-        <span style="color:#75715e">// 3. 获取Mapper接口的代理对象
-</span><span style="color:#75715e"></span>        UserMapper userMapper <span style="color:#f92672">=</span> sqlSession<span style="color:#f92672">.</span><span style="color:#a6e22e">getMapper</span><span style="color:#f92672">(</span>UserMapper<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// 4. 执行方法
-</span><span style="color:#75715e"></span>        User user <span style="color:#f92672">=</span> userMapper<span style="color:#f92672">.</span><span style="color:#a6e22e">selectById</span><span style="color:#f92672">(</span>id<span style="color:#f92672">);</span>
-        <span style="color:#75715e">// 5. 处理数据(模拟)
-</span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>user<span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// 6. 释放资源
-</span><span style="color:#75715e"></span>        sqlSession<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> com.linner.test<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.linner.mapper.UserMapper<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.linner.pojo.User<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.apache.ibatis.io.Resources<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.apache.ibatis.session.SqlSession<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.apache.ibatis.session.SqlSessionFactory<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.apache.ibatis.session.SqlSessionFactoryBuilder<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> org.junit.Test<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.InputStream<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.util.List<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserMapperTest</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Test</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testSelectAll</span><span style="color:#f92672">()</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 1. 加载mybatis的核心配置文件,获取SqlSessionFactory
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        String resource <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;./mybatis-config.xml&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        InputStream inputStream <span style="color:#f92672">=</span> Resources<span style="color:#f92672">.</span><span style="color:#a6e22e">getResourceAsStream</span><span style="color:#f92672">(</span>resource<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        SqlSessionFactory sqlSessionFactory <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SqlSessionFactoryBuilder<span style="color:#f92672">().</span><span style="color:#a6e22e">build</span><span style="color:#f92672">(</span>inputStream<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 2. 获取SqlSession对象,用它来执行SQL
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        SqlSession sqlSession <span style="color:#f92672">=</span> sqlSessionFactory<span style="color:#f92672">.</span><span style="color:#a6e22e">openSession</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 3. 执行sql语句
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// 3.1 方式一:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// List&lt;User&gt; users = sqlSession.selectList(&#34;com.linner.mapper.UserMapper.selectAll&#34;);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// 3.2 方式二:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// 3.2.1 获取UserMapper接口的代理对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        UserMapper userMapper <span style="color:#f92672">=</span> sqlSession<span style="color:#f92672">.</span><span style="color:#a6e22e">getMapper</span><span style="color:#f92672">(</span>UserMapper<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 3.2.2 执行对应Mapper对象的方法
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        List<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> users <span style="color:#f92672">=</span> userMapper<span style="color:#f92672">.</span><span style="color:#a6e22e">selectAll</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 4. 处理数据(模拟)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>users<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 5. 释放资源(仅需释放SqlSession对象)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        sqlSession<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Test</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">testSelectById</span><span style="color:#f92672">()</span> <span style="color:#66d9ef">throws</span> IOException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 模拟接收参数
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> id <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 1. 获取sqlSessionFactory
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        String resource <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;./mybatis-config.xml&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        InputStream inputStream <span style="color:#f92672">=</span> Resources<span style="color:#f92672">.</span><span style="color:#a6e22e">getResourceAsStream</span><span style="color:#f92672">(</span>resource<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        SqlSessionFactory sqlSessionFactory <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SqlSessionFactoryBuilder<span style="color:#f92672">().</span><span style="color:#a6e22e">build</span><span style="color:#f92672">(</span>inputStream<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 2. 获取SqlSession对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        SqlSession sqlSession <span style="color:#f92672">=</span> sqlSessionFactory<span style="color:#f92672">.</span><span style="color:#a6e22e">openSession</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 3. 获取Mapper接口的代理对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        UserMapper userMapper <span style="color:#f92672">=</span> sqlSession<span style="color:#f92672">.</span><span style="color:#a6e22e">getMapper</span><span style="color:#f92672">(</span>UserMapper<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 4. 执行方法
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        User user <span style="color:#f92672">=</span> userMapper<span style="color:#f92672">.</span><span style="color:#a6e22e">selectById</span><span style="color:#f92672">(</span>id<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 5. 处理数据(模拟)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>user<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 6. 释放资源
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        sqlSession<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div></li>
 </ul>
 <hr>
 <h1 id="xml-映射器">XML 映射器</h1>
@@ -788,46 +788,46 @@ USE mybatis;
 <h2 id="select">Select</h2>
 <h3 id="查询所有数据">查询所有数据</h3>
 <p><code>xml</code> 配置文件：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;select</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;selectAll&#34;</span> <span style="color:#a6e22e">resultType=</span><span style="color:#e6db74">&#34;user&#34;</span><span style="color:#f92672">&gt;</span>
-    SELECT *
-    FROM tb_user
-<span style="color:#f92672">&lt;/select&gt;</span>
-</code></pre></div><p><code>Mapper</code> 接口方法：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">List<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">selectAll</span><span style="color:#f92672">();</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;select</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;selectAll&#34;</span> <span style="color:#a6e22e">resultType=</span><span style="color:#e6db74">&#34;user&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    SELECT *
+</span></span><span style="display:flex;"><span>    FROM tb_user
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/select&gt;</span>
+</span></span></code></pre></div><p><code>Mapper</code> 接口方法：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>List<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">selectAll</span><span style="color:#f92672">();</span>
+</span></span></code></pre></div><ul>
 <li><code>id</code>：相应 <code>Mapper</code> 接口中的方法名。</li>
 <li><code>resultType</code>：相应 <code>Mapper</code> 接口中的返回值类型（可自动封装为对象，不区分大小写）。</li>
 <li><code>Mapper</code> 接口返回值：返回一个<code>List&lt;User&gt;</code>。这个返回值可以是<code>User</code>、<code>List&lt;User&gt;</code>或<code>ArrayList&lt;User&gt;</code>等，MyBatis会根据返回值自动封装。</li>
 </ul>
 <h3 id="根据id字段查询">根据id字段查询</h3>
 <p><code>xml</code> 配置文件：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;select</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;selectById&#34;</span> <span style="color:#a6e22e">resultType=</span><span style="color:#e6db74">&#34;user&#34;</span><span style="color:#f92672">&gt;</span>
-    SELECT * FROM tb_user WHERE id = #{id};
-<span style="color:#f92672">&lt;/select&gt;</span>
-</code></pre></div><p><code>Mapper</code> 接口方法：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">User <span style="color:#a6e22e">selectById</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> id<span style="color:#f92672">);</span>
-</code></pre></div><p><code>&lt;select&gt;</code>中，<code>#{id}</code>为相应 <code>Mapper</code> 接口中的参数 <code>id</code>。<code>#{id}</code>被称为参数占位符，相当于JDBC中的<code>?</code>占位符。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;select</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;selectById&#34;</span> <span style="color:#a6e22e">resultType=</span><span style="color:#e6db74">&#34;user&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    SELECT * FROM tb_user WHERE id = #{id};
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/select&gt;</span>
+</span></span></code></pre></div><p><code>Mapper</code> 接口方法：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>User <span style="color:#a6e22e">selectById</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> id<span style="color:#f92672">);</span>
+</span></span></code></pre></div><p><code>&lt;select&gt;</code>中，<code>#{id}</code>为相应 <code>Mapper</code> 接口中的参数 <code>id</code>。<code>#{id}</code>被称为参数占位符，相当于JDBC中的<code>?</code>占位符。</p>
 <h3 id="多条件动态查询">多条件动态查询</h3>
 <p><code>xml</code> 配置文件：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;select</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;selectByCondition&#34;</span> <span style="color:#a6e22e">resultType=</span><span style="color:#e6db74">&#34;user&#34;</span><span style="color:#f92672">&gt;</span>
-    SELECT *
-    FROM tb_user
-    <span style="color:#f92672">&lt;where&gt;</span>
-        <span style="color:#f92672">&lt;if</span> <span style="color:#a6e22e">test=</span><span style="color:#e6db74">&#34;username != null and username != &#39;&#39; &#34;</span><span style="color:#f92672">&gt;</span>
-            username = #{username}
-        <span style="color:#f92672">&lt;/if&gt;</span>
-        <span style="color:#f92672">&lt;if</span> <span style="color:#a6e22e">test=</span><span style="color:#e6db74">&#34;password != null and password != &#39;&#39; &#34;</span><span style="color:#f92672">&gt;</span>
-            AND password = #{password}
-        <span style="color:#f92672">&lt;/if&gt;</span>
-        <span style="color:#f92672">&lt;if</span> <span style="color:#a6e22e">test=</span><span style="color:#e6db74">&#34;gender != null and gender != &#39;&#39; &#34;</span><span style="color:#f92672">&gt;</span>
-            AND gender = #{gender}
-        <span style="color:#f92672">&lt;/if&gt;</span>
-        <span style="color:#f92672">&lt;if</span> <span style="color:#a6e22e">test=</span><span style="color:#e6db74">&#34;addr != null and addr != &#39;&#39; &#34;</span><span style="color:#f92672">&gt;</span>
-            AND addr = #{addr}
-        <span style="color:#f92672">&lt;/if&gt;</span>
-    <span style="color:#f92672">&lt;/where&gt;</span>
-<span style="color:#f92672">&lt;/select&gt;</span>
-</code></pre></div><p>多条件查询使用了动态SQL<code>&lt;where&gt;</code>和<code>&lt;if&gt;</code>。如果仅需查询某部分字段，仅仅使用SQL语句在实现上有难度。而Mybatis就提供了<u>动态SQL</u>方便了我们的实现。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;select</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;selectByCondition&#34;</span> <span style="color:#a6e22e">resultType=</span><span style="color:#e6db74">&#34;user&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    SELECT *
+</span></span><span style="display:flex;"><span>    FROM tb_user
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;where&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;if</span> <span style="color:#a6e22e">test=</span><span style="color:#e6db74">&#34;username != null and username != &#39;&#39; &#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            username = #{username}
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/if&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;if</span> <span style="color:#a6e22e">test=</span><span style="color:#e6db74">&#34;password != null and password != &#39;&#39; &#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            AND password = #{password}
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/if&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;if</span> <span style="color:#a6e22e">test=</span><span style="color:#e6db74">&#34;gender != null and gender != &#39;&#39; &#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            AND gender = #{gender}
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/if&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;if</span> <span style="color:#a6e22e">test=</span><span style="color:#e6db74">&#34;addr != null and addr != &#39;&#39; &#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            AND addr = #{addr}
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/if&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/where&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/select&gt;</span>
+</span></span></code></pre></div><p>多条件查询使用了动态SQL<code>&lt;where&gt;</code>和<code>&lt;if&gt;</code>。如果仅需查询某部分字段，仅仅使用SQL语句在实现上有难度。而Mybatis就提供了<u>动态SQL</u>方便了我们的实现。</p>
 <ul>
 <li>
 <p><code>&lt;if&gt;</code>：能根据<code>User</code>对象的值来决定是否在SQL语句中加入其包含的语句。</p>
@@ -839,43 +839,43 @@ USE mybatis;
 </ul>
 <h3 id="单条件动态查询">单条件动态查询</h3>
 <p><code>xml</code> 配置文件：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;select</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;selectByConditionSingle&#34;</span> <span style="color:#a6e22e">resultMap=</span><span style="color:#e6db74">&#34;brandResultMap&#34;</span><span style="color:#f92672">&gt;</span>
-    SELECT *
-    FROM tb_brand
-    <span style="color:#f92672">&lt;where&gt;</span><span style="color:#75715e">&lt;!--使用where标签确保不会出错--&gt;</span>
-        <span style="color:#f92672">&lt;choose&gt;</span><span style="color:#75715e">&lt;!--相当于switch--&gt;</span>
-            <span style="color:#f92672">&lt;when</span> <span style="color:#a6e22e">test=</span><span style="color:#e6db74">&#34;status != null&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#75715e">&lt;!--相当于case--&gt;</span>
-                status = #{status}
-            <span style="color:#f92672">&lt;/when&gt;</span>
-            <span style="color:#f92672">&lt;when</span> <span style="color:#a6e22e">test=</span><span style="color:#e6db74">&#34;companyName != null and companyName != &#39;&#39; &#34;</span><span style="color:#f92672">&gt;</span><span style="color:#75715e">&lt;!--相当于case--&gt;</span>
-                company_name like #{companyName}
-            <span style="color:#f92672">&lt;/when&gt;</span>
-            <span style="color:#f92672">&lt;when</span> <span style="color:#a6e22e">test=</span><span style="color:#e6db74">&#34;brandName != null and brandName != &#39;&#39; &#34;</span><span style="color:#f92672">&gt;</span><span style="color:#75715e">&lt;!--相当于case--&gt;</span>
-                brand_name like #{brandName}
-            <span style="color:#f92672">&lt;/when&gt;</span>
-            <span style="color:#75715e">&lt;!--没有条件输入很可能会报错,使用&lt;otherwise&gt;保底--&gt;</span>
-            <span style="color:#75715e">&lt;!--如果没有使用&lt;where&gt;，则必须使用&lt;otherwise&gt;--&gt;</span>
-            <span style="color:#75715e">&lt;!--&lt;otherwise&gt;
-</span><span style="color:#75715e">                1 = 1
-</span><span style="color:#75715e">            &lt;/otherwise&gt;--&gt;</span>
-        <span style="color:#f92672">&lt;/choose&gt;</span>
-    <span style="color:#f92672">&lt;/where&gt;</span>
-<span style="color:#f92672">&lt;/select&gt;</span>
-</code></pre></div><p>单条件动态查询使用了<code>&lt;where&gt;</code>、<code>&lt;choose&gt;</code>、<code>&lt;when&gt;</code>和<code>&lt;otherwise&gt;</code>，它们都是MyBatis提供的动态SQL元素。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;select</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;selectByConditionSingle&#34;</span> <span style="color:#a6e22e">resultMap=</span><span style="color:#e6db74">&#34;brandResultMap&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    SELECT *
+</span></span><span style="display:flex;"><span>    FROM tb_brand
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;where&gt;</span><span style="color:#75715e">&lt;!--使用where标签确保不会出错--&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;choose&gt;</span><span style="color:#75715e">&lt;!--相当于switch--&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;when</span> <span style="color:#a6e22e">test=</span><span style="color:#e6db74">&#34;status != null&#34;</span><span style="color:#f92672">&gt;</span><span style="color:#75715e">&lt;!--相当于case--&gt;</span>
+</span></span><span style="display:flex;"><span>                status = #{status}
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/when&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;when</span> <span style="color:#a6e22e">test=</span><span style="color:#e6db74">&#34;companyName != null and companyName != &#39;&#39; &#34;</span><span style="color:#f92672">&gt;</span><span style="color:#75715e">&lt;!--相当于case--&gt;</span>
+</span></span><span style="display:flex;"><span>                company_name like #{companyName}
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/when&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;when</span> <span style="color:#a6e22e">test=</span><span style="color:#e6db74">&#34;brandName != null and brandName != &#39;&#39; &#34;</span><span style="color:#f92672">&gt;</span><span style="color:#75715e">&lt;!--相当于case--&gt;</span>
+</span></span><span style="display:flex;"><span>                brand_name like #{brandName}
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/when&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">&lt;!--没有条件输入很可能会报错,使用&lt;otherwise&gt;保底--&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">&lt;!--如果没有使用&lt;where&gt;，则必须使用&lt;otherwise&gt;--&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">&lt;!--&lt;otherwise&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">                1 = 1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">            &lt;/otherwise&gt;--&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/choose&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/where&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/select&gt;</span>
+</span></span></code></pre></div><p>单条件动态查询使用了<code>&lt;where&gt;</code>、<code>&lt;choose&gt;</code>、<code>&lt;when&gt;</code>和<code>&lt;otherwise&gt;</code>，它们都是MyBatis提供的动态SQL元素。</p>
 <p><code>&lt;choose&gt;</code>与<code>&lt;when&gt;</code>（必须）和<code>&lt;otherwise&gt;</code>元素配合使用。它会根据子元素<code>&lt;when&gt;</code>的<code>test</code>属性来判断要选择哪个<code>&lt;when&gt;</code>或<code>&lt;otherwise&gt;</code>元素。</p>
 <p>如果<code>&lt;choose&gt;</code>外没有被<code>&lt;where&gt;</code>包裹则必须使用<code>&lt;otherwise&gt;</code>来包裹一个永真的条件SQL语句，以确保SQL语句不会出错。如果被<code>&lt;where&gt;</code>包裹了，<code>&lt;where&gt;</code>会根据需要判断是否要添加<code>WHERE</code>子句。</p>
 <p><code>&lt;choose&gt;</code>、<code>&lt;when&gt;</code>和<code>&lt;otherwise&gt;</code>与<code>switch</code>语句的作用十分相似。</p>
 <h2 id="insert">Insert</h2>
 <p><code>xml</code> 配置文件：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;insert</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;add&#34;</span> <span style="color:#a6e22e">useGeneratedKeys=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#a6e22e">keyProperty=</span><span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">&gt;</span>
-    INSERT INTO tb_user (username, password, ordered, gender,
-                          addr)
-    VALUES (#{username}, #{password}, #{ordered}, #{gender},
-            #{addr});
-<span style="color:#f92672">&lt;/insert&gt;</span>
-</code></pre></div><p><code>Mapper</code> 接口方法：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>User user<span style="color:#f92672">);</span>
-</code></pre></div><p>接口方法直接传入对象即可，对象成员要与 <code>VALUES</code> 子句中的参数一一对应（参数符号中的名称要与对象的成员名称相同）。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;insert</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;add&#34;</span> <span style="color:#a6e22e">useGeneratedKeys=</span><span style="color:#e6db74">&#34;true&#34;</span> <span style="color:#a6e22e">keyProperty=</span><span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    INSERT INTO tb_user (username, password, ordered, gender,
+</span></span><span style="display:flex;"><span>                          addr)
+</span></span><span style="display:flex;"><span>    VALUES (#{username}, #{password}, #{ordered}, #{gender},
+</span></span><span style="display:flex;"><span>            #{addr});
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/insert&gt;</span>
+</span></span></code></pre></div><p><code>Mapper</code> 接口方法：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>User user<span style="color:#f92672">);</span>
+</span></span></code></pre></div><p>接口方法直接传入对象即可，对象成员要与 <code>VALUES</code> 子句中的参数一一对应（参数符号中的名称要与对象的成员名称相同）。</p>
 <blockquote>
 <p>如果XML映射中只有一个参数，那么这个参数的名称不必与接口的参数名称相同。</p>
 </blockquote>
@@ -902,62 +902,62 @@ USE mybatis;
 </ul>
 <h2 id="update">Update</h2>
 <p><code>xml</code> 配置文件：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;update</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;update&#34;</span><span style="color:#f92672">&gt;</span>
-    UPDATE tb_user
-    <span style="color:#f92672">&lt;set&gt;</span>
-        <span style="color:#f92672">&lt;if</span> <span style="color:#a6e22e">test=</span><span style="color:#e6db74">&#34;username != null and username != &#39;&#39; &#34;</span><span style="color:#f92672">&gt;</span>
-            username = #{username},
-        <span style="color:#f92672">&lt;/if&gt;</span>
-        <span style="color:#f92672">&lt;if</span> <span style="color:#a6e22e">test=</span><span style="color:#e6db74">&#34;password != null and password != &#39;&#39; &#34;</span><span style="color:#f92672">&gt;</span>
-            password = #{password},
-        <span style="color:#f92672">&lt;/if&gt;</span>
-        <span style="color:#f92672">&lt;if</span> <span style="color:#a6e22e">test=</span><span style="color:#e6db74">&#34;ordered != null&#34;</span><span style="color:#f92672">&gt;</span>
-            ordered = #{ordered},
-        <span style="color:#f92672">&lt;/if&gt;</span>
-        <span style="color:#f92672">&lt;if</span> <span style="color:#a6e22e">test=</span><span style="color:#e6db74">&#34;gender != null and (gender == &#39;男&#39; or gender == &#39;女&#39;)&#34;</span><span style="color:#f92672">&gt;</span>
-            gender = #{gender},
-        <span style="color:#f92672">&lt;/if&gt;</span>
-        <span style="color:#f92672">&lt;if</span> <span style="color:#a6e22e">test=</span><span style="color:#e6db74">&#34;addr != null and addr != &#39;&#39;&#34;</span><span style="color:#f92672">&gt;</span>
-            addr = #{addr}
-        <span style="color:#f92672">&lt;/if&gt;</span>
-    <span style="color:#f92672">&lt;/set&gt;</span>
-    WHERE id = #{id};
-<span style="color:#f92672">&lt;/update&gt;</span>
-</code></pre></div><p><code>Mapper</code> 接口方法：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">update</span><span style="color:#f92672">(</span>User user<span style="color:#f92672">);</span>
-</code></pre></div><p>在 <code>&lt;update&gt;</code> 中有一些用 <code>&lt;set&gt;</code> 包裹起来的 <code>&lt;if&gt;</code>。这是因为需要使用 <code>&lt;set&gt;</code> 动态包含需要更新的列，忽略其它不更新的列。从而能根据<code>User</code>对象的值来决定要更新哪些数据，并且动态地改变SQL语句。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;update</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;update&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    UPDATE tb_user
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;set&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;if</span> <span style="color:#a6e22e">test=</span><span style="color:#e6db74">&#34;username != null and username != &#39;&#39; &#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            username = #{username},
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/if&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;if</span> <span style="color:#a6e22e">test=</span><span style="color:#e6db74">&#34;password != null and password != &#39;&#39; &#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            password = #{password},
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/if&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;if</span> <span style="color:#a6e22e">test=</span><span style="color:#e6db74">&#34;ordered != null&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            ordered = #{ordered},
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/if&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;if</span> <span style="color:#a6e22e">test=</span><span style="color:#e6db74">&#34;gender != null and (gender == &#39;男&#39; or gender == &#39;女&#39;)&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            gender = #{gender},
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/if&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;if</span> <span style="color:#a6e22e">test=</span><span style="color:#e6db74">&#34;addr != null and addr != &#39;&#39;&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>            addr = #{addr}
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/if&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/set&gt;</span>
+</span></span><span style="display:flex;"><span>    WHERE id = #{id};
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/update&gt;</span>
+</span></span></code></pre></div><p><code>Mapper</code> 接口方法：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">update</span><span style="color:#f92672">(</span>User user<span style="color:#f92672">);</span>
+</span></span></code></pre></div><p>在 <code>&lt;update&gt;</code> 中有一些用 <code>&lt;set&gt;</code> 包裹起来的 <code>&lt;if&gt;</code>。这是因为需要使用 <code>&lt;set&gt;</code> 动态包含需要更新的列，忽略其它不更新的列。从而能根据<code>User</code>对象的值来决定要更新哪些数据，并且动态地改变SQL语句。</p>
 <p>Update的Mapper接口返回值是<code>int</code>类型，返回更新的行数。同样可以将接口的返回值设置为<code>void</code>来忽略它。</p>
 <h2 id="delete">Delete</h2>
 <h3 id="删除单行数据">删除单行数据</h3>
 <p><code>xml</code> 配置文件：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;delete</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;deleteById&#34;</span><span style="color:#f92672">&gt;</span>
-    DELETE
-    FROM tb_user
-    WHERE id = #{id};
-<span style="color:#f92672">&lt;/delete&gt;</span>
-</code></pre></div><p><code>Mapper</code> 接口方法：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">deleteById</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> id<span style="color:#f92672">);</span>
-</code></pre></div><h3 id="删除多行数据">删除多行数据</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;delete</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;deleteById&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    DELETE
+</span></span><span style="display:flex;"><span>    FROM tb_user
+</span></span><span style="display:flex;"><span>    WHERE id = #{id};
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/delete&gt;</span>
+</span></span></code></pre></div><p><code>Mapper</code> 接口方法：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">deleteById</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> id<span style="color:#f92672">);</span>
+</span></span></code></pre></div><h3 id="删除多行数据">删除多行数据</h3>
 <p><code>xml</code> 配置文件：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;delete</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;deleteByIds&#34;</span><span style="color:#f92672">&gt;</span>
-    DELETE
-    FROM tb_brand
-    WHERE id
-    IN
-    <span style="color:#75715e">&lt;!--
-</span><span style="color:#75715e">        &lt;foreach&gt;参数:
-</span><span style="color:#75715e">            - item: 代表数组参数中的每个元素
-</span><span style="color:#75715e">            - separator: 分隔符
-</span><span style="color:#75715e">            - open: 插入开始符
-</span><span style="color:#75715e">            - close: 插入结束符
-</span><span style="color:#75715e">    --&gt;</span>
-    <span style="color:#f92672">&lt;foreach</span> <span style="color:#a6e22e">collection=</span><span style="color:#e6db74">&#34;ids&#34;</span> <span style="color:#a6e22e">item=</span><span style="color:#e6db74">&#34;id&#34;</span> <span style="color:#a6e22e">separator=</span><span style="color:#e6db74">&#34;,&#34;</span> <span style="color:#a6e22e">open=</span><span style="color:#e6db74">&#34;(&#34;</span> <span style="color:#a6e22e">close=</span><span style="color:#e6db74">&#34;)&#34;</span><span style="color:#f92672">&gt;</span>
-        #{id}
-    <span style="color:#f92672">&lt;/foreach&gt;</span>
-<span style="color:#f92672">&lt;/delete&gt;</span>
-</code></pre></div><p><code>Mapper</code> 接口方法：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">deleteByIds</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@Param</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;ids&#34;</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> ids<span style="color:#f92672">);</span>
-</code></pre></div><p>Mybatis提供了 <code>&lt;foreach&gt;</code> 标签遍历数组，拼接SQL语句。<code>&lt;foreach&gt;</code> 同样也是<u>动态SQL</u>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;delete</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;deleteByIds&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    DELETE
+</span></span><span style="display:flex;"><span>    FROM tb_brand
+</span></span><span style="display:flex;"><span>    WHERE id
+</span></span><span style="display:flex;"><span>    IN
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!--
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        &lt;foreach&gt;参数:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">            - item: 代表数组参数中的每个元素
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">            - separator: 分隔符
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">            - open: 插入开始符
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">            - close: 插入结束符
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    --&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;foreach</span> <span style="color:#a6e22e">collection=</span><span style="color:#e6db74">&#34;ids&#34;</span> <span style="color:#a6e22e">item=</span><span style="color:#e6db74">&#34;id&#34;</span> <span style="color:#a6e22e">separator=</span><span style="color:#e6db74">&#34;,&#34;</span> <span style="color:#a6e22e">open=</span><span style="color:#e6db74">&#34;(&#34;</span> <span style="color:#a6e22e">close=</span><span style="color:#e6db74">&#34;)&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>        #{id}
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/foreach&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/delete&gt;</span>
+</span></span></code></pre></div><p><code>Mapper</code> 接口方法：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">deleteByIds</span><span style="color:#f92672">(</span><span style="color:#a6e22e">@Param</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;ids&#34;</span><span style="color:#f92672">)</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> ids<span style="color:#f92672">);</span>
+</span></span></code></pre></div><p>Mybatis提供了 <code>&lt;foreach&gt;</code> 标签遍历数组，拼接SQL语句。<code>&lt;foreach&gt;</code> 同样也是<u>动态SQL</u>。</p>
 <blockquote>
 <p>更多XML映射器请查看官方文档：<a class="link" href="https://mybatis.net.cn/sqlmap-xml.html"  target="_blank" rel="noopener"
     >MyBatis文档——XML映射器</a></p>
@@ -965,74 +965,74 @@ USE mybatis;
 <h2 id="结果映射">结果映射</h2>
 <h3 id="resultmap">resultMap</h3>
 <p>假设SQL表中的字段与实体类的成员变量名无法一一对应，会导致SQL语句的传参出现问题。例如：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">table</span> tb_user (
-    user_id INT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> AUTO_INCREMENT,
-    user_name VARCHAR(<span style="color:#ae81ff">20</span>),
-    user_password VARCHAR(<span style="color:#ae81ff">20</span>),
-    user_gender CHAR(<span style="color:#ae81ff">1</span>),
-    user_addr VARCHAR(<span style="color:#ae81ff">30</span>)
-);
-</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">private</span> Integer id<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> String username<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> String password<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> String gender<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> String addr<span style="color:#f92672">;</span>
-
-    <span style="color:#75715e">// setter 和 getter
-</span><span style="color:#75715e"></span>    <span style="color:#75715e">// ...
-</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</code></pre></div><p>那么可以使用<code>&lt;resultMap&gt;</code>元素来对表字段和成员名做一个映射（结果映射）：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;!--
-</span><span style="color:#75715e">    &lt;resultMap&gt;:
-</span><span style="color:#75715e">        - id: 唯一标识
-</span><span style="color:#75715e">        - type: 映射的类型,支持别名
-</span><span style="color:#75715e">--&gt;</span>
-<span style="color:#f92672">&lt;resultMap</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;userResultMap&#34;</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;user&#34;</span><span style="color:#f92672">&gt;</span>
-    <span style="color:#75715e">&lt;!--
-</span><span style="color:#75715e">        两种标签:
-</span><span style="color:#75715e">            - &lt;id&gt;: 完成主键字段的映射
-</span><span style="color:#75715e">                - column: 表的列名
-</span><span style="color:#75715e">                - property: 实体类的属性名
-</span><span style="color:#75715e">            - &lt;result&gt;: 完成一般字段的映射
-</span><span style="color:#75715e">                - column: 表的列名
-</span><span style="color:#75715e">                - property: 实体类的属性名
-</span><span style="color:#75715e">    --&gt;</span>
-    <span style="color:#f92672">&lt;id</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;user_id&#34;</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">&gt;</span>
-    <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;user_name&#34;</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;userame&#34;</span><span style="color:#f92672">/&gt;</span>
-    <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;user_password&#34;</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;password&#34;</span><span style="color:#f92672">/&gt;</span>
-    <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;user_gender&#34;</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;gender&#34;</span><span style="color:#f92672">/&gt;</span>
-    <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;user_addr&#34;</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;addr&#34;</span><span style="color:#f92672">/&gt;</span>
-<span style="color:#f92672">&lt;/resultMap&gt;</span>
-
-<span style="color:#f92672">&lt;select</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;selectAll&#34;</span> <span style="color:#a6e22e">resultMap=</span><span style="color:#e6db74">&#34;userResultMap&#34;</span><span style="color:#f92672">&gt;</span>
-    SELECT *
-    FROM tb_user
-<span style="color:#f92672">&lt;/select&gt;</span>
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">table</span> tb_user (
+</span></span><span style="display:flex;"><span>    user_id INT <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> AUTO_INCREMENT,
+</span></span><span style="display:flex;"><span>    user_name VARCHAR(<span style="color:#ae81ff">20</span>),
+</span></span><span style="display:flex;"><span>    user_password VARCHAR(<span style="color:#ae81ff">20</span>),
+</span></span><span style="display:flex;"><span>    user_gender CHAR(<span style="color:#ae81ff">1</span>),
+</span></span><span style="display:flex;"><span>    user_addr VARCHAR(<span style="color:#ae81ff">30</span>)
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Integer id<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String username<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String password<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String gender<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String addr<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// setter 和 getter
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>那么可以使用<code>&lt;resultMap&gt;</code>元素来对表字段和成员名做一个映射（结果映射）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;!--
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    &lt;resultMap&gt;:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        - id: 唯一标识
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        - type: 映射的类型,支持别名
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">--&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;resultMap</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;userResultMap&#34;</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;user&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!--
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">        两种标签:
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">            - &lt;id&gt;: 完成主键字段的映射
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">                - column: 表的列名
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">                - property: 实体类的属性名
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">            - &lt;result&gt;: 完成一般字段的映射
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">                - column: 表的列名
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">                - property: 实体类的属性名
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">    --&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;id</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;user_id&#34;</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;user_name&#34;</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;userame&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;user_password&#34;</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;password&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;user_gender&#34;</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;gender&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;result</span> <span style="color:#a6e22e">column=</span><span style="color:#e6db74">&#34;user_addr&#34;</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;addr&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/resultMap&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;select</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;selectAll&#34;</span> <span style="color:#a6e22e">resultMap=</span><span style="color:#e6db74">&#34;userResultMap&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    SELECT *
+</span></span><span style="display:flex;"><span>    FROM tb_user
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/select&gt;</span>
+</span></span></code></pre></div><blockquote>
 <p>要使用结果映射，需要把<code>&lt;select&gt;</code>中的<code>resultType</code>属性替换为<code>resultMap</code>，并且其属性值为<code>&lt;resultMap&gt;</code>的<code>id</code>值。</p>
 </blockquote>
 <h3 id="自动映射">自动映射</h3>
 <p>当自动映射查询结果时，MyBatis 会获取结果中返回的列名并在 Java 类中查找相同名字的属性（忽略大小写）。</p>
 <p>接上节例子，使用SQL语句的 <code>AS</code> 来实现：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;select</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;selectAll&#34;</span> <span style="color:#a6e22e">resultType=</span><span style="color:#e6db74">&#34;user&#34;</span><span style="color:#f92672">&gt;</span>
-    SELECT 
-        user_id AS &#34;id&#34;,
-        user_name AS &#34;username&#34;,
-        user_password AS &#34;password&#34;,
-        user_gender AS gender,
-        user_addr AS &#34;addr&#34;
-    FROM tb_user
-<span style="color:#f92672">&lt;/select&gt;</span>
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;select</span> <span style="color:#a6e22e">id=</span><span style="color:#e6db74">&#34;selectAll&#34;</span> <span style="color:#a6e22e">resultType=</span><span style="color:#e6db74">&#34;user&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>    SELECT 
+</span></span><span style="display:flex;"><span>        user_id AS &#34;id&#34;,
+</span></span><span style="display:flex;"><span>        user_name AS &#34;username&#34;,
+</span></span><span style="display:flex;"><span>        user_password AS &#34;password&#34;,
+</span></span><span style="display:flex;"><span>        user_gender AS gender,
+</span></span><span style="display:flex;"><span>        user_addr AS &#34;addr&#34;
+</span></span><span style="display:flex;"><span>    FROM tb_user
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/select&gt;</span>
+</span></span></code></pre></div><blockquote>
 <ul>
 <li>
 <p>通常数据库列使用大写字母组成的单词命名，单词间用下划线分隔；而 Java 属性一般遵循驼峰命名法约定。为了在这两种命名方式之间启用自动映射，需要将 <code>mapUnderscoreToCamelCase</code> 设置为 <code>true</code>。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;!-- 配置mybatis自动转换为驼峰式命名 --&gt;</span>
-  <span style="color:#f92672">&lt;settings&gt;</span>
-    <span style="color:#f92672">&lt;setting</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;mapUnderscoreToCamelCase&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;true&#34;</span><span style="color:#f92672">/&gt;</span>
-<span style="color:#f92672">&lt;/settings&gt;</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;!-- 配置mybatis自动转换为驼峰式命名 --&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;settings&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;setting</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;mapUnderscoreToCamelCase&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;true&#34;</span><span style="color:#f92672">/&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/settings&gt;</span>
+</span></span></code></pre></div></li>
 <li>
 <p><code>&lt;resultMap&gt;</code>和自动映射可以混用。</p>
 </li>
@@ -1062,28 +1062,28 @@ USE mybatis;
 <li>
 <p>Collection: 封装为Map集合</p>
 <p>相当于：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg0&#34;</span><span style="color:#f92672">,</span> collection集合<span style="color:#f92672">)</span>
-map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;collection&#34;</span><span style="color:#f92672">,</span> collection集合<span style="color:#f92672">)</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg0&#34;</span><span style="color:#f92672">,</span> collection集合<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;collection&#34;</span><span style="color:#f92672">,</span> collection集合<span style="color:#f92672">)</span>
+</span></span></code></pre></div><ul>
 <li>使用<code>@Param</code>注解，替换Map集合中默认的arg键名</li>
 </ul>
 </li>
 <li>
 <p>List: 封装为Map集合</p>
 <p>相当于：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg0&#34;</span><span style="color:#f92672">,</span> list集合<span style="color:#f92672">)</span>
-map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;collection&#34;</span><span style="color:#f92672">,</span> list集合<span style="color:#f92672">)</span>
-map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;list&#34;</span><span style="color:#f92672">,</span> list集合<span style="color:#f92672">)</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg0&#34;</span><span style="color:#f92672">,</span> list集合<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;collection&#34;</span><span style="color:#f92672">,</span> list集合<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;list&#34;</span><span style="color:#f92672">,</span> list集合<span style="color:#f92672">)</span>
+</span></span></code></pre></div><ul>
 <li>使用<code>@Param</code>注解,替换Map集合中默认的arg键名</li>
 </ul>
 </li>
 <li>
 <p>Array: 封装为Map集合</p>
 <p>相当于：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg0&#34;</span><span style="color:#f92672">,</span> 数组<span style="color:#f92672">)</span>
-map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;array&#34;</span><span style="color:#f92672">,</span> 数组<span style="color:#f92672">)</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg0&#34;</span><span style="color:#f92672">,</span> 数组<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;array&#34;</span><span style="color:#f92672">,</span> 数组<span style="color:#f92672">)</span>
+</span></span></code></pre></div><ul>
 <li>使用<code>@Param</code>注解,替换Map集合中默认的arg键名</li>
 </ul>
 </li>
@@ -1098,33 +1098,33 @@ map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><sp
 <li>
 <p>每个参数有两个键:</p>
 <p>相当于：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg0&#34;</span><span style="color:#f92672">,</span> 参数值1<span style="color:#f92672">)</span>
-map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;param1&#34;</span><span style="color:#f92672">,</span> 参数值1<span style="color:#f92672">)</span>
-map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg1&#34;</span><span style="color:#f92672">,</span> 参数值2<span style="color:#f92672">)</span>
-map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;param2&#34;</span><span style="color:#f92672">,</span> 参数值2<span style="color:#f92672">)</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg0&#34;</span><span style="color:#f92672">,</span> 参数值1<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;param1&#34;</span><span style="color:#f92672">,</span> 参数值1<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;arg1&#34;</span><span style="color:#f92672">,</span> 参数值2<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;param2&#34;</span><span style="color:#f92672">,</span> 参数值2<span style="color:#f92672">)</span>
+</span></span></code></pre></div></li>
 <li>
 <p>使用<code>@Param</code>注解,替换Map集合中默认的arg键名:</p>
 <p>相当于：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Param</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;username&#34;</span><span style="color:#f92672">)</span> 参数类型 参数名
-map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;username&#34;</span><span style="color:#f92672">,</span> 参数值1<span style="color:#f92672">)</span>
-map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;param1&#34;</span><span style="color:#f92672">,</span> 参数值1<span style="color:#f92672">)</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Param</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;username&#34;</span><span style="color:#f92672">)</span> 参数类型 参数名
+</span></span><span style="display:flex;"><span>map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;username&#34;</span><span style="color:#f92672">,</span> 参数值1<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>map<span style="color:#f92672">.</span><span style="color:#a6e22e">put</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;param1&#34;</span><span style="color:#f92672">,</span> 参数值1<span style="color:#f92672">)</span>
+</span></span></code></pre></div></li>
 </ul>
 </li>
 </ul>
 <p>示例：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">UserMapper</span> <span style="color:#f92672">{</span>
-    User <span style="color:#a6e22e">selectById</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> id<span style="color:#f92672">);</span>
-    List<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">selectByCondition</span><span style="color:#f92672">(</span>
-            <span style="color:#a6e22e">@Param</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;username&#34;</span><span style="color:#f92672">)</span> String username<span style="color:#f92672">,</span>
-            <span style="color:#a6e22e">@Param</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;password&#34;</span><span style="color:#f92672">)</span> String password<span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><h2 id="注解实现crud">注解实现CRUD</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">UserMapper</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    User <span style="color:#a6e22e">selectById</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> id<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    List<span style="color:#f92672">&lt;</span>User<span style="color:#f92672">&gt;</span> <span style="color:#a6e22e">selectByCondition</span><span style="color:#f92672">(</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">@Param</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;username&#34;</span><span style="color:#f92672">)</span> String username<span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">@Param</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;password&#34;</span><span style="color:#f92672">)</span> String password<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><h2 id="注解实现crud">注解实现CRUD</h2>
 <p>对于简单的SQL语句来说，使用注解开发会比配置文件开发更加方便。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@Select</span><span style="color:#f92672">(</span>value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT * FROM tb_user WHERE id = #{id}&#34;</span><span style="color:#f92672">)</span>
-User <span style="color:#a6e22e">selectById</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> id<span style="color:#f92672">);</span>
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@Select</span><span style="color:#f92672">(</span>value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT * FROM tb_user WHERE id = #{id}&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>User <span style="color:#a6e22e">selectById</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> id<span style="color:#f92672">);</span>
+</span></span></code></pre></div><blockquote>
 <p>注意：注解是用来替换映射配置文件方式配置的，所以使用了注解，就不需要再映射配置文件中书写对应的 <code>statement</code>。</p>
 </blockquote>
 <p>Mybatis 针对 CURD 操作都提供了对应的注解：</p>
@@ -1158,29 +1158,29 @@ User <span style="color:#a6e22e">selectById</span><span style="color:#f92672">(<
 <li>SqlSessionFactory工厂类进行重复创建。</li>
 </ul>
 <p>对于Mybatis的基础操作出现的重复代码，可以使用一个静态代码块来自动加载：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SqlSessionFactoryUtils</span> <span style="color:#f92672">{</span>
-
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> SqlSessionFactory sqlSessionFactory<span style="color:#f92672">;</span>
-
-    <span style="color:#66d9ef">static</span> <span style="color:#f92672">{</span>
-        <span style="color:#75715e">// 静态代码块会随着类的加载而自动执行，且只执行一次
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
-            String resource <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;mybatis-config.xml&#34;</span><span style="color:#f92672">;</span>
-            InputStream inputStream <span style="color:#f92672">=</span> Resources<span style="color:#f92672">.</span><span style="color:#a6e22e">getResourceAsStream</span><span style="color:#f92672">(</span>resource<span style="color:#f92672">);</span>
-            sqlSessionFactory <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SqlSessionFactoryBuilder<span style="color:#f92672">().</span><span style="color:#a6e22e">build</span><span style="color:#f92672">(</span>inputStream<span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
-        <span style="color:#f92672">}</span>
-    <span style="color:#f92672">}</span>
-
-
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> SqlSessionFactory <span style="color:#a6e22e">getSqlSessionFactory</span><span style="color:#f92672">(){</span>
-        <span style="color:#66d9ef">return</span> sqlSessionFactory<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>工具类抽取以后，以后在对Mybatis的SqlSession进行操作的时候，就可以直接使用：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">SqlSessionFactory sf <span style="color:#f92672">=</span> SqlSessionFactoryUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">getSqlSessionFactory</span><span style="color:#f92672">();</span>
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SqlSessionFactoryUtils</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> SqlSessionFactory sqlSessionFactory<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">static</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 静态代码块会随着类的加载而自动执行，且只执行一次
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">try</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            String resource <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;mybatis-config.xml&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            InputStream inputStream <span style="color:#f92672">=</span> Resources<span style="color:#f92672">.</span><span style="color:#a6e22e">getResourceAsStream</span><span style="color:#f92672">(</span>resource<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            sqlSessionFactory <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> SqlSessionFactoryBuilder<span style="color:#f92672">().</span><span style="color:#a6e22e">build</span><span style="color:#f92672">(</span>inputStream<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span> <span style="color:#66d9ef">catch</span> <span style="color:#f92672">(</span>IOException e<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            e<span style="color:#f92672">.</span><span style="color:#a6e22e">printStackTrace</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> SqlSessionFactory <span style="color:#a6e22e">getSqlSessionFactory</span><span style="color:#f92672">(){</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> sqlSessionFactory<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>工具类抽取以后，以后在对Mybatis的SqlSession进行操作的时候，就可以直接使用：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>SqlSessionFactory sf <span style="color:#f92672">=</span> SqlSessionFactoryUtils<span style="color:#f92672">.</span><span style="color:#a6e22e">getSqlSessionFactory</span><span style="color:#f92672">();</span>
+</span></span></code></pre></div>
 </section>
 
 

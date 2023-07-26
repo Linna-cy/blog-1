@@ -343,34 +343,34 @@
     
     <h1 id="临时变量">临时变量</h1>
 <p>通过建立一个临时变量来实现两数交换：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">swap</span>(x, y):
-    print(x, y)
-    tmp <span style="color:#f92672">=</span> x
-    x <span style="color:#f92672">=</span> y
-    y <span style="color:#f92672">=</span> tmp
-    print(x, y)
-    <span style="color:#66d9ef">return</span> x, y
-
-<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
-    swap(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>)
-</code></pre></div><p>缺点：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">swap</span>(x, y):
+</span></span><span style="display:flex;"><span>    print(x, y)
+</span></span><span style="display:flex;"><span>    tmp <span style="color:#f92672">=</span> x
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">=</span> y
+</span></span><span style="display:flex;"><span>    y <span style="color:#f92672">=</span> tmp
+</span></span><span style="display:flex;"><span>    print(x, y)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> x, y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    swap(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>)
+</span></span></code></pre></div><p>缺点：</p>
 <p>需要消耗额外的内存。</p>
 <p>优点：</p>
 <p>不限制类型，大多数类型都能使用该操作。</p>
 <hr>
 <h1 id="加减交换">加减交换</h1>
 <p>通过加减法实现：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">swap</span>(x, y):
-    print(x, y)
-    x <span style="color:#f92672">=</span> x <span style="color:#f92672">+</span> y
-    y <span style="color:#f92672">=</span> x <span style="color:#f92672">-</span> y
-    x <span style="color:#f92672">=</span> x <span style="color:#f92672">-</span> y
-    print(x, y)
-    <span style="color:#66d9ef">return</span> x, y
-
-<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
-    swap(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>)
-</code></pre></div><p>假设两个数保存在x和y中：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">swap</span>(x, y):
+</span></span><span style="display:flex;"><span>    print(x, y)
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">=</span> x <span style="color:#f92672">+</span> y
+</span></span><span style="display:flex;"><span>    y <span style="color:#f92672">=</span> x <span style="color:#f92672">-</span> y
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">=</span> x <span style="color:#f92672">-</span> y
+</span></span><span style="display:flex;"><span>    print(x, y)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> x, y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    swap(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>)
+</span></span></code></pre></div><p>假设两个数保存在x和y中：</p>
 <ol>
 <li>
 <p>先将y中的值加到x中。</p>
@@ -390,17 +390,17 @@
 <hr>
 <h1 id="异或交换">异或交换</h1>
 <p>通过异或的操作实现：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">swap</span>(x, y):
-    print(x, y)
-    x <span style="color:#f92672">=</span> x <span style="color:#f92672">^</span> y
-    y <span style="color:#f92672">=</span> x <span style="color:#f92672">^</span> y
-    x <span style="color:#f92672">=</span> x <span style="color:#f92672">^</span> y
-    print(x, y)
-    <span style="color:#66d9ef">return</span> x, y
-
-<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
-    swap(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>)
-</code></pre></div><p>缺点：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">swap</span>(x, y):
+</span></span><span style="display:flex;"><span>    print(x, y)
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">=</span> x <span style="color:#f92672">^</span> y
+</span></span><span style="display:flex;"><span>    y <span style="color:#f92672">=</span> x <span style="color:#f92672">^</span> y
+</span></span><span style="display:flex;"><span>    x <span style="color:#f92672">=</span> x <span style="color:#f92672">^</span> y
+</span></span><span style="display:flex;"><span>    print(x, y)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> x, y
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#39;__main__&#39;</span>:
+</span></span><span style="display:flex;"><span>    swap(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>)
+</span></span></code></pre></div><p>缺点：</p>
 <p>只能对整数类型执行位操作，不能对实数类型进行位操作。</p>
 
 </section>

@@ -366,7 +366,7 @@
             </div>
         
 
-        <div class="article-time--reading">共29076字</div>
+        <div class="article-time--reading">共29088字</div>
     </footer>
     
 
@@ -2601,11 +2601,11 @@ $$</p>
 </li>
 </ol>
 <p>授权语句格式（<code>GRANT</code>）：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">GRANT</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">权限</span><span style="color:#f92672">&gt;</span>[, <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">权限</span><span style="color:#f92672">&gt;</span>] ...
-[<span style="color:#66d9ef">ON</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">对象类型</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">对象名</span><span style="color:#f92672">&gt;</span>]
-<span style="color:#66d9ef">TO</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">用户</span><span style="color:#f92672">&gt;</span>[, <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">用户</span><span style="color:#f92672">&gt;</span>]...
-[<span style="color:#66d9ef">WITH</span> <span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">OPTION</span>];
-</code></pre></div><p>常见的操作权限如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">权限</span><span style="color:#f92672">&gt;</span>[, <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">权限</span><span style="color:#f92672">&gt;</span>] ...
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">ON</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">对象类型</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">对象名</span><span style="color:#f92672">&gt;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">TO</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">用户</span><span style="color:#f92672">&gt;</span>[, <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">用户</span><span style="color:#f92672">&gt;</span>]...
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">WITH</span> <span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">OPTION</span>];
+</span></span></code></pre></div><p>常见的操作权限如下：</p>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -2642,10 +2642,10 @@ $$</p>
 <li><code>WITH GRANT OPTION</code>：表示获得了这些权限的用户还可以将权限赋给其他用户。</li>
 </ul>
 <p>收回权限语句格式（<code>REVOKE</code>）：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">REVOKE</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">权限</span><span style="color:#f92672">&gt;</span>[, <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">权限</span><span style="color:#f92672">&gt;</span>]...
-[<span style="color:#66d9ef">ON</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">对象类型</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">对象名</span><span style="color:#f92672">&gt;</span>]
-<span style="color:#66d9ef">FROM</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">用户</span><span style="color:#f92672">&gt;</span>[, <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">用户</span><span style="color:#f92672">&gt;</span>];
-</code></pre></div><h2 id="函数依赖">函数依赖</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">REVOKE</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">权限</span><span style="color:#f92672">&gt;</span>[, <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">权限</span><span style="color:#f92672">&gt;</span>]...
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">ON</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">对象类型</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">对象名</span><span style="color:#f92672">&gt;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">用户</span><span style="color:#f92672">&gt;</span>[, <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">用户</span><span style="color:#f92672">&gt;</span>];
+</span></span></code></pre></div><h2 id="函数依赖">函数依赖</h2>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -2672,7 +2672,7 @@ $$</p>
 </tr>
 <tr>
 <td style="text-align:center">完全函数依赖</td>
-<td style="text-align:left">$X \rightarrow Y$，$X' \subset X$，$X' \not\rightarrow Y$</td>
+<td style="text-align:left">$X \rightarrow Y$，$X&rsquo; \subset X$，$X&rsquo; \not\rightarrow Y$</td>
 <td style="text-align:left">$Y$对$X$完全函数依赖，记作$X \stackrel{f}{\longrightarrow} Y$</td>
 </tr>
 <tr>

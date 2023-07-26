@@ -358,7 +358,7 @@
             </div>
         
 
-        <div class="article-time--reading">共8440字</div>
+        <div class="article-time--reading">共8452字</div>
     </footer>
     
 
@@ -688,8 +688,8 @@
 <hr>
 <h4 id="match-函数">match() 函数</h4>
 <p><code>re.match()</code> 尝试从字符串的起始位置匹配一个模式，其语法如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">re<span style="color:#f92672">.</span>match(pattern, string, flags<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
-</code></pre></div><p>参数：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>re<span style="color:#f92672">.</span>match(pattern, string, flags<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</span></span></code></pre></div><p>参数：</p>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -715,34 +715,34 @@
 <p>返回值：</p>
 <p>匹配成功，<code>re.match()</code> 函数返回一个匹配对象（<code>Match</code>）；否则返回 <code>None</code>。</p>
 <p>Example：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> re
-<span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>match(<span style="color:#e6db74">&#39;abc&#39;</span>, <span style="color:#e6db74">&#39;abcdefg&#39;</span>)  <span style="color:#75715e"># 在起始位置匹配</span>
-<span style="color:#f92672">&lt;</span>_sre<span style="color:#f92672">.</span>SRE_Match object; span<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">3</span>), match<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;abc&#39;</span><span style="color:#f92672">&gt;</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>match(<span style="color:#e6db74">&#39;efg&#39;</span>, <span style="color:#e6db74">&#39;abcdefg&#39;</span>)  <span style="color:#75715e"># 不在起始位置匹配</span>
-<span style="color:#66d9ef">None</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>match(<span style="color:#e6db74">&#39;abc&#39;</span>, <span style="color:#e6db74">&#39;abcdefg&#39;</span>)  <span style="color:#75715e"># 在起始位置匹配</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>_sre<span style="color:#f92672">.</span>SRE_Match object; span<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">3</span>), match<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;abc&#39;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>match(<span style="color:#e6db74">&#39;efg&#39;</span>, <span style="color:#e6db74">&#39;abcdefg&#39;</span>)  <span style="color:#75715e"># 不在起始位置匹配</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">None</span>
+</span></span></code></pre></div><hr>
 <h4 id="search-函数">search() 函数</h4>
 <p><code>re.search()</code> 扫描整个字符串并返回第一个成功的匹配，其语法如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">re<span style="color:#f92672">.</span>search(pattern, string, flags<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
-</code></pre></div><p>参数用法与 <code>re.match()</code> 类似。匹配成功，<code>re.search()</code> 方法返回一个匹配对象（<code>Match</code>）；否则返回 <code>None</code>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>re<span style="color:#f92672">.</span>search(pattern, string, flags<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</span></span></code></pre></div><p>参数用法与 <code>re.match()</code> 类似。匹配成功，<code>re.search()</code> 方法返回一个匹配对象（<code>Match</code>）；否则返回 <code>None</code>。</p>
 <p>Example：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> re
-<span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;abc&#39;</span>, <span style="color:#e6db74">&#39;abcdefg&#39;</span>)  <span style="color:#75715e"># 在起始位置匹配</span>
-<span style="color:#f92672">&lt;</span>_sre<span style="color:#f92672">.</span>SRE_Match object; span<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">3</span>), match<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;abc&#39;</span><span style="color:#f92672">&gt;</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;efg&#39;</span>, <span style="color:#e6db74">&#39;abcdefg&#39;</span>)  <span style="color:#75715e"># 不在起始位置匹配</span>
-<span style="color:#f92672">&lt;</span>_sre<span style="color:#f92672">.</span>SRE_Match object; span<span style="color:#f92672">=</span>(<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">7</span>), match<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;efg&#39;</span><span style="color:#f92672">&gt;</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;abc&#39;</span>, <span style="color:#e6db74">&#39;abcdefg&#39;</span>)  <span style="color:#75715e"># 在起始位置匹配</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>_sre<span style="color:#f92672">.</span>SRE_Match object; span<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">3</span>), match<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;abc&#39;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;efg&#39;</span>, <span style="color:#e6db74">&#39;abcdefg&#39;</span>)  <span style="color:#75715e"># 不在起始位置匹配</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>_sre<span style="color:#f92672">.</span>SRE_Match object; span<span style="color:#f92672">=</span>(<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">7</span>), match<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;efg&#39;</span><span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div><hr>
 <h4 id="fullmatch-函数">fullmatch() 函数</h4>
 <p><code>fullmatch()</code> 将整个字符串与正则表达式匹配，其语法如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">re<span style="color:#f92672">.</span>fullmatch(pattern, string, flags<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
-</code></pre></div><p>参数用法与 <code>re.match()</code> 类似。如果 <code>string</code> 与 <code>pattern</code> 完全匹配，那么返回一个匹配对象（<code>Match</code>）；否则返回 <code>None</code>。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>re<span style="color:#f92672">.</span>fullmatch(pattern, string, flags<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</span></span></code></pre></div><p>参数用法与 <code>re.match()</code> 类似。如果 <code>string</code> 与 <code>pattern</code> 完全匹配，那么返回一个匹配对象（<code>Match</code>）；否则返回 <code>None</code>。</p>
 <p>Example：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> re
-<span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>fullmatch(<span style="color:#e6db74">&#39;abc&#39;</span>, <span style="color:#e6db74">&#39;abcdefg&#39;</span>)    <span style="color:#75715e"># 在起始位置匹配</span>
-<span style="color:#66d9ef">None</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>fullmatch(<span style="color:#e6db74">&#39;abcdefg&#39;</span>, <span style="color:#e6db74">&#39;abcdefg&#39;</span>)  <span style="color:#75715e"># 匹配整个字符串</span>
-<span style="color:#f92672">&lt;</span>_sre<span style="color:#f92672">.</span>SRE_Match object; span<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">7</span>), match<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;abcdefg&#39;</span><span style="color:#f92672">&gt;</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#f92672">import</span> re
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>fullmatch(<span style="color:#e6db74">&#39;abc&#39;</span>, <span style="color:#e6db74">&#39;abcdefg&#39;</span>)    <span style="color:#75715e"># 在起始位置匹配</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>fullmatch(<span style="color:#e6db74">&#39;abcdefg&#39;</span>, <span style="color:#e6db74">&#39;abcdefg&#39;</span>)  <span style="color:#75715e"># 匹配整个字符串</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>_sre<span style="color:#f92672">.</span>SRE_Match object; span<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">7</span>), match<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;abcdefg&#39;</span><span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div><hr>
 <h3 id="匹配多项">匹配多项</h3>
 <p>有两个函数用于查找并返回匹配的多个匹配对象：</p>
 <ol>
@@ -756,8 +756,8 @@
 <hr>
 <h4 id="finall">finall()</h4>
 <p><code>finall()</code> 在字符串中找到正则表达式所匹配的所有子串，其语法如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">re<span style="color:#f92672">.</span>findall(pattern, string, flags<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
-</code></pre></div><p>参数：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>re<span style="color:#f92672">.</span>findall(pattern, string, flags<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</span></span></code></pre></div><p>参数：</p>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -785,14 +785,14 @@
 <hr>
 <h4 id="finditer">finditer()</h4>
 <p>与 <code>finall()</code> 类似，其语法如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">re<span style="color:#f92672">.</span>finditer(pattern, string, flags<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
-</code></pre></div><p>该函数返回的是迭代器。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>re<span style="color:#f92672">.</span>finditer(pattern, string, flags<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</span></span></code></pre></div><p>该函数返回的是迭代器。</p>
 <p>如果可能存在大量的匹配项的话，建议使用 <code>finditer()</code>。</p>
 <hr>
 <h3 id="split-正则分割">split() 正则分割</h3>
 <p><code>re.split()</code> 按照能够匹配的子串对字符串进行分割，其语法如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">re<span style="color:#f92672">.</span>split(pattern, string[, maxsplit<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, flags<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>])
-</code></pre></div><p>参数：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>re<span style="color:#f92672">.</span>split(pattern, string[, maxsplit<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, flags<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>])
+</span></span></code></pre></div><p>参数：</p>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -825,9 +825,9 @@
 <hr>
 <h3 id="替换">替换</h3>
 <p>有两个替换函数：<code>re.sub()</code> 和 <code>re.subn()</code>。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">re<span style="color:#f92672">.</span>sub(pattern, repl, string, count<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, flags<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
-re<span style="color:#f92672">.</span>subn(pattern, repl, string, count<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, flags<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
-</code></pre></div><p>参数：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>re<span style="color:#f92672">.</span>sub(pattern, repl, string, count<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, flags<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</span></span><span style="display:flex;"><span>re<span style="color:#f92672">.</span>subn(pattern, repl, string, count<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>, flags<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</span></span></code></pre></div><p>参数：</p>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -865,12 +865,12 @@ re<span style="color:#f92672">.</span>subn(pattern, repl, string, count<span sty
 <hr>
 <h3 id="excape-转义函数">excape() 转义函数</h3>
 <p><code>re.exvape()</code> 函数可以转义参数 <code>pattern</code> 中的特殊字符。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">re<span style="color:#f92672">.</span>exvape(pattern)
-</code></pre></div><p>Example：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> print(re<span style="color:#f92672">.</span>escape(<span style="color:#e6db74">&#39;http://www.python.org&#39;</span>))
-http:<span style="color:#f92672">//</span>www\<span style="color:#f92672">.</span>python\<span style="color:#f92672">.</span>org
-</code></pre></div><p>Python3.3：<code>_</code> 不再被转义。</p>
-<p>Python3.7：只有在正则表达式中具有特殊含义的字符才会被转义。 因此， <code>!</code>、<code>&quot;</code>、<code>%</code>、<code>'</code>、<code>,</code>、<code>/</code>、<code>:</code>、<code>;</code>&lt;'、<code>=</code>&gt;'、<code>@</code> 和 ` 将不再会被转义。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>re<span style="color:#f92672">.</span>exvape(pattern)
+</span></span></code></pre></div><p>Example：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> print(re<span style="color:#f92672">.</span>escape(<span style="color:#e6db74">&#39;http://www.python.org&#39;</span>))
+</span></span><span style="display:flex;"><span>http:<span style="color:#f92672">//</span>www\<span style="color:#f92672">.</span>python\<span style="color:#f92672">.</span>org
+</span></span></code></pre></div><p>Python3.3：<code>_</code> 不再被转义。</p>
+<p>Python3.7：只有在正则表达式中具有特殊含义的字符才会被转义。 因此， <code>!</code>、<code>&quot;</code>、<code>%</code>、<code>'</code>、<code>,</code>、<code>/</code>、<code>:</code>、<code>;</code>&lt;&rsquo;、<code>=</code>&gt;&rsquo;、<code>@</code> 和 ` 将不再会被转义。</p>
 <p>使用 <code>re.exvape()</code> 函数很容易出现转义错误的问题，所以并不建议使用它转义。</p>
 <hr>
 <h3 id="purge-清除正则表达式缓存">purge() 清除正则表达式缓存</h3>
@@ -889,9 +889,9 @@ http:<span style="color:#f92672">//</span>www\<span style="color:#f92672">.</spa
 </li>
 <li>
 <p>Example：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\w+&#39;</span>, <span style="color:#e6db74">&#39;中文字符和ASCII&#39;</span>, re<span style="color:#f92672">.</span>A)
-<span style="color:#f92672">&lt;</span>_sre<span style="color:#f92672">.</span>SRE_Match object; span<span style="color:#f92672">=</span>(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">10</span>), match<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ASCII&#39;</span><span style="color:#f92672">&gt;</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;\w+&#39;</span>, <span style="color:#e6db74">&#39;中文字符和ASCII&#39;</span>, re<span style="color:#f92672">.</span>A)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>_sre<span style="color:#f92672">.</span>SRE_Match object; span<span style="color:#f92672">=</span>(<span style="color:#ae81ff">5</span>, <span style="color:#ae81ff">10</span>), match<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;ASCII&#39;</span><span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div></li>
 <li>
 <p>对应内联标记：<code>(?a)</code> 。</p>
 </li>
@@ -905,11 +905,11 @@ http:<span style="color:#f92672">//</span>www\<span style="color:#f92672">.</spa
 </li>
 <li>
 <p>Example：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;.*&#39;</span>, <span style="color:#e6db74">&#39;显示debug信息&#39;</span>, re<span style="color:#f92672">.</span>DEBUG)
-MAX_REPEAT <span style="color:#ae81ff">0</span> MAXREPEAT
-  ANY <span style="color:#66d9ef">None</span>
-<span style="color:#f92672">&lt;</span>_sre<span style="color:#f92672">.</span>SRE_Match object; span<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">9</span>), match<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;显示debug信息&#39;</span><span style="color:#f92672">&gt;</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;.*&#39;</span>, <span style="color:#e6db74">&#39;显示debug信息&#39;</span>, re<span style="color:#f92672">.</span>DEBUG)
+</span></span><span style="display:flex;"><span>MAX_REPEAT <span style="color:#ae81ff">0</span> MAXREPEAT
+</span></span><span style="display:flex;"><span>  ANY <span style="color:#66d9ef">None</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>_sre<span style="color:#f92672">.</span>SRE_Match object; span<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">9</span>), match<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;显示debug信息&#39;</span><span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div></li>
 <li>
 <p>对应内联标记：<code>(?i)</code> 。</p>
 </li>
@@ -926,9 +926,9 @@ MAX_REPEAT <span style="color:#ae81ff">0</span> MAXREPEAT
 </li>
 <li>
 <p>Example：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[a-z]&#39;</span>, <span style="color:#e6db74">&#39;大写字母：ABCDE 小写字母：abcde&#39;</span>, re<span style="color:#f92672">.</span>I)
-[<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#e6db74">&#39;C&#39;</span>, <span style="color:#e6db74">&#39;D&#39;</span>, <span style="color:#e6db74">&#39;E&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>, <span style="color:#e6db74">&#39;d&#39;</span>, <span style="color:#e6db74">&#39;e&#39;</span>]
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;[a-z]&#39;</span>, <span style="color:#e6db74">&#39;大写字母：ABCDE 小写字母：abcde&#39;</span>, re<span style="color:#f92672">.</span>I)
+</span></span><span style="display:flex;"><span>[<span style="color:#e6db74">&#39;A&#39;</span>, <span style="color:#e6db74">&#39;B&#39;</span>, <span style="color:#e6db74">&#39;C&#39;</span>, <span style="color:#e6db74">&#39;D&#39;</span>, <span style="color:#e6db74">&#39;E&#39;</span>, <span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;b&#39;</span>, <span style="color:#e6db74">&#39;c&#39;</span>, <span style="color:#e6db74">&#39;d&#39;</span>, <span style="color:#e6db74">&#39;e&#39;</span>]
+</span></span></code></pre></div></li>
 </ul>
 </li>
 <li>
@@ -957,9 +957,9 @@ MAX_REPEAT <span style="color:#ae81ff">0</span> MAXREPEAT
 </li>
 <li>
 <p>Example：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^.*$&#39;</span>, <span style="color:#e6db74">&#39;第1行</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">第2行</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">第3行&#39;</span>, re<span style="color:#f92672">.</span>M)
-[<span style="color:#e6db74">&#39;第1行&#39;</span>, <span style="color:#e6db74">&#39;第2行&#39;</span>, <span style="color:#e6db74">&#39;第3行&#39;</span>]
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>findall(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;^.*$&#39;</span>, <span style="color:#e6db74">&#39;第1行</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">第2行</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">第3行&#39;</span>, re<span style="color:#f92672">.</span>M)
+</span></span><span style="display:flex;"><span>[<span style="color:#e6db74">&#39;第1行&#39;</span>, <span style="color:#e6db74">&#39;第2行&#39;</span>, <span style="color:#e6db74">&#39;第3行&#39;</span>]
+</span></span></code></pre></div></li>
 <li>
 <p>对应内联标记：<code>(?m)</code>。</p>
 </li>
@@ -993,12 +993,12 @@ MAX_REPEAT <span style="color:#ae81ff">0</span> MAXREPEAT
 </li>
 <li>
 <p>Example：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;&#39;&#39;\d +  # the integral part
-</span><span style="color:#e6db74">...               \.    # the decimal point
-</span><span style="color:#e6db74">...               \d *  # some fractional digits&#39;&#39;&#39;</span>,
-<span style="color:#f92672">...</span>           <span style="color:#e6db74">&#39;圆周率：3.14&#39;</span>, re<span style="color:#f92672">.</span>X)
-<span style="color:#f92672">&lt;</span>_sre<span style="color:#f92672">.</span>SRE_Match object; span<span style="color:#f92672">=</span>(<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">8</span>), match<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;3.14&#39;</span><span style="color:#f92672">&gt;</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;&#39;&#39;\d +  # the integral part
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">...               \.    # the decimal point
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">...               \d *  # some fractional digits&#39;&#39;&#39;</span>,
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>           <span style="color:#e6db74">&#39;圆周率：3.14&#39;</span>, re<span style="color:#f92672">.</span>X)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>_sre<span style="color:#f92672">.</span>SRE_Match object; span<span style="color:#f92672">=</span>(<span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">8</span>), match<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;3.14&#39;</span><span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div></li>
 <li>
 <p>对应内联标记：<code>(?x)</code> 。</p>
 </li>
@@ -1023,8 +1023,8 @@ MAX_REPEAT <span style="color:#ae81ff">0</span> MAXREPEAT
 </li>
 <li>
 <p><code>re</code> 模块的源码是这样描述该常量的（官方文档中并没有具体的描述）：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">TEMPLATE <span style="color:#f92672">=</span> T <span style="color:#f92672">=</span> sre_compile<span style="color:#f92672">.</span>SRE_FLAG_TEMPLATE <span style="color:#75715e"># disable backtracking</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>TEMPLATE <span style="color:#f92672">=</span> T <span style="color:#f92672">=</span> sre_compile<span style="color:#f92672">.</span>SRE_FLAG_TEMPLATE <span style="color:#75715e"># disable backtracking</span>
+</span></span></code></pre></div></li>
 </ul>
 </li>
 </ul>
@@ -1032,9 +1032,8 @@ MAX_REPEAT <span style="color:#ae81ff">0</span> MAXREPEAT
 <h2 id="正则对象-pattern">正则对象 Pattern</h2>
 <p>使用 <code>compile()</code> 和 <code>template()</code> 可以将正则表达式编译为正则表达式对象（Pattern，正则对象）。</p>
 <p><code>re.compile()</code> 的语法如下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">re<span style="color:#f92672">.</span>compile(pattern, flags<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
-
-</code></pre></div><div class="table-wrapper"><table>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>re<span style="color:#f92672">.</span>compile(pattern, flags<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+</span></span></code></pre></div><div class="table-wrapper"><table>
 <thead>
 <tr>
 <th><strong>参数</strong></th>
@@ -1053,10 +1052,10 @@ MAX_REPEAT <span style="color:#ae81ff">0</span> MAXREPEAT
 </tbody>
 </table></div>
 <p>Example：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> pattern_obj <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;abc&#39;</span>)
-<span style="color:#f92672">&gt;&gt;&gt;</span> pattern_obj<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;abcdefg&#39;</span>)
-<span style="color:#f92672">&lt;</span>_sre<span style="color:#f92672">.</span>SRE_Match object; span<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">3</span>), match<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;abc&#39;</span><span style="color:#f92672">&gt;</span>
-</code></pre></div><p>使用正则对象和函数：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> pattern_obj <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>compile(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;abc&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> pattern_obj<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#39;abcdefg&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>_sre<span style="color:#f92672">.</span>SRE_Match object; span<span style="color:#f92672">=</span>(<span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">3</span>), match<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;abc&#39;</span><span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div><p>使用正则对象和函数：</p>
 <ol>
 <li>
 <p>正则对象和函数是一致的。</p>
@@ -1143,17 +1142,17 @@ MAX_REPEAT <span style="color:#ae81ff">0</span> MAXREPEAT
 <h2 id="匹配对象">匹配对象</h2>
 <p>匹配对象（Match）是调用 <code>re</code> 模块中的函数或方法匹配后返回的对象。</p>
 <p>匹配对象总是有一个布尔值 <code>True</code>。如果没有匹配的话 <code>re.match()</code> 和 <code>re.search()</code> 返回 <code>None</code>。可以简单的用 <code>if</code> 语句来判断是否匹配：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">if</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;abc&#39;</span>):
-<span style="color:#f92672">...</span>     print(<span style="color:#66d9ef">True</span>)
-<span style="color:#f92672">...</span>
-<span style="color:#66d9ef">True</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">if</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;d&#39;</span>, <span style="color:#e6db74">&#39;abc&#39;</span>):
-<span style="color:#f92672">...</span>     print(<span style="color:#66d9ef">True</span>)
-<span style="color:#f92672">...</span> <span style="color:#66d9ef">else</span>:
-<span style="color:#f92672">...</span>     print(<span style="color:#66d9ef">False</span>)
-<span style="color:#f92672">...</span>
-<span style="color:#66d9ef">False</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">if</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;a&#39;</span>, <span style="color:#e6db74">&#39;abc&#39;</span>):
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>     print(<span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">True</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> <span style="color:#66d9ef">if</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;d&#39;</span>, <span style="color:#e6db74">&#39;abc&#39;</span>):
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>     print(<span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span> <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>     print(<span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">...</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">False</span>
+</span></span></code></pre></div><hr>
 <h3 id="匹配对象方法">匹配对象方法</h3>
 <p>匹配对象支持以下方法：</p>
 <ul>
@@ -1183,30 +1182,30 @@ MAX_REPEAT <span style="color:#ae81ff">0</span> MAXREPEAT
 </li>
 <li>
 <p>Example：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>match(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(\w+) (\w+)&#39;</span>, <span style="color:#e6db74">&#39;Python PHP Java C++&#39;</span>)
-<span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>group()    <span style="color:#75715e"># 返回整个匹配</span>
-<span style="color:#e6db74">&#39;Python PHP&#39;</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>)    <span style="color:#75715e"># 返回第一个括号组</span>
-<span style="color:#e6db74">&#39;Python&#39;</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">2</span>)    <span style="color:#75715e"># 返回第二个括号组</span>
-<span style="color:#e6db74">&#39;PHP&#39;</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>)  <span style="color:#75715e"># 多个参数返回一个元组</span>
-(<span style="color:#e6db74">&#39;Python&#39;</span>, <span style="color:#e6db74">&#39;PHP&#39;</span>)
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>match(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(\w+) (\w+)&#39;</span>, <span style="color:#e6db74">&#39;Python PHP Java C++&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>group()    <span style="color:#75715e"># 返回整个匹配</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;Python PHP&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>)    <span style="color:#75715e"># 返回第一个括号组</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;Python&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">2</span>)    <span style="color:#75715e"># 返回第二个括号组</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;PHP&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>)  <span style="color:#75715e"># 多个参数返回一个元组</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#e6db74">&#39;Python&#39;</span>, <span style="color:#e6db74">&#39;PHP&#39;</span>)
+</span></span></code></pre></div></li>
 <li>
 <p>如果正则表达式使用了 <code>(?P&lt;name&gt;…)</code> 语法， <code>groupN</code> 参数可以是索引值，也可以是组名。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>match(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(?P&lt;name_1&gt;\w+) (?P&lt;name_2&gt;\w+)&#39;</span>, <span style="color:#e6db74">&#39;Python PHP&#39;</span>)
-<span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>group(<span style="color:#e6db74">&#39;name_1&#39;</span>, <span style="color:#e6db74">&#39;name_2&#39;</span>)
-(<span style="color:#e6db74">&#39;Python&#39;</span>, <span style="color:#e6db74">&#39;PHP&#39;</span>)
-<span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>)
-(<span style="color:#e6db74">&#39;Python&#39;</span>, <span style="color:#e6db74">&#39;PHP&#39;</span>)
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>match(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(?P&lt;name_1&gt;\w+) (?P&lt;name_2&gt;\w+)&#39;</span>, <span style="color:#e6db74">&#39;Python PHP&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>group(<span style="color:#e6db74">&#39;name_1&#39;</span>, <span style="color:#e6db74">&#39;name_2&#39;</span>)
+</span></span><span style="display:flex;"><span>(<span style="color:#e6db74">&#39;Python&#39;</span>, <span style="color:#e6db74">&#39;PHP&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>(<span style="color:#e6db74">&#39;Python&#39;</span>, <span style="color:#e6db74">&#39;PHP&#39;</span>)
+</span></span></code></pre></div></li>
 <li>
 <p>如果一个组包含在样式的一部分，并被匹配多次，就返回最后一个匹配。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>match(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(..)+&#39;</span>, <span style="color:#e6db74">&#39;a1b2c3&#39;</span>)
-<span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>)
-<span style="color:#e6db74">&#39;c3&#39;</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>match(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(..)+&#39;</span>, <span style="color:#e6db74">&#39;a1b2c3&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>group(<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;c3&#39;</span>
+</span></span></code></pre></div></li>
 </ul>
 </li>
 <li>
@@ -1217,14 +1216,14 @@ MAX_REPEAT <span style="color:#ae81ff">0</span> MAXREPEAT
 </li>
 <li>
 <p>等价于 <code>m.group(g)</code>，允许更方便地引用一个匹配。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>match(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(?P&lt;name_1&gt;\w+) (?P&lt;name_2&gt;\w+)&#39;</span>, <span style="color:#e6db74">&#39;Python PHP&#39;</span>)
-<span style="color:#f92672">&gt;&gt;&gt;</span> m[<span style="color:#ae81ff">0</span>]
-<span style="color:#e6db74">&#39;Python PHP&#39;</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> m[<span style="color:#ae81ff">1</span>]
-<span style="color:#e6db74">&#39;Python&#39;</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> m[<span style="color:#ae81ff">2</span>]
-<span style="color:#e6db74">&#39;PHP&#39;</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>match(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(?P&lt;name_1&gt;\w+) (?P&lt;name_2&gt;\w+)&#39;</span>, <span style="color:#e6db74">&#39;Python PHP&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> m[<span style="color:#ae81ff">0</span>]
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;Python PHP&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> m[<span style="color:#ae81ff">1</span>]
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;Python&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> m[<span style="color:#ae81ff">2</span>]
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;PHP&#39;</span>
+</span></span></code></pre></div></li>
 </ul>
 </li>
 <li>
@@ -1236,15 +1235,15 @@ MAX_REPEAT <span style="color:#ae81ff">0</span> MAXREPEAT
 <li>
 <p>Example：
 使小数部分可选，那么不是所有的组都会参与到匹配当中。这些组合默认会返回一个 <code>None</code> ，除非指定了 <code>default</code> 参数。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>match(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(\d+)\.(\d+)&#39;</span>, <span style="color:#e6db74">&#39;3.14&#39;</span>)
-<span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>groups()
-(<span style="color:#e6db74">&#39;3&#39;</span>, <span style="color:#e6db74">&#39;14&#39;</span>)
-</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>match(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;(\d+)\.?(\d+)?&#34;</span>, <span style="color:#e6db74">&#39;3&#39;</span>)
-<span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>groups()    <span style="color:#75715e"># 第二个子组默认为 None</span>
-(<span style="color:#e6db74">&#39;3&#39;</span>, <span style="color:#66d9ef">None</span>)
-<span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>groups(<span style="color:#e6db74">&#39;0&#39;</span>)  <span style="color:#75715e"># 第二个子组被设置为指定的默认值 &#39;0&#39;</span>
-(<span style="color:#e6db74">&#39;3&#39;</span>, <span style="color:#e6db74">&#39;0&#39;</span>)
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>match(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(\d+)\.(\d+)&#39;</span>, <span style="color:#e6db74">&#39;3.14&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>groups()
+</span></span><span style="display:flex;"><span>(<span style="color:#e6db74">&#39;3&#39;</span>, <span style="color:#e6db74">&#39;14&#39;</span>)
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>match(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#34;(\d+)\.?(\d+)?&#34;</span>, <span style="color:#e6db74">&#39;3&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>groups()    <span style="color:#75715e"># 第二个子组默认为 None</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#e6db74">&#39;3&#39;</span>, <span style="color:#66d9ef">None</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>groups(<span style="color:#e6db74">&#39;0&#39;</span>)  <span style="color:#75715e"># 第二个子组被设置为指定的默认值 &#39;0&#39;</span>
+</span></span><span style="display:flex;"><span>(<span style="color:#e6db74">&#39;3&#39;</span>, <span style="color:#e6db74">&#39;0&#39;</span>)
+</span></span></code></pre></div></li>
 </ul>
 </li>
 <li>
@@ -1255,10 +1254,10 @@ MAX_REPEAT <span style="color:#ae81ff">0</span> MAXREPEAT
 </li>
 <li>
 <p>Example：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>match(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(?P&lt;name_1&gt;\w+) (?P&lt;name_2&gt;\w+)&#39;</span>, <span style="color:#e6db74">&#39;Python PHP&#39;</span>)
-<span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>groupdict()
-{<span style="color:#e6db74">&#39;name_1&#39;</span>: <span style="color:#e6db74">&#39;Python&#39;</span>, <span style="color:#e6db74">&#39;name_2&#39;</span>: <span style="color:#e6db74">&#39;PHP&#39;</span>}
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>match(<span style="color:#e6db74">r</span><span style="color:#e6db74">&#39;(?P&lt;name_1&gt;\w+) (?P&lt;name_2&gt;\w+)&#39;</span>, <span style="color:#e6db74">&#39;Python PHP&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> m<span style="color:#f92672">.</span>groupdict()
+</span></span><span style="display:flex;"><span>{<span style="color:#e6db74">&#39;name_1&#39;</span>: <span style="color:#e6db74">&#39;Python&#39;</span>, <span style="color:#e6db74">&#39;name_2&#39;</span>: <span style="color:#e6db74">&#39;PHP&#39;</span>}
+</span></span></code></pre></div></li>
 </ul>
 </li>
 <li>
@@ -1269,11 +1268,11 @@ MAX_REPEAT <span style="color:#ae81ff">0</span> MAXREPEAT
 </li>
 <li>
 <p>从 email 地址中移除掉 <code>remove_this</code>：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;&gt;</span> email <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;tony@tiremove_thisger.net&#34;</span>
-<span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#34;remove_this&#34;</span>, email)
-<span style="color:#f92672">&gt;&gt;&gt;</span> email[:m<span style="color:#f92672">.</span>start()] <span style="color:#f92672">+</span> email[m<span style="color:#f92672">.</span>end():]
-<span style="color:#e6db74">&#39;tony@tiger.net&#39;</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> email <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;tony@tiremove_thisger.net&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> m <span style="color:#f92672">=</span> re<span style="color:#f92672">.</span>search(<span style="color:#e6db74">&#34;remove_this&#34;</span>, email)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&gt;&gt;&gt;</span> email[:m<span style="color:#f92672">.</span>start()] <span style="color:#f92672">+</span> email[m<span style="color:#f92672">.</span>end():]
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;tony@tiger.net&#39;</span>
+</span></span></code></pre></div></li>
 </ul>
 </li>
 <li>

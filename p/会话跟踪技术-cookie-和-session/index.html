@@ -394,155 +394,155 @@ Session是存储在服务器端。</li>
 <ul>
 <li>
 <p>创建Cookie对象：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Cookie cookie <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Cookie<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;key&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;value&#34;</span><span style="color:#f92672">)</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Cookie cookie <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Cookie<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;key&#34;</span><span style="color:#f92672">,</span><span style="color:#e6db74">&#34;value&#34;</span><span style="color:#f92672">)</span>
+</span></span></code></pre></div></li>
 <li>
 <p>发送Cookie到客户端（使用Response对象）：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">response<span style="color:#f92672">.</span><span style="color:#a6e22e">addCookie</span><span style="color:#f92672">(</span>cookie<span style="color:#f92672">)</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>response<span style="color:#f92672">.</span><span style="color:#a6e22e">addCookie</span><span style="color:#f92672">(</span>cookie<span style="color:#f92672">)</span>
+</span></span></code></pre></div></li>
 <li>
 <p>从客户端获取Cookie（使用Request对象）：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">request<span style="color:#f92672">.</span><span style="color:#a6e22e">getCookies</span><span style="color:#f92672">()</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>request<span style="color:#f92672">.</span><span style="color:#a6e22e">getCookies</span><span style="color:#f92672">()</span>
+</span></span></code></pre></div></li>
 </ul>
 <p><a class="link" href="https://linna-cy.github.io/Tomcat/#%E5%88%9B%E5%BB%BA-maven-web-%E9%A1%B9%E7%9B%AE"  target="_blank" rel="noopener"
     >创建Maven web项目。</a></p>
 <p>项目依赖：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;packaging&gt;</span>war<span style="color:#f92672">&lt;/packaging&gt;</span>
-
-<span style="color:#f92672">&lt;dependencies&gt;</span>
-    <span style="color:#75715e">&lt;!--servlet--&gt;</span>
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-        <span style="color:#f92672">&lt;groupId&gt;</span>javax.servlet<span style="color:#f92672">&lt;/groupId&gt;</span>
-        <span style="color:#f92672">&lt;artifactId&gt;</span>javax.servlet-api<span style="color:#f92672">&lt;/artifactId&gt;</span>
-        <span style="color:#f92672">&lt;version&gt;</span>3.1.0<span style="color:#f92672">&lt;/version&gt;</span>
-        <span style="color:#f92672">&lt;scope&gt;</span>provided<span style="color:#f92672">&lt;/scope&gt;</span>
-    <span style="color:#f92672">&lt;/dependency&gt;</span>
-<span style="color:#f92672">&lt;/dependencies&gt;</span>
-
-<span style="color:#f92672">&lt;build&gt;</span>
-    <span style="color:#f92672">&lt;pluginManagement&gt;</span>
-        <span style="color:#f92672">&lt;plugins&gt;</span>
-            <span style="color:#f92672">&lt;plugin&gt;</span>
-            <span style="color:#f92672">&lt;groupId&gt;</span>org.apache.tomcat.maven<span style="color:#f92672">&lt;/groupId&gt;</span>
-            <span style="color:#f92672">&lt;artifactId&gt;</span>tomcat7-maven-plugin<span style="color:#f92672">&lt;/artifactId&gt;</span>
-            <span style="color:#f92672">&lt;version&gt;</span>2.2<span style="color:#f92672">&lt;/version&gt;</span>
-            <span style="color:#f92672">&lt;/plugin&gt;</span>
-        <span style="color:#f92672">&lt;/plugins&gt;</span>
-    <span style="color:#f92672">&lt;/pluginManagement&gt;</span>
-<span style="color:#f92672">&lt;/build&gt;</span>
-</code></pre></div><h2 id="发送-cookie">发送 Cookie</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;packaging&gt;</span>war<span style="color:#f92672">&lt;/packaging&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;dependencies&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!--servlet--&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;groupId&gt;</span>javax.servlet<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;artifactId&gt;</span>javax.servlet-api<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;version&gt;</span>3.1.0<span style="color:#f92672">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;scope&gt;</span>provided<span style="color:#f92672">&lt;/scope&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependencies&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;build&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;pluginManagement&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;plugins&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;plugin&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;groupId&gt;</span>org.apache.tomcat.maven<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;artifactId&gt;</span>tomcat7-maven-plugin<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;version&gt;</span>2.2<span style="color:#f92672">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;/plugin&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/plugins&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/pluginManagement&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/build&gt;</span>
+</span></span></code></pre></div><h2 id="发送-cookie">发送 Cookie</h2>
 <p>发送Cookie使用的是HttpServletResponse对象提供的<code>addCookie()</code>：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">response<span style="color:#f92672">.</span><span style="color:#a6e22e">addCookie</span><span style="color:#f92672">(</span>cookie<span style="color:#f92672">)</span>
-</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> web.cookie<span style="color:#f92672">;</span>
-
-<span style="color:#f92672">import</span> javax.servlet.*<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.http.*<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.annotation.*<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.net.URLEncoder<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.nio.charset.StandardCharsets<span style="color:#f92672">;</span>
-
-<span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/cookieServlet&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CookieServlet</span> <span style="color:#66d9ef">extends</span> HttpServlet <span style="color:#f92672">{</span>
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doGet</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
-        <span style="color:#75715e">// 1. 创建Cookie对象
-</span><span style="color:#75715e"></span>        String value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello World&#34;</span><span style="color:#f92672">;</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;存储数据: &#34;</span> <span style="color:#f92672">+</span> value<span style="color:#f92672">);</span>
-        Cookie cookie <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Cookie<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;message&#34;</span><span style="color:#f92672">,</span> value<span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// 设置存活时间, 7天
-</span><span style="color:#75715e"></span>        cookie<span style="color:#f92672">.</span><span style="color:#a6e22e">setMaxAge</span><span style="color:#f92672">(</span>60<span style="color:#f92672">*</span>60<span style="color:#f92672">*</span>24<span style="color:#f92672">*</span>7<span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// 2. 发送Cookie, response
-</span><span style="color:#75715e"></span>        response<span style="color:#f92672">.</span><span style="color:#a6e22e">addCookie</span><span style="color:#f92672">(</span>cookie<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doPost</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">doGet</span><span style="color:#f92672">(</span>request<span style="color:#f92672">,</span> response<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>在发送Cookie时，可以使用<code>setMaxAge()</code>方法设置Cookie存活的时间（单位：秒）。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>response<span style="color:#f92672">.</span><span style="color:#a6e22e">addCookie</span><span style="color:#f92672">(</span>cookie<span style="color:#f92672">)</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> web.cookie<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.*<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.http.*<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.annotation.*<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.net.URLEncoder<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.nio.charset.StandardCharsets<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/cookieServlet&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CookieServlet</span> <span style="color:#66d9ef">extends</span> HttpServlet <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doGet</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 1. 创建Cookie对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        String value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello World&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;存储数据: &#34;</span> <span style="color:#f92672">+</span> value<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        Cookie cookie <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Cookie<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;message&#34;</span><span style="color:#f92672">,</span> value<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 设置存活时间, 7天
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        cookie<span style="color:#f92672">.</span><span style="color:#a6e22e">setMaxAge</span><span style="color:#f92672">(</span>60<span style="color:#f92672">*</span>60<span style="color:#f92672">*</span>24<span style="color:#f92672">*</span>7<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 2. 发送Cookie, response
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        response<span style="color:#f92672">.</span><span style="color:#a6e22e">addCookie</span><span style="color:#f92672">(</span>cookie<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doPost</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">doGet</span><span style="color:#f92672">(</span>request<span style="color:#f92672">,</span> response<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>在发送Cookie时，可以使用<code>setMaxAge()</code>方法设置Cookie存活的时间（单位：秒）。</p>
 <p>如果要在Cookie中存储中文数据，需要将中文数据使用<code>URLEncoder.encode()</code>按照UTF-8（与前端页面的编码保持一致）编码。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> web.cookie<span style="color:#f92672">;</span>
-
-<span style="color:#f92672">import</span> javax.servlet.*<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.http.*<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.annotation.*<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.net.URLEncoder<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.nio.charset.StandardCharsets<span style="color:#f92672">;</span>
-
-<span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/cookieServlet&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CookieServlet</span> <span style="color:#66d9ef">extends</span> HttpServlet <span style="color:#f92672">{</span>
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doGet</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
-        <span style="color:#75715e">// 1. 创建Cookie对象
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">// 存储中文
-</span><span style="color:#75715e"></span>        String value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;你好&#34;</span><span style="color:#f92672">;</span>
-        <span style="color:#75715e">// URL编码
-</span><span style="color:#75715e"></span>        value <span style="color:#f92672">=</span> URLEncoder<span style="color:#f92672">.</span><span style="color:#a6e22e">encode</span><span style="color:#f92672">(</span>value<span style="color:#f92672">,</span> StandardCharsets<span style="color:#f92672">.</span><span style="color:#a6e22e">UTF_8</span><span style="color:#f92672">);</span>
-        <span style="color:#75715e">// System.out.println(&#34;存储数据: &#34; + value);
-</span><span style="color:#75715e"></span>        Cookie cookie <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Cookie<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;message&#34;</span><span style="color:#f92672">,</span> value<span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// 设置存活时间, 7天
-</span><span style="color:#75715e"></span>        cookie<span style="color:#f92672">.</span><span style="color:#a6e22e">setMaxAge</span><span style="color:#f92672">(</span>60<span style="color:#f92672">*</span>60<span style="color:#f92672">*</span>24<span style="color:#f92672">*</span>7<span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// 2. 发送Cookie, response
-</span><span style="color:#75715e"></span>        response<span style="color:#f92672">.</span><span style="color:#a6e22e">addCookie</span><span style="color:#f92672">(</span>cookie<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doPost</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">doGet</span><span style="color:#f92672">(</span>request<span style="color:#f92672">,</span> response<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><h2 id="获取-cookie">获取 Cookie</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> web.cookie<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.*<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.http.*<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.annotation.*<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.net.URLEncoder<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.nio.charset.StandardCharsets<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/cookieServlet&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CookieServlet</span> <span style="color:#66d9ef">extends</span> HttpServlet <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doGet</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 1. 创建Cookie对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// 存储中文
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        String value <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;你好&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// URL编码
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        value <span style="color:#f92672">=</span> URLEncoder<span style="color:#f92672">.</span><span style="color:#a6e22e">encode</span><span style="color:#f92672">(</span>value<span style="color:#f92672">,</span> StandardCharsets<span style="color:#f92672">.</span><span style="color:#a6e22e">UTF_8</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// System.out.println(&#34;存储数据: &#34; + value);
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        Cookie cookie <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Cookie<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;message&#34;</span><span style="color:#f92672">,</span> value<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 设置存活时间, 7天
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        cookie<span style="color:#f92672">.</span><span style="color:#a6e22e">setMaxAge</span><span style="color:#f92672">(</span>60<span style="color:#f92672">*</span>60<span style="color:#f92672">*</span>24<span style="color:#f92672">*</span>7<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 2. 发送Cookie, response
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        response<span style="color:#f92672">.</span><span style="color:#a6e22e">addCookie</span><span style="color:#f92672">(</span>cookie<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doPost</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">doGet</span><span style="color:#f92672">(</span>request<span style="color:#f92672">,</span> response<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><h2 id="获取-cookie">获取 Cookie</h2>
 <p>从客户端获取Cookie使用的是HttpServletRequest对象提供的<code>getCookies()</code>：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">request<span style="color:#f92672">.</span><span style="color:#a6e22e">getCookies</span><span style="color:#f92672">()</span>
-</code></pre></div><p>它返回一个Cookie数组（Cookie[]）。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> web.cookie<span style="color:#f92672">;</span>
-
-<span style="color:#f92672">import</span> javax.servlet.ServletException<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.annotation.WebServlet<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.http.Cookie<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.http.HttpServlet<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.http.HttpServletRequest<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.http.HttpServletResponse<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.net.URLDecoder<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.nio.charset.StandardCharsets<span style="color:#f92672">;</span>
-
-<span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/cookieServlet&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CookieServlet</span> <span style="color:#66d9ef">extends</span> HttpServlet <span style="color:#f92672">{</span>
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doGet</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
-        <span style="color:#75715e">// 1. 获取Cookie数组
-</span><span style="color:#75715e"></span>        Cookie<span style="color:#f92672">[]</span> cookies <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span><span style="color:#a6e22e">getCookies</span><span style="color:#f92672">();</span>
-
-        <span style="color:#75715e">// 2. 遍历数组
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Cookie cookie <span style="color:#f92672">:</span> cookies<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#75715e">// 3. 获取数据
-</span><span style="color:#75715e"></span>            String name <span style="color:#f92672">=</span> cookie<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">();</span>
-            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#e6db74">&#34;message&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>name<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
-                String value <span style="color:#f92672">=</span> cookie<span style="color:#f92672">.</span><span style="color:#a6e22e">getValue</span><span style="color:#f92672">();</span>
-                <span style="color:#75715e">// URL解码
-</span><span style="color:#75715e"></span>                value <span style="color:#f92672">=</span> URLDecoder<span style="color:#f92672">.</span><span style="color:#a6e22e">decode</span><span style="color:#f92672">(</span>value<span style="color:#f92672">,</span> StandardCharsets<span style="color:#f92672">.</span><span style="color:#a6e22e">UTF_8</span><span style="color:#f92672">);</span>
-
-                System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;:&#34;</span> <span style="color:#f92672">+</span> value<span style="color:#f92672">);</span>
-                <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
-            <span style="color:#f92672">}</span>
-        <span style="color:#f92672">}</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doPost</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">doGet</span><span style="color:#f92672">(</span>request<span style="color:#f92672">,</span> response<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>Cookie对象提供的<code>getName()</code>和<code>getValue()</code>可以分别获取Cookie的名称和值。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>request<span style="color:#f92672">.</span><span style="color:#a6e22e">getCookies</span><span style="color:#f92672">()</span>
+</span></span></code></pre></div><p>它返回一个Cookie数组（Cookie[]）。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> web.cookie<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.ServletException<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.annotation.WebServlet<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.http.Cookie<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.http.HttpServlet<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.http.HttpServletRequest<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.http.HttpServletResponse<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.net.URLDecoder<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.nio.charset.StandardCharsets<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/cookieServlet&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CookieServlet</span> <span style="color:#66d9ef">extends</span> HttpServlet <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doGet</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 1. 获取Cookie数组
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        Cookie<span style="color:#f92672">[]</span> cookies <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span><span style="color:#a6e22e">getCookies</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 2. 遍历数组
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span>Cookie cookie <span style="color:#f92672">:</span> cookies<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// 3. 获取数据
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            String name <span style="color:#f92672">=</span> cookie<span style="color:#f92672">.</span><span style="color:#a6e22e">getName</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#e6db74">&#34;message&#34;</span><span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span>name<span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>                String value <span style="color:#f92672">=</span> cookie<span style="color:#f92672">.</span><span style="color:#a6e22e">getValue</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#75715e">// URL解码
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>                value <span style="color:#f92672">=</span> URLDecoder<span style="color:#f92672">.</span><span style="color:#a6e22e">decode</span><span style="color:#f92672">(</span>value<span style="color:#f92672">,</span> StandardCharsets<span style="color:#f92672">.</span><span style="color:#a6e22e">UTF_8</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>name <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;:&#34;</span> <span style="color:#f92672">+</span> value<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doPost</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">doGet</span><span style="color:#f92672">(</span>request<span style="color:#f92672">,</span> response<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>Cookie对象提供的<code>getName()</code>和<code>getValue()</code>可以分别获取Cookie的名称和值。</p>
 <blockquote>
 <p>获取Cookie后应该使用<code>URLDecoder.decode</code>进行解码，这样确保Cookie里出现中文数据时不会乱码。</p>
 </blockquote>
@@ -597,96 +597,96 @@ Session是存储在服务器端。</li>
 <ul>
 <li>
 <p>获取Session对象（使用Request对象）：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">HttpSession session <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span><span style="color:#a6e22e">getSession</span><span style="color:#f92672">();</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>HttpSession session <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span><span style="color:#a6e22e">getSession</span><span style="color:#f92672">();</span>
+</span></span></code></pre></div></li>
 <li>
 <p>Session对象提供的功能:</p>
 <ul>
 <li>
 <p>存储数据到 session 域中：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setAttribute</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">,</span> Object o<span style="color:#f92672">)</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setAttribute</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">,</span> Object o<span style="color:#f92672">)</span>
+</span></span></code></pre></div></li>
 <li>
 <p>根据 key，获取值：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Object <span style="color:#a6e22e">getAttribute</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">)</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Object <span style="color:#a6e22e">getAttribute</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">)</span>
+</span></span></code></pre></div></li>
 <li>
 <p>根据 key，删除该键值对：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">removeAttribute</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">)</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">removeAttribute</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">)</span>
+</span></span></code></pre></div></li>
 </ul>
 </li>
 </ul>
 <h2 id="存储数据">存储数据</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> web.session<span style="color:#f92672">;</span>
-
-<span style="color:#f92672">import</span> javax.servlet.*<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.http.*<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.annotation.*<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
-
-<span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/sessionServlet&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SessionServlet</span> <span style="color:#66d9ef">extends</span> HttpServlet <span style="color:#f92672">{</span>
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doGet</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
-        <span style="color:#75715e">// 存储数据到Session中
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">// 1. 获取Session对象
-</span><span style="color:#75715e"></span>        HttpSession session <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span><span style="color:#a6e22e">getSession</span><span style="color:#f92672">();</span>
-        <span style="color:#75715e">// 2. 存储数据
-</span><span style="color:#75715e"></span>        session<span style="color:#f92672">.</span><span style="color:#a6e22e">setAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;message&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Hello World!&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doPost</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">doGet</span><span style="color:#f92672">(</span>request<span style="color:#f92672">,</span> response<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> web.session<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.*<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.http.*<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.annotation.*<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/sessionServlet&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SessionServlet</span> <span style="color:#66d9ef">extends</span> HttpServlet <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doGet</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 存储数据到Session中
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// 1. 获取Session对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        HttpSession session <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span><span style="color:#a6e22e">getSession</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 2. 存储数据
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        session<span style="color:#f92672">.</span><span style="color:#a6e22e">setAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;message&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;Hello World!&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doPost</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">doGet</span><span style="color:#f92672">(</span>request<span style="color:#f92672">,</span> response<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><blockquote>
 <p>由于Session中的数据是存储在服务器，所以在Session中存储和读取中文数据不需要进行编码和解码。</p>
 </blockquote>
 <h2 id="获取数据">获取数据</h2>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> web.session<span style="color:#f92672">;</span>
-
-<span style="color:#f92672">import</span> javax.servlet.*<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.http.*<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.annotation.*<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
-
-<span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/sessionServlet&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SessionServlet</span> <span style="color:#66d9ef">extends</span> HttpServlet <span style="color:#f92672">{</span>
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doGet</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
-        <span style="color:#75715e">// 从Session中获取数据
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">// 1. 获取Session对象
-</span><span style="color:#75715e"></span>        HttpSession session <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span><span style="color:#a6e22e">getSession</span><span style="color:#f92672">();</span>
-        <span style="color:#75715e">// 2. 获取数据
-</span><span style="color:#75715e"></span>        Object message <span style="color:#f92672">=</span> session<span style="color:#f92672">.</span><span style="color:#a6e22e">getAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;message&#34;</span><span style="color:#f92672">);</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>message<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doPost</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">doGet</span><span style="color:#f92672">(</span>request<span style="color:#f92672">,</span> response<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><h2 id="session-的钝化与活化">Session 的钝化与活化</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> web.session<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.*<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.http.*<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.annotation.*<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/sessionServlet&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SessionServlet</span> <span style="color:#66d9ef">extends</span> HttpServlet <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doGet</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 从Session中获取数据
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// 1. 获取Session对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        HttpSession session <span style="color:#f92672">=</span> request<span style="color:#f92672">.</span><span style="color:#a6e22e">getSession</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 2. 获取数据
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        Object message <span style="color:#f92672">=</span> session<span style="color:#f92672">.</span><span style="color:#a6e22e">getAttribute</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;message&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>message<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doPost</span><span style="color:#f92672">(</span>HttpServletRequest request<span style="color:#f92672">,</span> HttpServletResponse response<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">doGet</span><span style="color:#f92672">(</span>request<span style="color:#f92672">,</span> response<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><h2 id="session-的钝化与活化">Session 的钝化与活化</h2>
 <p>正常来说，Session是存储在内存中的，只要服务器关闭，那么所有会话的Session都会失效。但是Tomcat在正常关闭的情况下，Session并不会失效，这是因为Session的<strong>钝化</strong>：在服务器正常关闭后，Tomcat会<u>自动将Session数据写入硬盘的文件</u>中。钝化的数据路径为：<code>项目目录\target\tomcat\work\Tomcat\localhost\项目名称\SESSIONS.ser</code>。</p>
 <p>再次启动服务器后，从文件中加载数据到Session中，这就是Session的<strong>活化</strong>。而数据加载到Session中后，路径中的<code>SESSIONS.ser</code>文件会被删除掉。</p>
 <p>所以说只要浏览器中记录<code>SessionID</code>的Cookie还存在，那么这个对应的Session也就存在，并且唯一。</p>
 <p>而Cookie的存在是与浏览器的关闭密切相关的。在无人为销毁Cookie和没有为Cookie设置存活时间的情况下，当浏览器关闭时，其记录的Cookie也会自动销毁。所以当浏览器关闭时，对应的Session可能会消失。</p>
 <h2 id="session-的销毁">Session 的销毁</h2>
 <p>默认情况下，无操作，30分钟后自动销毁Session。对于这个失效时间，是可以通过在项目的<code>web.xml</code>中配置进行修改：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
-<span style="color:#f92672">&lt;web-app</span> <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://xmlns.jcp.org/xml/ns/javaee&#34;</span>
-         <span style="color:#a6e22e">xmlns:xsi=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
-         <span style="color:#a6e22e">xsi:schemaLocation=</span><span style="color:#e6db74">&#34;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd&#34;</span>
-         <span style="color:#a6e22e">version=</span><span style="color:#e6db74">&#34;3.1&#34;</span><span style="color:#f92672">&gt;</span>
-
-    <span style="color:#f92672">&lt;session-config&gt;</span>
-        <span style="color:#f92672">&lt;session-timeout&gt;</span>100<span style="color:#f92672">&lt;/session-timeout&gt;</span>
-    <span style="color:#f92672">&lt;/session-config&gt;</span>
-<span style="color:#f92672">&lt;/web-app&gt;</span>
-</code></pre></div><p>如果没有配置，默认是30分钟，默认值是在Tomcat的<code>web.xml</code>配置文件中写死的。通过在Tomcat的<code>web.xml</code>中搜索<code>&lt;session-timeout&gt;</code>即可找到对应设置。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;web-app</span> <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://xmlns.jcp.org/xml/ns/javaee&#34;</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">xmlns:xsi=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">xsi:schemaLocation=</span><span style="color:#e6db74">&#34;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd&#34;</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#a6e22e">version=</span><span style="color:#e6db74">&#34;3.1&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;session-config&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;session-timeout&gt;</span>100<span style="color:#f92672">&lt;/session-timeout&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/session-config&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/web-app&gt;</span>
+</span></span></code></pre></div><p>如果没有配置，默认是30分钟，默认值是在Tomcat的<code>web.xml</code>配置文件中写死的。通过在Tomcat的<code>web.xml</code>中搜索<code>&lt;session-timeout&gt;</code>即可找到对应设置。</p>
 <p>也可以通过调用<code>HTTPSession</code>的<code>invalidate()</code>方法进行手动销毁。</p>
 <h2 id="session-常用方法">Session 常用方法</h2>
 <div class="table-wrapper"><table>

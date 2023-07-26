@@ -358,7 +358,7 @@
             </div>
         
 
-        <div class="article-time--reading">共3091字</div>
+        <div class="article-time--reading">共3121字</div>
     </footer>
     
 
@@ -383,133 +383,131 @@
 <h3 id="python实现">Python实现</h3>
 <ol>
 <li>递归实现：
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">BinarySearch</span>(arr, target, left <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, right <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>):
-    <span style="color:#e6db74">&#34;&#34;&#34;二分排序（递归实现）
-</span><span style="color:#e6db74">    left=0,right=len(arr)-1&#34;&#34;&#34;</span>
-    <span style="color:#66d9ef">if</span> left <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> right <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
-        right <span style="color:#f92672">=</span> len(arr)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
-    <span style="color:#66d9ef">if</span> left <span style="color:#f92672">&gt;</span> right <span style="color:#f92672">or</span> len(arr) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
-        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
-
-    mid <span style="color:#f92672">=</span> int((left <span style="color:#f92672">+</span> right) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>)
-    <span style="color:#66d9ef">if</span> target <span style="color:#f92672">==</span> arr[mid]:
-        <span style="color:#66d9ef">return</span> mid
-    <span style="color:#66d9ef">elif</span> target <span style="color:#f92672">&lt;</span> arr[mid]:
-        <span style="color:#66d9ef">return</span> BinarySearch(arr, target, left, mid<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
-    <span style="color:#66d9ef">else</span>:
-        <span style="color:#66d9ef">return</span> BinarySearch(arr, target, mid<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, right)
-
-<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
-    arr <span style="color:#f92672">=</span> list(range(<span style="color:#ae81ff">100</span>))
-    target <span style="color:#f92672">=</span> <span style="color:#ae81ff">66</span>
-    result <span style="color:#f92672">=</span> BinarySearch(arr, target)
-    <span style="color:#66d9ef">if</span> result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
-        print(<span style="color:#66d9ef">False</span>)
-    <span style="color:#66d9ef">else</span>:
-        print(result)
-
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">BinarySearch</span>(arr, target, left <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, right <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;二分排序（递归实现）
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    left=0,right=len(arr)-1&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> left <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">and</span> right <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        right <span style="color:#f92672">=</span> len(arr)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> left <span style="color:#f92672">&gt;</span> right <span style="color:#f92672">or</span> len(arr) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    mid <span style="color:#f92672">=</span> int((left <span style="color:#f92672">+</span> right) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> target <span style="color:#f92672">==</span> arr[mid]:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> mid
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">elif</span> target <span style="color:#f92672">&lt;</span> arr[mid]:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> BinarySearch(arr, target, left, mid<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> BinarySearch(arr, target, mid<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, right)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    arr <span style="color:#f92672">=</span> list(range(<span style="color:#ae81ff">100</span>))
+</span></span><span style="display:flex;"><span>    target <span style="color:#f92672">=</span> <span style="color:#ae81ff">66</span>
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> BinarySearch(arr, target)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        print(result)
+</span></span></code></pre></div></li>
 <li>非递归实现：
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">BinarySearch</span>(arr, target):
-    <span style="color:#e6db74">&#34;&#34;&#34;二分排序（非递归实现）&#34;&#34;&#34;</span>
-    <span style="color:#66d9ef">if</span> len(arr) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
-        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
-
-    left <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
-    right <span style="color:#f92672">=</span> len(arr)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
-    <span style="color:#66d9ef">while</span> left <span style="color:#f92672">&lt;=</span> right:
-        mid <span style="color:#f92672">=</span> int((left <span style="color:#f92672">+</span> right) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>)
-        <span style="color:#66d9ef">if</span> target <span style="color:#f92672">==</span> arr[mid]:
-            <span style="color:#66d9ef">return</span> mid
-        <span style="color:#66d9ef">elif</span> target <span style="color:#f92672">&lt;</span> arr[mid]:
-            right <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
-        <span style="color:#66d9ef">else</span>:
-            left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
-
-    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
-
-<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
-    arr <span style="color:#f92672">=</span> list(range(<span style="color:#ae81ff">100</span>))
-    target <span style="color:#f92672">=</span> <span style="color:#ae81ff">66</span>
-    result <span style="color:#f92672">=</span> BinarySearch(arr, target)
-    <span style="color:#66d9ef">if</span> result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
-        print(<span style="color:#66d9ef">False</span>)
-    <span style="color:#66d9ef">else</span>:
-        print(result)
-
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">BinarySearch</span>(arr, target):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;二分排序（非递归实现）&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> len(arr) <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    left <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    right <span style="color:#f92672">=</span> len(arr)<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> left <span style="color:#f92672">&lt;=</span> right:
+</span></span><span style="display:flex;"><span>        mid <span style="color:#f92672">=</span> int((left <span style="color:#f92672">+</span> right) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> target <span style="color:#f92672">==</span> arr[mid]:
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> mid
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">elif</span> target <span style="color:#f92672">&lt;</span> arr[mid]:
+</span></span><span style="display:flex;"><span>            right <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    arr <span style="color:#f92672">=</span> list(range(<span style="color:#ae81ff">100</span>))
+</span></span><span style="display:flex;"><span>    target <span style="color:#f92672">=</span> <span style="color:#ae81ff">66</span>
+</span></span><span style="display:flex;"><span>    result <span style="color:#f92672">=</span> BinarySearch(arr, target)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#66d9ef">False</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        print(result)
+</span></span></code></pre></div></li>
 </ol>
 <h3 id="c实现">C实现</h3>
 <ol>
 <li>递归实现：
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#define LEN 100
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">BinarySearch</span>(<span style="color:#66d9ef">int</span> arr[], <span style="color:#66d9ef">int</span> left, <span style="color:#66d9ef">int</span> right, <span style="color:#66d9ef">int</span> target)
-{
-    <span style="color:#66d9ef">if</span> (left <span style="color:#f92672">&gt;</span> right <span style="color:#f92672">||</span> arr <span style="color:#f92672">==</span> NULL)
-        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
-
-    <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> (left <span style="color:#f92672">+</span> right) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
-    <span style="color:#66d9ef">if</span> (target <span style="color:#f92672">==</span> arr[mid])
-        <span style="color:#66d9ef">return</span> mid;
-    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (target <span style="color:#f92672">&lt;</span> arr[mid])
-        <span style="color:#66d9ef">return</span> BinarySearch(arr, left, mid<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, target);
-    <span style="color:#66d9ef">else</span>
-        <span style="color:#66d9ef">return</span> BinarySearch(arr, mid<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, right, target);
-}
-
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>)
-{
-    <span style="color:#66d9ef">int</span> arr[LEN];
-    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> LEN; i<span style="color:#f92672">++</span>)
-        arr[i] <span style="color:#f92672">=</span> i;
-    <span style="color:#66d9ef">int</span> target <span style="color:#f92672">=</span> <span style="color:#ae81ff">66</span>;
-    <span style="color:#66d9ef">int</span> result <span style="color:#f92672">=</span> BinarySearch(arr, <span style="color:#ae81ff">0</span>, LEN<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, target);
-    <span style="color:#66d9ef">if</span> (result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
-        printf(<span style="color:#e6db74">&#34;False</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
-    <span style="color:#66d9ef">else</span>
-        printf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, result);
-    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-}
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define LEN 100
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">BinarySearch</span>(<span style="color:#66d9ef">int</span> arr[], <span style="color:#66d9ef">int</span> left, <span style="color:#66d9ef">int</span> right, <span style="color:#66d9ef">int</span> target)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (left <span style="color:#f92672">&gt;</span> right <span style="color:#f92672">||</span> arr <span style="color:#f92672">==</span> NULL)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> (left <span style="color:#f92672">+</span> right) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (target <span style="color:#f92672">==</span> arr[mid])
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> mid;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (target <span style="color:#f92672">&lt;</span> arr[mid])
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> BinarySearch(arr, left, mid<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, target);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> BinarySearch(arr, mid<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>, right, target);
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> arr[LEN];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> LEN; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        arr[i] <span style="color:#f92672">=</span> i;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> target <span style="color:#f92672">=</span> <span style="color:#ae81ff">66</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> result <span style="color:#f92672">=</span> BinarySearch(arr, <span style="color:#ae81ff">0</span>, LEN<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, target);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;False</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, result);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
 <li>非递归实现：
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c" data-lang="c"><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
-</span><span style="color:#75715e">#define LEN 100
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">BinarySearch</span>(<span style="color:#66d9ef">int</span> arr[], <span style="color:#66d9ef">int</span> left, <span style="color:#66d9ef">int</span> right, <span style="color:#66d9ef">int</span> target)
-{
-    <span style="color:#66d9ef">if</span> (left <span style="color:#f92672">&gt;</span> right <span style="color:#f92672">||</span> arr <span style="color:#f92672">==</span> NULL)
-        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
-
-    <span style="color:#66d9ef">while</span> (left <span style="color:#f92672">&lt;=</span> right)
-    {
-        <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> (left <span style="color:#f92672">+</span> right) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
-        <span style="color:#66d9ef">if</span> (target <span style="color:#f92672">==</span> arr[mid])
-            <span style="color:#66d9ef">return</span> mid;
-        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (target <span style="color:#f92672">&lt;</span> arr[mid])
-            right <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
-        <span style="color:#66d9ef">else</span>
-            left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
-    }
-
-    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
-}
-
-<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>)
-{
-    <span style="color:#66d9ef">int</span> arr[LEN];
-    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> LEN; i<span style="color:#f92672">++</span>)
-        arr[i] <span style="color:#f92672">=</span> i;
-    <span style="color:#66d9ef">int</span> target <span style="color:#f92672">=</span> <span style="color:#ae81ff">66</span>;
-    <span style="color:#66d9ef">int</span> result <span style="color:#f92672">=</span> BinarySearch(arr, <span style="color:#ae81ff">0</span>, LEN<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, target);
-    <span style="color:#66d9ef">if</span> (result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
-        printf(<span style="color:#e6db74">&#34;False</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
-    <span style="color:#66d9ef">else</span>
-        printf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, result);
-    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
-}
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;stdio.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#define LEN 100
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">BinarySearch</span>(<span style="color:#66d9ef">int</span> arr[], <span style="color:#66d9ef">int</span> left, <span style="color:#66d9ef">int</span> right, <span style="color:#66d9ef">int</span> target)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (left <span style="color:#f92672">&gt;</span> right <span style="color:#f92672">||</span> arr <span style="color:#f92672">==</span> NULL)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (left <span style="color:#f92672">&lt;=</span> right)
+</span></span><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> mid <span style="color:#f92672">=</span> (left <span style="color:#f92672">+</span> right) <span style="color:#f92672">/</span> <span style="color:#ae81ff">2</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (target <span style="color:#f92672">==</span> arr[mid])
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> mid;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (target <span style="color:#f92672">&lt;</span> arr[mid])
+</span></span><span style="display:flex;"><span>            right <span style="color:#f92672">=</span> mid <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>            left <span style="color:#f92672">=</span> mid <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>(<span style="color:#66d9ef">void</span>)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> arr[LEN];
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; i <span style="color:#f92672">&lt;</span> LEN; i<span style="color:#f92672">++</span>)
+</span></span><span style="display:flex;"><span>        arr[i] <span style="color:#f92672">=</span> i;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> target <span style="color:#f92672">=</span> <span style="color:#ae81ff">66</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> result <span style="color:#f92672">=</span> BinarySearch(arr, <span style="color:#ae81ff">0</span>, LEN<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>, target);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (result <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;False</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>        printf(<span style="color:#e6db74">&#34;%d</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, result);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div></li>
 </ol>
 <hr>
 <h1 id="散列表查找">散列表查找</h1>
@@ -534,8 +532,8 @@
 f(key)=a \cdot key+b\quad(a,b为常数)
 $$</p>
 <p>例如，要存储0-100岁的人口统计表，就可以采用散列函数为：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">f(key) = key
-</code></pre></div><h4 id="数字分析法">数字分析法</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>f(key) = key
+</span></span></code></pre></div><h4 id="数字分析法">数字分析法</h4>
 <p>数字分析法通常适合处理关键字位数比较大的情况，如果事先知道关键字的分布且关键字的若干位分布比较  均匀，就可以考虑这个方法。</p>
 <p>Example：</p>
 <p>假设某公司的员工登记表以员工的手机号作为关键字。手机号一共11位。前3位是接入号，对应不同运营商的子品牌；中间4位表示归属地；最后4位是用户号。不同手机号前7位相同的可能性很大，所以可以选择后4位作为散列地址，或者对后4位反转（1234 -&gt; 4321）、循环右移（1234 -&gt; 4123）、循环左移等等之后作为散列地址。</p>
@@ -564,7 +562,7 @@ $$</p>
 <li>
 <p>线性探测法</p>
 <p>$$
-f'(key)=(f(key)+d)% n,\quad 其中d取(0,1,2,&hellip;,n-1),\ n为散列表的长度
+f&rsquo;(key)=(f(key)+d)% n,\quad 其中d取(0,1,2,&hellip;,n-1),\ n为散列表的长度
 $$</p>
 <p>$d$初始为0，如果有冲突，那么$d$就通过递增来寻找空的散列地址。</p>
 <p>Example：</p>
@@ -603,7 +601,7 @@ $$</p>
 <td></td>
 </tr>
 <tr>
-<td>在如上所示的散列表中插入37。首先使用散列函数计算37的散列地址：$f'(37)=f(37)%12=1$（这里假设$f(key)=key$）。</td>
+<td>在如上所示的散列表中插入37。首先使用散列函数计算37的散列地址：$f&rsquo;(37)=f(37)%12=1$（这里假设$f(key)=key$）。</td>
 <td></td>
 <td></td>
 <td></td>
@@ -619,7 +617,7 @@ $$</p>
 </tr>
 </tbody>
 </table></div>
-<p>而下标为1的位置已经存放了25，那就只能继续寻找下一个空散列地址：$f'(37)=(f(37)+1)%12=2$。</p>
+<p>而下标为1的位置已经存放了25，那就只能继续寻找下一个空散列地址：$f&rsquo;(37)=(f(37)+1)%12=2$。</p>
 <p>2这个位置没有内容，所以得到：</p>
 <div class="table-wrapper"><table>
 <thead>
@@ -676,7 +674,7 @@ $$</p>
 <li>
 <p>二次探测法</p>
 <p>$$
-f'(key)=(f(key)+q^2)%n,\quad 其中q取(0,1,-1,2,-2,&hellip;,\frac n2,-\frac n2),\ n为散列表的长度
+f&rsquo;(key)=(f(key)+q^2)%n,\quad 其中q取(0,1,-1,2,-2,&hellip;,\frac n2,-\frac n2),\ n为散列表的长度
 $$</p>
 <p>二次探测法其实是对线性探测的一个优化，增加了平方可以不让关键字聚集在某一块区域。</p>
 <p>Example：</p>
@@ -715,7 +713,7 @@ $$</p>
 <td></td>
 </tr>
 <tr>
-<td>插入元素7，通过二次探测的散列函数计算得到：$f'(7)=f(7)%12=7$。</td>
+<td>插入元素7，通过二次探测的散列函数计算得到：$f&rsquo;(7)=f(7)%12=7$。</td>
 <td></td>
 <td></td>
 <td></td>
@@ -731,8 +729,8 @@ $$</p>
 </tr>
 </tbody>
 </table></div>
-<p>但下标为7的位置已经存放了67，所以需要寻找下一个存储地址：$f'(7)=(f(7)+1^2)%12=8$。</p>
-<p>下标为8的位置已经存放了56，继续寻找： $f'(7)=(f(7)+(-1^2))%12=6$。</p>
+<p>但下标为7的位置已经存放了67，所以需要寻找下一个存储地址：$f&rsquo;(7)=(f(7)+1^2)%12=8$。</p>
+<p>下标为8的位置已经存放了56，继续寻找： $f&rsquo;(7)=(f(7)+(-1^2))%12=6$。</p>
 <p>6这个位置为空，得到：</p>
 <div class="table-wrapper"><table>
 <thead>
@@ -774,7 +772,7 @@ $$</p>
 <li>
 <p>随机探测法</p>
 <p>$$
-f'(key)=(f(key)+d)%m,\quad d为随机数,m为表长
+f&rsquo;(key)=(f(key)+d)%m,\quad d为随机数,m为表长
 $$</p>
 <p>在实现中应预先用随机数发生器产生一个随机序列，将此序列作为依次探测的步长。这样就能使不同的关键字具有不同的探测次序，从而可以避免或减少堆积。</p>
 </li>
@@ -782,7 +780,7 @@ $$</p>
 <h4 id="多重散列法">多重散列法</h4>
 <p>多重散列法又叫再散列函数法。其公式如下：</p>
 <p>$$
-f'(key)=RH(key)
+f&rsquo;(key)=RH(key)
 $$</p>
 <p>其中$RH$就是不同的散列函数，这些散列函数可以是任何散列函数。只要其中一个发生了冲突，就马上换一个散列函数，直到冲突解决。缺点就是增加了很多计算时间。</p>
 <h4 id="链地址法">链地址法</h4>
@@ -818,46 +816,45 @@ $$</p>
 <h3 id="python实现-1">Python实现</h3>
 <ul>
 <li>除留取余数法构造散列函数，开放地址法-线性探测处理散列表冲突：
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HashTable</span>:
-    <span style="color:#66d9ef">def</span> __init__(self, size):
-        self<span style="color:#f92672">.</span>elem <span style="color:#f92672">=</span> [<span style="color:#66d9ef">None</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(size)]
-        self<span style="color:#f92672">.</span>size <span style="color:#f92672">=</span> size
-
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">hash</span>(self, key):
-        <span style="color:#e6db74">&#34;&#34;&#34;除留取余数法构造哈希函数&#34;&#34;&#34;</span>
-        <span style="color:#66d9ef">return</span> key <span style="color:#f92672">%</span> self<span style="color:#f92672">.</span>size
-
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">insert_hash</span>(self, key):
-        address <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>hash(key)
-        <span style="color:#75715e"># 开放地址法-线性探测</span>
-        <span style="color:#66d9ef">while</span> self<span style="color:#f92672">.</span>elem[address]:
-            address <span style="color:#f92672">=</span> (address<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> self<span style="color:#f92672">.</span>size
-        self<span style="color:#f92672">.</span>elem[address] <span style="color:#f92672">=</span> key
-
-    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">search_hash</span>(self, key):
-        star <span style="color:#f92672">=</span> address <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>hash(key)
-        <span style="color:#66d9ef">while</span> self<span style="color:#f92672">.</span>elem[address] <span style="color:#f92672">!=</span> key:
-            address <span style="color:#f92672">=</span> (address <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> self<span style="color:#f92672">.</span>size
-            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> self<span style="color:#f92672">.</span>elem[address] <span style="color:#f92672">or</span> address <span style="color:#f92672">==</span> star:
-                <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
-        <span style="color:#66d9ef">return</span> address
-
-
-<span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
-    list_a <span style="color:#f92672">=</span> [<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">67</span>, <span style="color:#ae81ff">56</span>, <span style="color:#ae81ff">16</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">37</span>, <span style="color:#ae81ff">22</span>, <span style="color:#ae81ff">29</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">47</span>, <span style="color:#ae81ff">48</span>, <span style="color:#ae81ff">34</span>]
-    hash_table <span style="color:#f92672">=</span> HashTable(<span style="color:#ae81ff">12</span>)
-    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> list_a:
-        hash_table<span style="color:#f92672">.</span>insert_hash(i)
-
-    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> hash_table<span style="color:#f92672">.</span>elem:
-        <span style="color:#66d9ef">if</span> i:
-            print((hash_table<span style="color:#f92672">.</span>elem<span style="color:#f92672">.</span>index(i), i), end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34; &#34;</span>)
-    print(<span style="color:#e6db74">&#34;&#34;</span>)
-
-    print(hash_table<span style="color:#f92672">.</span>search_hash(<span style="color:#ae81ff">15</span>))
-    print(hash_table<span style="color:#f92672">.</span>search_hash(<span style="color:#ae81ff">33</span>))
-
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HashTable</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> __init__(self, size):
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>elem <span style="color:#f92672">=</span> [<span style="color:#66d9ef">None</span> <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(size)]
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>size <span style="color:#f92672">=</span> size
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">hash</span>(self, key):
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;除留取余数法构造哈希函数&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> key <span style="color:#f92672">%</span> self<span style="color:#f92672">.</span>size
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">insert_hash</span>(self, key):
+</span></span><span style="display:flex;"><span>        address <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>hash(key)
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># 开放地址法-线性探测</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> self<span style="color:#f92672">.</span>elem[address]:
+</span></span><span style="display:flex;"><span>            address <span style="color:#f92672">=</span> (address<span style="color:#f92672">+</span><span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> self<span style="color:#f92672">.</span>size
+</span></span><span style="display:flex;"><span>        self<span style="color:#f92672">.</span>elem[address] <span style="color:#f92672">=</span> key
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">search_hash</span>(self, key):
+</span></span><span style="display:flex;"><span>        star <span style="color:#f92672">=</span> address <span style="color:#f92672">=</span> self<span style="color:#f92672">.</span>hash(key)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">while</span> self<span style="color:#f92672">.</span>elem[address] <span style="color:#f92672">!=</span> key:
+</span></span><span style="display:flex;"><span>            address <span style="color:#f92672">=</span> (address <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> self<span style="color:#f92672">.</span>size
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> self<span style="color:#f92672">.</span>elem[address] <span style="color:#f92672">or</span> address <span style="color:#f92672">==</span> star:
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">return</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> address
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    list_a <span style="color:#f92672">=</span> [<span style="color:#ae81ff">12</span>, <span style="color:#ae81ff">67</span>, <span style="color:#ae81ff">56</span>, <span style="color:#ae81ff">16</span>, <span style="color:#ae81ff">25</span>, <span style="color:#ae81ff">37</span>, <span style="color:#ae81ff">22</span>, <span style="color:#ae81ff">29</span>, <span style="color:#ae81ff">15</span>, <span style="color:#ae81ff">47</span>, <span style="color:#ae81ff">48</span>, <span style="color:#ae81ff">34</span>]
+</span></span><span style="display:flex;"><span>    hash_table <span style="color:#f92672">=</span> HashTable(<span style="color:#ae81ff">12</span>)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> list_a:
+</span></span><span style="display:flex;"><span>        hash_table<span style="color:#f92672">.</span>insert_hash(i)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> hash_table<span style="color:#f92672">.</span>elem:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> i:
+</span></span><span style="display:flex;"><span>            print((hash_table<span style="color:#f92672">.</span>elem<span style="color:#f92672">.</span>index(i), i), end<span style="color:#f92672">=</span><span style="color:#e6db74">&#34; &#34;</span>)
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    print(hash_table<span style="color:#f92672">.</span>search_hash(<span style="color:#ae81ff">15</span>))
+</span></span><span style="display:flex;"><span>    print(hash_table<span style="color:#f92672">.</span>search_hash(<span style="color:#ae81ff">33</span>))
+</span></span></code></pre></div></li>
 </ul>
 
 </section>

@@ -369,8 +369,8 @@
 <ul>
 <li>
 <p><code>clone</code>到本地：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">git clone https://github.com/alibaba/naco
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>git clone https://github.com/alibaba/nacos
+</span></span></code></pre></div></li>
 <li>
 <p>访问<a class="link" href="https://github.com/alibaba/nacos/releases"  target="_blank" rel="noopener"
     >Nacos的Releases页面</a>：</p>
@@ -403,8 +403,8 @@
 ></p>
 <p>无论是选择下载<code>.zip</code>还是<code>.tar.gz</code>后缀的压缩包都可以。但是在Linux环境下选择下载<code>.tar.gz</code>为佳。</p>
 <p>Linux中解压<code>.tar.gz</code>的命令如：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">tar -zxvf 压缩包文件名.tar.gz
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>tar -zxvf 压缩包文件名.tar.gz
+</span></span></code></pre></div></li>
 </ul>
 <p>将下载好的压缩包解压到任意非中文目录下。解压好的目录结构大致如下：</p>
 <p><img src="/p/nacos-server-%E9%83%A8%E7%BD%B2/uTools_1690140191883.png"
@@ -436,12 +436,12 @@
 <p>在Windows系统中启动和关闭Nacos使用的是<code>.cmd</code>文件，即<code>startup.cmd</code>和<code>shutdown.cmd</code>，分别对应启动和关闭。在Linux系统中使用的是<code>.sh</code>文件，<code>startup.sh</code>启动，<code>shutdown.sh</code>关闭。</p>
 <p>使用<code>startup.cmd</code>或<code>startup.sh</code>默认为集群模式，可以添加参数<code>-m standalone</code>使用单机模式启动。</p>
 <p>Windows系统：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat"><span style="color:#66d9ef">cd</span> Nacos的路径\bin
-.\startup.cmd -m standalone
-</code></pre></div><p>Linux系统：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">cd Nacos的路径/bin
-./startup.sh -m standalone
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span><span style="color:#66d9ef">cd</span> Nacos的路径\bin
+</span></span><span style="display:flex;"><span>.\startup.cmd -m standalone
+</span></span></code></pre></div><p>Linux系统：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>cd Nacos的路径/bin
+</span></span><span style="display:flex;"><span>./startup.sh -m standalone
+</span></span></code></pre></div></li>
 </ul>
 <blockquote>
 <p>在Windows系统和Linux系统上进行本地简单地部署Nacos并没有区别，这里不再分别进行赘述。</p>
@@ -470,10 +470,10 @@
 <p>注意：使用MySQL搭建Nacos的数据库，推荐使用MySQL 5，因为Nacos的MySQL驱动版本可以不支持MySQL 8。如果非要使用MySQL 8，可以在Nacos中升级MySQL的驱动。</p>
 </blockquote>
 <p>首先在MySQL中新建一个数据库：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> nacos;
-USE nacos;
-<span style="color:#66d9ef">source</span> <span style="color:#e6db74">&#34;Nacos的路径/bin/mysql-schema.sql&#34;</span>;
-</code></pre></div><p>创建成功后的Nacos数据库如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> nacos;
+</span></span><span style="display:flex;"><span>USE nacos;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">source</span> <span style="color:#e6db74">&#34;Nacos的路径/bin/mysql-schema.sql&#34;</span>;
+</span></span></code></pre></div><p>创建成功后的Nacos数据库如下：</p>
 <p><img src="/p/nacos-server-%E9%83%A8%E7%BD%B2/uTools_1690142171755.png"
 	width="184"
 	height="290"
@@ -502,9 +502,9 @@ db.password.0=root
 # 数据库驱动（如果其它配置正确，但无法启动时，修改该配置）
 # db.driver-class-name=com.mysql.cj.jdbc.Driver
 </code></pre><p>接下来重启Nacos即可：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">./shutdown.sh <span style="color:#75715e"># 也可以直接 CTRL+C 结束</span>
-./startup.sh -m standalone
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>./shutdown.sh <span style="color:#75715e"># 也可以直接 CTRL+C 结束</span>
+</span></span><span style="display:flex;"><span>./startup.sh -m standalone
+</span></span></code></pre></div><hr>
 <h1 id="部署-nacos-集群">部署 Nacos 集群</h1>
 <p>在本地部署Nacos集群首先将Nacos整个应用目录复制，要在集群中部署几个Nacos就复制几份。接着再分别修改它们的配置文件<code>application.properties</code>。</p>
 <p>例如要部署两个Nacos，做负载均衡：</p>
@@ -558,41 +558,41 @@ server {
 <hr>
 <h1 id="基于-docker-部署">基于 Docker 部署</h1>
 <p>使用Docker部署，首先需要下载Nacos的镜像。Nacos官方提供了对应的镜像<code>nacos/nacos-server</code>。使用下方命令下载该容器：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker pull nacos/nacos-server
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker pull nacos/nacos-server
+</span></span></code></pre></div><blockquote>
 <p>上方的命令拉取（下载）的是版本为<code>latest</code>。要拉取对应版本的镜像，可以查看Docker官方提供的网站<a class="link" href="https://hub.docker.com/"  target="_blank" rel="noopener"
     >hub.docker.com</a>，在其中搜索<code>nacos-server</code>并点击<code>tags</code>查找对应的版本（<a class="link" href="https://hub.docker.com/r/nacos/nacos-server/tags"  target="_blank" rel="noopener"
     >点击快速查找Nacos Server版本</a>。</p>
 <p>例如拉取<code>v1.4.6</code>版本的<code>nacos/nacos-server</code>：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker pull nacos/nacos-server:v1.4.6
-</code></pre></div></blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker pull nacos/nacos-server:v1.4.6
+</span></span></code></pre></div></blockquote>
 <p><code>nacos/nacos-server</code>拉取完成后就可以创建对应容器：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run -d <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    --name nacos-server <span style="color:#ae81ff">\ </span><span style="color:#75715e"># 容器名称</span>
-    -p 8848:8848 <span style="color:#ae81ff">\ </span><span style="color:#75715e"># 端口映射，分号左边为本地端口，分号右边为容器的内部端口</span>
-    --privileged<span style="color:#f92672">=</span>true <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    -e MODE<span style="color:#f92672">=</span>standalone <span style="color:#ae81ff">\ </span><span style="color:#75715e"># 指定为单机模式（使用Docker创建的Docker容器默认也为集群模式，所以需要指定单机模式）</span>
-    -e PREFER_HOST_MODE<span style="color:#f92672">=</span>hostname <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    -v /home/nacos/nacos-server/logs:/home/nacos/logs <span style="color:#ae81ff">\ </span><span style="color:#75715e"># 文件挂载，分号左边为本地目录，分号右边为容器内部的目录，这里是进行日志文件目录映射</span>
-    -v /home/nacos/nacos-server/conf/:/home/nacos/conf/ <span style="color:#ae81ff">\ </span><span style="color:#75715e"># 配置文件映射</span>
-    -e JVM_XMS<span style="color:#f92672">=</span>256m -e JVM_XMX<span style="color:#f92672">=</span>256m <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    nacos/nacos-server <span style="color:#ae81ff">\ </span><span style="color:#75715e"># 创建容器所使用的镜像</span>
-    /usr/sbin/init
-</code></pre></div><p>访问<a class="link" href="http://localhsot:8848/nacos"  target="_blank" rel="noopener"
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker run -d <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --name nacos-server <span style="color:#ae81ff">\ </span><span style="color:#75715e"># 容器名称</span>
+</span></span><span style="display:flex;"><span>    -p 8848:8848 <span style="color:#ae81ff">\ </span><span style="color:#75715e"># 端口映射，分号左边为本地端口，分号右边为容器的内部端口</span>
+</span></span><span style="display:flex;"><span>    --privileged<span style="color:#f92672">=</span>true <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -e MODE<span style="color:#f92672">=</span>standalone <span style="color:#ae81ff">\ </span><span style="color:#75715e"># 指定为单机模式（使用Docker创建的Docker容器默认也为集群模式，所以需要指定单机模式）</span>
+</span></span><span style="display:flex;"><span>    -e PREFER_HOST_MODE<span style="color:#f92672">=</span>hostname <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -v /home/nacos/nacos-server/logs:/home/nacos/logs <span style="color:#ae81ff">\ </span><span style="color:#75715e"># 文件挂载，分号左边为本地目录，分号右边为容器内部的目录，这里是进行日志文件目录映射</span>
+</span></span><span style="display:flex;"><span>    -v /home/nacos/nacos-server/conf/:/home/nacos/conf/ <span style="color:#ae81ff">\ </span><span style="color:#75715e"># 配置文件映射</span>
+</span></span><span style="display:flex;"><span>    -e JVM_XMS<span style="color:#f92672">=</span>256m -e JVM_XMX<span style="color:#f92672">=</span>256m <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    nacos/nacos-server <span style="color:#ae81ff">\ </span><span style="color:#75715e"># 创建容器所使用的镜像</span>
+</span></span><span style="display:flex;"><span>    /usr/sbin/init
+</span></span></code></pre></div><p>访问<a class="link" href="http://localhsot:8848/nacos"  target="_blank" rel="noopener"
     >http://localhsot:8848/nacos</a>即可。默认的用户名和密码均为<code>nacos</code>。</p>
 <p>如果是在Windows中使用Docker Desktop部署，目录映射的路径应该这样写：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bat" data-lang="bat">docker run -d \
-    --name nacos-server \
-    -p 8848:8848 \
-    --privileged=true \
-    -e MODE=standalone \
-    -e PREFER_HOST_MODE=hostname \
-    -v /d/docker-volume/nacos/nacos-server/logs:/home/nacos/logs \
-    -v /d/docker-volume/nacos/nacos-server/conf/:/home/nacos/conf/ \
-    -e JVM_XMS=256m -e JVM_XMX=256m \
-    nacos/nacos-server \
-    /usr/sbin/init
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bat" data-lang="bat"><span style="display:flex;"><span>docker run -d \
+</span></span><span style="display:flex;"><span>    --name nacos-server \
+</span></span><span style="display:flex;"><span>    -p 8848:8848 \
+</span></span><span style="display:flex;"><span>    --privileged=true \
+</span></span><span style="display:flex;"><span>    -e MODE=standalone \
+</span></span><span style="display:flex;"><span>    -e PREFER_HOST_MODE=hostname \
+</span></span><span style="display:flex;"><span>    -v /d/docker-volume/nacos/nacos-server/logs:/home/nacos/logs \
+</span></span><span style="display:flex;"><span>    -v /d/docker-volume/nacos/nacos-server/conf/:/home/nacos/conf/ \
+</span></span><span style="display:flex;"><span>    -e JVM_XMS=256m -e JVM_XMX=256m \
+</span></span><span style="display:flex;"><span>    nacos/nacos-server \
+</span></span><span style="display:flex;"><span>    /usr/sbin/init
+</span></span></code></pre></div><hr>
 <h1 id="基于-docker-使用-mysql-部署">基于 Docker 使用 MySQL 部署</h1>
 <p>根据如上方法创建Nacos容器，然后修改映射到本地的配置文件。例如修改<code>/home/nacos/nacos-server/conf</code>下的<code>application.properties</code>：</p>
 <pre tabindex="0"><code class="language-properties" data-lang="properties"># 数据库配置（根据你的配置环境修改）
@@ -608,13 +608,13 @@ db.password.0=root
 <ol>
 <li>
 <p>创建Docker Network：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker network create nacos-network
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker network create nacos-network
+</span></span></code></pre></div></li>
 <li>
 <p>分别将Nacos容器和MySQL容器加入Docker Network（假设MySQL的容器名为<code>mysql</code>）：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker network connect nacos-network nacos-server
-docker network connect nacos-network mysql
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker network connect nacos-network nacos-server
+</span></span><span style="display:flex;"><span>docker network connect nacos-network mysql
+</span></span></code></pre></div></li>
 </ol>
 <p>之后在加入这个Network的容器中，可以将它们的容器名当作IP地址来使用。所以在<code>nacos-server</code>中可以将<code>db.url</code>修改为如下：</p>
 <pre tabindex="0"><code class="language-properties" data-lang="properties">db.url.0=jdbc:mysql://mysql:3306/nacos?characterEncoding=utf8&amp;connectTimeout=1000&amp;socketTimeout=3000&amp;autoReconnect=true&amp;useUnicode=true&amp;useSSL=false&amp;serverTimezone=UTC
@@ -622,62 +622,62 @@ docker network connect nacos-network mysql
 <p>使用Docker创建的MySQL容器同样需要创建<code>nacos</code>数据库。可以通过文件挂载的方式将<code>mysql-schema.sql</code>挂载到容器中，或者通过其它文件传输方式传输到容器中。
 在容器中创建数据库可以在本机输入命令（假设<code>mysql-schema.sql</code>导入到了容器的<code>root</code>目录中）：</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker exec -ti mysql mysql -uroot -proot -e <span style="color:#e6db74">&#34;CREATE DATABASE nacos; USE nacos; SOURCE /root/mysql-schema.sql;&#34;</span>
-</code></pre></div><p>上方命令第一个<code>mysql</code>是指容器名称，第二个是指容器中的<code>mysql</code>命令。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker exec -ti mysql mysql -uroot -proot -e <span style="color:#e6db74">&#34;CREATE DATABASE nacos; USE nacos; SOURCE /root/mysql-schema.sql;&#34;</span>
+</span></span></code></pre></div><p>上方命令第一个<code>mysql</code>是指容器名称，第二个是指容器中的<code>mysql</code>命令。</p>
 <p>或者是在本地使用Docker登录MySQL后进行操作：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker exec -ti mysql mysql -uroot -p
-<span style="color:#75715e"># 然后输入你的密码，回车</span>
-mysql&gt; CREATE DATABASE nacos;
-mysql&gt; USE nacos;
-mysql&gt; SOURCE /root/mysql-schema.sql;
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker exec -ti mysql mysql -uroot -p
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 然后输入你的密码，回车</span>
+</span></span><span style="display:flex;"><span>mysql&gt; CREATE DATABASE nacos;
+</span></span><span style="display:flex;"><span>mysql&gt; USE nacos;
+</span></span><span style="display:flex;"><span>mysql&gt; SOURCE /root/mysql-schema.sql;
+</span></span></code></pre></div><blockquote>
 <p>注：使用Docker部署Nacos，并使用MySQL数据库，按照上述方法直接修改配置文件可能不生效（可能会导致Nacos容器无法启动）。其实使用Docker部署并使用MySQL数据库还有一个简便的方法（见下方）。</p>
 </blockquote>
 <p>如果上述方式无法生效，可以先删除该容器后通过在创建容器的Docker命令中直接指定MySQL服务的配置信息：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker run -d <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    --name nacos-server <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    -p 8848:8848 <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    --network nacos-network<span style="color:#ae81ff">\ </span><span style="color:#75715e"># 在创建容器时指定Network</span>
-    --privileged<span style="color:#f92672">=</span>true <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    -e SPRING_DATASOURCE_PLATFORM<span style="color:#f92672">=</span>mysql <span style="color:#ae81ff">\ </span><span style="color:#75715e"># 指定数据源类型为MySQL</span>
-    -e MYSQL_SERVICE_HOST<span style="color:#f92672">=</span>mysql <span style="color:#ae81ff">\ </span><span style="color:#75715e"># MySQL服务器的地址（这里加入了Network所以可以直接使用容器名称来当Host）</span>
-    -e MYSQL_SERVICE_PORT<span style="color:#f92672">=</span><span style="color:#ae81ff">3306</span> <span style="color:#ae81ff">\ </span><span style="color:#75715e"># MySQL服务端口</span>
-    -e MYSQL_SERVICE_USER<span style="color:#f92672">=</span>root <span style="color:#ae81ff">\ </span><span style="color:#75715e"># MySQL用户名</span>
-    -e MYSQL_SERVICE_PASSWORD<span style="color:#f92672">=</span>root <span style="color:#ae81ff">\ </span><span style="color:#75715e"># MySQL密码</span>
-    -e MYSQL_SERVICE_DB_NAME<span style="color:#f92672">=</span>nacos <span style="color:#ae81ff">\ </span><span style="color:#75715e"># MySQL的数据库名称</span>
-    -e PREFER_HOST_MODE<span style="color:#f92672">=</span>hostname <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    -v /d/27120/docker-volume/nacos/%name%/logs:/home/nacos/logs <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    -v /d/27120/docker-volume/nacos/%name%/conf/:/home/nacos/conf/ <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    -e JVM_XMS<span style="color:#f92672">=</span>256m -e JVM_XMX<span style="color:#f92672">=</span>256m <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    nacos/nacos-server <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    /usr/sbin/init
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>docker run -d <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --name nacos-server <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -p 8848:8848 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --network nacos-network<span style="color:#ae81ff">\ </span><span style="color:#75715e"># 在创建容器时指定Network</span>
+</span></span><span style="display:flex;"><span>    --privileged<span style="color:#f92672">=</span>true <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -e SPRING_DATASOURCE_PLATFORM<span style="color:#f92672">=</span>mysql <span style="color:#ae81ff">\ </span><span style="color:#75715e"># 指定数据源类型为MySQL</span>
+</span></span><span style="display:flex;"><span>    -e MYSQL_SERVICE_HOST<span style="color:#f92672">=</span>mysql <span style="color:#ae81ff">\ </span><span style="color:#75715e"># MySQL服务器的地址（这里加入了Network所以可以直接使用容器名称来当Host）</span>
+</span></span><span style="display:flex;"><span>    -e MYSQL_SERVICE_PORT<span style="color:#f92672">=</span><span style="color:#ae81ff">3306</span> <span style="color:#ae81ff">\ </span><span style="color:#75715e"># MySQL服务端口</span>
+</span></span><span style="display:flex;"><span>    -e MYSQL_SERVICE_USER<span style="color:#f92672">=</span>root <span style="color:#ae81ff">\ </span><span style="color:#75715e"># MySQL用户名</span>
+</span></span><span style="display:flex;"><span>    -e MYSQL_SERVICE_PASSWORD<span style="color:#f92672">=</span>root <span style="color:#ae81ff">\ </span><span style="color:#75715e"># MySQL密码</span>
+</span></span><span style="display:flex;"><span>    -e MYSQL_SERVICE_DB_NAME<span style="color:#f92672">=</span>nacos <span style="color:#ae81ff">\ </span><span style="color:#75715e"># MySQL的数据库名称</span>
+</span></span><span style="display:flex;"><span>    -e PREFER_HOST_MODE<span style="color:#f92672">=</span>hostname <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -v /d/27120/docker-volume/nacos/%name%/logs:/home/nacos/logs <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -v /d/27120/docker-volume/nacos/%name%/conf/:/home/nacos/conf/ <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -e JVM_XMS<span style="color:#f92672">=</span>256m -e JVM_XMX<span style="color:#f92672">=</span>256m <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    nacos/nacos-server <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    /usr/sbin/init
+</span></span></code></pre></div><hr>
 <h1 id="基于-docker-搭建-nacos-集群">基于 Docker 搭建 Nacos 集群</h1>
 <p>基于Docker搭建Nacos集群，首先可以创建一个用于创建集群模式Nacos的脚本<code>create_nacos.sh</code>（使用MySQL）：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">name<span style="color:#f92672">=</span>$1
-port<span style="color:#f92672">=</span>$2
-
-docker run -d <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    --name $name <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    -p $port:8848 <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    --network nacos-network <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    --privileged<span style="color:#f92672">=</span>true <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    -e SPRING_DATASOURCE_PLATFORM<span style="color:#f92672">=</span>mysql <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    -e MYSQL_SERVICE_HOST<span style="color:#f92672">=</span>mysql <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    -e MYSQL_SERVICE_PORT<span style="color:#f92672">=</span><span style="color:#ae81ff">3306</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    -e MYSQL_SERVICE_USER<span style="color:#f92672">=</span>root <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    -e MYSQL_SERVICE_PASSWORD<span style="color:#f92672">=</span><span style="color:#ae81ff">123456</span> <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    -e MYSQL_SERVICE_DB_NAME<span style="color:#f92672">=</span>nacos_config <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    -e PREFER_HOST_MODE<span style="color:#f92672">=</span>hostname <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    -v /home/nacos/$name/logs:/home/nacos/logs <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    -v /home/nacos/$name/conf/:/home/nacos/conf/ <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    -e JVM_XMS<span style="color:#f92672">=</span>256m -e JVM_XMX<span style="color:#f92672">=</span>256m <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    nacos/nacos-server <span style="color:#ae81ff">\
-</span><span style="color:#ae81ff"></span>    /usr/sbin/init
-</code></pre></div><p>例如创建两个Nacos容器（在本地创建两个容器，端口不能重复）：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">./create_nacos.sh nacos1 <span style="color:#ae81ff">8841</span>
-./create_nacos.sh nacos2 <span style="color:#ae81ff">8842</span>
-</code></pre></div><p>接着将它们加入<code>nacos-network</code>后重启（如果这两个Nacos容器没有停止运行的话，可以忽略）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>name<span style="color:#f92672">=</span>$1
+</span></span><span style="display:flex;"><span>port<span style="color:#f92672">=</span>$2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>docker run -d <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --name $name <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -p $port:8848 <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --network nacos-network <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    --privileged<span style="color:#f92672">=</span>true <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -e SPRING_DATASOURCE_PLATFORM<span style="color:#f92672">=</span>mysql <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -e MYSQL_SERVICE_HOST<span style="color:#f92672">=</span>mysql <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -e MYSQL_SERVICE_PORT<span style="color:#f92672">=</span><span style="color:#ae81ff">3306</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -e MYSQL_SERVICE_USER<span style="color:#f92672">=</span>root <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -e MYSQL_SERVICE_PASSWORD<span style="color:#f92672">=</span><span style="color:#ae81ff">123456</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -e MYSQL_SERVICE_DB_NAME<span style="color:#f92672">=</span>nacos_config <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -e PREFER_HOST_MODE<span style="color:#f92672">=</span>hostname <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -v /home/nacos/$name/logs:/home/nacos/logs <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -v /home/nacos/$name/conf/:/home/nacos/conf/ <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    -e JVM_XMS<span style="color:#f92672">=</span>256m -e JVM_XMX<span style="color:#f92672">=</span>256m <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    nacos/nacos-server <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>    /usr/sbin/init
+</span></span></code></pre></div><p>例如创建两个Nacos容器（在本地创建两个容器，端口不能重复）：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>./create_nacos.sh nacos1 <span style="color:#ae81ff">8841</span>
+</span></span><span style="display:flex;"><span>./create_nacos.sh nacos2 <span style="color:#ae81ff">8842</span>
+</span></span></code></pre></div><p>接着将它们加入<code>nacos-network</code>后重启（如果这两个Nacos容器没有停止运行的话，可以忽略）：</p>
 <pre tabindex="0"><code>docker restart nacos1
 docker restart nacos2
 </code></pre><p>接着配置Nginx的方法和之前描述的方式类似。如果Nginx是使用Docker创建的，也可以将该Nginx容器加入<code>nacos-network</code>，然后直接使用容器的名称作为Host即可。</p>

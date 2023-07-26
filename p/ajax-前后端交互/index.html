@@ -384,50 +384,50 @@
 </ol>
 <h2 id="ajax-简单使用">Ajax 简单使用</h2>
 <p>服务端：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> web.servlet<span style="color:#f92672">;</span>
-
-<span style="color:#f92672">import</span> javax.servlet.ServletException<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.annotation.WebServlet<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.http.HttpServlet<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.http.HttpServletRequest<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.http.HttpServletResponse<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
-
-<span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/ajaxServlet&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AjaxServlet</span> <span style="color:#66d9ef">extends</span> HttpServlet <span style="color:#f92672">{</span>
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doGet</span><span style="color:#f92672">(</span>HttpServletRequest req<span style="color:#f92672">,</span> HttpServletResponse resp<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
-        <span style="color:#75715e">// 返回给客户端响应数据
-</span><span style="color:#75715e"></span>        resp<span style="color:#f92672">.</span><span style="color:#a6e22e">getWriter</span><span style="color:#f92672">().</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello Ajax!&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doPost</span><span style="color:#f92672">(</span>HttpServletRequest req<span style="color:#f92672">,</span> HttpServletResponse resp<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">doGet</span><span style="color:#f92672">(</span>req<span style="color:#f92672">,</span> resp<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>客户端：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//1. 创建核心对象
-</span><span style="color:#75715e"></span>let xhttp<span style="color:#f92672">;</span>
-<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>window<span style="color:#f92672">.</span><span style="color:#a6e22e">XMLHttpRequest</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-    xhttp <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> XMLHttpRequest<span style="color:#f92672">();</span>
-<span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
-    <span style="color:#75715e">// code for IE6, IE5
-</span><span style="color:#75715e"></span>    xhttp <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ActiveXObject<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Microsoft.XMLHTTP&#34;</span><span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span>
-
-<span style="color:#75715e">//2. 发送请求
-</span><span style="color:#75715e"></span>xhttp<span style="color:#f92672">.</span><span style="color:#a6e22e">open</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;GET&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;http://localhost:8080/ajax-demo/ajaxServlet&#34;</span><span style="color:#f92672">);</span>
-xhttp<span style="color:#f92672">.</span><span style="color:#a6e22e">send</span><span style="color:#f92672">();</span>
-
-<span style="color:#75715e">//3. 获取响应
-</span><span style="color:#75715e"></span>xhttp<span style="color:#f92672">.</span><span style="color:#a6e22e">onreadystatechange</span> <span style="color:#f92672">=</span> function<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">readyState</span> <span style="color:#f92672">==</span> 4 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">status</span> <span style="color:#f92672">==</span> 200<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#75715e">// 处理从服务端发送过来的响应数据
-</span><span style="color:#75715e"></span>        alert<span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">responseText</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">};</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> web.servlet<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.ServletException<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.annotation.WebServlet<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.http.HttpServlet<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.http.HttpServletRequest<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.http.HttpServletResponse<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/ajaxServlet&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AjaxServlet</span> <span style="color:#66d9ef">extends</span> HttpServlet <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doGet</span><span style="color:#f92672">(</span>HttpServletRequest req<span style="color:#f92672">,</span> HttpServletResponse resp<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 返回给客户端响应数据
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        resp<span style="color:#f92672">.</span><span style="color:#a6e22e">getWriter</span><span style="color:#f92672">().</span><span style="color:#a6e22e">write</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello Ajax!&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">protected</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doPost</span><span style="color:#f92672">(</span>HttpServletRequest req<span style="color:#f92672">,</span> HttpServletResponse resp<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">doGet</span><span style="color:#f92672">(</span>req<span style="color:#f92672">,</span> resp<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>客户端：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">//1. 创建核心对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>let xhttp<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>window<span style="color:#f92672">.</span><span style="color:#a6e22e">XMLHttpRequest</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    xhttp <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> XMLHttpRequest<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// code for IE6, IE5
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    xhttp <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> ActiveXObject<span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Microsoft.XMLHTTP&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//2. 发送请求
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>xhttp<span style="color:#f92672">.</span><span style="color:#a6e22e">open</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;GET&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;http://localhost:8080/ajax-demo/ajaxServlet&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>xhttp<span style="color:#f92672">.</span><span style="color:#a6e22e">send</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">//3. 获取响应
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>xhttp<span style="color:#f92672">.</span><span style="color:#a6e22e">onreadystatechange</span> <span style="color:#f92672">=</span> function<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">readyState</span> <span style="color:#f92672">==</span> 4 <span style="color:#f92672">&amp;&amp;</span> <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">status</span> <span style="color:#f92672">==</span> 200<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 处理从服务端发送过来的响应数据
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        alert<span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">responseText</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">};</span>
+</span></span></code></pre></div><hr>
 <h1 id="axios">Axios</h1>
 <p>Axios 是一个对原生的AJAX进行封装，简化书写的前端框架。</p>
 <h2 id="使用-axios-进行交互">使用 Axios 进行交互</h2>
@@ -435,32 +435,32 @@ xhttp<span style="color:#f92672">.</span><span style="color:#a6e22e">send</span>
 <ul>
 <li>
 <p>引入 Axios 的 js 文件</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/axios.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js/axios.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+</span></span></code></pre></div></li>
 <li>
 <p>使用 Axios 发送请求，并获取响应结果：</p>
 <ul>
 <li>
 <p>发送 GET 请求的基本形式：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">axios</span>({
-    <span style="color:#a6e22e">method</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;get&#34;</span>,
-    <span style="color:#75715e">// 请求参数会传递给服务器，此处请求参数可以转义也可以不转义
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;http://localhost:8080/axios-demo/demo?message=Hello%20World&#34;</span>
-}).<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">resp</span>){
-    <span style="color:#75715e">// 对响应数据进行处理
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">data</span>);
-})
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">axios</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">method</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;get&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 请求参数会传递给服务器，此处请求参数可以转义也可以不转义
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;http://localhost:8080/axios-demo/demo?message=Hello%20World&#34;</span>
+</span></span><span style="display:flex;"><span>}).<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">resp</span>){
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 对响应数据进行处理
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">data</span>);
+</span></span><span style="display:flex;"><span>})
+</span></span></code></pre></div></li>
 <li>
 <p>发送 POST 请求的基本形式：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#a6e22e">axios</span>({
-    <span style="color:#a6e22e">method</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;post&#34;</span>,
-    <span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;http://localhost:8080/axios-demo/demo&#34;</span>,
-    <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;message=Hello World&#34;</span>
-}).<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">resp</span>){
-    <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">data</span>);
-});
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#a6e22e">axios</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">method</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;post&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">url</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;http://localhost:8080/axios-demo/demo&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">data</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;message=Hello World&#34;</span>
+</span></span><span style="display:flex;"><span>}).<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">resp</span>){
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">data</span>);
+</span></span><span style="display:flex;"><span>});
+</span></span></code></pre></div></li>
 </ul>
 </li>
 </ul>
@@ -494,69 +494,69 @@ xhttp<span style="color:#f92672">.</span><span style="color:#a6e22e">send</span>
 <ul>
 <li>
 <p><code>get</code> 请求：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">url</span>[,<span style="color:#a6e22e">config</span>])
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">get</span>(<span style="color:#a6e22e">url</span>[,<span style="color:#a6e22e">config</span>])
+</span></span></code></pre></div></li>
 <li>
 <p><code>delete</code> 请求：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">axios</span>.<span style="color:#66d9ef">delete</span>(<span style="color:#a6e22e">url</span>[,<span style="color:#a6e22e">config</span>])
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">axios</span>.<span style="color:#66d9ef">delete</span>(<span style="color:#a6e22e">url</span>[,<span style="color:#a6e22e">config</span>])
+</span></span></code></pre></div></li>
 <li>
 <p><code>head</code> 请求：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">head</span>(<span style="color:#a6e22e">url</span>[,<span style="color:#a6e22e">config</span>])
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">head</span>(<span style="color:#a6e22e">url</span>[,<span style="color:#a6e22e">config</span>])
+</span></span></code></pre></div></li>
 <li>
 <p><code>options</code> 请求：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">option</span>(<span style="color:#a6e22e">url</span>[,<span style="color:#a6e22e">config</span>])
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">option</span>(<span style="color:#a6e22e">url</span>[,<span style="color:#a6e22e">config</span>])
+</span></span></code></pre></div></li>
 <li>
 <p><code>post</code> 请求：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">post</span>(<span style="color:#a6e22e">url</span>[,<span style="color:#a6e22e">data</span>[,<span style="color:#a6e22e">config</span>])
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">post</span>(<span style="color:#a6e22e">url</span>[,<span style="color:#a6e22e">data</span>[,<span style="color:#a6e22e">config</span>])
+</span></span></code></pre></div></li>
 <li>
 <p><code>put</code> 请求：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">put</span>(<span style="color:#a6e22e">url</span>[,<span style="color:#a6e22e">data</span>[,<span style="color:#a6e22e">config</span>])
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">put</span>(<span style="color:#a6e22e">url</span>[,<span style="color:#a6e22e">data</span>[,<span style="color:#a6e22e">config</span>])
+</span></span></code></pre></div></li>
 <li>
 <p><code>patch</code> 请求：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">patch</span>(<span style="color:#a6e22e">url</span>[,<span style="color:#a6e22e">data</span>[,<span style="color:#a6e22e">config</span>])
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">patch</span>(<span style="color:#a6e22e">url</span>[,<span style="color:#a6e22e">data</span>[,<span style="color:#a6e22e">config</span>])
+</span></span></code></pre></div></li>
 </ul>
 <h3 id="this-作用域问题">this 作用域问题</h3>
 <p>使用请求方法别名和箭头函数可以解决this作用域问题，防止this指向错误：</p>
 <ul>
 <li>
 <p>GET请求：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">get</span>(
-    <span style="color:#e6db74">&#34;http://localhost:8080/axios-demo/demo?message=Hello World&#34;</span>
-).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">resp</span> =&gt; {
-    <span style="color:#75715e">// 对响应数据进行处理
-</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">data</span>);
-})
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span><span style="color:#a6e22e">axios</span>.<span style="color:#a6e22e">get</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;http://localhost:8080/axios-demo/demo?message=Hello World&#34;</span>
+</span></span><span style="display:flex;"><span>).<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">resp</span> =&gt; {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 对响应数据进行处理
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">resp</span>.<span style="color:#a6e22e">data</span>);
+</span></span><span style="display:flex;"><span>})
+</span></span></code></pre></div></li>
 <li>
 <p>POST请求：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">axios<span style="color:#f92672">.</span><span style="color:#a6e22e">post</span><span style="color:#f92672">(</span>
-    <span style="color:#e6db74">&#34;http://localhost:8080/axios-demo/demo&#34;</span><span style="color:#f92672">,</span>
-    <span style="color:#e6db74">&#34;message=Hello World&#34;</span>
-<span style="color:#f92672">).</span><span style="color:#a6e22e">then</span><span style="color:#f92672">(</span>resp <span style="color:#f92672">=&gt;</span> <span style="color:#f92672">{</span>
-    <span style="color:#75715e">// 对响应数据进行处理
-</span><span style="color:#75715e"></span>    alert<span style="color:#f92672">(</span>resp<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">);</span>
-<span style="color:#f92672">})</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>axios<span style="color:#f92672">.</span><span style="color:#a6e22e">post</span><span style="color:#f92672">(</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;http://localhost:8080/axios-demo/demo&#34;</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;message=Hello World&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">).</span><span style="color:#a6e22e">then</span><span style="color:#f92672">(</span>resp <span style="color:#f92672">=&gt;</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 对响应数据进行处理
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    alert<span style="color:#f92672">(</span>resp<span style="color:#f92672">.</span><span style="color:#a6e22e">data</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">})</span>
+</span></span></code></pre></div></li>
 </ul>
 <h1 id="json">JSON</h1>
 <p>JSON（JavaScript Object Notation）是指 JavaScript 对象表示法。</p>
 <p>JSON的优点：数据格式简单，所占的字节数少等。</p>
 <h2 id="json-的格式">JSON 的格式</h2>
 <p><code>JSON</code> 本质就是一个字符串，但是该字符串内容是有一定的格式要求的：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
-	<span style="color:#f92672">&#34;key_1&#34;</span>: <span style="color:#960050;background-color:#1e0010">value_</span><span style="color:#ae81ff">1</span>,
-	<span style="color:#f92672">&#34;key_2&#34;</span>: <span style="color:#960050;background-color:#1e0010">value_</span><span style="color:#ae81ff">2</span>,
-	<span style="color:#f92672">&#34;key_3&#34;</span>: <span style="color:#960050;background-color:#1e0010">value_</span><span style="color:#ae81ff">3</span>,
-    <span style="color:#960050;background-color:#1e0010">...,</span>
-    <span style="color:#f92672">&#34;key_n&#34;</span>: <span style="color:#960050;background-color:#1e0010">value_n</span>
-}
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;key_1&#34;</span>: <span style="color:#960050;background-color:#1e0010">value_</span><span style="color:#ae81ff">1</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;key_2&#34;</span>: <span style="color:#960050;background-color:#1e0010">value_</span><span style="color:#ae81ff">2</span>,
+</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;key_3&#34;</span>: <span style="color:#960050;background-color:#1e0010">value_</span><span style="color:#ae81ff">3</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">...,</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;key_n&#34;</span>: <span style="color:#960050;background-color:#1e0010">value_n</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><ul>
 <li><code>JSON</code> 格式中的键要求必须使用双引号括起来。</li>
 <li>Value 的数据类型分为如下：
 <ul>
@@ -570,24 +570,24 @@ xhttp<span style="color:#f92672">.</span><span style="color:#a6e22e">send</span>
 </li>
 </ul>
 <p>在 js 中定义 json：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">变量名</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`{
-</span><span style="color:#e6db74">        &#34;key1&#34;:value1,
-</span><span style="color:#e6db74">        &#34;key2&#34;:value2,
-</span><span style="color:#e6db74">        ...
-</span><span style="color:#e6db74">    }`</span>;
-</code></pre></div><h2 id="在-js-中使用-josn">在 JS 中使用 JOSN</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">变量名</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`{
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;key1&#34;:value1,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        &#34;key2&#34;:value2,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        ...
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    }`</span>;
+</span></span></code></pre></div><h2 id="在-js-中使用-josn">在 JS 中使用 JOSN</h2>
 <p>JS 提供了一个对象 <code>JSON</code> ，该对象有如下两个方法：</p>
 <ul>
 <li>
 <p><code>parse(str)</code>：将 JSON串转换为 js 对象。</p>
 <p>使用方式：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">jsObject</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">jsonStr</span>);
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">jsObject</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">jsonStr</span>);
+</span></span></code></pre></div></li>
 <li>
 <p><code>stringify(obj)</code>：将 js 对象转换为 JSON 串。</p>
 <p>使用方式：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">jsonStr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">jsObject</span>)
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">jsonStr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">jsObject</span>)
+</span></span></code></pre></div></li>
 </ul>
 <h3 id="携带json发送异步请求">携带JSON发送异步请求</h3>
 <p>可以使用 <code>JSON.stringify()</code> 将js对象转换为 <code>JSON</code> 串，再将该 <code>JSON</code> 串作为 <code>axios</code> 的 <code>data</code> 属性值进行请求参数的提交。</p>
@@ -598,25 +598,25 @@ xhttp<span style="color:#f92672">.</span><span style="color:#a6e22e">send</span>
 <h2 id="fastjson">Fastjson</h2>
 <p><code>Fastjson</code> 是阿里巴巴提供的一个Java语言编写的高性能功能完善的 <code>JSON</code> 库，是目前Java语言中最快的 <code>JSON</code> 库，可以实现 <code>Java</code> 对象和 <code>JSON</code> 字符串的相互转换。</p>
 <p>依赖坐标：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependency&gt;</span>
-    <span style="color:#f92672">&lt;groupId&gt;</span>com.alibaba<span style="color:#f92672">&lt;/groupId&gt;</span>
-    <span style="color:#f92672">&lt;artifactId&gt;</span>fastjson<span style="color:#f92672">&lt;/artifactId&gt;</span>
-    <span style="color:#f92672">&lt;version&gt;</span>1.2.62<span style="color:#f92672">&lt;/version&gt;</span>
-<span style="color:#f92672">&lt;/dependency&gt;</span>
-</code></pre></div><p>JOSN 和 Java对象的相互转换包含：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;groupId&gt;</span>com.alibaba<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;artifactId&gt;</span>fastjson<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;version&gt;</span>1.2.62<span style="color:#f92672">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span></code></pre></div><p>JOSN 和 Java对象的相互转换包含：</p>
 <ul>
 <li>
 <p>请求数据（反序列化）：</p>
 <p>JSON字符串转为Java对象。</p>
 <p>将 json 转换为 Java 对象，只需要使用 <code>Fastjson</code> 提供的 <code>JSON</code> 类中的 <code>parseObject()</code> 静态方法即可。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String <span style="color:#a6e22e">toJSONString</span><span style="color:#f92672">(</span>Object object<span style="color:#f92672">)</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>String <span style="color:#a6e22e">toJSONString</span><span style="color:#f92672">(</span>Object object<span style="color:#f92672">)</span>
+</span></span></code></pre></div></li>
 <li>
 <p>响应数据（序列化）：</p>
 <p>Java对象转为JSON字符串。</p>
 <p>将 Java 对象转换为 JSON 串，只需要使用 <code>Fastjson</code> 提供的 <code>JSON</code> 类中的 <code>toJSONString()</code> 静态方法即可。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> T <span style="color:#a6e22e">parseObject</span><span style="color:#f92672">(</span>String jsonStr<span style="color:#f92672">,</span> Class<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> clazz<span style="color:#f92672">)</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> T <span style="color:#a6e22e">parseObject</span><span style="color:#f92672">(</span>String jsonStr<span style="color:#f92672">,</span> Class<span style="color:#f92672">&lt;</span>T<span style="color:#f92672">&gt;</span> clazz<span style="color:#f92672">)</span>
+</span></span></code></pre></div></li>
 </ul>
 <p>Example：</p>
 <ul>
@@ -625,74 +625,74 @@ xhttp<span style="color:#f92672">.</span><span style="color:#a6e22e">send</span>
 </li>
 <li>
 <p>编写<code>pojo</code>类：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> pojo<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">private</span> Integer id<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> String username<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> String password<span style="color:#f92672">;</span>
-
-    <span style="color:#66d9ef">public</span> Integer <span style="color:#a6e22e">getId</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> id<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setId</span><span style="color:#f92672">(</span>Integer id<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> id<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getUsername</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> username<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setUsername</span><span style="color:#f92672">(</span>String username<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">username</span> <span style="color:#f92672">=</span> username<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getPassword</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> password<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setPassword</span><span style="color:#f92672">(</span>String password<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">password</span> <span style="color:#f92672">=</span> password<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;User{&#34;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34;id=&#34;</span> <span style="color:#f92672">+</span> id <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34;, username=&#39;&#34;</span> <span style="color:#f92672">+</span> username <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;&#39;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34;, password=&#39;&#34;</span> <span style="color:#f92672">+</span> password <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;&#39;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#39;}&#39;</span><span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> pojo<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Integer id<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String username<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String password<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Integer <span style="color:#a6e22e">getId</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> id<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setId</span><span style="color:#f92672">(</span>Integer id<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> id<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getUsername</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> username<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setUsername</span><span style="color:#f92672">(</span>String username<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">username</span> <span style="color:#f92672">=</span> username<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getPassword</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> password<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setPassword</span><span style="color:#f92672">(</span>String password<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">password</span> <span style="color:#f92672">=</span> password<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;User{&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;id=&#34;</span> <span style="color:#f92672">+</span> id <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;, username=&#39;&#34;</span> <span style="color:#f92672">+</span> username <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;&#39;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;, password=&#39;&#34;</span> <span style="color:#f92672">+</span> password <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;&#39;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;}&#39;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div></li>
 <li>
 <p>编写<code>FastJsonDemo</code>：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> web.servlet<span style="color:#f92672">;</span>
-
-<span style="color:#f92672">import</span> com.alibaba.fastjson.JSON<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> pojo.User<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FastJsonDemo</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#75715e">// 1. Java对象转JSON字符串
-</span><span style="color:#75715e"></span>        User user <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> User<span style="color:#f92672">();</span>
-        user<span style="color:#f92672">.</span><span style="color:#a6e22e">setId</span><span style="color:#f92672">(</span>1<span style="color:#f92672">);</span>
-        user<span style="color:#f92672">.</span><span style="color:#a6e22e">setUsername</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;zhangsan&#34;</span><span style="color:#f92672">);</span>
-        user<span style="color:#f92672">.</span><span style="color:#a6e22e">setPassword</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;123&#34;</span><span style="color:#f92672">);</span>
-
-        String jsonString <span style="color:#f92672">=</span> JSON<span style="color:#f92672">.</span><span style="color:#a6e22e">toJSONString</span><span style="color:#f92672">(</span>user<span style="color:#f92672">);</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>jsonString<span style="color:#f92672">);</span>
-        <span style="color:#75715e">// 输出：{&#34;id&#34;:1,&#34;password&#34;:&#34;123&#34;,&#34;username&#34;:&#34;zhangsan&#34;}
-</span><span style="color:#75715e"></span>
-        <span style="color:#75715e">// 2. 将JSON字符串转为Java对象
-</span><span style="color:#75715e"></span>        User u <span style="color:#f92672">=</span> JSON<span style="color:#f92672">.</span><span style="color:#a6e22e">parseObject</span><span style="color:#f92672">(</span>
-                <span style="color:#e6db74">&#34;{\&#34;id\&#34;:1,\&#34;password\&#34;:\&#34;123\&#34;,\&#34;username\&#34;:\&#34;zhangsan\&#34;}&#34;</span><span style="color:#f92672">,</span>
-                User<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>u<span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> web.servlet<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> com.alibaba.fastjson.JSON<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pojo.User<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">FastJsonDemo</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 1. Java对象转JSON字符串
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        User user <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> User<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        user<span style="color:#f92672">.</span><span style="color:#a6e22e">setId</span><span style="color:#f92672">(</span>1<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        user<span style="color:#f92672">.</span><span style="color:#a6e22e">setUsername</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;zhangsan&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        user<span style="color:#f92672">.</span><span style="color:#a6e22e">setPassword</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;123&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        String jsonString <span style="color:#f92672">=</span> JSON<span style="color:#f92672">.</span><span style="color:#a6e22e">toJSONString</span><span style="color:#f92672">(</span>user<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>jsonString<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 输出：{&#34;id&#34;:1,&#34;password&#34;:&#34;123&#34;,&#34;username&#34;:&#34;zhangsan&#34;}
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 2. 将JSON字符串转为Java对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        User u <span style="color:#f92672">=</span> JSON<span style="color:#f92672">.</span><span style="color:#a6e22e">parseObject</span><span style="color:#f92672">(</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;{\&#34;id\&#34;:1,\&#34;password\&#34;:\&#34;123\&#34;,\&#34;username\&#34;:\&#34;zhangsan\&#34;}&#34;</span><span style="color:#f92672">,</span>
+</span></span><span style="display:flex;"><span>                User<span style="color:#f92672">.</span><span style="color:#a6e22e">class</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>u<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div></li>
 </ul>
 
 </section>

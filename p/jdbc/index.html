@@ -434,27 +434,27 @@
 </li>
 <li>
 <p>注册驱动:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Class<span style="color:#f92672">.</span><span style="color:#a6e22e">forName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.mysql.jdbc.Driver&#34;</span><span style="color:#f92672">);</span>
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Class<span style="color:#f92672">.</span><span style="color:#a6e22e">forName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.mysql.jdbc.Driver&#34;</span><span style="color:#f92672">);</span>
+</span></span></code></pre></div><blockquote>
 <p>MySQL提供的 <code>Driver</code>的静态代码块会自动执行 <code>DriverManager.registerDriver()</code> 方法来注册驱动. 所以我们只需加载 <code>Driver</code>即可.
 MySQL5之后的驱动包, 可以省略注册驱动的步骤.</p>
 </blockquote>
 </li>
 <li>
 <p>获取数据库连接:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Connection conn <span style="color:#f92672">=</span> DriverManager<span style="color:#f92672">.</span><span style="color:#a6e22e">getConnection</span><span style="color:#f92672">(</span>url<span style="color:#f92672">,</span> username<span style="color:#f92672">,</span> password<span style="color:#f92672">);</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Connection conn <span style="color:#f92672">=</span> DriverManager<span style="color:#f92672">.</span><span style="color:#a6e22e">getConnection</span><span style="color:#f92672">(</span>url<span style="color:#f92672">,</span> username<span style="color:#f92672">,</span> password<span style="color:#f92672">);</span>
+</span></span></code></pre></div><ul>
 <li>
 <p>其中, <code>url</code>, <code>username</code>和 <code>password</code>都是 <code>String</code>类型.</p>
 </li>
 <li>
 <p><code>url</code>格式:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">jdbc:数据库软件名称://ip地址或域名:端口/数据库名称?参数键值对1&amp;参数键值对2...
-</code></pre></div><p>例如, 连接本地mysql中名为test的数据库:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">jdbc:mysql://127.0.0.1:3306/test
-</code></pre></div><p>本地mysql, 且端口为3306, url可简写为:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-text" data-lang="text">jdbc:mysql:///数据库名称?参数键值对
-</code></pre></div><p>常用的参数键值对有:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>jdbc:数据库软件名称://ip地址或域名:端口/数据库名称?参数键值对1&amp;参数键值对2...
+</span></span></code></pre></div><p>例如, 连接本地mysql中名为test的数据库:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>jdbc:mysql://127.0.0.1:3306/test
+</span></span></code></pre></div><p>本地mysql, 且端口为3306, url可简写为:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>jdbc:mysql:///数据库名称?参数键值对
+</span></span></code></pre></div><p>常用的参数键值对有:</p>
 <pre tabindex="0"><code>useSSL=false            // 禁用安全连接方式, 解决警告提示
 useServerPrepStmts=true // 开启预编译(默认为false)
 serverTimezone=GMT%2B8  // 设置时区, 东八区(即GMT+8)
@@ -466,18 +466,18 @@ useUnicode=true&amp;characterEncoding=UTF-8 // 设置字符集为UTF-8
 <li>
 <p>获取执行SQL对象:</p>
 <p>执行SQL语句需要SQL执行对象 (<code>Statement</code>对象):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">Statement stmt <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span><span style="color:#a6e22e">createStatement</span><span style="color:#f92672">();</span>
-</code></pre></div><p><code>Statement</code>对象存在安全问题 (SQL注入等问题), 而使用 <code>PreparedStatement</code>不仅可以提升查询速度, 而且还能防止SQL注入问题.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;...SQL语句...&#34;</span><span style="color:#f92672">;</span>
-PreparedStatement pstmt <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span><span style="color:#a6e22e">prepareStatement</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">);</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>Statement stmt <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span><span style="color:#a6e22e">createStatement</span><span style="color:#f92672">();</span>
+</span></span></code></pre></div><p><code>Statement</code>对象存在安全问题 (SQL注入等问题), 而使用 <code>PreparedStatement</code>不仅可以提升查询速度, 而且还能防止SQL注入问题.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>String sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;...SQL语句...&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>PreparedStatement pstmt <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span><span style="color:#a6e22e">prepareStatement</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">);</span>
+</span></span></code></pre></div></li>
 <li>
 <p>执行SQL语句:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">executeUpdate</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">);</span>
-</code></pre></div><p>用于执行DML, DDL语句.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">executeUpdate</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">);</span>
+</span></span></code></pre></div><p>用于执行DML, DDL语句.</p>
 <p>或者:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ResultSet rs <span style="color:#f92672">=</span> pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">executeQuery</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">);</span>
-</code></pre></div><p>用于执行DQL语句.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>ResultSet rs <span style="color:#f92672">=</span> pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">executeQuery</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">);</span>
+</span></span></code></pre></div><p>用于执行DQL语句.</p>
 </li>
 <li>
 <p>处理返回结果</p>
@@ -485,61 +485,61 @@ PreparedStatement pstmt <span style="color:#f92672">=</span> conn<span style="co
 <li>
 <p>释放资源:</p>
 <p><code>ResultSet</code>、<code>Statement</code>和 <code>Connection</code>对象都要 <code>&lt;i&gt;</code>按照顺序 <code>&lt;/i&gt;</code>释放资源.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">rs<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-stmt<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-conn<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>rs<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>stmt<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>conn<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span></code></pre></div></li>
 </ol>
 <p>大致代码如下:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">import</span> java.sql.*<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">JDBCDemo</span> <span style="color:#f92672">{</span>
-  
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
-
-        <span style="color:#75715e">// - 接收用户输入的用户名和密码
-</span><span style="color:#75715e"></span>        String name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;...&#34;</span><span style="color:#f92672">;</span>
-        String pwd <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;...&#34;</span><span style="color:#f92672">;</span>
-    
-        <span style="color:#75715e">// 1. 注册驱动（装载类，并实例化）
-</span><span style="color:#75715e"></span>        Class<span style="color:#f92672">.</span><span style="color:#a6e22e">forName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.mysql.jdbc.Driver&#34;</span><span style="color:#f92672">);</span>
-    
-        <span style="color:#75715e">// 2. 获取连接
-</span><span style="color:#75715e"></span>        String url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;jdbc:mysql://127.0.0.1:3306/test&#34;</span> <span style="color:#f92672">+</span> 
-                <span style="color:#e6db74">&#34;?useServerPrepStmts=true&#34;</span><span style="color:#f92672">;</span>
-        String username <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;root&#34;</span><span style="color:#f92672">;</span>
-        String password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1234&#34;</span><span style="color:#f92672">;</span>
-        Connection conn <span style="color:#f92672">=</span> DriverManager<span style="color:#f92672">.</span><span style="color:#a6e22e">getConnection</span><span style="color:#f92672">(</span>url<span style="color:#f92672">,</span> username<span style="color:#f92672">,</span> password<span style="color:#f92672">);</span>
-    
-        <span style="color:#75715e">// 3. 定义SQL语句 (用?作占位符)
-</span><span style="color:#75715e"></span>        String sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT id,username,password&#34;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34; FROM tb_user&#34;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34; WHERE username = ?&#34;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34; AND password = ?&#34;</span><span style="color:#f92672">;</span>
-    
-        <span style="color:#75715e">// 4. 获取执行SQL的PreparedStatement对象
-</span><span style="color:#75715e"></span>        PreparedStatement pstmt <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span><span style="color:#a6e22e">prepareStatement</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">);</span>
-        <span style="color:#75715e">// 设置参数（?）的值 pstmt.setXxx(index, value)
-</span><span style="color:#75715e"></span>        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">setString</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> name<span style="color:#f92672">);</span>
-        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">setString</span><span style="color:#f92672">(</span>2<span style="color:#f92672">,</span> pwd<span style="color:#f92672">);</span>
-    
-        <span style="color:#75715e">// 5. 执行SQL
-</span><span style="color:#75715e"></span>        ResultSet rs <span style="color:#f92672">=</span> pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">executeQuery</span><span style="color:#f92672">();</span>
-    
-        <span style="color:#75715e">// 6. 处理结果
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>rs<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#75715e">/*
-</span><span style="color:#75715e">                ...
-</span><span style="color:#75715e">            */</span>
-        <span style="color:#f92672">}</span>
-
-        <span style="color:#75715e">// 7. 释放资源
-</span><span style="color:#75715e"></span>        rs<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-        conn<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">import</span> java.sql.*<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">JDBCDemo</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// - 接收用户输入的用户名和密码
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        String name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;...&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        String pwd <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;...&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 1. 注册驱动（装载类，并实例化）
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        Class<span style="color:#f92672">.</span><span style="color:#a6e22e">forName</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;com.mysql.jdbc.Driver&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 2. 获取连接
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        String url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;jdbc:mysql://127.0.0.1:3306/test&#34;</span> <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;?useServerPrepStmts=true&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        String username <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;root&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        String password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1234&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        Connection conn <span style="color:#f92672">=</span> DriverManager<span style="color:#f92672">.</span><span style="color:#a6e22e">getConnection</span><span style="color:#f92672">(</span>url<span style="color:#f92672">,</span> username<span style="color:#f92672">,</span> password<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 3. 定义SQL语句 (用?作占位符)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        String sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT id,username,password&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34; FROM tb_user&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34; WHERE username = ?&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34; AND password = ?&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 4. 获取执行SQL的PreparedStatement对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        PreparedStatement pstmt <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span><span style="color:#a6e22e">prepareStatement</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 设置参数（?）的值 pstmt.setXxx(index, value)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">setString</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> name<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">setString</span><span style="color:#f92672">(</span>2<span style="color:#f92672">,</span> pwd<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 5. 执行SQL
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        ResultSet rs <span style="color:#f92672">=</span> pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">executeQuery</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 6. 处理结果
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>rs<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">                ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">            */</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 7. 释放资源
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        rs<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        conn<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><hr>
 <h1 id="preparedstatement-对象">PreparedStatement 对象</h1>
 <p>PreparedStatement 对象可以:</p>
 <ul>
@@ -547,35 +547,35 @@ conn<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span>
 <li>预防SQL注入问题</li>
 </ul>
 <p>获取 <code>PreparedStatement</code>需要先传入SQL语句:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// SQL语句中的参数值,使用 ? 占位符替代
-</span><span style="color:#75715e"></span>String sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT id,username,password&#34;</span> <span style="color:#f92672">+</span>
-        <span style="color:#e6db74">&#34; FROM tb_user&#34;</span> <span style="color:#f92672">+</span>
-        <span style="color:#e6db74">&#34; WHERE username = ?&#34;</span> <span style="color:#f92672">+</span>
-        <span style="color:#e6db74">&#34; AND password = ?&#34;</span><span style="color:#f92672">;</span>
-
-<span style="color:#75715e">// 通过Connection对象获取PreparedStatement, 并传入对应的SQL语句
-</span><span style="color:#75715e"></span>PreparedStatement pstmt <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span><span style="color:#a6e22e">prepareStatement</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">);</span>
-</code></pre></div><p>接着我们需要设置SQL对象中的参数值:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#75715e">// SQL语句中的参数值,使用 ? 占位符替代
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>String sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT id,username,password&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34; FROM tb_user&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34; WHERE username = ?&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34; AND password = ?&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// 通过Connection对象获取PreparedStatement, 并传入对应的SQL语句
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>PreparedStatement pstmt <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span><span style="color:#a6e22e">prepareStatement</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">);</span>
+</span></span></code></pre></div><p>接着我们需要设置SQL对象中的参数值:</p>
 <p>使用 <code>pstmt.setXxx(index, value)</code>, 给 <code>?</code> 赋值. 其中, <code>index</code>的值从 <code>1</code>开始, <code>value</code>的类型为 <code>Xxx</code>或 <code>xxx</code>.</p>
 <p>例如, 给 <code>int</code>类型的 <code>value</code>赋值使用 <code>setInt()</code>, <code>String</code>类型使用 <code>setString()</code>. 除此之外还有 <code>setFloat()</code>, <code>setDouble()</code>, <code>setArray()</code>, <code>setByte()</code>等.</p>
 <p>如果 <code>prepareStatement()</code>方法传入的是DML, DDL语句, 则使用 <code>executeUpdate()</code> 方法:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">executeUpdate</span><span style="color:#f92672">()</span> 
-            <span style="color:#66d9ef">throws</span> SQLException
-</code></pre></div><p>如果该方法执行的是DML语句 (<code>INSERT</code>, <code>UPDATE</code>和 <code>DELETE</code>), 则返回DML语句操作的行数; 如果是DDL语句则返回 0.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">executeUpdate</span><span style="color:#f92672">()</span> 
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">throws</span> SQLException
+</span></span></code></pre></div><p>如果该方法执行的是DML语句 (<code>INSERT</code>, <code>UPDATE</code>和 <code>DELETE</code>), 则返回DML语句操作的行数; 如果是DDL语句则返回 0.</p>
 <blockquote>
 <p>需要注意, 在开发中很少使用java代码操作DDL语句.</p>
 </blockquote>
 <p>如果 <code>prepareStatement()</code>方法传入的是DQL语句 (<code>SELECT</code>), 使用的是 <code>executeQuery()</code> 方法:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">ResultSet <span style="color:#a6e22e">executeQuery</span><span style="color:#f92672">()</span>
-                <span style="color:#66d9ef">throws</span> SQLException
-</code></pre></div><p>该方法返回的是DQL语句查询后的结果集.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>ResultSet <span style="color:#a6e22e">executeQuery</span><span style="color:#f92672">()</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">throws</span> SQLException
+</span></span></code></pre></div><p>该方法返回的是DQL语句查询后的结果集.</p>
 <p>在使用 <code>PreparedStatement</code>对象后, 需要使用 <code>close()</code>方法释放资源.</p>
 <h2 id="statement-和-preparedstatement">Statement 和 PreparedStatement</h2>
 <p><code>Statement</code> 对象的一般用法如下:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">String sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;UPDATE tb_user SET password = \&#34;abc\&#34; WHERE id = 1&#34;</span><span style="color:#f92672">;</span>
-Statement stmt <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span><span style="color:#a6e22e">createStatement</span><span style="color:#f92672">();</span>
-<span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> stmt<span style="color:#f92672">.</span><span style="color:#a6e22e">executeUpdate</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">);</span>
-</code></pre></div><p><code>Statement</code>的SQL语句是作为 <code>executeUpdate()</code>和 <code>executeQuery()</code>的参数传入, 而 <code>PreparedStatement</code>则是在创建对象就已经作为 <code>prepareStatement()</code>方法的参数传入.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>String sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;UPDATE tb_user SET password = \&#34;abc\&#34; WHERE id = 1&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>Statement stmt <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span><span style="color:#a6e22e">createStatement</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> stmt<span style="color:#f92672">.</span><span style="color:#a6e22e">executeUpdate</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">);</span>
+</span></span></code></pre></div><p><code>Statement</code>的SQL语句是作为 <code>executeUpdate()</code>和 <code>executeQuery()</code>的参数传入, 而 <code>PreparedStatement</code>则是在创建对象就已经作为 <code>prepareStatement()</code>方法的参数传入.</p>
 <p>这是因为 <code>PreparedStatement</code>需要预先传入SQL语句, 来起到预编译SQL语句和预防SQL注入问题.</p>
 <h2 id="预编译">预编译</h2>
 <p>一般情况下, java执行SQL语句的过程如下:</p>
@@ -591,109 +591,109 @@ Statement stmt <span style="color:#f92672">=</span> conn<span style="color:#f926
 <p>SQL注入是指通过把SQL命令插入到Web表单提交, 或输入域名或页面请求的查询字符串, 最终达到欺骗服务器执行恶意的SQL命令.</p>
 <p>而 <code>PreparedStatement</code>通过在SQL语句中使用 <code>?</code>占位符, 并且使用相应的 <code>setXxx()</code>方法来设置值 (设置的值如果含有特殊字符, 如 <code>&quot;</code> 和 <code>'</code> 等, 则会进行转义), 防止了SQL注入的发生.</p>
 <p>下面代码说明了 <code>PreparedStatement</code>如何防止SQL注入:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Demo</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#75715e">// useServerPrepStmts=true开启预编译
-</span><span style="color:#75715e"></span>        String url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;jdbc:mysql:///test?useSSL=false&amp;useServerPrepStmts=true&#34;</span><span style="color:#f92672">;</span>
-        String username <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;root&#34;</span><span style="color:#f92672">;</span>
-        String password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;n546,Lin0&#34;</span><span style="color:#f92672">;</span>
-        Connection conn <span style="color:#f92672">=</span> DriverManager<span style="color:#f92672">.</span><span style="color:#a6e22e">getConnection</span><span style="color:#f92672">(</span>url<span style="color:#f92672">,</span> username<span style="color:#f92672">,</span> password<span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// - 接收用户输入的用户名和密码
-</span><span style="color:#75715e"></span>        String name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;zhangsan&#34;</span><span style="color:#f92672">;</span>
-        String pwd <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#39; OR &#39;1&#39; = &#39;1&#34;</span><span style="color:#f92672">;</span>
-
-        <span style="color:#75715e">// - 定义SQL（用?作占位符）
-</span><span style="color:#75715e"></span>        String sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT id,username,password&#34;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34; FROM tb_user&#34;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34; WHERE username = ?&#34;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34; AND password = ?&#34;</span><span style="color:#f92672">;</span>
-
-        <span style="color:#75715e">// - 获取PreparedStatement对象
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">//   - 预编译SQL，性能更高
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">//     默认关闭，在url加上参数useServerPrepStmts=true开启
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">//   - 防止SQL注入
-</span><span style="color:#75715e"></span>        PreparedStatement pstmt <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span><span style="color:#a6e22e">prepareStatement</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// - 设置参数（?）的值
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">//   - 防注入原理：
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">//     字符串参数在setString中会被转义，
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">//     即整个参数被当成sql里面的字符串，而不是java的字符串
-</span><span style="color:#75715e"></span>        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">setString</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> name<span style="color:#f92672">);</span>
-        <span style="color:#75715e">// 从mysql日志文件可以发现：
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">// &#39; OR &#39;1&#39; = &#39;1 转义成了 \&#39; OR \&#39;1\&#39; = \&#39;1
-</span><span style="color:#75715e"></span>        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">setString</span><span style="color:#f92672">(</span>2<span style="color:#f92672">,</span> pwd<span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// - 执行SQL
-</span><span style="color:#75715e"></span>        ResultSet rs <span style="color:#f92672">=</span> pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">executeQuery</span><span style="color:#f92672">();</span>
-
-        <span style="color:#75715e">// - 判读登录是否成功
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>rs<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
-            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;登录成功！&#34;</span><span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span>
-        <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
-            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;登陆失败！&#34;</span><span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span>
-
-        rs<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-        conn<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>下面代码演示了把SQL代码片段插入到SQL命令, 来进行免密登录:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LoginInject</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
-        String url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;jdbc:mysql:///test&#34;</span><span style="color:#f92672">;</span>
-        String username <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;root&#34;</span><span style="color:#f92672">;</span>
-        String password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1234&#34;</span><span style="color:#f92672">;</span>
-        Connection conn <span style="color:#f92672">=</span> DriverManager<span style="color:#f92672">.</span><span style="color:#a6e22e">getConnection</span><span style="color:#f92672">(</span>url<span style="color:#f92672">,</span> username<span style="color:#f92672">,</span> password<span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// 接收用户输入的用户名和密码
-</span><span style="color:#75715e"></span>        String name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abcdefg&#34;</span><span style="color:#f92672">;</span> <span style="color:#75715e">// 用户名随意
-</span><span style="color:#75715e"></span>        String pwd <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#39; OR &#39;1&#39; = &#39;1&#34;</span><span style="color:#f92672">;</span> <span style="color:#75715e">// 密码传入SQL代码片段
-</span><span style="color:#75715e"></span>
-        String sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT id,username,password&#34;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34; FROM tb_user&#34;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34; WHERE username = &#39;&#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34;&#39; AND password = &#39;&#34;</span><span style="color:#f92672">+</span> pwd <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;&#34;</span><span style="color:#f92672">;</span>
-        <span style="color:#75715e">// 将sql语句where部分展开：
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">// WHERE username = &#39;abcdefg&#39; AND password = &#39;&#39; OR &#39;1&#39; = &#39;1&#39;
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">// 发现where语句条件始终为真
-</span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">);</span>
-
-        Statement stmt <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span><span style="color:#a6e22e">createStatement</span><span style="color:#f92672">();</span>
-        ResultSet rs <span style="color:#f92672">=</span> stmt<span style="color:#f92672">.</span><span style="color:#a6e22e">executeQuery</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// 判读登录是否成功
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>rs<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
-            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;登录成功！&#34;</span><span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span>
-        <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
-            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;登陆失败！&#34;</span><span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span>
-        <span style="color:#75715e">// 返回的是登录成功
-</span><span style="color:#75715e"></span>
-        rs<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-        stmt<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-        conn<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Demo</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// useServerPrepStmts=true开启预编译
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        String url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;jdbc:mysql:///test?useSSL=false&amp;useServerPrepStmts=true&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        String username <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;root&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        String password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;n546,Lin0&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        Connection conn <span style="color:#f92672">=</span> DriverManager<span style="color:#f92672">.</span><span style="color:#a6e22e">getConnection</span><span style="color:#f92672">(</span>url<span style="color:#f92672">,</span> username<span style="color:#f92672">,</span> password<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// - 接收用户输入的用户名和密码
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        String name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;zhangsan&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        String pwd <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#39; OR &#39;1&#39; = &#39;1&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// - 定义SQL（用?作占位符）
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        String sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT id,username,password&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34; FROM tb_user&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34; WHERE username = ?&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34; AND password = ?&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// - 获取PreparedStatement对象
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//   - 预编译SQL，性能更高
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//     默认关闭，在url加上参数useServerPrepStmts=true开启
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//   - 防止SQL注入
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        PreparedStatement pstmt <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span><span style="color:#a6e22e">prepareStatement</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// - 设置参数（?）的值
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//   - 防注入原理：
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//     字符串参数在setString中会被转义，
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//     即整个参数被当成sql里面的字符串，而不是java的字符串
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">setString</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> name<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 从mysql日志文件可以发现：
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// &#39; OR &#39;1&#39; = &#39;1 转义成了 \&#39; OR \&#39;1\&#39; = \&#39;1
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">setString</span><span style="color:#f92672">(</span>2<span style="color:#f92672">,</span> pwd<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// - 执行SQL
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        ResultSet rs <span style="color:#f92672">=</span> pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">executeQuery</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// - 判读登录是否成功
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>rs<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;登录成功！&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;登陆失败！&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        rs<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        conn<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>下面代码演示了把SQL代码片段插入到SQL命令, 来进行免密登录:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">LoginInject</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> Exception <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        String url <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;jdbc:mysql:///test&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        String username <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;root&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        String password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1234&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        Connection conn <span style="color:#f92672">=</span> DriverManager<span style="color:#f92672">.</span><span style="color:#a6e22e">getConnection</span><span style="color:#f92672">(</span>url<span style="color:#f92672">,</span> username<span style="color:#f92672">,</span> password<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 接收用户输入的用户名和密码
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        String name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;abcdefg&#34;</span><span style="color:#f92672">;</span> <span style="color:#75715e">// 用户名随意
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        String pwd <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#39; OR &#39;1&#39; = &#39;1&#34;</span><span style="color:#f92672">;</span> <span style="color:#75715e">// 密码传入SQL代码片段
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>        String sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT id,username,password&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34; FROM tb_user&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34; WHERE username = &#39;&#34;</span> <span style="color:#f92672">+</span> name <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;&#39; AND password = &#39;&#34;</span><span style="color:#f92672">+</span> pwd <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#39;&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 将sql语句where部分展开：
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// WHERE username = &#39;abcdefg&#39; AND password = &#39;&#39; OR &#39;1&#39; = &#39;1&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// 发现where语句条件始终为真
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Statement stmt <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span><span style="color:#a6e22e">createStatement</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        ResultSet rs <span style="color:#f92672">=</span> stmt<span style="color:#f92672">.</span><span style="color:#a6e22e">executeQuery</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 判读登录是否成功
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>rs<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;登录成功！&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;登陆失败！&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 返回的是登录成功
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>        rs<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        stmt<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        conn<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><hr>
 <h1 id="resultset-对象">ResultSet 对象</h1>
 <p><code>ResultSet</code> (结果集对象) 作用: 封装了SQL查询语句的结果, 是 <code>executeQuery()</code>方法的返回值类型.</p>
 <p><code>ResultSet</code>对象有三个方法:</p>
 <ul>
 <li>
 <p><code>next()</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">next</span><span style="color:#f92672">()</span>
-        <span style="color:#66d9ef">throws</span> SQLException
-</code></pre></div><p>每次执行时, 将光标从当前位置向前移动一行 (光标从第0行开始), 并且判断当前行是否为有效行 (返回 <code>true</code>则代表为有效行)。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">next</span><span style="color:#f92672">()</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">throws</span> SQLException
+</span></span></code></pre></div><p>每次执行时, 将光标从当前位置向前移动一行 (光标从第0行开始), 并且判断当前行是否为有效行 (返回 <code>true</code>则代表为有效行)。</p>
 </li>
 <li>
 <p><code>getXxx()</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java">xxx <span style="color:#a6e22e">getXxx</span><span style="color:#f92672">(</span>arg<span style="color:#f92672">)</span>
-        <span style="color:#66d9ef">throws</span> SQLException
-</code></pre></div><p>arg类型:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span>xxx <span style="color:#a6e22e">getXxx</span><span style="color:#f92672">(</span>arg<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">throws</span> SQLException
+</span></span></code></pre></div><p>arg类型:</p>
 <ul>
 <li><code>int</code>: 代表列的编号 (按照 <code>SELECT</code>语句中的查询顺序), 从1开始</li>
 <li><code>String</code>: 列的名称</li>
@@ -701,222 +701,221 @@ Statement stmt <span style="color:#f92672">=</span> conn<span style="color:#f926
 </li>
 <li>
 <p><code>close()</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">close</span><span style="color:#f92672">()</span>
-        <span style="color:#66d9ef">throws</span> SQLException
-</code></pre></div><p>释放 <code>ResultSet</code>对象.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">close</span><span style="color:#f92672">()</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">throws</span> SQLException
+</span></span></code></pre></div><p>释放 <code>ResultSet</code>对象.</p>
 </li>
 </ul>
 <p>下面演示了 <code>ResultSet</code>的使用:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Demo</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#75715e">// ...
-</span><span style="color:#75715e"></span>
-        String sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT id,username,password FROM tb_user&#34;</span><span style="color:#f92672">;</span>
-        Statement stmt <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span><span style="color:#a6e22e">createStatement</span><span style="color:#f92672">();</span>
-        PreparedStatement pstmt <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span><span style="color:#a6e22e">prepareStatement</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">);</span>
-        <span style="color:#75715e">// - 处理结果，遍历rs中的所有数据
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">//   - rs.next()：光标向下移动一行，并判断当前行是否有效
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>rs<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
-            <span style="color:#75715e">// - 获取数据 getXxx()
-</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">int</span> id <span style="color:#f92672">=</span> rs<span style="color:#f92672">.</span><span style="color:#a6e22e">getInt</span><span style="color:#f92672">(</span>1<span style="color:#f92672">);</span>
-            <span style="color:#75715e">// getXxx()方法可以使用列索引（从1开始）也可以使用列名
-</span><span style="color:#75715e"></span>            String usrname <span style="color:#f92672">=</span> rs<span style="color:#f92672">.</span><span style="color:#a6e22e">getString</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;username&#34;</span><span style="color:#f92672">);</span>
-            String passwd <span style="color:#f92672">=</span> rs<span style="color:#f92672">.</span><span style="color:#a6e22e">getString</span><span style="color:#f92672">(</span>3<span style="color:#f92672">);</span>
-
-            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;id: &#34;</span> <span style="color:#f92672">+</span> id<span style="color:#f92672">);</span>
-            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;username: &#34;</span> <span style="color:#f92672">+</span> usrname<span style="color:#f92672">);</span>
-            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;passwd: &#34;</span> <span style="color:#f92672">+</span> passwd<span style="color:#f92672">);</span>
-            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;-----------------------&#34;</span><span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span>
-        <span style="color:#75715e">// - 释放资源
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">// ResultSet、Statement和Connection都要按照顺序释放资源
-</span><span style="color:#75715e"></span>        <span style="color:#75715e">// 先释放ResultSet, 再释放Statement, 最后是Connection
-</span><span style="color:#75715e"></span>        rs<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-        stmt<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-        conn<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Demo</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>        String sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT id,username,password FROM tb_user&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        Statement stmt <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span><span style="color:#a6e22e">createStatement</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        PreparedStatement pstmt <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span><span style="color:#a6e22e">prepareStatement</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// - 处理结果，遍历rs中的所有数据
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">//   - rs.next()：光标向下移动一行，并判断当前行是否有效
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>rs<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// - 获取数据 getXxx()
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#66d9ef">int</span> id <span style="color:#f92672">=</span> rs<span style="color:#f92672">.</span><span style="color:#a6e22e">getInt</span><span style="color:#f92672">(</span>1<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e">// getXxx()方法可以使用列索引（从1开始）也可以使用列名
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            String usrname <span style="color:#f92672">=</span> rs<span style="color:#f92672">.</span><span style="color:#a6e22e">getString</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;username&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            String passwd <span style="color:#f92672">=</span> rs<span style="color:#f92672">.</span><span style="color:#a6e22e">getString</span><span style="color:#f92672">(</span>3<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;id: &#34;</span> <span style="color:#f92672">+</span> id<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;username: &#34;</span> <span style="color:#f92672">+</span> usrname<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;passwd: &#34;</span> <span style="color:#f92672">+</span> passwd<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;-----------------------&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// - 释放资源
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// ResultSet、Statement和Connection都要按照顺序释放资源
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#75715e">// 先释放ResultSet, 再释放Statement, 最后是Connection
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        rs<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        stmt<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        conn<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><hr>
 <h1 id="操作实例">操作实例</h1>
 <p>用户账号密码增删改操作.</p>
 <p>在编写JDBC代码之前需要先完成创建数据库, 创建 <code>pojo</code>包并编写 <code>User</code>实体类的工作:</p>
 <ol>
 <li>
 <p>创建数据库并运行下方SQL代码:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-mysql" data-lang="mysql"><span style="color:#75715e">-- 删除tb_user表
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">EXISTS</span> tb_user;
-<span style="color:#75715e">-- 创建tb_user表
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#a6e22e">tb_user</span>(
-    id <span style="color:#66d9ef">INT</span> <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> <span style="color:#66d9ef">AUTO_INCREMENT</span>,
-    username <span style="color:#66d9ef">VARCHAR</span>(<span style="color:#ae81ff">20</span>),
-    password <span style="color:#66d9ef">VARCHAR</span>(<span style="color:#ae81ff">32</span>)
-);
-
-<span style="color:#75715e">-- 添加数据
-</span><span style="color:#75715e"></span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> tb_user <span style="color:#66d9ef">VALUES</span>(<span style="color:#66d9ef">NULL</span>, <span style="color:#e6db74">&#39;zhangsan&#39;</span>, <span style="color:#e6db74">&#39;123&#39;</span>), (<span style="color:#66d9ef">NULL</span>, <span style="color:#e6db74">&#39;lisi&#39;</span>, <span style="color:#e6db74">&#39;234&#39;</span>);
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span><span style="color:#75715e">-- 删除tb_user表
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#66d9ef">IF</span> <span style="color:#66d9ef">EXISTS</span> tb_user;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 创建tb_user表
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#a6e22e">tb_user</span>(
+</span></span><span style="display:flex;"><span>    id <span style="color:#66d9ef">INT</span> <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> <span style="color:#66d9ef">AUTO_INCREMENT</span>,
+</span></span><span style="display:flex;"><span>    username <span style="color:#66d9ef">VARCHAR</span>(<span style="color:#ae81ff">20</span>),
+</span></span><span style="display:flex;"><span>    password <span style="color:#66d9ef">VARCHAR</span>(<span style="color:#ae81ff">32</span>)
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">-- 添加数据
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> tb_user <span style="color:#66d9ef">VALUES</span>(<span style="color:#66d9ef">NULL</span>, <span style="color:#e6db74">&#39;zhangsan&#39;</span>, <span style="color:#e6db74">&#39;123&#39;</span>), (<span style="color:#66d9ef">NULL</span>, <span style="color:#e6db74">&#39;lisi&#39;</span>, <span style="color:#e6db74">&#39;234&#39;</span>);
+</span></span></code></pre></div></li>
 <li>
 <p>创建 <code>pojo</code>包, 并在包中添加 <code>User</code>实体类:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> pojo<span style="color:#f92672">;</span> <span style="color:#75715e">// pojo包存放实体类
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">{</span>
-
-    <span style="color:#66d9ef">private</span> Integer id<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> String username<span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> String password<span style="color:#f92672">;</span>
-
-    <span style="color:#66d9ef">public</span> Integer <span style="color:#a6e22e">getId</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> id<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setId</span><span style="color:#f92672">(</span>Integer id<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> id<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getUsername</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> username<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setUsername</span><span style="color:#f92672">(</span>String username<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">username</span> <span style="color:#f92672">=</span> username<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getPassword</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> password<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setPassword</span><span style="color:#f92672">(</span>String password<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">password</span> <span style="color:#f92672">=</span> password<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Account{&#34;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34;id=&#34;</span> <span style="color:#f92672">+</span> id <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34;, username=&#39;&#34;</span> <span style="color:#f92672">+</span> username <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;&#39;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34;, password=&#39;&#34;</span> <span style="color:#f92672">+</span> password <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;&#39;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#39;}&#39;</span><span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> pojo<span style="color:#f92672">;</span> <span style="color:#75715e">// pojo包存放实体类
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">User</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> Integer id<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String username<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> String password<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> Integer <span style="color:#a6e22e">getId</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> id<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setId</span><span style="color:#f92672">(</span>Integer id<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> id<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getUsername</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> username<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setUsername</span><span style="color:#f92672">(</span>String username<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">username</span> <span style="color:#f92672">=</span> username<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getPassword</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> password<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">setPassword</span><span style="color:#f92672">(</span>String password<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">password</span> <span style="color:#f92672">=</span> password<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">toString</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;Account{&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;id=&#34;</span> <span style="color:#f92672">+</span> id <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;, username=&#39;&#34;</span> <span style="color:#f92672">+</span> username <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;&#39;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;, password=&#39;&#34;</span> <span style="color:#f92672">+</span> password <span style="color:#f92672">+</span> <span style="color:#e6db74">&#39;\&#39;&#39;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#39;}&#39;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div></li>
 </ol>
 <h2 id="增删改操作">增删改操作</h2>
 <p>JDBC数据访问层的代码放在 <code>DAO</code>包下:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> dao<span style="color:#f92672">;</span>
-
-<span style="color:#f92672">import</span> pojo.User<span style="color:#f92672">;</span>
-
-<span style="color:#f92672">import</span> java.sql.*<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserDAO</span> <span style="color:#f92672">{</span>
-
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> String URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;jdbc:mysql:///test&#34;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34;?useSSL=false&amp;useServerPrepStmts=true&#34;</span><span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> String USERNAME <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;root&#34;</span><span style="color:#f92672">;</span>
-    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> String PASSWORD <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1234&#34;</span><span style="color:#f92672">;</span>
-
-    <span style="color:#75715e">/**
-</span><span style="color:#75715e">     * 根据用户名和密码查询
-</span><span style="color:#75715e">     * @param username
-</span><span style="color:#75715e">     * @param password
-</span><span style="color:#75715e">     * @return User
-</span><span style="color:#75715e">     * @throws SQLException
-</span><span style="color:#75715e">     */</span>
-    <span style="color:#66d9ef">public</span> User <span style="color:#a6e22e">select</span><span style="color:#f92672">(</span>String username<span style="color:#f92672">,</span> String password<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> SQLException <span style="color:#f92672">{</span>
-
-        <span style="color:#75715e">// 参数有null值时
-</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>username <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> password <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
-            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
-        <span style="color:#f92672">}</span>
-
-        <span style="color:#75715e">// 连接数据库
-</span><span style="color:#75715e"></span>        Connection conn <span style="color:#f92672">=</span> DriverManager<span style="color:#f92672">.</span><span style="color:#a6e22e">getConnection</span><span style="color:#f92672">(</span>URL<span style="color:#f92672">,</span> USERNAME<span style="color:#f92672">,</span> PASSWORD<span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// 获取PreparedStatement对象, 并设置SQL语句
-</span><span style="color:#75715e"></span>        String sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT id, username, password&#34;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34; FROM tb_user&#34;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34; WHERE username = ?&#34;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34; AND password = ?&#34;</span><span style="color:#f92672">;</span>
-        PreparedStatement pstmt <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span><span style="color:#a6e22e">prepareStatement</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">);</span>
-        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">setString</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> username<span style="color:#f92672">);</span>
-        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">setString</span><span style="color:#f92672">(</span>2<span style="color:#f92672">,</span> password<span style="color:#f92672">);</span>
-
-        <span style="color:#75715e">// 获取ResultSet
-</span><span style="color:#75715e"></span>        ResultSet rs <span style="color:#f92672">=</span> pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">executeQuery</span><span style="color:#f92672">();</span>
-
-        User user <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
-        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>rs<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
-            user <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> User<span style="color:#f92672">();</span>
-
-            Integer id <span style="color:#f92672">=</span> rs<span style="color:#f92672">.</span><span style="color:#a6e22e">getInt</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">);</span>
-            String name <span style="color:#f92672">=</span> rs<span style="color:#f92672">.</span><span style="color:#a6e22e">getString</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;username&#34;</span><span style="color:#f92672">);</span>
-            String pw <span style="color:#f92672">=</span> rs<span style="color:#f92672">.</span><span style="color:#a6e22e">getString</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;password&#34;</span><span style="color:#f92672">);</span>
-
-            user<span style="color:#f92672">.</span><span style="color:#a6e22e">setId</span><span style="color:#f92672">(</span>id<span style="color:#f92672">);</span>
-            user<span style="color:#f92672">.</span><span style="color:#a6e22e">setUsername</span><span style="color:#f92672">(</span>name<span style="color:#f92672">);</span>
-            user<span style="color:#f92672">.</span><span style="color:#a6e22e">setPassword</span><span style="color:#f92672">(</span>pw<span style="color:#f92672">);</span>
-        <span style="color:#f92672">}</span>
-
-        rs<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-        conn<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-
-        <span style="color:#66d9ef">return</span> user<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#75715e">/**
-</span><span style="color:#75715e">     * 根据用户名和密码添加数据
-</span><span style="color:#75715e">     * @param username
-</span><span style="color:#75715e">     * @param password
-</span><span style="color:#75715e">     * @return boolean
-</span><span style="color:#75715e">     * @throws SQLException
-</span><span style="color:#75715e">     */</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>String username<span style="color:#f92672">,</span> String password<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> SQLException <span style="color:#f92672">{</span>
-
-        Connection conn <span style="color:#f92672">=</span> DriverManager<span style="color:#f92672">.</span><span style="color:#a6e22e">getConnection</span><span style="color:#f92672">(</span>URL<span style="color:#f92672">,</span> USERNAME<span style="color:#f92672">,</span> PASSWORD<span style="color:#f92672">);</span>
-
-        String sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;INSERT INTO tb_user&#34;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34; VALUE(null, ?, ?)&#34;</span><span style="color:#f92672">;</span>
-        PreparedStatement pstmt <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span><span style="color:#a6e22e">prepareStatement</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">);</span>
-        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">setString</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> username<span style="color:#f92672">);</span>
-        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">setString</span><span style="color:#f92672">(</span>2<span style="color:#f92672">,</span> password<span style="color:#f92672">);</span>
-
-        <span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">executeUpdate</span><span style="color:#f92672">();</span>
-
-        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-        conn<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-
-        <span style="color:#66d9ef">return</span> count <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#75715e">/**
-</span><span style="color:#75715e">     * 根据用户名和密码删除数据
-</span><span style="color:#75715e">     * @param username
-</span><span style="color:#75715e">     * @param password
-</span><span style="color:#75715e">     * @return boolean
-</span><span style="color:#75715e">     * @throws SQLException
-</span><span style="color:#75715e">     */</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">delete</span><span style="color:#f92672">(</span>String username<span style="color:#f92672">,</span> String password<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> SQLException <span style="color:#f92672">{</span>
-
-        Connection conn <span style="color:#f92672">=</span> DriverManager<span style="color:#f92672">.</span><span style="color:#a6e22e">getConnection</span><span style="color:#f92672">(</span>URL<span style="color:#f92672">,</span> USERNAME<span style="color:#f92672">,</span> PASSWORD<span style="color:#f92672">);</span>
-
-        String sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;DELETE FROM tb_user&#34;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34; WHERE username = ?&#34;</span> <span style="color:#f92672">+</span>
-                <span style="color:#e6db74">&#34; AND password = ?&#34;</span><span style="color:#f92672">;</span>
-        PreparedStatement pstmt <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span><span style="color:#a6e22e">prepareStatement</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">);</span>
-        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">setString</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> username<span style="color:#f92672">);</span>
-        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">setString</span><span style="color:#f92672">(</span>2<span style="color:#f92672">,</span> password<span style="color:#f92672">);</span>
-
-        <span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">executeUpdate</span><span style="color:#f92672">();</span>
-
-        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-        conn<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
-
-        <span style="color:#66d9ef">return</span> count <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-
-</code></pre></div>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> dao<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> pojo.User<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.sql.*<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserDAO</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> String URL <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;jdbc:mysql:///test&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;?useSSL=false&amp;useServerPrepStmts=true&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> String USERNAME <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;root&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> String PASSWORD <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1234&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * 根据用户名和密码查询
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @param username
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @param password
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @return User
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @throws SQLException
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> User <span style="color:#a6e22e">select</span><span style="color:#f92672">(</span>String username<span style="color:#f92672">,</span> String password<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> SQLException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 参数有null值时
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>username <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#f92672">||</span> password <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 连接数据库
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        Connection conn <span style="color:#f92672">=</span> DriverManager<span style="color:#f92672">.</span><span style="color:#a6e22e">getConnection</span><span style="color:#f92672">(</span>URL<span style="color:#f92672">,</span> USERNAME<span style="color:#f92672">,</span> PASSWORD<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 获取PreparedStatement对象, 并设置SQL语句
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        String sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT id, username, password&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34; FROM tb_user&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34; WHERE username = ?&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34; AND password = ?&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        PreparedStatement pstmt <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span><span style="color:#a6e22e">prepareStatement</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">setString</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> username<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">setString</span><span style="color:#f92672">(</span>2<span style="color:#f92672">,</span> password<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">// 获取ResultSet
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        ResultSet rs <span style="color:#f92672">=</span> pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">executeQuery</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        User user <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>rs<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">())</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>            user <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> User<span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            Integer id <span style="color:#f92672">=</span> rs<span style="color:#f92672">.</span><span style="color:#a6e22e">getInt</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            String name <span style="color:#f92672">=</span> rs<span style="color:#f92672">.</span><span style="color:#a6e22e">getString</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;username&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            String pw <span style="color:#f92672">=</span> rs<span style="color:#f92672">.</span><span style="color:#a6e22e">getString</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;password&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            user<span style="color:#f92672">.</span><span style="color:#a6e22e">setId</span><span style="color:#f92672">(</span>id<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            user<span style="color:#f92672">.</span><span style="color:#a6e22e">setUsername</span><span style="color:#f92672">(</span>name<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>            user<span style="color:#f92672">.</span><span style="color:#a6e22e">setPassword</span><span style="color:#f92672">(</span>pw<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        rs<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        conn<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> user<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * 根据用户名和密码添加数据
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @param username
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @param password
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @return boolean
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @throws SQLException
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>String username<span style="color:#f92672">,</span> String password<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> SQLException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Connection conn <span style="color:#f92672">=</span> DriverManager<span style="color:#f92672">.</span><span style="color:#a6e22e">getConnection</span><span style="color:#f92672">(</span>URL<span style="color:#f92672">,</span> USERNAME<span style="color:#f92672">,</span> PASSWORD<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        String sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;INSERT INTO tb_user&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34; VALUE(null, ?, ?)&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        PreparedStatement pstmt <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span><span style="color:#a6e22e">prepareStatement</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">setString</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> username<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">setString</span><span style="color:#f92672">(</span>2<span style="color:#f92672">,</span> password<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">executeUpdate</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        conn<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> count <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * 根据用户名和密码删除数据
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @param username
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @param password
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @return boolean
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * @throws SQLException
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">boolean</span> <span style="color:#a6e22e">delete</span><span style="color:#f92672">(</span>String username<span style="color:#f92672">,</span> String password<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> SQLException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        Connection conn <span style="color:#f92672">=</span> DriverManager<span style="color:#f92672">.</span><span style="color:#a6e22e">getConnection</span><span style="color:#f92672">(</span>URL<span style="color:#f92672">,</span> USERNAME<span style="color:#f92672">,</span> PASSWORD<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        String sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;DELETE FROM tb_user&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34; WHERE username = ?&#34;</span> <span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34; AND password = ?&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>        PreparedStatement pstmt <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span><span style="color:#a6e22e">prepareStatement</span><span style="color:#f92672">(</span>sql<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">setString</span><span style="color:#f92672">(</span>1<span style="color:#f92672">,</span> username<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">setString</span><span style="color:#f92672">(</span>2<span style="color:#f92672">,</span> password<span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">int</span> count <span style="color:#f92672">=</span> pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">executeUpdate</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        pstmt<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>        conn<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> count <span style="color:#f92672">&gt;</span> 0<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div>
 </section>
 
 

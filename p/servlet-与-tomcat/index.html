@@ -385,26 +385,26 @@
 <ol>
 <li>
 <p>创建Maven Web项目后，导入Servlet依赖坐标和Tomcat插件：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;dependencies&gt;</span>
-    <span style="color:#75715e">&lt;!-- Servlet依赖 --&gt;</span>
-    <span style="color:#f92672">&lt;dependency&gt;</span>
-        <span style="color:#f92672">&lt;groupId&gt;</span>javax.servlet<span style="color:#f92672">&lt;/groupId&gt;</span>
-        <span style="color:#f92672">&lt;artifactId&gt;</span>javax.servlet-api<span style="color:#f92672">&lt;/artifactId&gt;</span>
-        <span style="color:#f92672">&lt;version&gt;</span>3.1.0<span style="color:#f92672">&lt;/version&gt;</span>
-        <span style="color:#f92672">&lt;scope&gt;</span>provided<span style="color:#f92672">&lt;/scope&gt;</span>
-    <span style="color:#f92672">&lt;/dependency&gt;</span>
-<span style="color:#f92672">&lt;/dependencies&gt;</span>
-<span style="color:#f92672">&lt;build&gt;</span>
-   <span style="color:#f92672">&lt;plugins&gt;</span>
-   	<span style="color:#75715e">&lt;!-- Tomcat插件 --&gt;</span>
-       <span style="color:#f92672">&lt;plugin&gt;</span>
-           <span style="color:#f92672">&lt;groupId&gt;</span>org.apache.tomcat.maven<span style="color:#f92672">&lt;/groupId&gt;</span>
-           <span style="color:#f92672">&lt;artifactId&gt;</span>tomcat7-maven-plugin<span style="color:#f92672">&lt;/artifactId&gt;</span>
-           <span style="color:#f92672">&lt;version&gt;</span>2.2<span style="color:#f92672">&lt;/version&gt;</span>
-       <span style="color:#f92672">&lt;/plugin&gt;</span>
-   <span style="color:#f92672">&lt;/plugins&gt;</span>
-<span style="color:#f92672">&lt;/build&gt;</span>
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;dependencies&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- Servlet依赖 --&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;dependency&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;groupId&gt;</span>javax.servlet<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;artifactId&gt;</span>javax.servlet-api<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;version&gt;</span>3.1.0<span style="color:#f92672">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;scope&gt;</span>provided<span style="color:#f92672">&lt;/scope&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/dependency&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/dependencies&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;build&gt;</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">&lt;plugins&gt;</span>
+</span></span><span style="display:flex;"><span>   	<span style="color:#75715e">&lt;!-- Tomcat插件 --&gt;</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">&lt;plugin&gt;</span>
+</span></span><span style="display:flex;"><span>           <span style="color:#f92672">&lt;groupId&gt;</span>org.apache.tomcat.maven<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>           <span style="color:#f92672">&lt;artifactId&gt;</span>tomcat7-maven-plugin<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>           <span style="color:#f92672">&lt;version&gt;</span>2.2<span style="color:#f92672">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span>       <span style="color:#f92672">&lt;/plugin&gt;</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">&lt;/plugins&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/build&gt;</span>
+</span></span></code></pre></div><blockquote>
 <p>使用<code>&lt;scope&gt;provided&lt;/scope&gt;</code>的原因：
 <code>provided</code>指的是在编译和测试过程中有效，最后生成的<code>war</code>包时不会加入。
 因为Tomcat的lib目录中已经有servlet-api这个jar包，如果在生成war包的时候生效就会和Tomcat中的jar包冲突，导致报错。</p>
@@ -412,41 +412,41 @@
 </li>
 <li>
 <p>创建Servlet类，实现Servlet接口，并重写接口中所有方法：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.linner.web<span style="color:#f92672">;</span>
-
-<span style="color:#f92672">import</span> javax.servlet.*<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.annotation.WebServlet<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
-
-<span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/demo&#34;</span><span style="color:#f92672">)</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ServletDemo</span> <span style="color:#66d9ef">implements</span> Servlet <span style="color:#f92672">{</span>
-
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">service</span><span style="color:#f92672">(</span>ServletRequest servletRequest<span style="color:#f92672">,</span> ServletResponse servletResponse<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello Servlet!&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getServletInfo</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">destroy</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">init</span><span style="color:#f92672">(</span>ServletConfig servletConfig<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException <span style="color:#f92672">{</span>
-
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#a6e22e">@Override</span>
-    <span style="color:#66d9ef">public</span> ServletConfig <span style="color:#a6e22e">getServletConfig</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> com.linner.web<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.*<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.annotation.WebServlet<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/demo&#34;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ServletDemo</span> <span style="color:#66d9ef">implements</span> Servlet <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">service</span><span style="color:#f92672">(</span>ServletRequest servletRequest<span style="color:#f92672">,</span> ServletResponse servletResponse<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello Servlet!&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getServletInfo</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">destroy</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">init</span><span style="color:#f92672">(</span>ServletConfig servletConfig<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@Override</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> ServletConfig <span style="color:#a6e22e">getServletConfig</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><ul>
 <li>使用<code>@WebServlet</code>注解配置该Servlet的访问路径：<code>@WebServlet(&quot;/demo&quot;)</code></li>
 </ul>
 </li>
@@ -489,55 +489,55 @@
 </li>
 </ol>
 <p>可以把Servlet的创建放到服务器启动的时候来创建（修改<code>@WebServlet</code>注解）：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span>urlPatterns <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/demo1&#34;</span><span style="color:#f92672">,</span> loadOnStartup <span style="color:#f92672">=</span> 1<span style="color:#f92672">)</span>
-</code></pre></div><p><code>loadOnstartup</code>的取值有两类情况：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span>urlPatterns <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/demo1&#34;</span><span style="color:#f92672">,</span> loadOnStartup <span style="color:#f92672">=</span> 1<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p><code>loadOnstartup</code>的取值有两类情况：</p>
 <ol>
 <li>负整数：第一次访问时创建Servlet对象</li>
 <li>非负整数：服务器启动时创建Servlet对象，数字越小优先级越高（<code>0</code>的优先级最高）</li>
 </ol>
 <p>Example：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.linner.web<span style="color:#f92672">;</span>
-  
-<span style="color:#f92672">import</span> javax.servlet.*<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.annotation.WebServlet<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
-
-<span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span>urlPatterns <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/demo&#34;</span><span style="color:#f92672">,</span> loadOnStartup <span style="color:#f92672">=</span> 1<span style="color:#f92672">)</span>
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ServletDemo</span> <span style="color:#66d9ef">implements</span> Servlet <span style="color:#f92672">{</span>
-    <span style="color:#75715e">/**
-</span><span style="color:#75715e">     * 初始化方法
-</span><span style="color:#75715e">     * - 在Servlet被第一次访问或者服务器启动时被调用一次
-</span><span style="color:#75715e">     */</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">init</span><span style="color:#f92672">(</span>ServletConfig config<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException <span style="color:#f92672">{</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;init...&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#75715e">/**
-</span><span style="color:#75715e">     * 提供服务
-</span><span style="color:#75715e">     * - 每一次Servlet被访问时被调用
-</span><span style="color:#75715e">     * - 可被调用多次
-</span><span style="color:#75715e">     */</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">service</span><span style="color:#f92672">(</span>ServletRequest req<span style="color:#f92672">,</span> ServletResponse res<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello Servlet!&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#75715e">/**
-</span><span style="color:#75715e">     * 销毁方法
-</span><span style="color:#75715e">     * - 调用时机：内存释放或者服务器关闭的时候被调用一次
-</span><span style="color:#75715e">     */</span>
-    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">destroy</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;destroy...&#34;</span><span style="color:#f92672">);</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> ServletConfig <span style="color:#a6e22e">getServletConfig</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-
-    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getServletInfo</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
-    <span style="color:#f92672">}</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> com.linner.web<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.*<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.annotation.WebServlet<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span>urlPatterns <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;/demo&#34;</span><span style="color:#f92672">,</span> loadOnStartup <span style="color:#f92672">=</span> 1<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ServletDemo</span> <span style="color:#66d9ef">implements</span> Servlet <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * 初始化方法
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * - 在Servlet被第一次访问或者服务器启动时被调用一次
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">init</span><span style="color:#f92672">(</span>ServletConfig config<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;init...&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * 提供服务
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * - 每一次Servlet被访问时被调用
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * - 可被调用多次
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">service</span><span style="color:#f92672">(</span>ServletRequest req<span style="color:#f92672">,</span> ServletResponse res<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException<span style="color:#f92672">,</span> IOException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello Servlet!&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * 销毁方法
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     * - 调用时机：内存释放或者服务器关闭的时候被调用一次
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">     */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">destroy</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;destroy...&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> ServletConfig <span style="color:#a6e22e">getServletConfig</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getServletInfo</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">null</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><blockquote>
 <p>注意：若要在关闭Tomcat时调用<code>destroy()</code>，需要在正常关闭Tomcat的情况下，<code>destroy()</code>才能被执行。</p>
 </blockquote>
 <hr>
@@ -546,42 +546,42 @@
 <ul>
 <li>
 <p>获取Servlet信息：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getServletInfo</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getServletInfo</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div></li>
 <li>
 <p>获取ServletConfig对象：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getServletInfo</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div><p>ServletConfig对象，Tomcat Web服务器在创建Servlet对象的时候会通过<code>init()</code>方法将其作为参数传入：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">init</span><span style="color:#f92672">(</span>ServletConfig config<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException
-</code></pre></div><p>在<code>getServletInfo()</code>中仅需将服务器传过来的ServletConfig进行返回即可：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">private</span> ServletConfig servletConfig<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">init</span><span style="color:#f92672">(</span>ServletConfig config<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException <span style="color:#f92672">{</span>
-    <span style="color:#75715e">// 获取服务器传入的ServletConfig
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">servletConfig</span> <span style="color:#f92672">=</span> config<span style="color:#f92672">;</span>
-    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;init...&#34;</span><span style="color:#f92672">);</span>
-<span style="color:#f92672">}</span>
-<span style="color:#66d9ef">public</span> ServletConfig <span style="color:#a6e22e">getServletConfig</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
-    <span style="color:#75715e">// 将服务器传入的ServletConfig返回
-</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> servletConfig<span style="color:#f92672">;</span>
-<span style="color:#f92672">}</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> String <span style="color:#a6e22e">getServletInfo</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div><p>ServletConfig对象，Tomcat Web服务器在创建Servlet对象的时候会通过<code>init()</code>方法将其作为参数传入：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#a6e22e">init</span><span style="color:#f92672">(</span>ServletConfig config<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException
+</span></span></code></pre></div><p>在<code>getServletInfo()</code>中仅需将服务器传过来的ServletConfig进行返回即可：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> ServletConfig servletConfig<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">init</span><span style="color:#f92672">(</span>ServletConfig config<span style="color:#f92672">)</span> <span style="color:#66d9ef">throws</span> ServletException <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 获取服务器传入的ServletConfig
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">servletConfig</span> <span style="color:#f92672">=</span> config<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;init...&#34;</span><span style="color:#f92672">);</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> ServletConfig <span style="color:#a6e22e">getServletConfig</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 将服务器传入的ServletConfig返回
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> servletConfig<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
+</span></span></code></pre></div></li>
 </ul>
 <hr>
 <h1 id="urlpattern-配置">urlPattern 配置</h1>
 <h2 id="urlpatterns-多路径访问">urlPatterns 多路径访问</h2>
 <p>一个Servlet，可以配置多个访问路径（<code>urlPattern</code>）：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span>urlPatterns <span style="color:#f92672">=</span> <span style="color:#f92672">{</span><span style="color:#e6db74">&#34;/path1&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;/path2&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">....})</span>
-</code></pre></div><h2 id="精确匹配">精确匹配</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span>urlPatterns <span style="color:#f92672">=</span> <span style="color:#f92672">{</span><span style="color:#e6db74">&#34;/path1&#34;</span><span style="color:#f92672">,</span> <span style="color:#e6db74">&#34;/path2&#34;</span><span style="color:#f92672">,</span> <span style="color:#f92672">....})</span>
+</span></span></code></pre></div><h2 id="精确匹配">精确匹配</h2>
 <ul>
 <li>
 <p>配置路径：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/path/servlet&#34;</span><span style="color:#f92672">)</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/path/servlet&#34;</span><span style="color:#f92672">)</span>
+</span></span></code></pre></div></li>
 <li>
 <p>访问路径：<a class="link" href="http://localhost:8080/web-demo/path/servlet"  target="_blank" rel="noopener"
     >http://localhost:8080/web-demo/path/servlet</a></p>
@@ -591,8 +591,8 @@
 <ul>
 <li>
 <p>配置路径：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/path/*&#34;</span><span style="color:#f92672">)</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/path/*&#34;</span><span style="color:#f92672">)</span>
+</span></span></code></pre></div></li>
 <li>
 <p>访问路径：</p>
 <ul>
@@ -615,8 +615,8 @@
 <ul>
 <li>
 <p>配置路径：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;*.html&#34;</span><span style="color:#f92672">)</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;*.html&#34;</span><span style="color:#f92672">)</span>
+</span></span></code></pre></div></li>
 <li>
 <p>访问路径：</p>
 <ul>
@@ -641,10 +641,10 @@
 <ul>
 <li>
 <p>配置路径：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">)</span>
-</code></pre></div><p>或</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/*&#34;</span><span style="color:#f92672">)</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/&#34;</span><span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>或</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a6e22e">@WebServlet</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;/*&#34;</span><span style="color:#f92672">)</span>
+</span></span></code></pre></div></li>
 <li>
 <p>访问路径：</p>
 <p>任何以 <code>http://localhost:8080/web-demo/</code> 开头的路径</p>
@@ -664,41 +664,41 @@
 <ul>
 <li>
 <p>编写Servlet类：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#f92672">package</span> com.linner.web<span style="color:#f92672">;</span>
-
-<span style="color:#f92672">import</span> javax.servlet.*<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> javax.servlet.annotation.WebServlet<span style="color:#f92672">;</span>
-<span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
-
-<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ServletDemo</span> <span style="color:#66d9ef">implements</span> Servlet <span style="color:#f92672">{</span>
-    <span style="color:#75715e">// ...
-</span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#f92672">package</span> com.linner.web<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.*<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> javax.servlet.annotation.WebServlet<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> java.io.IOException<span style="color:#f92672">;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">ServletDemo</span> <span style="color:#66d9ef">implements</span> Servlet <span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">}</span>
+</span></span></code></pre></div></li>
 <li>
 <p>在<code>web.xml</code>中配置该Servlet：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
-<span style="color:#f92672">&lt;web-app</span> <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://xmlns.jcp.org/xml/ns/javaee&#34;</span>
-        <span style="color:#a6e22e">xmlns:xsi=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
-        <span style="color:#a6e22e">xsi:schemaLocation=</span><span style="color:#e6db74">&#34;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd&#34;</span>
-        <span style="color:#a6e22e">version=</span><span style="color:#e6db74">&#34;4.0&#34;</span><span style="color:#f92672">&gt;</span>
-
-    <span style="color:#75715e">&lt;!-- Servlet 全类名 --&gt;</span>
-    <span style="color:#f92672">&lt;servlet&gt;</span>
-        <span style="color:#75715e">&lt;!-- Servlet的名称，名字任意 --&gt;</span>
-        <span style="color:#f92672">&lt;servlet-name&gt;</span>demo<span style="color:#f92672">&lt;/servlet-name&gt;</span>
-        <span style="color:#75715e">&lt;!-- Servlet的类全名 --&gt;</span>
-        <span style="color:#f92672">&lt;servlet-class&gt;</span>com.linner.web.ServletDemo<span style="color:#f92672">&lt;/servlet-class&gt;</span>
-    <span style="color:#f92672">&lt;/servlet&gt;</span>
-
-    <span style="color:#75715e">&lt;!-- Servlet 访问路径 --&gt;</span>
-    <span style="color:#f92672">&lt;servlet-mapping&gt;</span>
-        <span style="color:#75715e">&lt;!-- Servlet的名称，要和上面的名称一致 --&gt;</span>
-        <span style="color:#f92672">&lt;servlet-name&gt;</span>demo<span style="color:#f92672">&lt;/servlet-name&gt;</span>
-        <span style="color:#75715e">&lt;!-- Servlet的访问路径 --&gt;</span>
-        <span style="color:#f92672">&lt;url-pattern&gt;</span>/demo<span style="color:#f92672">&lt;/url-pattern&gt;</span>
-    <span style="color:#f92672">&lt;/servlet-mapping&gt;</span>
-<span style="color:#f92672">&lt;/web-app&gt;</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;web-app</span> <span style="color:#a6e22e">xmlns=</span><span style="color:#e6db74">&#34;http://xmlns.jcp.org/xml/ns/javaee&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">xmlns:xsi=</span><span style="color:#e6db74">&#34;http://www.w3.org/2001/XMLSchema-instance&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">xsi:schemaLocation=</span><span style="color:#e6db74">&#34;http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">version=</span><span style="color:#e6db74">&#34;4.0&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- Servlet 全类名 --&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;servlet&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&lt;!-- Servlet的名称，名字任意 --&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;servlet-name&gt;</span>demo<span style="color:#f92672">&lt;/servlet-name&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&lt;!-- Servlet的类全名 --&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;servlet-class&gt;</span>com.linner.web.ServletDemo<span style="color:#f92672">&lt;/servlet-class&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/servlet&gt;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- Servlet 访问路径 --&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;servlet-mapping&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&lt;!-- Servlet的名称，要和上面的名称一致 --&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;servlet-name&gt;</span>demo<span style="color:#f92672">&lt;/servlet-name&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e">&lt;!-- Servlet的访问路径 --&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;url-pattern&gt;</span>/demo<span style="color:#f92672">&lt;/url-pattern&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/servlet-mapping&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/web-app&gt;</span>
+</span></span></code></pre></div></li>
 </ul>
 <hr>
 <h1 id="servletrequest-和-servletresponse">ServletRequest 和 ServletResponse</h1>

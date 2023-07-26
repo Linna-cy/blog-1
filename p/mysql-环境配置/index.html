@@ -346,56 +346,56 @@
 <ol>
 <li>
 <p>首先更新本地存储库索引：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt update
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt update
+</span></span></code></pre></div></li>
 <li>
 <p>从 APT 存储库安装 MySQL：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install MySQL-server -y
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo apt install MySQL-server -y
+</span></span></code></pre></div></li>
 <li>
 <p>查看 MySQL 版本，验证是否安装成功：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mysql --version
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mysql --version
+</span></span></code></pre></div></li>
 <li>
 <p>检查 MySQL 是否正在运行：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">systemctl status mysql.service
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl status mysql.service
+</span></span></code></pre></div></li>
 </ol>
 <p>如果服务未运行：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo systemctl start mysql
-</code></pre></div><hr>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl start mysql
+</span></span></code></pre></div><hr>
 <p>MySQL 安装完成后需要更改密码。</p>
 <ol>
 <li>
 <p>查看默认账户和密码：</p>
 <p>执行后找到 <code>user</code> 和 <code>password</code>，如：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo vim /etc/mysql/debian.cnf
-</code></pre></div><p>或：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo cat /etc/mysql/debian.cnf
-</code></pre></div><p>找到如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo vim /etc/mysql/debian.cnf
+</span></span></code></pre></div><p>或：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo cat /etc/mysql/debian.cnf
+</span></span></code></pre></div><p>找到如下：</p>
 <pre tabindex="0"><code class="language-纯文本" data-lang="纯文本">user     = debian-sys-maint
 password = 12E0cDBeusG6vANp
 </code></pre></li>
 <li>
 <p>使用默认账户登录：</p>
 <p>然后输入默认密码：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mysql -udebian-sys-maint -p
-</code></pre></div><pre tabindex="0"><code class="language-纯文本" data-lang="纯文本">12E0cDBeusG6vANp
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mysql -udebian-sys-maint -p
+</span></span></code></pre></div><pre tabindex="0"><code class="language-纯文本" data-lang="纯文本">12E0cDBeusG6vANp
 </code></pre></li>
 <li>
 <p>输入以下命令修改 root 密码：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">USER</span> <span style="color:#e6db74">&#39;root&#39;</span><span style="color:#f92672">@</span><span style="color:#e6db74">&#39;localhost&#39;</span> identified <span style="color:#66d9ef">WITH</span> mysql_native_password <span style="color:#66d9ef">BY</span> <span style="color:#e6db74">&#39;your_password&#39;</span>;
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">USER</span> <span style="color:#e6db74">&#39;root&#39;</span><span style="color:#f92672">@</span><span style="color:#e6db74">&#39;localhost&#39;</span> identified <span style="color:#66d9ef">WITH</span> mysql_native_password <span style="color:#66d9ef">BY</span> <span style="color:#e6db74">&#39;your_password&#39;</span>;
+</span></span></code></pre></div></li>
 <li>
 <p>修改完成后执行：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql">FLUSH <span style="color:#66d9ef">privileges</span>;
-QUIT
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>FLUSH <span style="color:#66d9ef">privileges</span>;
+</span></span><span style="display:flex;"><span>QUIT
+</span></span></code></pre></div></li>
 <li>
 <p>最后重启 MySQL 后就可以使用 root 用户了：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo service mysql restart
-</code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mysql -uroot -p
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo service mysql restart
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mysql -uroot -p
+</span></span></code></pre></div></li>
 </ol>
 
 </section>

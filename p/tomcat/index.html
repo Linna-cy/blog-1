@@ -394,8 +394,8 @@
 <p>关闭Tomcat不应该直接关闭运行窗口来强制关闭。应该运行<code>bin\shutdown.bat</code>或<code>ctrl+c</code>来正常关闭。</p>
 <h2 id="修改端口">修改端口</h2>
 <p>Tomcat默认的端口是8080，通过修改 <code>conf/server.xml</code> 来修改端口号：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;Connector</span> <span style="color:#a6e22e">port=</span><span style="color:#e6db74">&#34;8080&#34;</span> <span style="color:#a6e22e">protocol=</span><span style="color:#e6db74">&#34;HTTP/1.1&#34;</span> <span style="color:#a6e22e">connectionTimeout=</span><span style="color:#e6db74">&#34;20000&#34;</span> <span style="color:#a6e22e">redirectPort=</span><span style="color:#e6db74">&#34;8443&#34;</span><span style="color:#f92672">&gt;</span>
-</code></pre></div><h2 id="部署">部署</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;Connector</span> <span style="color:#a6e22e">port=</span><span style="color:#e6db74">&#34;8080&#34;</span> <span style="color:#a6e22e">protocol=</span><span style="color:#e6db74">&#34;HTTP/1.1&#34;</span> <span style="color:#a6e22e">connectionTimeout=</span><span style="color:#e6db74">&#34;20000&#34;</span> <span style="color:#a6e22e">redirectPort=</span><span style="color:#e6db74">&#34;8443&#34;</span><span style="color:#f92672">&gt;</span>
+</span></span></code></pre></div><h2 id="部署">部署</h2>
 <p>Tomcat部署项目： 将项目放置到<code>webapps</code>目录下，即部署完成。</p>
 <p>一般JavaWeb项目会被打包称<code>wa</code>r包，然后将<code>war</code>包放到<code>webapps</code>目录下，Tomcat会自动解压缩。</p>
 <hr>
@@ -549,15 +549,15 @@
 </li>
 <li>
 <p><mark>在pom.xml设置打包方式为war</mark></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;project&gt;</span>
-  <span style="color:#75715e">&lt;!-- ...... --&gt;</span>
-  <span style="color:#f92672">&lt;groupId&gt;</span>......<span style="color:#f92672">&lt;/groupId&gt;</span>
-  <span style="color:#f92672">&lt;artifactId&gt;</span>.......<span style="color:#f92672">&lt;/artifactId&gt;</span>
-  <span style="color:#f92672">&lt;vesion&gt;</span>.......<span style="color:#f92672">&lt;/vesion&gt;</span>
-  <span style="color:#f92672">&lt;packaging&gt;</span>war<span style="color:#f92672">&lt;/packaging&gt;</span>
-  <span style="color:#75715e">&lt;!-- ...... --&gt;</span>
-<span style="color:#f92672">&lt;/project&gt;</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;project&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">&lt;!-- ...... --&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;groupId&gt;</span>......<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;artifactId&gt;</span>.......<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;vesion&gt;</span>.......<span style="color:#f92672">&lt;/vesion&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&lt;packaging&gt;</span>war<span style="color:#f92672">&lt;/packaging&gt;</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">&lt;!-- ...... --&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/project&gt;</span>
+</span></span></code></pre></div></li>
 <li>
 <p><mark>补齐Maven Web项目缺失webapp的目录结构</mark></p>
 </li>
@@ -651,17 +651,17 @@
 <ol>
 <li>
 <p>在<code>pom.xml</code>中添加Tomcat插件：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;build&gt;</span>
-    <span style="color:#f92672">&lt;plugins&gt;</span>
-    	<span style="color:#75715e">&lt;!--Tomcat插件 --&gt;</span>
-        <span style="color:#f92672">&lt;plugin&gt;</span>
-            <span style="color:#f92672">&lt;groupId&gt;</span>org.apache.tomcat.maven<span style="color:#f92672">&lt;/groupId&gt;</span>
-            <span style="color:#f92672">&lt;artifactId&gt;</span>tomcat7-maven-plugin<span style="color:#f92672">&lt;/artifactId&gt;</span>
-            <span style="color:#f92672">&lt;version&gt;</span>2.2<span style="color:#f92672">&lt;/version&gt;</span>
-        <span style="color:#f92672">&lt;/plugin&gt;</span>
-    <span style="color:#f92672">&lt;/plugins&gt;</span>
-<span style="color:#f92672">&lt;/build&gt;</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#f92672">&lt;build&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;plugins&gt;</span>
+</span></span><span style="display:flex;"><span>    	<span style="color:#75715e">&lt;!--Tomcat插件 --&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;plugin&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;groupId&gt;</span>org.apache.tomcat.maven<span style="color:#f92672">&lt;/groupId&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;artifactId&gt;</span>tomcat7-maven-plugin<span style="color:#f92672">&lt;/artifactId&gt;</span>
+</span></span><span style="display:flex;"><span>            <span style="color:#f92672">&lt;version&gt;</span>2.2<span style="color:#f92672">&lt;/version&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&lt;/plugin&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&lt;/plugins&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;/build&gt;</span>
+</span></span></code></pre></div></li>
 <li>
 <p>使用Maven Helper插件快速启动项目，选中项目，右键 &ndash;&gt;Run Maven &ndash;&gt; tomcat7:run</p>
 </li>

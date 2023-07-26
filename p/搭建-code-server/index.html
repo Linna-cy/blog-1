@@ -344,48 +344,48 @@
     <ol>
 <li>
 <p>下载code-server：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wget https://github.com/coder/code-server/releases/download/v4.5.1/code-server-4.5.1-linux-amd64.tar.gz
-</code></pre></div><p>可以访问<a class="link" href="https://github.com/coder/code-server"  title="code-server GitHub 页面"
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget https://github.com/coder/code-server/releases/download/v4.5.1/code-server-4.5.1-linux-amd64.tar.gz
+</span></span></code></pre></div><p>可以访问<a class="link" href="https://github.com/coder/code-server"  title="code-server GitHub 页面"
      target="_blank" rel="noopener"
     >code-server GitHub 页面</a>获取下载连接。</p>
 </li>
 <li>
 <p>解压：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">tar -zxvf code-server-4.5.1-linux-amd64.tar.gz
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>tar -zxvf code-server-4.5.1-linux-amd64.tar.gz
+</span></span></code></pre></div></li>
 <li>
 <p>将解压后的文件移动到<code>/opt</code>目录下，并重命名：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">mv code-server-4.5.1-linux-amd64 /opt/code-server
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mv code-server-4.5.1-linux-amd64 /opt/code-server
+</span></span></code></pre></div></li>
 <li>
 <p>创建软链到<code>/usr/bin</code>目录下：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ln -s /opt/code-server/code-server /usr/bin/code-server
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ln -s /opt/code-server/code-server /usr/bin/code-server
+</span></span></code></pre></div></li>
 <li>
 <p>修改配置文件<code>~/.config/code-server/config.yaml</code>：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vim ~/.config/code-server/config.yaml
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vim ~/.config/code-server/config.yaml
+</span></span></code></pre></div></li>
 <li>
 <p>添加code-server服务：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">vim /lib/systemd/system/codeweb.service
-</code></pre></div><p>写入如下内容：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>Unit<span style="color:#f92672">]</span>
-Description<span style="color:#f92672">=</span>The nginx HTTP and reverse proxy server
-After<span style="color:#f92672">=</span>network.target remote-fs.target nss-lookup.target
-
-<span style="color:#f92672">[</span>Service<span style="color:#f92672">]</span>
-Type<span style="color:#f92672">=</span>simple
-ExecStart<span style="color:#f92672">=</span>/usr/bin/code-server
-KillSignal<span style="color:#f92672">=</span>SIGQUIT
-TimeoutStopSec<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>
-KillMode<span style="color:#f92672">=</span>process
-PrivateTmp<span style="color:#f92672">=</span>true
-StandardOutput<span style="color:#f92672">=</span>syslog
-StandardError<span style="color:#f92672">=</span>inherit
-
-<span style="color:#f92672">[</span>Install<span style="color:#f92672">]</span>
-WantedBy<span style="color:#f92672">=</span>multi-user.target
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>vim /lib/systemd/system/codeweb.service
+</span></span></code></pre></div><p>写入如下内容：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">[</span>Unit<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>Description<span style="color:#f92672">=</span>The nginx HTTP and reverse proxy server
+</span></span><span style="display:flex;"><span>After<span style="color:#f92672">=</span>network.target remote-fs.target nss-lookup.target
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Service<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>Type<span style="color:#f92672">=</span>simple
+</span></span><span style="display:flex;"><span>ExecStart<span style="color:#f92672">=</span>/usr/bin/code-server
+</span></span><span style="display:flex;"><span>KillSignal<span style="color:#f92672">=</span>SIGQUIT
+</span></span><span style="display:flex;"><span>TimeoutStopSec<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>
+</span></span><span style="display:flex;"><span>KillMode<span style="color:#f92672">=</span>process
+</span></span><span style="display:flex;"><span>PrivateTmp<span style="color:#f92672">=</span>true
+</span></span><span style="display:flex;"><span>StandardOutput<span style="color:#f92672">=</span>syslog
+</span></span><span style="display:flex;"><span>StandardError<span style="color:#f92672">=</span>inherit
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>Install<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>WantedBy<span style="color:#f92672">=</span>multi-user.target
+</span></span></code></pre></div></li>
 </ol>
 
 </section>

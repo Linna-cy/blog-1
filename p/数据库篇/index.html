@@ -366,7 +366,7 @@
             </div>
         
 
-        <div class="article-time--reading">共19388字</div>
+        <div class="article-time--reading">共19424字</div>
     </footer>
     
 
@@ -834,18 +834,18 @@ $$</p>
 <ul>
 <li>
 <p>建立数据库：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> <span style="color:#960050;background-color:#1e0010">数据库名</span>;
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> <span style="color:#960050;background-color:#1e0010">数据库名</span>;
+</span></span></code></pre></div></li>
 <li>
 <p>建立基本表：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> tab_name
-(
-    <span style="color:#960050;background-color:#1e0010">列名</span>    <span style="color:#960050;background-color:#1e0010">数据类型</span> [<span style="color:#960050;background-color:#1e0010">列级完整性约束条件</span>],
-    ...
-    <span style="color:#960050;background-color:#1e0010">表级完整性约束条件</span>,
-    ...
-);
-</code></pre></div><p>完整性约束有3种子句：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> tab_name
+</span></span><span style="display:flex;"><span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">列名</span>    <span style="color:#960050;background-color:#1e0010">数据类型</span> [<span style="color:#960050;background-color:#1e0010">列级完整性约束条件</span>],
+</span></span><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">表级完整性约束条件</span>,
+</span></span><span style="display:flex;"><span>    ...
+</span></span><span style="display:flex;"><span>);
+</span></span></code></pre></div><p>完整性约束有3种子句：</p>
 <ul>
 <li><code>PRIMARY KEY</code>：主键约束；</li>
 <li><code>CHECK</code>：检查约束；</li>
@@ -868,52 +868,52 @@ $$</p>
 <ul>
 <li>
 <p>增加新列：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#960050;background-color:#1e0010">表名</span> <span style="color:#66d9ef">ADD</span> <span style="color:#960050;background-color:#1e0010">列名</span> <span style="color:#960050;background-color:#1e0010">类型</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#960050;background-color:#1e0010">表名</span> <span style="color:#66d9ef">ADD</span> <span style="color:#960050;background-color:#1e0010">列名</span> <span style="color:#960050;background-color:#1e0010">类型</span>
+</span></span></code></pre></div></li>
 <li>
 <p>修改列的定义：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#960050;background-color:#1e0010">表名</span> <span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">COLUMN</span> <span style="color:#960050;background-color:#1e0010">列名</span> <span style="color:#960050;background-color:#1e0010">新类型</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#960050;background-color:#1e0010">表名</span> <span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">COLUMN</span> <span style="color:#960050;background-color:#1e0010">列名</span> <span style="color:#960050;background-color:#1e0010">新类型</span>
+</span></span></code></pre></div></li>
 <li>
 <p>删除列：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#960050;background-color:#1e0010">表名</span> <span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">COLUMN</span> <span style="color:#960050;background-color:#1e0010">列名</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#960050;background-color:#1e0010">表名</span> <span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">COLUMN</span> <span style="color:#960050;background-color:#1e0010">列名</span>
+</span></span></code></pre></div></li>
 </ul>
 <p><code>DROP TABLE</code>——删除基本表：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#960050;background-color:#1e0010">表名</span>
-</code></pre></div><h2 id="数据操纵语言dml">数据操纵语言（DML）</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#960050;background-color:#1e0010">表名</span>
+</span></span></code></pre></div><h2 id="数据操纵语言dml">数据操纵语言（DML）</h2>
 <p><code>INSERT INTO</code>——插入：</p>
 <ul>
 <li>
 <p>直接插入元组值：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#960050;background-color:#1e0010">表名（列名序列）</span><span style="color:#66d9ef">VALUES</span> (<span style="color:#960050;background-color:#1e0010">元组值</span>)
-</code></pre></div><p>或者：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#960050;background-color:#1e0010">表名</span> (<span style="color:#960050;background-color:#1e0010">列名</span> <span style="color:#960050;background-color:#1e0010">序列</span>) (<span style="color:#66d9ef">TABLE</span> (<span style="color:#960050;background-color:#1e0010">元组值</span>), (<span style="color:#960050;background-color:#1e0010">元组值</span>), ...)
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#960050;background-color:#1e0010">表名（列名序列）</span><span style="color:#66d9ef">VALUES</span> (<span style="color:#960050;background-color:#1e0010">元组值</span>)
+</span></span></code></pre></div><p>或者：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#960050;background-color:#1e0010">表名</span> (<span style="color:#960050;background-color:#1e0010">列名</span> <span style="color:#960050;background-color:#1e0010">序列</span>) (<span style="color:#66d9ef">TABLE</span> (<span style="color:#960050;background-color:#1e0010">元组值</span>), (<span style="color:#960050;background-color:#1e0010">元组值</span>), ...)
+</span></span></code></pre></div></li>
 <li>
 <p>插入一个查询的结果值：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#960050;background-color:#1e0010">表名</span> (<span style="color:#960050;background-color:#1e0010">列名序列</span>) <span style="color:#66d9ef">SELECT</span> <span style="color:#960050;background-color:#1e0010">查询语句</span>
-</code></pre></div></li>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> <span style="color:#960050;background-color:#1e0010">表名</span> (<span style="color:#960050;background-color:#1e0010">列名序列</span>) <span style="color:#66d9ef">SELECT</span> <span style="color:#960050;background-color:#1e0010">查询语句</span>
+</span></span></code></pre></div></li>
 </ul>
 <p><code>DELETE FROM</code>——删除：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">FROM</span> <span style="color:#960050;background-color:#1e0010">表名</span> [<span style="color:#66d9ef">WHERE</span> <span style="color:#960050;background-color:#1e0010">条件表达式</span>]
-</code></pre></div><p><code>UPDATE</code>——修改：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">UPDATE</span> <span style="color:#960050;background-color:#1e0010">表名</span>
-<span style="color:#66d9ef">SET</span> <span style="color:#960050;background-color:#1e0010">列名</span><span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">值表达式</span>[, <span style="color:#960050;background-color:#1e0010">列名</span><span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">值表达式</span>...]
-[WHERE条件表达式]
-</code></pre></div><h2 id="数据查询语言dql">数据查询语言（DQL）</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DELETE</span> <span style="color:#66d9ef">FROM</span> <span style="color:#960050;background-color:#1e0010">表名</span> [<span style="color:#66d9ef">WHERE</span> <span style="color:#960050;background-color:#1e0010">条件表达式</span>]
+</span></span></code></pre></div><p><code>UPDATE</code>——修改：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">UPDATE</span> <span style="color:#960050;background-color:#1e0010">表名</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SET</span> <span style="color:#960050;background-color:#1e0010">列名</span><span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">值表达式</span>[, <span style="color:#960050;background-color:#1e0010">列名</span><span style="color:#f92672">=</span><span style="color:#960050;background-color:#1e0010">值表达式</span>...]
+</span></span><span style="display:flex;"><span>[WHERE条件表达式]
+</span></span></code></pre></div><h2 id="数据查询语言dql">数据查询语言（DQL）</h2>
 <p><code>SELECT</code>——查询：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> <span style="color:#960050;background-color:#1e0010">目标表的列名或列表达式序列</span>
-<span style="color:#66d9ef">FROM</span> <span style="color:#960050;background-color:#1e0010">关系名表序列</span>
-[<span style="color:#66d9ef">WHERE</span> <span style="color:#960050;background-color:#1e0010">行条件表达式</span>]
-[<span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> <span style="color:#960050;background-color:#1e0010">列名序列</span>
-[<span style="color:#66d9ef">HAVING</span> <span style="color:#960050;background-color:#1e0010">组条件表达式</span>]]
-[<span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> <span style="color:#960050;background-color:#1e0010">列名</span>[<span style="color:#66d9ef">ASC</span><span style="color:#f92672">|</span><span style="color:#66d9ef">DESC</span>]...]
-</code></pre></div><h3 id="where-条件查询">WHERE 条件查询</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> <span style="color:#960050;background-color:#1e0010">目标表的列名或列表达式序列</span>
-<span style="color:#66d9ef">FROM</span> <span style="color:#960050;background-color:#1e0010">关系名表序列</span>
-<span style="color:#66d9ef">WHERE</span> <span style="color:#960050;background-color:#1e0010">行条件表达式</span>
-</code></pre></div><p>运算符：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#960050;background-color:#1e0010">目标表的列名或列表达式序列</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#960050;background-color:#1e0010">关系名表序列</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">WHERE</span> <span style="color:#960050;background-color:#1e0010">行条件表达式</span>]
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> <span style="color:#960050;background-color:#1e0010">列名序列</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">HAVING</span> <span style="color:#960050;background-color:#1e0010">组条件表达式</span>]]
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> <span style="color:#960050;background-color:#1e0010">列名</span>[<span style="color:#66d9ef">ASC</span><span style="color:#f92672">|</span><span style="color:#66d9ef">DESC</span>]...]
+</span></span></code></pre></div><h3 id="where-条件查询">WHERE 条件查询</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#960050;background-color:#1e0010">目标表的列名或列表达式序列</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#960050;background-color:#1e0010">关系名表序列</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> <span style="color:#960050;background-color:#1e0010">行条件表达式</span>
+</span></span></code></pre></div><p>运算符：</p>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -981,10 +981,10 @@ $$</p>
 </tbody>
 </table></div>
 <p><code>LIKE</code>字符模糊配对包含以下通配符：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> <span style="color:#960050;background-color:#1e0010">目标表的列名或列表达式序列</span>
-<span style="color:#66d9ef">FROM</span> <span style="color:#960050;background-color:#1e0010">关系名表序列</span>
-WHRER <span style="color:#960050;background-color:#1e0010">列名</span> <span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#39;_ABC%&#39;</span>;
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#960050;background-color:#1e0010">目标表的列名或列表达式序列</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#960050;background-color:#1e0010">关系名表序列</span>
+</span></span><span style="display:flex;"><span>WHRER <span style="color:#960050;background-color:#1e0010">列名</span> <span style="color:#66d9ef">LIKE</span> <span style="color:#e6db74">&#39;_ABC%&#39;</span>;
+</span></span></code></pre></div><ul>
 <li><code>%</code>：表示任何字符出现任意次数。</li>
 <li><code>_</code>：表示匹配单个任意字符。</li>
 </ul>
@@ -1008,19 +1008,19 @@ WHRER <span style="color:#960050;background-color:#1e0010">列名</span> <span s
 </tr>
 </tbody>
 </table></div>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> <span style="color:#960050;background-color:#1e0010">目标表的列名或列表达式序列</span>
-<span style="color:#66d9ef">FROM</span> <span style="color:#960050;background-color:#1e0010">关系名表序列</span>
-[...]
-[<span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> <span style="color:#960050;background-color:#1e0010">列名</span> [<span style="color:#66d9ef">ASC</span><span style="color:#f92672">|</span><span style="color:#66d9ef">DESC</span>] ...]
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#960050;background-color:#1e0010">目标表的列名或列表达式序列</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#960050;background-color:#1e0010">关系名表序列</span>
+</span></span><span style="display:flex;"><span>[...]
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">ORDER</span> <span style="color:#66d9ef">BY</span> <span style="color:#960050;background-color:#1e0010">列名</span> [<span style="color:#66d9ef">ASC</span><span style="color:#f92672">|</span><span style="color:#66d9ef">DESC</span>] ...]
+</span></span></code></pre></div><blockquote>
 <p>ORDER BY子句必须是SELECT命令中的最后一个子句。</p>
 </blockquote>
 <h3 id="group-by-分组数据">GROUP BY 分组数据</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> <span style="color:#960050;background-color:#1e0010">目标表的列名或列表达式序列</span>
-<span style="color:#66d9ef">FROM</span> <span style="color:#960050;background-color:#1e0010">关系名表序列</span>
-[<span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> <span style="color:#960050;background-color:#1e0010">列名序列</span>
-[<span style="color:#66d9ef">HAVING</span> <span style="color:#960050;background-color:#1e0010">组条件表达式</span>]]
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#960050;background-color:#1e0010">目标表的列名或列表达式序列</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#960050;background-color:#1e0010">关系名表序列</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">GROUP</span> <span style="color:#66d9ef">BY</span> <span style="color:#960050;background-color:#1e0010">列名序列</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">HAVING</span> <span style="color:#960050;background-color:#1e0010">组条件表达式</span>]]
+</span></span></code></pre></div><ul>
 <li><code>HAVING</code>是<code>GROUP BY</code>的分组条件控制语句。</li>
 <li><code>HAVING</code>的操作符和<code>WHERE</code>相同。</li>
 <li>被<code>WHERE</code>过滤掉的记录并不会出现在分组中。</li>
@@ -1035,15 +1035,14 @@ WHRER <span style="color:#960050;background-color:#1e0010">列名</span> <span s
 <code>SUM</code>|计算指定表达式中的数值总和
 <code>STDEV</code>|计算指定表达式中所有数据的标准差
 <code>STDEVP</code>|计算总体标准差</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> <span style="color:#960050;background-color:#1e0010">目标表的列名或列表达式序列</span>
-<span style="color:#66d9ef">FROM</span> <span style="color:#960050;background-color:#1e0010">关系名表序列</span>
-<span style="color:#66d9ef">WHERE</span> <span style="color:#960050;background-color:#1e0010">使用了聚合函数的条件判断</span>
-[ ... ]
-</code></pre></div><p>或：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">SELECT</span> <span style="color:#960050;background-color:#1e0010">聚合函数</span>
-<span style="color:#66d9ef">FROM</span> <span style="color:#960050;background-color:#1e0010">关系名表序列</span>
-
-</code></pre></div><blockquote>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#960050;background-color:#1e0010">目标表的列名或列表达式序列</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#960050;background-color:#1e0010">关系名表序列</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">WHERE</span> <span style="color:#960050;background-color:#1e0010">使用了聚合函数的条件判断</span>
+</span></span><span style="display:flex;"><span>[ ... ]
+</span></span></code></pre></div><p>或：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#960050;background-color:#1e0010">聚合函数</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#960050;background-color:#1e0010">关系名表序列</span>
+</span></span></code></pre></div><blockquote>
 <p>聚合函数可以使用算数运算符。</p>
 <p>聚合函数常与<code>GROUP BY</code>子句一起使用。</p>
 </blockquote>
@@ -1071,11 +1070,11 @@ WHRER <span style="color:#960050;background-color:#1e0010">列名</span> <span s
 <h2 id="数据控制语言dcl">数据控制语言（DCL）</h2>
 <p>数据控制控制的是<strong>用户对数据的存储访问权力</strong>，是由DBA决定的。但是，某个用户对某类数据具有何种权利，是个<strong>政策问题</strong>而不是技术问题。</p>
 <p>授权语句格式（<code>GRANT</code>）：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">GRANT</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">权限</span><span style="color:#f92672">&gt;</span>[, <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">权限</span><span style="color:#f92672">&gt;</span>] ...
-[<span style="color:#66d9ef">ON</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">对象类型</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">对象名</span><span style="color:#f92672">&gt;</span>]
-<span style="color:#66d9ef">TO</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">用户</span><span style="color:#f92672">&gt;</span>[, <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">用户</span><span style="color:#f92672">&gt;</span>]...
-[<span style="color:#66d9ef">WITH</span> <span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">OPTION</span>];
-</code></pre></div><p>不同类型的操作对象有不同的操作权限，常见的操作权限如下：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">权限</span><span style="color:#f92672">&gt;</span>[, <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">权限</span><span style="color:#f92672">&gt;</span>] ...
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">ON</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">对象类型</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">对象名</span><span style="color:#f92672">&gt;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">TO</span><span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">用户</span><span style="color:#f92672">&gt;</span>[, <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">用户</span><span style="color:#f92672">&gt;</span>]...
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">WITH</span> <span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">OPTION</span>];
+</span></span></code></pre></div><p>不同类型的操作对象有不同的操作权限，常见的操作权限如下：</p>
 <div class="table-wrapper"><table>
 <thead>
 <tr>
@@ -1112,24 +1111,24 @@ WHRER <span style="color:#960050;background-color:#1e0010">列名</span> <span s
 <li><code>WITH GRANT OPTION</code>：表示获得了这些权限的用户还可以将权限赋给其他用户。</li>
 </ul>
 <p>收回权限语句格式（<code>REVOKE</code>）：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">REVOKE</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">权限</span><span style="color:#f92672">&gt;</span>[, <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">权限</span><span style="color:#f92672">&gt;</span>]...
-[<span style="color:#66d9ef">ON</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">对象类型</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">对象名</span><span style="color:#f92672">&gt;</span>]
-<span style="color:#66d9ef">FROM</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">用户</span><span style="color:#f92672">&gt;</span>[, <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">用户</span><span style="color:#f92672">&gt;</span>];
-</code></pre></div><h2 id="视图">视图</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">REVOKE</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">权限</span><span style="color:#f92672">&gt;</span>[, <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">权限</span><span style="color:#f92672">&gt;</span>]...
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">ON</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">对象类型</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">对象名</span><span style="color:#f92672">&gt;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">FROM</span> <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">用户</span><span style="color:#f92672">&gt;</span>[, <span style="color:#f92672">&lt;</span><span style="color:#960050;background-color:#1e0010">用户</span><span style="color:#f92672">&gt;</span>];
+</span></span></code></pre></div><h2 id="视图">视图</h2>
 <p>视图是从一个或者多个基本表或视图中导出的虚拟表。</p>
 <p>创建视图：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">VIEW</span> <span style="color:#960050;background-color:#1e0010">视图名</span> (<span style="color:#960050;background-color:#1e0010">列表名</span>) <span style="color:#66d9ef">AS</span>
-<span style="color:#66d9ef">SELECT</span> <span style="color:#960050;background-color:#1e0010">查询子句</span>
-[<span style="color:#66d9ef">WITH</span> <span style="color:#66d9ef">CHECK</span> <span style="color:#66d9ef">OPTION</span>];
-</code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">VIEW</span> <span style="color:#960050;background-color:#1e0010">视图名</span> (<span style="color:#960050;background-color:#1e0010">列表名</span>) <span style="color:#66d9ef">AS</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SELECT</span> <span style="color:#960050;background-color:#1e0010">查询子句</span>
+</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">WITH</span> <span style="color:#66d9ef">CHECK</span> <span style="color:#66d9ef">OPTION</span>];
+</span></span></code></pre></div><ul>
 <li>子查询可以是任意复杂的<code>SELECT</code>语句，但通常不允许含有<code>ORDER BY</code>子句和<code>DISTINCT</code>短语。</li>
 <li><code>WITH CHECK OPTION</code>：表示对<code>UPDATE</code>、<code>INSERT</code>、<code>DELETE</code>操作时保证更新、插入或删除的行满足视图定义中的谓词条件（即子查询中的条件表达式）。</li>
 <li>组成视图的属性列名或者全部省略或者全部指定。如果省略属性列名，则隐含该视图由<code>SELECT</code>子查询目标列的主属性组成。</li>
 <li>对视图进行的增改操作实际上是对基本表进行操作。</li>
 </ul>
 <p>删除视图：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sql" data-lang="sql"><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">VIEW</span> <span style="color:#960050;background-color:#1e0010">视图名</span>;
-</code></pre></div><h2 id="索引">索引</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">DROP</span> <span style="color:#66d9ef">VIEW</span> <span style="color:#960050;background-color:#1e0010">视图名</span>;
+</span></span></code></pre></div><h2 id="索引">索引</h2>
 <p>数据库中的索引是<u>某个表中一列或者若干列值的集合</u>和<u>相应的指向表中物理标识这些值的数据页的逻辑指针清单</u>。</p>
 <p>索引分为：</p>
 <ul>
@@ -1175,7 +1174,7 @@ WHRER <span style="color:#960050;background-color:#1e0010">列名</span> <span s
 <p>例如，$学号 \subset (学号,课程号)$，则$(学号,课程号) \rightarrow 学号$是一个平凡的函数依赖。</p>
 </li>
 <li>
-<p><strong>完全函数依赖</strong>：在R(U)中，如果$X \rightarrow Y$，并且对于X的任何一个真子集$X'$都有**$X'$不能决定$Y$**，则称$Y$对$X$完全函数依赖，记作$X \stackrel{f}{\longrightarrow} Y$。</p>
+<p><strong>完全函数依赖</strong>：在R(U)中，如果$X \rightarrow Y$，并且对于X的任何一个真子集$X&rsquo;$都有**$X&rsquo;$不能决定$Y$**，则称$Y$对$X$完全函数依赖，记作$X \stackrel{f}{\longrightarrow} Y$。</p>
 <p>即需要由$X$的所有属性才能决定$Y$的，才能称为完全函数依赖。</p>
 <p>如，$(学号,课程号) \rightarrow 成绩$。</p>
 <p>如果$X$仅包含一个属性，那么此时必为完全函数依赖。</p>
@@ -1189,7 +1188,7 @@ WHRER <span style="color:#960050;background-color:#1e0010">列名</span> <span s
 <p>即$X \stackrel{f}{\longrightarrow} Y$，且$Y \rightarrow Z$，则$X \rightarrow Z$。</p>
 </li>
 <li>
-<p><strong>码</strong>：设$K$为$R(U,F)$中属性的组合，若$K \rightarrow U$，且对于$K$的任何一个真子集$K'$都有$K'$不能决定$U$，则$K$为$R$的候选码。</p>
+<p><strong>码</strong>：设$K$为$R(U,F)$中属性的组合，若$K \rightarrow U$，且对于$K$的任何一个真子集$K&rsquo;$都有$K&rsquo;$不能决定$U$，则$K$为$R$的候选码。</p>
 <p>即$K \stackrel{f}{\rightarrow} U$，那么K是R的候选码。</p>
 <p>若有多个候选码，则选一个作为主码（主键，主关键字）。候选码通常也称为<strong>候选关键字</strong>（候选键，键）。</p>
 </li>
@@ -1251,7 +1250,7 @@ WHRER <span style="color:#960050;background-color:#1e0010">列名</span> <span s
 </tr>
 <tr>
 <td style="text-align:center">完全函数依赖</td>
-<td style="text-align:left">$X \rightarrow Y$，$X' \subset X$，$X' \not\rightarrow Y$</td>
+<td style="text-align:left">$X \rightarrow Y$，$X&rsquo; \subset X$，$X&rsquo; \not\rightarrow Y$</td>
 <td style="text-align:left">$Y$对$X$完全函数依赖，记作$X \stackrel{f}{\longrightarrow} Y$</td>
 </tr>
 <tr>
