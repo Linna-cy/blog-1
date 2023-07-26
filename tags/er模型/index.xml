@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>ER模型 on Linner&#39;s Blog</title>
-        <link>https://blog.linner.asia/tags/er%E6%A8%A1%E5%9E%8B/</link>
+        <link>https://blog1.linner.asia/tags/er%E6%A8%A1%E5%9E%8B/</link>
         <description>Recent content in ER模型 on Linner&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
-        <lastBuildDate>Sat, 22 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.linner.asia/tags/er%E6%A8%A1%E5%9E%8B/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 22 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://blog1.linner.asia/tags/er%E6%A8%A1%E5%9E%8B/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>数据库篇</title>
-        <link>https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/</link>
+        <link>https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/</link>
         <pubDate>Sat, 22 Apr 2023 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/</guid>
+        <guid>https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/</guid>
         <description>&lt;h1 id=&#34;数据库体系结构&#34;&gt;数据库体系结构&lt;/h1&gt;
 &lt;p&gt;数据描述有两种形式：&lt;/p&gt;
 &lt;ul&gt;
@@ -20,10 +20,10 @@
 &lt;/ul&gt;
 &lt;h2 id=&#34;三级模式结构&#34;&gt;三级模式结构&lt;/h2&gt;
 &lt;p&gt;实际上有许多不同的数据库产品，但它们的体系结构基本上都具有相同的特征，采用“三级模式和两级映像”：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681373319410.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681373319410.png&#34;
 	width=&#34;486&#34;
 	height=&#34;377&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681373319410_hu9b9f67605df5247fa6ccd5bd0d000f11_51804_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681373319410_hu9b9f67605df5247fa6ccd5bd0d000f11_51804_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681373319410_hu9b9f67605df5247fa6ccd5bd0d000f11_51804_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681373319410_hu9b9f67605df5247fa6ccd5bd0d000f11_51804_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;三级模式两级映像&#34;
@@ -128,10 +128,10 @@
 &lt;li&gt;&lt;strong&gt;属性&lt;/strong&gt;：用&lt;strong&gt;椭圆形&lt;/strong&gt;表示，并用无向边将其与相应的实体连接起来；&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;联系&lt;/strong&gt;：用&lt;strong&gt;菱形&lt;/strong&gt;表示，菱形框内写明联系名，并用无向边将其分别与有关实体连接起来，同时在无向边旁标上联系的类型。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681289395117.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681289395117.png&#34;
 	width=&#34;240&#34;
 	height=&#34;242&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681289395117_hube981d9754c37a567c83a04aad71de33_18088_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681289395117_hube981d9754c37a567c83a04aad71de33_18088_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681289395117_hube981d9754c37a567c83a04aad71de33_18088_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681289395117_hube981d9754c37a567c83a04aad71de33_18088_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;E-R图示例&#34;
@@ -237,10 +237,10 @@
 &lt;li&gt;域关系演算语言。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;关系代数运算符有4类：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681431891302.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681431891302.png&#34;
 	width=&#34;735&#34;
 	height=&#34;301&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681431891302_hu474e5e1683bfce1832772e13dcf3cc90_42174_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681431891302_hu474e5e1683bfce1832772e13dcf3cc90_42174_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681431891302_hu474e5e1683bfce1832772e13dcf3cc90_42174_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681431891302_hu474e5e1683bfce1832772e13dcf3cc90_42174_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;关系代数运算符&#34;
@@ -414,10 +414,10 @@ $$&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;全外连接&lt;/strong&gt;（Full Outer Jion，⟗）。完成左外连接和右外连接的操作。即填充左侧关系中所有与右侧关系中任一元组都不匹配的元组，并填充右侧关系中所有与左侧关系中任一元组都不匹配的元组，将产生的新元组加入自然连接的结果中。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681454087063.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681454087063.png&#34;
 	width=&#34;762&#34;
 	height=&#34;575&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681454087063_hud13edc09469e2a4b2eff4fd4a8bf7c0a_99173_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681454087063_hud13edc09469e2a4b2eff4fd4a8bf7c0a_99173_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681454087063_hud13edc09469e2a4b2eff4fd4a8bf7c0a_99173_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681454087063_hud13edc09469e2a4b2eff4fd4a8bf7c0a_99173_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1263,10 +1263,10 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;则$X \rightarrow\rightarrow Y$为平凡的多值依赖。&lt;/p&gt;
 &lt;p&gt;例如，课程$\rightarrow\rightarrow$任课老师，课程$\rightarrow\rightarrow$参考书。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681986736869.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681986736869.png&#34;
 	width=&#34;401&#34;
 	height=&#34;168&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681986736869_hub94b74037a183c6a89e4bcd8421bb42f_31992_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681986736869_hub94b74037a183c6a89e4bcd8421bb42f_31992_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681986736869_hub94b74037a183c6a89e4bcd8421bb42f_31992_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681986736869_hub94b74037a183c6a89e4bcd8421bb42f_31992_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;多值依赖表示例&#34;
@@ -1289,10 +1289,10 @@ $$&lt;/p&gt;
 &lt;p&gt;$$
 5NF \sub 4NF \sub BCNF \sub 3NF \sub 2NF \sub 1NF
 $$&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681894653450.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681894653450.png&#34;
 	width=&#34;564&#34;
 	height=&#34;309&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681894653450_hufd0c331a204cb2191b602cbf89c9254e_19807_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681894653450_hufd0c331a204cb2191b602cbf89c9254e_19807_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681894653450_hufd0c331a204cb2191b602cbf89c9254e_19807_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681894653450_hufd0c331a204cb2191b602cbf89c9254e_19807_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;规范化范式的包含关系&#34;
@@ -1335,10 +1335,10 @@ $$&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681988070233.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681988070233.png&#34;
 	width=&#34;288&#34;
 	height=&#34;303&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681988070233_huc82f8c088bb0c067181a613d8b65e62c_36441_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681988070233_huc82f8c088bb0c067181a613d8b65e62c_36441_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681988070233_huc82f8c088bb0c067181a613d8b65e62c_36441_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1681988070233_huc82f8c088bb0c067181a613d8b65e62c_36441_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;规范化步骤&#34;
@@ -1400,10 +1400,10 @@ $$&lt;/p&gt;
 &lt;li&gt;数据库实施&lt;/li&gt;
 &lt;li&gt;数据库运行和维护&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682505975157.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682505975157.png&#34;
 	width=&#34;382&#34;
 	height=&#34;711&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682505975157_hu7950d0a7bbf6248186699719c01d30ad_79693_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682505975157_hu7950d0a7bbf6248186699719c01d30ad_79693_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682505975157_hu7950d0a7bbf6248186699719c01d30ad_79693_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682505975157_hu7950d0a7bbf6248186699719c01d30ad_79693_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;数据库设计步骤&#34;
@@ -1438,10 +1438,10 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;u&gt;系统需求说明书是需求分析阶段的成果&lt;/u&gt;，主要包括&lt;u&gt;数据流图&lt;/u&gt;、&lt;u&gt;数据字典&lt;/u&gt;、&lt;u&gt;各种说明性表格&lt;/u&gt;、&lt;u&gt;统计输出表和系统功能结构图&lt;/u&gt;等。&lt;/p&gt;
 &lt;p&gt;需求分析阶段的工作：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682560887456.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682560887456.png&#34;
 	width=&#34;646&#34;
 	height=&#34;291&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682560887456_hub24d924f6ecdb59b0c05cde9f6a94c8c_58795_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682560887456_hub24d924f6ecdb59b0c05cde9f6a94c8c_58795_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682560887456_hub24d924f6ecdb59b0c05cde9f6a94c8c_58795_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682560887456_hub24d924f6ecdb59b0c05cde9f6a94c8c_58795_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;需求分析阶段的工作步骤&#34;
@@ -1468,10 +1468,10 @@ $$&lt;/p&gt;
 &lt;li&gt;概括&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;局部视图设计就是对某个局部应用设计其分一R图，也称局部E-R图。其基本步骤如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682560993863.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682560993863.png&#34;
 	width=&#34;717&#34;
 	height=&#34;341&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682560993863_huf62446c235f8abd7d4a5d741b96b438b_65906_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682560993863_huf62446c235f8abd7d4a5d741b96b438b_65906_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682560993863_huf62446c235f8abd7d4a5d741b96b438b_65906_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682560993863_huf62446c235f8abd7d4a5d741b96b438b_65906_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;概念结构设计的工作步骤&#34;
@@ -1535,10 +1535,10 @@ $$&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;strong&gt;特殊化&lt;/strong&gt;：将一个实体集&lt;u&gt;按照某些特性区分为几个&lt;strong&gt;子实体&lt;/strong&gt;&lt;/u&gt;。这种从普遍到特殊的过程即为特殊化。&lt;/p&gt;
 &lt;p&gt;子实体的图形表示如下：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1684564987147.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1684564987147.png&#34;
 	width=&#34;256&#34;
 	height=&#34;145&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1684564987147_huad14f3e1152e9df0e94e04c64131c1cf_1087_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1684564987147_huad14f3e1152e9df0e94e04c64131c1cf_1087_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1684564987147_huad14f3e1152e9df0e94e04c64131c1cf_1087_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1684564987147_huad14f3e1152e9df0e94e04c64131c1cf_1087_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;子实体&#34;
@@ -1553,10 +1553,10 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;E-R图中的主要构件（包含扩充的E-R模型成分）：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682508598814.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682508598814.png&#34;
 	width=&#34;1035&#34;
 	height=&#34;391&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682508598814_hub0bc3034b48557bb84109435ab8e458e_191424_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682508598814_hub0bc3034b48557bb84109435ab8e458e_191424_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682508598814_hub0bc3034b48557bb84109435ab8e458e_191424_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682508598814_hub0bc3034b48557bb84109435ab8e458e_191424_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;E-R图中的主要构件&#34;
@@ -1599,10 +1599,10 @@ $$&lt;/p&gt;
 &lt;p&gt;逻辑结构设计就是在概念结构设计的基础上进行数据模型设计，可以是层次模型、网状模型和关系模型。&lt;/p&gt;
 &lt;p&gt;通常是把概念模型转换成为&lt;u&gt;某个具体的数据库管理系统所支持的结构数据模型&lt;/u&gt;（与DBMS有关）。即，将概念结构设计所得的E-R模型转换成关系模式。&lt;/p&gt;
 &lt;p&gt;逻辑结构设计的工作步骤：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682577339219.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682577339219.png&#34;
 	width=&#34;581&#34;
 	height=&#34;296&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682577339219_hu0e28af6a5a7453a0a5eb6666d48c94c7_44563_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682577339219_hu0e28af6a5a7453a0a5eb6666d48c94c7_44563_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682577339219_hu0e28af6a5a7453a0a5eb6666d48c94c7_44563_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682577339219_hu0e28af6a5a7453a0a5eb6666d48c94c7_44563_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;逻辑结构设计的工作步骤&#34;
@@ -1642,10 +1642,10 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;例如：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682562445900.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682562445900.png&#34;
 	width=&#34;304&#34;
 	height=&#34;358&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682562445900_hu39b33fe28157809884f3b45df834a34e_28041_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682562445900_hu39b33fe28157809884f3b45df834a34e_28041_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682562445900_hu39b33fe28157809884f3b45df834a34e_28041_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682562445900_hu39b33fe28157809884f3b45df834a34e_28041_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;联系向关系模式的转换示例&#34;
@@ -1681,10 +1681,10 @@ $$&lt;/p&gt;
 &lt;li&gt;方式2（一般使用该方式）：将联系&lt;u&gt;归并到关联的两个实体的多方&lt;/u&gt;，给待归并的多方实体属性集中增加一方实体的码和该联系的属性即可，归并后的多方实体码保持不变。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;例如：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682563544291.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682563544291.png&#34;
 	width=&#34;315&#34;
 	height=&#34;361&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682563544291_hue1cce8af0395e2bd704f6df0a3e3321e_30915_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682563544291_hue1cce8af0395e2bd704f6df0a3e3321e_30915_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682563544291_hue1cce8af0395e2bd704f6df0a3e3321e_30915_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682563544291_hue1cce8af0395e2bd704f6df0a3e3321e_30915_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;一对多联系转换的例子&#34;
@@ -1713,10 +1713,10 @@ $$&lt;/p&gt;
 &lt;p&gt;多对多联系的转换：&lt;/p&gt;
 &lt;p&gt;多对多联系只能转换成一个独立的关系模式，关系模式的名称取联系的名称，关系模式的属性取该联系所关联的两个多方实体的码及联系的属性，关系的码是多方实体的码构成的属性组。&lt;/p&gt;
 &lt;p&gt;例如：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682564018777.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682564018777.png&#34;
 	width=&#34;327&#34;
 	height=&#34;373&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682564018777_hu8cf40dc2a076405a9cb5ca4646519d5e_36334_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682564018777_hu8cf40dc2a076405a9cb5ca4646519d5e_36334_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682564018777_hu8cf40dc2a076405a9cb5ca4646519d5e_36334_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AF%87/uTools_1682564018777_hu8cf40dc2a076405a9cb5ca4646519d5e_36334_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;多对多联系转换的示例&#34;

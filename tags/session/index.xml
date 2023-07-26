@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Session on Linner&#39;s Blog</title>
-        <link>https://blog.linner.asia/tags/session/</link>
+        <link>https://blog1.linner.asia/tags/session/</link>
         <description>Recent content in Session on Linner&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
-        <lastBuildDate>Fri, 23 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog.linner.asia/tags/session/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 23 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blog1.linner.asia/tags/session/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>会话跟踪技术 Cookie 和 Session</title>
-        <link>https://blog.linner.asia/p/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF-cookie-%E5%92%8C-session/</link>
+        <link>https://blog1.linner.asia/p/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF-cookie-%E5%92%8C-session/</link>
         <pubDate>Fri, 23 Sep 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.linner.asia/p/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF-cookie-%E5%92%8C-session/</guid>
+        <guid>https://blog1.linner.asia/p/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF-cookie-%E5%92%8C-session/</guid>
         <description>&lt;h1 id=&#34;会话跟踪技术&#34;&gt;会话跟踪技术&lt;/h1&gt;
 &lt;p&gt;会话是指一个终端用户与交互系统进行通讯的过程，例如从浏览器发出请求到服务端响应数据给前端这个过程即为一个会话。&lt;/p&gt;
 &lt;p&gt;会话跟踪指的是一种维护浏览器状态的方法。服务器会收到多个请求，这多个请求可能来自多个浏览器。服务器需要识别多次请求是否来自于同一浏览器，以便在同一次会话的多次请求间共享数据。&lt;/p&gt;

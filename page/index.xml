@@ -2,41 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Pages on Linner&#39;s Blog</title>
-        <link>https://blog.linner.asia/page/</link>
+        <link>https://blog1.linner.asia/page/</link>
         <description>Recent content in Pages on Linner&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
-        <lastBuildDate>Fri, 02 Sep 2022 16:04:59 +0000</lastBuildDate><atom:link href="https://blog.linner.asia/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 02 Sep 2022 16:04:59 +0000</lastBuildDate><atom:link href="https://blog1.linner.asia/page/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>关于</title>
-        <link>https://blog.linner.asia/%E5%85%B3%E4%BA%8E/</link>
+        <link>https://blog1.linner.asia/%E5%85%B3%E4%BA%8E/</link>
         <pubDate>Fri, 02 Sep 2022 16:04:59 +0000</pubDate>
         
-        <guid>https://blog.linner.asia/%E5%85%B3%E4%BA%8E/</guid>
-        <description>&lt;p&gt;大三在校生，目前就读广州工商学院，软件工程专业。以下是与我或本站有关的链接。&lt;/p&gt;
+        <guid>https://blog1.linner.asia/%E5%85%B3%E4%BA%8E/</guid>
+        <description>&lt;p&gt;当前博客网站已停止更新，请浏览下方链接访问新版博客网站。&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>归档</title>
-        <link>https://blog.linner.asia/archives/</link>
+        <link>https://blog1.linner.asia/archives/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.linner.asia/archives/</guid>
+        <guid>https://blog1.linner.asia/archives/</guid>
         <description></description>
         </item>
         <item>
         <title>链接</title>
-        <link>https://blog.linner.asia/%E9%93%BE%E6%8E%A5/</link>
+        <link>https://blog1.linner.asia/%E9%93%BE%E6%8E%A5/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.linner.asia/%E9%93%BE%E6%8E%A5/</guid>
+        <guid>https://blog1.linner.asia/%E9%93%BE%E6%8E%A5/</guid>
         <description></description>
         </item>
         <item>
         <title>搜索</title>
-        <link>https://blog.linner.asia/search/</link>
+        <link>https://blog1.linner.asia/search/</link>
         <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.linner.asia/search/</guid>
+        <guid>https://blog1.linner.asia/search/</guid>
         <description></description>
         </item>
         

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>信息安全 on Linner&#39;s Blog</title>
-        <link>https://blog.linner.asia/tags/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/</link>
+        <link>https://blog1.linner.asia/tags/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/</link>
         <description>Recent content in 信息安全 on Linner&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
-        <lastBuildDate>Fri, 12 May 2023 06:01:08 +0000</lastBuildDate><atom:link href="https://blog.linner.asia/tags/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 12 May 2023 06:01:08 +0000</lastBuildDate><atom:link href="https://blog1.linner.asia/tags/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>计算机网络篇</title>
-        <link>https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/</link>
+        <link>https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/</link>
         <pubDate>Fri, 12 May 2023 06:01:08 +0000</pubDate>
         
-        <guid>https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/</guid>
+        <guid>https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/</guid>
         <description>&lt;h1 id=&#34;网络概述&#34;&gt;网络概述&lt;/h1&gt;
 &lt;p&gt;计算机网络是计算机技术与通信技术相结合的产物，它实现了远程通信、远程信息处理和资源共享。现代计算机网络已具有统一的网络体系结构。&lt;/p&gt;
 &lt;p&gt;计算机网络提供的主要功能有：&lt;/p&gt;
@@ -155,10 +155,10 @@
 &lt;/table&gt;
 &lt;h2 id=&#34;isoosi-网络体系结构&#34;&gt;ISO/OSI 网络体系结构&lt;/h2&gt;
 &lt;p&gt;ISO/OSI的参考模型共有7层：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875696461.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875696461.png&#34;
 	width=&#34;390&#34;
 	height=&#34;339&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875696461_hu39205de4aab8f3d4638771bbe2a09e98_32206_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875696461_hu39205de4aab8f3d4638771bbe2a09e98_32206_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875696461_hu39205de4aab8f3d4638771bbe2a09e98_32206_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875696461_hu39205de4aab8f3d4638771bbe2a09e98_32206_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;OSI 参考模型&#34;
@@ -207,10 +207,10 @@
 &lt;p&gt;最后把原数据展示给用户。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683877150679.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683877150679.png&#34;
 	width=&#34;724&#34;
 	height=&#34;404&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683877150679_hu64c4f9fea840087facedf4dd79f952ea_77141_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683877150679_hu64c4f9fea840087facedf4dd79f952ea_77141_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683877150679_hu64c4f9fea840087facedf4dd79f952ea_77141_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683877150679_hu64c4f9fea840087facedf4dd79f952ea_77141_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;ISO/OSI RM 内信息流动&#34;
@@ -230,10 +230,10 @@
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;总线型结构：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875429976.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875429976.png&#34;
 	width=&#34;223&#34;
 	height=&#34;139&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875429976_hu5b093505ed802d7d1a1c5817591c0eaa_1389_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875429976_hu5b093505ed802d7d1a1c5817591c0eaa_1389_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875429976_hu5b093505ed802d7d1a1c5817591c0eaa_1389_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875429976_hu5b093505ed802d7d1a1c5817591c0eaa_1389_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;总线型结构&#34;
@@ -247,10 +247,10 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;星型结构：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875460651.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875460651.png&#34;
 	width=&#34;198&#34;
 	height=&#34;164&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875460651_hu8efe65f8b46b3e28417b2693def45240_4232_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875460651_hu8efe65f8b46b3e28417b2693def45240_4232_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875460651_hu8efe65f8b46b3e28417b2693def45240_4232_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875460651_hu8efe65f8b46b3e28417b2693def45240_4232_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;星型结构&#34;
@@ -264,10 +264,10 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;环型结构：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875485913.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875485913.png&#34;
 	width=&#34;166&#34;
 	height=&#34;157&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875485913_huac7b91d4a6d672465402bf6e2160e44f_4244_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875485913_huac7b91d4a6d672465402bf6e2160e44f_4244_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875485913_huac7b91d4a6d672465402bf6e2160e44f_4244_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875485913_huac7b91d4a6d672465402bf6e2160e44f_4244_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;环型结构&#34;
@@ -281,10 +281,10 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;树型结构：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875508387.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875508387.png&#34;
 	width=&#34;184&#34;
 	height=&#34;141&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875508387_hua92772052d44a07e8f2401ed8c07dfa6_1740_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875508387_hua92772052d44a07e8f2401ed8c07dfa6_1740_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875508387_hua92772052d44a07e8f2401ed8c07dfa6_1740_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875508387_hua92772052d44a07e8f2401ed8c07dfa6_1740_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;树型结构&#34;
@@ -298,10 +298,10 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;分布式结构：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875530047.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875530047.png&#34;
 	width=&#34;164&#34;
 	height=&#34;138&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875530047_hu4467481de8ae2f8fd02cecbf5efa7b7b_5249_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875530047_hu4467481de8ae2f8fd02cecbf5efa7b7b_5249_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875530047_hu4467481de8ae2f8fd02cecbf5efa7b7b_5249_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683875530047_hu4467481de8ae2f8fd02cecbf5efa7b7b_5249_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;分布式结构&#34;
@@ -346,10 +346,10 @@
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;网络层设备：路由器（Router）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683956321797.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683956321797.png&#34;
 	width=&#34;554&#34;
 	height=&#34;235&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683956321797_hu561f5310d4335c386da88596021542b0_86791_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683956321797_hu561f5310d4335c386da88596021542b0_86791_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683956321797_hu561f5310d4335c386da88596021542b0_86791_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683956321797_hu561f5310d4335c386da88596021542b0_86791_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;路由器类型&#34;
@@ -360,10 +360,10 @@
 		data-flex-basis=&#34;565px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683956407885.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683956407885.png&#34;
 	width=&#34;554&#34;
 	height=&#34;163&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683956407885_hu10ca2431c18c804496582fc4c7f1a0a5_39421_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683956407885_hu10ca2431c18c804496582fc4c7f1a0a5_39421_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683956407885_hu10ca2431c18c804496582fc4c7f1a0a5_39421_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683956407885_hu10ca2431c18c804496582fc4c7f1a0a5_39421_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;各种路由来源的管理距离&#34;
@@ -469,10 +469,10 @@
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683879193227.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683879193227.png&#34;
 	width=&#34;397&#34;
 	height=&#34;252&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683879193227_hu88c8e8da15a4cc0b1b209d5e372c6435_32953_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683879193227_hu88c8e8da15a4cc0b1b209d5e372c6435_32953_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683879193227_hu88c8e8da15a4cc0b1b209d5e372c6435_32953_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683879193227_hu88c8e8da15a4cc0b1b209d5e372c6435_32953_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;LAN 层次与 ISO/OSI RM 的对应关系&#34;
@@ -551,10 +551,10 @@
 &lt;li&gt;网际层&lt;/li&gt;
 &lt;li&gt;网络接口层&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683880948768.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683880948768.png&#34;
 	width=&#34;697&#34;
 	height=&#34;339&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683880948768_huf85223c878afcabc7c687de01d9badd5_93199_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683880948768_huf85223c878afcabc7c687de01d9badd5_93199_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683880948768_huf85223c878afcabc7c687de01d9badd5_93199_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683880948768_huf85223c878afcabc7c687de01d9badd5_93199_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;TCP/IP 模型于 OSI 模型的对比&#34;
@@ -669,10 +669,10 @@
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;主机名.本地名.组名.最高层域名
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;也可以理解为：&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;主机名.域名.域名后缀.域名分类
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683894526429.png&#34;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683894526429.png&#34;
 	width=&#34;554&#34;
 	height=&#34;180&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683894526429_hu6282ff5faa954c949385bb63ae9b2c04_25931_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683894526429_hu6282ff5faa954c949385bb63ae9b2c04_25931_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683894526429_hu6282ff5faa954c949385bb63ae9b2c04_25931_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683894526429_hu6282ff5faa954c949385bb63ae9b2c04_25931_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;域名分类及其含义&#34;
@@ -700,10 +700,10 @@
 &lt;/blockquote&gt;
 &lt;h3 id=&#34;ipv4&#34;&gt;IPv4&lt;/h3&gt;
 &lt;p&gt;每个IPv4地址都由4个小于256的数字组成（每个数字8位，共32位），数字之间用&lt;code&gt;.&lt;/code&gt;分开，可分为5类：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683896541328.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683896541328.png&#34;
 	width=&#34;484&#34;
 	height=&#34;412&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683896541328_hu1b653364ebbdf1e76eb9cf18be092964_53037_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683896541328_hu1b653364ebbdf1e76eb9cf18be092964_53037_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683896541328_hu1b653364ebbdf1e76eb9cf18be092964_53037_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683896541328_hu1b653364ebbdf1e76eb9cf18be092964_53037_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;IPv4各类地址分配方案&#34;
@@ -726,10 +726,10 @@ $$&lt;/p&gt;
 &lt;li&gt;所有对应网络号的部分用&lt;code&gt;1&lt;/code&gt;填上；&lt;/li&gt;
 &lt;li&gt;所有对应主机号的部分用&lt;code&gt;0&lt;/code&gt;填上。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683897195900.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683897195900.png&#34;
 	width=&#34;912&#34;
 	height=&#34;144&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683897195900_hue345962bd6503581635d067a0b6e714b_38818_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683897195900_hue345962bd6503581635d067a0b6e714b_38818_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683897195900_hue345962bd6503581635d067a0b6e714b_38818_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AF%87/uTools_1683897195900_hue345962bd6503581635d067a0b6e714b_38818_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;IP地址类默认的子网掩码&#34;

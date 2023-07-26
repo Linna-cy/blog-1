@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>C on Linner&#39;s Blog</title>
-        <link>https://blog.linner.asia/tags/c/</link>
+        <link>https://blog1.linner.asia/tags/c/</link>
         <description>Recent content in C on Linner&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
-        <lastBuildDate>Sun, 27 Feb 2022 14:44:00 +0000</lastBuildDate><atom:link href="https://blog.linner.asia/tags/c/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 27 Feb 2022 14:44:00 +0000</lastBuildDate><atom:link href="https://blog1.linner.asia/tags/c/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>经典查找算法</title>
-        <link>https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/</link>
+        <link>https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/</link>
         <pubDate>Sun, 27 Feb 2022 14:44:00 +0000</pubDate>
         
-        <guid>https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/</guid>
+        <guid>https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/</guid>
         <description>&lt;h1 id=&#34;二分查找&#34;&gt;二分查找&lt;/h1&gt;
 &lt;p&gt;二分查找又叫折半查找，是在有序列表的基础上进行查找，每次查找可以筛掉一半的元素。&lt;/p&gt;
 &lt;h2 id=&#34;算法步骤&#34;&gt;算法步骤&lt;/h2&gt;
@@ -427,10 +427,10 @@ $$&lt;/p&gt;
 &lt;p&gt;其中$RH$就是不同的散列函数，这些散列函数可以是任何散列函数。只要其中一个发生了冲突，就马上换一个散列函数，直到冲突解决。缺点就是增加了很多计算时间。&lt;/p&gt;
 &lt;h4 id=&#34;链地址法&#34;&gt;链地址法&lt;/h4&gt;
 &lt;p&gt;链地址法就是当冲突发生时，用链表来存放同义词（即存放在当前位置，每个位置使用链表存放同义词）。这个思路和图的邻接表存储方式很相似。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/20170329114036533_Gh2zPBSsES.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/20170329114036533_Gh2zPBSsES.jpg&#34;
 	width=&#34;314&#34;
 	height=&#34;294&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/20170329114036533_Gh2zPBSsES_hu1a250fcdd0b1e0254be091a55c8b922f_27872_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/20170329114036533_Gh2zPBSsES_hu1a250fcdd0b1e0254be091a55c8b922f_27872_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/20170329114036533_Gh2zPBSsES_hu1a250fcdd0b1e0254be091a55c8b922f_27872_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/20170329114036533_Gh2zPBSsES_hu1a250fcdd0b1e0254be091a55c8b922f_27872_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -441,10 +441,10 @@ $$&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;h4 id=&#34;公共溢出区法&#34;&gt;公共溢出区法&lt;/h4&gt;
 &lt;p&gt;公共溢出区法就是把那些冲突的元素直接追加到另外一个溢出表中，如下图所示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/20170329114409113__GJU2mNyy2.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/20170329114409113__GJU2mNyy2.png&#34;
 	width=&#34;743&#34;
 	height=&#34;721&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/20170329114409113__GJU2mNyy2_hu9299358ca7e231ad79444e6a1566af94_190904_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/20170329114409113__GJU2mNyy2_hu9299358ca7e231ad79444e6a1566af94_190904_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/20170329114409113__GJU2mNyy2_hu9299358ca7e231ad79444e6a1566af94_190904_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%9F%A5%E6%89%BE%E7%AE%97%E6%B3%95/20170329114409113__GJU2mNyy2_hu9299358ca7e231ad79444e6a1566af94_190904_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -502,10 +502,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>经典字符串匹配</title>
-        <link>https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D/</link>
+        <link>https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D/</link>
         <pubDate>Fri, 21 Jan 2022 00:15:00 +0000</pubDate>
         
-        <guid>https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D/</guid>
+        <guid>https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%8C%B9%E9%85%8D/</guid>
         <description>&lt;h1 id=&#34;经典字符串匹配&#34;&gt;经典字符串匹配&lt;/h1&gt;
 &lt;h1 id=&#34;bf暴力匹配算法&#34;&gt;BF暴力匹配算法&lt;/h1&gt;
 &lt;p&gt;暴力匹配，即Brute Force，简称BF算法。BF算法是一种简单朴素的模式匹配算法，常用于在一个主串S内查找一个子串T的出现位置。&lt;/p&gt;
@@ -868,10 +868,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>两数交换算法</title>
-        <link>https://blog.linner.asia/p/%E4%B8%A4%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%AE%97%E6%B3%95/</link>
+        <link>https://blog1.linner.asia/p/%E4%B8%A4%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%AE%97%E6%B3%95/</link>
         <pubDate>Sun, 16 Jan 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.linner.asia/p/%E4%B8%A4%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%AE%97%E6%B3%95/</guid>
+        <guid>https://blog1.linner.asia/p/%E4%B8%A4%E6%95%B0%E4%BA%A4%E6%8D%A2%E7%AE%97%E6%B3%95/</guid>
         <description>&lt;h1 id=&#34;临时变量&#34;&gt;临时变量&lt;/h1&gt;
 &lt;p&gt;通过建立一个临时变量来实现两数交换：&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;swap&lt;/span&gt;(x, y):
@@ -937,10 +937,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>经典排序算法</title>
-        <link>https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</link>
+        <link>https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</link>
         <pubDate>Wed, 12 Jan 2022 00:00:00 +0000</pubDate>
         
-        <guid>https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</guid>
+        <guid>https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/</guid>
         <description>&lt;h1 id=&#34;冒泡排序&#34;&gt;冒泡排序&lt;/h1&gt;
 &lt;p&gt;冒泡排序（Bubble Sort）是一种简单直观的排序算法。&lt;/p&gt;
 &lt;p&gt;这个算法的名字由来是因为越小的元素会经由交换慢慢“浮”到数列的顶端。&lt;/p&gt;
@@ -960,10 +960,10 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;动画演示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172310783.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172310783.gif&#34;
 	width=&#34;826&#34;
 	height=&#34;257&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172310783_hu44ec8ae7602585df8c248482d5b77337_351100_480x0_resize_box.gif 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172310783_hu44ec8ae7602585df8c248482d5b77337_351100_1024x0_resize_box.gif 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172310783_hu44ec8ae7602585df8c248482d5b77337_351100_480x0_resize_box.gif 480w, https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172310783_hu44ec8ae7602585df8c248482d5b77337_351100_1024x0_resize_box.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1158,10 +1158,10 @@ $$&lt;/p&gt;
 &lt;li&gt;重复步骤2，直到所有元素均排序完毕。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;动画演示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172350447.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172350447.gif&#34;
 	width=&#34;811&#34;
 	height=&#34;248&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172350447_hud86cc9d642d4a6a495c0fb82e65a7d88_470474_480x0_resize_box.gif 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172350447_hud86cc9d642d4a6a495c0fb82e65a7d88_470474_1024x0_resize_box.gif 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172350447_hud86cc9d642d4a6a495c0fb82e65a7d88_470474_480x0_resize_box.gif 480w, https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172350447_hud86cc9d642d4a6a495c0fb82e65a7d88_470474_1024x0_resize_box.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1237,10 +1237,10 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;动画演示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172376035.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172376035.gif&#34;
 	width=&#34;811&#34;
 	height=&#34;505&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172376035_hu7ece5801fac6a7f4d7b837219cc8a329_368273_480x0_resize_box.gif 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172376035_hu7ece5801fac6a7f4d7b837219cc8a329_368273_1024x0_resize_box.gif 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172376035_hu7ece5801fac6a7f4d7b837219cc8a329_368273_480x0_resize_box.gif 480w, https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172376035_hu7ece5801fac6a7f4d7b837219cc8a329_368273_1024x0_resize_box.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1314,10 +1314,10 @@ $$&lt;/p&gt;
 &lt;li&gt;每趟排序，根据对应的增量$t_i$，将待排序列分割成若干长度为$t_i$的子序列，分别对各子表进行直接插入排序。仅增量因子为$1$时，整个序列作为一个表来处理，表长度即为整个序列的长度。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;动画演示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172408969.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172408969.gif&#34;
 	width=&#34;277&#34;
 	height=&#34;344&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172408969_hu06d187633126cb9819b3828c28e78988_276994_480x0_resize_box.gif 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172408969_hu06d187633126cb9819b3828c28e78988_276994_1024x0_resize_box.gif 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172408969_hu06d187633126cb9819b3828c28e78988_276994_480x0_resize_box.gif 480w, https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172408969_hu06d187633126cb9819b3828c28e78988_276994_1024x0_resize_box.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1329,10 +1329,10 @@ $$&lt;/p&gt;
 &lt;p&gt;详细过程（引用自博客：&lt;a class=&#34;link&#34; href=&#34;https://blog.csdn.net/weixin_43715360/article/details/120140579&#34;  title=&#34;一个很懒的人&#34;
      target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;一个很懒的人&lt;/a&gt;）：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/ff8014a4eddb45289d60ec4552cf2ea8.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/ff8014a4eddb45289d60ec4552cf2ea8.png&#34;
 	width=&#34;1328&#34;
 	height=&#34;869&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/ff8014a4eddb45289d60ec4552cf2ea8_huaaceded86fe94f580955ae11e60d3da4_100268_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/ff8014a4eddb45289d60ec4552cf2ea8_huaaceded86fe94f580955ae11e60d3da4_100268_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/ff8014a4eddb45289d60ec4552cf2ea8_huaaceded86fe94f580955ae11e60d3da4_100268_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/ff8014a4eddb45289d60ec4552cf2ea8_huaaceded86fe94f580955ae11e60d3da4_100268_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1341,10 +1341,10 @@ $$&lt;/p&gt;
 		data-flex-basis=&#34;366px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/9ad210308fdd44f9931f5717561db7aa.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/9ad210308fdd44f9931f5717561db7aa.png&#34;
 	width=&#34;1117&#34;
 	height=&#34;419&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/9ad210308fdd44f9931f5717561db7aa_huad78d54fd1f25f05c40dcb3a362ce3cf_61189_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/9ad210308fdd44f9931f5717561db7aa_huad78d54fd1f25f05c40dcb3a362ce3cf_61189_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/9ad210308fdd44f9931f5717561db7aa_huad78d54fd1f25f05c40dcb3a362ce3cf_61189_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/9ad210308fdd44f9931f5717561db7aa_huad78d54fd1f25f05c40dcb3a362ce3cf_61189_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1353,10 +1353,10 @@ $$&lt;/p&gt;
 		data-flex-basis=&#34;639px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/82e279c4fccb459ca4119d6385657eb6.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/82e279c4fccb459ca4119d6385657eb6.png&#34;
 	width=&#34;1206&#34;
 	height=&#34;200&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/82e279c4fccb459ca4119d6385657eb6_huea9a25380f1dee0a7d3a4c2182c6b5de_45863_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/82e279c4fccb459ca4119d6385657eb6_huea9a25380f1dee0a7d3a4c2182c6b5de_45863_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/82e279c4fccb459ca4119d6385657eb6_huea9a25380f1dee0a7d3a4c2182c6b5de_45863_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/82e279c4fccb459ca4119d6385657eb6_huea9a25380f1dee0a7d3a4c2182c6b5de_45863_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1435,10 +1435,10 @@ $$&lt;/p&gt;
 &lt;li&gt;重复步骤 3 直到某一指针达到序列尾；将另一序列剩下的所有元素直接复制到合并序列尾。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;动画演示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172440073.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172440073.gif&#34;
 	width=&#34;811&#34;
 	height=&#34;505&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172440073_hu860e1349d65544f9713b4c4e871ecffe_333368_480x0_resize_box.gif 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172440073_hu860e1349d65544f9713b4c4e871ecffe_333368_1024x0_resize_box.gif 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172440073_hu860e1349d65544f9713b4c4e871ecffe_333368_480x0_resize_box.gif 480w, https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172440073_hu860e1349d65544f9713b4c4e871ecffe_333368_1024x0_resize_box.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1636,10 +1636,10 @@ $$&lt;/p&gt;
 &lt;li&gt;分别递归地把小于基准数的子序列（左边）和大于基准数的子序列（右边）执行1~3操作。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;动画演示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172485719.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172485719.gif&#34;
 	width=&#34;811&#34;
 	height=&#34;252&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172485719_hu4d44be5cb710bf76364ae9284e6f595c_276065_480x0_resize_box.gif 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172485719_hu4d44be5cb710bf76364ae9284e6f595c_276065_1024x0_resize_box.gif 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172485719_hu4d44be5cb710bf76364ae9284e6f595c_276065_480x0_resize_box.gif 480w, https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172485719_hu4d44be5cb710bf76364ae9284e6f595c_276065_1024x0_resize_box.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1837,10 +1837,10 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;动画演示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172508258.gif&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172508258.gif&#34;
 	width=&#34;547&#34;
 	height=&#34;364&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172508258_hu745ac12798b8f0b47921ba6fbe682968_1548510_480x0_resize_box.gif 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172508258_hu745ac12798b8f0b47921ba6fbe682968_1548510_1024x0_resize_box.gif 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172508258_hu745ac12798b8f0b47921ba6fbe682968_1548510_480x0_resize_box.gif 480w, https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172508258_hu745ac12798b8f0b47921ba6fbe682968_1548510_1024x0_resize_box.gif 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2078,10 +2078,10 @@ $$&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;图片演示：&lt;/p&gt;
 &lt;p&gt;将元素分布在桶中：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172566530.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172566530.png&#34;
 	width=&#34;311&#34;
 	height=&#34;131&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172566530_hu3b8f072780468ebb2ae1c6af2a3c055e_11151_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172566530_hu3b8f072780468ebb2ae1c6af2a3c055e_11151_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172566530_hu3b8f072780468ebb2ae1c6af2a3c055e_11151_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172566530_hu3b8f072780468ebb2ae1c6af2a3c055e_11151_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -2091,10 +2091,10 @@ $$&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;元素在每个桶中排序：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172573696.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172573696.png&#34;
 	width=&#34;311&#34;
 	height=&#34;131&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172573696_hu95d151ab9ff7369bc50331df2ac5bf22_12936_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172573696_hu95d151ab9ff7369bc50331df2ac5bf22_12936_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172573696_hu95d151ab9ff7369bc50331df2ac5bf22_12936_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/1662172573696_hu95d151ab9ff7369bc50331df2ac5bf22_12936_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	

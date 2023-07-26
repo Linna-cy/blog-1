@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>递归 on Linner&#39;s Blog</title>
-        <link>https://blog.linner.asia/tags/%E9%80%92%E5%BD%92/</link>
+        <link>https://blog1.linner.asia/tags/%E9%80%92%E5%BD%92/</link>
         <description>Recent content in 递归 on Linner&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
-        <lastBuildDate>Wed, 17 May 2023 12:52:42 +0800</lastBuildDate><atom:link href="https://blog.linner.asia/tags/%E9%80%92%E5%BD%92/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 17 May 2023 12:52:42 +0800</lastBuildDate><atom:link href="https://blog1.linner.asia/tags/%E9%80%92%E5%BD%92/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>算法设计与分析篇</title>
-        <link>https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/</link>
+        <link>https://blog1.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/</link>
         <pubDate>Wed, 17 May 2023 12:52:42 +0800</pubDate>
         
-        <guid>https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/</guid>
+        <guid>https://blog1.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/</guid>
         <description>&lt;h1 id=&#34;算法概述&#34;&gt;算法概述&lt;/h1&gt;
 &lt;p&gt;算法（Algorithm）是对特定问题求解步骤的一种描述，它是指令的有限序列，其中每一条指令表示一个或多个操作。算法具有下列5个重要特性：&lt;/p&gt;
 &lt;ul&gt;
@@ -48,10 +48,10 @@
 &lt;li&gt;加法规则：多项相加，保留最高阶项，并将系数化为1；&lt;/li&gt;
 &lt;li&gt;乘法规则：多项相乘都保留，并将系数化为1。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/1681099842666.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/1681099842666.png&#34;
 	width=&#34;1014&#34;
 	height=&#34;100&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/1681099842666_hu8fb0d0a3c83abecf36c375990db2efe0_51379_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/1681099842666_hu8fb0d0a3c83abecf36c375990db2efe0_51379_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/1681099842666_hu8fb0d0a3c83abecf36c375990db2efe0_51379_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/1681099842666_hu8fb0d0a3c83abecf36c375990db2efe0_51379_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;算法复杂度大小比较&#34;
@@ -86,10 +86,10 @@ $$&lt;/p&gt;
 &lt;p&gt;即，当$n \ge n_0$时，$c_1g(n) \le f(n) \le c_2g(n)$。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1681110832416.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1681110832416.png&#34;
 	width=&#34;966&#34;
 	height=&#34;1204&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1681110832416_hud8e84328d379d2eda520e5c710188239_380512_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1681110832416_hud8e84328d379d2eda520e5c710188239_380512_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1681110832416_hud8e84328d379d2eda520e5c710188239_380512_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1681110832416_hud8e84328d379d2eda520e5c710188239_380512_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;递归式主方法&#34;
@@ -471,10 +471,10 @@ $$&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;定义问题的解空间：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684485061214.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684485061214.png&#34;
 	width=&#34;1112&#34;
 	height=&#34;493&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684485061214_hua26943b3666cfead45e3354c9c250048_93761_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684485061214_hua26943b3666cfead45e3354c9c250048_93761_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684485061214_hua26943b3666cfead45e3354c9c250048_93761_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684485061214_hua26943b3666cfead45e3354c9c250048_93761_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;0-1背包问题解空间树示例&#34;
@@ -520,10 +520,10 @@ $$&lt;/p&gt;
 &lt;h2 id=&#34;背包问题&#34;&gt;背包问题&lt;/h2&gt;
 &lt;p&gt;有$n$个物品，第$i$个物品价值为$v_i$，重量为$w_i$，背包容量为$W$，$v_i$、$w_i$和$W$均为非负数。背包问题与0-1背包问题类似，但是每个物品可以部分装入背包，即$0 \le x_i \le 1$。&lt;/p&gt;
 &lt;p&gt;假设$n = 5, W = 100$，各物品的重量、价值和单位重量的价值如图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684482734674.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684482734674.png&#34;
 	width=&#34;1278&#34;
 	height=&#34;225&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684482734674_hu5b03cee14e409ca2e1a9d512eb500245_36650_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684482734674_hu5b03cee14e409ca2e1a9d512eb500245_36650_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684482734674_hu5b03cee14e409ca2e1a9d512eb500245_36650_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684482734674_hu5b03cee14e409ca2e1a9d512eb500245_36650_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;物品基本信息&#34;
@@ -593,10 +593,10 @@ $$&lt;/p&gt;
 &lt;p&gt;计算最优解的值：&lt;/p&gt;
 &lt;p&gt;根据上述递归式自底向上地求出最优解的值。将$l[i, j]$的值存储在表$l[1 \dots m, 1 \dots n]$中，以行为主序从左到右计算表$l$中的元素，同时维持表$b[1 \dots m, 1 \dots n]$，用其中的元素$b[i, j]$记录使得$l[i, j]$取最优值的最优子结构。&lt;/p&gt;
 &lt;p&gt;例如$X=ABCBDAD$和$Y=BDCABA$，对应的表$l$和$b$如图：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684475662212.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684475662212.png&#34;
 	width=&#34;599&#34;
 	height=&#34;480&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684475662212_huf8741ffb03170f75828435beb229b8f8_55892_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684475662212_huf8741ffb03170f75828435beb229b8f8_55892_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684475662212_huf8741ffb03170f75828435beb229b8f8_55892_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684475662212_huf8741ffb03170f75828435beb229b8f8_55892_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;动态规划求解LCS示例&#34;
@@ -664,10 +664,10 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;用回溯法求解4-皇后问题：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684495382071.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684495382071.png&#34;
 	width=&#34;1275&#34;
 	height=&#34;506&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684495382071_huc186b02913aa15127675d2c019dabd0c_58233_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684495382071_huc186b02913aa15127675d2c019dabd0c_58233_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684495382071_huc186b02913aa15127675d2c019dabd0c_58233_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1684495382071_huc186b02913aa15127675d2c019dabd0c_58233_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;用回溯法求解4-皇后问题的搜索过程&#34;
@@ -1055,10 +1055,10 @@ $$&lt;/p&gt;
 &lt;p&gt;每趟排序，根据对应的增量$t_i$，将待排序列分割成若干长度为$t_i$的子序列，分别对各子表进行直接插入排序。仅增量因子为$1$时，整个序列作为一个表来处理，表长度即为整个序列的长度。&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1681209778321.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1681209778321.png&#34;
 	width=&#34;649&#34;
 	height=&#34;460&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1681209778321_hu3445f2349c32f6de565415fce2b1b7c8_87538_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1681209778321_hu3445f2349c32f6de565415fce2b1b7c8_87538_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1681209778321_hu3445f2349c32f6de565415fce2b1b7c8_87538_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E7%AE%97%E6%B3%95%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%88%86%E6%9E%90%E7%AF%87/uTools_1681209778321_hu3445f2349c32f6de565415fce2b1b7c8_87538_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;希尔排序示例&#34;

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>数学 on Linner&#39;s Blog</title>
-        <link>https://blog.linner.asia/tags/%E6%95%B0%E5%AD%A6/</link>
+        <link>https://blog1.linner.asia/tags/%E6%95%B0%E5%AD%A6/</link>
         <description>Recent content in 数学 on Linner&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>zh</language>
-        <lastBuildDate>Fri, 02 Sep 2022 12:43:41 +0800</lastBuildDate><atom:link href="https://blog.linner.asia/tags/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 02 Sep 2022 12:43:41 +0800</lastBuildDate><atom:link href="https://blog1.linner.asia/tags/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>集合论</title>
-        <link>https://blog.linner.asia/p/%E9%9B%86%E5%90%88%E8%AE%BA/</link>
+        <link>https://blog1.linner.asia/p/%E9%9B%86%E5%90%88%E8%AE%BA/</link>
         <pubDate>Fri, 02 Sep 2022 12:43:41 +0800</pubDate>
         
-        <guid>https://blog.linner.asia/p/%E9%9B%86%E5%90%88%E8%AE%BA/</guid>
+        <guid>https://blog1.linner.asia/p/%E9%9B%86%E5%90%88%E8%AE%BA/</guid>
         <description>&lt;h1 id=&#34;集合的概念&#34;&gt;集合的概念&lt;/h1&gt;
 &lt;blockquote&gt;
 &lt;ul&gt;
@@ -77,7 +77,7 @@ $$&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;文氏图&#34;&gt;文氏图&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;文氏图&lt;/strong&gt;（&lt;strong&gt;Venn diagram&lt;/strong&gt;）又叫&lt;strong&gt;维恩图&lt;/strong&gt;，用于展示集合或类之间的大致关系。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/%E7%BB%B4%E6%81%A9%E5%9B%BE.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/%E7%BB%B4%E6%81%A9%E5%9B%BE.png&#34;
 	
 	
 	
@@ -205,7 +205,7 @@ $$&lt;/p&gt;
 &lt;p&gt;Definition：&lt;/p&gt;
 &lt;p&gt;在一个相对固定的范围内，包含此范围内所有元素的集合，称为&lt;strong&gt;全集&lt;/strong&gt;或&lt;strong&gt;论集&lt;/strong&gt;（universal set），用 $U$ 或 $E$ 表示。&lt;/p&gt;
 &lt;p&gt;在维恩图中一般用方形表示全集。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/%E5%85%A8%E9%9B%86.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/%E5%85%A8%E9%9B%86.png&#34;
 	
 	
 	
@@ -245,7 +245,7 @@ $$&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;“$\cup$” &lt;strong&gt;并运算&lt;/strong&gt;（union operation）：$A \cup B = {x|x \in A\ or\ x \in B}$ 是 $A$ 与 $B$ 的&lt;strong&gt;并集&lt;/strong&gt;（union）。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/%E5%B9%B6%E9%9B%86.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/%E5%B9%B6%E9%9B%86.png&#34;
 	
 	
 	
@@ -259,7 +259,7 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;“$\cap$” &lt;strong&gt;交运算&lt;/strong&gt;（intersection operation）：$A \cap B = {x|x \in A\ and\ B}$ 是 $A$ 与 $B$ 的&lt;strong&gt;交集&lt;/strong&gt;（intersection）。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/%E4%BA%A4%E9%9B%86.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/%E4%BA%A4%E9%9B%86.png&#34;
 	
 	
 	
@@ -272,7 +272,7 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;“$\overline{A}$” &lt;strong&gt;补运算&lt;/strong&gt;（complement operation）：$\overline{A} = U - A$ 是集合 $A$ 的&lt;strong&gt;补集&lt;/strong&gt;（complement）（也可记为 $A&amp;rsquo;$、$~A$、$A^c$ 等）。$A$ 对于全集 $U$ 的补集是&lt;strong&gt;绝对补集&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/%E8%A1%A5%E9%9B%86.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/%E8%A1%A5%E9%9B%86.png&#34;
 	
 	
 	
@@ -285,7 +285,7 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;“$-$” &lt;strong&gt;差运算&lt;/strong&gt;（subtraction operation）：$A-B={x|x \in A\ and\ x \notin B} = A \cap \overline{B}$ 是 $A$ 与 $B$ 的&lt;strong&gt;差集&lt;/strong&gt;（subtraction)，又称 $B$ 在 $A$ 中的&lt;strong&gt;相对补集&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/%E5%B7%AE%E9%9B%86.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/%E5%B7%AE%E9%9B%86.png&#34;
 	
 	
 	
@@ -299,7 +299,7 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;“$\oplus$” &lt;strong&gt;对称差运算&lt;/strong&gt;（symmetric difference operation）：$A \oplus B = {x|(x \in A\ and\ x \notin B)\ or\ (x\in B\ and\ x \notin A} = (A-B) \cup (B-A)$ 是 $A$ 与 $B$ 的&lt;strong&gt;对称差集&lt;/strong&gt;（symmetric difference of set）。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/%E7%9B%B8%E5%AF%B9%E8%A1%A5%E9%9B%86.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/%E7%9B%B8%E5%AF%B9%E8%A1%A5%E9%9B%86.png&#34;
 	
 	
 	
@@ -394,7 +394,7 @@ $$&lt;/p&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;Example：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/%E5%88%86%E9%85%8D%E5%BE%8B-16308401576391.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/%E5%88%86%E9%85%8D%E5%BE%8B-16308401576391.png&#34;
 	
 	
 	
@@ -494,7 +494,7 @@ $$&lt;/p&gt;
 &lt;li&gt;
 &lt;p&gt;有理数集合 $\mathbf{Q}$&lt;/p&gt;
 &lt;p&gt;将 $\mathbf{Q}$ 中的所有元素都写成 $p/q$（$p$、$q$ 是整数，且 $q \neq 0$）的形式，从 $0/1^{[0]}$ 开始，将所有有理数与自然数一一配对（其中 $p/q^{[n]}$ 的上标 $[n]$ 代表对应于该有理数的自然数）：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/%E8%AF%81%E6%98%8EQ%E6%98%AF%E5%8F%AF%E6%95%B0%E9%9B%86%E5%90%88-16308441770882.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/%E8%AF%81%E6%98%8EQ%E6%98%AF%E5%8F%AF%E6%95%B0%E9%9B%86%E5%90%88-16308441770882.jpg&#34;
 	
 	
 	
@@ -542,10 +542,10 @@ $$&lt;/p&gt;
         </item>
         <item>
         <title>命题逻辑</title>
-        <link>https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/</link>
+        <link>https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/</link>
         <pubDate>Sun, 23 Jan 2022 02:03:41 +0800</pubDate>
         
-        <guid>https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/</guid>
+        <guid>https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/</guid>
         <description>&lt;h1 id=&#34;命题的定义&#34;&gt;命题的定义&lt;/h1&gt;
 &lt;p&gt;具有&lt;u&gt;确切真值的陈述句&lt;/u&gt;称为&lt;strong&gt;命题&lt;/strong&gt;（&lt;strong&gt;proposition&lt;/strong&gt;）。命题可以取一个 “值”，称为&lt;strong&gt;真值&lt;/strong&gt;。真值只有 “真”（用 “T” or “1” 表示，即 True）和 “假”（用 “F” or “0” 表示，即 False）。&lt;/p&gt;
 &lt;blockquote&gt;
@@ -568,10 +568,10 @@ $$&lt;/p&gt;
 &lt;hr&gt;
 &lt;h1 id=&#34;联结词&#34;&gt;联结词&lt;/h1&gt;
 &lt;p&gt;联结词是&lt;strong&gt;两个命题真值之间的联结&lt;/strong&gt;，而不是命题内容之间的连接，因此复合命题的真值只取决于&lt;u&gt;构成它们的各简单命题的真值&lt;/u&gt;，而与它们的内容无关，与二者之间是否有关系无关。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264217690456.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264217690456.jpg&#34;
 	width=&#34;1268&#34;
 	height=&#34;208&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264217690456_hue2630a66e1aca6ccf2ff54ba175f94c3_76814_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264217690456_hue2630a66e1aca6ccf2ff54ba175f94c3_76814_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264217690456_hue2630a66e1aca6ccf2ff54ba175f94c3_76814_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264217690456_hue2630a66e1aca6ccf2ff54ba175f94c3_76814_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -637,10 +637,10 @@ $$&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16263438047401.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16263438047401.jpg&#34;
 	width=&#34;1246&#34;
 	height=&#34;252&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16263438047401_hucfea1a08860652450ec4e90e3f76017c_92833_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16263438047401_hucfea1a08860652450ec4e90e3f76017c_92833_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16263438047401_hucfea1a08860652450ec4e90e3f76017c_92833_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16263438047401_hucfea1a08860652450ec4e90e3f76017c_92833_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -748,10 +748,10 @@ $$&lt;/p&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264203339885.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264203339885.jpg&#34;
 	width=&#34;1270&#34;
 	height=&#34;255&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264203339885_hu88f5b120c041e39880e2031e2fb61706_98581_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264203339885_hu88f5b120c041e39880e2031e2fb61706_98581_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264203339885_hu88f5b120c041e39880e2031e2fb61706_98581_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264203339885_hu88f5b120c041e39880e2031e2fb61706_98581_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -760,10 +760,10 @@ $$&lt;/p&gt;
 		data-flex-basis=&#34;1195px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264204420358.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264204420358.jpg&#34;
 	width=&#34;1289&#34;
 	height=&#34;552&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264204420358_hu28ab853506cd94c38e145e512f3e7ad6_200103_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264204420358_hu28ab853506cd94c38e145e512f3e7ad6_200103_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264204420358_hu28ab853506cd94c38e145e512f3e7ad6_200103_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264204420358_hu28ab853506cd94c38e145e512f3e7ad6_200103_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -808,10 +808,10 @@ $$&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;总结&#34;&gt;总结&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264212687867.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264212687867.jpg&#34;
 	width=&#34;1139&#34;
 	height=&#34;479&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264212687867_hue5ca5c010dbbba44b24e3fa22f786b4c_149023_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264212687867_hue5ca5c010dbbba44b24e3fa22f786b4c_149023_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264212687867_hue5ca5c010dbbba44b24e3fa22f786b4c_149023_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264212687867_hue5ca5c010dbbba44b24e3fa22f786b4c_149023_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -820,10 +820,10 @@ $$&lt;/p&gt;
 		data-flex-basis=&#34;570px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264213759514.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264213759514.jpg&#34;
 	width=&#34;1138&#34;
 	height=&#34;303&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264213759514_hu6d4967bddb04651524a9f5a0bbc9dea9_51396_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264213759514_hu6d4967bddb04651524a9f5a0bbc9dea9_51396_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264213759514_hu6d4967bddb04651524a9f5a0bbc9dea9_51396_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264213759514_hu6d4967bddb04651524a9f5a0bbc9dea9_51396_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -840,7 +840,7 @@ $$&lt;/p&gt;
 &lt;h1 id=&#34;命题联结词的应用&#34;&gt;命题联结词的应用&lt;/h1&gt;
 &lt;h2 id=&#34;联结词与开关电路&#34;&gt;联结词与开关电路&lt;/h2&gt;
 &lt;p&gt;设命题 $P$：开关 $S_1$ 闭合；命题 $Q$：开关 $S_2$ 闭合。则以下电路可用复合命题表示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/6264222756445.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/6264222756445.jpg&#34;
 	
 	
 	
@@ -860,10 +860,10 @@ $$&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;
 &lt;p&gt;与门：$\wedge$&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264225030176-16288555505671.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264225030176-16288555505671.jpg&#34;
 	width=&#34;338&#34;
 	height=&#34;138&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264225030176-16288555505671_huf9ddaab5019eaa007550a0744b36740e_8361_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264225030176-16288555505671_huf9ddaab5019eaa007550a0744b36740e_8361_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264225030176-16288555505671_huf9ddaab5019eaa007550a0744b36740e_8361_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264225030176-16288555505671_huf9ddaab5019eaa007550a0744b36740e_8361_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -875,10 +875,10 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;或门：$\vee$&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264225922743.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264225922743.jpg&#34;
 	width=&#34;336&#34;
 	height=&#34;139&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264225922743_hu3f9653ce6a2fe72d40eb962455701cb7_8726_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264225922743_hu3f9653ce6a2fe72d40eb962455701cb7_8726_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264225922743_hu3f9653ce6a2fe72d40eb962455701cb7_8726_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264225922743_hu3f9653ce6a2fe72d40eb962455701cb7_8726_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -890,10 +890,10 @@ $$&lt;/p&gt;
 &lt;/li&gt;
 &lt;li&gt;
 &lt;p&gt;非门：$\neg$&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264226657751.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264226657751.jpg&#34;
 	width=&#34;330&#34;
 	height=&#34;139&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264226657751_hu8acea725c0081afabd9af60bbfe33f76_6408_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264226657751_hu8acea725c0081afabd9af60bbfe33f76_6408_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264226657751_hu8acea725c0081afabd9af60bbfe33f76_6408_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264226657751_hu8acea725c0081afabd9af60bbfe33f76_6408_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -939,10 +939,10 @@ $$&lt;/p&gt;
 &lt;li&gt;整个公式的最外层括号可以省略，公式中不影响运算次序的括号也可以省略；&lt;/li&gt;
 &lt;li&gt;在实际应用中，为了便于存储和运算，命题公式常用二元数方式来表达。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264271696146.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264271696146.jpg&#34;
 	width=&#34;870&#34;
 	height=&#34;365&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264271696146_hu86ee270a19e05374e708ae78b5662829_47775_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264271696146_hu86ee270a19e05374e708ae78b5662829_47775_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264271696146_hu86ee270a19e05374e708ae78b5662829_47775_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264271696146_hu86ee270a19e05374e708ae78b5662829_47775_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1070,10 +1070,10 @@ $$&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;基本等价关系的应用&#34;&gt;基本等价关系的应用&lt;/h3&gt;
 &lt;p&gt;（1）判断公式类型&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264420672234.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264420672234.jpg&#34;
 	width=&#34;620&#34;
 	height=&#34;374&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264420672234_hu0a76cc8c47f9d2296d062c2fe1b4dbd6_64342_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264420672234_hu0a76cc8c47f9d2296d062c2fe1b4dbd6_64342_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264420672234_hu0a76cc8c47f9d2296d062c2fe1b4dbd6_64342_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264420672234_hu0a76cc8c47f9d2296d062c2fe1b4dbd6_64342_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1083,10 +1083,10 @@ $$&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;（2）证明公式等价&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264420999525.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264420999525.jpg&#34;
 	width=&#34;883&#34;
 	height=&#34;430&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264420999525_huca269d7d12c8879b75f374fad79b9fe7_71517_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264420999525_huca269d7d12c8879b75f374fad79b9fe7_71517_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264420999525_huca269d7d12c8879b75f374fad79b9fe7_71517_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264420999525_huca269d7d12c8879b75f374fad79b9fe7_71517_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1096,10 +1096,10 @@ $$&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;（3）开关电路化简&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264421759266.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264421759266.jpg&#34;
 	width=&#34;646&#34;
 	height=&#34;360&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264421759266_hu5574b9c65f9ac89a38dfa11e438e2a05_51584_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264421759266_hu5574b9c65f9ac89a38dfa11e438e2a05_51584_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264421759266_hu5574b9c65f9ac89a38dfa11e438e2a05_51584_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264421759266_hu5574b9c65f9ac89a38dfa11e438e2a05_51584_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1109,10 +1109,10 @@ $$&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;（4）逻辑电路化简&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264422111932.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264422111932.jpg&#34;
 	width=&#34;622&#34;
 	height=&#34;380&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264422111932_huf4e47adfb16cfed8e0364c5edfb19a24_43057_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264422111932_huf4e47adfb16cfed8e0364c5edfb19a24_43057_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264422111932_huf4e47adfb16cfed8e0364c5edfb19a24_43057_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264422111932_huf4e47adfb16cfed8e0364c5edfb19a24_43057_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1122,10 +1122,10 @@ $$&lt;/p&gt;
 	
 &gt;&lt;/p&gt;
 &lt;p&gt;（5）其他&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264422514796.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264422514796.jpg&#34;
 	width=&#34;1232&#34;
 	height=&#34;605&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264422514796_hua2333f9022fea485e830b3ba3a2e8ad2_218049_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264422514796_hua2333f9022fea485e830b3ba3a2e8ad2_218049_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264422514796_hua2333f9022fea485e830b3ba3a2e8ad2_218049_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264422514796_hua2333f9022fea485e830b3ba3a2e8ad2_218049_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1150,10 +1150,10 @@ $$&lt;/p&gt;
 &lt;li&gt;&lt;u&gt;有限个&lt;/u&gt;（$\ge 1$）简单析取式（子句）的合取式称为&lt;strong&gt;合取范式&lt;/strong&gt;（&lt;strong&gt;conjunctive normal form&lt;/strong&gt;）。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;文字可以是子句、短语、析取范式、合取范式。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265483645877.png&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265483645877.png&#34;
 	width=&#34;1226&#34;
 	height=&#34;340&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265483645877_hu1f1c7db97c461b604dd16ebdd7580e66_88208_480x0_resize_box_3.png 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265483645877_hu1f1c7db97c461b604dd16ebdd7580e66_88208_1024x0_resize_box_3.png 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265483645877_hu1f1c7db97c461b604dd16ebdd7580e66_88208_480x0_resize_box_3.png 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265483645877_hu1f1c7db97c461b604dd16ebdd7580e66_88208_1024x0_resize_box_3.png 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1207,10 +1207,10 @@ $$&lt;/p&gt;
 &lt;li&gt;利用&lt;a href=&#34;#a6&#34;&gt;分配律&lt;/a&gt;，可将公式化成一些合取式的析取，或化成一些析取式的合取。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;对任意一个公式，经过以上步骤（期间可用其他&lt;a href=&#34;#命题公式的基本等价关系&#34;&gt;等价公式&lt;/a&gt;来化简），必能化成与其等价的析取范式和合取范式。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264518371675.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264518371675.jpg&#34;
 	width=&#34;622&#34;
 	height=&#34;382&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264518371675_hu6f5dd9c3f42aa32877532d97b7cffe05_66438_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264518371675_hu6f5dd9c3f42aa32877532d97b7cffe05_66438_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264518371675_hu6f5dd9c3f42aa32877532d97b7cffe05_66438_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16264518371675_hu6f5dd9c3f42aa32877532d97b7cffe05_66438_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1240,10 +1240,10 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;Example：&lt;/p&gt;
 &lt;p&gt;设命题变元 $P$、$Q$，&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265086173840.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265086173840.jpg&#34;
 	width=&#34;1150&#34;
 	height=&#34;340&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265086173840_hud68c2c5c545c4c5e1e30db196e64b7f6_69715_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265086173840_hud68c2c5c545c4c5e1e30db196e64b7f6_69715_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265086173840_hud68c2c5c545c4c5e1e30db196e64b7f6_69715_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265086173840_hud68c2c5c545c4c5e1e30db196e64b7f6_69715_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1261,10 +1261,10 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;Example：&lt;/p&gt;
 &lt;p&gt;设命题变元 $P$、$Q$，&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265087894491.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265087894491.jpg&#34;
 	width=&#34;1146&#34;
 	height=&#34;339&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265087894491_hu637d0d6350a6f402f1576d70c2cb56cc_68220_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265087894491_hu637d0d6350a6f402f1576d70c2cb56cc_68220_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265087894491_hu637d0d6350a6f402f1576d70c2cb56cc_68220_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265087894491_hu637d0d6350a6f402f1576d70c2cb56cc_68220_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1332,10 +1332,10 @@ $$&lt;/p&gt;
 &lt;p&gt;主析取范式的极小项编码序列与主合取范式的极大项变编码序列是互补的。因此，只需求出主析取范式或主合取范式中其中之一，就可对应求出主合取范式或主析取范式。&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;公式转换法&#34;&gt;公式转换法&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265114352643.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265114352643.jpg&#34;
 	width=&#34;962&#34;
 	height=&#34;466&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265114352643_hu7d1a78cbe8778be31993683f7bfcfdb3_117817_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265114352643_hu7d1a78cbe8778be31993683f7bfcfdb3_117817_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265114352643_hu7d1a78cbe8778be31993683f7bfcfdb3_117817_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265114352643_hu7d1a78cbe8778be31993683f7bfcfdb3_117817_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1344,10 +1344,10 @@ $$&lt;/p&gt;
 		data-flex-basis=&#34;495px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265112790430.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265112790430.jpg&#34;
 	width=&#34;1014&#34;
 	height=&#34;389&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265112790430_hu3722d86fd73ecb2f59e006b65a2af5bf_135678_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265112790430_hu3722d86fd73ecb2f59e006b65a2af5bf_135678_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265112790430_hu3722d86fd73ecb2f59e006b65a2af5bf_135678_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265112790430_hu3722d86fd73ecb2f59e006b65a2af5bf_135678_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1380,10 +1380,10 @@ $$&lt;/p&gt;
 &lt;li&gt;公式转换法，&lt;/li&gt;
 &lt;li&gt;主析取范式法。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265511416012.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265511416012.jpg&#34;
 	width=&#34;620&#34;
 	height=&#34;370&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265511416012_hu4f69ecab90c11db92623539de0c26b2a_64831_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265511416012_hu4f69ecab90c11db92623539de0c26b2a_64831_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265511416012_hu4f69ecab90c11db92623539de0c26b2a_64831_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265511416012_hu4f69ecab90c11db92623539de0c26b2a_64831_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 		alt=&#34;16265511416012&#34;
@@ -1464,10 +1464,10 @@ $$&lt;/p&gt;
 &lt;p&gt;其中，$H_i$ 或者是 $\Gamma$ 中的某个前提，或者是前面的某些 $H_j(j &amp;lt; i)$ 的有效结论，并且 $H_n$ 就是 $H$，则称公式 $H$ 为该演绎的有效结论，或者称从前提 $\Gamma$ 能够演绎出结论 $H$ 来。&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;直接证明法&#34;&gt;直接证明法&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265912526773.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265912526773.jpg&#34;
 	width=&#34;620&#34;
 	height=&#34;442&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265912526773_hu9fce9ec6710361cdd982c145c066ea5b_63797_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265912526773_hu9fce9ec6710361cdd982c145c066ea5b_63797_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265912526773_hu9fce9ec6710361cdd982c145c066ea5b_63797_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265912526773_hu9fce9ec6710361cdd982c145c066ea5b_63797_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1478,10 +1478,10 @@ $$&lt;/p&gt;
 &gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;规则-cp-证明法&#34;&gt;规则 CP 证明法&lt;/h3&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265902308226.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265902308226.jpg&#34;
 	width=&#34;622&#34;
 	height=&#34;426&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265902308226_hu53d70442b55469605bf65e94b551e0f8_62466_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265902308226_hu53d70442b55469605bf65e94b551e0f8_62466_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265902308226_hu53d70442b55469605bf65e94b551e0f8_62466_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265902308226_hu53d70442b55469605bf65e94b551e0f8_62466_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1493,10 +1493,10 @@ $$&lt;/p&gt;
 &lt;hr&gt;
 &lt;h3 id=&#34;间接证明法&#34;&gt;间接证明法&lt;/h3&gt;
 &lt;p&gt;间接证明法又叫反证法、归谬法。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265935152814.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265935152814.jpg&#34;
 	width=&#34;1206&#34;
 	height=&#34;620&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265935152814_hue3f6a886efcba3882ecbd35df5902d02_143594_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265935152814_hue3f6a886efcba3882ecbd35df5902d02_143594_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265935152814_hue3f6a886efcba3882ecbd35df5902d02_143594_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265935152814_hue3f6a886efcba3882ecbd35df5902d02_143594_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1505,10 +1505,10 @@ $$&lt;/p&gt;
 		data-flex-basis=&#34;466px&#34;
 	
 &gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265936708923.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265936708923.jpg&#34;
 	width=&#34;622&#34;
 	height=&#34;362&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265936708923_hu2f66b093c9f692b40699c6aa027f74e2_55977_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265936708923_hu2f66b093c9f692b40699c6aa027f74e2_55977_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265936708923_hu2f66b093c9f692b40699c6aa027f74e2_55977_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16265936708923_hu2f66b093c9f692b40699c6aa027f74e2_55977_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1552,10 +1552,10 @@ $$&lt;/p&gt;
 &lt;li&gt;谓词 $P(x_1, x_2, \cdots, x_n)$ 包含了个体变量，因而本身并不是命题，只有用谓词常量取代 $P$，用个体常量取代 $x_1, x_2, \cdots, x_n$ 后才会称为命题。&lt;/li&gt;
 &lt;li&gt;一般将&lt;u&gt;没有任何个体变量&lt;/u&gt;的谓词称为 &lt;strong&gt;0 元谓词&lt;/strong&gt;（如，$F(a_1, a_2, \cdots, a_n$）。当 $F$ 为谓词常量时，0 元谓词就成为命题。命题逻辑中的所有命题都可以表示成 0 元谓词。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267215046524.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267215046524.jpg&#34;
 	width=&#34;1204&#34;
 	height=&#34;546&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267215046524_huf0f2184347c285609b6bc5ef1e98741b_181883_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267215046524_huf0f2184347c285609b6bc5ef1e98741b_181883_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267215046524_huf0f2184347c285609b6bc5ef1e98741b_181883_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267215046524_huf0f2184347c285609b6bc5ef1e98741b_181883_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1573,10 +1573,10 @@ $$&lt;/p&gt;
 &lt;p&gt;其中的 $x$ 称为作用变量。一般将其量词加在其谓词之前，记为 $(\forall x)F(x)$、$(\exists x)F(x)$。此时，$F(x)$ 称为全称量词和存在量词的&lt;strong&gt;辖域&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;![16267650196113.jpg]&lt;/p&gt;
 &lt;p&gt;引入更准确的表达方式：以上符号化必须要特别注明个体域，在表达比较复杂的命题时会容易混淆。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267651119352.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267651119352.jpg&#34;
 	width=&#34;622&#34;
 	height=&#34;392&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267651119352_hu484d7f2326b55ac28820d56d516b0c6f_84619_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267651119352_hu484d7f2326b55ac28820d56d516b0c6f_84619_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267651119352_hu484d7f2326b55ac28820d56d516b0c6f_84619_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267651119352_hu484d7f2326b55ac28820d56d516b0c6f_84619_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1608,10 +1608,10 @@ $$&lt;/p&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267661575626.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267661575626.jpg&#34;
 	width=&#34;1261&#34;
 	height=&#34;559&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267661575626_hu792ddbcba722a6c70167a92fb8d2aae5_180348_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267661575626_hu792ddbcba722a6c70167a92fb8d2aae5_180348_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267661575626_hu792ddbcba722a6c70167a92fb8d2aae5_180348_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267661575626_hu792ddbcba722a6c70167a92fb8d2aae5_180348_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1636,10 +1636,10 @@ $$&lt;/p&gt;
 &lt;li&gt;&lt;strong&gt;谓词符号&lt;/strong&gt;：$n$ 元谓词符号 $P(x_1, x_2, \cdots, x_n)$ 可以是所属个体域集合 $D_n \rightarrow {0, 1}$ 的任意一个谓词，用带或不带下标的大写英文字母 $P, Q, R, \cdots, P_1, Q_1, R_1, \cdots$ 来表示。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;函数可用于表达个体词之间的转换关系，可以更方便地表示谓词逻辑中的个体词。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267707683350.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267707683350.jpg&#34;
 	width=&#34;1188&#34;
 	height=&#34;301&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267707683350_hu36152155255286a6e65a3e64efb07a3f_94583_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267707683350_hu36152155255286a6e65a3e64efb07a3f_94583_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267707683350_hu36152155255286a6e65a3e64efb07a3f_94583_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267707683350_hu36152155255286a6e65a3e64efb07a3f_94583_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1681,10 +1681,10 @@ $$&lt;/p&gt;
 &lt;li&gt;若量词后有括号，则括号内的子公式就是该量词的辖域；&lt;/li&gt;
 &lt;li&gt;若量词后无括号，则与量词邻接的子公式为该量词的辖域。&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267722145151.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267722145151.jpg&#34;
 	width=&#34;1273&#34;
 	height=&#34;591&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267722145151_hu9bdf1f357c56b7b889283c72820ea1f1_197212_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267722145151_hu9bdf1f357c56b7b889283c72820ea1f1_197212_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267722145151_hu9bdf1f357c56b7b889283c72820ea1f1_197212_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16267722145151_hu9bdf1f357c56b7b889283c72820ea1f1_197212_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
@@ -1730,10 +1730,10 @@ $$&lt;/p&gt;
 &lt;li&gt;$G$ 中的每个 $n$ 元&lt;strong&gt;谓词符号&lt;/strong&gt;，指定 $D^n$ 到 ${0,1}$ 中的某个特定的谓词。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;规定：公式中无自由变元，或将自由变元看成是常量符号。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16268605039802.jpg&#34;
+&lt;p&gt;&lt;img src=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16268605039802.jpg&#34;
 	width=&#34;1141&#34;
 	height=&#34;592&#34;
-	srcset=&#34;https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16268605039802_huf32cd1e4677245d811c97bbafba145d1_141399_480x0_resize_q75_box.jpg 480w, https://blog.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16268605039802_huf32cd1e4677245d811c97bbafba145d1_141399_1024x0_resize_q75_box.jpg 1024w&#34;
+	srcset=&#34;https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16268605039802_huf32cd1e4677245d811c97bbafba145d1_141399_480x0_resize_q75_box.jpg 480w, https://blog1.linner.asia/p/%E5%91%BD%E9%A2%98%E9%80%BB%E8%BE%91/16268605039802_huf32cd1e4677245d811c97bbafba145d1_141399_1024x0_resize_q75_box.jpg 1024w&#34;
 	loading=&#34;lazy&#34;
 	
 	
